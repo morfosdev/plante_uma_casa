@@ -1147,7 +1147,8 @@ console.log({item});
  {
  'all': { 
 'colors': { 
-'primary': "#7C2355", 'secondary': "#0064fe" } 
+'primary': "#7C2355", 
+'secondary': "#0064fe", 'smoke': #cecece } 
 , 
 'cond1': false, 
 'func1': (nativeEvent)=>console.log(nativeEvent), 
