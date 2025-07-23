@@ -661,7 +661,8 @@ console.log({item});
         `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
         `{ backgroundColor: "$var_all.colors.primary" }`, 
         `{ flex: 1 }`, 
-        `{ width: "80%", maxWidth: 280, minHeight: 150, backgroundColor: "#FFF", borderRadius: 20 }`, `{ minWidth: 80, height: 20, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+        `{ width: "80%", maxWidth: 280, minHeight: 150, backgroundColor: "#FFF", borderRadius: 20 }`, 
+        `{ width: "fit-content", minWidth: 80, height: 20, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, `{ color: "#FFF" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -695,7 +696,7 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ minWidth: 80, height: 20, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+            styles:[`{ width: "fit-content", minWidth: 80, height: 20, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -712,7 +713,7 @@ console.log({item});
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ color: "#FFF" }`
           ],
 
           children: [
