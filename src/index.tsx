@@ -233,7 +233,8 @@ const path1 = "all.toggles.box1";
 
             args,
           }}/>
-        , (...args:any) => <Elements.ScrollBar pass={{
+        , 
+        (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{ backgroundColor: "#EFEFEF", width: "100%", padding: 20 }`],
             arrProps: [],
             arrItems: [
@@ -644,7 +645,25 @@ console.log({item});
           }}/>
         ],
             args,
-        }}/>],
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ alignItems: "center", justifyContent: "center" }`, 
+        `{ width: "100%", height: "100%" }`, 
+        `{ padding: 20, backgrondColor: "#FFF" }`, 
+        `{ width: 30, height: 30, backgroundColor: "#FFF" }`, 
+        `{ width: 50, height: 50, backgroundColor: "#FFF" }`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
           functions:[()=>{}],
 
@@ -664,20 +683,25 @@ console.log({item});
               }
               ],
 
-          screenElements:[() => {
-                  const textStyle = {
-                    fontSize: 20,
-                    color: '#fff2',
-                    textAlign:'center',
-                    maxWidth: 200,
-                    // maxWidth: '200px'<= #ATTENTION: Native ERROR! No string!
-                  };
+          screenElements:[
 
-                  return (
-                    <RN.Text style={textStyle}>
-                      {'Adicione Elementos nessa tela!'}
-                    </RN.Text>);
-                }],
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
           functions:[()=>{}],
 
