@@ -731,14 +731,7 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{ width: "fit-content", minWidth: 80, height: 20, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -755,7 +748,7 @@ console.log({item});
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ color: "#FFF" }`
           ],
 
           children: [
