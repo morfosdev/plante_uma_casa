@@ -665,7 +665,7 @@ console.log({item});
         `{ width: "80%", maxWidth: 280, minHeight: 150, backgroundColor: "#FFF", borderRadius: 20 }`, 
         `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
         `{ color: "#FFF" }`, 
-        `{ width: 10, height: 10 }`, `{ backgroundColor: "$var_all.colors.primary" }`],
+        `{ width: 10, height: 10 }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -823,7 +823,7 @@ console.log({item});
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
-        `{ alignItems: "center", justifyContent: "center" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
+        `{ alignItems: "center", justifyContent: "center" }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
           screenElements:[
 
