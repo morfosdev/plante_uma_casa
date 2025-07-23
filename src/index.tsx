@@ -657,7 +657,8 @@ console.log({item});
         `{ width: 30, height: 30, backgroundColor: "#FFF" }`, 
         `{ width: 50, height: 50, backgroundColor: "#FFF" }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`],
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -674,14 +675,8 @@ console.log({item});
           pathScreen:"a0login",
 
           styles:[
-              {
-                backgroundColor: '#101',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                width: '100%',
-              }
-              ],
+        `{ width: "100%", height: "100%" }`, 
+        `{ alignItems: "center", justifyContent: "center" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
 
           screenElements:[
 
@@ -713,7 +708,7 @@ console.log({item});
  {
  'all': { 
 'colors': { 
-'primary': "#fff", 'secondary': "#0064fe" } 
+'primary': "#7C2355", 'secondary': "#0064fe" } 
 , 
 'cond1': false, 
 'func1': (nativeEvent)=>console.log(nativeEvent), 
