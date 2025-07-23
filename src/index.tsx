@@ -1019,21 +1019,16 @@ console.log({item});
           pathScreen:"b0login",
 
           styles:[
-              {
-                backgroundColor: '#101',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                width: '100%',
-              }
-              ],
+        `{ alignItems: "center", justifyContent: "center" }`, 
+        `{ width: "100%", height: "100%" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
 
           screenElements:[
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+            styles:[
+        `{ width: "80%", maxWidth: 280, minHeight: 150, backgroundColor: "#FFF", borderRadius: 20 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -1041,52 +1036,9 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 30, height: 30, backgroundColor: "#FFF" }`],
+            styles:[`{ width: 10, height: 10 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Título`
-          ],
-
-          args,
-
-        }}/>],
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -1095,19 +1047,28 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 30, height: 30, backgroundColor: "#FFF" }`],
+            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("b0login");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ color: "#FFF" }`
           ],
 
           children: [
-            "Escreva..."
+            `Ir p/ APP`
           ],
 
           args,
