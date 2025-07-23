@@ -1101,7 +1101,8 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+            styles:[
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ backgroundColor: "#FFF" }`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -1137,7 +1138,8 @@ console.log({item});
             elementsProperties:['{}'],
 
             styles:[
-        `{ flex: 1 }`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+        `{ flex: 1 }`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
