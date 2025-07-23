@@ -665,7 +665,8 @@ console.log({item});
         `{ width: "80%", maxWidth: 280, minHeight: 150, backgroundColor: "#FFF", borderRadius: 20 }`, 
         `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
         `{ color: "#FFF" }`, 
-        `{ width: 10, height: 10 }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
+        `{ width: 10, height: 10 }`, 
+        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -1092,14 +1093,8 @@ console.log({item});
           pathScreen:"b1home",
 
           styles:[
-              {
-                backgroundColor: '#101',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                width: '100%',
-              }
-              ],
+        `{ backgroundColor: "$var_all.colors.smoke" }`, 
+        `{ width: "100%", height: "100%" }`, `{ justifyContent: "flex-start" }`],
 
           screenElements:[
 
