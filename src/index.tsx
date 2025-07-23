@@ -658,7 +658,8 @@ console.log({item});
         `{ width: 50, height: 50, backgroundColor: "#FFF" }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
+        `{ backgroundColor: "$var_all.colors.primary" }`, `{ flex: 1 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -683,16 +684,90 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 30, height: 30, backgroundColor: "#FFF" }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Título`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 30, height: 30, backgroundColor: "#FFF" }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
