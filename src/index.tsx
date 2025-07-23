@@ -1054,7 +1054,7 @@ console.log({item});
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("b0login");
+          return tools.goTo("b1home");
         }
         ]
  , trigger: 'on press'
@@ -1068,7 +1068,7 @@ console.log({item});
           ],
 
           children: [
-            `Ir p/ APP`
+            `Entrar c/ Google`
           ],
 
           args,
