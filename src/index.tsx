@@ -740,7 +740,12 @@ console.log({item});
             elementsProperties:['{}'],
 
             styles:[
-        `{ backgroundColor: "$var_all.color.primary", alignItems: "center" }`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+        `{ 
+	backgroundColor: "$var_all.color.primary",
+	alignItems: "center",
+}
+
+`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -1197,7 +1202,12 @@ console.log({item});
             elementsProperties:['{}'],
 
             styles:[
-        `{ backgroundColor: "$var_all.color.primary", alignItems: "center" }`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+        `{ 
+	backgroundColor: "$var_all.color.primary",
+	alignItems: "center",
+}
+
+`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
 
             functions:[()=>{}],            childrenItems:[
         
