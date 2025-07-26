@@ -1297,7 +1297,7 @@ console.log({item});
  {
  'all': { 
 'colors': { 
-'primary': "#00FFCE", 
+'primary': "#00FF9A", 
 'secondary': "#0064fe", 'smoke': "#cecece" } 
 , 
 'cond1': false, 
