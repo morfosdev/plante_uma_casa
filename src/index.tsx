@@ -759,7 +759,12 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 30, height: 30, backgroundColor: "#FFF" }`],
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	backgroundColor: "#FFF"
+}
+`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -1221,7 +1226,12 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 30, height: 30, backgroundColor: "#FFF" }`],
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	backgroundColor: "#FFF"
+}
+`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
