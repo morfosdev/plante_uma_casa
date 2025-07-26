@@ -656,6 +656,12 @@ console.log({item});
         `{ width: "100%", height: "100%" }`, 
         `{ padding: 20, backgrondColor: "#FFF" }`, 
         `{ width: 30, height: 30, backgroundColor: "#FFF" }`, 
+        `{ 
+	width: 40,
+	height: 40,
+	backgroundColor: "#FFF"
+}
+`, 
         `{ width: 50, height: 50, backgroundColor: "#FFF" }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, 
