@@ -944,7 +944,6 @@ console.log({item});
             args,
           }}/>
         , 
-        
 
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
@@ -962,103 +961,7 @@ console.log({item});
       URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
-    }}/>, 
-
- (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
-  const [userName, setUserName] = React.useState("");
-  const [userPassword, setUserPassword] = React.useState("");
-  const [mensagemErro, setMensagemErro] = React.useState("");
-  const handleLogin = () => {
-    if (!userName.trim()) {
-      setMensagemErro("O nome de usuário precisa ser preenchido.");
-      return;
-    }
-    if (!userPassword.trim()) {
-      setMensagemErro("A senha precisa ser preenchida.");
-      return;
-    }
-
-    setMensagemErro("");
-    console.log("Login realizado com sucesso!");
-const path1 = "all.toggles.box1";
-    const value = false;
-    const pass1 = { keyPath: [path1], value: [value] };
-    tools.functions.setVar({ args: "", pass: pass1 });
-  };
-
-  return (
-    <RN.View
-      style={{
-        padding: 20,
-        alignItems: "center",
-        justifyContent: "center",
-       flex: 1,
-      }}
-    >
-      <RN.TextInput
-        placeholder="Nome de usuário"
-        style={{
-          borderWidth: 1,
-          borderColor: "#65686e",
-          paddingVertical: 10,
-          paddingHorizontal: 15,
-          borderRadius: 8,
-          marginBottom: 10,
-        }}
-        value={userName}
-        onChangeText={setUserName}
-      />
-
-      <RN.TextInput
-        placeholder="Senha"
-        style={{
-          borderWidth: 1,
-          borderColor: "#65686e",
-          paddingVertical: 10,
-          paddingHorizontal: 15,
-          borderRadius: 8,
-        }}
-        value={userPassword}
-        onChangeText={setUserPassword}
-        secureTextEntry
-      />
-
-      {mensagemErro !== "" && (
-        <RN.Text
-          style={{
-            color: "red",
-            marginBottom: 10,
-          }}
-        >
-          {mensagemErro}
-        </RN.Text>
-      )}
-
-      <RN.Pressable
-        style={{
-          backgroundColor: "#007BFF",
-          paddingVertical: 12,
-          paddingHorizontal: 24,
-          borderRadius: 8,
-          alignItems: "center",
-        }}
-        onPress={handleLogin}
-      >
-        <RN.Text
-          style={{
-            color: "#FFFFFF",
-            fontSize: 16,
-          }}
-        >
-          Login
-        </RN.Text>
-      </RN.Pressable>
-    </RN.View>
-  );
-}] 
-}}/>
-],
+    }}/>],
 
           functions:[()=>{}],
 
