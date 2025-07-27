@@ -656,13 +656,24 @@ console.log({item});
         `{ width: "100%", height: "100%" }`, 
         `{ padding: 20, backgrondColor: "#FFF" }`, 
         `{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`, 
+        `{ 
 	width: 30,
 	height: 30,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`, 
         `{ 
 	width: 40,
 	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`, 
         `{ 
@@ -686,7 +697,6 @@ console.log({item});
 }`, 
         `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
         `{ color: "#FFF" }`, 
-        `{ width: 10, height: 10 }`, 
         `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -713,7 +723,13 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 10, height: 10 }`],
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -778,6 +794,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
 
@@ -837,6 +855,8 @@ console.log({item});
             styles:[`{ 
 	width: 30,
 	height: 30,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
 
@@ -885,6 +905,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
 
@@ -944,6 +966,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
 
@@ -1045,7 +1069,13 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 10, height: 10 }`],
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -1144,7 +1174,13 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 10, height: 10 }`],
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -1292,7 +1328,13 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 10, height: 10 }`],
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -1373,6 +1415,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
 
@@ -1432,6 +1476,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
 
