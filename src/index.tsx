@@ -1291,6 +1291,25 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
       args,
     }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.A0.forms.iptsChanges.email`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.email`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -1856,7 +1875,8 @@ xmlns="http://www.w3.org/2000/svg"
 
           const initCt = () => (
  {
- 'all': { 
+ 
+        'all': { 
 'firebaseConfig': {
   apiKey: "AIzaSyDjAfyEUADq7EaRyFWlGFjP1Eoox9LJHgI",
   authDomain: "devs-tests-95208.firebaseapp.com",
@@ -1894,6 +1914,14 @@ xmlns="http://www.w3.org/2000/svg"
 'small': "12px", 
 'medium': "14px", 'large': "16px" } 
 , 'contents': {   } 
+ } 
+ } 
+, 'sc': { 
+'A0': { 'forms': { 'iptsChanges': {   } 
+ } 
+ } 
+, 'A1': { 'forms': { 'iptsChanges': {   } 
+ } 
  } 
  } 
  
