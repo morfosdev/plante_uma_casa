@@ -102,7 +102,7 @@ const testArgs = (children, args) => {
     }
   }
 
-  if (newArgChildren === 'undefined') console.log('ARG NOT FOUND');
+  if (newArgChildren === 'undefined') console.log('EL TEXT - ARG NOT FOUND');
 
   return { condChildren, newArgChildren };
 };
