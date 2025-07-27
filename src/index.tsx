@@ -897,7 +897,13 @@ console.log({item});
 
 `, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	console.log("Olá Amigos"),
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -1671,7 +1677,13 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
 `, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	console.log("Olá Amigos"),
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
