@@ -1938,7 +1938,7 @@ xmlns="http://www.w3.org/2000/svg"
 , 'sc': { 
 'A0': { 'forms': { 'iptsChanges': {
 	email: "",
-	pass: "xx"
+	pass: ""
 } } 
  } 
 , 'A1': { 'forms': { 'iptsChanges': {   } 
