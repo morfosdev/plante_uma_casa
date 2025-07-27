@@ -1505,6 +1505,110 @@ xmlns="http://www.w3.org/2000/svg"
 
             args,
           }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "$var_all.colors.primary",
+	alignItems: "center",
+}
+
+`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
+width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
+<Path       stroke="#CFCDE4"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ padding: 10 }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: "$var_all.texts.sizes.large",
+	color: "#FFF"
+}`
+          ],
+
+          children: [
+            `Título`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
