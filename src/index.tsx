@@ -1538,7 +1538,7 @@ xmlns="http://www.w3.org/2000/svg"
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
 width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
-<Path       stroke="#CFCDE4"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
+<Path       stroke="#FFF"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
       },
 
       svgOriginal: `
