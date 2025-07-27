@@ -1569,7 +1569,18 @@ xmlns="http://www.w3.org/2000/svg"
 , 
 'lists': { 
 'lt1': [{name: "João", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},{name: "Luciana"},{name: "Pedro"}], 
-'lst2': [{name: "Tarefa 1", date: "21/03/25"},{name: "Tarefa 2", date: "21/03/25"},{name: "Tarefa 3", date: "24/03/25"}], 'lst3': [{name: "Task 1", check: false},{name: "Task 2", check: false}] } 
+'lst2': [{name: "Tarefa 1", date: "21/03/25"},{name: "Tarefa 2", date: "21/03/25"},{name: "Tarefa 3", date: "24/03/25"}], 'lst3': [
+	{name: "Task 1", check: false},
+	{name: "Task 2", check: false},
+	{name: "Task 1", check: false},
+	{name: "Task 2", check: false},
+	{name: "Task 1", check: false},
+	{name: "Task 2", check: false},
+	{name: "Task 1", check: false},
+	{name: "Task 2", check: false},
+	{name: "Task 1", check: false},
+	{name: "Task 2", check: false}
+] } 
 , 
 'toggles': { 
 'box1': true, 'checkbox1': false } 
