@@ -668,6 +668,8 @@ console.log({item});
         `{ 
 	width: 50,
 	height: 50,
+	alignItems: "center",
+	justifyContent: "center",
 	backgroundColor: "transparent"
 }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
