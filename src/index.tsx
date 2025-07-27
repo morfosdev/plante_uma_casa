@@ -655,14 +655,21 @@ console.log({item});
         `{ alignItems: "center", justifyContent: "center" }`, 
         `{ width: "100%", height: "100%" }`, 
         `{ padding: 20, backgrondColor: "#FFF" }`, 
-        `{ width: 30, height: 30, backgroundColor: "#FFF" }`, 
+        `{ 
+	width: 30,
+	height: 30,
+	backgroundColor: "transparent"
+}`, 
         `{ 
 	width: 40,
 	height: 40,
-	backgroundColor: "#FFF"
-}
-`, 
-        `{ width: 50, height: 50, backgroundColor: "#FFF" }`, 
+	backgroundColor: "transparent"
+}`, 
+        `{ 
+	width: 50,
+	height: 50,
+	backgroundColor: "transparent"
+}`, 
         `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
@@ -769,9 +776,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
-	backgroundColor: "#FFF"
-}
-`],
+	backgroundColor: "transparent"
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -826,7 +832,11 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 30, height: 30, backgroundColor: "#FFF" }`],
+            styles:[`{ 
+	width: 30,
+	height: 30,
+	backgroundColor: "transparent"
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -873,9 +883,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
-	backgroundColor: "#FFF"
-}
-`],
+	backgroundColor: "transparent"
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -933,9 +942,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
-	backgroundColor: "#FFF"
-}
-`],
+	backgroundColor: "transparent"
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -1363,9 +1371,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
-	backgroundColor: "#FFF"
-}
-`],
+	backgroundColor: "transparent"
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -1423,9 +1430,8 @@ console.log({item});
             styles:[`{ 
 	width: 40,
 	height: 40,
-	backgroundColor: "#FFF"
-}
-`],
+	backgroundColor: "transparent"
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
