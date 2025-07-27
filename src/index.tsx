@@ -900,7 +900,7 @@ console.log({item});
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
-	console.log("Olá Amigos"),
+	console.log("Olá Amigos")
 }]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -1680,7 +1680,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
-	console.log("Olá Amigos"),
+	console.log("Olá Amigos")
 }]
  , trigger: 'on press'
 }})],            childrenItems:[
