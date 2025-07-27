@@ -1522,7 +1522,9 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	padding: 20
+}`
           ],
 
           children: [
@@ -1572,14 +1574,16 @@ xmlns="http://www.w3.org/2000/svg"
 'lst2': [{name: "Tarefa 1", date: "21/03/25"},{name: "Tarefa 2", date: "21/03/25"},{name: "Tarefa 3", date: "24/03/25"}], 'lst3': [
 	{name: "Task 1", check: false},
 	{name: "Task 2", check: false},
-	{name: "Task 1", check: false},
-	{name: "Task 2", check: false},
-	{name: "Task 1", check: false},
-	{name: "Task 2", check: false},
-	{name: "Task 1", check: false},
-	{name: "Task 2", check: false},
-	{name: "Task 1", check: false},
-	{name: "Task 2", check: false}
+	{name: "Task 3", check: false},
+	{name: "Task 4", check: false},
+	{name: "Task 5", check: false},
+	{name: "Task 6", check: false},
+	{name: "Task 7", check: false},
+	{name: "Task 8", check: false},
+	{name: "Task 9", check: false},
+	{name: "Task 10", check: false},
+	{name: "Task 11", check: false},
+	{name: "Task 12", check: false}
 ] } 
 , 
 'toggles': { 
