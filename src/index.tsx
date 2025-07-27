@@ -946,9 +946,9 @@ xmlns="http://www.w3.org/2000/svg"
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "16px",
 
-      largura: "30px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -1484,9 +1484,9 @@ xmlns="http://www.w3.org/2000/svg"
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "16px",
 
-      largura: "30px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
