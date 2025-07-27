@@ -1563,8 +1563,8 @@ xmlns="http://www.w3.org/2000/svg"
 'box1': true, 'checkbox1': false } 
 , 'texts': { 
 'sizes': { 
-'small': 12px, 
-'medium': 14px, 'large': 16px } 
+'small': "12px", 
+'medium': "14px", 'large': "16px" } 
 , 'contents': {   } 
  } 
  } 
