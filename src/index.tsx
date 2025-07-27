@@ -858,7 +858,7 @@ console.log({item});
 
             styles:[
         `{ 
-	backgroundColor: "$var_all.color.primary",
+	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
 }
 
@@ -1348,7 +1348,7 @@ console.log({item});
 
             styles:[
         `{ 
-	backgroundColor: "$var_all.color.primary",
+	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
 }
 
