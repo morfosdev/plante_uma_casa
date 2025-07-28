@@ -1,5 +1,5 @@
 
-import { getCtData } from './';
+import { getCtData, findFlatItem } from './';
 
 export const testVarType = string => {
 	let varType = '';
@@ -10,13 +10,12 @@ export const testVarType = string => {
 		varType = 'var';
 		newPath = string.replace('$var_', '');
 		varValue = getCtData(newPath);
-console.log("1",{varValue});
 	}
 
 	if (string.includes('$arg_')){
 		varType = 'arg';
 		newPath = string.replace('$arg_', '');
-
+varValue = findFlatItem(args);
 	}
 
   return varValue;
