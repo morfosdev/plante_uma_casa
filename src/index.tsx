@@ -1811,7 +1811,11 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
    arrRefStrings: [
         `locations`, 
         `$var_sc.B1.currId`, `localBikes`],
-            arrFuncs: [()=>{}],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.lists.lst3`],
+          value: [`$args_callback`]
+        }})],
         }})]
  , trigger: 'on init'
 }})],
