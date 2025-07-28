@@ -19,7 +19,10 @@ console.log("2",{varValue});
 
 
 return varValue;
-});
+	});
+
+console.log("3",{newArrStringRefs});
+
 
 
 
