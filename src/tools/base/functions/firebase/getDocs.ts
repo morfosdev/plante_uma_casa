@@ -1,5 +1,5 @@
 
-import { getCtData } from '../../project';
+import { getCtData, testVarType } from '../../project';
 import { getFirestore, collection, onSnapshot } from 'firebase/firestore';
 
 type Tprops = {
@@ -14,7 +14,7 @@ export const getDocsTool = async (props: Tprops) => {
 	
 	const newArrStringRefs = arrRefStrings.map(i => {
 // const condVar = 
-	console.log({i, testI: tools.testVarType(i)});
+	console.log({i, testI: testVarType(i)});
 
 });
 
