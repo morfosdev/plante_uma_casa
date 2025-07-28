@@ -27,7 +27,7 @@ export const deleteDocTool = async (props: Tprops) => {
 
   const newArrStringRefs = arrRefStrings.map(i => {
     console.log('1', { i });
-    const varValue = testVarType(i);
+    const varValue = testVarType(i, args);
     console.log('2', { varValue });
 
     return varValue;

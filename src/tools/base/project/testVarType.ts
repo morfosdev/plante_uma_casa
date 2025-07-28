@@ -1,7 +1,7 @@
 
 import { getCtData, findFlatItem } from './';
 
-export const testVarType = string => {
+export const testVarType = (string, args) => {
 	let varType = '';
 	let newPath = '';
 	let varValue = string;
@@ -16,7 +16,7 @@ export const testVarType = string => {
 		varType = 'arg';
 		newPath = string.replace('$arg_', '');
 console.log({})
-varValue = findFlatItem(string);
+varValue = findFlatItem(args);
 	}
 
   return varValue;

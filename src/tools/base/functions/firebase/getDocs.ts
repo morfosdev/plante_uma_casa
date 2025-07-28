@@ -14,7 +14,7 @@ export const getDocsTool = async (props: Tprops) => {
 	
 	const newArrStringRefs = arrRefStrings.map(i => {
 
-		const varValue = testVarType(i);
+		const varValue = testVarType(i, args);
 console.log("2",{varValue});
 
 
@@ -22,9 +22,6 @@ return varValue;
 	});
 
 console.log("3",{newArrStringRefs});
-
-
-
 
   // -----------------------------
   // ---------- set Firestore Call
