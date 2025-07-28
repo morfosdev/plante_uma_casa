@@ -1,5 +1,6 @@
 
-import { getCtData } from '../../project';
+
+import { getCtData, testVarType } from '../../project';
 import { getFirestore, doc, deleteDoc } from 'firebase/firestore';
 
 export const css1 =
@@ -20,15 +21,27 @@ export const deleteDocTool = async (props: Tprops) => {
   // ---------- set Props
   const { args, pass } = props;
   const { arrRefStrings, arrFuncs } = pass;
-  // ---------- set Local Imports
-
   // -----------------------------
   // -------- set Firestore Call 1
   // -----------------------------
-  const fbInit = getCtData('all.temp.fireInit');
+	const fbInit = getCtData('all.temp.fireInit');
+	
+	const newArrStringRefs = arrRefStrings.map(i => {
+
+		const varValue = testVarType(i);
+console.log("2",{varValue});
+
+
+return varValue;
+	});
+
+	console.log("3",{newArrStringRefs});
+
+
+
 
   const fireInit: any = getFirestore(fbInit);
-  const refColl = doc(fireInit, ...arrRefStrings);
+  const refColl = doc(fireInit, ...newArrStringRefs);
   await deleteDoc(refColl);
 
   // -----------------------------
