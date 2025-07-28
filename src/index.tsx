@@ -2194,11 +2194,10 @@ xmlns="http://www.w3.org/2000/svg"
             arrItems: [(...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+	borderBottomColor: "#444",
+	borderBottomWidth: 2
+}`],
 
           path: [`sc.B3.forms.iptsChanges.name`],
 
