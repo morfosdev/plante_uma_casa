@@ -2191,7 +2191,8 @@ xmlns="http://www.w3.org/2000/svg"
         , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
-            arrItems: [(...args:any) => <Elements.IptTxtEdit pass={{
+            arrItems: [
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [`{
@@ -2208,7 +2209,42 @@ xmlns="http://www.w3.org/2000/svg"
         }})],
 
           args,
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: ['noPath'],
+            arrPathData: ['noPath'],
+            arrFuncs: [()=>{}],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "#FFF" }`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
         }}/>],
+
+            args,
+          }}/>
+        ],
             args,
         }}/>],
 
