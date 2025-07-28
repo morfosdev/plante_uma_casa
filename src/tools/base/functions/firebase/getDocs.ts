@@ -14,7 +14,9 @@ export const getDocsTool = async (props: Tprops) => {
 	
 	const newArrStringRefs = arrRefStrings.map(i => {
 
-const varValue = testVarType(i);
+		const varValue = testVarType(i);
+console.log("2",{varValue});
+
 
 return varValue;
 });

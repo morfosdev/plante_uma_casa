@@ -10,6 +10,7 @@ export const testVarType = string => {
 		varType = 'var';
 		newPath = string.replace('$var_', '');
 		varValue = getCtData(newPath);
+console.log("1",{varValue});
 	}
 
 	if (string.includes('$arg_')){
