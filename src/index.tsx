@@ -1711,7 +1711,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`locations`],
+   arrRefStrings: [
+        `locations`, `$var_sc.B1.currId`],
             arrFuncs: [()=>{}],
         }})]
  , trigger: 'on init'
