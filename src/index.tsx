@@ -1716,7 +1716,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         `$arg_docId`, `localBikes`],
    arrFuncs: [() => {}],
         }})]
- , trigger: 'on init'
+ , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -1739,14 +1739,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         
           ],
 
-      styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+      styles:[`{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],    args,
         }}/>],
             args,
         }}/>],
