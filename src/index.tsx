@@ -1725,12 +1725,13 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[
+        `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+ }`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -1739,10 +1740,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           arrStyles: [
-            `{
-	padding: 5,
-width: 80
-}`
+            `{ flex: 1 }`
           ],
 
           children: [
