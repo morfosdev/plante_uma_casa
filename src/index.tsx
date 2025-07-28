@@ -1712,7 +1712,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [
-        `locations`, `$var_sc.B1.currId`],
+        `locations`, 
+        `$var_sc.B1.currId`, `localBikes`],
             arrFuncs: [()=>{}],
         }})]
  , trigger: 'on init'
