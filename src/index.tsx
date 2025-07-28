@@ -1980,10 +1980,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           children: [
             `Funcs. Firebase Revisadas:
-fbInit
-getDoc
-deleteDoc
-`
+fbInit - OK
+getDocs - OK
+getDocs
+deleteDoc - OK
+updateDoc
+fireUpload
+where
+whereConds ??`
           ],
 
           args,
