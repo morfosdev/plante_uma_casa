@@ -1762,7 +1762,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
         `locations`, 
-        `$arg_docId`, `localBikes`],
+        `HW6jpFRnQGxnZRaP4Y6M`, 
+        `localBikes`, `$arg_docId`],
    arrFuncs: [() => {}],
         }})]
  , trigger: 'on press'
