@@ -1968,7 +1968,8 @@ xmlns="http://www.w3.org/2000/svg"
         , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
-            arrItems: [(...args:any) => <Elements.FlatList2 pass={{
+            arrItems: [
+        (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
@@ -2004,6 +2005,24 @@ xmlns="http://www.w3.org/2000/svg"
                 width: "100%",
               }
               ],    args,
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Funcs. Firebase Revisadas:
+fbInit
+getDoc
+deleteDoc`
+          ],
+
+          args,
+
         }}/>],
             args,
         }}/>],
