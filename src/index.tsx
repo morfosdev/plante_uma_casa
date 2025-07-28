@@ -1969,7 +1969,22 @@ xmlns="http://www.w3.org/2000/svg"
             styles: [],
             arrProps: [],
             arrItems: [
-        (...args:any) => <Elements.FlatList2 pass={{
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Funcs. Firebase Revisadas:fbInitgetDocdeleteDoc`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
@@ -2005,21 +2020,6 @@ xmlns="http://www.w3.org/2000/svg"
                 width: "100%",
               }
               ],    args,
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Funcs. Firebase Revisadas:fbInitgetDocdeleteDoc`
-          ],
-
-          args,
-
         }}/>],
             args,
         }}/>],
