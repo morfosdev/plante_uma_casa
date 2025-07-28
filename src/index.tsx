@@ -1956,7 +1956,7 @@ xmlns="http://www.w3.org/2000/svg"
 , 'B1': { 
 'forms': { 'iptsChanges': {   } 
  } 
-, 'currId': HW6jpFRnQGxnZRaP4Y6M } 
+, 'currId': "HW6jpFRnQGxnZRaP4Y6M" } 
  } 
  
 } 
