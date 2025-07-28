@@ -12,7 +12,12 @@ export const getDocsTool = async (props: Tprops) => {
   const { args, pass } = props;
 	const { arrRefStrings, arrFuncs } = pass;
 	
-	console.log({arrRefStrings});
+	const newArrStringRefs = arrRefStrings.map(i => {
+const condVar = 
+	console.log({i});
+
+});
+
 
 
   // -----------------------------

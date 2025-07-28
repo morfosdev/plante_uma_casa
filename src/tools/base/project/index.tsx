@@ -10,4 +10,6 @@ export { Project } from './Project';
 export { setData } from './setData';
 export { argSel } from './argSel';
 export { goTo } from './goTo';
+export { testVarType } from './testVarType';
 export { findFlatItem } from './findFlatItem';
+
