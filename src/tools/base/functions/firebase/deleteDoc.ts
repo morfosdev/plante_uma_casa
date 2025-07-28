@@ -1,5 +1,4 @@
 
-
 import { getCtData, testVarType } from '../../project';
 import { getFirestore, doc, deleteDoc } from 'firebase/firestore';
 
@@ -24,21 +23,17 @@ export const deleteDocTool = async (props: Tprops) => {
   // -----------------------------
   // -------- set Firestore Call 1
   // -----------------------------
-	const fbInit = getCtData('all.temp.fireInit');
-	
-	const newArrStringRefs = arrRefStrings.map(i => {
+  const fbInit = getCtData('all.temp.fireInit');
 
-		const varValue = testVarType(i);
-console.log("2",{varValue});
+  const newArrStringRefs = arrRefStrings.map(i => {
+    console.log('1', { i });
+    const varValue = testVarType(i);
+    console.log('2', { varValue });
 
+    return varValue;
+  });
 
-return varValue;
-	});
-
-	console.log("3",{newArrStringRefs});
-
-
-
+  console.log('3', { newArrStringRefs });
 
   const fireInit: any = getFirestore(fbInit);
   const refColl = doc(fireInit, ...newArrStringRefs);
@@ -55,3 +50,4 @@ return varValue;
   console.log('%cdeleteDoc ok', css1);
   console.log('%cReferencia da Exclusão', css2, arrRefStrings);
 };
+
