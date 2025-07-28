@@ -2,9 +2,9 @@
 import { getCtData } from './';
 
 export const testVarType = string => {
-	let varType = string;
+	let varType = '';
 	let newPath = '';
-	let varValue = '';
+	let varValue = string;
 
 	if (string.includes('$var_')){
 		varType = 'var';
