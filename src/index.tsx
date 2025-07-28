@@ -2259,7 +2259,7 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async (...args) =>
         functions.firebase.getDocTool({ args, pass:{
   arrRefStrings: [
-        `locations`, `yPsILwuuh8rPPz8gRVA6`],
+        `locations`, `$var_sc.B1.currId`],
             arrFuncs: [()=>{}],
         }})]
  , trigger: 'on press'
