@@ -1992,7 +1992,7 @@ xmlns="http://www.w3.org/2000/svg"
             `Funcs. Firebase Revisadas:
 fbInit - OK
 getDocs - OK
-getDocs
+getDoc - OK
 deleteDoc - OK
 updateDoc
 fireUpload
