@@ -2191,66 +2191,24 @@ xmlns="http://www.w3.org/2000/svg"
         , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
-            arrItems: [
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+            arrItems: [(...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
-          children: [
-            `Funcs. Firebase Revisadas:
-fbInit - OK
-getDocs - OK
-getDocs
-deleteDoc - OK
-updateDoc
-fireUpload
-where
-whereConds ??`
-          ],
+          path: [`sc.B3.forms.iptsChanges.name`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.name`],
+          value: [`$arg_callback`]
+        }})],
 
           args,
-
-        }}/>, (...args:any) => <Elements.FlatList2 pass={{
-          elementProperties: [
-            {}
-          ],
-
-          pData: `all.lists.lst3`,
-
-          itemElements: [
-            (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	padding: 20
-}`
-          ],
-
-          children: [
-            `$arg_name`
-          ],
-
-          args,
-
-        }}/>
-          ],
-
-      styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
         }}/>],
             args,
         }}/>],
