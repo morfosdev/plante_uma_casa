@@ -10,17 +10,16 @@ type Tprops = {
 export const getDocsTool = async (props: Tprops) => {
   // ---------- set Props
   const { args, pass } = props;
-  const { arrRefStrings, arrFuncs } = pass;
+	const { arrRefStrings, arrFuncs } = pass;
+	
+	console.log({arrRefStrings});
 
-  // ---------- set Caps Inputs
-
-  // ---------- set Local Imports
 
   // -----------------------------
   // ---------- set Firestore Call
   // -----------------------------
   const fbInit = getCtData('all.temp.fireInit');
-  console.log({ fbInit });
+
   const fireInit = getFirestore(fbInit);
   const refColl = collection(fireInit, ...arrRefStrings);
 
