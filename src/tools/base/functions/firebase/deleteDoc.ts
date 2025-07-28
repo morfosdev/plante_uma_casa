@@ -48,6 +48,6 @@ export const deleteDocTool = async (props: Tprops) => {
   for (const currFunc of arrFuncs) await currFunc(arrRefStrings, args);
 
   console.log('%cdeleteDoc ok', css1);
-  console.log('%cReferencia da Exclusão', css2, arrRefStrings);
+  console.log('%cReferencia da Exclusão', css2, newArrStringRefs);
 };
 
