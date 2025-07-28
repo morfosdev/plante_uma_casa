@@ -13,9 +13,10 @@ export const getDocsTool = async (props: Tprops) => {
 	const { arrRefStrings, arrFuncs } = pass;
 	
 	const newArrStringRefs = arrRefStrings.map(i => {
-// const condVar = 
-	console.log({i, testI: testVarType(i)});
 
+const varValue = testVarType(i)}
+
+return varValue;
 });
 
 
@@ -26,7 +27,7 @@ export const getDocsTool = async (props: Tprops) => {
   const fbInit = getCtData('all.temp.fireInit');
 
   const fireInit = getFirestore(fbInit);
-  const refColl = collection(fireInit, ...arrRefStrings);
+  const refColl = collection(fireInit, ...newArrStringRefs);
 
   const unsub = onSnapshot(refColl, success => {
     const arrDocs = [];

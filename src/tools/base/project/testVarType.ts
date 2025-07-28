@@ -1,9 +1,20 @@
 
 export const testVarType = string => {
-  let varType = '';
+	let varType = '';
+	let newPath = '';
+	let varValue = '';
 
-  if (string.includes('$var_')) varType = 'var';
-  if (string.includes('$arg_')) varType = 'arg';
+	if (string.includes('$var_')){
+		varType = 'var';
+		newPath = string.replace('$var_', '');
+		varValue = getCtData(newPath);
+	}
 
-  return varType;
+	if (string.includes('$arg_')){
+		varType = 'arg';
+		newPath = string.replace('$arg_', '');
+
+	}
+
+  return varValue;
 };
