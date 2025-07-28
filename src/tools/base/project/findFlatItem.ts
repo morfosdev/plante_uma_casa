@@ -1,5 +1,6 @@
 
 export const findFlatItem = obj => {
+console.log({obj});
   if (typeof obj !== 'object' || obj === null) return null;
 
   if ('item' in obj) return obj.item;
