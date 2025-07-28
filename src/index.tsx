@@ -684,7 +684,12 @@ console.log({item});
 	backgroundColor: "transparent"
 }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
         `{ backgroundColor: "$var_all.colors.primary" }`, 
         `{ flex: 1 }`, 
@@ -783,7 +788,12 @@ console.log({item});
 	alignItems: "center",
 }
 
-`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -826,7 +836,12 @@ console.log({item});
 
             styles:[
         `{ flex: 1 }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ padding: 10 }`],
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -895,7 +910,12 @@ console.log({item});
 	alignItems: "center",
 }
 
-`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -962,7 +982,12 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ padding: 10 }`],
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -1018,7 +1043,12 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 }
 
-`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -1071,7 +1101,12 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
             styles:[
         `{ flex: 1 }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ padding: 10 }`],
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -1566,7 +1601,12 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	alignItems: "center",
 }
 
-`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -1619,7 +1659,12 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
             styles:[
         `{ flex: 1 }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ padding: 10 }`],
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -1680,7 +1725,12 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+            styles:[`{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -1796,7 +1846,12 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	alignItems: "center",
 }
 
-`, `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`],
+`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -1863,7 +1918,12 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-start" }`, `{ padding: 10 }`],
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start";
+ }`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
