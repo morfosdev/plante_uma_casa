@@ -13,8 +13,8 @@ export const getDocsTool = async (props: Tprops) => {
 	const { arrRefStrings, arrFuncs } = pass;
 	
 	const newArrStringRefs = arrRefStrings.map(i => {
-const condVar = 
-	console.log({i});
+// const condVar = 
+	console.log({i, testI: tools.testVarType(i)});
 
 });
 
