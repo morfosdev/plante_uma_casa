@@ -1740,7 +1740,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
           arrStyles: [
             `{
-	padding: 20
+	padding: 5,
+width: 80
 }`
           ],
 
