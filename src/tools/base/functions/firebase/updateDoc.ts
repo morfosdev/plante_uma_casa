@@ -7,7 +7,7 @@ import {
   collection,
   Timestamp,
 } from 'firebase/firestore';
-import { getCtData } from '../../project';
+import { getCtData, testVarType } from '../../project';
 
 export const css1 =
   'color: #ffb73b; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
@@ -28,18 +28,27 @@ export const updateDocTool = async (props: Tprops) => {
   const { args, pass } = props;
   const { arrRefStrings, arrPathData, arrFuncs } = pass;
 
-  // ---------- set Local Imports
-
-  // ---------- set Caps Inputs
-
   // -----------------------------
   // ---------- set Firestore Call
   // -----------------------------
-  const fbInit = getCtData('all.temp.fireInit');
+	const newArrStringRefs = arrRefStrings.map(i => {
+    console.log('1', { i });
+    const varValue = testVarType(i, args);
+    console.log('2', { varValue });
+
+    return varValue;
+  });
+
+  console.log('3', { newArrStringRefs });	
+
+	
+
+
+const fbInit = getCtData('all.temp.fireInit');
   console.log(fbInit);
   const fireInit: any = getFirestore(fbInit);
   console.log({ arrRefStrings });
-  const refColl = doc(fireInit, ...arrRefStrings);
+  const refColl = doc(fireInit, ...newArrStringRefs);
 
   // ------ check Data
   if (!Array.isArray(arrRefStrings))
@@ -66,7 +75,7 @@ export const updateDocTool = async (props: Tprops) => {
 
   console.log('%cupdateDoc ok', css1);
   console.log('%cReferencia do Documento', css2, {
-    arrRefStrings,
+    newArrStringRefs,
     dataToUpdate,
   });
 
