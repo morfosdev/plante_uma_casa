@@ -1814,7 +1814,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.lists.lst3`],
-          value: [`$args_callback`]
+          value: [`$arg_callback`]
         }})],
         }})]
  , trigger: 'on init'
