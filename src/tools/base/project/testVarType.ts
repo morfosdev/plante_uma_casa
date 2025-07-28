@@ -16,7 +16,7 @@ export const testVarType = (string, args) => {
 		varType = 'arg';
 		newPath = string.replace('$arg_', '');
 console.log({newPath})
-varValue = findFlatItem(args);
+varValue = findFlatItem(args)[newPath];
 	}
 
   return varValue;
