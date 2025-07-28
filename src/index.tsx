@@ -1820,7 +1820,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [
         `locations`, 
-        `$var_sc.B1.currId`, `localBikes`],
+        `sc.B1.currId`, `localBikes`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.lists.lst3`],
@@ -2220,8 +2220,10 @@ xmlns="http://www.w3.org/2000/svg"
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: ['noPath'],
-            arrPathData: ['noPath'],
+  arrRefStrings: [
+        `locations`, 
+        `sc.B1.currId`, `localBikes`],
+            arrPathData: [`sc.B3.forms.iptsChanges`],
             arrFuncs: [()=>{}],
         }})]
  , trigger: 'on press'
