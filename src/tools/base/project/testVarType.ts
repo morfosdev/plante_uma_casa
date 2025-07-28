@@ -2,7 +2,7 @@
 import { getCtData } from './';
 
 export const testVarType = string => {
-	let varType = '';
+	let varType = string;
 	let newPath = '';
 	let varValue = '';
 
