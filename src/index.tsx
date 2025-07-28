@@ -2015,10 +2015,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Funcs. Firebase Revisadas:
-fbInit
-getDoc
-deleteDoc`
+            `Funcs. Firebase Revisadas:fbInitgetDocdeleteDoc`
           ],
 
           args,
