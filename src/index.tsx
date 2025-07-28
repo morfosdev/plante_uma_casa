@@ -1675,7 +1675,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           pData: `all.lists.lst3`,
 
           itemElements: [
-            (...args:any) => <Elements.Text pass={{
+            
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -1692,7 +1693,50 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
           args,
 
-        }}/>
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [(...args) =>
+        functions.firebase.deleteDocTool({ args, pass:{
+   arrRefStrings: [
+        `locations`, 
+        `$arg_docId`, `localBikes`],
+   arrFuncs: [() => {}],
+        }})]
+ , trigger: 'on init'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Apagar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        
           ],
 
       styles:[
