@@ -1707,7 +1707,15 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
         }}/>],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`locations`],
+            arrFuncs: [()=>{}],
+        }})]
+ , trigger: 'on init'
+}})],
 
           args,
         }}/>, 
@@ -1941,9 +1949,14 @@ xmlns="http://www.w3.org/2000/svg"
 	pass: ""
 } } 
  } 
-, 'A1': { 'forms': { 'iptsChanges': {   } 
+, 
+'A1': { 'forms': { 'iptsChanges': {   } 
  } 
  } 
+, 'B1': { 
+'forms': { 'iptsChanges': {   } 
+ } 
+, 'currId': HW6jpFRnQGxnZRaP4Y6M } 
  } 
  
 } 
