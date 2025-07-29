@@ -47,33 +47,28 @@ export const where = async (props: Tprops) => {
   const fireInit: any = getFirestore(fbInit);
 
   const arrConds: any = [];
-  const newArrWh = () => {
-    const promiseArray = arrWhere.map((capsCond: any) => {
-      console.log({ capsCond });
-      const resolve = capsCond();
-      console.log({ resolve });
-      const field = resolve.field;
-      const operator = resolve.operator;
-      const value = resolve.value;
-
-      arrConds.push({ field, operator, value });
-
-      return getDocs(query(refColl, where(field, operator, value)));
-    });
-
-    return promiseArray;
-  };
 
   const refColl = collection(fireInit, ...newArrStringRefs);
-  const resolvePromise = await Promise.all(newArrWh());
+
+  let currQuery = refColl;
+
+  arrWhere.forEach((capsCond: any) => {
+    const resolve = capsCond();
+    const field = resolve.field;
+    const operator = resolve.operator;
+    const value = resolve.value;
+
+    arrConds.push({ field, operator, value });
+
+    currQuery = query(currQuery, where(field, operator, value));
+  });
+
+  const snapshot = await getDocs(currQuery);
 
   const arrDocs = [];
-  resolvePromise &&
-    resolvePromise.forEach((snaps: any) => {
-      snaps.forEach((doc: any) => {
-        arrDocs.push(doc.data());
-      });
-    });
+  snapshot.forEach((doc: any) => {
+    arrDocs.push(doc.data());
+  });
 
   console.log('%cWhere Cond', css1, { arrConds });
 
