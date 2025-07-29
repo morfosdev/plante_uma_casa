@@ -51,7 +51,7 @@ export const updateDocTool = async (props: Tprops) => {
   // ------ read Data
   let dataToUpdate: any = {};
   console.log({ arrPathData });
-  const newPath = arrRefStrings.map(i => {
+  const newPath = arrPathData.map(i => {
     const varValue = testVarType(i, args);
     console.log({ varValue });
     return varValue;
