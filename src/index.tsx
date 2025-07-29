@@ -2308,7 +2308,8 @@ xmlns="http://www.w3.org/2000/svg"
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, `$var_sc.B3.currId`],
-            arrPathData: [`$var_sc.B3.pathTest`],
+            arrPathData: [
+        `sc.B3.forms`, `$var_sc.B3.pathTest`],
             arrFuncs: [() => {}],
         }})]
  , trigger: 'on press'
@@ -2403,7 +2404,7 @@ xmlns="http://www.w3.org/2000/svg"
 'forms': { 'iptsChanges': {   } 
  } 
 , 
-'currId': "8F9zjOn7lqQK0QPpzpjj", 'pathTest': "sc.B3.forms.iptsChanges" } 
+'currId': "8F9zjOn7lqQK0QPpzpjj", 'pathTest': ".iptsChanges" } 
  } 
  
 } 
