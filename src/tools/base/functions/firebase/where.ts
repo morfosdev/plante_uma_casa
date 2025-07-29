@@ -1,11 +1,7 @@
 
-// import * as firebase from 'https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js';
-// import * as firestore from 'https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js';
-// import { initializeApp } from 'firebase/app';
-// import firebase from 'firebase/app';
+import { getCtData, testVarType } from '../../project';
 import * as firestore from 'firebase/firestore';
-// import firestore from 'firebase/firestore';
-// import { getFirestore, collection, getDocs } from 'firebase/firestore';
+
 
 type Tprops = {
   args: any;
@@ -17,9 +13,6 @@ type Tprops = {
   };
 };
 
-// Build failed with 1 error:
-// teste-firebase:https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js:1:126: ERROR: [plugin: Flax Web Plugin] Failed to construct 'URL': Invalid base URL
-
 export const css1 =
   'color: green; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 export const css2 =
@@ -28,7 +21,17 @@ export const css2 =
 export const where = async (props: Tprops) => {
   // ---------- set Props
   const { args, pass } = props;
-  const { fbInit, arrRefStrings, arrWhere, arrFuncs } = pass;
+	const { fbInit, arrRefStrings, arrWhere, arrFuncs } = pass;
+  const newArrStringRefs = arrRefStrings.map(i => {
+    console.log('1', { i });
+    const varValue = testVarType(i, args);
+    console.log('2', { varValue });
+
+    return varValue;
+  });
+
+  console.log('3', { newArrStringRefs });	
+
 
   // ---------- set Local Imports
   const { getFirestore, getDocs, collection, where, query } = firestore;
@@ -59,7 +62,7 @@ export const where = async (props: Tprops) => {
     return promiseArray;
   };
 
-  const refColl = collection(fireInit, ...arrRefStrings);
+  const refColl = collection(fireInit, ...newArrStringRefs);
   const resolvePromise = await Promise.all(newArrWh());
 
   const arrDocs = [];
@@ -70,7 +73,10 @@ export const where = async (props: Tprops) => {
       });
     });
 
-  console.log('%cWhere Cond', css1, { arrConds });
+	console.log('%cWhere Cond', css1, { arrConds }); 
+
+ console.log('%cWhere Cond', css1, { newArrStringRefs });
+
   console.log('%cWhere Docs Found', css2, { arrDocs });
 
   for (const currFunc of arrFuncs) currFunc(arrDocs, args);
