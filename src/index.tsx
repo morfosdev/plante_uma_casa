@@ -1398,7 +1398,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `userEmail`, 
-        `===`, `$var_sc.A0.forms.iptsChanges.userEmail`],
+        `==`, `$var_sc.A0.forms.iptsChanges.userEmail`],
         }})],
  arrFuncs: [() => {}],
  }})]
