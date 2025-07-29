@@ -31,17 +31,14 @@ export const setDocTool = async (props: Tprops) => {
   // -----------------------------
   // ---------- set Firestore Call
   // -----------------------------
-const newArrStringRefs = arrRefStrings.map(i => {
-    console.log('1', { i });
+  const newArrStringRefs = arrRefStrings.map(i => {
     const varValue = testVarType(i, args);
-    console.log('2', { varValue });
-
     return varValue;
   });
 
-  console.log('3', { newArrStringRefs });	
+  console.log('3', { newArrStringRefs });
 
-const fbInit = getCtData('all.temp.fireInit');
+  const fbInit = getCtData('all.temp.fireInit');
   const fireInit = getFirestore(fbInit);
   console.log({ fireInit });
   const refColl = collection(fireInit, ...newArrStringRefs);
@@ -53,8 +50,11 @@ const fbInit = getCtData('all.temp.fireInit');
 
   // ------ read Data
   let dataToSet = {};
-  dataToSet = getCtData(arrPathData.join());
-  // console.log({ dataToSet });
+  const newPath = arrPathData.map(i => {
+    const varValue = testVarType(i, args);
+    return varValue;
+  });
+  dataToSet = getCtData(newPath.join('.'));
 
   // ------ add new id
   dataToSet.docId = refDoc.id;
@@ -68,7 +68,11 @@ const fbInit = getCtData('all.temp.fireInit');
   for (const currFunc of arrFuncs) await currFunc(dataToSet, args);
 
   console.log('%csetDoc ok', css1);
-  console.log('%cReferencia do Documento', css2, { newArrStringRefs, dataToSet });
+  console.log('%cReferencia do Documento', css2, {
+    newArrStringRefs,
+    dataToSet,
+  });
 
   return dataToSet;
 };
+
