@@ -2308,8 +2308,7 @@ xmlns="http://www.w3.org/2000/svg"
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, `$var_sc.B3.currId`],
-            arrPathData: [
-        `sc.B3.forms`, `$var_sc.B3.pathTest`],
+            arrPathData: [`sc.B3.forms.iptsChanges`],
             arrFuncs: [() => {}],
         }})]
  , trigger: 'on press'
