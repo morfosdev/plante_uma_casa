@@ -2403,7 +2403,7 @@ xmlns="http://www.w3.org/2000/svg"
 'forms': { 'iptsChanges': {   } 
  } 
 , 
-'currId': "8F9zjOn7lqQK0QPpzpjj", 'pathTest': sc.B3.forms.iptsChanges } 
+'currId': "8F9zjOn7lqQK0QPpzpjj", 'pathTest': "sc.B3.forms.iptsChanges" } 
  } 
  
 } 
