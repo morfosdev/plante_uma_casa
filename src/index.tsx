@@ -1390,7 +1390,16 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
+ arrFunctions: [async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [''],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [``],
+        }})],
+ arrFuncs: [() => {}],
+ }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
