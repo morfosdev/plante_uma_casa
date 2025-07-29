@@ -2439,14 +2439,14 @@
     "capsCodeInfo": {
       "1": {
         "capsLabel": {
-          "pt-br": "função imagePicker",
-          "en": "function imagePicker"
+          "pt-br": "ImagePicker",
+          "en": "ImagePicker"
         },
         "capsDescription": {
           "pt-br": "",
           "en": ""
         },
-        "capsCodeTypes": ["function", "imagePicker"],
+        "capsCodeTypes": ["Elemento de Tela", "ImagePicker"],
         "capsCodeText": "(...args:any) => <Elements.ImagePicker pass={{\n arrFuncs: [!#!return functions!#!], args,\n }}/>",
         "capsCodeInputs": {
           "ccc_imagePicker-0": {
