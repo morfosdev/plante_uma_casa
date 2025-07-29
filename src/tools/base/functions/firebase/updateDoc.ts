@@ -26,10 +26,7 @@ export const updateDocTool = async (props: Tprops) => {
   // ---------- set Firestore Call
   // -----------------------------
   const newArrStringRefs = arrRefStrings.map(i => {
-    console.log('1', { i });
     const varValue = testVarType(i, args);
-    console.log('2', { varValue });
-
     return varValue;
   });
 
@@ -50,14 +47,11 @@ export const updateDocTool = async (props: Tprops) => {
 
   // ------ read Data
   let dataToUpdate: any = {};
-  console.log({ arrPathData });
   const newPath = arrPathData.map(i => {
     const varValue = testVarType(i, args);
-    console.log({ varValue });
     return varValue;
   });
   dataToUpdate = getCtData(newPath.join('.'));
-  console.log({ dataToUpdate });
 
   // ------ add date update
   dataToUpdate.updatedAt = Timestamp.now();
