@@ -1394,11 +1394,17 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`users`],
- arrWhere: [(...args) =>
+ arrWhere: [
+ (...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `userEmail`, 
         `==`, `$var_sc.A0.forms.iptsChanges.userEmail`],
+        }}), (...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `userPassword`, 
+        `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
         }})],
  arrFuncs: [() => {}],
  }})]
