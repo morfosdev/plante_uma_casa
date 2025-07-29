@@ -40,10 +40,10 @@ export const where = async (props: Tprops) => {
   // -----------------------------
   const fbInit = getCtData('all.temp.fireInit');
   if (!fbInit) return console.log(fbErrMsg1, { fbInit });
-  const fireInit: any = getFirestore(fbInit);
+  const fireInit: any = getFirestore(fbInit[0]);
 
   const newArrWhere = arrWhere.map(e => {
-    console.log('1 where conds', { e });
+    console.log('1 where conds', { e, e2: e() });
     const varValue = testVarType(e, args);
     console.log('2 where conds', { varValue });
 
