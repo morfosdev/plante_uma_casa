@@ -20,7 +20,7 @@ export const css2 =
 export const where = async (props: Tprops) => {
   // ---------- set Props
   const { args, pass } = props;
-  const { arrRefStrings, arrWhere, arrFuncs } = pass;
+  const { fbInit, arrRefStrings, arrWhere, arrFuncs } = pass;
   const newArrStringRefs = arrRefStrings.map(i => {
     console.log('1', { i });
     const varValue = testVarType(i, args);
@@ -33,33 +33,29 @@ export const where = async (props: Tprops) => {
 
   // ---------- set Local Imports
   const { getFirestore, getDocs, collection, where, query } = firestore;
+  // ---------- set Caps Inputs
+
+  // ---------- set Short Str
   const fbErrMsg1 = 'Alguma entrada where foi preenchida errado.';
+  const par1 = 'noComponent';
 
   // -----------------------------
   // ---------- set Init Firestore
   // -----------------------------
-  const fbInit = getCtData('all.temp.fireInit');
   if (!fbInit) return console.log(fbErrMsg1, { fbInit });
-  const fireInit: any = getFirestore(fbInit);
+  const fireInit: any = getFirestore(fbInit[0]);
 
-  const newArrWhere = arrWhere.map(e => {
-    console.log('1 where conds', { e, e2: e() });
-    const varValue = testVarType(e, args);
-    console.log('2 where conds', { varValue });
-
-    return varValue;
-  });
-
-  const arrConds = [];
+  const arrConds: any = [];
   const newArrWh = () => {
-    const promiseArray = newArrWhere.map((capsCond: any) => {
+    const promiseArray = arrWhere.map((capsCond: any) => {
       const resolve = capsCond();
+      const field = testVarType(resolve.field, args);
+      const operator = testVarType(resolve.operator, args);
+      const value = testVarType(resolve.value, args);
 
-      arrConds.push(resolve);
+      arrConds.push({ field, operator, value });
 
-      return getDocs(
-        query(refColl, where(resolve.field, resolve.operator, resolve.value)),
-      );
+      return getDocs(query(refColl, where(field, operator, value)));
     });
 
     return promiseArray;
@@ -77,7 +73,9 @@ export const where = async (props: Tprops) => {
     });
 
   console.log('%cWhere Cond', css1, { arrConds });
+
   console.log('%cWhere Cond', css1, { newArrStringRefs });
+
   console.log('%cWhere Docs Found', css2, { arrDocs });
 
   for (const currFunc of arrFuncs) currFunc(arrDocs, args);
