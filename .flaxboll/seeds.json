@@ -2469,7 +2469,7 @@
                 "custom capsule",
                 "condition"
               ],
-              "capsIptCapsDfCode": "() => console.log({args});"
+              "capsIptCapsDfCode": "() => console.log({args})"
             }
           }
         },
