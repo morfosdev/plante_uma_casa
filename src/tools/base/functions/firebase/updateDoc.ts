@@ -56,7 +56,7 @@ export const updateDocTool = async (props: Tprops) => {
     console.log({ varValue });
     return varValue;
   });
-  dataToUpdate = getCtData(newPath.join());
+  dataToUpdate = getCtData(newPath.join('.'));
   console.log({ dataToUpdate });
 
   // ------ add date update
