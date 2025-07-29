@@ -44,7 +44,7 @@ export const where = async (props: Tprops) => {
   // -----------------------------
   const fbInit = getCtData('all.temp.fireInit');
   if (!fbInit) return console.log(fbErrMsg1, { fbInit });
-  const fireInit: any = getFirestore(fbInit[0]);
+  const fireInit: any = getFirestore(fbInit);
 
   const arrConds: any = [];
   const newArrWh = () => {
