@@ -51,9 +51,10 @@ export const where = async (props: Tprops) => {
     const promiseArray = arrWhere.map((capsCond: any) => {
       console.log({ capsCond });
       const resolve = capsCond();
-      const field = testVarType(resolve.field, args);
-      const operator = testVarType(resolve.operator, args);
-      const value = testVarType(resolve.value, args);
+      console.log({ resolve });
+      const field = resolve.field;
+      const operator = resolve.operator;
+      const value = resolve.value;
 
       arrConds.push({ field, operator, value });
 
@@ -82,4 +83,3 @@ export const where = async (props: Tprops) => {
 
   for (const currFunc of arrFuncs) currFunc(arrDocs, args);
 };
-
