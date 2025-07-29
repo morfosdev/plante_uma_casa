@@ -2394,10 +2394,15 @@ xmlns="http://www.w3.org/2000/svg"
 'A1': { 'forms': { 'iptsChanges': {   } 
  } 
  } 
-, 'B1': { 
+, 
+'B1': { 
 'forms': { 'iptsChanges': {   } 
  } 
 , 'currId': "HW6jpFRnQGxnZRaP4Y6M" } 
+, 'B3': { 
+'forms': { 'iptsChanges': {   } 
+ } 
+, 'currId': "8F9zjOn7lqQK0QPpzpjj" } 
  } 
  
 } 
