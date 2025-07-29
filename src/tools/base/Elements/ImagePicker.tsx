@@ -1,11 +1,4 @@
 
-// ---------- import Packs
-import React from 'react';
-
-// ---------- import Local Tools
-import { useData } from '../../../';
-import { mapElements, pathSel } from '../../base/project';
-
 type Tprops = {
   pass: {
     variable: string[];
@@ -21,7 +14,6 @@ export const ImagePicker = (props: Tprops) => {
   // ---------- set Props
   const { arrFuncs, args } = props.pass;
 
-
-  return <></>;
+  return <RN.Text>upload</RN.Text>;
 };
 
