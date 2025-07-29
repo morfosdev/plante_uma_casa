@@ -2236,7 +2236,7 @@ xmlns="http://www.w3.org/2000/svg"
   arrRefStrings: [
         `locations`, 
         `$var_sc.B1.currId`, `localBikes`],
-            arrPathData: [`sc.B3.forms.iptsChanges`],
+            arrPathData: [`$var_sc.B3.forms.iptsChanges`],
             arrFuncs: [()=>{}],
         }})]
  , trigger: 'on press'
@@ -2308,7 +2308,7 @@ xmlns="http://www.w3.org/2000/svg"
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, `$var_sc.B3.currId`],
-            arrPathData: [`sc.B3.forms.iptsChanges`],
+            arrPathData: [`$var_sc.B3.forms.iptsChanges`],
             arrFuncs: [() => {}],
         }})]
  , trigger: 'on press'
