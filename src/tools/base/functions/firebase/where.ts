@@ -20,7 +20,7 @@ export const css2 =
 export const where = async (props: Tprops) => {
   // ---------- set Props
   const { args, pass } = props;
-  const { fbInit, arrRefStrings, arrWhere, arrFuncs } = pass;
+  const { arrRefStrings, arrWhere, arrFuncs } = pass;
   const newArrStringRefs = arrRefStrings.map(i => {
     console.log('1', { i });
     const varValue = testVarType(i, args);
@@ -42,6 +42,7 @@ export const where = async (props: Tprops) => {
   // -----------------------------
   // ---------- set Init Firestore
   // -----------------------------
+  const fbInit = getCtData('all.temp.fireInit');
   if (!fbInit) return console.log(fbErrMsg1, { fbInit });
   const fireInit: any = getFirestore(fbInit[0]);
 
