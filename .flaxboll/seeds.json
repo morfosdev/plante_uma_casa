@@ -1770,7 +1770,7 @@
           "en": ""
         },
         "capsCodeTypes": ["customs", "function", "firestore", "where"],
-        "capsCodeText": "async (...args) =>\n        functions.firebase.where({ args, pass:{\n            fbInit: [!#!firestore init path!#!],\n            arrRefStrings: [!#!array firestore reference!#!],\n            arrWhere: [!#!where params!#!],\n            arrFuncs: [!#!functions return!#!],\n        }})",
+        "capsCodeText": "async (...args) =>\n functions.firebase.where({ args, pass:{\n\n  arrRefStrings: [!#!array firestore reference!#!],\n arrWhere: [!#!where params!#!],\n arrFuncs: [!#!functions return!#!],\n }})",
         "capsCodeInputs": {
           "ccc_fireWhere-0": {
             "capsIptCodeID": "ccc_fireWhere-0",
@@ -1779,8 +1779,8 @@
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "firestore init path",
-                "en": "firestore init path"
+                "pt-br": "array firestore references",
+                "en": "array firestore references"
               },
               "capsIptCapsDescription": {
                 "pt-br": "",
@@ -1797,24 +1797,6 @@
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "array firestore references",
-                "en": "array firestore references"
-              },
-              "capsIptCapsDescription": {
-                "pt-br": "",
-                "en": ""
-              },
-              "capsIptCapsDfCode": "''",
-              "capsIptCapsTypesToAdd": ["string process"]
-            }
-          },
-          "ccc_fireWhere-2": {
-            "capsIptCodeID": "ccc_fireWhere-2",
-            "capsIptPosition": "2",
-            "capsIptRemoved": false,
-            "capsIptType": "capsules",
-            "capsIptCapsInfo": {
-              "capsIptCapsLabel": {
                 "pt-br": "where params",
                 "en": "where params"
               },
@@ -1826,9 +1808,9 @@
               "capsIptCapsTypesToAdd": ["where conditions"]
             }
           },
-          "ccc_fireWhere-3": {
-            "capsIptCodeID": "ccc_fireWhere-3",
-            "capsIptPosition": "3",
+          "ccc_fireWhere-2": {
+            "capsIptCodeID": "ccc_fireWhere-2",
+            "capsIptPosition": "2",
             "capsIptRemoved": false,
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
@@ -2462,3 +2444,4 @@
     }
   }
 }
+
