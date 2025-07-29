@@ -40,7 +40,7 @@ export const where = async (props: Tprops) => {
   // -----------------------------
   const fbInit = getCtData('all.temp.fireInit');
   if (!fbInit) return console.log(fbErrMsg1, { fbInit });
-  const fireInit: any = getFirestore(fbInit[0]);
+  const fireInit: any = getFirestore(fbInit);
 
   const newArrWhere = arrWhere.map(e => {
     console.log('1 where conds', { e, e2: e() });
