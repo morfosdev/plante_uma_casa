@@ -1335,11 +1335,11 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.A0.forms.iptsChanges.email`],
+          path: [`sc.A0.forms.iptsChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.email`],
+          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -1354,11 +1354,11 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.A0.forms.iptsChanges.pass`],
+          path: [`sc.A0.forms.iptsChanges.userPassword`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.pass`],
+          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
           value: [`$arg_callback`]
         }})],
 
