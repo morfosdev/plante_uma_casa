@@ -2296,6 +2296,7 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -2323,6 +2324,38 @@ xmlns="http://www.w3.org/2000/svg"
 
           children: [
             `Atualizar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [(...args:any) => <Elements.ImagePicker pass={{
+ arrFuncs: [() => console.log({args});], args,
+ }}/>]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "#FFF" }`
+          ],
+
+          children: [
+            `Upload`
           ],
 
           args,
