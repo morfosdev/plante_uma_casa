@@ -1,12 +1,6 @@
 
 // ---------- import Local Tools
-import {
-  getFirestore,
-  doc,
-  updateDoc,
-  collection,
-  Timestamp,
-} from 'firebase/firestore';
+import { getFirestore, doc, updateDoc, Timestamp } from 'firebase/firestore';
 import { getCtData, testVarType } from '../../project';
 
 export const css1 =
@@ -31,7 +25,7 @@ export const updateDocTool = async (props: Tprops) => {
   // -----------------------------
   // ---------- set Firestore Call
   // -----------------------------
-	const newArrStringRefs = arrRefStrings.map(i => {
+  const newArrStringRefs = arrRefStrings.map(i => {
     console.log('1', { i });
     const varValue = testVarType(i, args);
     console.log('2', { varValue });
@@ -39,12 +33,9 @@ export const updateDocTool = async (props: Tprops) => {
     return varValue;
   });
 
-  console.log('3', { newArrStringRefs });	
+  console.log('3', { newArrStringRefs });
 
-	
-
-
-const fbInit = getCtData('all.temp.fireInit');
+  const fbInit = getCtData('all.temp.fireInit');
   console.log(fbInit);
   const fireInit: any = getFirestore(fbInit);
   console.log({ arrRefStrings });
@@ -60,7 +51,11 @@ const fbInit = getCtData('all.temp.fireInit');
   // ------ read Data
   let dataToUpdate: any = {};
   console.log({ arrPathData });
-  dataToUpdate = getCtData(arrPathData.join());
+  const newPath = arrRefStrings.map(i => {
+    const varValue = testVarType(i, args);
+    return varValue;
+  });
+  dataToUpdate = getCtData(newPath);
   console.log({ dataToUpdate });
 
   // ------ add date update
@@ -81,3 +76,4 @@ const fbInit = getCtData('all.temp.fireInit');
 
   return dataToUpdate;
 };
+
