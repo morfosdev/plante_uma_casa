@@ -49,6 +49,7 @@ export const where = async (props: Tprops) => {
   const arrConds: any = [];
   const newArrWh = () => {
     const promiseArray = arrWhere.map((capsCond: any) => {
+      console.log({ capsCond });
       const resolve = capsCond();
       const field = testVarType(resolve.field, args);
       const operator = testVarType(resolve.operator, args);
