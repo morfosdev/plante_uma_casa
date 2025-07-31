@@ -17,7 +17,7 @@ const css =
 export const ImagePicker = (props: Tprops) => {
   // ---------- set Props
   const { arrFuncs, args } = props.pass;
-  console.log({ arrFuncs, args });
+  console.log("ImagePicker",{ arrFuncs, args });
 
   return (
     <RN.Pressable>
