@@ -24,7 +24,22 @@ export const BtnImagePicker = (props: Tprops) => {
 
   console.log({ arrFuncs, args });
 
-  const pickNative = async () => {};
+  const pickNative = async () => {
+    // const ImagePicker = await import('expo-image-picker');
+    // const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    // if (status !== 'granted') {
+    //   alert('Permissão para acessar a galeria foi negada');
+    //   return;
+    // }
+    // const result = await ImagePicker.launchImageLibraryAsync({
+    //   mediaTypes: ImagePicker.MediaTypeOptions.Images,
+    //   allowsEditing: true,
+    //   quality: 1,
+    // });
+    // if (!result.canceled) {
+    //   setImage(result.assets[0].uri);
+    // }
+  };
 
   const pickWeb = () => {
     inputRef.current?.click();
