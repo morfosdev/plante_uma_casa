@@ -2447,7 +2447,7 @@
           "en": ""
         },
         "capsCodeTypes": ["Elemento de Tela", "ImagePicker"],
-        "capsCodeText": "(...args:any) => <Elements.ImagePicker pass={{\n arrFuncs: [!#!return functions!#!], args,\n }}/>",
+        "capsCodeText": "(...args:any) => <Elements.BtnImagePicker pass={{\n arrFuncs: [!#!return functions!#!], args,\n }}/>",
         "capsCodeInputs": {
           "ccc_imagePicker-0": {
             "capsIptCodeID": "ccc_imagePicker-0",
