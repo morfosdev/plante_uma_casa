@@ -14,7 +14,7 @@ type Tprops = {
 const css =
   'color: #54ff00; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
-export const PickerImage = (props: Tprops) => {
+export const BtnImagePicker = (props: Tprops) => {
   const isWeb = RN.Platform.OS === 'web';
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
