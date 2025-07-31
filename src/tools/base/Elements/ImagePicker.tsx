@@ -1,9 +1,6 @@
 
 // ---------- import Packs
-import React from 'react';
-import * as RN from 'react-native';
-
-
+import * as RN from 'react-native-web';
 
 type Tprops = {
   pass: {
@@ -19,7 +16,12 @@ const css =
 export const ImagePicker = (props: Tprops) => {
   // ---------- set Props
   const { arrFuncs, args } = props.pass;
+  console.log({ arrFuncs, args });
 
-  return <RN.Text>upload</RN.Text>;
+  return (
+    <RN.Pressable>
+      <RN.Text>Carregar Imagens</RN.Text>
+    </RN.Pressable>
+  );
 };
 
