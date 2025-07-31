@@ -23,7 +23,9 @@ export const BtnImagePicker = (props: Tprops) => {
   console.log({ arrFuncs, args });
 
   const pickImage = async () => {
-    // Solicita permissão para acessar a galeria
+		// Solicita permissão para acessar a galeria
+console.log("ImagePicker Btn Pressed");
+
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== 'granted') {
       RN.Alert.alert(
