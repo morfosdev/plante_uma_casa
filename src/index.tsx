@@ -1406,7 +1406,17 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         `userPassword`, 
         `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
         }})],
- arrFuncs: [(args) => { console.log("minha custom login", args); }],
+ arrFuncs: [(args) => { 
+	console.log("minha custom login",args);
+
+	const loginData = args[0];
+	const typeAccount = loginData.typeAccount;
+	const isAdm = typeAccount === 'adm';
+
+if(isAdm) tools.goTo('a1list');
+if(!isAdm) tools.goTo('home');
+
+}],
  }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
