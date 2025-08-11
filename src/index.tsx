@@ -1406,7 +1406,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         `userPassword`, 
         `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
         }})],
- arrFuncs: [() => {}],
+ arrFuncs: [(args) => { console.log("minha custom login", args); }],
  }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
