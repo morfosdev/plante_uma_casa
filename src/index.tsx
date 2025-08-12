@@ -1511,7 +1511,7 @@ tools.setData({
     return;
   }
 
-  const loginData = arr[0] ?? null;
+  const loginData = args[0] ?? null;
 
   console.log('custom 1', { loginData });
 
