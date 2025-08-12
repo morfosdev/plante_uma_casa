@@ -1467,7 +1467,12 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
   const isArray = Array.isArray(args);
   const isEmpty = !isArray || args.length === 0;
 
-  if (isEmpty) {
+	if (isEmpty) {
+		
+tools.setData({
+      path: 'sc.A0.forms.showErr',
+      value: true });
+
     tools.setData({
       path: 'sc.A0.forms.msgs',
       value: 'Usuário ou Senha incorretos.'});
