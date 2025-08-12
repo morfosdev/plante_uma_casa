@@ -1413,6 +1413,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	const typeAccount = loginData.typeAccount;
 	const isAdm = typeAccount === 'adm';
 
+if(!loginData) tools.setData({keyPath: ['sc.A0.forms.msgs'], value: "Usuário ou Senha incorretos."});
 if(isAdm) tools.goTo('a1list');
 if(!isAdm) tools.goTo('home');
 
