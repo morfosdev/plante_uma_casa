@@ -1450,11 +1450,12 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
           path: [`sc.A0.forms.iptsChanges.userPassword`],
 
-          funcsArray: [async (...args) =>
+          funcsArray: [
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
           value: [`$arg_callback`]
-        }})],
+        }}), () => {}],
 
           args,
         }}/>, 
