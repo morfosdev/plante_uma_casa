@@ -1407,7 +1407,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
         }})],
  arrFuncs: [(args) => { 
-  console.log("minha custom login", args);
+  console.log("minha custom login 1", args);
 
   const isArray = Array.isArray(args);
   const isEmpty = !isArray || args.length === 0;
