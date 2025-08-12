@@ -1474,7 +1474,7 @@ tools.setData({
       value: true });
 
     tools.setData({
-      path: 'sc.A0.forms.msgs',
+      path: 'sc.A0.forms.msgs.msg1',
       value: 'Usuário ou Senha incorretos.'});
     return;
   }
@@ -1524,20 +1524,30 @@ tools.setData({
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
  , trigger: 'on listen'
-}})],            childrenItems:[() =><></>],
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: "red"
+}`
+          ],
+
+          children: [
+            `$var_sc.A0.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
