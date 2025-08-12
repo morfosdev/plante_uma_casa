@@ -1420,7 +1420,9 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           stylesArray: [`{ 
 	padding: 10,
 	borderBottomColor: "black",
-	borderBottomWidth: 2
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
 }`],
 
           path: [`sc.A0.forms.iptsChanges.userEmail`],
