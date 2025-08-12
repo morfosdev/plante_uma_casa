@@ -1421,7 +1421,12 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
   }
 
  const loginData = arr[0] ?? null;
-  const typeAccount = loginData?.typeAccount;
+	const typeAccount = loginData?.typeAccount;
+const invalidData = !loginData || typeof loginData !== 'object';
+	
+	if(invalidData) return;
+
+
   const isAdm = typeAccount === 'adm';
 
   if (isAdm) {
