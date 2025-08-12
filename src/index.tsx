@@ -1420,24 +1420,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
     return;
   }
 
-	const loginData = arr[0] ?? null;
-	
-console.log("custom 1",{loginData});
 
-const invalidData = !loginData || typeof loginData !== 'object';
-	console.log("custom 2",{invalidData});
-	if(invalidData) return;
-	
-console.log("custom 3",{loginData});
-
-	const typeAccount = loginData?.typeAccount;
-  const isAdm = typeAccount === 'adm';
-
-  if (isAdm) {
-    tools.goTo('a1list');
-  } else {
-    tools.goTo('home');
-  }
 }],
  }})]
  , trigger: 'on press'
