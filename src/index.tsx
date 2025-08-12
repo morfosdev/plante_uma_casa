@@ -1420,7 +1420,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           stylesArray: [`{ 
 	padding: 8,
 	paddingLeft: 2,
-	borderBottomColor: "black",
+	borderBottomColor: "$var_all.colors.primary",
 	borderBottomWidth: 2,
 	marginBottom: 16,
 	textAlign: "left"
@@ -1442,7 +1442,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           stylesArray: [`{ 
 	padding: 8,
 	paddingLeft: 2,
-	borderBottomColor: "black",
+	borderBottomColor: "$var_all.colors.primary",
 	borderBottomWidth: 2,
 	marginBottom: 16,
 	textAlign: "left"
