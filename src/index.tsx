@@ -1409,13 +1409,15 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  arrFuncs: [(args) => { 
 	console.log("minha custom login",args);
 
-	const loginData = args[0];
-	const typeAccount = loginData.typeAccount;
-	const isAdm = typeAccount === 'adm';
   const isArray = Array.isArray(args);
   const isEmpty = !isArray || args.length === 0;
 
-if(isEmpty) tools.setData({keyPath: ['sc.A0.forms.msgs'], value: "Usuário ou Senha incorretos."});
+	if(isEmpty) return tools.setData({keyPath: ['sc.A0.forms.msgs'], value: "Usuário ou Senha incorretos."});
+	
+	const loginData = args[0];
+	const typeAccount = loginData.typeAccount;
+	const isAdm = typeAccount === 'adm';
+
 if(isAdm) tools.goTo('a1list');
 if(!isAdm) tools.goTo('home');
 
