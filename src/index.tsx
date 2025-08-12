@@ -1407,20 +1407,28 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
         }})],
  arrFuncs: [(args) => { 
-	console.log("minha custom login",args);
+  console.log("minha custom login", args);
 
   const isArray = Array.isArray(args);
   const isEmpty = !isArray || args.length === 0;
 
-	if(isEmpty) return tools.setData({keyPath: ['sc.A0.forms.msgs'], value: "Usuário ou Senha incorretos."});
-	
-	const loginData = args[0];
-	const typeAccount = loginData.typeAccount;
-	const isAdm = typeAccount === 'adm';
+  if (isEmpty) {
+    tools.setData({
+      keyPath: ['sc.A0.forms.msgs'],
+      value: "Usuário ou Senha incorretos."
+    });
+    return; // garante que não vai acessar args[0]
+  }
 
-if(isAdm) tools.goTo('a1list');
-if(!isAdm) tools.goTo('home');
+  const loginData = args[0];
+  const typeAccount = loginData?.typeAccount; // previne erro
+  const isAdm = typeAccount === 'adm';
 
+  if (isAdm) {
+    tools.goTo('a1list');
+  } else {
+    tools.goTo('home');
+  }
 }],
  }})]
  , trigger: 'on press'
