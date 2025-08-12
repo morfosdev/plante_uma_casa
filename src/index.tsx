@@ -1413,7 +1413,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
   const isEmpty = !isArray || args.length === 0;
 
   if (isEmpty) {
-    tools.setData({
+    tools.functions.setVar({
       keyPath: ['sc.A0.forms.msgs'],
       value: 'Usuário ou Senha incorretos.',
     });
