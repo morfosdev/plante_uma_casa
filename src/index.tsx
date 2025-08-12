@@ -1418,8 +1418,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           propsArray: [{}],
 
           stylesArray: [`{ 
-	padding: 10,
-	paddingLeft: 4,
+	padding: 8,
+	paddingLeft: 2,
 	borderBottomColor: "black",
 	borderBottomWidth: 2,
 	marginBottom: 16,
@@ -1439,11 +1439,14 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "black",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
 
           path: [`sc.A0.forms.iptsChanges.userPassword`],
 
