@@ -1406,8 +1406,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         `userPassword`, 
         `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
         }})],
- arrFuncs: [(args) => { 
-  console.log("minha custom login 1", args);
+ arrFuncs: [(args) => {
+  console.log('minha custom login 1', args);
 
   const isArray = Array.isArray(args);
   const isEmpty = !isArray || args.length === 0;
@@ -1415,33 +1415,30 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
   if (isEmpty) {
     tools.setData({
       keyPath: ['sc.A0.forms.msgs'],
-      value: "Usuário ou Senha incorretos."
+      value: 'Usuário ou Senha incorretos.',
     });
     return;
   }
 
+  const loginData = arr[0] ?? null;
 
-}	const loginData = arr[0] ?? null;
-	
-console.log("custom 1",{loginData});
+  console.log('custom 1', { loginData });
 
-const invalidData = !loginData || typeof loginData !== 'object';
-	console.log("custom 2",{invalidData});
-	if(invalidData) return;
-	
-console.log("custom 3",{loginData});
+  const invalidData = !loginData || typeof loginData !== 'object';
+  console.log('custom 2', { invalidData });
+  if (invalidData) return;
 
-	const typeAccount = loginData?.typeAccount;
+  console.log('custom 3', { loginData });
+
+  const typeAccount = loginData?.typeAccount;
   const isAdm = typeAccount === 'adm';
 
   if (isAdm) {
     tools.goTo('a1list');
   } else {
     tools.goTo('home');
-	}
-
-}
-],
+  }
+}],
  }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
