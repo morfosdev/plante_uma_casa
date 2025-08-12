@@ -2602,7 +2602,7 @@ xmlns="http://www.w3.org/2000/svg"
  } 
 , 'sc': { 
 'A0': { 'forms': { 'iptsChanges': {
-	userEmail: "carlos@email.com",
+	userEmail: "adm@teste.com",
 	pass: ""
 } } 
  } 
