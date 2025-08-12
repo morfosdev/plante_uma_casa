@@ -698,7 +698,8 @@ console.log({item});
 	maxWidth: 280,
 	minHeight: 150,
 	backgroundColor: "#FFF",
-	borderRadius: 20 
+	borderRadius: 20,
+	padding: 10
 }`, 
         `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
         `{ color: "#FFF" }`, 
@@ -1181,7 +1182,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	maxWidth: 280,
 	minHeight: 150,
 	backgroundColor: "#FFF",
-	borderRadius: 20 
+	borderRadius: 20,
+	padding: 10
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -1357,7 +1359,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	maxWidth: 280,
 	minHeight: 150,
 	backgroundColor: "#FFF",
-	borderRadius: 20 
+	borderRadius: 20,
+	padding: 10
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -1649,7 +1652,8 @@ tools.setData({
 	maxWidth: 280,
 	minHeight: 150,
 	backgroundColor: "#FFF",
-	borderRadius: 20 
+	borderRadius: 20,
+	padding: 10
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
