@@ -1417,11 +1417,11 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
       keyPath: ['sc.A0.forms.msgs'],
       value: "Usuário ou Senha incorretos."
     });
-    return; // garante que não vai acessar args[0]
+    return;
   }
 
   const loginData = args[0];
-  const typeAccount = loginData?.typeAccount; // previne erro
+  const typeAccount = loginData?.typeAccount;
   const isAdm = typeAccount === 'adm';
 
   if (isAdm) {
