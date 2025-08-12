@@ -1438,7 +1438,10 @@ console.log("custom 3",{loginData});
     tools.goTo('a1list');
   } else {
     tools.goTo('home');
-  }],
+	}
+
+}
+],
  }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
