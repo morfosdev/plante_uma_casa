@@ -1530,7 +1530,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
+ arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[() =><></>],
 
