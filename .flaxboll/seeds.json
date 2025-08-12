@@ -939,7 +939,11 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "() => {}",
-              "capsIptCapsTypesToAdd": ["setVar", "setTimeout"]
+              "capsIptCapsTypesToAdd": [
+                "setVar",
+                "setTimeout",
+                "custom capsule"
+              ]
             }
           }
         },
