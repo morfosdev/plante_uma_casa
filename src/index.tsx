@@ -1455,9 +1455,10 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
           value: [`$arg_callback`]
-        }}), (args) => {
+        }}), (txt) => {
 	const x = '';
-	console.log({args});
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: txt });
 }],
 
           args,
