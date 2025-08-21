@@ -20,20 +20,6 @@ type Tprops = {
   };
 };
 
-// --- máscara exemplo (pode trocar por outra)
-const maskPhoneBR = (txt: string = '') => {
-  const d = String(txt).replace(/D/g, '').slice(0, 11);
-  const ddd = d.slice(0, 2);
-  const isCel = d.length > 10;
-  const first = d.slice(2, isCel ? 7 : 6);
-  const last = d.slice(isCel ? 7 : 6, isCel ? 11 : 10);
-  return (
-    (ddd ? '(' + ddd + ') ' : '') +
-    (first ? first : '') +
-    (last ? ' - ' + last : '')
-  );
-};
-
 // IptTxtEdit - Entrada de Texto com prop value
 export const IptTxtEdit = (props: Tprops) => {
   const {
@@ -65,19 +51,17 @@ export const IptTxtEdit = (props: Tprops) => {
 
   // onChange: decide o “modo”
   const getTxt = async (val: string) => {
-    const masked = maskPhoneBR(val);
-
     if (!hasExternal) {
       // modo interno: só estado local
-      setText(masked);
+      setText(val);
       return;
     }
 
     // modo externo: mantém input responsivo e sincroniza store
-    setText(masked); // feedback imediato
-    setData({ path: joinedPath, value: masked });
+    setText(val); // feedback imediato
+    setData({ path: joinedPath, value: val });
     for (const fn of funcsArray) {
-      await fn(masked, args);
+      await fn(val, args);
     }
   };
 
@@ -109,4 +93,3 @@ export const IptTxtEdit = (props: Tprops) => {
 
   return <TextInput {...allProps} />;
 };
-
