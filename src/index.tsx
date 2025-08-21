@@ -1538,7 +1538,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
 	console.log({limitChars});
 
-    const onlyNum = limitChars?.replace(/D/g, '') ?? {};
+const onlyNum = limitChars?.replace(/[^d]/g, '');
+
 
 console.log({onlyNum});
 
