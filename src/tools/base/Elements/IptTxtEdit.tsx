@@ -86,8 +86,6 @@ export const IptTxtEdit = (props: Tprops) => {
     onChangeText: getTxt,
     placeholder: 'Escreva...',
     placeholderTextColor: '#ccc',
-    keyboardType: 'phone-pad',
-    maxLength: 16, // "(11) 99999-9999"
     ...userElProps,
   };
 
