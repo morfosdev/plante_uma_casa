@@ -1536,11 +1536,12 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
   const last  = digits.slice(isCel ? 7 : 6, isCel ? 11 : 10);
 
   const mask =
-    (ddd ? '(' + ddd + ')' : '') +
+    (ddd ? '(' + ddd + ') ' : '') +
     (first ? first : '') +
     (last ? ' - ' + last : '');
 
   console.log({ mask });
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: mask });
 }],
 
           args,
