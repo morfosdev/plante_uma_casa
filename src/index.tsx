@@ -1529,37 +1529,18 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           path: [`sc.A0.forms.iptsChanges.pass`],
 
           funcsArray: [(txt) => {
-	const x = '';
-	console.log({txt});
+  const digits = String(txt).replace(/D/g, '').slice(0, 11);
+  const ddd = digits.slice(0, 2);
+  const isCel = digits.length > 10;
+  const first = digits.slice(2, isCel ? 7 : 6);
+  const last  = digits.slice(isCel ? 7 : 6, isCel ? 11 : 10);
 
-    let limitChars = txt;
-	console.log({limit: limitChars?.length});
-    if (limitChars?.length > 15) limitChars = limitChars?.substring(0, 15);
+  const mask =
+    (ddd ? '(' + ddd + ')' : '') +
+    (first ? first : '') +
+    (last ? ' - ' + last : '');
 
-	console.log({limitChars});
-
-const onlyNum = limitChars?.replace(/[^d]/g, '');
-
-
-console.log({onlyNum});
-
-    const arrChars = Object.values(onlyNum);
-
-    const numChars = arrChars.length;
-
-    const idx = num => arrChars[num] ?? '';
-    const firstFour = idx(2) + idx(3) + idx(4) + idx(5) + idx(6);
-    const secFour = idx(7) + idx(8) + idx(9) + idx(10);
-    const condHifen = numChars > 7 ? '-' : '';
-    const condSpace = numChars > 2 ? ' ' : '';
-    const condPar1 = numChars > 0 ? '(' : '';
-    const condPar2 = numChars > 2 ? ')' : '';
-    const condDDD = condPar1 + idx(0) + idx(1) + condPar2;
-    const mask = condDDD + condSpace + firstFour + condHifen + secFour;
-
-console.log({mask});
-
-
+  console.log({ mask });
 }],
 
           args,
