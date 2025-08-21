@@ -1437,7 +1437,10 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           args,
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+	keyboardType: 'phone-pad',
+	maxLength: 20
+}`],
 
           stylesArray: [`{ 
 	padding: 8,
