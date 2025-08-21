@@ -1458,7 +1458,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         }}), (txt) => {
 	const x = '';
 	console.log({txt});
-	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: txt });
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
 }],
 
           args,
@@ -1526,7 +1526,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	textAlign: "left"
 }`],
 
-          path: [`sc.A0.forms.iptsChanges.userPassword`],
+          path: [`sc.A0.forms.iptsChanges.pass`],
 
           funcsArray: [(txt) => {
 	const x = '';
