@@ -1514,6 +1514,28 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         , 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userPassword`],
+
+          funcsArray: [(txt) => {
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: txt });
+}],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
