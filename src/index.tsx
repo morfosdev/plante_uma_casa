@@ -1529,7 +1529,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           path: [`sc.A0.forms.iptsChanges.pass`],
 
           funcsArray: [(txt) => {
-  const digits = String(txt).replace(/D/g, '').slice(0, 11);
+const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
   const ddd = digits.slice(0, 2);
   const isCel = digits.length > 10;
   const first = digits.slice(2, isCel ? 7 : 6);
