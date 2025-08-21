@@ -80,6 +80,7 @@ export const IptTxtEdit = (props: Tprops) => {
     }
   }
 
+console.log({userElProps});
   const allProps = {
     style: stlsUser,
     value: sttText,
