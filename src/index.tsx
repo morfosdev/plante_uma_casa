@@ -1531,7 +1531,30 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           funcsArray: [(txt) => {
 	const x = '';
 	console.log({txt});
-	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: txt });
+
+
+    let limitChars = txt;
+    if (limitChars?.length > 15) limitChars = limitChars?.substring(0, 15);
+
+    const onlyNum = limitChars?.replace(/D/g, '') ?? {};
+
+    const arrChars = Object.values(onlyNum);
+
+    const numChars = arrChars.length;
+
+    const idx = num => arrChars[num] ?? '';
+    const firstFour = idx(2) + idx(3) + idx(4) + idx(5) + idx(6);
+    const secFour = idx(7) + idx(8) + idx(9) + idx(10);
+    const condHifen = numChars > 7 ? '-' : '';
+    const condSpace = numChars > 2 ? ' ' : '';
+    const condPar1 = numChars > 0 ? '(' : '';
+    const condPar2 = numChars > 2 ? ')' : '';
+    const condDDD = condPar1 + idx(0) + idx(1) + condPar2;
+    const mask = condDDD + condSpace + firstFour + condHifen + secFour;
+
+console.log({mask});
+
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: mask });
 }],
 
           args,
