@@ -1554,7 +1554,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
 console.log({mask});
 
-	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: mask });
+
 }],
 
           args,
