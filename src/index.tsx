@@ -19,7 +19,7 @@
           import { tools } from './tools';
 
           // ---------- set Caps Inputs
-          const currRoute = 'ab0login';
+          const currRoute = 'aisc';
 
           let args: any = [];
 
@@ -2284,6 +2284,7 @@ whereConds ??`
 
           args,
         }}/>, 
+        
 
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"b3form",
@@ -2594,6 +2595,48 @@ xmlns="http://www.w3.org/2000/svg"
  }}/>],
             args,
         }}/>],
+
+          functions:[()=>{}],
+
+          args,
+        }}/>, 
+
+        (...args: any) => <Elements.Screen3 pass={{
+          pathScreen:"aisc",
+
+          styles:[
+              {
+                backgroundColor: '#101',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100%',
+                width: '100%',
+              }
+              ],
+
+          screenElements:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [()=>{}]
+ , trigger: 'on press'
+}})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
           functions:[()=>{}],
 
