@@ -2641,7 +2641,8 @@ xmlns="http://www.w3.org/2000/svg"
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"home",
 
-          styles:[`[object Object]`],
+          styles:[
+        `[object Object]`, `{ backgroundColor: '#000' }`],
 
           screenElements:[() => {
                   const textStyle = {
