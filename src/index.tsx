@@ -2615,6 +2615,7 @@ xmlns="http://www.w3.org/2000/svg"
               ],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -2636,7 +2637,22 @@ xmlns="http://www.w3.org/2000/svg"
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Que tela Legal`
+          ],
+
+          args,
+
+        }}/>],
 
           functions:[()=>{}],
 
