@@ -2620,7 +2620,8 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            `{ color: 'yellow' }`
+            
+        `{ color: 'yellow' }`, `{ color: 'pink', fontSize: 20 }`
           ],
 
           children: [
