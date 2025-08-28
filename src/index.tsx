@@ -19,7 +19,7 @@
           import { tools } from './tools';
 
           // ---------- set Caps Inputs
-          const currRoute = 'ab0login';
+          const currRoute = 'aisc';
 
           let args: any = [];
 
@@ -2602,7 +2602,7 @@ xmlns="http://www.w3.org/2000/svg"
         }}/>, 
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"home",
+          pathScreen:"aisc",
 
           styles:[
               {
