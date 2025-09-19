@@ -1723,7 +1723,14 @@ tools.setData({
 }`],
 
             functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ flex: 1 }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -1733,12 +1740,16 @@ tools.setData({
           ],
 
           children: [
-            `Brand Area`
+            `My Company Name`
           ],
 
           args,
 
-        }}/>, 
+        }}/>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1746,7 +1757,8 @@ tools.setData({
             styles:[`{
 	width: 150,
 	flexDirection: "row",
-	justifyContent: "start"
+	justifyContent: "start",
+	alignItems: "center"
 }`],
 
             functions:[()=>{}],            childrenItems:[
