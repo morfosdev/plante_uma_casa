@@ -1711,12 +1711,16 @@ tools.setData({
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[
+        `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+ }`, `{
+	backgroundColor: "white",
+	height: 40
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
