@@ -1720,7 +1720,7 @@ tools.setData({
  }`, `{
 	backgroundColor: "white",
 	paddingHorizontal: 20,
-	height: 40,
+	height: 50,
 }`],
 
             functions:[()=>{}],            childrenItems:[
