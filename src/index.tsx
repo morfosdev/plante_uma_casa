@@ -1719,7 +1719,8 @@ tools.setData({
 	justifyContent: "flex-start"
  }`, `{
 	backgroundColor: "white",
-	height: 40
+	paddingHorizontal: 20,
+	height: 40,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -1782,7 +1783,10 @@ tools.setData({
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ 
+	fontWeight: "bold",
+	fontSize: 12
+}`
           ],
 
           children: [
