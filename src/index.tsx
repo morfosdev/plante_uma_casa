@@ -1737,7 +1737,10 @@ tools.setData({
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ 
+	fontWeight: "bold",
+	fontSize: 12
+}`
           ],
 
           children: [
