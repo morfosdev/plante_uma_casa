@@ -1707,6 +1707,7 @@ tools.setData({
         `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1800,6 +1801,50 @@ tools.setData({
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ width: "100%", height: "100%" }`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 150,
+	height: "100%",
+	backgroundColor: "white"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "100%", height: "100%" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
