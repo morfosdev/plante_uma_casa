@@ -1703,7 +1703,8 @@ tools.setData({
           pathScreen:"a1list",
 
           styles:[
-        `{ width: "100%", height: "100%" }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
+        `{ width: "100%", height: "100%" }`, 
+        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
 
           screenElements:[
 
@@ -2612,7 +2613,7 @@ xmlns="http://www.w3.org/2000/svg"
 }, 
 'colors': { 
 'primary': '#444', 
-'secondary': "#0064fe", 'smoke': "#cecece" } 
+'secondary': "#0064fe", 'smoke': "#ddd" } 
 , 
 'lists': { 
 'lt1': [{name: "João", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},{name: "Luciana"},{name: "Pedro"}], 
