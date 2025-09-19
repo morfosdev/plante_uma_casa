@@ -1786,10 +1786,11 @@ tools.setData({
           ],
 
           arrStyles: [
-            `{ 
+            
+        `{ 
 	fontWeight: "bold",
 	fontSize: 12
-}`
+}`, `{ marginLeft: 5 }`
           ],
 
           children: [
