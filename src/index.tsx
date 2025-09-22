@@ -40,26 +40,6 @@
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{
   flexDirection: "row",
   backgroundColor: "#0064fe",
@@ -724,6 +704,7 @@ console.log({item});
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1167,6 +1148,25 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	width: "80%",
+	maxWidth: 280,
+	minHeight: 150,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	padding: 10
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
