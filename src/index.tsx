@@ -153,7 +153,27 @@ paddingHorizontal: '5px',
 paddingVertical: '20px',
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+  fontSize: 14, 
+  fontWeight: "500", 
+  fontFamily: "Inter", 
+  color: "#5C5F6A",
+}`
+          ],
+
+          children: [
+            `Admin > `
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
