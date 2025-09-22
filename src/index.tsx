@@ -38,7 +38,23 @@
         (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{ backgroundColor: "#EFEFEF", width: "100%", padding: 20 }`],
             arrProps: [],
-            arrItems: [() => <></>],
+            arrItems: [
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+alignItems: 'center',
+justifyContent: 'center',
+height: '100px',
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
             args,
         }}/>, 
         
