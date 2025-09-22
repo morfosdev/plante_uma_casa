@@ -39,6 +39,7 @@
             styles: [`{ backgroundColor: "#EFEFEF", width: "100%", padding: 20 }`],
             arrProps: [],
             arrItems: [
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -134,6 +135,25 @@ width: '155px',
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+justifyContent: 'initial',
+alignItems: 'center',
+height: '100px',
+flexDirection: 'row',
+paddingHorizontal: '5px',
+paddingVertical: '20px',
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
