@@ -2859,7 +2859,37 @@ xmlns="http://www.w3.org/2000/svg"
 'forms': { 'iptsChanges': {   } 
  } 
 , 
-'currId': "8F9zjOn7lqQK0QPpzpjj", 'pathTest': "iptsChanges" } 
+'currId': "8F9zjOn7lqQK0QPpzpjj", 
+'pathTest': "iptsChanges", 'statics': {
+	picker1: [
+		{ 
+			label: 'Selecione…',
+			value: '',
+			disabled: true
+		},
+		{ 
+			label: 'Opção A',
+			value: 'A'
+		},
+		{ 
+			label: 'Opção B',
+			value: 'B'
+		},
+		{ 
+			label: 'Opção C',
+			value: 'C'
+		},
+		{ 
+			label: 'Opção D',
+			value: 'D'
+		},
+		{ 
+			label: 'Opção E (desabilitada)',
+			value: 'E',
+			disabled: true
+		},
+	]
+} } 
  } 
  
 } 
