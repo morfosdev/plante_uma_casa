@@ -272,7 +272,22 @@ paddingVertical: '20px',
         `{ color: "#FFF" }`, 
         `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Estilos Base I`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
