@@ -2773,14 +2773,13 @@ xmlns="http://www.w3.org/2000/svg"
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
+            styles:[`{ 
 	width: "100%",
 	minHeight: 150,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.IptPicker pass={{
  pathList: [''], pathEdit: [''], arrFuncs: [() => {console.log('function default')}], args 
