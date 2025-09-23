@@ -71,6 +71,14 @@ export const IptPicker: React.FC<InputPickerProps> = ({
     x: 0,
     h: 0,
   });
+	const items = [
+    { label: "Selecione…", value: "", disabled: true },
+    { label: "Opção A", value: "A" },
+    { label: "Opção B", value: "B" },
+    { label: "Opção C", value: "C" },
+    { label: "Opção D", value: "D" },
+    { label: "Opção E (desabilitada)", value: "E", disabled: true },
+  ];
 
   const currentItem = useMemo(
     () => items.find((it) => it.value === value) ?? null,
