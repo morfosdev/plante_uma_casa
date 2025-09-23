@@ -2494,7 +2494,8 @@
       },
       "capsUserID": "xxx1"
     }
-	},
+  },
+
   "ccc_iptPicker": {
     "capsCodeInfo": {
       "1": {
@@ -2505,7 +2506,7 @@
         "capsDescription": { "pt-br": "", "en": "" },
         "capsCodeTypes": ["Elemento de Tela", "IptPicker"],
 
-        "capsCodeText": "(...args:any) => <Elements.IptPicker pass={{\n pathList: [!#!Path List!#!], pathEdit: [!#!Path Edit!#!], arrFuncs: [!#!OnValueChange Functions!#!], args \n }}/>",
+        "capsCodeText": "(...args:any) => <Elements.IptPicker pass={{\n configs: [!#!Path List!#!], arrFuncs: [!#!OnValueChange Functions!#!], args \n }}/>",
 
         "capsCodeInputs": {
           "ccc_iptPicker-0": {
@@ -2516,8 +2517,8 @@
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "Caminho da Lista",
-                "en": "Path List"
+                "pt-br": "Configurações",
+                "en": "Configuration"
               },
               "capsIptCapsDescription": { "pt-br": "", "en": "" },
 
@@ -2533,25 +2534,8 @@
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "Caminho de Edição",
-                "en": "Edit Path"
-              },
-              "capsIptCapsDescription": { "pt-br": "", "en": "" },
-
-              "capsIptCapsDfCode": "''",
-              "capsIptCapsTypesToAdd": ["string process"]
-            }
-          },
-          "ccc_iptPicker-2": {
-            "capsIptCodeID": "ccc_iptPicker-2",
-            "capsIptPosition": "2",
-            "capsIptRemoved": false,
-
-            "capsIptType": "capsules",
-            "capsIptCapsInfo": {
-              "capsIptCapsLabel": {
-                "pt-br": "Funções OnValueChange",
-                "en": "OnValueChange Functions"
+                "pt-br": "OnValueChange",
+                "en": "OnValueChange"
               },
               "capsIptCapsDescription": { "pt-br": "", "en": "" },
 

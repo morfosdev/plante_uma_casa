@@ -669,7 +669,6 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -710,9 +709,7 @@ console.log({item});
 
             args,
           }}/>
-        , (...args:any) => <Elements.IptPicker pass={{
- pathList: [''], pathEdit: [''], arrFuncs: [() => {console.log('function default')}], args 
- }}/>],
+        ],
             args,
         }}/>, 
         
@@ -2781,9 +2778,7 @@ xmlns="http://www.w3.org/2000/svg"
 	padding: 10
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.IptPicker pass={{
- pathList: [''], pathEdit: [''], arrFuncs: [() => {console.log('function default')}], args 
- }}/>],
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
