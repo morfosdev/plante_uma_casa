@@ -23,7 +23,6 @@ import {
   Keyboard,
 } from 'react-native';
 
-// ---------- import Local Tools
 import { pathSel } from '../project';
 import { useData } from '../../..';
 
@@ -34,17 +33,12 @@ type Item = {
 };
 
 type InputPickerProps = {
-  /** Caminho no store para o array de opções */
-  pathItems: string;
-
-  /** Opcional: caminho para o valor selecionado (string/number/null) */
-  pathValue?: string;
-
+  pathItems: string; // onde estão as opções
+  pathValue?: string; // (opcional) onde está o valor selecionado
   placeholder?: string;
   disabled?: boolean;
   searchable?: boolean;
 
-  // estilos opcionais
   style?: StyleProp<ViewStyle>;
   inputStyle?: StyleProp<TextStyle>;
   dropdownStyle?: StyleProp<ViewStyle>;
@@ -52,26 +46,28 @@ type InputPickerProps = {
   itemTextStyle?: StyleProp<TextStyle>;
 
   emptyText?: string;
-  maxVisibleItems?: number; // padrão 6
-  itemHeight?: number; // padrão 44
+  maxVisibleItems?: number; // default 6
+  itemHeight?: number; // default 44
   testID?: string;
 };
 
 type Tprops = {
   pass: {
     args: any;
-    configs: string[]; // configs[0] é um JSON5 com InputPickerProps
-    /** Cada função recebe (value, item, args) */
-    arrFuncs?: Array<(value: any, args: any) => void>;
+    configs: string[]; // configs[0] = JSON5<InputPickerProps>
+    // aceita (value, item, args) ou (value, args)
+    arrFuncs?: Array<
+      (value: Item['value'], item?: Item | null, args?: any) => void
+    >;
   };
 };
 
 const EMPTY_ITEMS: Item[] = Object.freeze([]);
+const isUnset = (v: any) => v === null || v === undefined || v === '';
 
 export const IptPicker: React.FC<Tprops> = props => {
   const { configs, arrFuncs = [], args } = props.pass;
 
-  // Parse seguro (aceita campos extras sem quebrar)
   const obj0 = JSON5.parse(configs[0] || '{}') as Partial<InputPickerProps>;
   const {
     placeholder = 'Selecionar...',
@@ -98,7 +94,7 @@ export const IptPicker: React.FC<Tprops> = props => {
   const inputRef = useRef<TextInput>(null);
   const listRef = useRef<FlatList<Item>>(null);
 
-  // Posição/tamanho do wrapper (medida sob demanda)
+  // posição/tamanho do wrapper (medida sob demanda)
   const [wrapLayout, setWrapLayout] = useState<{
     y: number;
     x: number;
@@ -109,27 +105,45 @@ export const IptPicker: React.FC<Tprops> = props => {
     h: 0,
   });
 
-  // ---------- Data bindings
-  // Sempre chame hooks na mesma ordem:
+  // ----- Data bindings
   const items: Item[] =
     useData((ct: any) =>
       pathItems ? (pathSel(ct, pathItems) as Item[]) : EMPTY_ITEMS,
     ) || EMPTY_ITEMS;
 
-  const selectedValue: Item['value'] = useData((ct: any) =>
+  const selectedValueFromStore: Item['value'] = useData((ct: any) =>
     pathValue ? (pathSel(ct, pathValue) as Item['value']) : null,
   );
 
-  // Funções de saída (evita "e is not a function")
+  // estado local como fallback e para refletir seleção imediatamente
+  const [selectedLocal, setSelectedLocal] = useState<Item['value'] | null>(
+    isUnset(selectedValueFromStore) ? null : selectedValueFromStore,
+  );
+
+  // sincroniza do store apenas quando ele tiver um valor "definido"
+  useEffect(() => {
+    if (!pathValue) return;
+    if (!isUnset(selectedValueFromStore))
+      setSelectedLocal(selectedValueFromStore);
+  }, [pathValue, selectedValueFromStore]);
+
+  // valor efetivo a exibir
+  const effectiveValue = pathValue
+    ? !isUnset(selectedValueFromStore)
+      ? selectedValueFromStore
+      : selectedLocal
+    : selectedLocal;
+
+  // emissor para arrFuncs (2 ou 3 parâmetros)
   const emitChange = useCallback(
     (val: Item['value'], it: Item | null) => {
       for (const fn of arrFuncs) {
-        if (typeof fn === 'function') {
-          try {
-            fn(val, it, args);
-          } catch (err) {
-            console.error('[IptPicker] erro no handler:', err);
-          }
+        if (typeof fn !== 'function') continue;
+        try {
+          // se o handler espera 2 args, o terceiro é ignorado
+          fn(val, it, args);
+        } catch (err) {
+          console.error('[IptPicker] erro no handler:', err);
         }
       }
     },
@@ -137,8 +151,8 @@ export const IptPicker: React.FC<Tprops> = props => {
   );
 
   const currentItem = useMemo(
-    () => items.find(it => it.value === selectedValue) ?? null,
-    [items, selectedValue],
+    () => items.find(it => it.value === effectiveValue) ?? null,
+    [items, effectiveValue],
   );
 
   const normalized = useMemo(() => {
@@ -155,11 +169,10 @@ export const IptPicker: React.FC<Tprops> = props => {
     return spaceBelow < listHeight + (searchable ? 44 : 0) + 8;
   }, [winH, wrapLayout, listHeight, searchable]);
 
-  // ---------- Medição sob demanda (Opção B)
+  // ----- Medição sob demanda (opção B)
   const measureWrapper = useCallback(() => {
     const node: any = wrapRef.current;
 
-    // RN nativo
     if (node?.measureInWindow) {
       node.measureInWindow((x: number, y: number, w: number, h: number) => {
         setWrapLayout(prev =>
@@ -169,7 +182,6 @@ export const IptPicker: React.FC<Tprops> = props => {
       return;
     }
 
-    // RN Web
     const el = node?._node ?? node;
     if (el?.getBoundingClientRect) {
       const r = el.getBoundingClientRect();
@@ -183,7 +195,15 @@ export const IptPicker: React.FC<Tprops> = props => {
 
   const commitSelection = useCallback(
     (item: Item | null) => {
-      emitChange(item ? item.value : null, item);
+      const nextVal = item ? item.value : null;
+
+      // reflete imediatamente
+      setSelectedLocal(nextVal);
+
+      // propaga pra fora (store, etc.)
+      emitChange(nextVal, item);
+
+      // fecha/limpa busca
       setOpen(false);
       setQuery('');
       setHoverIndex(-1);
@@ -192,22 +212,16 @@ export const IptPicker: React.FC<Tprops> = props => {
   );
 
   const toggleOpen = useCallback(() => {
-    const blocked = disabled || !!currentItem?.disabled;
-    if (blocked) return;
-
+    if (disabled) return;
     setOpen(p => !p);
 
-    // mede na próxima frame ao abrir
     if (!open) {
       requestAnimationFrame(() => measureWrapper());
+      if (searchable) setTimeout(() => inputRef.current?.focus(), 10);
     }
+  }, [disabled, open, searchable, measureWrapper]);
 
-    if (!open && searchable) {
-      setTimeout(() => inputRef.current?.focus(), 10);
-    }
-  }, [disabled, currentItem, open, searchable, measureWrapper]);
-
-  // Re-measure quando estiver aberto e houver resize/scroll no web
+  // remeasure enquanto aberto em resize/scroll no web
   useEffect(() => {
     if (Platform.OS !== 'web' || !open) return;
 
@@ -216,7 +230,6 @@ export const IptPicker: React.FC<Tprops> = props => {
 
     window.addEventListener('resize', onResize);
     window.addEventListener('scroll', onScroll, true);
-
     return () => {
       window.removeEventListener('resize', onResize);
       window.removeEventListener('scroll', onScroll, true);
@@ -239,7 +252,7 @@ export const IptPicker: React.FC<Tprops> = props => {
     return () => document.removeEventListener('mousedown', onDocMouseDown);
   }, [open]);
 
-  // fechar no back (Android) / teclado Esc (web)
+  // fechar no back (Android) / Esc (web)
   useEffect(() => {
     if (!open) return;
 
@@ -299,7 +312,7 @@ export const IptPicker: React.FC<Tprops> = props => {
   }, [open, normalized, hoverIndex, commitSelection]);
 
   const renderItem = ({ item, index }: { item: Item; index: number }) => {
-    const isSelected = selectedValue === item.value;
+    const isSelected = effectiveValue === item.value;
     const isHover = index === hoverIndex;
     const isDisabled = !!item.disabled;
 
@@ -338,7 +351,6 @@ export const IptPicker: React.FC<Tprops> = props => {
 
   const keyExtractor = (it: Item) => String(it.value);
 
-  // conteúdo do dropdown (web e dentro do Modal no native)
   const DropdownContent = (
     <View
       style={[
@@ -350,7 +362,6 @@ export const IptPicker: React.FC<Tprops> = props => {
           borderColor: '#dcdcdc',
           backgroundColor: '#fff',
           overflow: 'hidden',
-          // sombra cross-plataforma
           shadowColor: '#000',
           shadowOpacity: 0.15,
           shadowOffset: { width: 0, height: 6 },
@@ -374,7 +385,7 @@ export const IptPicker: React.FC<Tprops> = props => {
             onChangeText={t => {
               setQuery(t);
               setHoverIndex(t ? 0 : -1);
-              for (const currFunc of arrFuncs) currFunc(t, args);
+              // não chamar handlers aqui – evita sobrescrever o valor no store
             }}
             placeholder="Buscar…"
             style={
@@ -422,7 +433,8 @@ export const IptPicker: React.FC<Tprops> = props => {
     </View>
   );
 
-  const inputIsDisabled = disabled || !!currentItem?.disabled;
+  // o input só considera prop disabled (itens desabilitados não travam o input)
+  const inputIsDisabled = !!disabled;
 
   return (
     <View
@@ -466,7 +478,6 @@ export const IptPicker: React.FC<Tprops> = props => {
         </View>
       </Pressable>
 
-      {/* WEB: popover absoluto dentro do wrapper */}
       {Platform.OS === 'web' && open && (
         <View
           pointerEvents="box-none"
@@ -483,7 +494,6 @@ export const IptPicker: React.FC<Tprops> = props => {
         </View>
       )}
 
-      {/* NATIVE: Modal de tela cheia */}
       {Platform.OS !== 'web' && (
         <Modal
           visible={open}
@@ -518,3 +528,4 @@ export const IptPicker: React.FC<Tprops> = props => {
     </View>
   );
 };
+
