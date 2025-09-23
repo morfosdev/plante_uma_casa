@@ -24,7 +24,6 @@ type Item = {
 };
 
 type InputPickerProps = {
-  items: Item[];
   value?: Item["value"] | null;
   onChange: (value: Item["value"] | null, item: Item | null) => void;
   placeholder?: string;
@@ -43,7 +42,6 @@ type InputPickerProps = {
 };
 
 export const IptPicker: React.FC<InputPickerProps> = ({
-  items,
   value = null,
   onChange,
   placeholder = "Selecionar...",
