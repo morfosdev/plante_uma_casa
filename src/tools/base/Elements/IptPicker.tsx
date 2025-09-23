@@ -21,11 +21,10 @@ import {
   TextStyle,
   useWindowDimensions,
   Keyboard,
-  LayoutChangeEvent,
 } from 'react-native';
 
 // ---------- import Local Tools
-import { getStlValues, mapElements, getVarValue, pathSel } from '../project';
+import { pathSel } from '../project';
 import { useData } from '../../..';
 
 type Item = {
@@ -69,15 +68,14 @@ type Tprops = {
   };
 };
 
+const EMPTY_ITEMS: Item[] = Object.freeze([]);
+
 export const IptPicker: React.FC<Tprops> = props => {
-  console.log('INIT PICKER 1');
   const { configs, arrFuncs = [], args } = props.pass;
 
   // Parse seguro (aceita campos extras sem quebrar)
   const obj0 = JSON5.parse(configs[0] || '{}') as Partial<InputPickerProps>;
-  console.log('INIT PICKER 2', obj0);
   const {
-    // props gerais
     placeholder = 'Selecionar...',
     maxVisibleItems = 6,
     searchable = true,
@@ -101,6 +99,8 @@ export const IptPicker: React.FC<Tprops> = props => {
   const wrapRef = useRef<View>(null);
   const inputRef = useRef<TextInput>(null);
   const listRef = useRef<FlatList<Item>>(null);
+
+  // Posição/tamanho do wrapper (medida sob demanda)
   const [wrapLayout, setWrapLayout] = useState<{
     y: number;
     x: number;
@@ -115,10 +115,8 @@ export const IptPicker: React.FC<Tprops> = props => {
   // Sempre chame hooks na mesma ordem:
   const items: Item[] =
     useData((ct: any) =>
-      pathItems ? (pathSel(ct, pathItems) as Item[]) : [],
-    ) || [];
-
-  console.log('INIT PICKER 3', items);
+      pathItems ? (pathSel(ct, pathItems) as Item[]) : EMPTY_ITEMS,
+    ) || EMPTY_ITEMS;
 
   const selectedValue: Item['value'] = useData((ct: any) =>
     pathValue ? (pathSel(ct, pathValue) as Item['value']) : null,
@@ -159,17 +157,79 @@ export const IptPicker: React.FC<Tprops> = props => {
     return spaceBelow < listHeight + (searchable ? 44 : 0) + 8;
   }, [winH, wrapLayout, listHeight, searchable]);
 
-  // medir wrapper
-  const onWrapLayout = (e: LayoutChangeEvent) => {
-    const { y, x, height } = e.nativeEvent.layout;
-    setWrapLayout({ y, x, h: height });
-  };
+  // ---------- Medição sob demanda (Opção B)
+  const measureWrapper = useCallback(() => {
+    const node: any = wrapRef.current;
+
+    // RN nativo
+    if (node?.measureInWindow) {
+      node.measureInWindow((x: number, y: number, w: number, h: number) => {
+        setWrapLayout(prev =>
+          prev.y === y && prev.x === x && prev.h === h ? prev : { y, x, h },
+        );
+      });
+      return;
+    }
+
+    // RN Web
+    const el = node?._node ?? node;
+    if (el?.getBoundingClientRect) {
+      const r = el.getBoundingClientRect();
+      setWrapLayout(prev =>
+        prev.y === r.top && prev.x === r.left && prev.h === r.height
+          ? prev
+          : { y: r.top, x: r.left, h: r.height },
+      );
+    }
+  }, []);
+
+  const commitSelection = useCallback(
+    (item: Item | null) => {
+      emitChange(item ? item.value : null, item);
+      setOpen(false);
+      setQuery('');
+      setHoverIndex(-1);
+    },
+    [emitChange],
+  );
+
+  const toggleOpen = useCallback(() => {
+    const blocked = disabled || !!currentItem?.disabled;
+    if (blocked) return;
+
+    setOpen(p => !p);
+
+    // mede na próxima frame ao abrir
+    if (!open) {
+      requestAnimationFrame(() => measureWrapper());
+    }
+
+    if (!open && searchable) {
+      setTimeout(() => inputRef.current?.focus(), 10);
+    }
+  }, [disabled, currentItem, open, searchable, measureWrapper]);
+
+  // Re-measure quando estiver aberto e houver resize/scroll no web
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !open) return;
+
+    const onResize = () => measureWrapper();
+    const onScroll = () => measureWrapper();
+
+    window.addEventListener('resize', onResize);
+    window.addEventListener('scroll', onScroll, true);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+      window.removeEventListener('scroll', onScroll, true);
+    };
+  }, [open, measureWrapper]);
 
   // click fora (web)
   useEffect(() => {
     if (Platform.OS !== 'web' || !open) return;
 
-    const onDocMouseDown = (ev: MouseEvent) => {
+    const onDocMouseDown = (ev: any) => {
       const root = (wrapRef.current as any)?._node ?? (wrapRef.current as any);
       if (root && ev.target instanceof Node && !root.contains(ev.target)) {
         setOpen(false);
@@ -201,38 +261,18 @@ export const IptPicker: React.FC<Tprops> = props => {
     }
   }, [open]);
 
-  const commitSelection = useCallback(
-    (item: Item | null) => {
-      emitChange(item ? item.value : null, item);
-      setOpen(false);
-      setQuery('');
-      setHoverIndex(-1);
-    },
-    [emitChange],
-  );
-
-  const toggleOpen = useCallback(() => {
-    // Se o input está desabilitado OU o item atual é desabilitado, não abre
-    const blocked = disabled || !!currentItem?.disabled;
-    if (blocked) return;
-
-    setOpen(p => !p);
-    if (!open && searchable) {
-      setTimeout(() => inputRef.current?.focus(), 10);
-    }
-  }, [disabled, currentItem, open, searchable]);
-
   // navegação por teclado (web)
   useEffect(() => {
     if (Platform.OS !== 'web' || !open) return;
 
     const scrollIntoView = (idx: number) => {
-      if (!listRef.current) return;
-      listRef.current.scrollToIndex({
-        index: idx,
-        viewPosition: 0.5,
-        animated: false,
-      });
+      try {
+        listRef.current?.scrollToIndex({
+          index: idx,
+          viewPosition: 0.5,
+          animated: false,
+        });
+      } catch {}
     };
 
     const onKey = (e: KeyboardEvent) => {
@@ -388,7 +428,6 @@ export const IptPicker: React.FC<Tprops> = props => {
   return (
     <View
       ref={wrapRef}
-      onLayout={onWrapLayout}
       style={[{ position: 'relative' }, style]}
       {...(Platform.OS === 'web'
         ? { role: 'combobox', 'aria-expanded': open, 'data-testid': testID }
@@ -480,3 +519,4 @@ export const IptPicker: React.FC<Tprops> = props => {
     </View>
   );
 };
+
