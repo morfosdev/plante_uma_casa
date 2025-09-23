@@ -429,6 +429,24 @@ const path1 = "all.toggles.box1";
 
           args,
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{
+	borderBottomColor: "#444",
+	borderBottomWidth: 2
+}`],
+
+          path: [`sc.B3.forms.iptsChanges.name`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.name`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -2751,9 +2769,6 @@ xmlns="http://www.w3.org/2000/svg"
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>, 
-        (...args:any) => <Elements.IptPicker pass={{
- pathList: [''], pathEdit: [''], arrFuncs: [() => {console.log('function default')}], args 
  }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
