@@ -1,3 +1,4 @@
 {
-  "generated_by_flaxboll": "---"
+  "generated_by_flaxboll": "---",
+  "plugins": ["expo-font", "expo-router", "expo-web-browser"]
 }
