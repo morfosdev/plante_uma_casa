@@ -2783,7 +2783,11 @@ xmlns="http://www.w3.org/2000/svg"
 	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
 	maxVisibleItems: 8
-}`], arrFuncs: [() => {console.log('function default')}], args 
+}`], arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.options`],
+          value: ['no value']
+        }})], args 
  }}/>],
 
             args,
