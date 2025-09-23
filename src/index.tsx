@@ -669,6 +669,7 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -709,7 +710,28 @@ console.log({item});
 
             args,
           }}/>
-        ],
+        , 
+        (...args:any) => <Elements.IptPicker pass={{
+ configs: [`{
+	searchable: true,
+	pathItems: "sc.B3.statics.picker1",
+	maxVisibleItems: 8
+}`], arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.options`],
+          value: [`$arg_callback`]
+        }})], args 
+ }}/>, (...args:any) => <Elements.IptPicker pass={{
+ configs: [`{
+	searchable: false,
+	pathItems: "sc.B3.statics.picker1",
+	maxVisibleItems: 4
+}`], arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.options`],
+          value: [`$arg_callback`]
+        }})], args 
+ }}/>],
             args,
         }}/>, 
         
