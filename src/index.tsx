@@ -2448,7 +2448,8 @@ whereConds ??`
 
           styles:[
         `{ backgroundColor: "$var_all.colors.smoke" }`, 
-        `{ width: "100%", height: "100%" }`, `{ justifyContent: "flex-start" }`],
+        `{ width: "100%", height: "100%" }`, 
+        `{ justifyContent: "flex-start" }`, `{ padding: 20 }`],
 
           screenElements:[
         
@@ -2760,8 +2761,7 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ 
-	width: "80%",
-	maxWidth: 280,
+	width: "100%",
 	minHeight: 150,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
