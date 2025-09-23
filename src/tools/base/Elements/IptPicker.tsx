@@ -8,7 +8,7 @@ import { Text } from 'react-native';
 // };
 
 // Loader - ccc_loader
-export const Loader = (props) => {
+export const IptPicker = (props) => {
 
 
 
