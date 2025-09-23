@@ -47,24 +47,42 @@ type InputPickerProps = {
   testID?: string;
 };
 
-export const IptPicker: React.FC<InputPickerProps> = ({
-  value = null,
-  onChange = e => {
-    console.log(e);
-  },
-  placeholder = 'Selecionar...',
-  disabled = false,
-  searchable = true,
-  style,
-  inputStyle,
-  dropdownStyle,
-  itemStyle,
-  itemTextStyle,
-  emptyText = 'Nada encontrado',
-  maxVisibleItems = 6,
-  itemHeight = 44,
-  testID,
-}) => {
+type Tprops = {
+  configs: string[];
+  arrFuncs: () => {}[];
+};
+
+const items = [
+  { label: 'Selecione…', value: '', disabled: true },
+  { label: 'Opção A', value: 'A' },
+  { label: 'Opção B', value: 'B' },
+  { label: 'Opção C', value: 'C' },
+  { label: 'Opção D', value: 'D' },
+  { label: 'Opção E (desabilitada)', value: 'E', disabled: true },
+];
+
+export const IptPicker: React.FC<Tprops> = props => {
+  console.log('IIPPTT PICKER', { props });
+  const { configs, arrFuncs } = props;
+  const obj0 = configs[0];
+  const {
+    value = null,
+    onChange = e => {
+      console.log(e);
+    },
+    placeholder = 'Selecionar...',
+    disabled = false,
+    searchable = true,
+    style,
+    inputStyle,
+    dropdownStyle,
+    itemStyle,
+    itemTextStyle,
+    emptyText = 'Nada encontrado',
+    maxVisibleItems = 6,
+    itemHeight = 44,
+    testID,
+  } = configs;
   const { height: winH } = useWindowDimensions();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -81,14 +99,6 @@ export const IptPicker: React.FC<InputPickerProps> = ({
     x: 0,
     h: 0,
   });
-  const items = [
-    { label: 'Selecione…', value: '', disabled: true },
-    { label: 'Opção A', value: 'A' },
-    { label: 'Opção B', value: 'B' },
-    { label: 'Opção C', value: 'C' },
-    { label: 'Opção D', value: 'D' },
-    { label: 'Opção E (desabilitada)', value: 'E', disabled: true },
-  ];
 
   const currentItem = useMemo(
     () => items.find(it => it.value === value) ?? null,
@@ -435,3 +445,4 @@ export const IptPicker: React.FC<InputPickerProps> = ({
     </View>
   );
 };
+
