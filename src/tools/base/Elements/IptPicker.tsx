@@ -9,12 +9,10 @@ import { ActivityIndicator } from 'react-native';
 
 // Loader - ccc_loader
 export const Loader = (props) => {
-  // ---------- set Props
-  const { size, color, args } = props.pass;
 
-  const allProps = { size, color };
+
 
   // ---------- set Render
-  return <ActivityIndicator {...allProps} />;
+  return <ActivityIndicator />;
 };
 
