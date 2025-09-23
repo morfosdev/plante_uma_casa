@@ -1,5 +1,6 @@
 
 // src/components/InputPicker.tsx
+import JSON5 from 'json5';
 import React, {
   useCallback,
   useEffect,
@@ -68,7 +69,7 @@ export const IptPicker: React.FC<Tprops> = props => {
   console.log('IIPPTT PICKER', { props });
   const { configs, arrFuncs } = props.pass;
   console.log('IIPPTT PICKER', { configs });
-  const obj0 = JSON.parse(configs[0]);
+  const obj0 = JSON5.parse(configs[0]);
   console.log('IIPPTT PICKER', { obj0 });
 
   const {
@@ -451,3 +452,4 @@ export const IptPicker: React.FC<Tprops> = props => {
     </View>
   );
 };
+
