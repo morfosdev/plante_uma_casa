@@ -834,16 +834,15 @@ console.log({item});
 
             styles:[
         `{ 
-	backgroundColor: "$var_all.color.primary",
-	alignItems: "center",
-}
-
-`, `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+ }`, `{
+	backgroundColor: "white",
+	paddingHorizontal: 20,
+	height: 50,
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -851,13 +850,7 @@ console.log({item});
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
+            styles:[`{ flex: 1 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -865,11 +858,14 @@ console.log({item});
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ 
+	fontWeight: "bold",
+	fontSize: 12
+}`
           ],
 
           children: [
-            "Escreva..."
+            `My Company Name`
           ],
 
           args,
@@ -879,63 +875,47 @@ console.log({item});
             args,
           }}/>
         , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 150,
+	flexDirection: "row",
+	justifyContent: "start",
+	alignItems: "center"
+}`],
+
+            functions:[()=>{}],            childrenItems:[
         
 
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
 
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Título`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
+      styles:[{
 	width: 30,
 	height: 30,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
+	borderRadius: 200
+}],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+
+      args,
+    }}/>, (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            
+        `{ 
+	fontWeight: "bold",
+	fontSize: 12
+}`, `{ marginLeft: 5 }`
           ],
 
           children: [
-            "Escreva..."
+            `Admin`
           ],
 
           args,
