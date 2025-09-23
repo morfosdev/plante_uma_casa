@@ -1,7 +1,7 @@
 
 // ---------- import Packs
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
+import { Text } from 'react-native';
 
 // type Tprops = {
 //  pass: { size: 'small' | 'large'; color: string; args: any };
@@ -13,6 +13,6 @@ export const Loader = (props) => {
 
 
   // ---------- set Render
-  return <ActivityIndicator />;
+  return <Text>IptPicker</Text>;
 };
 
