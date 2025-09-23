@@ -1412,7 +1412,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         , (...args:any) => <Elements.IptPicker pass={{
- pathList: [''], pathEdit: [''], arrFuncs: [() => {console.log('function default')}], args 
+ configs: [''], arrFuncs: [() => {console.log('function default')}], args 
  }}/>],
 
             args,
@@ -2778,7 +2778,9 @@ xmlns="http://www.w3.org/2000/svg"
 	padding: 10
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.IptPicker pass={{
+ configs: [''], arrFuncs: [() => {console.log('function default')}], args 
+ }}/>],
 
             args,
           }}/>
