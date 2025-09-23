@@ -2466,8 +2466,7 @@ whereConds ??`
 
           styles:[
         `{ backgroundColor: "$var_all.colors.smoke" }`, 
-        `{ width: "100%", height: "100%" }`, 
-        `{ justifyContent: "flex-start" }`, `{ padding: 20 }`],
+        `{ width: "100%", height: "100%" }`, `{ justifyContent: "flex-start" }`],
 
           screenElements:[
         
@@ -2604,7 +2603,7 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [],
+            styles: [`{ padding: 20 }`],
             arrProps: [],
             arrItems: [
         (...args:any) => <Elements.IptTxtEdit pass={{
