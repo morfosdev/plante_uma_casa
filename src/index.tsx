@@ -218,6 +218,70 @@ paddingVertical: '20px',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[
+        `{ alignItems: "center", justifyContent: "center" }`, 
+        `{ width: "100%", height: "100%" }`, 
+        `{ padding: 20, backgrondColor: "#FFF" }`, 
+        `{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`, 
+        `{ 
+	width: 30,
+	height: 30,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ 
+	width: 50,
+	height: 50,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
+        `{ backgroundColor: "$var_all.colors.primary" }`, 
+        `{ flex: 1 }`, 
+        `{ 
+	width: "80%",
+	maxWidth: 280,
+	minHeight: 150,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	padding: 10
+}`, 
+        `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
+        `{ color: "#FFF" }`, 
+        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{
   flexDirection: "row",
   backgroundColor: "#0064fe",
@@ -694,70 +758,6 @@ console.log({item});
         ],
             args,
         }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ alignItems: "center", justifyContent: "center" }`, 
-        `{ width: "100%", height: "100%" }`, 
-        `{ padding: 20, backgrondColor: "#FFF" }`, 
-        `{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`, 
-        `{ 
-	width: 30,
-	height: 30,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ 
-	width: 50,
-	height: 50,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
-        `{ backgroundColor: "$var_all.colors.primary" }`, 
-        `{ flex: 1 }`, 
-        `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`, 
-        `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
-        `{ color: "#FFF" }`, 
-        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
         
 
           (...args:any) => <Elements.DynView pass={{
