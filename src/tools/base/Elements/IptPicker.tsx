@@ -70,10 +70,12 @@ type Tprops = {
 };
 
 export const IptPicker: React.FC<Tprops> = props => {
+  console.log('INIT PICKER 1');
   const { configs, arrFuncs = [], args } = props.pass;
 
   // Parse seguro (aceita campos extras sem quebrar)
   const obj0 = JSON5.parse(configs[0] || '{}') as Partial<InputPickerProps>;
+  console.log('INIT PICKER 2', obj0);
   const {
     // props gerais
     placeholder = 'Selecionar...',
@@ -115,6 +117,8 @@ export const IptPicker: React.FC<Tprops> = props => {
     useData((ct: any) =>
       pathItems ? (pathSel(ct, pathItems) as Item[]) : [],
     ) || [];
+
+  console.log('INIT PICKER 3', items);
 
   const selectedValue: Item['value'] = useData((ct: any) =>
     pathValue ? (pathSel(ct, pathValue) as Item['value']) : null,
@@ -476,4 +480,3 @@ export const IptPicker: React.FC<Tprops> = props => {
     </View>
   );
 };
-
