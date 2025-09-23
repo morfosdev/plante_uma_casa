@@ -62,9 +62,7 @@ type Tprops = {
     args: any;
     configs: string[]; // configs[0] é um JSON5 com InputPickerProps
     /** Cada função recebe (value, item, args) */
-    arrFuncs?: Array<
-      (value: Item['value'], item: Item | null, args: any) => void
-    >;
+    arrFuncs?: Array<(value: any, args: any) => void>;
   };
 };
 
@@ -376,6 +374,7 @@ export const IptPicker: React.FC<Tprops> = props => {
             onChangeText={t => {
               setQuery(t);
               setHoverIndex(t ? 0 : -1);
+              for (const currFunc of arrFuncs) currFunc(t, args);
             }}
             placeholder="Buscar…"
             style={
@@ -519,4 +518,3 @@ export const IptPicker: React.FC<Tprops> = props => {
     </View>
   );
 };
-
