@@ -10,5 +10,5 @@ export { ScrollBar } from './ScrollBar';
 export { SvgView1 } from './SvgView1'; // SVG da erro no webcontainer
 export { BtnImagePicker } from './BtnImagePicker';
 export { Custom } from './Custom';
-
+export { IptPicker } from './IptPicker';
 
