@@ -2780,9 +2780,9 @@ xmlns="http://www.w3.org/2000/svg"
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.IptPicker pass={{
  configs: [`{
-	searchable: false,
+	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
-	maxVisibleItems: 3
+	maxVisibleItems: 8
 }`], arrFuncs: [() => {console.log('function default')}], args 
  }}/>],
 
