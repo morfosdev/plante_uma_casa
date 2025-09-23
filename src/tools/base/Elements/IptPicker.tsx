@@ -67,6 +67,7 @@ const items = [
 export const IptPicker: React.FC<Tprops> = props => {
   console.log('IIPPTT PICKER', { props });
   const { configs, arrFuncs } = props.pass;
+  console.log('IIPPTT PICKER', { configs });
   const obj0 = JSON.parse(configs[0]);
   console.log('IIPPTT PICKER', { obj0 });
 
@@ -450,4 +451,3 @@ export const IptPicker: React.FC<Tprops> = props => {
     </View>
   );
 };
-
