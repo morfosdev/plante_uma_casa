@@ -65,7 +65,10 @@ type Tprops = {
 const EMPTY_ITEMS: Item[] = Object.freeze([]);
 const isUnset = (v: any) => v === null || v === undefined || v === '';
 
-export const IptPicker: React.FC<Tprops> = props => {
+// ---- zIndex global para garantir que o aberto fica por cima (WEB)
+let __Z_INDEX_COUNTER__ = 1000;
+
+export const IptPicker: React.FC<Tprops> = (props) => {
   const { configs, arrFuncs = [], args } = props.pass;
 
   const obj0 = JSON5.parse(configs[0] || '{}') as Partial<InputPickerProps>;
@@ -95,15 +98,19 @@ export const IptPicker: React.FC<Tprops> = props => {
   const listRef = useRef<FlatList<Item>>(null);
 
   // posição/tamanho do wrapper (medida sob demanda)
-  const [wrapLayout, setWrapLayout] = useState<{
-    y: number;
-    x: number;
-    h: number;
-  }>({
+  const [wrapLayout, setWrapLayout] = useState<{ y: number; x: number; h: number }>({
     y: 0,
     x: 0,
     h: 0,
   });
+
+  // z-index dinâmico (WEB): o picker aberto ganha o maior z
+  const [zTop, setZTop] = useState<number>(0);
+  useEffect(() => {
+    if (Platform.OS === 'web' && open) {
+      setZTop(++__Z_INDEX_COUNTER__);
+    }
+  }, [open]);
 
   // ----- Data bindings
   const items: Item[] =
@@ -140,7 +147,6 @@ export const IptPicker: React.FC<Tprops> = props => {
       for (const fn of arrFuncs) {
         if (typeof fn !== 'function') continue;
         try {
-          // se o handler espera 2 args, o terceiro é ignorado
           fn(val, it, args);
         } catch (err) {
           console.error('[IptPicker] erro no handler:', err);
@@ -151,14 +157,14 @@ export const IptPicker: React.FC<Tprops> = props => {
   );
 
   const currentItem = useMemo(
-    () => items.find(it => it.value === effectiveValue) ?? null,
+    () => items.find((it) => it.value === effectiveValue) ?? null,
     [items, effectiveValue],
   );
 
   const normalized = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return items;
-    return items.filter(it => (it.label ?? '').toLowerCase().includes(q));
+    return items.filter((it) => (it.label ?? '').toLowerCase().includes(q));
   }, [items, query]);
 
   const visibleCount = Math.min(normalized.length || 1, maxVisibleItems);
@@ -175,7 +181,7 @@ export const IptPicker: React.FC<Tprops> = props => {
 
     if (node?.measureInWindow) {
       node.measureInWindow((x: number, y: number, w: number, h: number) => {
-        setWrapLayout(prev =>
+        setWrapLayout((prev) =>
           prev.y === y && prev.x === x && prev.h === h ? prev : { y, x, h },
         );
       });
@@ -185,7 +191,7 @@ export const IptPicker: React.FC<Tprops> = props => {
     const el = node?._node ?? node;
     if (el?.getBoundingClientRect) {
       const r = el.getBoundingClientRect();
-      setWrapLayout(prev =>
+      setWrapLayout((prev) =>
         prev.y === r.top && prev.x === r.left && prev.h === r.height
           ? prev
           : { y: r.top, x: r.left, h: r.height },
@@ -213,7 +219,7 @@ export const IptPicker: React.FC<Tprops> = props => {
 
   const toggleOpen = useCallback(() => {
     if (disabled) return;
-    setOpen(p => !p);
+    setOpen((p) => !p);
 
     if (!open) {
       requestAnimationFrame(() => measureWrapper());
@@ -290,13 +296,13 @@ export const IptPicker: React.FC<Tprops> = props => {
       if (['ArrowDown', 'ArrowUp', 'Enter'].includes(e.key)) e.preventDefault();
 
       if (e.key === 'ArrowDown') {
-        setHoverIndex(i => {
+        setHoverIndex((i) => {
           const next = Math.min((i < 0 ? -1 : i) + 1, normalized.length - 1);
           scrollIntoView(next);
           return next;
         });
       } else if (e.key === 'ArrowUp') {
-        setHoverIndex(i => {
+        setHoverIndex((i) => {
           const next = Math.max(i - 1, 0);
           scrollIntoView(next);
           return next;
@@ -382,7 +388,7 @@ export const IptPicker: React.FC<Tprops> = props => {
           <TextInput
             ref={inputRef}
             value={query}
-            onChangeText={t => {
+            onChangeText={(t) => {
               setQuery(t);
               setHoverIndex(t ? 0 : -1);
               // não chamar handlers aqui – evita sobrescrever o valor no store
@@ -474,10 +480,11 @@ export const IptPicker: React.FC<Tprops> = props => {
             justifyContent: 'center',
           }}
         >
-          <Text style={{ fontSize: 12 }}>{open ? '▲' : '▼'}</Text>
+          <Text style={{ fontSize: 12 }}>{open ? '▴' : '▾'}</Text>
         </View>
       </Pressable>
 
+      {/* WEB: dropdown absoluto com zIndex dinâmico */}
       {Platform.OS === 'web' && open && (
         <View
           pointerEvents="box-none"
@@ -485,7 +492,7 @@ export const IptPicker: React.FC<Tprops> = props => {
             position: 'absolute',
             left: 0,
             right: 0,
-            zIndex: 9999,
+            zIndex: zTop || 1, // << dinâmico: o aberto ganha o maior z-index
             top: openUpwards ? undefined : wrapLayout.h + 6,
             bottom: openUpwards ? wrapLayout.h + 6 : undefined,
           }}
@@ -494,6 +501,7 @@ export const IptPicker: React.FC<Tprops> = props => {
         </View>
       )}
 
+      {/* NATIVE: Modal de tela cheia */}
       {Platform.OS !== 'web' && (
         <Modal
           visible={open}
