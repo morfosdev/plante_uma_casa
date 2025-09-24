@@ -2833,9 +2833,12 @@ xmlns="http://www.w3.org/2000/svg"
         }})], args 
  }}/>, (...args:any) => <Elements.IptPicker pass={{
  configs: [`{
+	// -- configs
 	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
 	maxVisibleItems: 8,
+	
+	// -- styles
 	style: {
 		borderBottomColor: "#ccc",
 		borderBottomWidth: 2,
