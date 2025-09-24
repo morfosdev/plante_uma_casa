@@ -2836,11 +2836,12 @@ xmlns="http://www.w3.org/2000/svg"
 	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
 	maxVisibleItems: 8,
-	style: {},
-	inputStyle: {
-		borderWidth: 0,
+	style: {
 		borderBottomColor: "#ccc",
 		borderBottomWidth: 2,
+	},
+	inputStyle: {
+		borderWidth: 0,
 	},
 	dropdownStyle: {
 		backgroundColor: "#fff"
