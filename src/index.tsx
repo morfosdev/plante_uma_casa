@@ -715,7 +715,8 @@ console.log({item});
  configs: [`{
 	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
-	maxVisibleItems: 8
+	maxVisibleItems: 8,
+	style: {}
 }`], arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B3.forms.iptsChanges.options`],
@@ -2804,7 +2805,8 @@ xmlns="http://www.w3.org/2000/svg"
  configs: [`{
 	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
-	maxVisibleItems: 8
+	maxVisibleItems: 8,
+	style: {}
 }`], arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B3.forms.iptsChanges.options`],
