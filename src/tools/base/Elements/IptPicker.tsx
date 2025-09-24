@@ -65,8 +65,10 @@ type Tprops = {
 const EMPTY_ITEMS: Item[] = Object.freeze([]);
 const isUnset = (v: any) => v === null || v === undefined || v === '';
 
-// ---- zIndex global para garantir que o aberto fica por cima (WEB)
+// ---- zIndex global (WEB): garante que o picker aberto fica por cima
 let __Z_INDEX_COUNTER__ = 1000;
+// opcional: garante que só exista 1 picker aberto por vez (WEB)
+let __CLOSE_LAST_OPEN__: null | (() => void) = null;
 
 export const IptPicker: React.FC<Tprops> = (props) => {
   const { configs, arrFuncs = [], args } = props.pass;
@@ -104,13 +106,8 @@ export const IptPicker: React.FC<Tprops> = (props) => {
     h: 0,
   });
 
-  // z-index dinâmico (WEB): o picker aberto ganha o maior z
+  // z-index dinâmico (web)
   const [zTop, setZTop] = useState<number>(0);
-  useEffect(() => {
-    if (Platform.OS === 'web' && open) {
-      setZTop(++__Z_INDEX_COUNTER__);
-    }
-  }, [open]);
 
   // ----- Data bindings
   const items: Item[] =
@@ -130,8 +127,7 @@ export const IptPicker: React.FC<Tprops> = (props) => {
   // sincroniza do store apenas quando ele tiver um valor "definido"
   useEffect(() => {
     if (!pathValue) return;
-    if (!isUnset(selectedValueFromStore))
-      setSelectedLocal(selectedValueFromStore);
+    if (!isUnset(selectedValueFromStore)) setSelectedLocal(selectedValueFromStore);
   }, [pathValue, selectedValueFromStore]);
 
   // valor efetivo a exibir
@@ -199,22 +195,21 @@ export const IptPicker: React.FC<Tprops> = (props) => {
     }
   }, []);
 
+  // função para fechar (usada no “apenas um aberto por vez”)
+  const closeSelf = useCallback(() => {
+    setOpen(false);
+    setQuery('');
+    setHoverIndex(-1);
+  }, []);
+
   const commitSelection = useCallback(
     (item: Item | null) => {
       const nextVal = item ? item.value : null;
-
-      // reflete imediatamente
-      setSelectedLocal(nextVal);
-
-      // propaga pra fora (store, etc.)
-      emitChange(nextVal, item);
-
-      // fecha/limpa busca
-      setOpen(false);
-      setQuery('');
-      setHoverIndex(-1);
+      setSelectedLocal(nextVal);       // reflete imediatamente
+      emitChange(nextVal, item);       // propaga pra fora
+      closeSelf();                     // fecha e limpa
     },
-    [emitChange],
+    [emitChange, closeSelf],
   );
 
   const toggleOpen = useCallback(() => {
@@ -226,6 +221,25 @@ export const IptPicker: React.FC<Tprops> = (props) => {
       if (searchable) setTimeout(() => inputRef.current?.focus(), 10);
     }
   }, [disabled, open, searchable, measureWrapper]);
+
+  // z-index dinâmico + apenas 1 aberto por vez (WEB)
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+
+    if (open) {
+      setZTop(++__Z_INDEX_COUNTER__);
+      // fecha o último aberto (se existir e não for este)
+      if (__CLOSE_LAST_OPEN__ && __CLOSE_LAST_OPEN__ !== closeSelf) {
+        __CLOSE_LAST_OPEN__();
+      }
+      __CLOSE_LAST_OPEN__ = closeSelf;
+    }
+
+    return () => {
+      // se este era o último aberto, limpa o apontador global
+      if (__CLOSE_LAST_OPEN__ === closeSelf) __CLOSE_LAST_OPEN__ = null;
+    };
+  }, [open, closeSelf]);
 
   // remeasure enquanto aberto em resize/scroll no web
   useEffect(() => {
@@ -249,14 +263,12 @@ export const IptPicker: React.FC<Tprops> = (props) => {
     const onDocMouseDown = (ev: any) => {
       const root = (wrapRef.current as any)?._node ?? (wrapRef.current as any);
       if (root && ev.target instanceof Node && !root.contains(ev.target)) {
-        setOpen(false);
-        setQuery('');
-        setHoverIndex(-1);
+        closeSelf();
       }
     };
     document.addEventListener('mousedown', onDocMouseDown);
     return () => document.removeEventListener('mousedown', onDocMouseDown);
-  }, [open]);
+  }, [open, closeSelf]);
 
   // fechar no back (Android) / Esc (web)
   useEffect(() => {
@@ -264,11 +276,7 @@ export const IptPicker: React.FC<Tprops> = (props) => {
 
     if (Platform.OS === 'web') {
       const onKey = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-          setOpen(false);
-          setQuery('');
-          setHoverIndex(-1);
-        }
+        if (e.key === 'Escape') closeSelf();
       };
       window.addEventListener('keydown', onKey);
       return () => window.removeEventListener('keydown', onKey);
@@ -276,7 +284,7 @@ export const IptPicker: React.FC<Tprops> = (props) => {
       const sub = Keyboard.addListener('keyboardDidHide', () => {});
       return () => sub.remove();
     }
-  }, [open]);
+  }, [open, closeSelf]);
 
   // navegação por teclado (web)
   useEffect(() => {
@@ -445,7 +453,12 @@ export const IptPicker: React.FC<Tprops> = (props) => {
   return (
     <View
       ref={wrapRef}
-      style={[{ position: 'relative' }, style]}
+      style={[
+        { position: 'relative' },
+        // no web, quando aberto, joga o wrapper pro topo também
+        Platform.OS === 'web' && open ? { zIndex: zTop } : null,
+        style,
+      ]}
       {...(Platform.OS === 'web'
         ? { role: 'combobox', 'aria-expanded': open, 'data-testid': testID }
         : {})}
@@ -492,7 +505,7 @@ export const IptPicker: React.FC<Tprops> = (props) => {
             position: 'absolute',
             left: 0,
             right: 0,
-            zIndex: zTop || 1, // << dinâmico: o aberto ganha o maior z-index
+            zIndex: zTop || 1, // dinâmico: o aberto ganha o maior z-index
             top: openUpwards ? undefined : wrapLayout.h + 6,
             bottom: openUpwards ? wrapLayout.h + 6 : undefined,
           }}
@@ -507,14 +520,10 @@ export const IptPicker: React.FC<Tprops> = (props) => {
           visible={open}
           transparent
           animationType="fade"
-          onRequestClose={() => setOpen(false)}
+          onRequestClose={closeSelf}
         >
           <Pressable
-            onPress={() => {
-              setOpen(false);
-              setQuery('');
-              setHoverIndex(-1);
-            }}
+            onPress={closeSelf}
             style={{
               flex: 1,
               backgroundColor: 'rgba(0,0,0,0.15)',
