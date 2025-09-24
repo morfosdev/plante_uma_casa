@@ -719,6 +719,9 @@ console.log({item});
 	style: {backgroundColor: "red"},
 	inputStyle: {
 		backgroundColor: "blue"
+	},
+	dropdownStyle: {
+		backgroundColor: "green"
 	}
 }`], arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
@@ -2812,6 +2815,9 @@ xmlns="http://www.w3.org/2000/svg"
 	style: {backgroundColor: "red"},
 	inputStyle: {
 		backgroundColor: "blue"
+	},
+	dropdownStyle: {
+		backgroundColor: "green"
 	}
 }`], arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
