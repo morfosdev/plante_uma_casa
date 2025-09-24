@@ -716,15 +716,15 @@ console.log({item});
 	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
 	maxVisibleItems: 8,
-	style: {backgroundColor: "red"},
+	style: {backgroundColor: "#fff"},
 	inputStyle: {
-		backgroundColor: "blue"
+		backgroundColor: "#fff"
 	},
 	dropdownStyle: {
-		backgroundColor: "green"
+		backgroundColor: "#fff"
 	},
 	itemStyle: {
-		backgroundColor: "yellow"
+		backgroundColor: "#fff"
 	}
 }`], arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
@@ -2815,15 +2815,15 @@ xmlns="http://www.w3.org/2000/svg"
 	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
 	maxVisibleItems: 8,
-	style: {backgroundColor: "red"},
+	style: {backgroundColor: "#fff"},
 	inputStyle: {
-		backgroundColor: "blue"
+		backgroundColor: "#fff"
 	},
 	dropdownStyle: {
-		backgroundColor: "green"
+		backgroundColor: "#fff"
 	},
 	itemStyle: {
-		backgroundColor: "yellow"
+		backgroundColor: "#fff"
 	}
 }`], arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
