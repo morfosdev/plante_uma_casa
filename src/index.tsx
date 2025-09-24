@@ -2839,7 +2839,7 @@ xmlns="http://www.w3.org/2000/svg"
 	style: {},
 	inputStyle: {
 		borderWidth: 0,
-		borderBottomColor: "#fff",
+		borderBottomColor: "#ccc",
 		borderBottomWidth: 2,
 	},
 	dropdownStyle: {
