@@ -2810,7 +2810,8 @@ xmlns="http://www.w3.org/2000/svg"
 	padding: 10
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.IptPicker pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.IptPicker pass={{
  configs: [`{
 	searchable: true,
 	pathItems: "sc.B3.statics.picker1",
@@ -2818,6 +2819,28 @@ xmlns="http://www.w3.org/2000/svg"
 	style: {backgroundColor: "#fff"},
 	inputStyle: {
 		backgroundColor: "#fff"
+	},
+	dropdownStyle: {
+		backgroundColor: "#fff"
+	},
+	itemStyle: {
+		backgroundColor: "#fff"
+	}
+}`], arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.options`],
+          value: [`$arg_callback`]
+        }})], args 
+ }}/>, (...args:any) => <Elements.IptPicker pass={{
+ configs: [`{
+	searchable: true,
+	pathItems: "sc.B3.statics.picker1",
+	maxVisibleItems: 8,
+	style: {},
+	inputStyle: {
+		borderWidth: 0,
+		borderBottomColor: "#fff",
+		borderBottomWidth: 2,
 	},
 	dropdownStyle: {
 		backgroundColor: "#fff"
