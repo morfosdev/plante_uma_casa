@@ -493,7 +493,7 @@ export const IptPicker: React.FC<Tprops> = (props) => {
             justifyContent: 'center',
           }}
         >
-          <Text style={{ fontSize: 12 }}>{open ? '▴' : '▾'}</Text>
+          <Text style={{ fontSize: 14 }}>{open ? '▴' : '▾'}</Text>
         </View>
       </Pressable>
 
