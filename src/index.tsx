@@ -1671,8 +1671,41 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Login Firebase")
+ arrFunctions: [async () => {
+	console.log("Login Firebase c/ Email e Senha");
+
+	  const email = getCtData('sc.A0.forms.iptsChanges.userEmail');
+	  const senha = getCtData('sc.A0.forms.iptsChanges.userPassword');
+
+  const { getAuth, signInWithEmailAndPassword } = await import("firebase/auth");
+
+	  const fbInit = getCtData('all.temp.fireInit');
+  const auth = getAuth(fbInit);
+
+	console.log("Login Firebase c/ Email e Senha", {auth});
+
+  try {
+    const cred = await signInWithEmailAndPassword(auth, email, password);
+
+    console.log("Usuário logado:", cred);
+
+tools.goTo('a1list');
+
+    return cred.user;
+  } catch (err: any) {
+    console.error("Erro no login:", err);
+
+tools.setData({
+      path: 'sc.A0.forms.showErr',
+      value: true });
+
+    tools.setData({
+      path: 'sc.A0.forms.msgs.msg1',
+      value: 'Usuário ou Senha incorretos.' + err});
+    return;
+  }
+    throw err;
+  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
