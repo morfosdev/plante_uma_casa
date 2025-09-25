@@ -1674,36 +1674,88 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
  arrFunctions: [async () => {
   console.log('Login Firebase c/ Email e Senha');
 
-  const email = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
-  const senha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
+  const rawEmail = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
+  const rawSenha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
+  const email = (rawEmail ?? '').trim();
+  const senha = rawSenha ?? '';
 
+  if (!email || !senha) {
+    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+    tools.setData({
+      path: 'sc.A0.forms.msgs.msg1',
+      value: 'Informe e-mail e senha.',
+    });
+    return;
+  }
+
+  // Auth
   const { getAuth, signInWithEmailAndPassword } = await import('firebase/auth');
 
-  const fbInit = tools.getCtData('all.temp.fireInit');
-  const auth = getAuth(fbInit);
+  // Garantir app inicializado
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import('firebase/app');
+    const cfg = tools.getCtData('all.temp.fireConfig'); // opcional: pegue sua config do CT
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  }
 
-  console.log('Login Firebase c/ Email e Senha', { auth });
+  const auth = getAuth(fbInit);
+  console.log('Login Firebase c/ Email e Senha → auth ok');
 
   try {
     const cred = await signInWithEmailAndPassword(auth, email, senha);
+    console.log('Usuário logado:', cred.user.uid);
 
-    console.log('Usuário logado:', cred);
+    // Firestore
+    const { getFirestore, doc, getDoc } = await import('firebase/firestore');
+    const db = getFirestore(fbInit);
 
-    tools.goTo('a1list');
+    const snap = await getDoc(doc(db, 'users', cred.user.uid));
+    if (!snap.exists()) {
+      // Opcional: crie doc padrão em vez de lançar erro
+      // import { setDoc } from "firebase/firestore"; await setDoc(doc(db,"users", cred.user.uid), { typeAccount:"app", userAuthID: cred.user.uid, userEmail: email });
+      throw new Error('PERFIL_INEXISTENTE');
+    }
+
+    const data = snap.data();
+
+    // Guarda no seu state/context
+    tools.setData({
+      path: 'all.authUser',
+      value: { uid: cred.user.uid, email: cred.user.email, ...data },
+    });
+
+    // Roteamento por tipo de conta
+    const typeAccount = data?.typeAccount; // "adm" | "app" | "partner"
+    if (typeAccount === 'adm') tools.goTo('a1list');
+    else if (typeAccount === 'app') tools.goTo('b1list');
+    else if (typeAccount === 'partner') tools.goTo('a2list');
+    else {
+      // fallback
+      tools.goTo('b1list');
+    }
 
     return cred.user;
   } catch (err: any) {
     console.error('Erro no login:', err);
 
-    tools.setData({
-      path: 'sc.A0.forms.showErr',
-      value: true,
-    });
+    const code = err?.code || err?.message || '';
+    let msg = 'Não foi possível entrar. Tente novamente.';
 
-    tools.setData({
-      path: 'sc.A0.forms.msgs.msg1',
-      value: 'Usuário ou Senha incorretos.',
-    });
+    if (code.includes('auth/invalid-email')) msg = 'E-mail inválido.';
+    else if (
+      code.includes('auth/wrong-password') ||
+      code.includes('auth/user-not-found')
+    )
+      msg = 'Usuário ou senha incorretos.';
+    else if (code.includes('auth/too-many-requests'))
+      msg = 'Muitas tentativas. Aguarde alguns minutos.';
+    else if (code.includes('PERFIL_INEXISTENTE'))
+      msg = 'Perfil do usuário não encontrado. Contate o suporte.';
+
+    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: msg });
     return;
   }
 }]
@@ -3206,13 +3258,14 @@ xmlns="http://www.w3.org/2000/svg"
 , 
 'toggles': { 
 'box1': true, 'checkbox1': false } 
-, 'texts': { 
+, 
+'texts': { 
 'sizes': { 
 'small': "12px", 
 'medium': "14px", 'large': "16px" } 
 , 'contents': {   } 
  } 
- } 
+, 'authUser': {} } 
 , 'sc': { 
 'A0': { 'forms': { 'iptsChanges': {
 	userEmail: "adm@teste.com",
