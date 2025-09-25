@@ -1674,12 +1674,12 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
  arrFunctions: [async () => {
 	console.log("Login Firebase c/ Email e Senha");
 
-	  const email = getCtData('sc.A0.forms.iptsChanges.userEmail');
-	  const senha = getCtData('sc.A0.forms.iptsChanges.userPassword');
+	  const email = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
+	  const senha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
 
   const { getAuth, signInWithEmailAndPassword } = await import("firebase/auth");
 
-	  const fbInit = getCtData('all.temp.fireInit');
+	  const fbInit = tools.getCtData('all.temp.fireInit');
   const auth = getAuth(fbInit);
 
 	console.log("Login Firebase c/ Email e Senha", {auth});
@@ -1704,7 +1704,6 @@ tools.setData({
       value: 'Usuário ou Senha incorretos.' + err});
     return;
   }
-    throw err;
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
