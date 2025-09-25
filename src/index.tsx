@@ -1667,7 +1667,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 150 }`],
+            styles:[`{ width: "auto" }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
