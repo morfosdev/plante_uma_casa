@@ -1741,7 +1741,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
     console.error('Erro no login:', err);
 
     const code = err?.code || err?.message || '';
-    let msg = 'Não foi possível entrar. Tente novamente.';
+    let msg = 'Email ou Senha inválidos.';
 
     if (code.includes('auth/invalid-email')) msg = 'E-mail inválido.';
     else if (
