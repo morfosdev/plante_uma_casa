@@ -2402,13 +2402,13 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  arrFunctions: [async () => {
   // Lê inputs
   const email = (
-    tools.getCtData('sc.A0C.forms.iptsChanges.userEmail') ?? ''
+    tools.getCtData('sc.A0C.forms.iptsChanges.userEmail') ?? 'adm@teste.com'
   ).trim();
   const senha = (
-    tools.getCtData('sc.A0C.forms.iptsChanges.userPassword') ?? ''
+    tools.getCtData('sc.A0C.forms.iptsChanges.userPassword') ?? '123456'
   ).trim();
   const nome = (
-    tools.getCtData('sc.A0C.forms.iptsChanges.userName') ?? ''
+    tools.getCtData('sc.A0C.forms.iptsChanges.userName') ?? 'Admin'
   ).trim();
 
   // Helpers p/ mensagens (ajuste os paths conforme seu UI)
