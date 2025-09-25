@@ -1733,7 +1733,6 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
     else if (typeAccount === 'partner') tools.goTo('a2list');
     else {
       // fallback
-      tools.goTo('a0login');
       tools.setData({ path: 'sc.A0.forms.showErr', value: true });
       tools.setData({
         path: 'sc.A0.forms.msgs.msg1',
