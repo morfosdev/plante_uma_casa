@@ -4049,7 +4049,7 @@ tools.setData({
 , 'sc': { 
 'A0': { 'forms': { 'iptsChanges': {
 	userEmail: "adm@teste.com",
-	userPassword: "1234"
+	userPassword: "123456"
 } } 
  } 
 , 
