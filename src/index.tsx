@@ -1672,36 +1672,38 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-	console.log("Login Firebase c/ Email e Senha");
+  console.log('Login Firebase c/ Email e Senha');
 
-	  const email = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
-	  const senha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
+  const email = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
+  const senha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
 
-  const { getAuth, signInWithEmailAndPassword } = await import("firebase/auth");
+  const { getAuth, signInWithEmailAndPassword } = await import('firebase/auth');
 
-	  const fbInit = tools.getCtData('all.temp.fireInit');
+  const fbInit = tools.getCtData('all.temp.fireInit');
   const auth = getAuth(fbInit);
 
-	console.log("Login Firebase c/ Email e Senha", {auth});
+  console.log('Login Firebase c/ Email e Senha', { auth });
 
   try {
-    const cred = await signInWithEmailAndPassword(auth, email, password);
+    const cred = await signInWithEmailAndPassword(auth, email, senha);
 
-    console.log("Usuário logado:", cred);
+    console.log('Usuário logado:', cred);
 
-tools.goTo('a1list');
+    tools.goTo('a1list');
 
     return cred.user;
   } catch (err: any) {
-    console.error("Erro no login:", err);
+    console.error('Erro no login:', err);
 
-tools.setData({
+    tools.setData({
       path: 'sc.A0.forms.showErr',
-      value: true });
+      value: true,
+    });
 
     tools.setData({
       path: 'sc.A0.forms.msgs.msg1',
-      value: 'Usuário ou Senha incorretos.' + err});
+      value: 'Usuário ou Senha incorretos.' + err,
+    });
     return;
   }
 }]
