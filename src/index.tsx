@@ -858,6 +858,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1301,6 +1302,33 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [()=>{}]
+ , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [()=>{}]
+ , trigger: 'on press'
+}})],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -2088,101 +2116,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  console.log('Login Firebase c/ Email e Senha');
-
-  const rawEmail = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
-  const rawSenha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
-  const email = (rawEmail ?? '').trim();
-  const senha = rawSenha ?? '';
-
-  if (!email || !senha) {
-    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
-    tools.setData({
-      path: 'sc.A0.forms.msgs.msg1',
-      value: 'Informe e-mail e senha.',
-    });
-    return;
-  }
-
-  // Auth
-  const { getAuth, signInWithEmailAndPassword } = await import('firebase/auth');
-
-  // Garantir app inicializado
-  let fbInit = tools.getCtData('all.temp.fireInit');
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import('firebase/app');
-    const cfg = tools.getCtData('all.temp.fireConfig'); // opcional: pegue sua config do CT
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
-  }
-
-  const auth = getAuth(fbInit);
-  console.log('Login Firebase c/ Email e Senha → auth ok');
-
-  try {
-    const cred = await signInWithEmailAndPassword(auth, email, senha);
-    console.log('Usuário logado:', cred.user.uid);
-
-    // Firestore
-    const { getFirestore, doc, getDoc } = await import('firebase/firestore');
-    const db = getFirestore(fbInit);
-
-    const snap = await getDoc(doc(db, 'users', cred.user.uid));
-    if (!snap.exists()) {
-      // Opcional: crie doc padrão em vez de lançar erro
-      // import { setDoc } from "firebase/firestore"; await setDoc(doc(db,"users", cred.user.uid), { typeAccount:"app", userAuthID: cred.user.uid, userEmail: email });
-      throw new Error('PERFIL_INEXISTENTE');
-    }
-
-    const data = snap.data();
-
-    // Guarda no seu state/context
-    tools.setData({
-      path: 'all.authUser',
-      value: { uid: cred.user.uid, email: cred.user.email, ...data },
-    });
-
-    // Roteamento por tipo de conta
-    const typeAccount = data?.typeAccount; // "adm" | "app" | "partner"
-    if (typeAccount === 'adm') tools.goTo('a1list');
-    else if (typeAccount === 'app') tools.goTo('b1list');
-    else if (typeAccount === 'partner') tools.goTo('a2list');
-    else {
-      // fallback
-      tools.setData({ path: 'sc.A0.forms.showErr', value: true });
-      tools.setData({
-        path: 'sc.A0.forms.msgs.msg1',
-        value:
-          'O email ' +
-          cred.user.email +
-          ' não tem permissão de acesso. Contate o Administrador.',
-      });
-    }
-
-    return cred.user;
-  } catch (err: any) {
-    console.error('Erro no login:', err);
-
-    const code = err?.code || err?.message || '';
-    let msg = 'Email ou Senha inválidos.';
-
-    if (code.includes('auth/invalid-email')) msg = 'E-mail inválido.';
-    else if (
-      code.includes('auth/wrong-password') ||
-      code.includes('auth/user-not-found')
-    )
-      msg = 'Usuário ou senha incorretos.';
-    else if (code.includes('auth/too-many-requests'))
-      msg = 'Muitas tentativas. Aguarde alguns minutos.';
-    else if (code.includes('PERFIL_INEXISTENTE'))
-      msg = 'Perfil do usuário não encontrado. Contate o suporte.';
-
-    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: msg });
-    return;
-  }
-}]
+ arrFunctions: [undefined]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -2194,7 +2128,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           ],
 
           children: [
-            `Entrar`
+            `Enviar`
           ],
 
           args,
