@@ -1702,7 +1702,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
 
     tools.setData({
       path: 'sc.A0.forms.msgs.msg1',
-      value: 'Usuário ou Senha incorretos.' + err,
+      value: 'Usuário ou Senha incorretos.',
     });
     return;
   }
