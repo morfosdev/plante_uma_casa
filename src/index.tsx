@@ -1966,7 +1966,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	textAlign: "left"
 }`],
 
-          path: [`sc.A0.forms.iptsChanges.userEmail`],
+          path: [`sc.A0B.forms.iptsChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
@@ -2036,7 +2036,47 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [undefined]
+ arrFunctions: [async () => {
+  const path = 'sc.A0B.forms.iptsChanges.userEmail';
+  const raw = tools.getCtData(path);
+  const email = (raw ?? '').trim();
+
+  if (!email) {
+    tools.setData({ path: 'sc.A0B.forms.showErr', value: true });
+    tools.setData({
+      path: 'sc.A0B.forms.msgs.msg1',
+      value: 'Informe um e-mail válido.',
+    });
+    return;
+  }
+
+  const { getAuth, sendPasswordResetEmail } = await import('firebase/auth');
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+  try {
+    await sendPasswordResetEmail(auth, email);
+
+    tools.setData({
+      path: 'sc.A0.forms.showErr',
+      value:
+        'Enviamos as instruções para redefinir a senha no e-mail informado.',
+    });
+  } catch (e) {
+    // mapeia alguns erros comuns
+    let msg = 'Não foi possível enviar o e-mail de redefinição.';
+    if (e?.code === 'auth/invalid-email') msg = 'E-mail inválido.';
+    if (e?.code === 'auth/too-many-requests')
+      msg = 'Muitas tentativas. Tente novamente mais tarde.';
+    // obs: Firebase pode retornar sucesso mesmo se o e-mail não existir, por segurança
+
+    console.log('Erro reset senha:', e?.code || e?.message);
+    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: msg });
+  } finally {
+    console.log('Reset senha: finally');
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -3548,6 +3588,11 @@ tools.setData({
 'A0': { 'forms': { 'iptsChanges': {
 	userEmail: "adm@teste.com",
 	userPassword: "1234"
+} } 
+ } 
+, 
+'A0B': { 'forms': { 'iptsChanges': {
+	userEmail: ""
 } } 
  } 
 , 
