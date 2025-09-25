@@ -2058,7 +2058,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
     await sendPasswordResetEmail(auth, email);
 
     tools.setData({
-      path: 'sc.A0.forms.showErr',
+      path: 'sc.A0B.forms.showErr',
       value:
         'Enviamos as instruções para redefinir a senha no e-mail informado.',
     });
@@ -2071,8 +2071,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
     // obs: Firebase pode retornar sucesso mesmo se o e-mail não existir, por segurança
 
     console.log('Erro reset senha:', e?.code || e?.message);
-    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: msg });
+    tools.setData({ path: 'sc.A0B.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A0B.forms.msgs.msg1', value: msg });
   } finally {
     console.log('Reset senha: finally');
   }
