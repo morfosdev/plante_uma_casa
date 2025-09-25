@@ -1955,7 +1955,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           }}/>
         , 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{ placeHolder: "Informe seu e-mail" }`],
 
           stylesArray: [`{ 
 	padding: 8,
