@@ -1924,24 +1924,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             functions:[()=>{}],            childrenItems:[
         
 
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
 
@@ -1991,33 +1973,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
-	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
-}`],
-
-          path: [`sc.A0.forms.iptsChanges.userPassword`],
-
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
-	const x = '';
-	console.log({txt});
-	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
-}],
 
           args,
         }}/>, 
@@ -2072,41 +2027,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         , 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-	keyboardType: 'phone-pad',
-	maxLength: 20
-}`],
-
-          stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
-	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
-}`],
-
-          path: [`sc.A0.forms.iptsChanges.pass`],
-
-          funcsArray: [(txt) => {
-const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
-  const ddd = digits.slice(0, 2);
-  const isCel = digits.length > 10;
-  const first = digits.slice(2, isCel ? 7 : 6);
-  const last  = digits.slice(isCel ? 7 : 6, isCel ? 11 : 10);
-
-  const mask =
-    (ddd ? '(' + ddd + ') ' : '') +
-    (first ? first : '') +
-    (last ? ' - ' + last : '');
-
-  console.log({ mask });
-	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: mask });
-}],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
