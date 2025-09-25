@@ -1733,7 +1733,15 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
     else if (typeAccount === 'partner') tools.goTo('a2list');
     else {
       // fallback
-      tools.goTo('b1list');
+      tools.goTo('a0login');
+      tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+      tools.setData({
+        path: 'sc.A0.forms.msgs.msg1',
+        value:
+          'O email ' +
+          cred.user.email +
+          ' não tem permissão de acesso. Contate o Administrador.',
+      });
     }
 
     return cred.user;
