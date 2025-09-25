@@ -2003,7 +2003,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
+ arrFunctions: [() => [ "sc.A0B.forms.showErr", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -2017,7 +2017,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `$var_sc.A0.forms.msgs.msg1`
+            `$var_sc.A0B.forms.msgs.msg1`
           ],
 
           args,
