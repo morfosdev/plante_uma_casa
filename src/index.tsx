@@ -1705,7 +1705,6 @@ tools.setData({
     return;
   }
     throw err;
-  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
