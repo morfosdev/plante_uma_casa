@@ -1671,60 +1671,9 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
- functions.firebase.where({ args, pass:{
-
-  arrRefStrings: [`users`],
- arrWhere: [
- (...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        `userEmail`, 
-        `==`, `$var_sc.A0.forms.iptsChanges.userEmail`],
-        }}), (...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        `userPassword`, 
-        `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
-        }})],
- arrFuncs: [(args) => {
-  console.log('minha custom login 1', args);
-
-  const isArray = Array.isArray(args);
-  const isEmpty = !isArray || args.length === 0;
-
-	if (isEmpty) {
-		
-tools.setData({
-      path: 'sc.A0.forms.showErr',
-      value: true });
-
-    tools.setData({
-      path: 'sc.A0.forms.msgs.msg1',
-      value: 'Usuário ou Senha incorretos.'});
-    return;
-  }
-
-  const loginData = args[0] ?? null;
-
-  console.log('custom 1', { loginData });
-
-  const invalidData = !loginData || typeof loginData !== 'object';
-  console.log('custom 2', { invalidData });
-  if (invalidData) return;
-
-  console.log('custom 3', { loginData });
-
-  const typeAccount = loginData?.typeAccount;
-  const isAdm = typeAccount === 'adm';
-
-  if (isAdm) {
-    tools.goTo('a1list');
-  } else {
-    tools.goTo('home');
-  }
-}],
- }})]
+ arrFunctions: [() => {
+	console.log("Login Firebase")
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
