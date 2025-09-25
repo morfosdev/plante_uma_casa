@@ -2065,6 +2065,24 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
             functions:[async (...args) =>
@@ -2090,6 +2108,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
   try {
     await sendPasswordResetEmail(auth, email);
 
+    tools.setData({ path: 'sc.A0B.forms.showErr', value: false });
     tools.setData({ path: 'sc.A0B.forms.showSuccess', value: true });
     tools.setData({
       path: 'sc.A0B.forms.msgs.msg2',
@@ -2105,6 +2124,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
     // obs: Firebase pode retornar sucesso mesmo se o e-mail não existir, por segurança
 
     console.log('Erro reset senha:', e?.code || e?.message);
+    tools.setData({ path: 'sc.A0B.forms.showSuccess', value: false });
     tools.setData({ path: 'sc.A0B.forms.showErr', value: true });
     tools.setData({ path: 'sc.A0B.forms.msgs.msg1', value: msg });
   }
