@@ -1408,7 +1408,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1443,9 +1442,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
             args,
           }}/>
-        , (...args:any) => <Elements.IptPicker pass={{
- configs: [''], arrFuncs: [() => {console.log('function default')}], args 
- }}/>],
+        ],
 
             args,
           }}/>
@@ -1459,6 +1456,326 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"a0login",
+
+          styles:[
+        `{ width: "100%", height: "100%" }`, 
+        `{ alignItems: "center", justifyContent: "center" }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
+
+          screenElements:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	width: "80%",
+	maxWidth: 280,
+	minHeight: 150,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	padding: 10
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 80,
+	height: 30
+}],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/images%2FAdmin.png?alt=media&token=94ebd672-5bdd-4e25-81b7-a1b36e29e6e0`],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userEmail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userPassword`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: "red"
+}`
+          ],
+
+          children: [
+            `$var_sc.A0.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+	keyboardType: 'phone-pad',
+	maxLength: 20
+}`],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.pass`],
+
+          funcsArray: [(txt) => {
+const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
+  const ddd = digits.slice(0, 2);
+  const isCel = digits.length > 10;
+  const first = digits.slice(2, isCel ? 7 : 6);
+  const last  = digits.slice(isCel ? 7 : 6, isCel ? 11 : 10);
+
+  const mask =
+    (ddd ? '(' + ddd + ') ' : '') +
+    (first ? first : '') +
+    (last ? ' - ' + last : '');
+
+  console.log({ mask });
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: mask });
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`users`],
+ arrWhere: [
+ (...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `userEmail`, 
+        `==`, `$var_sc.A0.forms.iptsChanges.userEmail`],
+        }}), (...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `userPassword`, 
+        `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
+        }})],
+ arrFuncs: [(args) => {
+  console.log('minha custom login 1', args);
+
+  const isArray = Array.isArray(args);
+  const isEmpty = !isArray || args.length === 0;
+
+	if (isEmpty) {
+		
+tools.setData({
+      path: 'sc.A0.forms.showErr',
+      value: true });
+
+    tools.setData({
+      path: 'sc.A0.forms.msgs.msg1',
+      value: 'Usuário ou Senha incorretos.'});
+    return;
+  }
+
+  const loginData = args[0] ?? null;
+
+  console.log('custom 1', { loginData });
+
+  const invalidData = !loginData || typeof loginData !== 'object';
+  console.log('custom 2', { invalidData });
+  if (invalidData) return;
+
+  console.log('custom 3', { loginData });
+
+  const typeAccount = loginData?.typeAccount;
+  const isAdm = typeAccount === 'adm';
+
+  if (isAdm) {
+    tools.goTo('a1list');
+  } else {
+    tools.goTo('home');
+  }
+}],
+ }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "#FFF" }`
+          ],
+
+          children: [
+            `Entrar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+          functions:[()=>{}],
+
+          args,
+        }}/>, 
+        
+
+        (...args: any) => <Elements.Screen3 pass={{
+          pathScreen:"a0login_old",
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
