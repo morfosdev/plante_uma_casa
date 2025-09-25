@@ -2032,6 +2032,39 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A0B.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: "green"
+}`
+          ],
+
+          children: [
+            `$var_sc.A0B.forms.msgs.msg2`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
             functions:[async (...args) =>
@@ -2057,8 +2090,9 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
   try {
     await sendPasswordResetEmail(auth, email);
 
+    tools.setData({ path: 'sc.A0B.forms.showSuccess', value: true });
     tools.setData({
-      path: 'sc.A0B.forms.showErr',
+      path: 'sc.A0B.forms.msgs.msg2',
       value:
         'Enviamos as instruções para redefinir a senha no e-mail informado.',
     });
@@ -2073,8 +2107,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
     console.log('Erro reset senha:', e?.code || e?.message);
     tools.setData({ path: 'sc.A0B.forms.showErr', value: true });
     tools.setData({ path: 'sc.A0B.forms.msgs.msg1', value: msg });
-  } finally {
-    console.log('Reset senha: finally');
   }
 }]
  , trigger: 'on press'
