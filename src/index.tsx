@@ -3274,7 +3274,7 @@ paddingHorizontal: '10px',
             styles:[`{
 	width: 300,
 	height: "100%",
-	backgroundColor: "white",
+	backgroundColor: "transparent",
 	position: 'absolute',
 	right: 0,
 	top: -70,
