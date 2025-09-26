@@ -1006,8 +1006,8 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
       elementsProperties:[{}],
 
       styles:[{
-	width: 150,
-	height: 40
+	width: 120,
+	height: 30
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -2693,8 +2693,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
       elementsProperties:[{}],
 
       styles:[{
-	width: 150,
-	height: 40
+	width: 120,
+	height: 30
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
