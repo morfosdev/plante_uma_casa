@@ -1603,7 +1603,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	backgroundColor: "$var_all.colors.primary",		
 	alignItems: 'center',
 	justifyContent: 'center',
-	borderTopRadius: 20,
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
