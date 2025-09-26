@@ -4086,6 +4086,22 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Etapas principais da obra de uma casa na planta`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
