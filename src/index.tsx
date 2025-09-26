@@ -3271,15 +3271,15 @@ paddingHorizontal: '10px',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[
+        `{
 	width: 300,
 	height: "100%",
-	backgroundColor: "transparent",
 	position: 'absolute',
 	right: 0,
 	top: -70,
 	zIndex: 1,
-}`],
+}`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
             functions:[()=>{}],            childrenItems:[
         
