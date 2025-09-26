@@ -1597,9 +1597,9 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	width: "100%",
 	maxWidth: 280,
 	minHeight: 150,
-	backgroundColor: "$var_all.colors.primary",
-	borderRadius: 20,
-	padding: 10
+	backgroundColor: "$var_all.colors.primary",		
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
