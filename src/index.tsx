@@ -3463,7 +3463,8 @@ padding: 5,
 flexDirection: 'row',
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -3498,7 +3499,46 @@ flexDirection: 'row',
       preenchimento: [`#FFF`],
 
       args,
-    }}/>],
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+  fontSize: 14, 
+  fontWeight: "500", 
+  fontFamily: "Inter", 
+  color: "#878A92",
+  paddingVertical: '5',
+}`
+          ],
+
+          children: [
+            `Carregar Imagem`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
