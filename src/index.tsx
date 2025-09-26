@@ -987,7 +987,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
 	alignItems: "center",
 	justifyContent: "flex-start"
  }`, `{
-	backgroundColor: "white",
+	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 20,
 	height: 50,
 }`],
@@ -2679,7 +2679,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	alignItems: "center",
 	justifyContent: "flex-start"
  }`, `{
-	backgroundColor: "white",
+	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 20,
 	height: 50,
 }`],
