@@ -3277,7 +3277,7 @@ paddingHorizontal: '10px',
 	backgroundColor: "white",
 	position: 'absolute',
 	right: 0,
-	top: -80,
+	top: -70,
 	zIndex: 1,
 }`],
 
