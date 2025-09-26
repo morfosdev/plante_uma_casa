@@ -3118,10 +3118,7 @@ width: '155px',
 
             args,
           }}/>
-        , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [],
-            arrProps: [],
-            arrItems: [
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -3232,7 +3229,10 @@ paddingHorizontal: '10px',
 
             args,
           }}/>
-        , (...args:any) => <Elements.FlatList2 pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
