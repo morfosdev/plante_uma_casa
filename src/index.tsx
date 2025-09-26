@@ -1054,7 +1054,10 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
         `{ 
 	fontWeight: "bold",
 	fontSize: 12
-}`, `{ marginLeft: 5 }`
+}`, `{ 
+	marginLeft: 5, 
+	color: 'white',
+ }`
           ],
 
           children: [
@@ -2741,7 +2744,10 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         `{ 
 	fontWeight: "bold",
 	fontSize: 12
-}`, `{ marginLeft: 5 }`
+}`, `{ 
+	marginLeft: 5, 
+	color: 'white',
+ }`
           ],
 
           children: [
