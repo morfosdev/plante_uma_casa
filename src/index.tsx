@@ -2899,7 +2899,9 @@ width: '155px',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: '$var_all.texts.sizes.small',
+}`
           ],
 
           children: [
@@ -3003,7 +3005,9 @@ width: '155px',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: '$var_all.texts.sizes.small',
+}`
           ],
 
           children: [
