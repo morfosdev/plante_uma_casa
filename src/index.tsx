@@ -1590,6 +1590,20 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             functions:[()=>{}],            childrenItems:[
         
 
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: "100%",
+	maxWidth: 280,
+	minHeight: 150,
+	backgroundColor: "$var_all.colors.primary",
+	borderRadius: 20,
+	padding: 10
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
 
@@ -1601,7 +1615,11 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
 
       args,
-    }}/>, 
+    }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -1957,7 +1975,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1969,24 +1986,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	justifyContent: "center",
 	backgroundColor: "transparent"
  }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
