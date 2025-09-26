@@ -3277,8 +3277,8 @@ paddingHorizontal: '10px',
 	backgroundColor: "white",
 	position: 'absolute',
 	right: 0,
-	top: 0,
-	zIndex: -1000,
+	top: -100,
+	zIndex: 1,
 }`],
 
             functions:[()=>{}],            childrenItems:[
