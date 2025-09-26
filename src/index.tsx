@@ -4013,8 +4013,8 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             styles:[
         `{ 
 	width: "100%",
-	maxWidth: 280,
-	minHeight: 150,
+	maxWidth: 200,
+	minHeight: 80,
 	backgroundColor: "#FFF",
 	padding: 10,
 	flexDirection: 'row',
@@ -4060,14 +4060,9 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	padding: 10,
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
