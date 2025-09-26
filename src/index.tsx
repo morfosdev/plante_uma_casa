@@ -3102,7 +3102,27 @@ width: '155px',
 
             styles:[`{ width: "100%", height: "100%" }`],
 
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: '100%',
+	height: 50,
+}`],
+
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [() => <></>],
+            args,
+        }}/>],
 
             args,
           }}/>
