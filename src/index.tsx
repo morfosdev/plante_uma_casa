@@ -3279,6 +3279,7 @@ paddingHorizontal: '10px',
 	right: 0,
 	top: -70,
 	zIndex: 1,
+	alignItems: 'center',
 }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
             functions:[()=>{}],            childrenItems:[
