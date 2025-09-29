@@ -36,7 +36,22 @@
 
           screenElements:[
         (...args:any) => <Elements.Accordion pass={{
- configs: [''], arrElements: [() => <RN.Text>Element Default</RN.Text>], args 
+ configs: [''], arrElements: [(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>], args 
  }}/>, 
         
 
