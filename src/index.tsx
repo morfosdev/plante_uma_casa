@@ -35,6 +35,12 @@
         `{ alignItems: "center", justifyContent: "center" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
 
           screenElements:[
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
+}}/>
+, 
         (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{ backgroundColor: "#EFEFEF", width: "100%", padding: 20 }`],
             arrProps: [],
