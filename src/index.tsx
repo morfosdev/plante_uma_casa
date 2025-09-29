@@ -37,22 +37,6 @@
           screenElements:[
         (...args:any) => <Elements.Accordion pass={{
  configs: [`{ teste: "" }`], arrElements: [
- (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, 
  
 
           (...args:any) => <Elements.DynView pass={{
