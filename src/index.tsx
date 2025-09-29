@@ -35,6 +35,9 @@
         `{ alignItems: "center", justifyContent: "center" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
 
           screenElements:[
+        (...args:any) => <Elements.Accordion pass={{
+ configs: [''], arrElements: [() => <RN.Text>Element Default</RN.Text>], args 
+ }}/>, 
         
 
  (...args:any) => <Elements.Custom pass={{
