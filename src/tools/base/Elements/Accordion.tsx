@@ -24,6 +24,7 @@ const ItemAcc = props => {
         style={{
           backgroundColor: 'red',
           width: 260,
+					minHeight: 30,
           height: open ? 'auto' : 30,
           borderRadius: 10,
 					marginBottom: 14,
