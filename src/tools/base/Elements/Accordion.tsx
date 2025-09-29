@@ -12,7 +12,7 @@ export const Accordion = props => {
       {arrElements.map((Item, idx) => {
         return (
           <Pressable key={idx} onPress={() => setOpen(e => !e)}>
-            <ItemAcc open={open}>{Item()}</ItemAcc>;
+            <ItemAcc open={open}>{Item()}</ItemAcc>
           </Pressable>
         );
       })}
@@ -29,9 +29,11 @@ const ItemAcc = props => {
         width: 260,
         height: open ? 'auto' : 30,
         borderRadius: 10,
+        overflow: 'hidden',
       }}
     >
       {props.children}
     </View>
   );
 };
+
