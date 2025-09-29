@@ -36,7 +36,8 @@
 
           screenElements:[
         (...args:any) => <Elements.Accordion pass={{
- configs: [`{ teste: "" }`], arrElements: [(...args:any) => <Elements.Text pass={{
+ configs: [`{ teste: "" }`], arrElements: [
+ (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -51,7 +52,40 @@
 
           args,
 
-        }}/>], args 
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ], args 
  }}/>, 
         
 
