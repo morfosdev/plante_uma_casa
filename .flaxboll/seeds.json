@@ -2568,11 +2568,11 @@
     "capsCodeInfo": {
       "1": {
         "capsLabel": {
-          "pt-br": "IptPicker",
-          "en": "IptPicker"
+          "pt-br": "Accordion",
+          "en": "Accordion"
         },
         "capsDescription": { "pt-br": "", "en": "" },
-        "capsCodeTypes": ["Elemento de Tela", "IptPicker"],
+        "capsCodeTypes": ["Elemento de Tela", "Accordion"],
 
         "capsCodeText": "(...args:any) => <Elements.Accordion pass={{\n configs: [!#!Configs!#!], arrElements: [!#!Elements!#!], args \n }}/>",
 
@@ -2632,4 +2632,3 @@
     }
   }
 }
-
