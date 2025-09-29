@@ -36,7 +36,7 @@
 
           screenElements:[
         (...args:any) => <Elements.Accordion pass={{
- configs: [''], arrElements: [(...args:any) => <Elements.Text pass={{
+ configs: [`{ teste: "" }`], arrElements: [(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
