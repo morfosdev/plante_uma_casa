@@ -1,6 +1,6 @@
 
 import React from 'react';
-import * as RN from 'react-native';
+import { View } from 'react-native';
 
 export const Accordion = props => {
   const { arrElements } = props.pass;
@@ -9,8 +9,23 @@ export const Accordion = props => {
   return (
     <>
       {arrElements.map((Item, idx) => {
-        return Item();
+        return <ItemAcc>{Item()}</ItemAcc>;
       })}
     </>
+  );
+};
+
+const ItemAcc = props => {
+  return (
+    <View
+      style={{
+        backgroundColor: 'red',
+        width: 260,
+        height: 30,
+        borderRadius: 10,
+      }}
+    >
+      {props.children}
+    </View>
   );
 };
