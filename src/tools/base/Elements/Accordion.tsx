@@ -29,6 +29,7 @@ const ItemAcc = props => {
         width: 260,
         height: open ? 'auto' : 30,
         borderRadius: 10,
+				marginBottom: 14,
         overflow: 'hidden',
       }}
     >
