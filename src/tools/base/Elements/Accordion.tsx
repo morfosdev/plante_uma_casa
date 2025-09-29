@@ -23,6 +23,7 @@ const ItemAcc = props => {
         width: 260,
         height: 30,
         borderRadius: 10,
+				gap: 10
       }}
     >
       {props.children}
