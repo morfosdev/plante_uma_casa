@@ -1304,7 +1304,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `Opção X`
+            `Estilos Base I`
           ],
 
           args,
@@ -1317,7 +1317,65 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             styles:[`{ padding: 20 }`],
 
             functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ alignItems: "center", justifyContent: "center" }`, 
+        `{ width: "100%", height: "100%" }`, 
+        `{ padding: 20, backgrondColor: "#FFF" }`, 
+        `{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`, 
+        `{ 
+	width: 30,
+	height: 30,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ 
+	width: 50,
+	height: 50,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
+        `{ backgroundColor: "$var_all.colors.primary" }`, 
+        `{ flex: 1 }`, 
+        `{ 
+	width: "80%",
+	maxWidth: 280,
+	minHeight: 150,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	padding: 10
+}`, 
+        `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
+        `{ color: "#FFF" }`, 
+        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -1327,43 +1385,16 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
+            `Estilos Base I`
           ],
 
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -1788,549 +1819,6 @@ const path1 = "all.toggles.box1";
 }] 
 }}/>
 ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ alignItems: "center", justifyContent: "center" }`, 
-        `{ width: "100%", height: "100%" }`, 
-        `{ padding: 20, backgrondColor: "#FFF" }`, 
-        `{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`, 
-        `{ 
-	width: 30,
-	height: 30,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ 
-	width: 50,
-	height: 50,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
-        `{ backgroundColor: "$var_all.colors.primary" }`, 
-        `{ flex: 1 }`, 
-        `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`, 
-        `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
-        `{ color: "#FFF" }`, 
-        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Estilos Base I`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("b0login");
-        }
-        ]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Entrar c/ Google`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{
-	backgroundColor: "$var_all.colors.primary",
-	paddingHorizontal: 20,
-	height: 50,
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ flex: 1 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 150,
-	height: 50
-}],
-
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	width: 150,
-	flexDirection: "row",
-	justifyContent: "start",
-	alignItems: "center"
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-
-      args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            
-        `{ 
-	fontWeight: "bold",
-	fontSize: 12
-}`, `{ 
-	marginLeft: 5, 
-	color: 'white',
- }`
-          ],
-
-          children: [
-            `Admin`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "$var_all.colors.primary",
-	alignItems: "center",
-}
-
-`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg></svg>
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: ['black'],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-	color: "#FFF"
-}`
-          ],
-
-          children: [
-            `Título`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "$var_all.colors.primary",
-	alignItems: "center",
-}
-
-`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b2list")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
-width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
-<Path       stroke="#FFF"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
-      },
-
-      svgOriginal: `
-        <svg></svg>
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: ['black'],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-	color: "#FFF"
-}`
-          ],
-
-          children: [
-            `Título`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
