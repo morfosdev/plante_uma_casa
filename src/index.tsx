@@ -36,7 +36,15 @@
 
           screenElements:[
         (...args:any) => <Elements.Accordion pass={{
- configs: [`{ teste: "" }`], arrElements: [
+ configs: [`{ 
+	defaultOpenIdx: 1,
+	styles: {
+			backgroundColor: '#ccc',
+			width: "100%",
+			borderRadius: 10,
+			marginBottom: 14,
+	}
+}`], arrElements: [
  
 
           (...args:any) => <Elements.DynView pass={{
