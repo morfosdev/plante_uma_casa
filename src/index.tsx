@@ -41,6 +41,7 @@
 	styles: {
 			backgroundColor: '#ccc',
 			width: "100%",
+			padding: 10,
 			borderRadius: 10,
 			marginBottom: 14,
 	}
