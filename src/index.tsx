@@ -35,8 +35,10 @@
         `{ alignItems: "center", justifyContent: "center" }`, 
         `{ backgroundColor: "$var_all.colors.primary" }`, `{ padding: 20 }`],
 
-          screenElements:[
-        (...args:any) => <Elements.Accordion pass={{
+          screenElements:[(...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [(...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	defaultOpenIdx: 0,
 	styles: {
@@ -806,6 +808,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
             styles:[`{ padding: 20 }`],
 
             functions:[()=>{}],            childrenItems:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1461,143 +1464,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
             args,
           }}/>
-        ],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ 
-	paddingVertical: 5,
-	paddingHorizontal: 10,
-}`
-          ],
-
-          children: [
-            `Estilos Base I`
-          ],
-
-          args,
-
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 20 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ alignItems: "center", justifyContent: "center" }`, 
-        `{ width: "100%", height: "100%" }`, 
-        `{ padding: 20, backgrondColor: "#FFF" }`, 
-        `{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`, 
-        `{ 
-	width: 30,
-	height: 30,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ 
-	width: 50,
-	height: 50,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, 
-        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
-        `{ backgroundColor: "$var_all.colors.primary" }`, 
-        `{ flex: 1 }`, 
-        `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`, 
-        `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
-        `{ color: "#FFF" }`, 
-        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Estilos Base I`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        ], args 
- }}/>, 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{ backgroundColor: "#EFEFEF", width: "100%", padding: 20 }`],
             arrProps: [],
             arrItems: [
@@ -1822,7 +1689,182 @@ justifyContent: 'center',
           }}/>
         ],
             args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+ 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 5,
+	paddingHorizontal: 10,
+}`
+          ],
+
+          children: [
+            `Estilos Base I`
+          ],
+
+          args,
+
         }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 20 }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ alignItems: "center", justifyContent: "center" }`, 
+        `{ width: "100%", height: "100%" }`, 
+        `{ padding: 20, backgrondColor: "#FFF" }`, 
+        `{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`, 
+        `{ 
+	width: 30,
+	height: 30,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ 
+	width: 50,
+	height: 50,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, 
+        `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
+        `{ backgroundColor: "$var_all.colors.primary" }`, 
+        `{ flex: 1 }`, 
+        `{ 
+	width: "80%",
+	maxWidth: 280,
+	minHeight: 150,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	padding: 10
+}`, 
+        `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, 
+        `{ color: "#FFF" }`, 
+        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Estilos Base I`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 5,
+	paddingHorizontal: 10,
+}`
+          ],
+
+          children: [
+            `Funções Base I`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 20 }`],
+
+            functions:[()=>{}],            childrenItems:[
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1850,6 +1892,17 @@ justifyContent: 'center',
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ], args 
+ }}/>],
+            args,
+        }}/>],
 
           functions:[()=>{}],
 
