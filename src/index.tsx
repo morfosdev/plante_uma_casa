@@ -32,7 +32,8 @@
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
-        `{ alignItems: "center", justifyContent: "center" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
+        `{ alignItems: "center", justifyContent: "center" }`, 
+        `{ backgroundColor: "$var_all.colors.primary" }`, `{ padding: 20 }`],
 
           screenElements:[
         (...args:any) => <Elements.Accordion pass={{
@@ -333,12 +334,1045 @@
           }}/>
         ], args 
  }}/>, 
+        (...args:any) => <Elements.Accordion pass={{
+ configs: [`{ 
+	defaultOpenIdx: 0,
+	styles: {
+			backgroundColor: '#ccc',
+			width: "100%",
+			borderRadius: 10,
+			marginBottom: 14
+	}
+}`], arrElements: [
+ 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 5,
+	paddingHorizontal: 10,
+}`
+          ],
+
+          children: [
+            `Elementos de Formulários I`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 20 }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.ScrollBar pass={{
+            styles: [`{ backgroundColor: "#EFEFEF", width: "100%", padding: 20 }`],
+            arrProps: [],
+            arrItems: [
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [" "],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.inputs.ipt1`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{
+	borderBottomColor: "#444",
+	borderBottomWidth: 2
+}`],
+
+          path: [`sc.B3.forms.iptsChanges.name`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.name`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
- (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
-}}/>
-, 
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 100, height: 20, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.box1`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "blue" }`
+          ],
+
+          children: [
+            `Ocultar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 100, height: 20, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.box1`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "blue" }`
+          ],
+
+          children: [
+            `Mostrar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "100%", padding: 5, backgroundColor: "#FFF", flexDirection: "row", alignItems: "center"}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkbox1";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "$var_all.colors.secondary", borderRadius: 4, marginRight: 5}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#FFF"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={4.17}
+      d="M33.333 10 15 28.333 6.667 20"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, backgroundColor: "#FFF", borderRadius: 4, borderWidth: 2, borderColor: "#CCC", marginRight: 5}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `JavaScript`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ marginTop: 20 }`
+          ],
+
+          children: [
+            `Check Dentro de Lista`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 100, height: 20, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`users`],
+            arrFuncs: [()=>{}],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "blue" }`
+          ],
+
+          children: [
+            `GetDocs: users`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+const item = tools.findFlatItem([[{idx: 0, item: {name: "João"}}]]);
+
+console.log({item});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Testar findFlatItem.ts`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.IptPicker pass={{
+ configs: [`{
+	searchable: true,
+	pathItems: "sc.B3.statics.picker1",
+	maxVisibleItems: 8,
+	style: {backgroundColor: "#fff"},
+	inputStyle: {
+		backgroundColor: "#fff"
+	},
+	dropdownStyle: {
+		backgroundColor: "#fff"
+	},
+	itemStyle: {
+		backgroundColor: "#fff"
+	}
+}`], arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.options`],
+          value: [`$arg_callback`]
+        }})], args 
+ }}/>, 
+        (...args:any) => <Elements.IptPicker pass={{
+ configs: [`{
+	searchable: false,
+	pathItems: "sc.B3.statics.picker1",
+	maxVisibleItems: 4
+}`], arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B3.forms.iptsChanges.options`],
+          value: [`$arg_callback`]
+        }})], args 
+ }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+	keyboardType: 'phone-pad',
+	maxLength: 20
+}`],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.pass`],
+
+          funcsArray: [(txt) => {
+const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
+  const ddd = digits.slice(0, 2);
+  const isCel = digits.length > 10;
+  const first = digits.slice(2, isCel ? 7 : 6);
+  const last  = digits.slice(isCel ? 7 : 6, isCel ? 11 : 10);
+
+  const mask =
+    (ddd ? '(' + ddd + ') ' : '') +
+    (first ? first : '') +
+    (last ? ' - ' + last : '');
+
+  console.log({ mask });
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: mask });
+}],
+
+          args,
+        }}/>],
+            args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+ 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 5,
+	paddingHorizontal: 10,
+}`
+          ],
+
+          children: [
+            `Elementos Base I`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 20 }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("b0login");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "#FFF" }`
+          ],
+
+          children: [
+            `Entrar c/ Google`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 50,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ flex: 1 }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 150,
+	height: 50
+}],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 150,
+	flexDirection: "row",
+	justifyContent: "start",
+	alignItems: "center"
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 30,
+	height: 30,
+	borderRadius: 200
+}],
+
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+
+      args,
+    }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ 
+	fontWeight: "bold",
+	fontSize: 12
+}`, `{ 
+	marginLeft: 5, 
+	color: 'white',
+ }`
+          ],
+
+          children: [
+            `Admin`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "$var_all.colors.primary",
+	alignItems: "center",
+}
+
+`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	console.log("Olá Amigos")
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	tools.goTo("b1home")
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 320 512"
+    fill="red"
+    {...props}
+  >
+    <Path
+      fill="#fff"
+      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{ padding: 10 }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: "$var_all.texts.sizes.large",
+	color: "#FFF"
+}`
+          ],
+
+          children: [
+            `Título`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "$var_all.colors.primary",
+	alignItems: "center",
+}
+
+`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	tools.goTo("b2list")
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
+width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
+<Path       stroke="#FFF"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{ padding: 10 }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: "$var_all.texts.sizes.large",
+	color: "#FFF"
+}`
+          ],
+
+          children: [
+            `Título`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	width: "80%",
+	maxWidth: 280,
+	minHeight: 150,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	padding: 10
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 5,
+	paddingHorizontal: 10,
+}`
+          ],
+
+          children: [
+            `Opção X`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 20 }`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ], args 
+ }}/>, 
         (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{ backgroundColor: "#EFEFEF", width: "100%", padding: 20 }`],
             arrProps: [],
@@ -758,379 +1792,6 @@ const path1 = "all.toggles.box1";
             args,
           }}/>
         , 
-        (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{ backgroundColor: "#EFEFEF", width: "100%", padding: 20 }`],
-            arrProps: [],
-            arrItems: [
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [" "],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.inputs.ipt1`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [`{
-	borderBottomColor: "#444",
-	borderBottomWidth: 2
-}`],
-
-          path: [`sc.B3.forms.iptsChanges.name`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B3.forms.iptsChanges.name`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 100, height: 20, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.box1`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "blue" }`
-          ],
-
-          children: [
-            `Ocultar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 100, height: 20, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.box1`],
-          value: [true]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "blue" }`
-          ],
-
-          children: [
-            `Mostrar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "100%", padding: 5, backgroundColor: "#FFF", flexDirection: "row", alignItems: "center"}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const path = "all.toggles.checkbox1";
-  const currState = tools.getCtData(path);
-  tools.functions.setVar({
-		args: '',
-		pass: { keyPath: [path], value: [!currState] },
-	});
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "$var_all.colors.secondary", borderRadius: 4, marginRight: 5}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.checkbox1", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    width={40}
-    height={40}
-    viewBox="0 0 40 40"
-    {...props}
-  >
-    <Path
-      stroke="#FFF"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={4.17}
-      d="M33.333 10 15 28.333 6.667 20"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg></svg>
-      `,
-
-      altura: "14px",
-
-      largura: "14px",
-
-      preenchimento: [`transparent`],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, backgroundColor: "#FFF", borderRadius: 4, borderWidth: 2, borderColor: "#CCC", marginRight: 5}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.checkbox1", "==", false ]]
- , trigger: 'on listen'
-}})],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `JavaScript`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ marginTop: 20 }`
-          ],
-
-          children: [
-            `Check Dentro de Lista`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 100, height: 20, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`users`],
-            arrFuncs: [()=>{}],
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "blue" }`
-          ],
-
-          children: [
-            `GetDocs: users`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-const item = tools.findFlatItem([[{idx: 0, item: {name: "João"}}]]);
-
-console.log({item});
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Testar findFlatItem.ts`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.IptPicker pass={{
- configs: [`{
-	searchable: true,
-	pathItems: "sc.B3.statics.picker1",
-	maxVisibleItems: 8,
-	style: {backgroundColor: "#fff"},
-	inputStyle: {
-		backgroundColor: "#fff"
-	},
-	dropdownStyle: {
-		backgroundColor: "#fff"
-	},
-	itemStyle: {
-		backgroundColor: "#fff"
-	}
-}`], arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B3.forms.iptsChanges.options`],
-          value: [`$arg_callback`]
-        }})], args 
- }}/>, 
-        (...args:any) => <Elements.IptPicker pass={{
- configs: [`{
-	searchable: false,
-	pathItems: "sc.B3.statics.picker1",
-	maxVisibleItems: 4
-}`], arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B3.forms.iptsChanges.options`],
-          value: [`$arg_callback`]
-        }})], args 
- }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-	keyboardType: 'phone-pad',
-	maxLength: 20
-}`],
-
-          stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
-	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
-}`],
-
-          path: [`sc.A0.forms.iptsChanges.pass`],
-
-          funcsArray: [(txt) => {
-const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
-  const ddd = digits.slice(0, 2);
-  const isCel = digits.length > 10;
-  const first = digits.slice(2, isCel ? 7 : 6);
-  const last  = digits.slice(isCel ? 7 : 6, isCel ? 11 : 10);
-
-  const mask =
-    (ddd ? '(' + ddd + ') ' : '') +
-    (first ? first : '') +
-    (last ? ' - ' + last : '');
-
-  console.log({ mask });
-	tools.setData({path: "sc.A0.forms.iptsChanges.pass", value: mask });
-}],
-
-          args,
-        }}/>],
-            args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
