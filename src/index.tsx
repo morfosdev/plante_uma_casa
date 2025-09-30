@@ -37,13 +37,12 @@
           screenElements:[
         (...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
-	defaultOpenIdx: 1,
+	defaultOpenIdx: 0,
 	styles: {
 			backgroundColor: '#ccc',
 			width: "100%",
-			padding: 10,
 			borderRadius: 10,
-			marginBottom: 14,
+			marginBottom: 14
 	}
 }`], arrElements: [
  
@@ -67,7 +66,7 @@
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ padding: 10 }`
           ],
 
           children: [
