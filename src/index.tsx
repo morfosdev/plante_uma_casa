@@ -32,7 +32,6 @@
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
-        `{ alignItems: "center", justifyContent: "center" }`, 
         `{ backgroundColor: "$var_all.colors.primary" }`, `{ padding: 20 }`],
 
           screenElements:[(...args:any) => <Elements.ScrollBar pass={{
