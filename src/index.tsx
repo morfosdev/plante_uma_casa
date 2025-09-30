@@ -66,7 +66,10 @@
           ],
 
           arrStyles: [
-            `{ padding: 10 }`
+            `{ 
+	paddingVertical: 5,
+	paddingHorizontal: 10,
+}`
           ],
 
           children: [
