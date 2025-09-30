@@ -162,16 +162,26 @@
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ 
+	paddingVertical: 5,
+	paddingHorizontal: 10,
+}`
           ],
 
           children: [
-            "Escreva..."
+            `Opção X`
           ],
 
           args,
 
         }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 20 }`],
+
+            functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -222,6 +232,10 @@
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
@@ -243,16 +257,26 @@
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ 
+	paddingVertical: 5,
+	paddingHorizontal: 10,
+}`
           ],
 
           children: [
-            "Escreva..."
+            `Opção X`
           ],
 
           args,
 
         }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 20 }`],
+
+            functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -300,6 +324,10 @@
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
