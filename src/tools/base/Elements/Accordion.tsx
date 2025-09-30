@@ -65,6 +65,7 @@ export const Accordion = props => {
   };
 
   console.log('Accordion', { props, openIdx, cfg0 });
+  const userStyles = cfg0?.styles ?? {};
 
   return (
     <>
@@ -73,7 +74,12 @@ export const Accordion = props => {
         const child = asChild(Item, idx);
         if (!child) return null;
         return (
-          <ItemAcc key={idx} open={isOpen} onToggle={() => handleToggle(idx)}>
+          <ItemAcc
+            userStyles={userStyles}
+            key={idx}
+            open={isOpen}
+            onToggle={() => handleToggle(idx)}
+          >
             {child}
           </ItemAcc>
         );
@@ -83,20 +89,22 @@ export const Accordion = props => {
 };
 
 const ItemAcc = props => {
-  const { open, onToggle } = props;
+  const { open, onToggle, userStyles } = props;
 
   return (
     <Pressable onPress={onToggle}>
       <View
         style={{
-          backgroundColor: 'red',
-          width: 260,
-          minHeight: 30,
-          // Em RN nativo evite 'auto'; usar undefined remove a prop.
-          height: open ? undefined : 30,
+          backgroundColor: 'white',
           borderRadius: 10,
           marginBottom: 14,
+          width: 260,
+
+          ...userStyles,
+
+          height: open ? undefined : 30,
           overflow: 'hidden',
+          minHeight: 30,
         }}
       >
         {props.children}
