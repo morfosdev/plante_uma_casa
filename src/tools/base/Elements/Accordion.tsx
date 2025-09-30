@@ -104,6 +104,7 @@ const ItemAcc = props => {
         height: open ? undefined : 30,
         overflow: 'hidden',
         minHeight: 30,
+        padding: 0,
       }}
       onPress={onToggle}
     >
