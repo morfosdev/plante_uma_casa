@@ -92,24 +92,22 @@ const ItemAcc = props => {
   const { open, onToggle, userStyles } = props;
 
   return (
-    <Pressable onPress={onToggle}>
-      <View
-        style={{
-          backgroundColor: 'white',
-          borderRadius: 10,
-          marginBottom: 14,
-          width: 260,
+    <Pressable
+      style={{
+        backgroundColor: 'white',
+        borderRadius: 10,
+        marginBottom: 14,
+        width: 260,
 
-          ...userStyles,
+        ...userStyles,
 
-          height: open ? undefined : 30,
-          overflow: 'hidden',
-          minHeight: 30,
-        }}
-      >
-        {props.children}
-      </View>
+        height: open ? undefined : 30,
+        overflow: 'hidden',
+        minHeight: 30,
+      }}
+      onPress={onToggle}
+    >
+      {props.children}
     </Pressable>
   );
 };
-
