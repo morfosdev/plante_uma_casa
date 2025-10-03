@@ -3996,7 +3996,11 @@ width: '100%',
 	alignItems: 'center',
 }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.sideRight", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
