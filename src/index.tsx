@@ -3879,6 +3879,7 @@ paddingHorizontal: '10px',
 
             styles:[`{
 	flexDirection: 'row',
+	width: 300,
 }`],
 
             functions:[()=>{}],            childrenItems:[
