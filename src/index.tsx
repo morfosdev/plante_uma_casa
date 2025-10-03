@@ -3706,7 +3706,7 @@ width: '155px',
  arrFunctions: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
-          value: [`true`]
+          value: [`'true'`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
