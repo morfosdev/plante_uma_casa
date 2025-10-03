@@ -3822,9 +3822,12 @@ paddingHorizontal: '10px',
             elementsProperties:['{}'],
 
             styles:[`{
-	flexDirection: 'row',
-	width: '100%',
-	backgroundColor: 'transparent',
+width: '100%',
+justifyContent: 'center',
+alignItems: 'center',
+height: '80px',
+flexDirection: 'row',
+paddingHorizontal: '10px',
 }`],
 
             functions:[()=>{}],            childrenItems:[
