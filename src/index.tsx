@@ -4314,9 +4314,13 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [" "],
+          path: [`sc.a1.iptChanges.condo`],
 
-          funcsArray: [() => {}],
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges.condo`],
+          value: [`$arg_callback`]
+        }})],
 
           args,
         }}/>, 
@@ -4345,9 +4349,13 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [" "],
+          path: [`sc.a1.iptChanges.address`],
 
-          funcsArray: [() => {}],
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges.address`],
+          value: [`$arg_callback`]
+        }})],
 
           args,
         }}/>, 
