@@ -4485,10 +4485,15 @@ flexDirection: 'row',
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a1.iptChanges`],
-            arrFuncs: [async (...args) =>
+            arrFuncs: [
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
           value: [` `]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
         }})],
         }})]
  , trigger: 'on press'
@@ -4520,10 +4525,15 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
           value: [` `]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
