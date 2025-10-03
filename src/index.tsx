@@ -3818,6 +3818,7 @@ backgroundColor: 'transparent',
 
             styles:[`{
 	flex: 1,
+	backgroundColor: 'white',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -3846,6 +3847,7 @@ backgroundColor: 'transparent',
 
             styles:[`{
 	flex: 1,
+	backgroundColor: 'white',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -5167,6 +5169,7 @@ backgroundColor: 'transparent',
 
             styles:[`{
 	flex: 1,
+	backgroundColor: 'white',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -5195,6 +5198,7 @@ backgroundColor: 'transparent',
 
             styles:[`{
 	flex: 1,
+	backgroundColor: 'white',
 }`],
 
             functions:[async (...args) =>
