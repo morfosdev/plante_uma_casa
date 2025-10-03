@@ -3823,6 +3823,7 @@ paddingHorizontal: '10px',
 
             styles:[`{
 	flexDirection: 'row',
+	width: '100%'
 }`],
 
             functions:[()=>{}],            childrenItems:[
