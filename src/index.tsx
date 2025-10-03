@@ -4016,7 +4016,23 @@ xmlns="http://www.w3.org/2000/svg"
 	justifyContent: "flex-start"
  }`, `{ padding: 10 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Formulário de`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
