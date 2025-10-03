@@ -4489,7 +4489,7 @@ flexDirection: 'row',
         async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
-          value: [` `]
+          value: [undefined]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
@@ -4529,7 +4529,7 @@ flexDirection: 'row',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
-          value: [` `]
+          value: [undefined]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
