@@ -5158,7 +5158,6 @@ backgroundColor: 'transparent',
 
             styles:[`{
 	flexDirection: 'row',
-	width: 300,
 }`],
 
             functions:[()=>{}],            childrenItems:[
