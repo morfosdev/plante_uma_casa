@@ -3828,6 +3828,7 @@ alignItems: 'center',
 height: '80px',
 flexDirection: 'row',
 paddingHorizontal: '10px',
+backgroundColor: 'transparent',
 }`],
 
             functions:[()=>{}],            childrenItems:[
