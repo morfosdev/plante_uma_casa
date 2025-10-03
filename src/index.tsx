@@ -3850,7 +3850,16 @@ backgroundColor: 'transparent',
 	backgroundColor: 'white',
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a7list");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
