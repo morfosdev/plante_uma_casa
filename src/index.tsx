@@ -3743,18 +3743,28 @@ paddingHorizontal: '10px',
             {}
           ],
 
-          pData: '',
+          pData: `sc.a1.list`,
 
           itemElements: [
             
-              (...args) => {
-                return (
-                  <RN.Text>
-                    Adicione os campos que quer mostrar aqui.
-                  </RN.Text>
-                );
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
               }
-              
+              ],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        
           ],
 
       styles:[
@@ -4256,7 +4266,19 @@ flexDirection: 'row',
           }}/>
         ],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`mockCondos`],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.list`],
+          value: [`$arg_callback`]
+        }})],
+        }})]
+ , trigger: 'on init'
+}})],
 
           args,
         }}/>, 
