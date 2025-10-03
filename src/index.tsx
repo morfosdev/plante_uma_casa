@@ -3840,7 +3840,8 @@ paddingHorizontal: '10px',
               }
               ],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -3851,6 +3852,21 @@ paddingHorizontal: '10px',
 
           children: [
             `$arg_condo`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `$arg_address`
           ],
 
           args,
