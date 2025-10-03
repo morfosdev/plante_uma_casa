@@ -3954,8 +3954,8 @@ backgroundColor: 'transparent',
       elementsProperties:[{}],
 
       styles:[{
-	width: '200px',
-	height:'200px',
+	width: '50px',
+	height:'50px',
 	borderRadius: '6px',
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
