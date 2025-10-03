@@ -3971,14 +3971,9 @@ backgroundColor: 'transparent',
         
           ],
 
-      styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+      styles:[`{
+width: '100%',
+}`],    args,
         }}/>],
             args,
         }}/>],
