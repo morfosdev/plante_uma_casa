@@ -3817,7 +3817,7 @@ backgroundColor: 'transparent',
             elementsProperties:['{}'],
 
             styles:[`{
-	flex: 1,
+	width: 200,
 	backgroundColor: 'white',
 }`],
 
@@ -3846,7 +3846,7 @@ backgroundColor: 'transparent',
             elementsProperties:['{}'],
 
             styles:[`{
-	flex: 1,
+	width: 200,
 	backgroundColor: 'white',
 }`],
 
@@ -5168,7 +5168,7 @@ backgroundColor: 'transparent',
             elementsProperties:['{}'],
 
             styles:[`{
-	flex: 1,
+	width: 200,
 	backgroundColor: 'white',
 }`],
 
@@ -5197,7 +5197,7 @@ backgroundColor: 'transparent',
             elementsProperties:['{}'],
 
             styles:[`{
-	flex: 1,
+	width: 200,
 	backgroundColor: 'white',
 }`],
 
