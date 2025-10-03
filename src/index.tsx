@@ -4384,9 +4384,13 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [" "],
+          path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [() => {}],
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges.startDate`],
+          value: [`$arg_callback`]
+        }})],
 
           args,
         }}/>, 
