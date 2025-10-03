@@ -5068,14 +5068,10 @@ width: '155px',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	width: 50,
+	height: 50,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
