@@ -2252,7 +2252,7 @@ justifyContent: 'center',
           arrStyles: [
             `{
 	fontSize: 14,
-	fontWeight: 'bold',
+	fontWeight: 500,
 	color: '#555555',
 }`
           ],
@@ -2327,7 +2327,7 @@ justifyContent: 'center',
           arrStyles: [
             `{
 	fontSize: 14,
-	fontWeight: 'bold',
+	fontWeight: 500,
 	color: '#555555',
 }`
           ],
