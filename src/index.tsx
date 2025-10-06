@@ -2263,34 +2263,13 @@ justifyContent: 'center',
 
           args,
 
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 5,
-	height: 5,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
-	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
+	padding: 5
+	borderBottomColor: "#CCCCCC",
+	borderBottomWidth: 1,
 }`],
 
           path: [`sc.A0.forms.iptsChanges.userEmail`],
@@ -2341,34 +2320,13 @@ justifyContent: 'center',
 
           args,
 
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 5,
-	height: 5,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
-	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
+	padding: 5
+	borderBottomColor: "#CCCCCC",
+	borderBottomWidth: 1,
 }`],
 
           path: [`sc.A0.forms.iptsChanges.userPassword`],
