@@ -2187,8 +2187,8 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	widht: 400,
-	heigh: 147,
+	width: "400px",
+	height: "147px",
 	backgroundColor: "$var_all.colors.primary",		
 	alignItems: 'center',
 	justifyContent: 'center',
