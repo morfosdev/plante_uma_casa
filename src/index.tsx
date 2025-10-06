@@ -2558,7 +2558,7 @@ justifyContent: 'center',
             `{ 
 	color: "#FFF",
 	fontSize: 15,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
