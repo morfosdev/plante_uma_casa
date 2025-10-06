@@ -2169,16 +2169,15 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[
+        `{ alignItems: "center", justifyContent: "center" }`, 
         `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
+	padding: 0
+}`, `{ 
+	width: 400,
+	height: 450,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	padding: 10
-}`, 
-        `{ alignItems: "center", justifyContent: "center" }`, `{ 
-	padding: 0
 }`],
 
             functions:[()=>{}],            childrenItems:[
