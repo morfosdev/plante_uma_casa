@@ -2568,6 +2568,7 @@ justifyContent: 'center',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -2581,6 +2582,431 @@ justifyContent: 'center',
  }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	padding: 0
+}`, `{ 
+	width: 400,
+	height: 450,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: "400px",
+	height: "147px",
+	backgroundColor: "$var_all.colors.primary",		
+	alignItems: 'center',
+	justifyContent: 'center',
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 163,
+	height: 98,
+}],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userEmail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userPassword`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: "red"
+}`
+          ],
+
+          children: [
+            `$var_sc.A0.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  console.log('Login Firebase c/ Email e Senha');
+
+  const rawEmail = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
+  const rawSenha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
+  const email = (rawEmail ?? '').trim();
+  const senha = rawSenha ?? '';
+
+  if (!email || !senha) {
+    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+    tools.setData({
+      path: 'sc.A0.forms.msgs.msg1',
+      value: 'Informe e-mail e senha.',
+    });
+    return;
+  }
+
+  // Auth
+  const { getAuth, signInWithEmailAndPassword } = await import('firebase/auth');
+
+  // Garantir app inicializado
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import('firebase/app');
+    const cfg = tools.getCtData('all.temp.fireConfig'); // opcional: pegue sua config do CT
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  }
+
+  const auth = getAuth(fbInit);
+  console.log('Login Firebase c/ Email e Senha → auth ok');
+
+  try {
+    const cred = await signInWithEmailAndPassword(auth, email, senha);
+    console.log('Usuário logado:', cred.user.uid);
+
+    // Firestore
+    const { getFirestore, doc, getDoc } = await import('firebase/firestore');
+    const db = getFirestore(fbInit);
+
+    const snap = await getDoc(doc(db, 'users', cred.user.uid));
+    if (!snap.exists()) {
+      // Opcional: crie doc padrão em vez de lançar erro
+      // import { setDoc } from "firebase/firestore"; await setDoc(doc(db,"users", cred.user.uid), { typeAccount:"app", userAuthID: cred.user.uid, userEmail: email });
+      throw new Error('PERFIL_INEXISTENTE');
+    }
+
+    const data = snap.data();
+
+    // Guarda no seu state/context
+    tools.setData({
+      path: 'all.authUser',
+      value: { uid: cred.user.uid, email: cred.user.email, ...data },
+    });
+
+    // Roteamento por tipo de conta
+    const typeAccount = data?.typeAccount; // "adm" | "app" | "partner"
+    if (typeAccount === 'adm') tools.goTo('a1list');
+    else if (typeAccount === 'app') tools.goTo('b1list');
+    else if (typeAccount === 'partner') tools.goTo('a2list');
+    else {
+      // fallback
+      tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+      tools.setData({
+        path: 'sc.A0.forms.msgs.msg1',
+        value:
+          'O email ' +
+          cred.user.email +
+          ' não tem permissão de acesso. Contate o Administrador.',
+      });
+    }
+
+    return cred.user;
+  } catch (err: any) {
+    console.error('Erro no login:', err);
+
+    const code = err?.code || err?.message || '';
+    let msg = 'Email ou Senha inválidos.';
+
+    if (code.includes('auth/invalid-email')) msg = 'E-mail inválido.';
+    else if (
+      code.includes('auth/wrong-password') ||
+      code.includes('auth/user-not-found')
+    )
+      msg = 'Usuário ou senha incorretos.';
+    else if (code.includes('auth/too-many-requests'))
+      msg = 'Muitas tentativas. Aguarde alguns minutos.';
+    else if (code.includes('PERFIL_INEXISTENTE'))
+      msg = 'Perfil do usuário não encontrado. Contate o suporte.';
+
+    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: msg });
+    return;
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "#FFF" }`
+          ],
+
+          children: [
+            `Entrar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "auto" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a0bforgotpass");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '$var_all.colors.primary'
+}`
+          ],
+
+          children: [
+            `Recuperar Senha`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "auto" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a0csignup");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '$var_all.colors.primary'
+}`
+          ],
+
+          children: [
+            `Criar Conta`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
