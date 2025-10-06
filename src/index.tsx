@@ -2613,12 +2613,14 @@ justifyContent: 'center',
 
           arrStyles: [
             `{
-	color: '$var_all.colors.primary'
+	color: '#555555',
+	fontSize: 14,
+	fontWeight: '400',
 }`
           ],
 
           children: [
-            `Recuperar Senha`
+            `Esqueceu sua senha?`
           ],
 
           args,
