@@ -2176,7 +2176,6 @@ justifyContent: 'center',
 	height: 450,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10,
 	alignItems: "center",
 }`],
 
