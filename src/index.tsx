@@ -2169,7 +2169,6 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[
-        `{ alignItems: "center", justifyContent: "center" }`, 
         `{ 
 	padding: 0
 }`, `{ 
@@ -2177,7 +2176,8 @@ justifyContent: 'center',
 	height: 450,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10
+	padding: 10,
+	alignItems: "center",
 }`],
 
             functions:[()=>{}],            childrenItems:[
