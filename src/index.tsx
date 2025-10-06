@@ -2447,6 +2447,8 @@ justifyContent: 'center',
 	paddingHorizontal: 30,
 	paddingVertical: 8,
 	backgroundColor: '#315E2D',
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[async (...args) =>
