@@ -2227,6 +2227,8 @@ justifyContent: 'center',
 	alignItems: "center",
 	paddingHorizontal: 15,
 	paddingVertical: 30,
+	borderBottomLeftRadius: 20,
+  borderBottomRightRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
