@@ -2579,8 +2579,8 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 30,
+	height: 30,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
@@ -2591,7 +2591,6 @@ justifyContent: 'center',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -2625,61 +2624,6 @@ justifyContent: 'center',
           args,
 
         }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "auto" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("a0csignup");
-        }
-        ]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	color: '$var_all.colors.primary'
-}`
-          ],
-
-          children: [
-            `Criar Conta`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
