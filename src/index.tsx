@@ -2217,10 +2217,7 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
-	padding: 0
-}`, `{ 
+            styles:[`{ 
 	width: 400,
 	height: 303,
 	backgroundColor: "#FFF",
