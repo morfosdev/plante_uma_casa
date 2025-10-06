@@ -2555,11 +2555,15 @@ justifyContent: 'center',
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{ 
+	color: "#FFF",
+	fontSize: 15,
+	fontWeight: 'bold',
+}`
           ],
 
           children: [
-            `Entrar`
+            `Confirmar`
           ],
 
           args,
