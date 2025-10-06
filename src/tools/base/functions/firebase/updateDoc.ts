@@ -46,15 +46,44 @@ export const updateDocTool = async (props: Tprops) => {
     );
 
   // ------ read Data
-  let dataToUpdate: any = {};
-  const newPath = arrPathData.map(i => {
-    const varValue = testVarType(i, args);
-    return varValue;
-  });
-  dataToUpdate = getCtData(newPath.join('.'));
+  const newPath = arrPathData.map(i => testVarType(i, args));
+  console.log({ newPath });
 
-  // ------ add date update
-  dataToUpdate.updatedAt = Timestamp.now();
+  let pathStr: string | undefined;
+  let fetched: any;
+
+  // se for array de strings
+  if (newPath.every(i => typeof i === 'string')) {
+    pathStr = newPath.join('.');
+    console.log({ pathStr });
+    fetched = getCtData(pathStr);
+  }
+  // se for array de objetos → faz um merge (flat) em um único objeto
+  else if (newPath.every(i => typeof i === 'object' && i !== null)) {
+    const mergedObj = Object.assign({}, ...newPath);
+    console.log({ mergedObj });
+    fetched = mergedObj;
+  }
+  // caso misto ou inválido
+  else {
+    console.warn('newPath contém tipos mistos ou inválidos:', newPath);
+    fetched = {};
+  }
+
+  console.log({ fetched });
+
+  // --- garante objeto
+  const baseUpdate =
+    fetched && typeof fetched === 'object' && !Array.isArray(fetched)
+      ? { ...fetched }
+      : {};
+
+  const dataToUpdate = {
+    ...baseUpdate,
+    updatedAt: Timestamp.now(),
+  };
+
+  console.log({ dataToUpdate });
 
   await updateDoc(refColl, dataToUpdate).catch(err =>
     console.log('Erro do updateDoc', { err }),
