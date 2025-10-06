@@ -2253,6 +2253,7 @@ justifyContent: 'center',
             `{
 	fontSize: 14,
 	fontWeight: 700,
+	color: '#555555',
 }`
           ],
 
@@ -2330,6 +2331,7 @@ justifyContent: 'center',
             `{
 	fontSize: 14,
 	fontWeight: 700,
+	color: '#555555',
 }`
           ],
 
