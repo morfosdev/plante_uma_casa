@@ -2440,7 +2440,14 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+            styles:[`{
+	width: 130,
+	height: 36,
+	borderRadius: 10,
+	paddingHorizontal: 30,
+	paddingVertical: 8,
+	backgroundColor: '#315E2D',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
