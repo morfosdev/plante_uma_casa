@@ -2423,8 +2423,8 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 30,
+	height: 30,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
@@ -2654,7 +2654,6 @@ justifyContent: 'center',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -2662,23 +2661,6 @@ justifyContent: 'center',
             styles:[`{ 
 	width: 10,
 	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
