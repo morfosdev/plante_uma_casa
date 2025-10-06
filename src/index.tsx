@@ -2267,7 +2267,7 @@ justifyContent: 'center',
           propsArray: [{}],
 
           stylesArray: [`{ 
-	padding: 5
+	padding: 5,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
 }`],
@@ -2324,7 +2324,7 @@ justifyContent: 'center',
           propsArray: [{}],
 
           stylesArray: [`{ 
-	padding: 5
+	padding: 5,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
 }`],
