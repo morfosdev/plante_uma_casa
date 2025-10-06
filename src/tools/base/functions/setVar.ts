@@ -123,7 +123,7 @@ const getCondValue = (typeValue, value, args) => {
 
     // ---- Para Listas
     // ---- Passa todo objeto 'item'
-    const condFull = key === 'full';
+    const condFull = key === 'item';
     if (condFull) {
       updatedValue = findFlatItem(args);
     }
