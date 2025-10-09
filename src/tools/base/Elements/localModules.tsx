@@ -8,10 +8,10 @@ export const importRender = (props: any) => {
   console.log({ type });
 
   if (type === 'native') {
-    return () => <BtnImgPicNat arrFuncs={arrFuncs} args={args} />;
+    return <BtnImgPicNat arrFuncs={arrFuncs} args={args} />;
   }
   if (type === 'web') {
-    return () => <BtnImgPicWeb arrFuncs={arrFuncs} args={args} />;
+    return <BtnImgPicWeb arrFuncs={arrFuncs} args={args} />;
   }
 };
 
