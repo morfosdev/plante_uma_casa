@@ -17,23 +17,19 @@ export const BtnImagePicker = (props: Tprops) => {
   const isWeb = RN.Platform.OS === 'web';
 
   type Trender1 = null | React.JSX.Element;
-  const [SttComp, SetComp] = React.useState<Trender1>(null);
 
   // ---------- set Props
   const { arrFuncs, args } = props.pass;
   console.log({ isWeb });
 
   // ---------- CORREÇÃO: decide uma única vez
-  if (!SttComp) {
-    if (isWeb && typeof document !== 'undefined') {
-      <BtnImgPicWeb arrFuncs={arrFuncs} args={args} />;
-    } else {
-      // vale para android/ios (nativo)
-      <BtnImgPicNat arrFuncs={arrFuncs} args={args} />;
-    }
-  }
 
-  return <>{SttComp}</>;
+  if (isWeb && typeof document !== 'undefined') {
+    return <BtnImgPicWeb arrFuncs={arrFuncs} args={args} />;
+  } else {
+    // vale para android/ios (nativo)
+    return <BtnImgPicNat arrFuncs={arrFuncs} args={args} />;
+  }
 };
 
 const BtnImgPicWeb = (props: any) => {
