@@ -80,11 +80,7 @@ const BtnImgPicNat = (props: any) => {
     // }
   };
 
-  return (
-    <>
-      <div>oi</div>
-    </>
-  );
+  return <></>;
 };
 
 const styles = RN.StyleSheet.create({
@@ -101,4 +97,3 @@ const styles = RN.StyleSheet.create({
     borderRadius: 10,
   },
 });
-
