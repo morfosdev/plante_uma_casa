@@ -4303,6 +4303,9 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
+        (...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [() => console.log({args})], args,
+ }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
