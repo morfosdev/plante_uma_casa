@@ -8,10 +8,10 @@ export const importRender = (props: any) => {
   console.log({ type });
 
   if (type === 'native') {
-    return () => <BtnImgPicNat arrFuncs={arrFuncs} args={args} />;
+    return <BtnImgPicNat arrFuncs={arrFuncs} args={args} />;
   }
   if (type === 'web') {
-    return () => <BtnImgPicWeb arrFuncs={arrFuncs} args={args} />;
+    return <BtnImgPicWeb arrFuncs={arrFuncs} args={args} />;
   }
 };
 
@@ -62,7 +62,7 @@ const BtnImgPicNat = (props: any) => {
   console.log({ arrFuncs, args });
 
   const pickNative = async () => {
-    const ImagePicker = await import('expo-image-picker');
+    const ImagePicker = require('expo-image-picker');
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== 'granted') {
       alert('Permissão para acessar a galeria foi negada');
