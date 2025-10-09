@@ -7652,6 +7652,7 @@ async (...args) =>
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -7686,7 +7687,9 @@ async (...args) =>
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [() => console.log({args})], args,
+ }}/>],
 
             args,
           }}/>
