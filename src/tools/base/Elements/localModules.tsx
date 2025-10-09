@@ -5,6 +5,7 @@ import * as RN from 'react-native';
 
 export const importRender = (props: any) => {
   const { type, arrFuncs, args } = props;
+  console.log({ type });
 
   if (type === 'native') {
     return () => <BtnImgPicNat arrFuncs={arrFuncs} args={args} />;
