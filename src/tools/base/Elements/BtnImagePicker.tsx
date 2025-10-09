@@ -2,7 +2,7 @@
 // ---------- import Packs
 import React from 'react';
 import * as RN from 'react-native';
-import { BtnImgPicWeb, BtnImgPicNat } from './localModules';
+import { importRender } from './localModules';
 
 type Tprops = {
   pass: {
@@ -17,19 +17,25 @@ export const BtnImagePicker = (props: Tprops) => {
   const isWeb = RN.Platform.OS === 'web';
   const isAndroid = RN.Platform.OS === 'android';
 
+  type Trender1 = null | React.JSX.Element;
+  const [SttComp, SetComp] = React.useState<Trender1>(null);
+
   // ---------- set Props
   const { arrFuncs, args } = props.pass;
 
   console.log({ arrFuncs, args, isWeb });
 
-  return (
-    <>
-      {isWeb && typeof document !== 'undefined' && (
-        <BtnImgPicWeb arrFuncs={arrFuncs} args={args} />
-      )}
-      {isAndroid && <BtnImgPicNat arrFuncs={arrFuncs} args={args} />}
-    </>
-  );
+  // ---------- set WEB Component apenas se necessário
+  if (isWeb && !SttComp) {
+    SetComp(importRender({ type: 'web', arrFuncs, args }));
+  }
+
+  // ---------- set Native Component apenas se necessário
+  if (!isAndroid && !SttComp) {
+    SetComp(importRender({ type: 'native', arrFuncs, args }));
+  }
+
+  return <>{SttComp}</>;
 };
 
 const styles = RN.StyleSheet.create({
@@ -46,3 +52,4 @@ const styles = RN.StyleSheet.create({
     borderRadius: 10,
   },
 });
+

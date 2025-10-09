@@ -3,22 +3,22 @@
 import React from 'react';
 import * as RN from 'react-native';
 
-type Tprops = {
-  pass: {
-    variable: string[];
-    childrenItems: any[];
-    arrFuncs: any[];
-    args: any;
-  };
-};
-const css =
-  'color: #54ff00; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
+export const importRender = (props: any) => {
+  const { type, arrFuncs, args } = props;
 
-export const BtnImgPicWeb = (props: Tprops) => {
+  if (type === 'native') {
+    return () => <BtnImgPicNat arrFuncs={arrFuncs} args={args} />;
+  }
+  if (type === 'web') {
+    return () => <BtnImgPicWeb arrFuncs={arrFuncs} args={args} />;
+  }
+};
+
+const BtnImgPicWeb = (props: any) => {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
   // ---------- set Props
-  const { arrFuncs, args } = props.pass;
+  const { arrFuncs, args } = props;
   const [image, setImage] = React.useState<string | null>(null);
 
   console.log({ arrFuncs, args });
@@ -53,11 +53,11 @@ export const BtnImgPicWeb = (props: Tprops) => {
   );
 };
 
-export const BtnImgPicNat = (props: Tprops) => {
+const BtnImgPicNat = (props: any) => {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
   // ---------- set Props
-  const { arrFuncs, args } = props.pass;
+  const { arrFuncs, args } = props;
   const [image, setImage] = React.useState<string | null>(null);
 
   console.log({ arrFuncs, args });
