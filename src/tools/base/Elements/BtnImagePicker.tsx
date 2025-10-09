@@ -15,7 +15,6 @@ type Tprops = {
 
 export const BtnImagePicker = (props: Tprops) => {
   const isWeb = RN.Platform.OS === 'web';
-  const isAndroid = RN.Platform.OS === 'android';
 
   type Trender1 = null | React.JSX.Element;
   const [SttComp, SetComp] = React.useState<Trender1>(null);
@@ -23,16 +22,14 @@ export const BtnImagePicker = (props: Tprops) => {
   // ---------- set Props
   const { arrFuncs, args } = props.pass;
 
-  console.log({ arrFuncs, args, isWeb });
-
-  // ---------- set WEB Component apenas se necessário
-  if (isWeb && !SttComp) {
-    SetComp(importRender({ type: 'web', arrFuncs, args }));
-  }
-
-  // ---------- set Native Component apenas se necessário
-  if (!isAndroid && !SttComp) {
-    SetComp(importRender({ type: 'native', arrFuncs, args }));
+  // ---------- CORREÇÃO: decide uma única vez
+  if (!SttComp) {
+    if (isWeb && typeof document !== 'undefined') {
+      SetComp(importRender({ type: 'web', arrFuncs, args }));
+    } else {
+      // vale para android/ios (nativo)
+      SetComp(importRender({ type: 'native', arrFuncs, args }));
+    }
   }
 
   return <>{SttComp}</>;
