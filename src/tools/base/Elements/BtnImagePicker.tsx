@@ -19,10 +19,10 @@ export const BtnImagePicker = (props: Tprops) => {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
   // ---------- set Props
-  const { arrFuncs, args, isWeb } = props.pass;
+  const { arrFuncs, args } = props.pass;
   const [image, setImage] = React.useState<string | null>(null);
 
-  console.log({ arrFuncs, args });
+  console.log({ arrFuncs, args, isWeb });
 
   const pickNative = async () => {
     // const ImagePicker = await import('expo-image-picker');
