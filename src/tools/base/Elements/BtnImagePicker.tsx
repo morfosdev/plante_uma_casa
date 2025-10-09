@@ -19,7 +19,7 @@ export const BtnImagePicker = (props: Tprops) => {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
   // ---------- set Props
-  const { arrFuncs, args } = props.pass;
+  const { arrFuncs, args, isWeb } = props.pass;
   const [image, setImage] = React.useState<string | null>(null);
 
   console.log({ arrFuncs, args });
