@@ -21,6 +21,7 @@ export const BtnImagePicker = (props: Tprops) => {
 
   // ---------- set Props
   const { arrFuncs, args } = props.pass;
+  console.log({ isWeb });
 
   // ---------- CORREÇÃO: decide uma única vez
   if (!SttComp) {
