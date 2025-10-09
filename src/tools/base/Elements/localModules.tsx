@@ -55,8 +55,6 @@ const BtnImgPicWeb = (props: any) => {
 };
 
 const BtnImgPicNat = (props: any) => {
-  const inputRef = React.useRef<HTMLInputElement | null>(null);
-
   // ---------- set Props
   const { arrFuncs, args } = props;
   const [image, setImage] = React.useState<string | null>(null);
@@ -64,23 +62,30 @@ const BtnImgPicNat = (props: any) => {
   console.log({ arrFuncs, args });
 
   const pickNative = async () => {
-    // const ImagePicker = await import('expo-image-picker');
-    // const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    // if (status !== 'granted') {
-    //   alert('Permissão para acessar a galeria foi negada');
-    //   return;
-    // }
-    // const result = await ImagePicker.launchImageLibraryAsync({
-    //   mediaTypes: ImagePicker.MediaTypeOptions.Images,
-    //   allowsEditing: true,
-    //   quality: 1,
-    // });
-    // if (!result.canceled) {
-    //   setImage(result.assets[0].uri);
-    // }
+    const ImagePicker = await import('expo-image-picker');
+    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (status !== 'granted') {
+      alert('Permissão para acessar a galeria foi negada');
+      return;
+    }
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      quality: 1,
+    });
+    if (!result.canceled) {
+      setImage(result.assets[0].uri);
+    }
   };
 
-  return <></>;
+  return (
+    <>
+      <RN.View style={styles.container}>
+        <RN.Button title="Escolher imagem" onPress={() => pickNative()} />
+        {image && <RN.Image source={{ uri: image }} style={styles.image} />}
+      </RN.View>
+    </>
+  );
 };
 
 const styles = RN.StyleSheet.create({
