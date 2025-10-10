@@ -3928,10 +3928,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.editCondo`],
           value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [`$arg_item`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
