@@ -5647,7 +5647,7 @@ flexDirection: 'row',
  arrFunctions: [async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `mockCondos`, `sc.a1.editChanges.docId`],
+        `mockCondos`, `$var_sc.a1.editChanges.docId`],
             arrPathData: [`sc.a1.editChanges`],
             arrFuncs: [
         async (...args) =>
