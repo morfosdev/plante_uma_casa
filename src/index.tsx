@@ -2401,9 +2401,9 @@ justifyContent: 'center',
 
       `,
 
-      altura: "30px",
+      altura: "24px",
 
-      largura: "30px",
+      largura: "24px",
 
       preenchimento: ['black'],
 
