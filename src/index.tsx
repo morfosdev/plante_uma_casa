@@ -5635,7 +5635,7 @@ async (...args) =>
 
       largura: "24px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -7142,7 +7142,7 @@ async (...args) =>
 
       largura: "24px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
