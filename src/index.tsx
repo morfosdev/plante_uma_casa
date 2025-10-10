@@ -6749,7 +6749,6 @@ width: '100%',
  arrFunctions: [() => [ "all.toggles.sideRight", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -6767,11 +6766,7 @@ width: '100%',
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
  , trigger: 'on listen'
-}})],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -7396,6 +7391,10 @@ async (...args) =>
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
