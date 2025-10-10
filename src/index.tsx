@@ -4083,7 +4083,11 @@ width: '100%',
               }
               ],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.add", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -4732,7 +4736,11 @@ async (...args) =>
               }
               ],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.profile", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
