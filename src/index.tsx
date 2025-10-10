@@ -6238,6 +6238,7 @@ async (...args) =>
 	height: 100,
 	backgroundColor: '#a6a6a6',
 	flexDirection: 'row',
+	justifyContent: 'space-around',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -7765,6 +7766,7 @@ async (...args) =>
 	height: 100,
 	backgroundColor: '#a6a6a6',
 	flexDirection: 'row',
+	justifyContent: 'space-around',
 }`],
 
             functions:[()=>{}],            childrenItems:[
