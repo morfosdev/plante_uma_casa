@@ -2351,6 +2351,7 @@ justifyContent: 'center',
             styles:[`{
 	flexDirection: 'row',
 	alignItems: 'center',
+	width: '107%',
 }`],
 
             functions:[()=>{}],            childrenItems:[
