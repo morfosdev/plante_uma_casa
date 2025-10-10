@@ -5473,11 +5473,11 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a1.editChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a1.editChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
@@ -5508,11 +5508,11 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a1.editChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a1.editChanges.address`],
           value: [`$arg_callback`]
         }})],
 
