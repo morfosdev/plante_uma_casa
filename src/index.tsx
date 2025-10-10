@@ -6427,6 +6427,8 @@ async (...args) =>
 
             styles:[`{
 	flexDirection: 'row',
+	paddingVertical: 20,
+	paddingHorizontal: 40,
 }`],
 
             functions:[()=>{}],            childrenItems:[
