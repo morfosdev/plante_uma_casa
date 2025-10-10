@@ -6388,6 +6388,7 @@ async (...args) =>
             `{
 	fontSize: 15,
 	fontWeight: '700',
+	color: 'white',
 }`
           ],
 
