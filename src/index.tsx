@@ -5639,14 +5639,15 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+            arrPathData: [`sc.a1.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a1.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
@@ -5658,6 +5659,11 @@ flexDirection: 'row',
           keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})],
+        }}), async (...args) =>
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [`mockCondos`],
+            arrPathData: ['noPath'],
+            arrFuncs: [() => {}],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
