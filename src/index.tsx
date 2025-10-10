@@ -5579,14 +5579,9 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	flexDirection: 'row',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -5612,28 +5607,33 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={25}
+    fill="red"
+    viewBox="0 0 24 25"
+    {...props}
+  >
+    <Path
+      stroke="#F5F5F5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="m11.438 19.25-6.75-6.75 6.75-6.75M5.625 12.5h13.688"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4375 19.25L4.6875 12.5L11.4375 5.75M5.625 12.5H19.3125" stroke="#F5F5F5" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
-      altura: "30px",
+      altura: "24px",
 
-      largura: "30px",
+      largura: "24px",
 
       preenchimento: ['black'],
 
@@ -5647,14 +5647,9 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	backgroundColor: 'transparent',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -5724,7 +5719,7 @@ async (...args) =>
           ],
 
           children: [
-            `Adicionar`
+            `Criar`
           ],
 
           args,
@@ -7119,28 +7114,33 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={25}
+    fill="red"
+    viewBox="0 0 24 25"
+    {...props}
+  >
+    <Path
+      stroke="#F5F5F5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="m11.438 19.25-6.75-6.75 6.75-6.75M5.625 12.5h13.688"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4375 19.25L4.6875 12.5L11.4375 5.75M5.625 12.5H19.3125" stroke="#F5F5F5" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
-      altura: "30px",
+      altura: "24px",
 
-      largura: "30px",
+      largura: "24px",
 
       preenchimento: ['black'],
 
