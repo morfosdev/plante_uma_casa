@@ -6238,7 +6238,10 @@ async (...args) =>
 	height: 100,
 	backgroundColor: '#a6a6a6',
 	flexDirection: 'row',
-	justifyContent: 'space-around',
+	justifyContent: 'space-between',
+	alignItems: 'center',
+	paddingHorizontal: 30,
+	paddingVertical: 40,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -6258,8 +6261,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 50,
-	height: 50,
+	width: 32,
 }`],
 
             functions:[async (...args) =>
@@ -6326,7 +6328,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: 30,
+	fontWeight: '700',
+	color: '#FFFFFF',
+}`
           ],
 
           children: [
@@ -6341,7 +6347,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: 15,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}`
           ],
 
           children: [
@@ -7766,7 +7776,10 @@ async (...args) =>
 	height: 100,
 	backgroundColor: '#a6a6a6',
 	flexDirection: 'row',
-	justifyContent: 'space-around',
+	justifyContent: 'space-between',
+	alignItems: 'center',
+	paddingHorizontal: 30,
+	paddingVertical: 40,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -7776,8 +7789,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 50,
-	height: 50,
+	width: 32,
 }`],
 
             functions:[async (...args) =>
