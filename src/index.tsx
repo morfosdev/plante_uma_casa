@@ -6261,7 +6261,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 32,
+	padding: 7,
 }`],
 
             functions:[async (...args) =>
@@ -6329,7 +6329,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 30,
+	fontSize: 26,
 	fontWeight: '700',
 	color: '#FFFFFF',
 }`
@@ -7789,7 +7789,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 32,
+	padding: 7,
 }`],
 
             functions:[async (...args) =>
