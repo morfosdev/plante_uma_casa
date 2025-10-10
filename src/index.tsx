@@ -4972,7 +4972,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `$var_all.authUse.email`
+            `all.authUse.email`
           ],
 
           args,
