@@ -6557,7 +6557,11 @@ backgroundColor: 'transparent',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`
           ],
 
           children: [
@@ -6573,7 +6577,11 @@ backgroundColor: 'transparent',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`
           ],
 
           children: [
