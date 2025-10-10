@@ -6393,7 +6393,7 @@ async (...args) =>
           ],
 
           children: [
-            `Criar`
+            `CRIAR`
           ],
 
           args,
