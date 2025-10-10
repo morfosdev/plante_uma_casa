@@ -5696,9 +5696,15 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 200,
 	height: 30,
-	backgroundColor: 'blue',
+	backgroundColor: 'transparent',
+	paddingHorizontal: 30,
+	paddingVertical: 8,
+	borderWidth: 2,
+	borderRadius: 20,
+	borderColor: 'white',
+	justifyContent: 'center',
+	alignItems: 'center',
 }`],
 
             functions:[async (...args) =>
