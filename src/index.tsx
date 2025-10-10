@@ -4008,7 +4008,7 @@ async (...args) =>
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("a10list");
+          return tools.goTo("a11list");
         }
         ]
  , trigger: 'on press'
@@ -7407,7 +7407,7 @@ async (...args) =>
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"a10list",
+          pathScreen:"a11list",
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
@@ -8839,10 +8839,10 @@ async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`mockCondos`],
+   arrRefStrings: [`partners`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.list`],
+          keyPath: [`sc.a11.list`],
           value: [`$arg_callback`]
         }})],
         }})]
