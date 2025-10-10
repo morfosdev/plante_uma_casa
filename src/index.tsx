@@ -2500,6 +2500,10 @@ justifyContent: 'center',
 	backgroundColor: '#315E2D',
 	alignItems: 'center',
 	justifyContent: 'center',
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
 }`],
 
             functions:[async (...args) =>
