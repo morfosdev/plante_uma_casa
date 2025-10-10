@@ -6385,7 +6385,10 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: 15,
+	fontWeight: '700',
+}`
           ],
 
           children: [
