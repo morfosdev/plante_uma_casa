@@ -6541,15 +6541,14 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-width: '100%',
-justifyContent: 'center',
-alignItems: 'center',
-height: '80px',
-flexDirection: 'row',
-paddingHorizontal: '10px',
-backgroundColor: 'transparent',
-}`],
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
 
             functions:[()=>{}],            childrenItems:[
         
