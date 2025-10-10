@@ -2351,7 +2351,7 @@ justifyContent: 'center',
             styles:[`{
 	flexDirection: 'row',
 	alignItems: 'center',
-	width: '107%',
+	width: '105%',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -2385,7 +2385,7 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-	right: '35px',
+	right: '30px',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -2413,9 +2413,9 @@ justifyContent: 'center',
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
