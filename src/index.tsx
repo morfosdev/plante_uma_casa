@@ -7328,12 +7328,17 @@ flexDirection: 'row',
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+            arrPathData: [`sc.a7.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.editOwner`],
+          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
@@ -7372,16 +7377,16 @@ flexDirection: 'row',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
