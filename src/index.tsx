@@ -7159,11 +7159,11 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a7.iptChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a7.iptChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
@@ -7194,11 +7194,11 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a7.iptChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a7.iptChanges.address`],
           value: [`$arg_callback`]
         }})],
 
@@ -7229,11 +7229,11 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.a7.iptChanges.startDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
+          keyPath: [`sc.a7.iptChanges.startDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -7254,41 +7254,6 @@ flexDirection: 'row',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.a1.iptChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Descrição`
-          ],
-
-          args,
-
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
@@ -7298,11 +7263,11 @@ flexDirection: 'row',
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.description`],
+          path: [`sc.a7.iptChanges.endDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.description`],
+          keyPath: [`sc.a7.iptChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
