@@ -8034,7 +8034,6 @@ backgroundColor: 'transparent',
 }`],
 
             functions:[()=>{}],            childrenItems:[
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -8145,23 +8144,7 @@ backgroundColor: 'transparent',
 
             args,
           }}/>
-        , 
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: '150px',
-	height:'150px',
-	borderRadius: '6px',
-	borderWidth: '1px',
-	borderColor: '#e6e7e8',
-}],
-
-      URIvariablePath:[`https://www.condominioterranovabauru.com.br/cdn/fotos/portaria_terra_nova_bauru.jpg`],
-
-      args,
-    }}/>],
+        ],
 
             args,
           }}/>
