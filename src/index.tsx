@@ -6392,9 +6392,14 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [true]
         }})]
  , trigger: 'on press'
@@ -6897,7 +6902,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Título`
+            `CADASTRO LOTE/PROPRIETÁRIO`
           ],
 
           args,
