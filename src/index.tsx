@@ -3930,7 +3930,7 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [true]
         }})]
  , trigger: 'on press'
