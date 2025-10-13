@@ -6708,7 +6708,7 @@ xmlns="http://www.w3.org/2000/svg"
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -6734,11 +6734,11 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+            arrPathData: [`sc.a12.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a12.iptChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
@@ -6747,7 +6747,7 @@ xmlns="http://www.w3.org/2000/svg"
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
         }})]
@@ -10418,7 +10418,7 @@ xmlns="http://www.w3.org/2000/svg"
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -10444,11 +10444,11 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+            arrPathData: [`sc.a12.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a12.iptChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
@@ -10457,7 +10457,7 @@ xmlns="http://www.w3.org/2000/svg"
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
         }})]
@@ -13953,7 +13953,7 @@ xmlns="http://www.w3.org/2000/svg"
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -13979,11 +13979,11 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+            arrPathData: [`sc.a12.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a12.iptChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
@@ -13992,7 +13992,7 @@ xmlns="http://www.w3.org/2000/svg"
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
         }})]
