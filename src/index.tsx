@@ -7750,7 +7750,7 @@ backgroundColor: 'transparent',
 
             styles:[
         `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, `{
-	zIndex: 1,
+	zIndex: 1000,
 }`],
 
             functions:[async (...args) =>
