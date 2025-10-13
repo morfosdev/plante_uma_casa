@@ -8186,7 +8186,7 @@ backgroundColor: 'transparent',
           ],
 
           children: [
-            `$arg_condo`
+            `$arg_owner`
           ],
 
           args,
@@ -8206,7 +8206,43 @@ backgroundColor: 'transparent',
           ],
 
           children: [
-            `$arg_address`
+            `$arg_email`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`
+          ],
+
+          children: [
+            `$arg_lot`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `$arg_area`
           ],
 
           args,
@@ -11513,7 +11549,7 @@ async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`mockCondos`],
+   arrRefStrings: [`lots`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.list`],
