@@ -6783,7 +6783,7 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a12.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -6792,7 +6792,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -10493,7 +10493,7 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a12.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -10502,7 +10502,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -14028,7 +14028,7 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a12.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -14037,7 +14037,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
