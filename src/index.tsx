@@ -11259,7 +11259,7 @@ async (...args) =>
           ],
 
           children: [
-            "Escreva..."
+            `R$ 2.200.000`
           ],
 
           args,
