@@ -7200,16 +7200,11 @@ xmlns="http://www.w3.org/2000/svg"
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -11364,16 +11359,11 @@ xmlns="http://www.w3.org/2000/svg"
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -15492,16 +15482,11 @@ xmlns="http://www.w3.org/2000/svg"
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -19489,16 +19474,11 @@ xmlns="http://www.w3.org/2000/svg"
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
