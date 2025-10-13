@@ -23469,15 +23469,15 @@ tools.setData({
  {
  
         'all': { 
-'firebaseConfig': {
-  apiKey: "AIzaSyDjAfyEUADq7EaRyFWlGFjP1Eoox9LJHgI",
-  authDomain: "devs-tests-95208.firebaseapp.com",
-  projectId: "devs-tests-95208",
-  storageBucket: "devs-tests-95208.appspot.com",
-  messagingSenderId: "750912250366",
-		appId: "1:750912250366:web:4629eac789a718a74220af"
-
-}, 
+'firebaseConfig': const firebaseConfig = {
+  apiKey: "AIzaSyA_D6qWCRodaRgthOGWyLjsbqloqj-IDpA",
+  authDomain: "projeto-plante-uma-casa.firebaseapp.com",
+  projectId: "projeto-plante-uma-casa",
+  storageBucket: "projeto-plante-uma-casa.firebasestorage.app",
+  messagingSenderId: "1099098264007",
+  appId: "1:1099098264007:web:5c809faec264a9400389e2",
+  measurementId: "G-GZPSPJQ1WL"
+};, 
 'colors': { 
 'primary': '#315E2D', 
 'secondary': "#0064fe", 'smoke': "#ddd" } 
