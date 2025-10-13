@@ -11156,7 +11156,7 @@ async (...args) =>
           ],
 
           children: [
-            `Lista dos proprietários`
+            `Gestão Financeira`
           ],
 
           args,
