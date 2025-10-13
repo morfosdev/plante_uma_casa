@@ -11545,7 +11545,7 @@ async (...args) =>
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a12.add`],
-          value: ['no value']
+          value: [true]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
