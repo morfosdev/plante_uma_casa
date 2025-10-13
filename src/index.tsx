@@ -7196,15 +7196,20 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
+            arrPathData: [`sc.a10.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
-        }}), async (...args) =>
+        }}), 
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})],
         }})]
@@ -11355,15 +11360,20 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
+            arrPathData: [`sc.a10.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
-        }}), async (...args) =>
+        }}), 
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})],
         }})]
@@ -15478,15 +15488,20 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
+            arrPathData: [`sc.a10.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
-        }}), async (...args) =>
+        }}), 
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})],
         }})]
@@ -19470,15 +19485,20 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
+            arrPathData: [`sc.a10.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
-        }}), async (...args) =>
+        }}), 
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})],
         }})]
