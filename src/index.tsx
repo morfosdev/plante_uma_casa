@@ -20130,7 +20130,30 @@ async (...args) =>
             styles:[`{
 	width: '100%',
 	height: 100,
-	backgroundColor: 'red',
+	backgroundColor: '#a6a6a6',
+	flexDirection: 'row',
+	justifyContent: 'space-between',
+	alignItems: 'center',
+	paddingHorizontal: 45,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	backgroundColor: 'transparent',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -20140,24 +20163,61 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: 26,
+	fontWeight: '700',
+	color: '#FFFFFF',
+}`
           ],
 
           children: [
-            `b4list`
+            `Condomínios`
           ],
 
           args,
 
-        }}/>, 
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 15,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}`
+          ],
+
+          children: [
+            `Lista de Condomínios`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 200,
 	height: 30,
-	backgroundColor: 'blue',
+	backgroundColor: 'transparent',
+	paddingHorizontal: 30,
+	paddingVertical: 8,
+	borderWidth: 2,
+	borderRadius: 20,
+	borderColor: 'white',
+	justifyContent: 'center',
+	alignItems: 'center',
 }`],
 
             functions:[async (...args) =>
@@ -20169,7 +20229,7 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [true]
         }})]
  , trigger: 'on press'
@@ -20179,11 +20239,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: 15,
+	fontWeight: '700',
+	color: 'white',
+}`
           ],
 
           children: [
-            `Adicionar`
+            `CRIAR`
           ],
 
           args,
