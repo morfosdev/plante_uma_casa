@@ -7152,7 +7152,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Área de Atuação`
+            `Data`
           ],
 
           args,
@@ -7166,11 +7166,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerActivity`],
+          path: [`sc.a10.iptChanges.installmentDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerActivity`],
+          keyPath: [`sc.a10.iptChanges.installmentDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -11316,7 +11316,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Área de Atuação`
+            `Data`
           ],
 
           args,
@@ -11330,11 +11330,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerActivity`],
+          path: [`sc.a10.iptChanges.installmentDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerActivity`],
+          keyPath: [`sc.a10.iptChanges.installmentDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -15444,7 +15444,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Área de Atuação`
+            `Data`
           ],
 
           args,
@@ -15458,11 +15458,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerActivity`],
+          path: [`sc.a10.iptChanges.installmentDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerActivity`],
+          keyPath: [`sc.a10.iptChanges.installmentDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -19441,7 +19441,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Área de Atuação`
+            `Data`
           ],
 
           args,
@@ -19455,11 +19455,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerActivity`],
+          path: [`sc.a10.iptChanges.installmentDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerActivity`],
+          keyPath: [`sc.a10.iptChanges.installmentDate`],
           value: [`$arg_callback`]
         }})],
 
