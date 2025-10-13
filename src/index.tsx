@@ -7245,7 +7245,7 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -7254,7 +7254,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -11409,7 +11409,7 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -11418,7 +11418,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -15537,7 +15537,7 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -15546,7 +15546,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -19534,7 +19534,7 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -19543,7 +19543,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})]
  , trigger: 'on press'
