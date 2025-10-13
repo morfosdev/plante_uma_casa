@@ -16331,7 +16331,27 @@ backgroundColor: 'transparent',
           ],
 
           children: [
-            `$arg_address`
+            `$arg_email`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`
+          ],
+
+          children: [
+            `$arg_field`
           ],
 
           args,
@@ -19638,7 +19658,7 @@ async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`mockCondos`],
+   arrRefStrings: [`partners`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a11.list`],
