@@ -6620,7 +6620,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Nome`
           ],
 
           args,
@@ -6655,7 +6655,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Endereço`
+            `E-mail`
           ],
 
           args,
@@ -6670,11 +6670,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a12.iptChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a12.iptChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -10400,7 +10400,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Nome`
           ],
 
           args,
@@ -10435,7 +10435,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Endereço`
+            `E-mail`
           ],
 
           args,
@@ -10450,11 +10450,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a12.iptChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a12.iptChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -14005,7 +14005,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Nome`
           ],
 
           args,
@@ -14040,7 +14040,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Endereço`
+            `E-mail`
           ],
 
           args,
@@ -14055,11 +14055,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a12.iptChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a12.iptChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
