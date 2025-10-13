@@ -23469,7 +23469,7 @@ tools.setData({
  {
  
         'all': { 
-'firebaseConfig': const firebaseConfig = {
+'firebaseConfig': {
   apiKey: "AIzaSyA_D6qWCRodaRgthOGWyLjsbqloqj-IDpA",
   authDomain: "projeto-plante-uma-casa.firebaseapp.com",
   projectId: "projeto-plante-uma-casa",
