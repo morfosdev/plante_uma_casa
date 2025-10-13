@@ -11295,7 +11295,7 @@ async (...args) =>
           ],
 
           children: [
-            `Proprietário`
+            `Descrição`
           ],
 
           args,
@@ -11315,7 +11315,7 @@ async (...args) =>
           ],
 
           children: [
-            `E-mail`
+            `Valor Pago`
           ],
 
           args,
@@ -11335,7 +11335,27 @@ async (...args) =>
           ],
 
           children: [
-            `Lote`
+            `Data`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`
+          ],
+
+          children: [
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -11354,7 +11374,7 @@ async (...args) =>
           ],
 
           children: [
-            `Área`
+            `Comprovante`
           ],
 
           args,
