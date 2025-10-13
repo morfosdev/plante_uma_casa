@@ -7748,9 +7748,15 @@ backgroundColor: 'transparent',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`, `{
-	zIndex: 1000,
+            styles:[`{ 
+width: "fit-content", 
+minWidth: 120, 
+height: 30, 
+backgroundColor: "$var_all.colors.primary", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center", 
+zIndex: 1,
 }`],
 
             functions:[async (...args) =>
