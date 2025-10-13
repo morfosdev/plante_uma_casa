@@ -8859,9 +8859,13 @@ async (...args) =>
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`mockCondos`],
+            arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a11.list`],
-          value: [[1, 2, 3]]
+          value: [`$arg_callback`]
+        }})],
         }})]
  , trigger: 'on init'
 }})],
