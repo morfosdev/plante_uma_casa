@@ -7082,7 +7082,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Nome`
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -7097,11 +7097,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.a10.iptChanges.installments`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.a10.iptChanges.installments`],
           value: [`$arg_callback`]
         }})],
 
@@ -7117,7 +7117,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `E-mail`
+            `Valor`
           ],
 
           args,
@@ -7132,11 +7132,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerMail`],
+          path: [`sc.a10.iptChanges.installmentValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerMail`],
+          keyPath: [`sc.a10.iptChanges.installmentValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -11246,7 +11246,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Nome`
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -11261,11 +11261,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.a10.iptChanges.installments`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.a10.iptChanges.installments`],
           value: [`$arg_callback`]
         }})],
 
@@ -11281,7 +11281,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `E-mail`
+            `Valor`
           ],
 
           args,
@@ -11296,11 +11296,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerMail`],
+          path: [`sc.a10.iptChanges.installmentValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerMail`],
+          keyPath: [`sc.a10.iptChanges.installmentValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -15374,7 +15374,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Nome`
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -15389,11 +15389,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.a10.iptChanges.installments`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.a10.iptChanges.installments`],
           value: [`$arg_callback`]
         }})],
 
@@ -15409,7 +15409,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `E-mail`
+            `Valor`
           ],
 
           args,
@@ -15424,11 +15424,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerMail`],
+          path: [`sc.a10.iptChanges.installmentValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerMail`],
+          keyPath: [`sc.a10.iptChanges.installmentValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -19371,7 +19371,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Nome`
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -19386,11 +19386,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.a10.iptChanges.installments`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.a10.iptChanges.installments`],
           value: [`$arg_callback`]
         }})],
 
@@ -19406,7 +19406,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `E-mail`
+            `Valor`
           ],
 
           args,
@@ -19421,11 +19421,11 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.a12.iptChanges.partnerMail`],
+          path: [`sc.a10.iptChanges.installmentValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerMail`],
+          keyPath: [`sc.a10.iptChanges.installmentValue`],
           value: [`$arg_callback`]
         }})],
 
