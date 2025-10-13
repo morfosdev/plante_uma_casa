@@ -23477,7 +23477,7 @@ tools.setData({
   messagingSenderId: "1099098264007",
   appId: "1:1099098264007:web:5c809faec264a9400389e2",
   measurementId: "G-GZPSPJQ1WL"
-};, 
+}, 
 'colors': { 
 'primary': '#315E2D', 
 'secondary': "#0064fe", 'smoke': "#ddd" } 
