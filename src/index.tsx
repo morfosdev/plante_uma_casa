@@ -8065,6 +8065,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -8085,6 +8086,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -8105,6 +8107,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -8125,6 +8128,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -8144,6 +8148,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -8220,6 +8225,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -8240,6 +8246,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -8260,6 +8267,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -8280,6 +8288,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -12308,6 +12317,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -12328,6 +12338,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -12348,6 +12359,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -12368,6 +12380,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -12387,6 +12400,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -12447,6 +12461,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -12466,6 +12481,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -16348,6 +16364,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -16368,6 +16385,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
@@ -16388,6 +16406,7 @@ borderRadius: 12,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	color: '#555555',
 }`
           ],
 
