@@ -209,7 +209,7 @@ const thumb = RN.StyleSheet.create({
   item: {
     position: 'relative',
     width: '45%',
-    aspectRatio: 1.4,
+    aspectRatio: 1.6,
     borderRadius: 6,
     overflow: 'hidden',
   },
