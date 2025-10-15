@@ -1171,7 +1171,7 @@ const path1 = "all.toggles.box1";
  }`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 20,
-	height: 50,
+	height: 70,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -3443,7 +3443,7 @@ justifyContent: 'center',
  }`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 20,
-	height: 50,
+	height: 70,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -7385,7 +7385,7 @@ async (...args) =>
  }`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 20,
-	height: 50,
+	height: 70,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -12000,7 +12000,7 @@ async (...args) =>
  }`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 20,
-	height: 50,
+	height: 70,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -16140,7 +16140,7 @@ async (...args) =>
  }`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 20,
-	height: 50,
+	height: 70,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -20165,7 +20165,7 @@ async (...args) =>
  }`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 20,
-	height: 50,
+	height: 70,
 }`],
 
             functions:[()=>{}],            childrenItems:[
