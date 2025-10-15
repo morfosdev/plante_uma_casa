@@ -8269,7 +8269,20 @@ backgroundColor: 'transparent',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+            styles:[`{ 
+	width: "fit-content", 
+	minWidth: 120, 
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -8286,7 +8299,12 @@ backgroundColor: 'transparent',
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            
+        `{ color: "#FFF" }`, `{
+	color: "#315e2d",
+	fontSize: 12,
+	fontWeight: 'bold', 
+}`
           ],
 
           children: [
