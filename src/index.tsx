@@ -1225,7 +1225,21 @@ const path1 = "all.toggles.box1";
       URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: 10,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -1236,7 +1250,6 @@ const path1 = "all.toggles.box1";
 	fontWeight: "bold",
 	fontSize: 12
 }`, `{ 
-	marginLeft: 5, 
 	color: 'white',
  }`
           ],
@@ -3496,7 +3509,21 @@ justifyContent: 'center',
       URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: 10,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -3507,7 +3534,6 @@ justifyContent: 'center',
 	fontWeight: "bold",
 	fontSize: 12
 }`, `{ 
-	marginLeft: 5, 
 	color: 'white',
  }`
           ],
@@ -4402,6 +4428,23 @@ xmlns="http://www.w3.org/2000/svg"
             functions:[()=>{}],            childrenItems:[
         
 
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: '200px',
+	height:'200px',
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+}],
+
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+
+      args,
+    }}/>, 
+        
+
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
@@ -4421,6 +4464,102 @@ xmlns="http://www.w3.org/2000/svg"
         (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
  }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '200px',
+alignItems: 'center',
+justifyContent: 'center',
+borderRadius: 5,
+borderWidth: 1,
+borderColor: '#e6e7e8',
+padding: 5,
+flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={17}
+    fill="red"
+    viewBox="0 0 18 17"
+    {...props}
+  >
+    <Path
+      stroke="#5C5F6A"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.429}
+      d="M4.808 16.286H2.412a1.198 1.198 0 0 1-1.198-1.198V5.506m0 0h15.572m-15.572 0 2.647-4.193A1.198 1.198 0 0 1 4.868.714h8.264a1.198 1.198 0 0 1 1.007.6l2.647 4.191m0 0v9.583a1.198 1.198 0 0 1-1.198 1.198h-2.396m-7.187-4.193L9 9.1m0 0 2.995 2.994M9 9.1v7.187M9 .714v4.791"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.80769 16.2857H2.41209C2.09441 16.2857 1.78975 16.1595 1.56511 15.9349C1.34048 15.7103 1.21429 15.4056 1.21429 15.0879V5.5055M1.21429 5.5055H16.7857M1.21429 5.5055L3.86143 1.31318C3.96387 1.13559 4.11017 0.987268 4.28634 0.882406C4.46251 0.777545 4.66264 0.719655 4.86758 0.714279H13.1324C13.3374 0.719655 13.5375 0.777545 13.7137 0.882406C13.8898 0.987268 14.0362 1.13559 14.1386 1.31318L16.7857 5.5055M16.7857 5.5055V15.0879C16.7857 15.4056 16.6595 15.7103 16.4349 15.9349C16.2103 16.1595 15.9056 16.2857 15.5879 16.2857H13.1923M6.00545 12.0934L8.99996 9.09889M8.99996 9.09889L11.9945 12.0934M8.99996 9.09889L9.00004 16.2857M9.00004 0.714279V5.50549" stroke="#5C5F6A" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "20px",
+
+      largura: "20px",
+
+      preenchimento: [`#FFF`],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+  fontSize: 14, 
+  fontWeight: "500", 
+  fontFamily: "Inter", 
+  color: "#878A92",
+  paddingVertical: '5',
+}`
+          ],
+
+          children: [
+            `Carregar Imagem`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -7324,7 +7463,21 @@ async (...args) =>
       URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: 10,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -7335,7 +7488,6 @@ async (...args) =>
 	fontWeight: "bold",
 	fontSize: 12
 }`, `{ 
-	marginLeft: 5, 
 	color: 'white',
  }`
           ],
@@ -8903,6 +9055,23 @@ xmlns="http://www.w3.org/2000/svg"
             functions:[()=>{}],            childrenItems:[
         
 
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: '200px',
+	height:'200px',
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+}],
+
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+
+      args,
+    }}/>, 
+        
+
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
@@ -8922,6 +9091,102 @@ xmlns="http://www.w3.org/2000/svg"
         (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
  }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '200px',
+alignItems: 'center',
+justifyContent: 'center',
+borderRadius: 5,
+borderWidth: 1,
+borderColor: '#e6e7e8',
+padding: 5,
+flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={17}
+    fill="red"
+    viewBox="0 0 18 17"
+    {...props}
+  >
+    <Path
+      stroke="#5C5F6A"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.429}
+      d="M4.808 16.286H2.412a1.198 1.198 0 0 1-1.198-1.198V5.506m0 0h15.572m-15.572 0 2.647-4.193A1.198 1.198 0 0 1 4.868.714h8.264a1.198 1.198 0 0 1 1.007.6l2.647 4.191m0 0v9.583a1.198 1.198 0 0 1-1.198 1.198h-2.396m-7.187-4.193L9 9.1m0 0 2.995 2.994M9 9.1v7.187M9 .714v4.791"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.80769 16.2857H2.41209C2.09441 16.2857 1.78975 16.1595 1.56511 15.9349C1.34048 15.7103 1.21429 15.4056 1.21429 15.0879V5.5055M1.21429 5.5055H16.7857M1.21429 5.5055L3.86143 1.31318C3.96387 1.13559 4.11017 0.987268 4.28634 0.882406C4.46251 0.777545 4.66264 0.719655 4.86758 0.714279H13.1324C13.3374 0.719655 13.5375 0.777545 13.7137 0.882406C13.8898 0.987268 14.0362 1.13559 14.1386 1.31318L16.7857 5.5055M16.7857 5.5055V15.0879C16.7857 15.4056 16.6595 15.7103 16.4349 15.9349C16.2103 16.1595 15.9056 16.2857 15.5879 16.2857H13.1923M6.00545 12.0934L8.99996 9.09889M8.99996 9.09889L11.9945 12.0934M8.99996 9.09889L9.00004 16.2857M9.00004 0.714279V5.50549" stroke="#5C5F6A" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "20px",
+
+      largura: "20px",
+
+      preenchimento: [`#FFF`],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+  fontSize: 14, 
+  fontWeight: "500", 
+  fontFamily: "Inter", 
+  color: "#878A92",
+  paddingVertical: '5',
+}`
+          ],
+
+          children: [
+            `Carregar Imagem`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -11825,7 +12090,21 @@ async (...args) =>
       URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: 10,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -11836,7 +12115,6 @@ async (...args) =>
 	fontWeight: "bold",
 	fontSize: 12
 }`, `{ 
-	marginLeft: 5, 
 	color: 'white',
  }`
           ],
@@ -12929,6 +13207,23 @@ xmlns="http://www.w3.org/2000/svg"
             functions:[()=>{}],            childrenItems:[
         
 
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: '200px',
+	height:'200px',
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+}],
+
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+
+      args,
+    }}/>, 
+        
+
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
@@ -12948,6 +13243,102 @@ xmlns="http://www.w3.org/2000/svg"
         (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
  }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '200px',
+alignItems: 'center',
+justifyContent: 'center',
+borderRadius: 5,
+borderWidth: 1,
+borderColor: '#e6e7e8',
+padding: 5,
+flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={17}
+    fill="red"
+    viewBox="0 0 18 17"
+    {...props}
+  >
+    <Path
+      stroke="#5C5F6A"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.429}
+      d="M4.808 16.286H2.412a1.198 1.198 0 0 1-1.198-1.198V5.506m0 0h15.572m-15.572 0 2.647-4.193A1.198 1.198 0 0 1 4.868.714h8.264a1.198 1.198 0 0 1 1.007.6l2.647 4.191m0 0v9.583a1.198 1.198 0 0 1-1.198 1.198h-2.396m-7.187-4.193L9 9.1m0 0 2.995 2.994M9 9.1v7.187M9 .714v4.791"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.80769 16.2857H2.41209C2.09441 16.2857 1.78975 16.1595 1.56511 15.9349C1.34048 15.7103 1.21429 15.4056 1.21429 15.0879V5.5055M1.21429 5.5055H16.7857M1.21429 5.5055L3.86143 1.31318C3.96387 1.13559 4.11017 0.987268 4.28634 0.882406C4.46251 0.777545 4.66264 0.719655 4.86758 0.714279H13.1324C13.3374 0.719655 13.5375 0.777545 13.7137 0.882406C13.8898 0.987268 14.0362 1.13559 14.1386 1.31318L16.7857 5.5055M16.7857 5.5055V15.0879C16.7857 15.4056 16.6595 15.7103 16.4349 15.9349C16.2103 16.1595 15.9056 16.2857 15.5879 16.2857H13.1923M6.00545 12.0934L8.99996 9.09889M8.99996 9.09889L11.9945 12.0934M8.99996 9.09889L9.00004 16.2857M9.00004 0.714279V5.50549" stroke="#5C5F6A" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "20px",
+
+      largura: "20px",
+
+      preenchimento: [`#FFF`],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+  fontSize: 14, 
+  fontWeight: "500", 
+  fontFamily: "Inter", 
+  color: "#878A92",
+  paddingVertical: '5',
+}`
+          ],
+
+          children: [
+            `Carregar Imagem`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -15851,7 +16242,21 @@ async (...args) =>
       URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: 10,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -15862,7 +16267,6 @@ async (...args) =>
 	fontWeight: "bold",
 	fontSize: 12
 }`, `{ 
-	marginLeft: 5, 
 	color: 'white',
  }`
           ],
@@ -16840,6 +17244,23 @@ xmlns="http://www.w3.org/2000/svg"
             functions:[()=>{}],            childrenItems:[
         
 
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: '200px',
+	height:'200px',
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+}],
+
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+
+      args,
+    }}/>, 
+        
+
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
@@ -16859,6 +17280,102 @@ xmlns="http://www.w3.org/2000/svg"
         (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
  }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '200px',
+alignItems: 'center',
+justifyContent: 'center',
+borderRadius: 5,
+borderWidth: 1,
+borderColor: '#e6e7e8',
+padding: 5,
+flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={17}
+    fill="red"
+    viewBox="0 0 18 17"
+    {...props}
+  >
+    <Path
+      stroke="#5C5F6A"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.429}
+      d="M4.808 16.286H2.412a1.198 1.198 0 0 1-1.198-1.198V5.506m0 0h15.572m-15.572 0 2.647-4.193A1.198 1.198 0 0 1 4.868.714h8.264a1.198 1.198 0 0 1 1.007.6l2.647 4.191m0 0v9.583a1.198 1.198 0 0 1-1.198 1.198h-2.396m-7.187-4.193L9 9.1m0 0 2.995 2.994M9 9.1v7.187M9 .714v4.791"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.80769 16.2857H2.41209C2.09441 16.2857 1.78975 16.1595 1.56511 15.9349C1.34048 15.7103 1.21429 15.4056 1.21429 15.0879V5.5055M1.21429 5.5055H16.7857M1.21429 5.5055L3.86143 1.31318C3.96387 1.13559 4.11017 0.987268 4.28634 0.882406C4.46251 0.777545 4.66264 0.719655 4.86758 0.714279H13.1324C13.3374 0.719655 13.5375 0.777545 13.7137 0.882406C13.8898 0.987268 14.0362 1.13559 14.1386 1.31318L16.7857 5.5055M16.7857 5.5055V15.0879C16.7857 15.4056 16.6595 15.7103 16.4349 15.9349C16.2103 16.1595 15.9056 16.2857 15.5879 16.2857H13.1923M6.00545 12.0934L8.99996 9.09889M8.99996 9.09889L11.9945 12.0934M8.99996 9.09889L9.00004 16.2857M9.00004 0.714279V5.50549" stroke="#5C5F6A" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "20px",
+
+      largura: "20px",
+
+      preenchimento: [`#FFF`],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+  fontSize: 14, 
+  fontWeight: "500", 
+  fontFamily: "Inter", 
+  color: "#878A92",
+  paddingVertical: '5',
+}`
+          ],
+
+          children: [
+            `Carregar Imagem`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -19762,7 +20279,21 @@ async (...args) =>
       URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: 10,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -19773,7 +20304,6 @@ async (...args) =>
 	fontWeight: "bold",
 	fontSize: 12
 }`, `{ 
-	marginLeft: 5, 
 	color: 'white',
  }`
           ],
