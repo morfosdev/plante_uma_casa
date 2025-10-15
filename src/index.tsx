@@ -8039,7 +8039,7 @@ async (...args) =>
 
             styles:[`{
 	paddingHorizontal: 60,
-	paddingVertical: 30,
+	paddingVertical: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -8050,6 +8050,8 @@ async (...args) =>
 
             styles:[`{
 	flexDirection: 'row',
+	paddingVertical: 10,
+	paddingHorizontal: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -8175,9 +8177,10 @@ async (...args) =>
 width: '100%',
 justifyContent: 'center',
 alignItems: 'center',
-height: '80px',
 flexDirection: 'row',
 backgroundColor: 'transparent',
+paddingVertical: 10,
+paddingHorizontal: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -12401,9 +12404,10 @@ async (...args) =>
 width: '100%',
 justifyContent: 'center',
 alignItems: 'center',
-height: '80px',
 flexDirection: 'row',
 backgroundColor: 'transparent',
+paddingVertical: 10,
+paddingHorizontal: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -16300,9 +16304,10 @@ async (...args) =>
 width: '100%',
 justifyContent: 'center',
 alignItems: 'center',
-height: '80px',
 flexDirection: 'row',
 backgroundColor: 'transparent',
+paddingVertical: 10,
+paddingHorizontal: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
