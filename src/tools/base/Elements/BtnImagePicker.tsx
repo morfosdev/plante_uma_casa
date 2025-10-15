@@ -66,6 +66,7 @@ const BtnImgPicWeb = (props: any) => {
 
       <input
         ref={inputRef}
+        multiple
         type="file"
         accept="image/*"
         style={{ display: 'none' }}
@@ -117,7 +118,7 @@ const BtnImgPicNat = (props: any) => {
 const styles = RN.StyleSheet.create({
   container: {
     width: '100%',
-    minHeight: 100,
+    minHeight: 120,
     alignItems: 'center',
     justifyContent: 'center',
     borderStyle: 'dashed',
