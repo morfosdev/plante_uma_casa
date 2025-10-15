@@ -16645,7 +16645,10 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "100%", height: "100%" }`],
+            styles:[`{  
+height: "100%",
+flex: 1, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -16661,16 +16664,6 @@ async (...args) =>
 	justifyContent: 'space-between',
 	alignItems: 'center',
 	paddingHorizontal: 45,
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	flexDirection: 'row',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -16732,76 +16725,30 @@ async (...args) =>
             args,
           }}/>
         , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	backgroundColor: 'transparent',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
 
           arrStyles: [
-            `{
-	fontSize: 26,
-	fontWeight: '700',
-	color: '#FFFFFF',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
-            `Lotes - Proprietário`
+            `a11list`
           ],
 
           args,
 
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#FFFFFF',
-}`
-          ],
-
-          children: [
-            `Lista dos proprietários`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
+        }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
             styles:[`{
+	width: 200,
 	height: 30,
-	backgroundColor: 'transparent',
-	paddingHorizontal: 30,
-	paddingVertical: 8,
-	borderWidth: 2,
-	borderRadius: 20,
-	borderColor: 'white',
-	justifyContent: 'center',
-	alignItems: 'center',
+	backgroundColor: 'blue',
 }`],
 
             functions:[async (...args) =>
@@ -16827,7 +16774,7 @@ async (...args) =>
           ],
 
           children: [
-            `Label`
+            `Adicionar`
           ],
 
           args,
