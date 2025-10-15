@@ -56,6 +56,10 @@ const BtnImgPicWeb = (props: any) => {
       <RN.View style={styles.container}>
         <RN.Button title="Escolher imagem" onPress={() => pickWeb()} />
         {image && <RN.Image source={{ uri: image }} style={styles.image} />}
+        <RN.Text style={styles.txt1}>Adicionar Imagens</RN.Text>
+        <RN.Text style={styles.txt1}>
+          Selecione ou tire fotos para mostrar o progresso
+        </RN.Text>
       </RN.View>
 
       <input
@@ -120,8 +124,8 @@ const styles = RN.StyleSheet.create({
     padding: 20,
   },
   image: {
-    width: 300,
-    height: 200,
+    width: '100%',
+    height: 100,
     resizeMode: 'cover',
     borderRadius: 10,
   },
@@ -133,3 +137,4 @@ const styles = RN.StyleSheet.create({
     fontSize: 14,
   },
 });
+
