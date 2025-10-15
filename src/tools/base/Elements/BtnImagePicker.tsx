@@ -132,8 +132,8 @@ const styles = RN.StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
-    height: 22,
-    width: 60,
+    height: 32,
+    width: 100,
   },
   image: {
     width: '100%',
@@ -151,4 +151,3 @@ const styles = RN.StyleSheet.create({
     textAlign: 'center',
   },
 });
-
