@@ -8178,13 +8178,7 @@ height: 15,
             args,
           }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{
-shadowColor: '#000',
-shadowOffset: { width: 0, height: 4 },
-shadowOpacity: 0.1,
-shadowRadius: 20,
-borderRadius: 12,
-}`],
+            styles: [],
             arrProps: [],
             arrItems: [(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
@@ -8209,6 +8203,10 @@ backgroundColor: 'white',
 paddingVertical: 10,
 paddingHorizontal: 20,
 borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 4 },
+shadowOpacity: 0.1,
+shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -8396,6 +8394,10 @@ backgroundColor: 'white',
 paddingVertical: 10,
 paddingHorizontal: 20,
 borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 4 },
+shadowOpacity: 0.1,
+shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -8582,6 +8584,10 @@ backgroundColor: 'white',
 paddingVertical: 10,
 paddingHorizontal: 20,
 borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 4 },
+shadowOpacity: 0.1,
+shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -12820,6 +12826,10 @@ backgroundColor: 'white',
 paddingVertical: 10,
 paddingHorizontal: 20,
 borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 4 },
+shadowOpacity: 0.1,
+shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -16723,6 +16733,10 @@ backgroundColor: 'white',
 paddingVertical: 10,
 paddingHorizontal: 20,
 borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 4 },
+shadowOpacity: 0.1,
+shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
