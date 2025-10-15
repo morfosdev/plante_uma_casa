@@ -1,1 +1,40 @@
-{"isMobile":false,"projectInfo":{"capsInitID":"xxx_dir1","capsProjectID":"ccc_project","groupsControl":{"ggg_1":{"capsGroupName":"Projeto","capsGroupID":"ggg_1","capsGroupPosition":1,"capsGroupChildren":{"ccc_1":{"capsControlID":"ccc_1","gpID":"ggg_1","arrFamily":[{"parentIptID":"","parentID":"","cardID":"xxx_dir1","capsControlID":"ccc_1","gpID":"ggg_1","parentIptIdx":0}],"capsPosition":1,"capsID":"ccc_project"}}}},"repositoryURL":"https://github.com/solrack02/test_flax_v016","repositoryName":"test_flax_v016"},"projectDB":{"prjCreatedAt":{"seconds":1753279231,"nanoseconds":743000000},"projectID":"0LQZX2SVCRy1Rhk4alAj","userID":"yOiD5acPfFPoLZpEbfy5"}}
+{
+  "isMobile": false,
+  "projectInfo": {
+    "capsInitID": "xxx_dir1",
+    "capsProjectID": "ccc_project",
+    "groupsControl": {
+      "ggg_1": {
+        "capsGroupName": "Projeto",
+        "capsGroupID": "ggg_1",
+        "capsGroupPosition": 1,
+        "capsGroupChildren": {
+          "ccc_1": {
+            "capsControlID": "ccc_1",
+            "gpID": "ggg_1",
+            "arrFamily": [
+              {
+                "parentIptID": "",
+                "parentID": "",
+                "cardID": "xxx_dir1",
+                "capsControlID": "ccc_1",
+                "gpID": "ggg_1",
+                "parentIptIdx": 0
+              }
+            ],
+            "capsPosition": 1,
+            "capsID": "ccc_project"
+          }
+        }
+      }
+    },
+    "githubProjectUser": "morfosdev",
+    "repositoryURL": "https://github.com/morfosdev/plante_uma_casa",
+    "repositoryName": "plante_uma_casa"
+  },
+  "projectDB": {
+    "prjCreatedAt": { "seconds": 1753279231, "nanoseconds": 743000000 },
+    "projectID": "0LQZX2SVCRy1Rhk4alAj",
+    "userID": "yOiD5acPfFPoLZpEbfy5"
+  }
+}
