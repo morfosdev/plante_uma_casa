@@ -7833,6 +7833,7 @@ async (...args) =>
             styles:[`{
 	flex: 1,
 	height: "100%",
+	backgroundColor: '#f5f5f5',
 }`],
 
             functions:[()=>{}],            childrenItems:[
