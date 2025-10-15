@@ -8202,6 +8202,10 @@ backgroundColor: 'white',
 paddingVertical: 10,
 paddingHorizontal: 20,
 borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 1 },
+shadowOpacity: 0.08,
+shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -12440,6 +12444,10 @@ backgroundColor: 'white',
 paddingVertical: 10,
 paddingHorizontal: 20,
 borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 1 },
+shadowOpacity: 0.08,
+shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -16343,6 +16351,10 @@ backgroundColor: 'white',
 paddingVertical: 10,
 paddingHorizontal: 20,
 borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 1 },
+shadowOpacity: 0.08,
+shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
