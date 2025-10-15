@@ -6,12 +6,12 @@ import * as ImagePicker from 'expo-image-picker';
 
 type Tprops = {
   pass: {
-    variable?: string[];         // opcional: lista inicial
-    childrenItems?: any[];       // não usado aqui
-    arrFuncs?: any[];            // não usado aqui
-    args?: any;                  // não usado aqui
+    variable?: string[]; // opcional: lista inicial
+    childrenItems?: any[]; // não usado aqui
+    arrFuncs?: any[]; // não usado aqui
+    args?: any; // não usado aqui
     onChange?: (uris: string[]) => void; // callback opcional
-    max?: number;                // limite opcional
+    max?: number; // limite opcional
   };
 };
 
@@ -37,7 +37,9 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     const fl = event.target.files;
     if (!fl) return;
     const selected = Array.from(fl).map(f => URL.createObjectURL(f));
-    const merged = max ? [...images, ...selected].slice(0, max) : [...images, ...selected];
+    const merged = max
+      ? [...images, ...selected].slice(0, max)
+      : [...images, ...selected];
     setImages(merged);
     onChange?.(merged);
     // limpa o input pra permitir re-selecionar os mesmos arquivos
@@ -91,15 +93,17 @@ const BtnImgPicNat = ({ pass }: Tprops) => {
 
     const result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsMultipleSelection: true,         // múltiplas
-      selectionLimit: max ?? 0,              // 0 = sem limite (iOS). Ignorado em algumas versões
+      allowsMultipleSelection: true, // múltiplas
+      selectionLimit: max ?? 0, // 0 = sem limite (iOS). Ignorado em algumas versões
       allowsEditing: false,
       quality: 1,
     });
 
     if (!result.canceled) {
       const picked = result.assets.map(a => a.uri);
-      const merged = max ? [...images, ...picked].slice(0, max) : [...images, ...picked];
+      const merged = max
+        ? [...images, ...picked].slice(0, max)
+        : [...images, ...picked];
       setImages(merged);
       onChange?.(merged);
     }
@@ -127,14 +131,24 @@ const BtnImgPicNat = ({ pass }: Tprops) => {
 };
 
 /* ------- Grade de miniaturas reutilizável ------- */
-const ThumbGrid = ({ images, onRemove }: { images: string[]; onRemove: (idx: number) => void }) => {
+const ThumbGrid = ({
+  images,
+  onRemove,
+}: {
+  images: string[];
+  onRemove: (idx: number) => void;
+}) => {
   if (!images.length) return null;
   return (
     <RN.View style={thumb.grid}>
       {images.map((uri, idx) => (
         <RN.View key={uri + idx} style={thumb.item}>
           <RN.Image source={{ uri }} style={thumb.img} />
-          <RN.Pressable hitSlop={8} style={thumb.x} onPress={() => onRemove(idx)}>
+          <RN.Pressable
+            hitSlop={8}
+            style={thumb.x}
+            onPress={() => onRemove(idx)}
+          >
             <RN.Text style={thumb.xTxt}>×</RN.Text>
           </RN.Pressable>
         </RN.View>
@@ -187,14 +201,16 @@ const thumb = RN.StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 10,
+    gap: 8,
     justifyContent: 'center',
+    columnGap: 10,
+    rowGap: 10,
   },
   item: {
     position: 'relative',
-    width: 120,
-    height: 72,
-    borderRadius: 10,
+    width: '45%',
+    aspectRatio: 1.4,
+    borderRadius: 6,
     overflow: 'hidden',
   },
   img: { width: '100%', height: '100%' },
