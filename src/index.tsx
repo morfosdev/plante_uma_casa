@@ -17004,6 +17004,960 @@ width: '100%',
             args,
           }}/>
         , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flex: 1,
+	height: "100%",
+	backgroundColor: '#f5f5f5',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: '100%',
+	height: 100,
+	backgroundColor: '#a6a6a6',
+	flexDirection: 'row',
+	justifyContent: 'space-between',
+	alignItems: 'center',
+	paddingHorizontal: 45,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	padding: 7,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a1list");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={25}
+    fill="red"
+    viewBox="0 0 24 25"
+    {...props}
+  >
+    <Path
+      stroke="#F5F5F5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="m11.438 19.25-6.75-6.75 6.75-6.75M5.625 12.5h13.688"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4375 19.25L4.6875 12.5L11.4375 5.75M5.625 12.5H19.3125" stroke="#F5F5F5" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "24px",
+
+      largura: "24px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	backgroundColor: 'transparent',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 26,
+	fontWeight: '700',
+	color: '#FFFFFF',
+}`
+          ],
+
+          children: [
+            `Lotes - Proprietário`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 15,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}`
+          ],
+
+          children: [
+            `Lista dos proprietários`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	height: 30,
+	backgroundColor: 'transparent',
+	paddingHorizontal: 30,
+	paddingVertical: 8,
+	borderWidth: 2,
+	borderRadius: 20,
+	borderColor: 'white',
+	justifyContent: 'center',
+	alignItems: 'center',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.editOwner`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 15,
+	fontWeight: '700',
+	color: 'white',
+}`
+          ],
+
+          children: [
+            `CRIAR`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	paddingHorizontal: 60,
+	paddingVertical: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	paddingVertical: 10,
+	paddingHorizontal: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Proprietário`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `E-mail`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Lote`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Área`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            ``
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: 15,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [`{
+borderRadius: 12,
+}`],
+            arrProps: [],
+            arrItems: [(...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `sc.a1.list`,
+
+          itemElements: [
+            
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+justifyContent: 'center',
+alignItems: 'center',
+flexDirection: 'row',
+backgroundColor: 'white',
+paddingVertical: 10,
+paddingHorizontal: 20,
+borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 4 },
+shadowOpacity: 0.1,
+shadowRadius: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flex: 1,
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_owner`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_email`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_lot`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_area`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: "fit-content", 
+	minWidth: 120, 
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a9finManagement");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ color: "#FFF" }`, `{
+	color: "#315e2d",
+	fontSize: 12,
+	fontWeight: 'bold', 
+}`
+          ],
+
+          children: [
+            `Gestão Financeira`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: 25,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+justifyContent: 'center',
+alignItems: 'center',
+flexDirection: 'row',
+backgroundColor: 'white',
+paddingVertical: 10,
+paddingHorizontal: 20,
+borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 4 },
+shadowOpacity: 0.1,
+shadowRadius: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flex: 1,
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_owner`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_email`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_lot`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_area`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: "fit-content", 
+	minWidth: 120, 
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a9finManagement");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ color: "#FFF" }`, `{
+	color: "#315e2d",
+	fontSize: 12,
+	fontWeight: 'bold', 
+}`
+          ],
+
+          children: [
+            `Gestão Financeira`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: 25,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+justifyContent: 'center',
+alignItems: 'center',
+flexDirection: 'row',
+backgroundColor: 'white',
+paddingVertical: 10,
+paddingHorizontal: 20,
+borderRadius: 12,
+shadowColor: '#000',
+shadowOffset: { width: 0, height: 4 },
+shadowOpacity: 0.1,
+shadowRadius: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flex: 1,
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_owner`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_email`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_lot`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `$arg_area`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: "fit-content", 
+	minWidth: 120, 
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a9finManagement");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ color: "#FFF" }`, `{
+	color: "#315e2d",
+	fontSize: 12,
+	fontWeight: 'bold', 
+}`
+          ],
+
+          children: [
+            `Gestão Financeira`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: 25,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        
+          ],
+
+      styles:[`{
+width: '100%',
+}`],    args,
+        }}/>],
+            args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
