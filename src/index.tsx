@@ -8169,6 +8169,7 @@ backgroundColor: 'transparent',
 
             styles:[`{
 	flex: 1,
+	flexDirection: 'row',
 }`],
 
             functions:[()=>{}],            childrenItems:[

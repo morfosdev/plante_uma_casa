@@ -1,1 +1,1 @@
-{"1760387391402":{"actionType":"saveAll","createdAt":"1760387391402","actionID":"1760387391402","userID":"#TEMP","path":"system.capsules.feca64a3-9da1-4274-ae0e-45b0c04a5cf3.capsUseCodeInfo.capsUseInputs.ccc_stringValue-0.capsIptTxtValue","oldValue":"","newValue":"$arg_area"}}
+{"1760528858402":{"actionType":"saveAll","createdAt":"1760528858402","actionID":"1760528858402","userID":"#TEMP","path":"system.capsules.9c41ba2f-40d2-4426-81ec-ac7fa906bcc8.capsUseCodeInfo.capsUseDescription.en","oldValue":"{\n\tflex: 1,\n}","newValue":"{\n\tflex: 1,\n\tflexDirection: 'row',\n}"}}
