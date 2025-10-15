@@ -54,12 +54,14 @@ const BtnImgPicWeb = (props: any) => {
   return (
     <>
       <RN.View style={styles.container}>
-        <RN.Button title="Escolher imagem" onPress={() => pickWeb()} />
         {image && <RN.Image source={{ uri: image }} style={styles.image} />}
         <RN.Text style={styles.txt1}>Adicionar Imagens</RN.Text>
         <RN.Text style={styles.txt2}>
           Selecione ou tire fotos para mostrar o progresso
         </RN.Text>
+        <RN.Pressable style={styles.btn1} onPress={() => pickWeb()}>
+          <RN.Text style={styles.txt1}>Adicionar</RN.Text>
+        </RN.Pressable>
       </RN.View>
 
       <input
@@ -99,14 +101,14 @@ const BtnImgPicNat = (props: any) => {
   return (
     <>
       <RN.View style={styles.container}>
-        <RN.Pressable style={styles.btn1} onPress={() => pickNative()}>
-          <RN.Text style={styles.txt1}>Adicionar</RN.Text>
-        </RN.Pressable>
         {image && <RN.Image source={{ uri: image }} style={styles.image} />}
         <RN.Text style={styles.txt1}>Adicionar Imagens</RN.Text>
         <RN.Text style={styles.txt2}>
           Selecione ou tire fotos para mostrar o progresso
         </RN.Text>
+        <RN.Pressable style={styles.btn1} onPress={() => pickNative()}>
+          <RN.Text style={styles.txt1}>Adicionar</RN.Text>
+        </RN.Pressable>
       </RN.View>
     </>
   );
