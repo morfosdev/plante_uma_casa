@@ -57,7 +57,7 @@ const BtnImgPicWeb = (props: any) => {
         <RN.Button title="Escolher imagem" onPress={() => pickWeb()} />
         {image && <RN.Image source={{ uri: image }} style={styles.image} />}
         <RN.Text style={styles.txt1}>Adicionar Imagens</RN.Text>
-        <RN.Text style={styles.txt1}>
+        <RN.Text style={styles.txt2}>
           Selecione ou tire fotos para mostrar o progresso
         </RN.Text>
       </RN.View>
@@ -99,10 +99,12 @@ const BtnImgPicNat = (props: any) => {
   return (
     <>
       <RN.View style={styles.container}>
-        <RN.Button title="Escolher imagem" onPress={() => pickNative()} />
+        <RN.Pressable style={styles.btn1} onPress={() => pickNative()}>
+          <RN.Text style={styles.txt1}>Adicionar</RN.Text>
+        </RN.Pressable>
         {image && <RN.Image source={{ uri: image }} style={styles.image} />}
         <RN.Text style={styles.txt1}>Adicionar Imagens</RN.Text>
-        <RN.Text style={styles.txt1}>
+        <RN.Text style={styles.txt2}>
           Selecione ou tire fotos para mostrar o progresso
         </RN.Text>
       </RN.View>
@@ -116,12 +118,20 @@ const styles = RN.StyleSheet.create({
     minHeight: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 20,
     borderStyle: 'dashed',
-    borderWidth: 2,
     borderColor: '#DDD',
     borderRadius: 8,
+    borderWidth: 2,
     padding: 20,
+    gap: 20,
+  },
+  btn1: {
+    backgroundColor: '#E8EDF5',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+    height: 22,
+    width: 60,
   },
   image: {
     width: '100%',
@@ -132,9 +142,11 @@ const styles = RN.StyleSheet.create({
   txt1: {
     fontSize: 14,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   txt2: {
     fontSize: 14,
+    textAlign: 'center',
   },
 });
 
