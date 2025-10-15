@@ -8178,7 +8178,9 @@ height: 15,
             args,
           }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [],
+            styles: [`{
+borderRadius: 12,
+}`],
             arrProps: [],
             arrItems: [(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
@@ -8206,7 +8208,7 @@ borderRadius: 12,
 shadowColor: '#000',
 shadowOffset: { width: 0, height: 4 },
 shadowOpacity: 0.1,
-shadowRadius: 20,
+shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -8397,7 +8399,7 @@ borderRadius: 12,
 shadowColor: '#000',
 shadowOffset: { width: 0, height: 4 },
 shadowOpacity: 0.1,
-shadowRadius: 20,
+shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -8587,7 +8589,7 @@ borderRadius: 12,
 shadowColor: '#000',
 shadowOffset: { width: 0, height: 4 },
 shadowOpacity: 0.1,
-shadowRadius: 20,
+shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -12829,7 +12831,7 @@ borderRadius: 12,
 shadowColor: '#000',
 shadowOffset: { width: 0, height: 4 },
 shadowOpacity: 0.1,
-shadowRadius: 20,
+shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -16736,7 +16738,7 @@ borderRadius: 12,
 shadowColor: '#000',
 shadowOffset: { width: 0, height: 4 },
 shadowOpacity: 0.1,
-shadowRadius: 20,
+shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
