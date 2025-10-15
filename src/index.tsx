@@ -3726,44 +3726,23 @@ width: '155px',
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={17}
-    fill="red"
-    viewBox="0 0 16 17"
-    {...props}
-  >
-    <G
-      stroke="#555"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      clipPath="url(#a)"
-    >
-      <Path d="M13.454 7.11c0 4.454-5.727 8.272-5.727 8.272S2 11.564 2 7.11a5.727 5.727 0 0 1 11.454 0Z" />
-      <Path d="M7.727 9.019a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819Z" />
-    </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 .382h16v16H0z" />
-      </ClipPath>
-    </Defs>
-  </Svg>)
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
       },
 
       svgOriginal: `
-        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_94_328)">
-<path d="M13.4545 7.10947C13.4545 11.564 7.72727 15.3822 7.72727 15.3822C7.72727 15.3822 2 11.564 2 7.10947C2 5.59051 2.60341 4.13375 3.67748 3.05968C4.75155 1.98561 6.20831 1.3822 7.72727 1.3822C9.24624 1.3822 10.703 1.98561 11.7771 3.05968C12.8511 4.13375 13.4545 5.59051 13.4545 7.10947Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.72727 9.01857C8.78163 9.01857 9.63636 8.16384 9.63636 7.10948C9.63636 6.05511 8.78163 5.20038 7.72727 5.20038C6.67291 5.20038 5.81818 6.05511 5.81818 7.10948C5.81818 8.16384 6.67291 9.01857 7.72727 9.01857Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_94_328">
-<rect width="16" height="16" fill="white" transform="translate(0 0.382202)"/>
-</clipPath>
-</defs>
-</svg>
-
+        <svg></svg>
       `,
 
       altura: "20px",
@@ -7697,44 +7676,23 @@ width: '155px',
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={17}
-    fill="red"
-    viewBox="0 0 16 17"
-    {...props}
-  >
-    <G
-      stroke="#555"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      clipPath="url(#a)"
-    >
-      <Path d="M13.454 7.11c0 4.454-5.727 8.272-5.727 8.272S2 11.564 2 7.11a5.727 5.727 0 0 1 11.454 0Z" />
-      <Path d="M7.727 9.019a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819Z" />
-    </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 .382h16v16H0z" />
-      </ClipPath>
-    </Defs>
-  </Svg>)
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
       },
 
       svgOriginal: `
-        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_94_328)">
-<path d="M13.4545 7.10947C13.4545 11.564 7.72727 15.3822 7.72727 15.3822C7.72727 15.3822 2 11.564 2 7.10947C2 5.59051 2.60341 4.13375 3.67748 3.05968C4.75155 1.98561 6.20831 1.3822 7.72727 1.3822C9.24624 1.3822 10.703 1.98561 11.7771 3.05968C12.8511 4.13375 13.4545 5.59051 13.4545 7.10947Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.72727 9.01857C8.78163 9.01857 9.63636 8.16384 9.63636 7.10948C9.63636 6.05511 8.78163 5.20038 7.72727 5.20038C6.67291 5.20038 5.81818 6.05511 5.81818 7.10948C5.81818 8.16384 6.67291 9.01857 7.72727 9.01857Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_94_328">
-<rect width="16" height="16" fill="white" transform="translate(0 0.382202)"/>
-</clipPath>
-</defs>
-</svg>
-
+        <svg></svg>
       `,
 
       altura: "20px",
@@ -12341,44 +12299,23 @@ width: '155px',
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={17}
-    fill="red"
-    viewBox="0 0 16 17"
-    {...props}
-  >
-    <G
-      stroke="#555"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      clipPath="url(#a)"
-    >
-      <Path d="M13.454 7.11c0 4.454-5.727 8.272-5.727 8.272S2 11.564 2 7.11a5.727 5.727 0 0 1 11.454 0Z" />
-      <Path d="M7.727 9.019a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819Z" />
-    </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 .382h16v16H0z" />
-      </ClipPath>
-    </Defs>
-  </Svg>)
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
       },
 
       svgOriginal: `
-        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_94_328)">
-<path d="M13.4545 7.10947C13.4545 11.564 7.72727 15.3822 7.72727 15.3822C7.72727 15.3822 2 11.564 2 7.10947C2 5.59051 2.60341 4.13375 3.67748 3.05968C4.75155 1.98561 6.20831 1.3822 7.72727 1.3822C9.24624 1.3822 10.703 1.98561 11.7771 3.05968C12.8511 4.13375 13.4545 5.59051 13.4545 7.10947Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.72727 9.01857C8.78163 9.01857 9.63636 8.16384 9.63636 7.10948C9.63636 6.05511 8.78163 5.20038 7.72727 5.20038C6.67291 5.20038 5.81818 6.05511 5.81818 7.10948C5.81818 8.16384 6.67291 9.01857 7.72727 9.01857Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_94_328">
-<rect width="16" height="16" fill="white" transform="translate(0 0.382202)"/>
-</clipPath>
-</defs>
-</svg>
-
+        <svg></svg>
       `,
 
       altura: "20px",
@@ -16510,44 +16447,23 @@ width: '155px',
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={17}
-    fill="red"
-    viewBox="0 0 16 17"
-    {...props}
-  >
-    <G
-      stroke="#555"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      clipPath="url(#a)"
-    >
-      <Path d="M13.454 7.11c0 4.454-5.727 8.272-5.727 8.272S2 11.564 2 7.11a5.727 5.727 0 0 1 11.454 0Z" />
-      <Path d="M7.727 9.019a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819Z" />
-    </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 .382h16v16H0z" />
-      </ClipPath>
-    </Defs>
-  </Svg>)
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
       },
 
       svgOriginal: `
-        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_94_328)">
-<path d="M13.4545 7.10947C13.4545 11.564 7.72727 15.3822 7.72727 15.3822C7.72727 15.3822 2 11.564 2 7.10947C2 5.59051 2.60341 4.13375 3.67748 3.05968C4.75155 1.98561 6.20831 1.3822 7.72727 1.3822C9.24624 1.3822 10.703 1.98561 11.7771 3.05968C12.8511 4.13375 13.4545 5.59051 13.4545 7.10947Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.72727 9.01857C8.78163 9.01857 9.63636 8.16384 9.63636 7.10948C9.63636 6.05511 8.78163 5.20038 7.72727 5.20038C6.67291 5.20038 5.81818 6.05511 5.81818 7.10948C5.81818 8.16384 6.67291 9.01857 7.72727 9.01857Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_94_328">
-<rect width="16" height="16" fill="white" transform="translate(0 0.382202)"/>
-</clipPath>
-</defs>
-</svg>
-
+        <svg></svg>
       `,
 
       altura: "20px",
