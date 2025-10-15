@@ -3607,7 +3607,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -3683,9 +3682,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -3711,7 +3708,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -3783,9 +3779,7 @@ width: '155px',
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -3810,7 +3804,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -3892,9 +3885,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -7567,7 +7558,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -7643,9 +7633,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -7671,7 +7659,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -7743,9 +7730,7 @@ width: '155px',
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -7770,7 +7755,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -7852,9 +7836,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -12200,7 +12182,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -12276,9 +12257,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -12304,7 +12283,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -12376,9 +12354,7 @@ width: '155px',
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -12403,7 +12379,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -12485,9 +12460,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -16358,7 +16331,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -16434,9 +16406,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -16462,7 +16432,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -16534,9 +16503,7 @@ width: '155px',
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -16561,7 +16528,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -16643,9 +16609,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -20401,7 +20365,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -20477,9 +20440,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -20505,7 +20466,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -20577,9 +20537,7 @@ width: '155px',
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
@@ -20604,7 +20562,6 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
-width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -20686,9 +20643,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '400',
-	color: '#555555',
+	fontSize: '$var_all.texts.sizes.small',
 }`
           ],
 
