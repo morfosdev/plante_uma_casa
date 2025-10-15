@@ -8050,8 +8050,6 @@ async (...args) =>
 
             styles:[`{
 	flexDirection: 'row',
-	paddingVertical: 20,
-	paddingHorizontal: 40,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -8158,7 +8156,7 @@ async (...args) =>
             args,
           }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{ flex:1, width: '100%',}`],
+            styles: [],
             arrProps: [],
             arrItems: [(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
@@ -8179,8 +8177,6 @@ justifyContent: 'center',
 alignItems: 'center',
 height: '80px',
 flexDirection: 'row',
-paddingVertical: 20,
-paddingHorizontal: 40,
 backgroundColor: 'transparent',
 }`],
 
@@ -12407,8 +12403,6 @@ justifyContent: 'center',
 alignItems: 'center',
 height: '80px',
 flexDirection: 'row',
-paddingVertical: 20,
-paddingHorizontal: 40,
 backgroundColor: 'transparent',
 }`],
 
@@ -16308,8 +16302,6 @@ justifyContent: 'center',
 alignItems: 'center',
 height: '80px',
 flexDirection: 'row',
-paddingVertical: 20,
-paddingHorizontal: 40,
 backgroundColor: 'transparent',
 }`],
 
