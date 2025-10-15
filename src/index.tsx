@@ -3607,6 +3607,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -3708,6 +3709,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -3804,6 +3806,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -7558,6 +7561,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -7659,6 +7663,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -7755,6 +7760,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -12182,6 +12188,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -12283,6 +12290,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -12379,6 +12387,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -16331,6 +16340,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -16432,6 +16442,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -16528,6 +16539,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -20365,6 +20377,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -20466,6 +20479,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>
@@ -20562,6 +20576,7 @@ flexDirection: 'row',
 paddingHorizontal: '24',
 paddingVertical: '8',
 borderRadius: '8px',
+width: '155px',
 }`],
 
             functions:[async (...args) =>

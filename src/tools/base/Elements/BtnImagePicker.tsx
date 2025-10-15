@@ -16,8 +16,6 @@ type Tprops = {
 export const BtnImagePicker = (props: Tprops) => {
   const isWeb = RN.Platform.OS === 'web';
 
-  type Trender1 = null | React.JSX.Element;
-
   // ---------- set Props
   const { arrFuncs, args } = props.pass;
   console.log({ isWeb });
@@ -99,6 +97,10 @@ const BtnImgPicNat = (props: any) => {
       <RN.View style={styles.container}>
         <RN.Button title="Escolher imagem" onPress={() => pickNative()} />
         {image && <RN.Image source={{ uri: image }} style={styles.image} />}
+        <RN.Text style={styles.txt1}>Adicionar Imagens</RN.Text>
+        <RN.Text style={styles.txt1}>
+          Selecione ou tire fotos para mostrar o progresso
+        </RN.Text>
       </RN.View>
     </>
   );
@@ -106,15 +108,28 @@ const BtnImgPicNat = (props: any) => {
 
 const styles = RN.StyleSheet.create({
   container: {
-    flex: 1,
+    width: '100%',
+    minHeight: 100,
     alignItems: 'center',
     justifyContent: 'center',
     gap: 20,
+    borderStyle: 'dashed',
+    borderWidth: 2,
+    borderColor: '#DDD',
+    borderRadius: 8,
+    padding: 20,
   },
   image: {
     width: 300,
     height: 200,
     resizeMode: 'cover',
     borderRadius: 10,
+  },
+  txt1: {
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  txt2: {
+    fontSize: 14,
   },
 });
