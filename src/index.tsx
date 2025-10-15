@@ -8374,7 +8374,7 @@ shadowRadius: 4,
             elementsProperties:['{}'],
 
             styles:[`{
-height: 15,
+height: 25,
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -8565,7 +8565,7 @@ shadowRadius: 4,
             elementsProperties:['{}'],
 
             styles:[`{
-height: 15,
+height: 25,
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -8573,6 +8573,7 @@ height: 15,
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -8745,6 +8746,19 @@ shadowRadius: 4,
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: 25,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
