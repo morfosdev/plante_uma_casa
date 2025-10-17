@@ -4725,8 +4725,7 @@ width: '100%',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{
+            styles:[`{
 	width: 300,
 	height: "100%",
 	position: 'absolute',
@@ -4734,7 +4733,12 @@ width: '100%',
 	top: -50,
 	zIndex: 1,
 	alignItems: 'center',
-}`, `{ backgroundColor: "$var_all.colors.smoke" }`],
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -4961,14 +4965,11 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -8908,8 +8909,7 @@ width: '100%',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{
+            styles:[`{
 	width: 300,
 	height: "100%",
 	position: 'absolute',
@@ -8917,7 +8917,12 @@ width: '100%',
 	top: -50,
 	zIndex: 1,
 	alignItems: 'center',
-}`, `{ backgroundColor: "$var_all.colors.smoke" }`],
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -9144,14 +9149,11 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -12998,8 +13000,7 @@ width: '100%',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{
+            styles:[`{
 	width: 300,
 	height: "100%",
 	position: 'absolute',
@@ -13007,7 +13008,12 @@ width: '100%',
 	top: -50,
 	zIndex: 1,
 	alignItems: 'center',
-}`, `{ backgroundColor: "$var_all.colors.smoke" }`],
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -13234,14 +13240,11 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -17106,8 +17109,7 @@ width: '100%',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{
+            styles:[`{
 	width: 300,
 	height: "100%",
 	position: 'absolute',
@@ -17115,7 +17117,12 @@ width: '100%',
 	top: -50,
 	zIndex: 1,
 	alignItems: 'center',
-}`, `{ backgroundColor: "$var_all.colors.smoke" }`],
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -17342,14 +17349,11 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
