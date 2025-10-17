@@ -3923,20 +3923,19 @@ async (...args) =>
             styles:[`{
 	width: '100%',
 	height: 100,
-	backgroundColor: 'red',
+	backgroundColor: '#a6a6a6',
+	flexDirection: 'row',
+	justifyContent: 'space-between',
+	alignItems: 'center',
+	paddingHorizontal: 45,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
         
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	flexDirection: 'row',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -3988,19 +3987,21 @@ async (...args) =>
 
             args,
           }}/>
-        ],
-
-            args,
-          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 200,
 	height: 30,
-	backgroundColor: 'blue',
+	backgroundColor: 'transparent',
+	paddingHorizontal: 30,
+	paddingVertical: 8,
+	borderWidth: 2,
+	borderRadius: 20,
+	borderColor: 'white',
+	justifyContent: 'center',
+	alignItems: 'center',
 }`],
 
             functions:[async (...args) =>
@@ -4022,11 +4023,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: 15,
+	fontWeight: '700',
+	color: 'white',
+}`
           ],
 
           children: [
-            `Adicionar`
+            `CRIAR NOVO`
           ],
 
           args,
