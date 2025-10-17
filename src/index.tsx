@@ -27689,6 +27689,19 @@ borderRadius: 12,
             elementsProperties:['{}'],
 
             styles:[`{
+			width: "100%",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.Acordeao_Planejamento_e_Projeto1", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 			backgroundColor: '#ccc',
 			width: "100%",
 			borderRadius: 10,
@@ -27697,12 +27710,7 @@ borderRadius: 12,
 			flexDirection: 'row',
 }`],
 
-            functions:[
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.Acordeao_Planejamento_e_Projeto1", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.setVar({ args, pass:{
@@ -27788,6 +27796,10 @@ borderRadius: 12,
 
       args,
     }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
