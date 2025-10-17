@@ -5128,7 +5128,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'DD/MM/AAAA',
+placeholder: 'Rua das Flores, 123',
 }`],
 
           stylesArray: [`{
@@ -9444,7 +9444,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'DD/MM/AAAA',
+placeholder: 'Rua das Flores, 123',
 }`],
 
           stylesArray: [`{
@@ -13667,7 +13667,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'DD/MM/AAAA',
+placeholder: 'Rua das Flores, 123',
 }`],
 
           stylesArray: [`{
@@ -17908,7 +17908,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'DD/MM/AAAA',
+placeholder: 'Rua das Flores, 123',
 }`],
 
           stylesArray: [`{
