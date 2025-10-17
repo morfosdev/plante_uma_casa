@@ -5108,16 +5108,13 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
-fontSize: 12,
 }`],
 
           path: [`sc.a1.iptChanges.condo`],
@@ -9346,16 +9343,13 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
-fontSize: 12,
 }`],
 
           path: [`sc.a1.iptChanges.condo`],
@@ -13491,16 +13485,13 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
-fontSize: 12,
 }`],
 
           path: [`sc.a1.iptChanges.condo`],
@@ -17654,16 +17645,13 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
-fontSize: 12,
 }`],
 
           path: [`sc.a1.iptChanges.condo`],
