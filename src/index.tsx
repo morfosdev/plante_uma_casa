@@ -28229,7 +28229,7 @@ borderRadius: 12,
           ],
 
           children: [
-            `Opção X`
+            `Titulo 2`
           ],
 
           args,
