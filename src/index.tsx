@@ -26952,13 +26952,9 @@ async (...args) =>
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`lots`],
-            arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b6.list`],
-          value: [`$arg_callback`]
-        }})],
+          keyPath: [`all.toggles.Acordeao_Planejamento_e_Projeto1`],
+          value: [true]
         }})]
  , trigger: 'on init'
 }})],
@@ -27697,7 +27693,20 @@ borderRadius: 12,
 			flexDirection: 'row',
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.Acordeao_Planejamento_e_Projeto1", "==", true ]]
+ , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.Acordeao_Planejamento_e_Projeto1`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
