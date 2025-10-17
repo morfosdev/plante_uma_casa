@@ -26951,10 +26951,19 @@ async (...args) =>
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.Acordeao_Planejamento_e_Projeto1`],
           value: [true]
+        }}), async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`condos`],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.b6.list`],
+          value: [`$arg_callback`]
+        }})],
         }})]
  , trigger: 'on init'
 }})],
