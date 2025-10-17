@@ -4456,7 +4456,11 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -4472,12 +4476,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
           children: [
-            `Título`
+            `Condomínio`
           ],
 
           args,
@@ -8607,7 +8613,11 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -8623,12 +8633,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
           children: [
-            `Título`
+            `Condomínio`
           ],
 
           args,
@@ -12665,7 +12677,11 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -12681,12 +12697,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
           children: [
-            `Título`
+            `Condomínio`
           ],
 
           args,
@@ -16741,7 +16759,11 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -16757,12 +16779,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
           children: [
-            `Título`
+            `Condomínio`
           ],
 
           args,
