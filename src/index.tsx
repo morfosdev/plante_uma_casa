@@ -5008,14 +5008,12 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+padding: 18,
+borderWidth: 1,
+borderColor: '#f5f5f5',
+borderRadius: 20,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
@@ -9207,14 +9205,12 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+padding: 18,
+borderWidth: 1,
+borderColor: '#f5f5f5',
+borderRadius: 20,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
@@ -13313,14 +13309,12 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+padding: 18,
+borderWidth: 1,
+borderColor: '#f5f5f5',
+borderRadius: 20,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
@@ -17437,14 +17431,12 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+padding: 18,
+borderWidth: 1,
+borderColor: '#f5f5f5',
+borderRadius: 20,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
