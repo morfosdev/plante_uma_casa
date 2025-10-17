@@ -16164,7 +16164,7 @@ async (...args) =>
           ],
 
           children: [
-            `Proprietário`
+            `Nome`
           ],
 
           args,
@@ -16206,28 +16206,7 @@ async (...args) =>
           ],
 
           children: [
-            `Lote`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-  flexGrow: 1,
-  flexShrink: 1,
-  flexBasis: 80,
-	color: '#555555',
-}`
-          ],
-
-          children: [
-            `Área`
+            `Área de Atuação`
           ],
 
           args,
