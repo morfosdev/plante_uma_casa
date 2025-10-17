@@ -4426,9 +4426,9 @@ width: '100%',
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -8600,9 +8600,9 @@ width: '100%',
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -12681,9 +12681,9 @@ width: '100%',
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -16780,9 +16780,9 @@ width: '100%',
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
