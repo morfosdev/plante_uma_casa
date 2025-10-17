@@ -2647,7 +2647,7 @@ justifyContent: 'center',
 
     // Roteamento por tipo de conta
     const typeAccount = data?.typeAccount; // "adm" | "app" | "partner"
-    if (typeAccount === 'adm') tools.goTo('a1list');
+    if (typeAccount === 'adm') tools.goTo('a4list');
     else if (typeAccount === 'app') tools.goTo('b1list');
     else if (typeAccount === 'partner') tools.goTo('a2list');
     else {
