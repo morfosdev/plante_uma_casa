@@ -5394,11 +5394,7 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{
-color: '#FFFFFF',
-fontSize: 15,
-fontWeight: '700',
-}`
+            `{ color: "#FFF" }`
           ],
 
           children: [
@@ -9731,11 +9727,7 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{
-color: '#FFFFFF',
-fontSize: 15,
-fontWeight: '700',
-}`
+            `{ color: "#FFF" }`
           ],
 
           children: [
@@ -13975,11 +13967,7 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{
-color: '#FFFFFF',
-fontSize: 15,
-fontWeight: '700',
-}`
+            `{ color: "#FFF" }`
           ],
 
           children: [
@@ -18237,11 +18225,7 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{
-color: '#FFFFFF',
-fontSize: 15,
-fontWeight: '700',
-}`
+            `{ color: "#FFF" }`
           ],
 
           children: [
@@ -22818,7 +22802,7 @@ xmlns="http://www.w3.org/2000/svg"
 	borderColor: '#e6e7e8',
 }],
 
-      URIvariablePath:[`$var_sc.b5.editChanges.image`],
+      URIvariablePath:[`sc.b5.editChanges.image`],
 
       args,
     }}/>, 
