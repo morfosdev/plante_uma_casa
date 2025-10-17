@@ -5023,47 +5023,9 @@ alignItems: 'center',
 	shadowRadius: 4,
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.BtnImagePicker pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Temp Button Upload`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
+ }}/>],
 
             args,
           }}/>
@@ -9375,47 +9337,9 @@ alignItems: 'center',
 	shadowRadius: 4,
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.BtnImagePicker pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Temp Button Upload`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
+ }}/>],
 
             args,
           }}/>
@@ -13634,47 +13558,9 @@ alignItems: 'center',
 	shadowRadius: 4,
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.BtnImagePicker pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Temp Button Upload`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
+ }}/>],
 
             args,
           }}/>
@@ -17911,47 +17797,9 @@ alignItems: 'center',
 	shadowRadius: 4,
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.BtnImagePicker pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Temp Button Upload`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
+ }}/>],
 
             args,
           }}/>
