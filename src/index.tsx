@@ -26951,12 +26951,7 @@ async (...args) =>
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.Acordeao_Planejamento_e_Projeto1`],
-          value: [true]
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [`lots`],
             arrFuncs: [async (...args) =>
@@ -30186,13 +30181,9 @@ async (...args) =>
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`lots`],
-            arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b6.list`],
-          value: [`$arg_callback`]
-        }})],
+          keyPath: [`all.toggles.Acordeao_Planejamento_e_Projeto1`],
+          value: [true]
         }})]
  , trigger: 'on init'
 }})],
