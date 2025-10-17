@@ -5217,7 +5217,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -5269,7 +5271,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -9565,7 +9569,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -9617,7 +9623,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -13820,7 +13828,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -13872,7 +13882,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -18093,7 +18105,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -18145,7 +18159,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
