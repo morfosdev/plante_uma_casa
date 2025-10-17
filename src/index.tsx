@@ -27817,7 +27817,6 @@ borderRadius: 12,
 
             styles:[`{
 	flexDirection: "row",
-	justifyContent: "space-between"
 }`],
 
             functions:[()=>{}],            childrenItems:[
