@@ -4424,7 +4424,7 @@ width: '100%',
 
       largura: "24px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -8592,7 +8592,7 @@ width: '100%',
 
       largura: "24px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -12667,7 +12667,7 @@ width: '100%',
 
       largura: "24px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -16760,7 +16760,7 @@ width: '100%',
 
       largura: "24px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
