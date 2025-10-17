@@ -5070,7 +5070,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: "teste...",
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -9267,7 +9269,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: "teste...",
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -13371,7 +13375,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: "teste...",
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -17493,7 +17499,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: "teste...",
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
