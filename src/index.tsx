@@ -4067,10 +4067,9 @@ async (...args) =>
             styles:[`{
 width: '100%',
 justifyContent: 'center',
-alignItems: 'center',
-height: '80px',
 flexDirection: 'row',
-paddingHorizontal: '10px',
+paddingHorizontal: '60px',
+paddingVertical: '30px',
 backgroundColor: 'transparent',
 }`],
 
