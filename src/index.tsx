@@ -27874,7 +27874,8 @@ borderRadius: 12,
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 14,
+	width: 16,
+	zIndex: 1000,
 }`],
 
             functions:[async (...args) =>
