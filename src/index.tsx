@@ -5320,7 +5320,9 @@ fontWeight: '700',
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+multiline: 'true',
+}`],
 
           stylesArray: [`{
 borderWidth: 1,
@@ -9666,7 +9668,9 @@ fontWeight: '700',
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+multiline: 'true',
+}`],
 
           stylesArray: [`{
 borderWidth: 1,
@@ -13919,7 +13923,9 @@ fontWeight: '700',
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+multiline: 'true',
+}`],
 
           stylesArray: [`{
 borderWidth: 1,
@@ -18190,7 +18196,9 @@ fontWeight: '700',
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+multiline: 'true',
+}`],
 
           stylesArray: [`{
 borderWidth: 1,
