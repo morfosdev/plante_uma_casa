@@ -4979,9 +4979,6 @@ alignItems: 'center',
 
             styles:[
         `{ 
-	width: "90%",
-	maxWidth: 280,
-	minHeight: 150,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	padding: 10
@@ -9163,9 +9160,6 @@ alignItems: 'center',
 
             styles:[
         `{ 
-	width: "90%",
-	maxWidth: 280,
-	minHeight: 150,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	padding: 10
@@ -13254,9 +13248,6 @@ alignItems: 'center',
 
             styles:[
         `{ 
-	width: "90%",
-	maxWidth: 280,
-	minHeight: 150,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	padding: 10
@@ -17363,9 +17354,6 @@ alignItems: 'center',
 
             styles:[
         `{ 
-	width: "90%",
-	maxWidth: 280,
-	minHeight: 150,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	padding: 10
