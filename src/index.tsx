@@ -27682,7 +27682,40 @@ height: 15,
 borderRadius: 12,
 }`],
             arrProps: [],
-            arrItems: [(...args:any) => <Elements.Accordion pass={{
+            arrItems: [
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+			backgroundColor: '#ccc',
+			width: "100%",
+			borderRadius: 10,
+			marginBottom: 14,
+			flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Planejamento e Projeto`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	defaultOpenIdx: 0,
 	styles: {
