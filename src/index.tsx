@@ -22823,24 +22823,21 @@ xmlns="http://www.w3.org/2000/svg"
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
 
-          path: [`sc.a1.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.b5.editChanges.startDate`
+          ],
 
           args,
+
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -22858,24 +22855,21 @@ xmlns="http://www.w3.org/2000/svg"
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
 
-          path: [`sc.a1.editChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.endDate`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.b5.editChanges.endDate`
+          ],
 
           args,
+
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -22892,24 +22886,21 @@ xmlns="http://www.w3.org/2000/svg"
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
 
-          path: [`sc.a1.iptChanges.description`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.description`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.b5.editChanges.description`
+          ],
 
           args,
+
         }}/>],
 
             args,
