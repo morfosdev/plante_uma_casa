@@ -4960,7 +4960,10 @@ color: '#555555',
 
             args,
           }}/>
-        , 
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -5441,6 +5444,8 @@ async (...args) =>
             args,
           }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
@@ -9264,7 +9269,10 @@ color: '#555555',
 
             args,
           }}/>
-        , 
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -9745,6 +9753,8 @@ async (...args) =>
             args,
           }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
@@ -13475,7 +13485,10 @@ color: '#555555',
 
             args,
           }}/>
-        , 
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -13956,6 +13969,8 @@ async (...args) =>
             args,
           }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
@@ -17704,7 +17719,10 @@ color: '#555555',
 
             args,
           }}/>
-        , 
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -18185,6 +18203,8 @@ async (...args) =>
             args,
           }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
