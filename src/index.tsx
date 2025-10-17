@@ -5020,9 +5020,52 @@ alignItems: 'center',
 	shadowRadius: 4,
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>],
+ }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.uploadFileTool({ args, pass:{
+            fbInit: [''],
+            arrFiles: [() => {}],
+            arrFuncs: [!#!functions return!#!],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Temp Button Upload`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -5109,17 +5152,13 @@ fontSize: 12,
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Rua das Flores, 123",
-}`],
+          propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -9224,9 +9263,52 @@ alignItems: 'center',
 	shadowRadius: 4,
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>],
+ }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.uploadFileTool({ args, pass:{
+            fbInit: [''],
+            arrFiles: [() => {}],
+            arrFuncs: [!#!functions return!#!],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Temp Button Upload`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -9313,17 +9395,13 @@ fontSize: 12,
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Rua das Flores, 123",
-}`],
+          propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -13335,9 +13413,52 @@ alignItems: 'center',
 	shadowRadius: 4,
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>],
+ }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.uploadFileTool({ args, pass:{
+            fbInit: [''],
+            arrFiles: [() => {}],
+            arrFuncs: [!#!functions return!#!],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Temp Button Upload`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -13424,17 +13545,13 @@ fontSize: 12,
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Rua das Flores, 123",
-}`],
+          propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -17464,9 +17581,52 @@ alignItems: 'center',
 	shadowRadius: 4,
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>],
+ }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.uploadFileTool({ args, pass:{
+            fbInit: [''],
+            arrFiles: [() => {}],
+            arrFuncs: [!#!functions return!#!],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Temp Button Upload`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -17553,17 +17713,13 @@ fontSize: 12,
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Rua das Flores, 123",
-}`],
+          propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.address`],
 
