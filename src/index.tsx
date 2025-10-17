@@ -16126,6 +16126,150 @@ async (...args) =>
 
             args,
           }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	paddingHorizontal: 60,
+	paddingVertical: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	paddingVertical: 10,
+	paddingHorizontal: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Proprietário`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `E-mail`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Lote`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Área`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            ``
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: 15,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{ flex:1, width: '100%',}`],
             arrProps: [],
@@ -16342,6 +16486,10 @@ width: '100%',
         }}/>],
             args,
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
