@@ -5071,7 +5071,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "teste...",
+placeholder: "Ex: Residência dos Silvas",
 }`],
 
           stylesArray: [`{
@@ -9271,7 +9271,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "teste...",
+placeholder: "Ex: Residência dos Silvas",
 }`],
 
           stylesArray: [`{
@@ -13378,7 +13378,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "teste...",
+placeholder: "Ex: Residência dos Silvas",
 }`],
 
           stylesArray: [`{
@@ -17503,7 +17503,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "teste...",
+placeholder: "Ex: Residência dos Silvas",
 }`],
 
           stylesArray: [`{
