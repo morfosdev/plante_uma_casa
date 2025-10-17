@@ -5003,9 +5003,27 @@ alignItems: 'center',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>, 
+ }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -9184,9 +9202,27 @@ alignItems: 'center',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>, 
+ }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -13272,9 +13308,27 @@ alignItems: 'center',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>, 
+ }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -17378,9 +17432,27 @@ alignItems: 'center',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>, 
+ }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
