@@ -4356,6 +4356,8 @@ width: '100%',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -8524,6 +8526,8 @@ width: '100%',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -12599,6 +12603,8 @@ width: '100%',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -16692,6 +16698,8 @@ width: '100%',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
