@@ -22329,7 +22329,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Condomínio B5`
+            `Condomínio`
           ],
 
           args,
@@ -22463,24 +22463,21 @@ xmlns="http://www.w3.org/2000/svg"
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
 
-          path: [`sc.a1.editChanges.condo`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.condo`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `sc.b5.editChanges.condo`
+          ],
 
           args,
+
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -22602,8 +22599,7 @@ xmlns="http://www.w3.org/2000/svg"
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [{
@@ -22621,37 +22617,6 @@ xmlns="http://www.w3.org/2000/svg"
         }})],
 
           args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
         }}/>],
 
             args,

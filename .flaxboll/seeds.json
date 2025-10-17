@@ -1638,8 +1638,8 @@
         "capsDescription": {
           "pt-br": ""
         },
-        "capsCodeTypes": ["function", "firestore", "upload", "customs"],
-        "capsCodeText": "async (...args) =>\n functions.firebase.uploadFileTool({ args, pass:{\n arrFiles: [!#!array files!#!],\n arrFuncs: [!#!functions return!#!],\n}})",
+        "capsCodeTypes": ["function", "firestore", "upload"],
+        "capsCodeText": "async (...args) =>\n        functions.firebase.uploadFileTool({ args, pass:{\n            fbInit: [!#!firestore init obj!#!],\n            arrFiles: [!#!array files!#!],\n            arrFuncs: [!#!functions return!#!],\n        }})",
         "capsCodeInputs": {
           "ccc_fireUpload-0": {
             "capsIptCodeID": "ccc_fireUpload-0",
