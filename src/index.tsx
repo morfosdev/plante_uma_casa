@@ -20947,7 +20947,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.b5.viewCondo`],
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
