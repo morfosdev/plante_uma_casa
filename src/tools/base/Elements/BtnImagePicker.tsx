@@ -84,8 +84,15 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
 
 /* --------------- NATIVO --------------- */
 const BtnImgPicNat = ({ pass }: Tprops) => {
-  const { variable = [], onChange, max } = pass || {};
+  const { variable = [], onChange, max, arrFuncs, args } = pass || {};
   const [images, setImages] = React.useState<string[]>(variable);
+
+  React.useEffect(() => {
+    if (arrFuncs) {
+      for (const currFunc of arrFuncs) currFunc(images, args);
+    }
+    return () => setImages([]); // limpa ao desmontar
+  }, [images]);
 
   const pickNative = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
