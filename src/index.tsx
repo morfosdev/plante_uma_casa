@@ -4173,9 +4173,9 @@ height: 15,
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 200,
 	backgroundColor: '#E8EDF5',
-	padding: 16,
+	paddingHorizontal: 16,
+	paddingVertical: 8,
 	borderRadius: 8,
 }`],
 
@@ -4213,8 +4213,10 @@ height: 15,
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 200,
-	backgroundColor: 'white',
+	backgroundColor: '#E8EDF5',
+	paddingHorizontal: 16,
+	paddingVertical: 8,
+	borderRadius: 8,
 }`],
 
             functions:[async (...args) =>
