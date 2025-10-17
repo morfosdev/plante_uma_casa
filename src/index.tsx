@@ -4108,7 +4108,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 16,
+fontWeight: '700',
+color: '#0D141C',
+}`
           ],
 
           children: [
@@ -4124,7 +4128,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 14,
+fontWeight: '400',
+color: '#4A739C',
+}`
           ],
 
           children: [
