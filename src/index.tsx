@@ -5165,9 +5165,7 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'Rua das Flores, 123',
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -9515,9 +9513,7 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'Rua das Flores, 123',
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -13772,9 +13768,7 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'Rua das Flores, 123',
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -18047,9 +18041,7 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'Rua das Flores, 123',
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -24608,7 +24600,7 @@ borderRadius: 12,
             {}
           ],
 
-          pData: `sc.a1.list`,
+          pData: `sc.b6.list`,
 
           itemElements: [
             
@@ -26904,7 +26896,7 @@ async (...args) =>
    arrRefStrings: [`lots`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.list`],
+          keyPath: [`sc.b6.list`],
           value: [`$arg_callback`]
         }})],
         }})]
