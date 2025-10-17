@@ -5021,7 +5021,9 @@ alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>],
 
             args,
@@ -5888,7 +5890,9 @@ xmlns="http://www.w3.org/2000/svg"
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>, 
         
 
@@ -9223,7 +9227,9 @@ alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>],
 
             args,
@@ -10090,7 +10096,9 @@ xmlns="http://www.w3.org/2000/svg"
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>, 
         
 
@@ -13332,7 +13340,9 @@ alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>],
 
             args,
@@ -14199,7 +14209,9 @@ xmlns="http://www.w3.org/2000/svg"
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>, 
         
 
@@ -17459,7 +17471,9 @@ alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>],
 
             args,
@@ -18326,7 +18340,9 @@ xmlns="http://www.w3.org/2000/svg"
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>, 
         
 
@@ -21638,7 +21654,9 @@ xmlns="http://www.w3.org/2000/svg"
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>, 
         
 
@@ -22301,7 +22319,9 @@ xmlns="http://www.w3.org/2000/svg"
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>, 
         
 
@@ -22816,7 +22836,9 @@ async (...args) =>
             args,
           }}/>
         , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(images) => {
+	console.log({images});
+}], args,
  }}/>],
 
             args,

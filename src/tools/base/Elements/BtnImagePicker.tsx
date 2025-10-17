@@ -22,7 +22,7 @@ export const BtnImagePicker = (props: Tprops) => {
 
 /* ---------------- WEB ---------------- */
 const BtnImgPicWeb = ({ pass }: Tprops) => {
-  const { variable = [], onChange, max } = pass || {};
+  const { variable = [], onChange, max, arrFuncs, args } = pass || {};
   const inputRef = React.useRef<HTMLInputElement | null>(null);
   const [images, setImages] = React.useState<string[]>(variable);
 
@@ -41,6 +41,9 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
       ? [...images, ...selected].slice(0, max)
       : [...images, ...selected];
     setImages(merged);
+    if (arrFuncs) {
+      for (const currFunc of arrFuncs) currFunc(images, args);
+    }
     onChange?.(merged);
     // limpa o input pra permitir re-selecionar os mesmos arquivos
     event.target.value = '';
@@ -52,6 +55,10 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     if (rm?.startsWith('blob:')) URL.revokeObjectURL(rm);
     setImages(clone);
     onChange?.(clone);
+
+    if (arrFuncs) {
+      for (const currFunc of arrFuncs) currFunc(images, args);
+    }
   };
 
   return (
