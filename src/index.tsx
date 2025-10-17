@@ -37,7 +37,8 @@
           screenElements:[(...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
-            arrItems: [(...args:any) => <Elements.Accordion pass={{
+            arrItems: [
+        (...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	defaultOpenIdx: 0,
 	styles: {
@@ -1981,6 +1982,8 @@ justifyContent: 'center',
             args,
           }}/>
         ], args 
+ }}/>, (...args:any) => <Elements.Accordion pass={{
+ configs: [''], arrElements: [() => <RN.Text>Element Default</RN.Text>], args 
  }}/>],
             args,
         }}/>],
@@ -4426,9 +4429,9 @@ width: '100%',
 
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
       preenchimento: [`transparent`],
 
@@ -8600,9 +8603,9 @@ width: '100%',
 
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
       preenchimento: [`transparent`],
 
@@ -12681,9 +12684,9 @@ width: '100%',
 
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
       preenchimento: [`transparent`],
 
@@ -16780,9 +16783,9 @@ width: '100%',
 
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
       preenchimento: [`transparent`],
 
