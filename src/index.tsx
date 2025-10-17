@@ -5039,12 +5039,7 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.uploadFileTool({ args, pass:{
-            fbInit: [''],
-            arrFiles: [() => {}],
-            arrFuncs: [!#!functions return!#!],
-        }})]
+ arrFunctions: [()=>{}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -9300,12 +9295,7 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.uploadFileTool({ args, pass:{
-            fbInit: [''],
-            arrFiles: [() => {}],
-            arrFuncs: [!#!functions return!#!],
-        }})]
+ arrFunctions: [()=>{}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -13468,12 +13458,7 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.uploadFileTool({ args, pass:{
-            fbInit: [''],
-            arrFiles: [() => {}],
-            arrFuncs: [!#!functions return!#!],
-        }})]
+ arrFunctions: [()=>{}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -17654,12 +17639,7 @@ alignItems: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.uploadFileTool({ args, pass:{
-            fbInit: [''],
-            arrFiles: [() => {}],
-            arrFuncs: [!#!functions return!#!],
-        }})]
+ arrFunctions: [()=>{}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
