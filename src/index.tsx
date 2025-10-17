@@ -4281,8 +4281,8 @@ fontWeight: '500',
       elementsProperties:[{}],
 
       styles:[{
-	width: '150px',
-	height:'150px',
+	width: '260px',
+	height: '160px',
 	borderRadius: '6px',
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
