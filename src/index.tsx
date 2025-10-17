@@ -1983,7 +1983,44 @@ justifyContent: 'center',
           }}/>
         ], args 
  }}/>, (...args:any) => <Elements.Accordion pass={{
- configs: [''], arrElements: [() => <RN.Text>Element Default</RN.Text>], args 
+ configs: [''], arrElements: [
+ 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ], args 
  }}/>],
             args,
         }}/>],
