@@ -23753,7 +23753,7 @@ async (...args) =>
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"a7list",
+          pathScreen:"b6list",
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
