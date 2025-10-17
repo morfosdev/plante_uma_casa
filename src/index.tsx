@@ -5098,11 +5098,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -5115,13 +5111,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -5139,11 +5133,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -5156,13 +5146,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.startDate`],
 
@@ -5180,11 +5168,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -5197,13 +5181,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.endDate`],
 
@@ -5221,11 +5203,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -9320,11 +9298,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -9337,13 +9311,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -9361,11 +9333,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -9378,13 +9346,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.startDate`],
 
@@ -9402,11 +9368,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -9419,13 +9381,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.endDate`],
 
@@ -9443,11 +9403,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -13449,11 +13405,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -13466,13 +13418,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -13490,11 +13440,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -13507,13 +13453,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.startDate`],
 
@@ -13531,11 +13475,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -13548,13 +13488,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.endDate`],
 
@@ -13572,11 +13510,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -17596,11 +17530,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -17613,13 +17543,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -17637,11 +17565,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -17654,13 +17578,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.startDate`],
 
@@ -17678,11 +17600,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -17695,13 +17613,11 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
           path: [`sc.a1.iptChanges.endDate`],
 
@@ -17719,11 +17635,7 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -22569,6 +22481,22 @@ xmlns="http://www.w3.org/2000/svg"
         }})],
 
           args,
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
         }}/>, (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
