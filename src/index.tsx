@@ -4981,7 +4981,8 @@ alignItems: 'center',
         `{ 
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10
+	paddingVertical: 6,
+	paddingHorizontal: 18,
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -9182,7 +9183,8 @@ alignItems: 'center',
         `{ 
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10
+	paddingVertical: 6,
+	paddingHorizontal: 18,
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -13290,7 +13292,8 @@ alignItems: 'center',
         `{ 
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10
+	paddingVertical: 6,
+	paddingHorizontal: 18,
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -17416,7 +17419,8 @@ alignItems: 'center',
         `{ 
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10
+	paddingVertical: 6,
+	paddingHorizontal: 18,
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
