@@ -4174,7 +4174,9 @@ height: 15,
 
             styles:[`{
 	width: 200,
-	backgroundColor: 'white',
+	backgroundColor: '#E8EDF5',
+	padding: 16,
+	borderRadius: 8,
 }`],
 
             functions:[async (...args) =>
