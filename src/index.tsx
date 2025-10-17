@@ -4194,7 +4194,10 @@ height: 15,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 14,
+fontWeight: '500',
+}`
           ],
 
           children: [
@@ -4234,7 +4237,10 @@ height: 15,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 14,
+fontWeight: '500',
+}`
           ],
 
           children: [
