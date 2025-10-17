@@ -5068,11 +5068,12 @@ width: '100%',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 4,
+paddingHorizontal: 2,
+}`],
 
           path: [`sc.a1.iptChanges.condo`],
 
@@ -9260,11 +9261,12 @@ width: '100%',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 4,
+paddingHorizontal: 2,
+}`],
 
           path: [`sc.a1.iptChanges.condo`],
 
@@ -13359,11 +13361,12 @@ width: '100%',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 4,
+paddingHorizontal: 2,
+}`],
 
           path: [`sc.a1.iptChanges.condo`],
 
@@ -17476,11 +17479,12 @@ width: '100%',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 4,
+paddingHorizontal: 2,
+}`],
 
           path: [`sc.a1.iptChanges.condo`],
 
