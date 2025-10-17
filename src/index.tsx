@@ -27822,7 +27822,26 @@ borderRadius: 12,
 }`],
 
             functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 16,
+	zIndex: 1000,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("b4list");
+        }
+        ]
+ , trigger: 'on pressable'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -27852,7 +27871,11 @@ borderRadius: 12,
       preenchimento: ['black'],
 
       args,
-    }}/>, 
+    }}/>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
