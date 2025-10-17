@@ -4197,7 +4197,6 @@ height: 15,
             `{
 fontSize: 14,
 fontWeight: '500',
-color: '#0D141C',
 }`
           ],
 
@@ -4241,7 +4240,6 @@ color: '#0D141C',
             `{
 fontSize: 14,
 fontWeight: '500',
-color: '#0D141C',
 }`
           ],
 
@@ -4955,9 +4953,9 @@ xmlns="http://www.w3.org/2000/svg"
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "16",
 
-      largura: "16px",
+      largura: "16",
 
       preenchimento: ['black'],
 
@@ -9098,9 +9096,9 @@ xmlns="http://www.w3.org/2000/svg"
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "16",
 
-      largura: "16px",
+      largura: "16",
 
       preenchimento: ['black'],
 
@@ -13148,9 +13146,9 @@ xmlns="http://www.w3.org/2000/svg"
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "16",
 
-      largura: "16px",
+      largura: "16",
 
       preenchimento: ['black'],
 
@@ -17216,9 +17214,9 @@ xmlns="http://www.w3.org/2000/svg"
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "16",
 
-      largura: "16px",
+      largura: "16",
 
       preenchimento: ['black'],
 
