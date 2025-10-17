@@ -5071,8 +5071,8 @@ width: '100%',
           stylesArray: [`{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
-paddingVertical: 4,
-paddingHorizontal: 2,
+paddingVertical: 2,
+paddingHorizontal: 4,
 }`],
 
           path: [`sc.a1.iptChanges.condo`],
@@ -9264,8 +9264,8 @@ width: '100%',
           stylesArray: [`{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
-paddingVertical: 4,
-paddingHorizontal: 2,
+paddingVertical: 2,
+paddingHorizontal: 4,
 }`],
 
           path: [`sc.a1.iptChanges.condo`],
@@ -13364,8 +13364,8 @@ width: '100%',
           stylesArray: [`{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
-paddingVertical: 4,
-paddingHorizontal: 2,
+paddingVertical: 2,
+paddingHorizontal: 4,
 }`],
 
           path: [`sc.a1.iptChanges.condo`],
@@ -17482,8 +17482,8 @@ width: '100%',
           stylesArray: [`{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
-paddingVertical: 4,
-paddingHorizontal: 2,
+paddingVertical: 2,
+paddingHorizontal: 4,
 }`],
 
           path: [`sc.a1.iptChanges.condo`],
