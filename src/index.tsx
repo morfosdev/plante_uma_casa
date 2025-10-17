@@ -27827,7 +27827,6 @@ borderRadius: 12,
 			borderRadius: 10,
 			marginBottom: 14,
 			padding: 10,
-			flexDirection: 'row',
 }`],
 
             functions:[async (...args) =>
@@ -27839,6 +27838,16 @@ borderRadius: 12,
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+			flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
@@ -27885,8 +27894,7 @@ borderRadius: 12,
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.SvgView1 pass={{
+        }}/>, (...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -27916,7 +27924,11 @@ borderRadius: 12,
       preenchimento: ['black'],
 
       args,
-    }}/>, (...args:any) => <Elements.Accordion pass={{
+    }}/>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	defaultOpenIdx: 0,
 	styles: {
