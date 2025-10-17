@@ -4979,7 +4979,7 @@ async (...args) =>
 
       largura: "24px",
 
-      preenchimento: [`transparent`],
+      preenchimento: [``],
 
       args,
     }}/>],
@@ -9130,7 +9130,7 @@ async (...args) =>
 
       largura: "24px",
 
-      preenchimento: [`transparent`],
+      preenchimento: [``],
 
       args,
     }}/>],
@@ -13188,7 +13188,7 @@ async (...args) =>
 
       largura: "24px",
 
-      preenchimento: [`transparent`],
+      preenchimento: [``],
 
       args,
     }}/>],
@@ -17264,7 +17264,7 @@ async (...args) =>
 
       largura: "24px",
 
-      preenchimento: [`transparent`],
+      preenchimento: [``],
 
       args,
     }}/>],
