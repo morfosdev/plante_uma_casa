@@ -27987,7 +27987,6 @@ borderRadius: 12,
 			marginBottom: 14
 	}
 }`], arrElements: [
- 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -28008,7 +28007,8 @@ borderRadius: 12,
             elementsProperties:['{}'],
 
             styles:[`{
-	flexDirection: "row"
+	flexDirection: "row",
+	alignItems: "center"
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -28096,197 +28096,6 @@ borderRadius: 12,
             args,
           }}/>
         , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 20 }`],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
- 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ 
-	paddingVertical: 5,
-	paddingHorizontal: 10,
-}`
-          ],
-
-          children: [
-            `Opção X`
-          ],
-
-          args,
-
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 20 }`],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ 
-	paddingVertical: 5,
-	paddingHorizontal: 10,
-}`
-          ],
-
-          children: [
-            `Opção X`
-          ],
-
-          args,
-
-        }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
