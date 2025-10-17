@@ -5465,7 +5465,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -9824,7 +9828,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -14090,7 +14098,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -18374,7 +18386,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
           ],
 
           children: [
