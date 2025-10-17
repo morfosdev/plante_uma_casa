@@ -4733,9 +4733,9 @@ async (...args) =>
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -8916,9 +8916,9 @@ async (...args) =>
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -13006,9 +13006,9 @@ async (...args) =>
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -17114,9 +17114,9 @@ async (...args) =>
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
