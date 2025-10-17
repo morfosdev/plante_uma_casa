@@ -5009,10 +5009,14 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-padding: 18,
-borderWidth: 1,
-borderColor: '#f5f5f5',
-borderRadius: 20,
+	padding: 18,
+	borderWidth: 1,
+	borderColor: '#f5f5f5',
+	borderRadius: 20,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
@@ -9206,10 +9210,14 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-padding: 18,
-borderWidth: 1,
-borderColor: '#f5f5f5',
-borderRadius: 20,
+	padding: 18,
+	borderWidth: 1,
+	borderColor: '#f5f5f5',
+	borderRadius: 20,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
@@ -13310,10 +13318,14 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-padding: 18,
-borderWidth: 1,
-borderColor: '#f5f5f5',
-borderRadius: 20,
+	padding: 18,
+	borderWidth: 1,
+	borderColor: '#f5f5f5',
+	borderRadius: 20,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
@@ -17432,10 +17444,14 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-padding: 18,
-borderWidth: 1,
-borderColor: '#f5f5f5',
-borderRadius: 20,
+	padding: 18,
+	borderWidth: 1,
+	borderColor: '#f5f5f5',
+	borderRadius: 20,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
