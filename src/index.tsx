@@ -4690,11 +4690,20 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("a4list");
-        }
-        ]
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -8864,11 +8873,20 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("a4list");
-        }
-        ]
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -12945,11 +12963,20 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("a4list");
-        }
-        ]
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -17044,11 +17071,20 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("a4list");
-        }
-        ]
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
