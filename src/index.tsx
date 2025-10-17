@@ -4197,6 +4197,7 @@ height: 15,
             `{
 fontSize: 14,
 fontWeight: '500',
+color: '#0D141C',
 }`
           ],
 
@@ -4240,6 +4241,7 @@ fontWeight: '500',
             `{
 fontSize: 14,
 fontWeight: '500',
+color: '#0D141C',
 }`
           ],
 
