@@ -27934,7 +27934,7 @@ borderRadius: 12,
             elementsProperties:['{}'],
 
             styles:[`{
-		zIndex: 1,
+		zIndex: 1000,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
