@@ -5394,7 +5394,11 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -9727,7 +9731,11 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -13967,7 +13975,11 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -18225,7 +18237,11 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
           ],
 
           children: [
