@@ -37,8 +37,7 @@
           screenElements:[(...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
-            arrItems: [
-        (...args:any) => <Elements.Accordion pass={{
+            arrItems: [(...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	defaultOpenIdx: 0,
 	styles: {
@@ -1978,45 +1977,6 @@ justifyContent: 'center',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        ], args 
- }}/>, (...args:any) => <Elements.Accordion pass={{
- configs: [''], arrElements: [
- 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
