@@ -5133,7 +5133,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -5146,11 +5150,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -5168,7 +5173,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -5181,11 +5190,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.startDate`],
 
@@ -5203,7 +5213,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -5216,11 +5230,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.endDate`],
 
@@ -5238,7 +5253,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -9368,7 +9387,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -9381,11 +9404,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -9403,7 +9427,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -9416,11 +9444,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.startDate`],
 
@@ -9438,7 +9467,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -9451,11 +9484,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.endDate`],
 
@@ -9473,7 +9507,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -13510,7 +13548,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -13523,11 +13565,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -13545,7 +13588,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -13558,11 +13605,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.startDate`],
 
@@ -13580,7 +13628,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -13593,11 +13645,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.endDate`],
 
@@ -13615,7 +13668,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -17670,7 +17727,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -17683,11 +17744,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.address`],
 
@@ -17705,7 +17767,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -17718,11 +17784,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.startDate`],
 
@@ -17740,7 +17807,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -17753,11 +17824,12 @@ paddingHorizontal: 4,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.a1.iptChanges.endDate`],
 
@@ -17775,7 +17847,11 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
           ],
 
           children: [
