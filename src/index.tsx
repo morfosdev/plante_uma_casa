@@ -16331,6 +16331,16 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
+	flexDirection: 'row',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 	padding: 7,
 }`],
 
@@ -16383,22 +16393,62 @@ async (...args) =>
             args,
           }}/>
         , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	backgroundColor: 'transparent',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: 26,
+	fontWeight: '700',
+	color: '#FFFFFF',
+}`
           ],
 
           children: [
-            `a11list`
+            `Parceiros`
           ],
 
           args,
 
-        }}/>, 
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 15,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}`
+          ],
+
+          children: [
+            `Lista dos Parceiros`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
