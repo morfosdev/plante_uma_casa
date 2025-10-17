@@ -16335,7 +16335,8 @@ shadowRadius: 4,
 
           args,
 
-        }}/>, (...args:any) => <Elements.Text pass={{
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -16351,6 +16352,26 @@ shadowRadius: 4,
 
           children: [
             `$arg_field`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            ``
           ],
 
           args,
