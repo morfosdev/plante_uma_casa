@@ -28007,14 +28007,9 @@ borderRadius: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	flexDirection: "row"
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -28040,9 +28035,9 @@ borderRadius: 12,
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "14px",
 
-      largura: "30px",
+      largura: "14px",
 
       preenchimento: ['black'],
 
