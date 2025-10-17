@@ -26958,7 +26958,7 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`condos`],
+   arrRefStrings: [`lots`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b6.list`],
