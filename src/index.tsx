@@ -24804,7 +24804,7 @@ shadowRadius: 4,
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("a9finManagement");
+          return tools.goTo("b7list");
         }
         ]
  , trigger: 'on press'
@@ -24823,7 +24823,7 @@ shadowRadius: 4,
           ],
 
           children: [
-            `Gestão Financeira`
+            `Adicionar Etapa`
           ],
 
           args,
