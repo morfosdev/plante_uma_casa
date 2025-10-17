@@ -20517,13 +20517,7 @@ width: '100%',
 	justifyContent: "flex-start"
  }`],
 
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
+            functions:[()=>{}],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -20539,35 +20533,50 @@ width: '100%',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b3.profile`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={25}
     fill="red"
+    viewBox="0 0 24 25"
     {...props}
   >
     <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+      stroke="#F5F5F5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="m11.438 19.25-6.75-6.75 6.75-6.75M5.625 12.5h13.688"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4375 19.25L4.6875 12.5L11.4375 5.75M5.625 12.5H19.3125" stroke="#F5F5F5" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
-      preenchimento: ['black'],
+      preenchimento: [``],
 
       args,
     }}/>],
