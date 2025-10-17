@@ -5351,6 +5351,18 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
             functions:[async (...args) =>
@@ -5392,6 +5404,18 @@ fontWeight: '700',
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -9660,6 +9684,18 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
             functions:[async (...args) =>
@@ -9701,6 +9737,18 @@ fontWeight: '700',
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -13876,6 +13924,18 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
             functions:[async (...args) =>
@@ -13917,6 +13977,18 @@ fontWeight: '700',
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -18110,6 +18182,18 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
 
             functions:[async (...args) =>
@@ -18151,6 +18235,18 @@ fontWeight: '700',
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
