@@ -5165,7 +5165,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'Rua das Flores, 123',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -9513,7 +9515,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'Rua das Flores, 123',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -13768,7 +13772,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'Rua das Flores, 123',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -18041,7 +18047,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'Rua das Flores, 123',
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
