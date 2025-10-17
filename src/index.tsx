@@ -27815,14 +27815,9 @@ borderRadius: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flexDirection: 'row',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -27876,9 +27871,14 @@ borderRadius: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-flexDirection: 'row',
-}`],
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
