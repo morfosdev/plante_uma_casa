@@ -5108,7 +5108,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: "Ex: Residência dos Silvas",
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -9362,7 +9364,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: "Ex: Residência dos Silvas",
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -13523,7 +13527,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: "Ex: Residência dos Silvas",
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -17702,7 +17708,9 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: "Ex: Residência dos Silvas",
+}`],
 
           stylesArray: [`{
 borderBottomWidth: 1,
