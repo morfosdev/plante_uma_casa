@@ -27791,6 +27791,53 @@ borderRadius: 12,
 
             args,
           }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+			backgroundColor: '#ccc',
+			width: "100%",
+			borderRadius: 10,
+			marginBottom: 14,
+			padding: 10,
+			flexDirection: 'row',
+}`],
+
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.Acordeao_Planejamento_e_Projeto1", "==", false ]]
+ , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.Acordeao_Planejamento_e_Projeto1`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Planejamento e Projeto`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
         , (...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	defaultOpenIdx: 0,
