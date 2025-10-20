@@ -37158,7 +37158,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-		backgroundColor: "transparent",
+		backgroundColor: "red",
 		widht: "40%",
 }`],
 
