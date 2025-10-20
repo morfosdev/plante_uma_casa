@@ -5574,7 +5574,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.profile`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -9912,7 +9912,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.profile`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -14157,7 +14157,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.profile`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -18420,7 +18420,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.profile`],
           value: [false]
         }})]
  , trigger: 'on press'
