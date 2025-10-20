@@ -7858,9 +7858,10 @@ paddingVertical: 8,
       tools.setData({ path: 'all.toggles.sideRight', value: false });
       tools.setData({ path: 'all.toggles.a12.add', value: false });
       tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+      tools.setData({ path: 'sc.A12.forms.iptsChanges', value: { partnerName: "", partnerMail: "", partnerActivity: "" } });
     }
 
-    setTimeout(delay, 2000);
+    setTimeout(delay, 2500);
 
     // sucesso...
   } catch (e: any) {
@@ -12661,9 +12662,10 @@ paddingVertical: 8,
       tools.setData({ path: 'all.toggles.sideRight', value: false });
       tools.setData({ path: 'all.toggles.a12.add', value: false });
       tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+      tools.setData({ path: 'sc.A12.forms.iptsChanges', value: { partnerName: "", partnerMail: "", partnerActivity: "" } });
     }
 
-    setTimeout(delay, 2000);
+    setTimeout(delay, 2500);
 
     // sucesso...
   } catch (e: any) {
@@ -17399,9 +17401,10 @@ paddingVertical: 8,
       tools.setData({ path: 'all.toggles.sideRight', value: false });
       tools.setData({ path: 'all.toggles.a12.add', value: false });
       tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+      tools.setData({ path: 'sc.A12.forms.iptsChanges', value: { partnerName: "", partnerMail: "", partnerActivity: "" } });
     }
 
-    setTimeout(delay, 2000);
+    setTimeout(delay, 2500);
 
     // sucesso...
   } catch (e: any) {
@@ -22127,9 +22130,10 @@ paddingVertical: 8,
       tools.setData({ path: 'all.toggles.sideRight', value: false });
       tools.setData({ path: 'all.toggles.a12.add', value: false });
       tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+      tools.setData({ path: 'sc.A12.forms.iptsChanges', value: { partnerName: "", partnerMail: "", partnerActivity: "" } });
     }
 
-    setTimeout(delay, 2000);
+    setTimeout(delay, 2500);
 
     // sucesso...
   } catch (e: any) {
