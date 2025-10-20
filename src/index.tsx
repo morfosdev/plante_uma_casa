@@ -6399,22 +6399,23 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `mockCondos`, `$var_sc.a1.editChanges.docId`],
+            arrPathData: [`sc.a1.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a1.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -6485,7 +6486,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -10931,22 +10932,23 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `mockCondos`, `$var_sc.a1.editChanges.docId`],
+            arrPathData: [`sc.a1.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a1.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -11017,7 +11019,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -15370,22 +15372,23 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `mockCondos`, `$var_sc.a1.editChanges.docId`],
+            arrPathData: [`sc.a1.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a1.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -15456,7 +15459,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -19827,22 +19830,23 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a1.iptChanges`],
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `mockCondos`, `$var_sc.a1.editChanges.docId`],
+            arrPathData: [`sc.a1.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a1.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -19913,7 +19917,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})]
  , trigger: 'on press'
