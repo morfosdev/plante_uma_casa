@@ -28537,7 +28537,7 @@ borderRadius: 12,
           ],
 
           children: [
-            `Elaboração do projeto arquitetônico e complementares (estrutural, elétrico, hidráulico)`
+            `4`
           ],
 
           args,
