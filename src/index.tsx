@@ -6817,11 +6817,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.A12.iptsChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.A12.iptsChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -7549,11 +7549,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.A12.iptsChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.A12.iptsChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -11511,11 +11511,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.A12.iptsChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.A12.iptsChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -12243,11 +12243,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.A12.iptsChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.A12.iptsChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -16140,11 +16140,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.A12.iptsChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.A12.iptsChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -16872,11 +16872,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.A12.iptsChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.A12.iptsChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -20759,11 +20759,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.A12.iptsChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.A12.iptsChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -21491,11 +21491,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a12.iptChanges.partnerName`],
+          path: [`sc.A12.iptsChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges.partnerName`],
+          keyPath: [`sc.A12.iptsChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
