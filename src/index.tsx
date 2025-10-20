@@ -7756,7 +7756,7 @@ paddingVertical: 8,
       return;
     }
 
-    if (email !== "" || !validateEmail(email)) {
+    if (!validateEmail(email)) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
       return;
@@ -12513,7 +12513,7 @@ paddingVertical: 8,
       return;
     }
 
-    if (email !== "" || !validateEmail(email)) {
+    if (!validateEmail(email)) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
       return;
@@ -17205,7 +17205,7 @@ paddingVertical: 8,
       return;
     }
 
-    if (email !== "" || !validateEmail(email)) {
+    if (!validateEmail(email)) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
       return;
@@ -21887,7 +21887,7 @@ paddingVertical: 8,
       return;
     }
 
-    if (email !== "" || !validateEmail(email)) {
+    if (!validateEmail(email)) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
       return;
