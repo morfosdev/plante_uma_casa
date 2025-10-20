@@ -7845,9 +7845,9 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = window.location.origin;
-    console.log({ location: window.location });
-    console.log({ host })
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -12656,9 +12656,9 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = window.location.origin;
-    console.log({ location: window.location });
-    console.log({ host })
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -17402,9 +17402,9 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = window.location.origin;
-    console.log({ location: window.location });
-    console.log({ host })
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -22138,9 +22138,9 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = window.location.origin;
-    console.log({ location: window.location });
-    console.log({ host })
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
