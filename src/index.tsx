@@ -7736,12 +7736,12 @@ async (...args) =>
     }
 
     if (!name) {
-      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      // window.alert("Nome inválido", "Por favor, insira seu nome completo.");
       return;
     }
 
     if (!email || !validateEmail(email)) {
-      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -7749,12 +7749,12 @@ async (...args) =>
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
 
     await createUserWithEmailAndPassword(email, '123456', name);
-    Alert.alert(
-      "Conta criada",
-      "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
-    );
+    // window.alert(
+    //   "Conta criada",
+    //   "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    // );
   } catch (e: any) {
-    Alert.alert("Erro no cadastro", e.message);
+    window.alert("Erro no cadastro", e.message);
   }
 }]
  , trigger: 'on press'
@@ -12424,12 +12424,12 @@ async (...args) =>
     }
 
     if (!name) {
-      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      // window.alert("Nome inválido", "Por favor, insira seu nome completo.");
       return;
     }
 
     if (!email || !validateEmail(email)) {
-      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -12437,12 +12437,12 @@ async (...args) =>
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
 
     await createUserWithEmailAndPassword(email, '123456', name);
-    Alert.alert(
-      "Conta criada",
-      "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
-    );
+    // window.alert(
+    //   "Conta criada",
+    //   "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    // );
   } catch (e: any) {
-    Alert.alert("Erro no cadastro", e.message);
+    window.alert("Erro no cadastro", e.message);
   }
 }]
  , trigger: 'on press'
@@ -17047,12 +17047,12 @@ async (...args) =>
     }
 
     if (!name) {
-      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      // window.alert("Nome inválido", "Por favor, insira seu nome completo.");
       return;
     }
 
     if (!email || !validateEmail(email)) {
-      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -17060,12 +17060,12 @@ async (...args) =>
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
 
     await createUserWithEmailAndPassword(email, '123456', name);
-    Alert.alert(
-      "Conta criada",
-      "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
-    );
+    // window.alert(
+    //   "Conta criada",
+    //   "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    // );
   } catch (e: any) {
-    Alert.alert("Erro no cadastro", e.message);
+    window.alert("Erro no cadastro", e.message);
   }
 }]
  , trigger: 'on press'
@@ -21660,12 +21660,12 @@ async (...args) =>
     }
 
     if (!name) {
-      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      // window.alert("Nome inválido", "Por favor, insira seu nome completo.");
       return;
     }
 
     if (!email || !validateEmail(email)) {
-      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -21673,12 +21673,12 @@ async (...args) =>
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
 
     await createUserWithEmailAndPassword(email, '123456', name);
-    Alert.alert(
-      "Conta criada",
-      "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
-    );
+    // window.alert(
+    //   "Conta criada",
+    //   "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    // );
   } catch (e: any) {
-    Alert.alert("Erro no cadastro", e.message);
+    window.alert("Erro no cadastro", e.message);
   }
 }]
  , trigger: 'on press'
