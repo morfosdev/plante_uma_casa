@@ -7846,6 +7846,8 @@ paddingVertical: 8,
 
     // (opcional) enviar verificação
     const host = window.location.origin;
+    console.log({ location: window.location });
+    console.log({ host })
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -12655,6 +12657,8 @@ paddingVertical: 8,
 
     // (opcional) enviar verificação
     const host = window.location.origin;
+    console.log({ location: window.location });
+    console.log({ host })
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -17399,6 +17403,8 @@ paddingVertical: 8,
 
     // (opcional) enviar verificação
     const host = window.location.origin;
+    console.log({ location: window.location });
+    console.log({ host })
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -22133,6 +22139,8 @@ paddingVertical: 8,
 
     // (opcional) enviar verificação
     const host = window.location.origin;
+    console.log({ location: window.location });
+    console.log({ host })
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
