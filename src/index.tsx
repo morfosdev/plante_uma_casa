@@ -7538,8 +7538,7 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -7560,18 +7559,7 @@ paddingHorizontal: 4,
         }})],
 
           args,
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
+        }}/>],
 
             args,
           }}/>
@@ -12097,8 +12085,7 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -12119,18 +12106,7 @@ paddingHorizontal: 4,
         }})],
 
           args,
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
+        }}/>],
 
             args,
           }}/>
@@ -16563,8 +16539,7 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -16585,18 +16560,7 @@ paddingHorizontal: 4,
         }})],
 
           args,
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
+        }}/>],
 
             args,
           }}/>
@@ -21047,8 +21011,7 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -21069,18 +21032,7 @@ paddingHorizontal: 4,
         }})],
 
           args,
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
+        }}/>],
 
             args,
           }}/>
