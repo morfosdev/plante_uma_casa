@@ -36819,7 +36819,21 @@ whereConds ??`
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 200,
+		flexDirection: "row",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.c3Menu", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: "80%",
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -37150,6 +37164,28 @@ async (...args) =>
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
