@@ -7750,9 +7750,15 @@ paddingVertical: 8,
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
       return;
     }
-    if (email === "" || !validateEmail(email)) {
+    if (email === "") {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
+
+    if (email !== "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
       return;
     }
 
@@ -12501,9 +12507,15 @@ paddingVertical: 8,
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
       return;
     }
-    if (email === "" || !validateEmail(email)) {
+    if (email === "") {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
+
+    if (email !== "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
       return;
     }
 
@@ -17187,9 +17199,15 @@ paddingVertical: 8,
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
       return;
     }
-    if (email === "" || !validateEmail(email)) {
+    if (email === "") {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
+
+    if (email !== "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
       return;
     }
 
@@ -21863,9 +21881,15 @@ paddingVertical: 8,
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
       return;
     }
-    if (email === "" || !validateEmail(email)) {
+    if (email === "") {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
+
+    if (email !== "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
       return;
     }
 
