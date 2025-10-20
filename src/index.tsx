@@ -7730,6 +7730,7 @@ async (...args) =>
     const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
     const email = (rawEmail ?? '').trim();
 
+    console.log({ email });
     const validateEmail = (email: string) => {
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
       return re.test(String(email).toLowerCase());
@@ -7741,12 +7742,14 @@ async (...args) =>
     }
 
     if (!email || !validateEmail(email)) {
+      console.log({ email });
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
-
+    
     // Auth
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
+    console.log({ createUserWithEmailAndPassword });
 
     await createUserWithEmailAndPassword(email, '123456', name);
     // window.alert(
@@ -12418,6 +12421,7 @@ async (...args) =>
     const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
     const email = (rawEmail ?? '').trim();
 
+    console.log({ email });
     const validateEmail = (email: string) => {
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
       return re.test(String(email).toLowerCase());
@@ -12429,12 +12433,14 @@ async (...args) =>
     }
 
     if (!email || !validateEmail(email)) {
+      console.log({ email });
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
-
+    
     // Auth
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
+    console.log({ createUserWithEmailAndPassword });
 
     await createUserWithEmailAndPassword(email, '123456', name);
     // window.alert(
@@ -17041,6 +17047,7 @@ async (...args) =>
     const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
     const email = (rawEmail ?? '').trim();
 
+    console.log({ email });
     const validateEmail = (email: string) => {
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
       return re.test(String(email).toLowerCase());
@@ -17052,12 +17059,14 @@ async (...args) =>
     }
 
     if (!email || !validateEmail(email)) {
+      console.log({ email });
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
-
+    
     // Auth
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
+    console.log({ createUserWithEmailAndPassword });
 
     await createUserWithEmailAndPassword(email, '123456', name);
     // window.alert(
@@ -21654,6 +21663,7 @@ async (...args) =>
     const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
     const email = (rawEmail ?? '').trim();
 
+    console.log({ email });
     const validateEmail = (email: string) => {
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
       return re.test(String(email).toLowerCase());
@@ -21665,12 +21675,14 @@ async (...args) =>
     }
 
     if (!email || !validateEmail(email)) {
+      console.log({ email });
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
-
+    
     // Auth
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
+    console.log({ createUserWithEmailAndPassword });
 
     await createUserWithEmailAndPassword(email, '123456', name);
     // window.alert(
