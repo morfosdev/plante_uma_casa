@@ -7702,8 +7702,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async () => {
+ arrFunctions: [async () => {
   try {
     const pathName = 'sc.A12.forms.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
@@ -7769,26 +7768,7 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}, async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }})],
-        }})]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -12422,8 +12402,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async () => {
+ arrFunctions: [async () => {
   try {
     const pathName = 'sc.A12.forms.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
@@ -12489,26 +12468,7 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}, async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }})],
-        }})]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -17077,8 +17037,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async () => {
+ arrFunctions: [async () => {
   try {
     const pathName = 'sc.A12.forms.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
@@ -17144,26 +17103,7 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}, async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }})],
-        }})]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -21722,8 +21662,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async () => {
+ arrFunctions: [async () => {
   try {
     const pathName = 'sc.A12.forms.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
@@ -21789,26 +21728,7 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}, async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }})],
-        }})]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
