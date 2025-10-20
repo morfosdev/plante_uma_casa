@@ -37438,17 +37438,12 @@ width: '155px',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
-          value: [undefined]
+          keyPath: [`all.toggles.c3Menu`],
+          value: [false]
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("a0login");
+          return tools.goTo("c1login");
         }
         ]
  , trigger: 'on press'
