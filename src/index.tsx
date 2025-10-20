@@ -7704,49 +7704,39 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async () => {
-  console.log({ oi: "login", tools });
   try {
-    const pathName = 'sc.A12.iptsChanges.partnerName';
-    const rawName = tools.getCtData(pathName);
-    console.log({ pathName, rawName });
-    const name = (rawName ?? '').trim();
-    console.log({ name });
+    const pathName  = 'sc.A12.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.iptsChanges.partnerMail';
-    const rawEmail = tools.getCtData(pathEmail);
-    console.log({ pathEmail, rawEmail });
-    const email = (rawEmail ?? '').trim();
-    console.log({ email });
 
-    const validateEmail = (email: string) => {
-      console.log(email);
-      const re = /^[^s@]+@[^s@]+.[^s@]+$/;
-      const validate = re.test(String(email).toLowerCase());
-      console.log({ validate });
-      return validate;
-    }
+    const name  = (tools.getCtData(pathName)  ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
 
-    if (name === '') {
-      // window.alert("Nome inválido. Por favor, insira seu nome completo.");
-      console.log({ name });
-      return;
-    }
+    const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    if (email === '' || validateEmail(email)) {
-      // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
-      console.log({ email });
-      return;
-    }
+    if (!name)  return;                               // nome vazio
+    if (!email || !validateEmail(email)) return;      // e-mail vazio OU inválido
 
     // Auth
-    const { createUserWithEmailAndPassword } = await import('firebase/auth');
-    console.log({ createUserWithEmailAndPassword });
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+      await import('firebase/auth');
 
-    await createUserWithEmailAndPassword(email, '123456', name);
-    // window.alert(
-    //   "Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
-    // );
+    const fbInit = tools.getCtData('all.temp.fireInit'); // seu app já inicializado
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    const tempPass = '123456'; // ou gere uma senha aleatória
+
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
+    }
+
+    // (opcional) enviar verificação
+    await sendEmailVerification(cred.user);
+
+    // sucesso...
   } catch (e: any) {
-    // window.alert("Erro no cadastro", e.message);
+    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -12403,49 +12393,39 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async () => {
-  console.log({ oi: "login", tools });
   try {
-    const pathName = 'sc.A12.iptsChanges.partnerName';
-    const rawName = tools.getCtData(pathName);
-    console.log({ pathName, rawName });
-    const name = (rawName ?? '').trim();
-    console.log({ name });
+    const pathName  = 'sc.A12.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.iptsChanges.partnerMail';
-    const rawEmail = tools.getCtData(pathEmail);
-    console.log({ pathEmail, rawEmail });
-    const email = (rawEmail ?? '').trim();
-    console.log({ email });
 
-    const validateEmail = (email: string) => {
-      console.log(email);
-      const re = /^[^s@]+@[^s@]+.[^s@]+$/;
-      const validate = re.test(String(email).toLowerCase());
-      console.log({ validate });
-      return validate;
-    }
+    const name  = (tools.getCtData(pathName)  ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
 
-    if (name === '') {
-      // window.alert("Nome inválido. Por favor, insira seu nome completo.");
-      console.log({ name });
-      return;
-    }
+    const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    if (email === '' || validateEmail(email)) {
-      // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
-      console.log({ email });
-      return;
-    }
+    if (!name)  return;                               // nome vazio
+    if (!email || !validateEmail(email)) return;      // e-mail vazio OU inválido
 
     // Auth
-    const { createUserWithEmailAndPassword } = await import('firebase/auth');
-    console.log({ createUserWithEmailAndPassword });
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+      await import('firebase/auth');
 
-    await createUserWithEmailAndPassword(email, '123456', name);
-    // window.alert(
-    //   "Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
-    // );
+    const fbInit = tools.getCtData('all.temp.fireInit'); // seu app já inicializado
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    const tempPass = '123456'; // ou gere uma senha aleatória
+
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
+    }
+
+    // (opcional) enviar verificação
+    await sendEmailVerification(cred.user);
+
+    // sucesso...
   } catch (e: any) {
-    // window.alert("Erro no cadastro", e.message);
+    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -17037,49 +17017,39 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async () => {
-  console.log({ oi: "login", tools });
   try {
-    const pathName = 'sc.A12.iptsChanges.partnerName';
-    const rawName = tools.getCtData(pathName);
-    console.log({ pathName, rawName });
-    const name = (rawName ?? '').trim();
-    console.log({ name });
+    const pathName  = 'sc.A12.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.iptsChanges.partnerMail';
-    const rawEmail = tools.getCtData(pathEmail);
-    console.log({ pathEmail, rawEmail });
-    const email = (rawEmail ?? '').trim();
-    console.log({ email });
 
-    const validateEmail = (email: string) => {
-      console.log(email);
-      const re = /^[^s@]+@[^s@]+.[^s@]+$/;
-      const validate = re.test(String(email).toLowerCase());
-      console.log({ validate });
-      return validate;
-    }
+    const name  = (tools.getCtData(pathName)  ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
 
-    if (name === '') {
-      // window.alert("Nome inválido. Por favor, insira seu nome completo.");
-      console.log({ name });
-      return;
-    }
+    const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    if (email === '' || validateEmail(email)) {
-      // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
-      console.log({ email });
-      return;
-    }
+    if (!name)  return;                               // nome vazio
+    if (!email || !validateEmail(email)) return;      // e-mail vazio OU inválido
 
     // Auth
-    const { createUserWithEmailAndPassword } = await import('firebase/auth');
-    console.log({ createUserWithEmailAndPassword });
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+      await import('firebase/auth');
 
-    await createUserWithEmailAndPassword(email, '123456', name);
-    // window.alert(
-    //   "Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
-    // );
+    const fbInit = tools.getCtData('all.temp.fireInit'); // seu app já inicializado
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    const tempPass = '123456'; // ou gere uma senha aleatória
+
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
+    }
+
+    // (opcional) enviar verificação
+    await sendEmailVerification(cred.user);
+
+    // sucesso...
   } catch (e: any) {
-    // window.alert("Erro no cadastro", e.message);
+    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -21661,49 +21631,39 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async () => {
-  console.log({ oi: "login", tools });
   try {
-    const pathName = 'sc.A12.iptsChanges.partnerName';
-    const rawName = tools.getCtData(pathName);
-    console.log({ pathName, rawName });
-    const name = (rawName ?? '').trim();
-    console.log({ name });
+    const pathName  = 'sc.A12.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.iptsChanges.partnerMail';
-    const rawEmail = tools.getCtData(pathEmail);
-    console.log({ pathEmail, rawEmail });
-    const email = (rawEmail ?? '').trim();
-    console.log({ email });
 
-    const validateEmail = (email: string) => {
-      console.log(email);
-      const re = /^[^s@]+@[^s@]+.[^s@]+$/;
-      const validate = re.test(String(email).toLowerCase());
-      console.log({ validate });
-      return validate;
-    }
+    const name  = (tools.getCtData(pathName)  ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
 
-    if (name === '') {
-      // window.alert("Nome inválido. Por favor, insira seu nome completo.");
-      console.log({ name });
-      return;
-    }
+    const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    if (email === '' || validateEmail(email)) {
-      // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
-      console.log({ email });
-      return;
-    }
+    if (!name)  return;                               // nome vazio
+    if (!email || !validateEmail(email)) return;      // e-mail vazio OU inválido
 
     // Auth
-    const { createUserWithEmailAndPassword } = await import('firebase/auth');
-    console.log({ createUserWithEmailAndPassword });
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+      await import('firebase/auth');
 
-    await createUserWithEmailAndPassword(email, '123456', name);
-    // window.alert(
-    //   "Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
-    // );
+    const fbInit = tools.getCtData('all.temp.fireInit'); // seu app já inicializado
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    const tempPass = '123456'; // ou gere uma senha aleatória
+
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
+    }
+
+    // (opcional) enviar verificação
+    await sendEmailVerification(cred.user);
+
+    // sucesso...
   } catch (e: any) {
-    // window.alert("Erro no cadastro", e.message);
+    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
