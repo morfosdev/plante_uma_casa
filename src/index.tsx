@@ -7705,27 +7705,30 @@ paddingVertical: 8,
  arrFunctions: [
 async () => {
   try {
-    const pathName  = 'sc.A12.iptsChanges.partnerName';
+    const pathName = 'sc.A12.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.iptsChanges.partnerMail';
 
-    const name  = (tools.getCtData(pathName)  ?? '').trim();
+    const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
+    console.log({ name, email });
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    if (!name)  return;                               // nome vazio
-    if (!email || !validateEmail(email)) return;      // e-mail vazio OU inválido
+    if (name === "") return; // nome vazio
+    if (email === "" || !validateEmail(email)) return; // e-mail inválido
 
     // Auth
     const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
       await import('firebase/auth');
 
-    const fbInit = tools.getCtData('all.temp.fireInit'); // seu app já inicializado
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
     const tempPass = '123456'; // ou gere uma senha aleatória
-
+    console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
 
     if (name) {
       await updateProfile(cred.user, { displayName: name });
@@ -7738,7 +7741,8 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}, async (...args) =>
+}
+, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -12394,27 +12398,30 @@ paddingVertical: 8,
  arrFunctions: [
 async () => {
   try {
-    const pathName  = 'sc.A12.iptsChanges.partnerName';
+    const pathName = 'sc.A12.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.iptsChanges.partnerMail';
 
-    const name  = (tools.getCtData(pathName)  ?? '').trim();
+    const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
+    console.log({ name, email });
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    if (!name)  return;                               // nome vazio
-    if (!email || !validateEmail(email)) return;      // e-mail vazio OU inválido
+    if (name === "") return; // nome vazio
+    if (email === "" || !validateEmail(email)) return; // e-mail inválido
 
     // Auth
     const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
       await import('firebase/auth');
 
-    const fbInit = tools.getCtData('all.temp.fireInit'); // seu app já inicializado
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
     const tempPass = '123456'; // ou gere uma senha aleatória
-
+    console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
 
     if (name) {
       await updateProfile(cred.user, { displayName: name });
@@ -12427,7 +12434,8 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}, async (...args) =>
+}
+, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -17018,27 +17026,30 @@ paddingVertical: 8,
  arrFunctions: [
 async () => {
   try {
-    const pathName  = 'sc.A12.iptsChanges.partnerName';
+    const pathName = 'sc.A12.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.iptsChanges.partnerMail';
 
-    const name  = (tools.getCtData(pathName)  ?? '').trim();
+    const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
+    console.log({ name, email });
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    if (!name)  return;                               // nome vazio
-    if (!email || !validateEmail(email)) return;      // e-mail vazio OU inválido
+    if (name === "") return; // nome vazio
+    if (email === "" || !validateEmail(email)) return; // e-mail inválido
 
     // Auth
     const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
       await import('firebase/auth');
 
-    const fbInit = tools.getCtData('all.temp.fireInit'); // seu app já inicializado
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
     const tempPass = '123456'; // ou gere uma senha aleatória
-
+    console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
 
     if (name) {
       await updateProfile(cred.user, { displayName: name });
@@ -17051,7 +17062,8 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}, async (...args) =>
+}
+, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -21632,27 +21644,30 @@ paddingVertical: 8,
  arrFunctions: [
 async () => {
   try {
-    const pathName  = 'sc.A12.iptsChanges.partnerName';
+    const pathName = 'sc.A12.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.iptsChanges.partnerMail';
 
-    const name  = (tools.getCtData(pathName)  ?? '').trim();
+    const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
+    console.log({ name, email });
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    if (!name)  return;                               // nome vazio
-    if (!email || !validateEmail(email)) return;      // e-mail vazio OU inválido
+    if (name === "") return; // nome vazio
+    if (email === "" || !validateEmail(email)) return; // e-mail inválido
 
     // Auth
     const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
       await import('firebase/auth');
 
-    const fbInit = tools.getCtData('all.temp.fireInit'); // seu app já inicializado
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
     const tempPass = '123456'; // ou gere uma senha aleatória
-
+    console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
 
     if (name) {
       await updateProfile(cred.user, { displayName: name });
@@ -21665,7 +21680,8 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}, async (...args) =>
+}
+, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
