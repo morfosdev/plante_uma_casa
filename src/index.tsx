@@ -5984,8 +5984,7 @@ color: '#555555',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
@@ -6530,102 +6529,7 @@ fontWeight: '700',
           }}/>
         ],
             args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `mockCondos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
         }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
@@ -10517,8 +10421,7 @@ color: '#555555',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
@@ -11063,102 +10966,7 @@ fontWeight: '700',
           }}/>
         ],
             args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `mockCondos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
         }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
@@ -14957,8 +14765,7 @@ color: '#555555',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
@@ -15503,102 +15310,7 @@ fontWeight: '700',
           }}/>
         ],
             args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `mockCondos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
         }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
@@ -19415,8 +19127,7 @@ color: '#555555',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
@@ -19961,102 +19672,7 @@ fontWeight: '700',
           }}/>
         ],
             args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `mockCondos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
         }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
