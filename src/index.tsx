@@ -6277,11 +6277,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.endDate`],
+          path: [`sc.a1.editChanges.endDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
+          keyPath: [`sc.a1.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -11196,11 +11196,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.endDate`],
+          path: [`sc.a1.editChanges.endDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
+          keyPath: [`sc.a1.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -16022,11 +16022,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.endDate`],
+          path: [`sc.a1.editChanges.endDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
+          keyPath: [`sc.a1.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -20866,11 +20866,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.endDate`],
+          path: [`sc.a1.editChanges.endDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
+          keyPath: [`sc.a1.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
