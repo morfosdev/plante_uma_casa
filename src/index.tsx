@@ -7728,7 +7728,7 @@ paddingHorizontal: 4,
           ],
 
           children: [
-            `$var_sc.A12.msgs.msg1`
+            `$var_sc.A12.forms.msgs.msg1`
           ],
 
           args,
@@ -12526,7 +12526,7 @@ paddingHorizontal: 4,
           ],
 
           children: [
-            `$var_sc.A12.msgs.msg1`
+            `$var_sc.A12.forms.msgs.msg1`
           ],
 
           args,
@@ -17259,7 +17259,7 @@ paddingHorizontal: 4,
           ],
 
           children: [
-            `$var_sc.A12.msgs.msg1`
+            `$var_sc.A12.forms.msgs.msg1`
           ],
 
           args,
@@ -21982,7 +21982,7 @@ paddingHorizontal: 4,
           ],
 
           children: [
-            `$var_sc.A12.msgs.msg1`
+            `$var_sc.A12.forms.msgs.msg1`
           ],
 
           args,
