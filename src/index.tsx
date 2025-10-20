@@ -24248,7 +24248,7 @@ async (...args) =>
           ],
 
           children: [
-            `Condomínio`
+            `ADICIONAR ETAPA`
           ],
 
           args,
@@ -28074,7 +28074,7 @@ async (...args) =>
           ],
 
           children: [
-            `Condomínio`
+            `ADICIONAR ETAPA`
           ],
 
           args,
@@ -32575,7 +32575,7 @@ async (...args) =>
           ],
 
           children: [
-            `Condomínio`
+            `ADICIONAR ETAPA`
           ],
 
           args,
