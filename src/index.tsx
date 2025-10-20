@@ -37090,7 +37090,7 @@ async (...args) =>
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("c5steps");
+          return tools.goTo("c2edit");
         }
         ]
  , trigger: 'on press'
@@ -38169,7 +38169,7 @@ async (...args) =>
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("c5steps");
+          return tools.goTo("c2edit");
         }
         ]
  , trigger: 'on press'
