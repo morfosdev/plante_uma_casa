@@ -7439,7 +7439,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Nome`
           ],
 
           args,
@@ -7447,7 +7447,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -7493,7 +7493,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Endereço`
+            `E-mail`
           ],
 
           args,
@@ -7501,7 +7501,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Rua das Flores, 123',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -7547,7 +7547,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
+            `Área de Atuação`
           ],
 
           args,
@@ -7555,7 +7555,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'DD/MM/AAAA',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -12295,7 +12295,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Nome`
           ],
 
           args,
@@ -12303,7 +12303,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -12349,7 +12349,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Endereço`
+            `E-mail`
           ],
 
           args,
@@ -12357,7 +12357,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Rua das Flores, 123',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -12403,7 +12403,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
+            `Área de Atuação`
           ],
 
           args,
@@ -12411,7 +12411,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'DD/MM/AAAA',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -17058,7 +17058,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Nome`
           ],
 
           args,
@@ -17066,7 +17066,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -17112,7 +17112,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Endereço`
+            `E-mail`
           ],
 
           args,
@@ -17120,7 +17120,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Rua das Flores, 123',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -17166,7 +17166,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
+            `Área de Atuação`
           ],
 
           args,
@@ -17174,7 +17174,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'DD/MM/AAAA',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -21839,7 +21839,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Nome`
           ],
 
           args,
@@ -21847,7 +21847,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -21893,7 +21893,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Endereço`
+            `E-mail`
           ],
 
           args,
@@ -21901,7 +21901,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Rua das Flores, 123',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -21947,7 +21947,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
+            `Área de Atuação`
           ],
 
           args,
@@ -21955,7 +21955,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'DD/MM/AAAA',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
