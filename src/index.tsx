@@ -7725,7 +7725,7 @@ async (...args) =>
         }}), async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const rawName = tools.getCtData('sc');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -12419,7 +12419,7 @@ async (...args) =>
         }}), async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const rawName = tools.getCtData('sc');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -17048,7 +17048,7 @@ async (...args) =>
         }}), async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const rawName = tools.getCtData('sc');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -21667,7 +21667,7 @@ async (...args) =>
         }}), async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const rawName = tools.getCtData('sc');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
