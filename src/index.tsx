@@ -3004,98 +3004,70 @@ justifyContent: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  console.log('Login Firebase c/ Email e Senha');
-
-  const rawEmail = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
-  const rawSenha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
-  const email = (rawEmail ?? '').trim();
-  const senha = rawSenha ?? '';
-
-  if (!email || !senha) {
-    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
-    tools.setData({
-      path: 'sc.A0.forms.msgs.msg1',
-      value: 'Informe e-mail e senha.',
-    });
-    return;
-  }
-
-  // Auth
-  const { getAuth, signInWithEmailAndPassword } = await import('firebase/auth');
-
-  // Garantir app inicializado
-  let fbInit = tools.getCtData('all.temp.fireInit');
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import('firebase/app');
-    const cfg = tools.getCtData('all.temp.fireConfig'); // opcional: pegue sua config do CT
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
-  }
-
-  const auth = getAuth(fbInit);
-  console.log('Login Firebase c/ Email e Senha → auth ok');
-
   try {
-    const cred = await signInWithEmailAndPassword(auth, email, senha);
-    console.log('Usuário logado:', cred.user.uid);
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
 
-    // Firestore
-    const { getFirestore, doc, getDoc } = await import('firebase/firestore');
-    const db = getFirestore(fbInit);
+    const name = (tools.getCtData(pathName) ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
+    console.log({ name, email });
 
-    const snap = await getDoc(doc(db, 'users', cred.user.uid));
-    if (!snap.exists()) {
-      // Opcional: crie doc padrão em vez de lançar erro
-      // import { setDoc } from "firebase/firestore"; await setDoc(doc(db,"users", cred.user.uid), { typeAccount:"app", userAuthID: cred.user.uid, userEmail: email });
-      throw new Error('PERFIL_INEXISTENTE');
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
+    console.log({ validateEmail: validateEmail(email) });
+
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
     }
 
-    const data = snap.data();
+    // Auth
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+      await import('firebase/auth');
 
-    // Guarda no seu state/context
-    tools.setData({
-      path: 'all.authUser',
-      value: { uid: cred.user.uid, email: cred.user.email, ...data },
-    });
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
 
-    // Roteamento por tipo de conta
-    const typeAccount = data?.typeAccount; // "adm" | "app" | "partner"
-    if (typeAccount === 'adm') tools.goTo('a4list');
-    else if (typeAccount === 'app') tools.goTo('b1list');
-    else if (typeAccount === 'partner') tools.goTo('a2list');
-    else {
-      // fallback
-      tools.setData({ path: 'sc.A0.forms.showErr', value: true });
-      tools.setData({
-        path: 'sc.A0.forms.msgs.msg1',
-        value:
-          'O email ' +
-          cred.user.email +
-          ' não tem permissão de acesso. Contate o Administrador.',
-      });
+    const tempPass = '123456'; // ou gere uma senha aleatória
+    console.log({ tempPass });
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
     }
 
-    return cred.user;
-  } catch (err: any) {
-    console.error('Erro no login:', err);
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    {
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import('firebase/firestore');
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
-    const code = err?.code || err?.message || '';
-    let msg = 'Email ou Senha inválidos.';
+      const uid = cred.user.uid;
+      const dataToSet = {
+        docId: uid,
+        createdAt: serverTimestamp(),
+        userName: name,
+        userEmail: email,
+        typeAccount: "partner",
+      };
 
-    if (code.includes('auth/invalid-email')) msg = 'E-mail inválido.';
-    else if (
-      code.includes('auth/wrong-password') ||
-      code.includes('auth/user-not-found')
-    )
-      msg = 'Usuário ou senha incorretos.';
-    else if (code.includes('auth/too-many-requests'))
-      msg = 'Muitas tentativas. Aguarde alguns minutos.';
-    else if (code.includes('PERFIL_INEXISTENTE'))
-      msg = 'Perfil do usuário não encontrado. Contate o suporte.';
+      await setDoc(doc(db, 'users', uid), dataToSet, { merge: true });
+      console.log('users doc criado/atualizado:', { uid, dataToSet });
+    }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: msg });
-    return;
+    // (opcional) enviar verificação
+    await sendEmailVerification(cred.user);
+
+    // sucesso...
+  } catch (e: any) {
+    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }]
  , trigger: 'on press'
