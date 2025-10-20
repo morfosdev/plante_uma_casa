@@ -7725,7 +7725,7 @@ async (...args) =>
         }}), async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc');
+    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -12419,7 +12419,7 @@ async (...args) =>
         }}), async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc');
+    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -17048,7 +17048,7 @@ async (...args) =>
         }}), async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc');
+    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -21667,7 +21667,7 @@ async (...args) =>
         }}), async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc');
+    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -36127,70 +36127,40 @@ async (...args) =>
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
 
-            styles:[`{ 
-	width: "100%",
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`],
+          children: [
+            `Nome Completo`
+          ],
 
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.IptPicker pass={{
- configs: [`{
-	searchable: true,
-	pathItems: "sc.B3.statics.picker1",
-	maxVisibleItems: 8,
-	style: {backgroundColor: "#fff"},
-	inputStyle: {
-		backgroundColor: "#fff"
-	},
-	dropdownStyle: {
-		backgroundColor: "#fff"
-	},
-	itemStyle: {
-		backgroundColor: "#fff"
-	}
-}`], arrFuncs: [async (...args) =>
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.c2.iptsChanges.fullName`],
+
+          funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.B3.forms.iptsChanges.options`],
+          keyPath: [`sc.c2.iptsChanges.fullName`],
           value: [`$arg_callback`]
-        }})], args 
- }}/>, (...args:any) => <Elements.IptPicker pass={{
- configs: [`{
-	// -- configs
-	searchable: true,
-	pathItems: "sc.B3.statics.picker1",
-	maxVisibleItems: 8,
-	
-	// -- styles
-	style: {
-		borderBottomColor: "#ccc",
-		borderBottomWidth: 2,
-	},
-	inputStyle: {
-		borderWidth: 0,
-	},
-	dropdownStyle: {
-		backgroundColor: "#fff"
-	},
-	itemStyle: {
-		backgroundColor: "#fff"
-	}
-}`], arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B3.forms.iptsChanges.options`],
-          value: [`$arg_callback`]
-        }})], args 
- }}/>],
+        }})],
 
-            args,
-          }}/>
-        ],
+          args,
+        }}/>],
             args,
         }}/>],
 
