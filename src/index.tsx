@@ -7696,7 +7696,7 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ color: "red" }`
           ],
 
           children: [
@@ -12454,7 +12454,7 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ color: "red" }`
           ],
 
           children: [
@@ -17147,7 +17147,7 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ color: "red" }`
           ],
 
           children: [
@@ -21830,7 +21830,7 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{ color: "red" }`
           ],
 
           children: [
