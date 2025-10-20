@@ -5723,6 +5723,7 @@ color: '#555555',
 backgroundColor: '#f5f5f5',
 padding: 12,
 alignItems: 'center',
+height: '100%',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -5730,14 +5731,16 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{	
+	backgroundColor: 'white',
+	paddingHorizontal: 35,
+	paddingVertical: 8,
+	borderRadius: 22,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -10058,6 +10061,7 @@ color: '#555555',
 backgroundColor: '#f5f5f5',
 padding: 12,
 alignItems: 'center',
+height: '100%',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -10065,14 +10069,16 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{	
+	backgroundColor: 'white',
+	paddingHorizontal: 35,
+	paddingVertical: 8,
+	borderRadius: 22,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -14300,6 +14306,7 @@ color: '#555555',
 backgroundColor: '#f5f5f5',
 padding: 12,
 alignItems: 'center',
+height: '100%',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -14307,14 +14314,16 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{	
+	backgroundColor: 'white',
+	paddingHorizontal: 35,
+	paddingVertical: 8,
+	borderRadius: 22,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -18560,6 +18569,7 @@ color: '#555555',
 backgroundColor: '#f5f5f5',
 padding: 12,
 alignItems: 'center',
+height: '100%',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -18567,14 +18577,16 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{	
+	backgroundColor: 'white',
+	paddingHorizontal: 35,
+	paddingVertical: 8,
+	borderRadius: 22,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
