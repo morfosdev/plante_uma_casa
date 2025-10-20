@@ -36820,6 +36820,8 @@ whereConds ??`
 
             styles:[`{
 		flexDirection: "row",
+		width: "100%",
+		height: "100%",
 }`],
 
             functions:[async (...args) =>
