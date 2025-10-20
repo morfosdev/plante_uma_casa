@@ -7714,6 +7714,9 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
+    console.log("email raw =", JSON.stringify(email)); // mostra \n, , etc.
+    console.log("len =", (email ?? "").length);
+    console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
     console.log({ validateEmail: validateEmail(email) });
 
     if (name === "") return; // nome vazio
@@ -12408,6 +12411,9 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
+    console.log("email raw =", JSON.stringify(email)); // mostra \n, , etc.
+    console.log("len =", (email ?? "").length);
+    console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
     console.log({ validateEmail: validateEmail(email) });
 
     if (name === "") return; // nome vazio
@@ -17037,6 +17043,9 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
+    console.log("email raw =", JSON.stringify(email)); // mostra \n, , etc.
+    console.log("len =", (email ?? "").length);
+    console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
     console.log({ validateEmail: validateEmail(email) });
 
     if (name === "") return; // nome vazio
@@ -21656,6 +21665,9 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
+    console.log("email raw =", JSON.stringify(email)); // mostra \n, , etc.
+    console.log("len =", (email ?? "").length);
+    console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
     console.log({ validateEmail: validateEmail(email) });
 
     if (name === "") return; // nome vazio
