@@ -6925,11 +6925,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -6979,11 +6979,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -7033,11 +7033,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -7086,11 +7086,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -7656,11 +7656,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -11621,11 +11621,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -11675,11 +11675,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -11729,11 +11729,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -11782,11 +11782,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -12352,11 +12352,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -16252,11 +16252,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -16306,11 +16306,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -16360,11 +16360,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -16413,11 +16413,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -16983,11 +16983,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -20873,11 +20873,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -20927,11 +20927,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -20981,11 +20981,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -21034,11 +21034,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -21604,11 +21604,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerActivity`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -36282,6 +36282,7 @@ async (...args) =>
             styles:[`{ flexDirection: "row", }`],
 
             functions:[()=>{}],            childrenItems:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -36291,7 +36292,7 @@ async (...args) =>
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
-  const path = "all.toggles.checkbox1";
+  const path = "all.toggles.checkboxMasculino";
   const currState = tools.getCtData(path);
   tools.functions.setVar({
 		args: '',
@@ -36309,7 +36310,7 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.checkbox1", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.checkboxMasculino", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -36356,7 +36357,7 @@ xmlns="http://www.w3.org/2000/svg"
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.checkbox1", "==", false ]]
+ arrFunctions: [() => [ "all.toggles.checkboxMasculino", "==", false ]]
  , trigger: 'on listen'
 }})],            childrenItems:[() =><></>],
 
@@ -36373,6 +36374,106 @@ xmlns="http://www.w3.org/2000/svg"
 
           children: [
             `Masculino`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "100%", padding: 5, backgroundColor: "#FFF", flexDirection: "row", alignItems: "center"}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkboxFeminino";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "$var_all.colors.secondary", borderRadius: 4, marginRight: 5}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkboxFeminino", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#FFF"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={4.17}
+      d="M33.333 10 15 28.333 6.667 20"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, backgroundColor: "#FFF", borderRadius: 4, borderWidth: 2, borderColor: "#CCC", marginRight: 5}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkboxFeminino", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Feminino`
           ],
 
           args,
