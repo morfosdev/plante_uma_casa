@@ -7681,29 +7681,6 @@ paddingHorizontal: 4,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -12428,29 +12405,6 @@ paddingHorizontal: 4,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -17110,29 +17064,6 @@ paddingHorizontal: 4,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -21773,29 +21704,6 @@ paddingHorizontal: 4,
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -37251,7 +37159,7 @@ async (...args) =>
 
             styles:[`{
 		backgroundColor: "transparent",
-		widht: "20%",
+		widht: "40%",
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
