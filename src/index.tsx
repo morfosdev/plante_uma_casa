@@ -7724,7 +7724,7 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            `{ color: "red" }`
+            `{ color: "green" }`
           ],
 
           children: [
@@ -12522,7 +12522,7 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            `{ color: "red" }`
+            `{ color: "green" }`
           ],
 
           children: [
@@ -17255,7 +17255,7 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            `{ color: "red" }`
+            `{ color: "green" }`
           ],
 
           children: [
@@ -21978,7 +21978,7 @@ paddingHorizontal: 4,
           ],
 
           arrStyles: [
-            `{ color: "red" }`
+            `{ color: "green" }`
           ],
 
           children: [
