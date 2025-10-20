@@ -27917,7 +27917,39 @@ borderRadius: 12,
               }
               ],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -27932,7 +27964,133 @@ borderRadius: 12,
 
           args,
 
-        }}/>],
+        }}/>, (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Contratação de arquiteto/engenheiro`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
@@ -27950,7 +28108,39 @@ borderRadius: 12,
               }
               ],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -27960,12 +28150,42 @@ borderRadius: 12,
           ],
 
           children: [
-            `Contratação de arquiteto/engenheiro`
+            `Elaboração do projeto arquitetônico e complementares (estrutural, elétrico, hidráulico)`
           ],
 
           args,
 
-        }}/>],
+        }}/>, (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
