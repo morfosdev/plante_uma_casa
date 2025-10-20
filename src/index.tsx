@@ -6115,11 +6115,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a1.editChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a1.editChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
@@ -11034,11 +11034,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a1.editChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a1.editChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
@@ -15860,11 +15860,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a1.editChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a1.editChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
@@ -20704,11 +20704,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a1.editChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a1.editChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
