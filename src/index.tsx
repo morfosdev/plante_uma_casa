@@ -7731,7 +7731,7 @@ async () => {
       return;
     }
 
-    if (email === '' || !validateEmail(email)) {
+    if (email === '' || validateEmail(email)) {
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       console.log({ email });
       return;
@@ -12430,7 +12430,7 @@ async () => {
       return;
     }
 
-    if (email === '' || !validateEmail(email)) {
+    if (email === '' || validateEmail(email)) {
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       console.log({ email });
       return;
@@ -17064,7 +17064,7 @@ async () => {
       return;
     }
 
-    if (email === '' || !validateEmail(email)) {
+    if (email === '' || validateEmail(email)) {
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       console.log({ email });
       return;
@@ -21688,7 +21688,7 @@ async () => {
       return;
     }
 
-    if (email === '' || !validateEmail(email)) {
+    if (email === '' || validateEmail(email)) {
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       console.log({ email });
       return;
