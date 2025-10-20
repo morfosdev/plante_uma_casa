@@ -7772,7 +7772,7 @@ paddingVertical: 8,
 
     // ---- Pré-checagem opcional: já existe?
     const methods = await fetchSignInMethodsForEmail(auth, email);
-console.log({ methods });
+    console.log({ methods });
     if (methods.length > 0) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
@@ -7824,9 +7824,14 @@ console.log({ methods });
 
     // sucesso...
   } catch (e: any) {
-    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
+    if (e?.code === 'auth/email-already-in-use') {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return;
+    }
+
     tools.setData({ path: 'sc.A12.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + e.message });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + (e?.message ?? '') });
   }
 }]
  , trigger: 'on press'
@@ -12530,7 +12535,7 @@ paddingVertical: 8,
 
     // ---- Pré-checagem opcional: já existe?
     const methods = await fetchSignInMethodsForEmail(auth, email);
-console.log({ methods });
+    console.log({ methods });
     if (methods.length > 0) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
@@ -12582,9 +12587,14 @@ console.log({ methods });
 
     // sucesso...
   } catch (e: any) {
-    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
+    if (e?.code === 'auth/email-already-in-use') {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return;
+    }
+
     tools.setData({ path: 'sc.A12.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + e.message });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + (e?.message ?? '') });
   }
 }]
  , trigger: 'on press'
@@ -17223,7 +17233,7 @@ paddingVertical: 8,
 
     // ---- Pré-checagem opcional: já existe?
     const methods = await fetchSignInMethodsForEmail(auth, email);
-console.log({ methods });
+    console.log({ methods });
     if (methods.length > 0) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
@@ -17275,9 +17285,14 @@ console.log({ methods });
 
     // sucesso...
   } catch (e: any) {
-    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
+    if (e?.code === 'auth/email-already-in-use') {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return;
+    }
+
     tools.setData({ path: 'sc.A12.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + e.message });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + (e?.message ?? '') });
   }
 }]
  , trigger: 'on press'
@@ -21906,7 +21921,7 @@ paddingVertical: 8,
 
     // ---- Pré-checagem opcional: já existe?
     const methods = await fetchSignInMethodsForEmail(auth, email);
-console.log({ methods });
+    console.log({ methods });
     if (methods.length > 0) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
@@ -21958,9 +21973,14 @@ console.log({ methods });
 
     // sucesso...
   } catch (e: any) {
-    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
+    if (e?.code === 'auth/email-already-in-use') {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return;
+    }
+
     tools.setData({ path: 'sc.A12.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + e.message });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + (e?.message ?? '') });
   }
 }]
  , trigger: 'on press'
