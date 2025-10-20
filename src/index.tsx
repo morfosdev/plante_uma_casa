@@ -37234,9 +37234,8 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-		backgroundColor: "red",
-		widht: "40%",
-		height: "100%",
+		backgroundColor: "transparent",
+		flex: 1,
 }`],
 
             functions:[async (...args) =>
