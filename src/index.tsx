@@ -24944,7 +24944,7 @@ async (...args) =>
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Etapa`
           ],
 
           args,
@@ -28731,7 +28731,7 @@ async (...args) =>
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Etapa`
           ],
 
           args,
@@ -33210,7 +33210,7 @@ async (...args) =>
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Etapa`
           ],
 
           args,
