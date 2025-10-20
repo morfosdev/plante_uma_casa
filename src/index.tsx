@@ -7730,17 +7730,26 @@ paddingVertical: 8,
     }
 
     // Auth
-    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail } =
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail, fetchSignInMethodsForEmail } =
       await import('firebase/auth');
 
     const fbInit = tools.getCtData('all.temp.fireInit');
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    if (methods.length > 0) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return; // quebra o fluxo
+    }
+
     const tempPass = '123456'; // ou gere uma senha aleatória
     console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
+
 
     if (name) {
       await updateProfile(cred.user, { displayName: name });
@@ -7769,6 +7778,15 @@ paddingVertical: 8,
     // (opcional) enviar verificação
     await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email);
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso' });
+
+    // const delay = () => {
+    //   tools.setData({ path: 'all.toggles.sideRight', value: false });
+    //   tools.setData({ path: 'all.toggles.a12.add', value: false });
+    // }
 
     // sucesso...
   } catch (e: any) {
@@ -12436,17 +12454,26 @@ paddingVertical: 8,
     }
 
     // Auth
-    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail } =
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail, fetchSignInMethodsForEmail } =
       await import('firebase/auth');
 
     const fbInit = tools.getCtData('all.temp.fireInit');
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    if (methods.length > 0) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return; // quebra o fluxo
+    }
+
     const tempPass = '123456'; // ou gere uma senha aleatória
     console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
+
 
     if (name) {
       await updateProfile(cred.user, { displayName: name });
@@ -12475,6 +12502,15 @@ paddingVertical: 8,
     // (opcional) enviar verificação
     await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email);
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso' });
+
+    // const delay = () => {
+    //   tools.setData({ path: 'all.toggles.sideRight', value: false });
+    //   tools.setData({ path: 'all.toggles.a12.add', value: false });
+    // }
 
     // sucesso...
   } catch (e: any) {
@@ -17077,17 +17113,26 @@ paddingVertical: 8,
     }
 
     // Auth
-    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail } =
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail, fetchSignInMethodsForEmail } =
       await import('firebase/auth');
 
     const fbInit = tools.getCtData('all.temp.fireInit');
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    if (methods.length > 0) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return; // quebra o fluxo
+    }
+
     const tempPass = '123456'; // ou gere uma senha aleatória
     console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
+
 
     if (name) {
       await updateProfile(cred.user, { displayName: name });
@@ -17116,6 +17161,15 @@ paddingVertical: 8,
     // (opcional) enviar verificação
     await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email);
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso' });
+
+    // const delay = () => {
+    //   tools.setData({ path: 'all.toggles.sideRight', value: false });
+    //   tools.setData({ path: 'all.toggles.a12.add', value: false });
+    // }
 
     // sucesso...
   } catch (e: any) {
@@ -21708,17 +21762,26 @@ paddingVertical: 8,
     }
 
     // Auth
-    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail } =
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail, fetchSignInMethodsForEmail } =
       await import('firebase/auth');
 
     const fbInit = tools.getCtData('all.temp.fireInit');
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    if (methods.length > 0) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return; // quebra o fluxo
+    }
+
     const tempPass = '123456'; // ou gere uma senha aleatória
     console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
+
 
     if (name) {
       await updateProfile(cred.user, { displayName: name });
@@ -21747,6 +21810,15 @@ paddingVertical: 8,
     // (opcional) enviar verificação
     await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email);
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso' });
+
+    // const delay = () => {
+    //   tools.setData({ path: 'all.toggles.sideRight', value: false });
+    //   tools.setData({ path: 'all.toggles.a12.add', value: false });
+    // }
 
     // sucesso...
   } catch (e: any) {
