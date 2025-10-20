@@ -25497,28 +25497,7 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `mockCondos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`TBD`],
             arrPathData: [`sc.b8.editChanges`],
@@ -29298,28 +29277,7 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `mockCondos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`TBD`],
             arrPathData: [`sc.b8.editChanges`],
@@ -33791,28 +33749,7 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `mockCondos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`TBD`],
             arrPathData: [`sc.b8.editChanges`],
