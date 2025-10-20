@@ -26652,7 +26652,8 @@ async (...args) =>
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [{
@@ -26666,6 +26667,40 @@ async (...args) =>
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b8.editChanges.responsible`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Descrição detalhada`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.b8.editChanges.description`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.b8.editChanges.description`],
           value: [`$arg_callback`]
         }})],
 
@@ -30398,7 +30433,8 @@ async (...args) =>
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [{
@@ -30412,6 +30448,40 @@ async (...args) =>
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b8.editChanges.responsible`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Descrição detalhada`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.b8.editChanges.description`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.b8.editChanges.description`],
           value: [`$arg_callback`]
         }})],
 
@@ -34836,7 +34906,8 @@ async (...args) =>
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [{
@@ -34850,6 +34921,40 @@ async (...args) =>
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b8.editChanges.responsible`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Descrição detalhada`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.b8.editChanges.description`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.b8.editChanges.description`],
           value: [`$arg_callback`]
         }})],
 
