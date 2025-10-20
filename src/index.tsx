@@ -7854,7 +7854,7 @@ paddingVertical: 8,
     }
     // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
-    const link = await auth.generatePasswordResetLink(email, acs);
+    const link = await getAuth().generatePasswordResetLink(email, acs);
     console.log({ link });
 
 
@@ -12668,7 +12668,7 @@ paddingVertical: 8,
     }
     // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
-    const link = await auth.generatePasswordResetLink(email, acs);
+    const link = await getAuth().generatePasswordResetLink(email, acs);
     console.log({ link });
 
 
@@ -17417,7 +17417,7 @@ paddingVertical: 8,
     }
     // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
-    const link = await auth.generatePasswordResetLink(email, acs);
+    const link = await getAuth().generatePasswordResetLink(email, acs);
     console.log({ link });
 
 
@@ -22156,7 +22156,7 @@ paddingVertical: 8,
     }
     // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
-    const link = await auth.generatePasswordResetLink(email, acs);
+    const link = await getAuth().generatePasswordResetLink(email, acs);
     console.log({ link });
 
 
