@@ -7714,6 +7714,8 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
+    console.log({ validateEmail: validateEmail(email) });
+
     if (name === "") return; // nome vazio
     if (email === "" || !validateEmail(email)) return; // e-mail inválido
 
@@ -7741,8 +7743,7 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}
-, async (...args) =>
+}, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -12407,6 +12408,8 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
+    console.log({ validateEmail: validateEmail(email) });
+
     if (name === "") return; // nome vazio
     if (email === "" || !validateEmail(email)) return; // e-mail inválido
 
@@ -12434,8 +12437,7 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}
-, async (...args) =>
+}, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -17035,6 +17037,8 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
+    console.log({ validateEmail: validateEmail(email) });
+
     if (name === "") return; // nome vazio
     if (email === "" || !validateEmail(email)) return; // e-mail inválido
 
@@ -17062,8 +17066,7 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}
-, async (...args) =>
+}, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -21653,6 +21656,8 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
+    console.log({ validateEmail: validateEmail(email) });
+
     if (name === "") return; // nome vazio
     if (email === "" || !validateEmail(email)) return; // e-mail inválido
 
@@ -21680,8 +21685,7 @@ async () => {
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
-}
-, async (...args) =>
+}, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
