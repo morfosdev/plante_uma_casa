@@ -37242,7 +37242,7 @@ async (...args) =>
           ],
 
           children: [
-            `Meu Perfil`
+            `Etapas`
           ],
 
           args,
