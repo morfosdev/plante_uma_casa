@@ -36026,125 +36026,37 @@ async (...args) =>
 
             styles:[
         `{ 
-	backgroundColor: "$var_all.colors.primary",
-	alignItems: "center",
-}
-
-`, `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+ }`, `{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 35,
+	height: 70,
+}`],
 
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
+            functions:[()=>{}],            childrenItems:[
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
+            styles:[`{ flex: 1 }`],
 
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
-      },
+            functions:[()=>{}],            childrenItems:[
 
-      svgOriginal: `
-        <svg></svg>
-      `,
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
 
-      altura: "16px",
+      styles:[{
+	width: 98,
+	height: 59,
+}],
 
-      largura: "16px",
-
-      preenchimento: ['black'],
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
 
       args,
     }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-	color: "#FFF"
-}`
-          ],
-
-          children: [
-            `Título`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
