@@ -7722,8 +7722,40 @@ async (...args) =>
           keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
-        }}), () => {
-	console.log({oi: "login"});
+        }}), async () => {
+  console.log({ oi: "login" });
+  try {
+    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const name = (rawName ?? '').trim();
+    const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
+    const email = (rawEmail ?? '').trim();
+
+    const validateEmail = (email: string) => {
+      const re = /^[^s@]+@[^s@]+.[^s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    if (!name) {
+      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      return;
+    }
+
+    if (!email || !validateEmail(email)) {
+      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      return;
+    }
+
+    // Auth
+    const { createUserWithEmailAndPassword } = await import('firebase/auth');
+
+    await createUserWithEmailAndPassword(email, '123456', name);
+    Alert.alert(
+      "Conta criada",
+      "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    );
+  } catch (e: any) {
+    Alert.alert("Erro no cadastro", e.message);
+  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -12378,8 +12410,40 @@ async (...args) =>
           keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
-        }}), () => {
-	console.log({oi: "login"});
+        }}), async () => {
+  console.log({ oi: "login" });
+  try {
+    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const name = (rawName ?? '').trim();
+    const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
+    const email = (rawEmail ?? '').trim();
+
+    const validateEmail = (email: string) => {
+      const re = /^[^s@]+@[^s@]+.[^s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    if (!name) {
+      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      return;
+    }
+
+    if (!email || !validateEmail(email)) {
+      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      return;
+    }
+
+    // Auth
+    const { createUserWithEmailAndPassword } = await import('firebase/auth');
+
+    await createUserWithEmailAndPassword(email, '123456', name);
+    Alert.alert(
+      "Conta criada",
+      "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    );
+  } catch (e: any) {
+    Alert.alert("Erro no cadastro", e.message);
+  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -16969,8 +17033,40 @@ async (...args) =>
           keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
-        }}), () => {
-	console.log({oi: "login"});
+        }}), async () => {
+  console.log({ oi: "login" });
+  try {
+    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const name = (rawName ?? '').trim();
+    const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
+    const email = (rawEmail ?? '').trim();
+
+    const validateEmail = (email: string) => {
+      const re = /^[^s@]+@[^s@]+.[^s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    if (!name) {
+      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      return;
+    }
+
+    if (!email || !validateEmail(email)) {
+      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      return;
+    }
+
+    // Auth
+    const { createUserWithEmailAndPassword } = await import('firebase/auth');
+
+    await createUserWithEmailAndPassword(email, '123456', name);
+    Alert.alert(
+      "Conta criada",
+      "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    );
+  } catch (e: any) {
+    Alert.alert("Erro no cadastro", e.message);
+  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -21550,8 +21646,40 @@ async (...args) =>
           keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
-        }}), () => {
-	console.log({oi: "login"});
+        }}), async () => {
+  console.log({ oi: "login" });
+  try {
+    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const name = (rawName ?? '').trim();
+    const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
+    const email = (rawEmail ?? '').trim();
+
+    const validateEmail = (email: string) => {
+      const re = /^[^s@]+@[^s@]+.[^s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    if (!name) {
+      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      return;
+    }
+
+    if (!email || !validateEmail(email)) {
+      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      return;
+    }
+
+    // Auth
+    const { createUserWithEmailAndPassword } = await import('firebase/auth');
+
+    await createUserWithEmailAndPassword(email, '123456', name);
+    Alert.alert(
+      "Conta criada",
+      "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    );
+  } catch (e: any) {
+    Alert.alert("Erro no cadastro", e.message);
+  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
