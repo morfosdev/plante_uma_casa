@@ -6871,11 +6871,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerMail`],
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerMail`],
+          keyPath: [`sc.A12.forms.iptsChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -7603,11 +7603,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerMail`],
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerMail`],
+          keyPath: [`sc.A12.forms.iptsChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -11564,11 +11564,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerMail`],
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerMail`],
+          keyPath: [`sc.A12.forms.iptsChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -12296,11 +12296,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerMail`],
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerMail`],
+          keyPath: [`sc.A12.forms.iptsChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -16192,11 +16192,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerMail`],
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerMail`],
+          keyPath: [`sc.A12.forms.iptsChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -16924,11 +16924,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerMail`],
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerMail`],
+          keyPath: [`sc.A12.forms.iptsChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -20810,11 +20810,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerMail`],
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerMail`],
+          keyPath: [`sc.A12.forms.iptsChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -21542,11 +21542,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A12.iptsChanges.partnerMail`],
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.iptsChanges.partnerMail`],
+          keyPath: [`sc.A12.forms.iptsChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
