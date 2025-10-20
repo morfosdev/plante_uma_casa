@@ -7744,7 +7744,6 @@ async () => {
 
     // sucesso...
   } catch (e: any) {
-    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -12441,7 +12440,6 @@ async () => {
 
     // sucesso...
   } catch (e: any) {
-    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -17073,7 +17071,6 @@ async () => {
 
     // sucesso...
   } catch (e: any) {
-    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -21695,7 +21692,6 @@ async () => {
 
     // sucesso...
   } catch (e: any) {
-    // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
