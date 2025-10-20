@@ -35965,7 +35965,6 @@ async (...args) =>
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -35977,7 +35976,7 @@ async (...args) =>
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("b1home");
+          return tools.goTo("c2register");
         }
         ]
  , trigger: 'on press'
@@ -36000,9 +35999,7 @@ async (...args) =>
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(images) => {console.log({images});}], args,
- }}/>],
+        ],
 
             args,
           }}/>
