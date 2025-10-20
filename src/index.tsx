@@ -36212,7 +36212,8 @@ async (...args) =>
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [{
@@ -36226,6 +36227,40 @@ async (...args) =>
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.C2.iptsChanges.phone`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Endereço`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.C2.iptsChanges.address`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C2.iptsChanges.address`],
           value: [`$arg_callback`]
         }})],
 
