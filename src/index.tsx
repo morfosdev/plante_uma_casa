@@ -6169,11 +6169,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a1.editChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a1.editChanges.address`],
           value: [`$arg_callback`]
         }})],
 
@@ -11088,11 +11088,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a1.editChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a1.editChanges.address`],
           value: [`$arg_callback`]
         }})],
 
@@ -15914,11 +15914,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a1.editChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a1.editChanges.address`],
           value: [`$arg_callback`]
         }})],
 
@@ -20758,11 +20758,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a1.editChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a1.editChanges.address`],
           value: [`$arg_callback`]
         }})],
 
