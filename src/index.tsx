@@ -7723,7 +7723,7 @@ async (...args) =>
           value: [false]
         }})],
         }}), async () => {
-  console.log({ oi: "login" });
+  console.log({ oi: "login", tools });
   try {
     const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
     console.log({ rawName });
@@ -12417,7 +12417,7 @@ async (...args) =>
           value: [false]
         }})],
         }}), async () => {
-  console.log({ oi: "login" });
+  console.log({ oi: "login", tools });
   try {
     const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
     console.log({ rawName });
@@ -17046,7 +17046,7 @@ async (...args) =>
           value: [false]
         }})],
         }}), async () => {
-  console.log({ oi: "login" });
+  console.log({ oi: "login", tools });
   try {
     const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
     console.log({ rawName });
@@ -21665,7 +21665,7 @@ async (...args) =>
           value: [false]
         }})],
         }}), async () => {
-  console.log({ oi: "login" });
+  console.log({ oi: "login", tools });
   try {
     const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
     console.log({ rawName });
