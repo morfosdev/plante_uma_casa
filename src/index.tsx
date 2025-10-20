@@ -36012,7 +36012,7 @@ async (...args) =>
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"c2register",
+          pathScreen:"c1home",
 
           styles:[
         `{ backgroundColor: "$var_all.colors.smoke" }`, 
@@ -36632,7 +36632,7 @@ whereConds ??`
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"c3form",
+          pathScreen:"c2register",
 
           styles:[
         `{ backgroundColor: "$var_all.colors.smoke" }`, 
