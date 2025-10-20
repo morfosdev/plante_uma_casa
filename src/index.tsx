@@ -7702,7 +7702,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -7721,7 +7722,9 @@ paddingVertical: 8,
           keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
-        }})]
+        }}), () => {
+	console.log({oi: "login"});
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -12355,7 +12358,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -12374,7 +12378,9 @@ paddingVertical: 8,
           keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
-        }})]
+        }}), () => {
+	console.log({oi: "login"});
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -16915,7 +16921,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -16934,7 +16941,9 @@ paddingVertical: 8,
           keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
-        }})]
+        }}), () => {
+	console.log({oi: "login"});
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -21493,7 +21502,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
             arrPathData: [`sc.a12.iptChanges`],
@@ -21512,7 +21522,9 @@ paddingVertical: 8,
           keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
-        }})]
+        }}), () => {
+	console.log({oi: "login"});
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
