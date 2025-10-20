@@ -7706,9 +7706,11 @@ paddingVertical: 8,
   try {
     const pathName = 'sc.A12.forms.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
+    const pathPartner = 'sc.A12.forms.iptsChanges.partnerActivity';
 
     const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
+    const partnerActivity = (tools.getCtData(pathPartner) ?? '').trim();
     console.log({ name, email });
 
     const validateEmail = (v: string) => v.includes('@') && v.includes('.');
@@ -7726,7 +7728,7 @@ paddingVertical: 8,
     }
 
     // Auth
-    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail } =
       await import('firebase/auth');
 
     const fbInit = tools.getCtData('all.temp.fireInit');
@@ -7753,6 +7755,7 @@ paddingVertical: 8,
         createdAt: serverTimestamp(),
         userName: name,
         userEmail: email,
+        partnerActivity,
         typeAccount: "partner",
       };
 
@@ -7763,10 +7766,13 @@ paddingVertical: 8,
 
     // (opcional) enviar verificação
     await sendEmailVerification(cred.user);
+    await sendPasswordResetEmail(auth, email);
 
     // sucesso...
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
+    tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + e.message });
   }
 }]
  , trigger: 'on press'
@@ -12406,9 +12412,11 @@ paddingVertical: 8,
   try {
     const pathName = 'sc.A12.forms.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
+    const pathPartner = 'sc.A12.forms.iptsChanges.partnerActivity';
 
     const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
+    const partnerActivity = (tools.getCtData(pathPartner) ?? '').trim();
     console.log({ name, email });
 
     const validateEmail = (v: string) => v.includes('@') && v.includes('.');
@@ -12426,7 +12434,7 @@ paddingVertical: 8,
     }
 
     // Auth
-    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail } =
       await import('firebase/auth');
 
     const fbInit = tools.getCtData('all.temp.fireInit');
@@ -12453,6 +12461,7 @@ paddingVertical: 8,
         createdAt: serverTimestamp(),
         userName: name,
         userEmail: email,
+        partnerActivity,
         typeAccount: "partner",
       };
 
@@ -12463,10 +12472,13 @@ paddingVertical: 8,
 
     // (opcional) enviar verificação
     await sendEmailVerification(cred.user);
+    await sendPasswordResetEmail(auth, email);
 
     // sucesso...
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
+    tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + e.message });
   }
 }]
  , trigger: 'on press'
@@ -17041,9 +17053,11 @@ paddingVertical: 8,
   try {
     const pathName = 'sc.A12.forms.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
+    const pathPartner = 'sc.A12.forms.iptsChanges.partnerActivity';
 
     const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
+    const partnerActivity = (tools.getCtData(pathPartner) ?? '').trim();
     console.log({ name, email });
 
     const validateEmail = (v: string) => v.includes('@') && v.includes('.');
@@ -17061,7 +17075,7 @@ paddingVertical: 8,
     }
 
     // Auth
-    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail } =
       await import('firebase/auth');
 
     const fbInit = tools.getCtData('all.temp.fireInit');
@@ -17088,6 +17102,7 @@ paddingVertical: 8,
         createdAt: serverTimestamp(),
         userName: name,
         userEmail: email,
+        partnerActivity,
         typeAccount: "partner",
       };
 
@@ -17098,10 +17113,13 @@ paddingVertical: 8,
 
     // (opcional) enviar verificação
     await sendEmailVerification(cred.user);
+    await sendPasswordResetEmail(auth, email);
 
     // sucesso...
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
+    tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + e.message });
   }
 }]
  , trigger: 'on press'
@@ -21666,9 +21684,11 @@ paddingVertical: 8,
   try {
     const pathName = 'sc.A12.forms.iptsChanges.partnerName';
     const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
+    const pathPartner = 'sc.A12.forms.iptsChanges.partnerActivity';
 
     const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
+    const partnerActivity = (tools.getCtData(pathPartner) ?? '').trim();
     console.log({ name, email });
 
     const validateEmail = (v: string) => v.includes('@') && v.includes('.');
@@ -21686,7 +21706,7 @@ paddingVertical: 8,
     }
 
     // Auth
-    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail } =
       await import('firebase/auth');
 
     const fbInit = tools.getCtData('all.temp.fireInit');
@@ -21713,6 +21733,7 @@ paddingVertical: 8,
         createdAt: serverTimestamp(),
         userName: name,
         userEmail: email,
+        partnerActivity,
         typeAccount: "partner",
       };
 
@@ -21723,10 +21744,13 @@ paddingVertical: 8,
 
     // (opcional) enviar verificação
     await sendEmailVerification(cred.user);
+    await sendPasswordResetEmail(auth, email);
 
     // sucesso...
   } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
+    tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + e.message });
   }
 }]
  , trigger: 'on press'
