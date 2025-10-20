@@ -27432,15 +27432,11 @@ shadowRadius: 4,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [true]
-        }})]
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("home");
+        }
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -30998,7 +30994,20 @@ borderRadius: 12,
               }
               ],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b8.addSteps`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
