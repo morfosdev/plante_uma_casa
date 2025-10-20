@@ -7712,11 +7712,7 @@ async () => {
     const email = (tools.getCtData(pathEmail) ?? '').trim();
     console.log({ name, email });
 
-    const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
-
-    console.log("email raw =", JSON.stringify(email));
-    console.log("len =", (email ?? "").length);
-    console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
     console.log({ validateEmail: validateEmail(email) });
 
     if (name === "") return; // nome vazio
@@ -7743,7 +7739,7 @@ async () => {
     await sendEmailVerification(cred.user);
 
     // sucesso...
-  } catch (e) {
+  } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
@@ -12409,11 +12405,7 @@ async () => {
     const email = (tools.getCtData(pathEmail) ?? '').trim();
     console.log({ name, email });
 
-    const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
-
-    console.log("email raw =", JSON.stringify(email));
-    console.log("len =", (email ?? "").length);
-    console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
     console.log({ validateEmail: validateEmail(email) });
 
     if (name === "") return; // nome vazio
@@ -12440,7 +12432,7 @@ async () => {
     await sendEmailVerification(cred.user);
 
     // sucesso...
-  } catch (e) {
+  } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
@@ -17041,11 +17033,7 @@ async () => {
     const email = (tools.getCtData(pathEmail) ?? '').trim();
     console.log({ name, email });
 
-    const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
-
-    console.log("email raw =", JSON.stringify(email));
-    console.log("len =", (email ?? "").length);
-    console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
     console.log({ validateEmail: validateEmail(email) });
 
     if (name === "") return; // nome vazio
@@ -17072,7 +17060,7 @@ async () => {
     await sendEmailVerification(cred.user);
 
     // sucesso...
-  } catch (e) {
+  } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
@@ -21663,11 +21651,7 @@ async () => {
     const email = (tools.getCtData(pathEmail) ?? '').trim();
     console.log({ name, email });
 
-    const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
-
-    console.log("email raw =", JSON.stringify(email));
-    console.log("len =", (email ?? "").length);
-    console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
     console.log({ validateEmail: validateEmail(email) });
 
     if (name === "") return; // nome vazio
@@ -21694,7 +21678,7 @@ async () => {
     await sendEmailVerification(cred.user);
 
     // sucesso...
-  } catch (e) {
+  } catch (e: any) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
