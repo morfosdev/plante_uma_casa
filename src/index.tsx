@@ -37518,37 +37518,113 @@ async (...args) =>
 
             styles:[
         `{ 
+	backgroundColor: "$var_all.colors.primary",
+	alignItems: "center",
+}
+
+`, `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
-	backgroundColor: "$var_all.colors.primary",
-	paddingHorizontal: 35,
-	height: 70,
-}`],
+ }`],
 
             functions:[()=>{}],            childrenItems:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
+width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
+<Path       stroke="#FFF"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
+      },
 
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
+      svgOriginal: `
+        <svg></svg>
+      `,
 
-      styles:[{
-	width: 98,
-	height: 59,
-}],
+      altura: "16px",
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
+      largura: "16px",
+
+      preenchimento: ['black'],
 
       args,
     }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{ padding: 10 }`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: "$var_all.texts.sizes.large",
+	color: "#FFF"
+}`
+          ],
+
+          children: [
+            `Título`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
