@@ -7845,8 +7845,13 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    await sendEmailVerification(cred.user);
-    await sendPasswordResetEmail(auth, email);
+    const host = window.location.origin;
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+    // await sendEmailVerification(cred.user);
+    await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
@@ -12649,8 +12654,13 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    await sendEmailVerification(cred.user);
-    await sendPasswordResetEmail(auth, email);
+    const host = window.location.origin;
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+    // await sendEmailVerification(cred.user);
+    await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
@@ -17388,8 +17398,13 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    await sendEmailVerification(cred.user);
-    await sendPasswordResetEmail(auth, email);
+    const host = window.location.origin;
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+    // await sendEmailVerification(cred.user);
+    await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
@@ -22117,8 +22132,13 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    await sendEmailVerification(cred.user);
-    await sendPasswordResetEmail(auth, email);
+    const host = window.location.origin;
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+    // await sendEmailVerification(cred.user);
+    await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
