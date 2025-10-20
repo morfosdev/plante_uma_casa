@@ -7845,9 +7845,9 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = "http://localhost:5173";
-    // const host = "http://projeto-plante-uma-casa.web.app";
-
+    const host = window.location.origin;
+    console.log({ location: window.location });
+    console.log({ host })
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -12656,9 +12656,9 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = "http://localhost:5173";
-    // const host = "http://projeto-plante-uma-casa.web.app";
-
+    const host = window.location.origin;
+    console.log({ location: window.location });
+    console.log({ host })
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -17402,9 +17402,9 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = "http://localhost:5173";
-    // const host = "http://projeto-plante-uma-casa.web.app";
-
+    const host = window.location.origin;
+    console.log({ location: window.location });
+    console.log({ host })
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -22138,9 +22138,9 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = "http://localhost:5173";
-    // const host = "http://projeto-plante-uma-casa.web.app";
-
+    const host = window.location.origin;
+    console.log({ location: window.location });
+    console.log({ host })
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
@@ -37743,25 +37743,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.C2.iptsChanges.rg`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.iptsChanges.rg`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -37812,25 +37793,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.C2.iptsChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.iptsChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -38045,6 +38007,7 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -38096,7 +38059,38 @@ xmlns="http://www.w3.org/2000/svg"
 
             args,
           }}/>
-        ],
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `$var_sc.C2.editData.rg`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `$var_sc.C2.editData.rg`
+          ],
+
+          args,
+
+        }}/>],
             args,
         }}/>],
 
