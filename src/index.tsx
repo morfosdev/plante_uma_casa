@@ -36418,7 +36418,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"c2list",
+          pathScreen:"c2register",
 
           styles:[
         `{ backgroundColor: "$var_all.colors.smoke" }`, 
