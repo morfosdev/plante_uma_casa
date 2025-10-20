@@ -1438,9 +1438,11 @@ xmlns="http://www.w3.org/2000/svg"
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b2list")
-}]
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [true]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -3062,7 +3064,7 @@ justifyContent: 'center',
     const typeAccount = data?.typeAccount; // "adm" | "app" | "partner"
     if (typeAccount === 'adm') tools.goTo('a4list');
     else if (typeAccount === 'app') tools.goTo('b1list');
-    else if (typeAccount === 'partner') tools.goTo('b4list');
+    else if (typeAccount === 'partner') tools.goTo('a2list');
     else {
       // fallback
       tools.setData({ path: 'sc.A0.forms.showErr', value: true });
@@ -37190,9 +37192,11 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b2list")
-}]
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [true]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
