@@ -24538,25 +24538,28 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
       },
 
       svgOriginal: `
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "14px",
 
-      largura: "16px",
+      largura: "14px",
 
       preenchimento: ['black'],
 
@@ -28354,25 +28357,28 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
       },
 
       svgOriginal: `
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "14px",
 
-      largura: "16px",
+      largura: "14px",
 
       preenchimento: ['black'],
 
@@ -32845,25 +32851,28 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
+              xmlns="http://www.w3.org/2000/svg"
+              width={20}
+              height={14}
+              viewBox="0 0 20 14"
+              {...props}
+              >
+              <Path
+              fillRule="evenodd"
+              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
+              clipRule="evenodd"
+              {...props}
+              />
+              </Svg>)
       },
 
       svgOriginal: `
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "14px",
 
-      largura: "16px",
+      largura: "14px",
 
       preenchimento: ['black'],
 
