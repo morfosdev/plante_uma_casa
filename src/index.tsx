@@ -26342,7 +26342,7 @@ shadowRadius: 4,
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("home");
+          return tools.goTo("b7list");
         }
         ]
  , trigger: 'on press'
