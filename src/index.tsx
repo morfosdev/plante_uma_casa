@@ -7718,8 +7718,11 @@ async () => {
     console.log({ email });
 
     const validateEmail = (email: string) => {
+      console.log(email);
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
-      return re.test(String(email).toLowerCase());
+      const validate = re.test(String(email).toLowerCase());
+      console.log({ validate });
+      return validate;
     }
 
     if (name === '') {
@@ -12414,8 +12417,11 @@ async () => {
     console.log({ email });
 
     const validateEmail = (email: string) => {
+      console.log(email);
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
-      return re.test(String(email).toLowerCase());
+      const validate = re.test(String(email).toLowerCase());
+      console.log({ validate });
+      return validate;
     }
 
     if (name === '') {
@@ -17045,8 +17051,11 @@ async () => {
     console.log({ email });
 
     const validateEmail = (email: string) => {
+      console.log(email);
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
-      return re.test(String(email).toLowerCase());
+      const validate = re.test(String(email).toLowerCase());
+      console.log({ validate });
+      return validate;
     }
 
     if (name === '') {
@@ -21666,8 +21675,11 @@ async () => {
     console.log({ email });
 
     const validateEmail = (email: string) => {
+      console.log(email);
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
-      return re.test(String(email).toLowerCase());
+      const validate = re.test(String(email).toLowerCase());
+      console.log({ validate });
+      return validate;
     }
 
     if (name === '') {
