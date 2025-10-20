@@ -24838,6 +24838,22 @@ async (...args) =>
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Definição do Orçamento`
+          ],
+
+          args,
+
+        }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
@@ -24856,22 +24872,6 @@ async (...args) =>
         }})],
 
           args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
@@ -28587,6 +28587,22 @@ async (...args) =>
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Definição do Orçamento`
+          ],
+
+          args,
+
+        }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
@@ -28605,22 +28621,6 @@ async (...args) =>
         }})],
 
           args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
@@ -33028,6 +33028,22 @@ async (...args) =>
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Definição do Orçamento`
+          ],
+
+          args,
+
+        }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
@@ -33046,22 +33062,6 @@ async (...args) =>
         }})],
 
           args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
