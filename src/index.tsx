@@ -7714,7 +7714,7 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    console.log("email raw =", JSON.stringify(email)); // mostra \n, , etc.
+    console.log("email raw =", JSON.stringify(email));
     console.log("len =", (email ?? "").length);
     console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
     console.log({ validateEmail: validateEmail(email) });
@@ -7743,7 +7743,7 @@ async () => {
     await sendEmailVerification(cred.user);
 
     // sucesso...
-  } catch (e: any) {
+  } catch (e) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
@@ -12411,7 +12411,7 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    console.log("email raw =", JSON.stringify(email)); // mostra \n, , etc.
+    console.log("email raw =", JSON.stringify(email));
     console.log("len =", (email ?? "").length);
     console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
     console.log({ validateEmail: validateEmail(email) });
@@ -12440,7 +12440,7 @@ async () => {
     await sendEmailVerification(cred.user);
 
     // sucesso...
-  } catch (e: any) {
+  } catch (e) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
@@ -17043,7 +17043,7 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    console.log("email raw =", JSON.stringify(email)); // mostra \n, , etc.
+    console.log("email raw =", JSON.stringify(email));
     console.log("len =", (email ?? "").length);
     console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
     console.log({ validateEmail: validateEmail(email) });
@@ -17072,7 +17072,7 @@ async () => {
     await sendEmailVerification(cred.user);
 
     // sucesso...
-  } catch (e: any) {
+  } catch (e) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
@@ -21665,7 +21665,7 @@ async () => {
 
     const validateEmail = (v: string) => /^[^s@]+@[^s@]+.[^s@]+$/.test(v.toLowerCase());
 
-    console.log("email raw =", JSON.stringify(email)); // mostra \n, , etc.
+    console.log("email raw =", JSON.stringify(email));
     console.log("len =", (email ?? "").length);
     console.log([...String(email ?? "")].map(c => c.charCodeAt(0)));
     console.log({ validateEmail: validateEmail(email) });
@@ -21694,7 +21694,7 @@ async () => {
     await sendEmailVerification(cred.user);
 
     // sucesso...
-  } catch (e: any) {
+  } catch (e) {
     // trate erros (email-already-in-use, invalid-email, weak-password, etc.)
   }
 }, async (...args) =>
