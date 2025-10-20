@@ -37275,12 +37275,18 @@ tools.setData({
  } 
  } 
 , 
+'A12': { 'forms': { 'iptsChanges': {
+	partnerName: "",
+	partnerMail: "",
+	partnerActivity: ""
+} } 
+ } 
+, 
 'B1': { 
 'forms': { 'iptsChanges': {   } 
  } 
 , 'currId': "HW6jpFRnQGxnZRaP4Y6M" } 
-, 
-'B3': { 
+, 'B3': { 
 'forms': { 'iptsChanges': {   } 
  } 
 , 
@@ -37327,12 +37333,6 @@ tools.setData({
 		},
 	]
 } } 
-, 'A12': { 'forms': { 'iptsChanges': {
-	partnerName: "",
-	partnerMail: "",
-	partnerActivity: ""
-} } 
- } 
  } 
  
 } 
