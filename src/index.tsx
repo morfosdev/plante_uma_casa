@@ -7845,15 +7845,18 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = window.location.origin;
-    console.log({ location: window.location });
-    console.log({ host })
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
     }
     // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
+    const link = await auth.generatePasswordResetLink(email, acs);
+    console.log({ link });
+
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
@@ -12656,15 +12659,18 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = window.location.origin;
-    console.log({ location: window.location });
-    console.log({ host })
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
     }
     // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
+    const link = await auth.generatePasswordResetLink(email, acs);
+    console.log({ link });
+
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
@@ -17402,15 +17408,18 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = window.location.origin;
-    console.log({ location: window.location });
-    console.log({ host })
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
     }
     // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
+    const link = await auth.generatePasswordResetLink(email, acs);
+    console.log({ link });
+
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
@@ -22138,15 +22147,18 @@ paddingVertical: 8,
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
-    const host = window.location.origin;
-    console.log({ location: window.location });
-    console.log({ host })
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
     const acs = {
       url: host + "/auth/complete-signup",
       handleCodeInApp: false
     }
     // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
+    const link = await auth.generatePasswordResetLink(email, acs);
+    console.log({ link });
+
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
