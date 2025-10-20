@@ -5509,14 +5509,9 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flex: 1,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -5716,24 +5711,6 @@ color: '#555555',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -9889,14 +9866,9 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flex: 1,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -10096,24 +10068,6 @@ color: '#555555',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -14176,14 +14130,9 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flex: 1,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -14383,24 +14332,6 @@ color: '#555555',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -18481,14 +18412,9 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flex: 1,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -18688,24 +18614,6 @@ color: '#555555',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
