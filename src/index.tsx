@@ -7703,29 +7703,10 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }})],
-        }}), async () => {
+async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const rawName = tools.getCtData('sc.A12.iptsChanges.partnerName');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -7762,7 +7743,26 @@ async (...args) =>
   } catch (e: any) {
     window.alert("Erro no cadastro", e.message);
   }
-}]
+}, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`mockCondos`],
+            arrPathData: [`sc.a12.iptChanges`],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a12.iptChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -12397,29 +12397,10 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }})],
-        }}), async () => {
+async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const rawName = tools.getCtData('sc.A12.iptsChanges.partnerName');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -12456,7 +12437,26 @@ async (...args) =>
   } catch (e: any) {
     window.alert("Erro no cadastro", e.message);
   }
-}]
+}, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`mockCondos`],
+            arrPathData: [`sc.a12.iptChanges`],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a12.iptChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -17026,29 +17026,10 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }})],
-        }}), async () => {
+async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const rawName = tools.getCtData('sc.A12.iptsChanges.partnerName');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -17085,7 +17066,26 @@ async (...args) =>
   } catch (e: any) {
     window.alert("Erro no cadastro", e.message);
   }
-}]
+}, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`mockCondos`],
+            arrPathData: [`sc.a12.iptChanges`],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a12.iptChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -21645,29 +21645,10 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }})],
-        }}), async () => {
+async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.a12.iptChanges.partnerName');
+    const rawName = tools.getCtData('sc.A12.iptsChanges.partnerName');
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
@@ -21704,7 +21685,26 @@ async (...args) =>
   } catch (e: any) {
     window.alert("Erro no cadastro", e.message);
   }
-}]
+}, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`mockCondos`],
+            arrPathData: [`sc.a12.iptChanges`],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a12.iptChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
