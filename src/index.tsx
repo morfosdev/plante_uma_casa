@@ -35055,7 +35055,8 @@ tools.setData({
 , 'sc': { 
 'A0': { 'forms': { 'iptsChanges': {
 	userEmail: "leandrowebmaster@gmail.com",
-	userPassword: "123456"
+	userPassword: "123456",
+	teste: "123456"
 } } 
  } 
 , 
