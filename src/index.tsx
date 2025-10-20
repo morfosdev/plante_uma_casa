@@ -7850,12 +7850,17 @@ paddingVertical: 8,
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
-    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso' });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso!' });
 
-    // const delay = () => {
-    //   tools.setData({ path: 'all.toggles.sideRight', value: false });
-    //   tools.setData({ path: 'all.toggles.a12.add', value: false });
-    // }
+
+    // Limpar mensagens após 2 segundos
+    const delay = () => {
+      tools.setData({ path: 'all.toggles.sideRight', value: false });
+      tools.setData({ path: 'all.toggles.a12.add', value: false });
+      tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+    }
+
+    setTimeout(delay, 2000);
 
     // sucesso...
   } catch (e: any) {
@@ -12648,12 +12653,17 @@ paddingVertical: 8,
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
-    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso' });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso!' });
 
-    // const delay = () => {
-    //   tools.setData({ path: 'all.toggles.sideRight', value: false });
-    //   tools.setData({ path: 'all.toggles.a12.add', value: false });
-    // }
+
+    // Limpar mensagens após 2 segundos
+    const delay = () => {
+      tools.setData({ path: 'all.toggles.sideRight', value: false });
+      tools.setData({ path: 'all.toggles.a12.add', value: false });
+      tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+    }
+
+    setTimeout(delay, 2000);
 
     // sucesso...
   } catch (e: any) {
@@ -17381,12 +17391,17 @@ paddingVertical: 8,
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
-    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso' });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso!' });
 
-    // const delay = () => {
-    //   tools.setData({ path: 'all.toggles.sideRight', value: false });
-    //   tools.setData({ path: 'all.toggles.a12.add', value: false });
-    // }
+
+    // Limpar mensagens após 2 segundos
+    const delay = () => {
+      tools.setData({ path: 'all.toggles.sideRight', value: false });
+      tools.setData({ path: 'all.toggles.a12.add', value: false });
+      tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+    }
+
+    setTimeout(delay, 2000);
 
     // sucesso...
   } catch (e: any) {
@@ -22104,12 +22119,17 @@ paddingVertical: 8,
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
     tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
-    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso' });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso!' });
 
-    // const delay = () => {
-    //   tools.setData({ path: 'all.toggles.sideRight', value: false });
-    //   tools.setData({ path: 'all.toggles.a12.add', value: false });
-    // }
+
+    // Limpar mensagens após 2 segundos
+    const delay = () => {
+      tools.setData({ path: 'all.toggles.sideRight', value: false });
+      tools.setData({ path: 'all.toggles.a12.add', value: false });
+      tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+    }
+
+    setTimeout(delay, 2000);
 
     // sucesso...
   } catch (e: any) {
