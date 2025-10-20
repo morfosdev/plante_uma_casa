@@ -5748,11 +5748,7 @@ height: '100%',
           ],
 
           arrStyles: [
-            `{
-color: '#777777',
-fontSize: 12,
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -10090,11 +10086,7 @@ height: '100%',
           ],
 
           arrStyles: [
-            `{
-color: '#777777',
-fontSize: 12,
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -14339,11 +14331,7 @@ height: '100%',
           ],
 
           arrStyles: [
-            `{
-color: '#777777',
-fontSize: 12,
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -18606,11 +18594,7 @@ height: '100%',
           ],
 
           arrStyles: [
-            `{
-color: '#777777',
-fontSize: 12,
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -28368,7 +28352,7 @@ borderRadius: 12,
           ],
 
           children: [
-            `Escolha do Terreno`
+            `2`
           ],
 
           args,
