@@ -7706,15 +7706,17 @@ paddingVertical: 8,
 async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.A12.iptsChanges.partnerName');
-    console.log({ rawName });
+    const pathName = 'sc.A12.iptsChanges.partnerName';
+    const rawName = tools.getCtData(pathName);
+    console.log({ pathName, rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
-    const rawEmail = tools.getCtData('sc.A12.iptsChanges.partnerMail');
-    console.log({ rawEmail });
+    const pathEmail = 'sc.A12.iptsChanges.partnerMail';
+    const rawEmail = tools.getCtData(pathEmail);
+    console.log({ pathEmail, rawEmail });
     const email = (rawEmail ?? '').trim();
-
     console.log({ email });
+
     const validateEmail = (email: string) => {
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
       return re.test(String(email).toLowerCase());
@@ -12400,15 +12402,17 @@ paddingVertical: 8,
 async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.A12.iptsChanges.partnerName');
-    console.log({ rawName });
+    const pathName = 'sc.A12.iptsChanges.partnerName';
+    const rawName = tools.getCtData(pathName);
+    console.log({ pathName, rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
-    const rawEmail = tools.getCtData('sc.A12.iptsChanges.partnerMail');
-    console.log({ rawEmail });
+    const pathEmail = 'sc.A12.iptsChanges.partnerMail';
+    const rawEmail = tools.getCtData(pathEmail);
+    console.log({ pathEmail, rawEmail });
     const email = (rawEmail ?? '').trim();
-
     console.log({ email });
+
     const validateEmail = (email: string) => {
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
       return re.test(String(email).toLowerCase());
@@ -17029,15 +17033,17 @@ paddingVertical: 8,
 async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.A12.iptsChanges.partnerName');
-    console.log({ rawName });
+    const pathName = 'sc.A12.iptsChanges.partnerName';
+    const rawName = tools.getCtData(pathName);
+    console.log({ pathName, rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
-    const rawEmail = tools.getCtData('sc.A12.iptsChanges.partnerMail');
-    console.log({ rawEmail });
+    const pathEmail = 'sc.A12.iptsChanges.partnerMail';
+    const rawEmail = tools.getCtData(pathEmail);
+    console.log({ pathEmail, rawEmail });
     const email = (rawEmail ?? '').trim();
-
     console.log({ email });
+
     const validateEmail = (email: string) => {
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
       return re.test(String(email).toLowerCase());
@@ -21648,15 +21654,17 @@ paddingVertical: 8,
 async () => {
   console.log({ oi: "login", tools });
   try {
-    const rawName = tools.getCtData('sc.A12.iptsChanges.partnerName');
-    console.log({ rawName });
+    const pathName = 'sc.A12.iptsChanges.partnerName';
+    const rawName = tools.getCtData(pathName);
+    console.log({ pathName, rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
-    const rawEmail = tools.getCtData('sc.A12.iptsChanges.partnerMail');
-    console.log({ rawEmail });
+    const pathEmail = 'sc.A12.iptsChanges.partnerMail';
+    const rawEmail = tools.getCtData(pathEmail);
+    console.log({ pathEmail, rawEmail });
     const email = (rawEmail ?? '').trim();
-
     console.log({ email });
+
     const validateEmail = (email: string) => {
       const re = /^[^s@]+@[^s@]+.[^s@]+$/;
       return re.test(String(email).toLowerCase());
