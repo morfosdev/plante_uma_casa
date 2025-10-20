@@ -7772,6 +7772,7 @@ paddingVertical: 8,
 
     // ---- Pré-checagem opcional: já existe?
     const methods = await fetchSignInMethodsForEmail(auth, email);
+console.log({ methods });
     if (methods.length > 0) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
@@ -12529,6 +12530,7 @@ paddingVertical: 8,
 
     // ---- Pré-checagem opcional: já existe?
     const methods = await fetchSignInMethodsForEmail(auth, email);
+console.log({ methods });
     if (methods.length > 0) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
@@ -17221,6 +17223,7 @@ paddingVertical: 8,
 
     // ---- Pré-checagem opcional: já existe?
     const methods = await fetchSignInMethodsForEmail(auth, email);
+console.log({ methods });
     if (methods.length > 0) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
@@ -21903,6 +21906,7 @@ paddingVertical: 8,
 
     // ---- Pré-checagem opcional: já existe?
     const methods = await fetchSignInMethodsForEmail(auth, email);
+console.log({ methods });
     if (methods.length > 0) {
       tools.setData({ path: 'sc.A12.forms.showErr', value: true });
       tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
