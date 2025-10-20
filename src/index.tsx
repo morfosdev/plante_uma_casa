@@ -24506,7 +24506,23 @@ async (...args) =>
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Etapa`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Etapa`
           ],
 
           args,
@@ -24526,76 +24542,6 @@ async (...args) =>
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges.condo`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Endereço`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.a1.editChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.a1.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.startDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -28315,7 +28261,23 @@ async (...args) =>
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Etapa`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Etapa`
           ],
 
           args,
@@ -28335,76 +28297,6 @@ async (...args) =>
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges.condo`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Endereço`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.a1.editChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.a1.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.startDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -32799,7 +32691,23 @@ async (...args) =>
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Etapa`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Etapa`
           ],
 
           args,
@@ -32819,76 +32727,6 @@ async (...args) =>
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges.condo`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Endereço`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.a1.editChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.a1.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.startDate`],
           value: [`$arg_callback`]
         }})],
 
