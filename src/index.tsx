@@ -36775,7 +36775,7 @@ whereConds ??`
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"c1home",
+          pathScreen:"c5steps",
 
           styles:[
         `{ backgroundColor: "$var_all.colors.smoke" }`, 
