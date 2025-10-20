@@ -4815,7 +4815,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -5384,7 +5384,7 @@ paddingVertical: 8,
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
         }})]
@@ -5455,7 +5455,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -7188,6 +7188,12 @@ async (...args) =>
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -7217,35 +7223,55 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
     fill="red"
+    viewBox="0 0 18 16"
     {...props}
   >
     <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
       altura: "16px",
 
       largura: "16px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -7288,7 +7314,11 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -7304,12 +7334,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
           children: [
-            `CADASTRO DE PARCEIROS`
+            `Condomínio`
           ],
 
           args,
@@ -9252,7 +9284,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -9821,7 +9853,7 @@ paddingVertical: 8,
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
         }})]
@@ -9892,7 +9924,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -11625,6 +11657,12 @@ async (...args) =>
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -11654,35 +11692,55 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
     fill="red"
+    viewBox="0 0 18 16"
     {...props}
   >
     <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
       altura: "16px",
 
       largura: "16px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -11725,7 +11783,11 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -11741,12 +11803,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
           children: [
-            `CADASTRO DE PARCEIROS`
+            `Condomínio`
           ],
 
           args,
@@ -13596,7 +13660,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -14165,7 +14229,7 @@ paddingVertical: 8,
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
         }})]
@@ -14236,7 +14300,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -15969,6 +16033,12 @@ async (...args) =>
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -15998,35 +16068,55 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
     fill="red"
+    viewBox="0 0 18 16"
     {...props}
   >
     <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
       altura: "16px",
 
       largura: "16px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -16069,7 +16159,11 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -16085,12 +16179,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
           children: [
-            `CADASTRO DE PARCEIROS`
+            `Condomínio`
           ],
 
           args,
@@ -17958,7 +18054,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -18527,7 +18623,7 @@ paddingVertical: 8,
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})],
         }})]
@@ -18598,7 +18694,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a12.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -20331,6 +20427,12 @@ async (...args) =>
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -20360,35 +20462,55 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
     fill="red"
+    viewBox="0 0 18 16"
     {...props}
   >
     <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
       altura: "16px",
 
       largura: "16px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -20431,7 +20553,11 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -20447,12 +20573,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
           children: [
-            `CADASTRO DE PARCEIROS`
+            `Condomínio`
           ],
 
           args,
