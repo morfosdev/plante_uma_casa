@@ -7853,9 +7853,7 @@ paddingVertical: 8,
       handleCodeInApp: false
     }
     // await sendEmailVerification(cred.user);
-    await sendPasswordResetEmail(auth, email, acs);
-    const link = await getAuth().generatePasswordResetLink(email, acs);
-    console.log({ link });
+await sendPasswordResetEmail(auth, email, acs);
 
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
@@ -12667,9 +12665,7 @@ paddingVertical: 8,
       handleCodeInApp: false
     }
     // await sendEmailVerification(cred.user);
-    await sendPasswordResetEmail(auth, email, acs);
-    const link = await getAuth().generatePasswordResetLink(email, acs);
-    console.log({ link });
+await sendPasswordResetEmail(auth, email, acs);
 
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
@@ -17416,9 +17412,7 @@ paddingVertical: 8,
       handleCodeInApp: false
     }
     // await sendEmailVerification(cred.user);
-    await sendPasswordResetEmail(auth, email, acs);
-    const link = await getAuth().generatePasswordResetLink(email, acs);
-    console.log({ link });
+await sendPasswordResetEmail(auth, email, acs);
 
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
@@ -22155,9 +22149,7 @@ paddingVertical: 8,
       handleCodeInApp: false
     }
     // await sendEmailVerification(cred.user);
-    await sendPasswordResetEmail(auth, email, acs);
-    const link = await getAuth().generatePasswordResetLink(email, acs);
-    console.log({ link });
+await sendPasswordResetEmail(auth, email, acs);
 
 
     tools.setData({ path: 'sc.A12.forms.showErr', value: false });
