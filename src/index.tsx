@@ -36895,6 +36895,10 @@ whereConds ??`
 		width: "100%",
 		height: "100%",
 		backgroundColor: "transparent",
+		position: "absolute",
+		top: 0,
+		left: 0,
+		zIndex: 1000,
 }`],
 
             functions:[async (...args) =>
@@ -36908,7 +36912,7 @@ whereConds ??`
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 100,
+	width: "60%",
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -37155,6 +37159,7 @@ async (...args) =>
 
             styles:[`{
 		backgroundColor: "transparent",
+		widht: "20%",
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
