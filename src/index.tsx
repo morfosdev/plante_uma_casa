@@ -37159,8 +37159,7 @@ async (...args) =>
 
             styles:[`{
 		backgroundColor: "red",
-		widht: "40%",
-		height: "100%",
+		flex: 1,
 }`],
 
             functions:[async (...args) =>
