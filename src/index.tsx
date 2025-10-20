@@ -6880,7 +6880,7 @@ color: '#555555',
           ],
 
           children: [
-            `Condomínio`
+            `CADASTRO LOTE / PROPRIETÁRIO`
           ],
 
           args,
@@ -11624,7 +11624,7 @@ color: '#555555',
           ],
 
           children: [
-            `Condomínio`
+            `CADASTRO LOTE / PROPRIETÁRIO`
           ],
 
           args,
@@ -16275,7 +16275,7 @@ color: '#555555',
           ],
 
           children: [
-            `Condomínio`
+            `CADASTRO LOTE / PROPRIETÁRIO`
           ],
 
           args,
@@ -20944,7 +20944,7 @@ color: '#555555',
           ],
 
           children: [
-            `Condomínio`
+            `CADASTRO LOTE / PROPRIETÁRIO`
           ],
 
           args,
