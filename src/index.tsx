@@ -7736,12 +7736,12 @@ async (...args) =>
     }
 
     if (!name) {
-      window.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
       return;
     }
 
     if (!email || !validateEmail(email)) {
-      window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -7749,12 +7749,12 @@ async (...args) =>
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
 
     await createUserWithEmailAndPassword(email, '123456', name);
-    window.alert(
+    Alert.alert(
       "Conta criada",
       "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
     );
   } catch (e: any) {
-    window.alert("Erro no cadastro", e.message);
+    Alert.alert("Erro no cadastro", e.message);
   }
 }]
  , trigger: 'on press'
@@ -12424,12 +12424,12 @@ async (...args) =>
     }
 
     if (!name) {
-      window.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
       return;
     }
 
     if (!email || !validateEmail(email)) {
-      window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -12437,12 +12437,12 @@ async (...args) =>
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
 
     await createUserWithEmailAndPassword(email, '123456', name);
-    window.alert(
+    Alert.alert(
       "Conta criada",
       "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
     );
   } catch (e: any) {
-    window.alert("Erro no cadastro", e.message);
+    Alert.alert("Erro no cadastro", e.message);
   }
 }]
  , trigger: 'on press'
@@ -17047,12 +17047,12 @@ async (...args) =>
     }
 
     if (!name) {
-      window.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
       return;
     }
 
     if (!email || !validateEmail(email)) {
-      window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -17060,12 +17060,12 @@ async (...args) =>
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
 
     await createUserWithEmailAndPassword(email, '123456', name);
-    window.alert(
+    Alert.alert(
       "Conta criada",
       "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
     );
   } catch (e: any) {
-    window.alert("Erro no cadastro", e.message);
+    Alert.alert("Erro no cadastro", e.message);
   }
 }]
  , trigger: 'on press'
@@ -21660,12 +21660,12 @@ async (...args) =>
     }
 
     if (!name) {
-      window.alert("Nome inválido", "Por favor, insira seu nome completo.");
+      Alert.alert("Nome inválido", "Por favor, insira seu nome completo.");
       return;
     }
 
     if (!email || !validateEmail(email)) {
-      window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      Alert.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -21673,12 +21673,12 @@ async (...args) =>
     const { createUserWithEmailAndPassword } = await import('firebase/auth');
 
     await createUserWithEmailAndPassword(email, '123456', name);
-    window.alert(
+    Alert.alert(
       "Conta criada",
       "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
     );
   } catch (e: any) {
-    window.alert("Erro no cadastro", e.message);
+    Alert.alert("Erro no cadastro", e.message);
   }
 }]
  , trigger: 'on press'
@@ -25717,16 +25717,16 @@ flexDirection: 'row',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.b8.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.b8.addSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -29497,16 +29497,16 @@ flexDirection: 'row',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.b8.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.b8.addSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -33969,16 +33969,16 @@ flexDirection: 'row',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.b8.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.b8.addSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
