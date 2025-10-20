@@ -7136,20 +7136,20 @@ paddingVertical: 8,
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
+            arrPathData: [`sc.a7.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -7211,16 +7211,16 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -11884,20 +11884,20 @@ paddingVertical: 8,
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
+            arrPathData: [`sc.a7.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -11959,16 +11959,16 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -16539,20 +16539,20 @@ paddingVertical: 8,
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
+            arrPathData: [`sc.a7.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -16614,16 +16614,16 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -21212,20 +21212,20 @@ paddingVertical: 8,
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`mockCondos`],
-            arrPathData: [`sc.a12.iptChanges`],
+            arrPathData: [`sc.a7.iptChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
         }})]
@@ -21287,16 +21287,16 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a7.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
