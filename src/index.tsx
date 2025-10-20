@@ -7341,7 +7341,7 @@ color: '#555555',
           ],
 
           children: [
-            `Condomínio`
+            `CADASTRO PARCEIRO`
           ],
 
           args,
@@ -11810,7 +11810,7 @@ color: '#555555',
           ],
 
           children: [
-            `Condomínio`
+            `CADASTRO PARCEIRO`
           ],
 
           args,
@@ -16186,7 +16186,7 @@ color: '#555555',
           ],
 
           children: [
-            `Condomínio`
+            `CADASTRO PARCEIRO`
           ],
 
           args,
@@ -20580,7 +20580,7 @@ color: '#555555',
           ],
 
           children: [
-            `Condomínio`
+            `CADASTRO PARCEIRO`
           ],
 
           args,
