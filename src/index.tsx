@@ -7720,14 +7720,15 @@ async () => {
       return re.test(String(email).toLowerCase());
     }
 
-    if (!name) {
-      // window.alert("Nome inválido", "Por favor, insira seu nome completo.");
+    if (name === '') {
+      // window.alert("Nome inválido. Por favor, insira seu nome completo.");
+      console.log({ name });
       return;
     }
 
-    if (!email || !validateEmail(email)) {
-      console.log({ email });
+    if (email === '' || !validateEmail(email)) {
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      console.log({ email });
       return;
     }
 
@@ -7737,11 +7738,10 @@ async () => {
 
     await createUserWithEmailAndPassword(email, '123456', name);
     // window.alert(
-    //   "Conta criada",
-    //   "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    //   "Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
     // );
   } catch (e: any) {
-    window.alert("Erro no cadastro", e.message);
+    // window.alert("Erro no cadastro", e.message);
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -12414,14 +12414,15 @@ async () => {
       return re.test(String(email).toLowerCase());
     }
 
-    if (!name) {
-      // window.alert("Nome inválido", "Por favor, insira seu nome completo.");
+    if (name === '') {
+      // window.alert("Nome inválido. Por favor, insira seu nome completo.");
+      console.log({ name });
       return;
     }
 
-    if (!email || !validateEmail(email)) {
-      console.log({ email });
+    if (email === '' || !validateEmail(email)) {
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      console.log({ email });
       return;
     }
 
@@ -12431,11 +12432,10 @@ async () => {
 
     await createUserWithEmailAndPassword(email, '123456', name);
     // window.alert(
-    //   "Conta criada",
-    //   "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    //   "Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
     // );
   } catch (e: any) {
-    window.alert("Erro no cadastro", e.message);
+    // window.alert("Erro no cadastro", e.message);
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -17043,14 +17043,15 @@ async () => {
       return re.test(String(email).toLowerCase());
     }
 
-    if (!name) {
-      // window.alert("Nome inválido", "Por favor, insira seu nome completo.");
+    if (name === '') {
+      // window.alert("Nome inválido. Por favor, insira seu nome completo.");
+      console.log({ name });
       return;
     }
 
-    if (!email || !validateEmail(email)) {
-      console.log({ email });
+    if (email === '' || !validateEmail(email)) {
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      console.log({ email });
       return;
     }
 
@@ -17060,11 +17061,10 @@ async () => {
 
     await createUserWithEmailAndPassword(email, '123456', name);
     // window.alert(
-    //   "Conta criada",
-    //   "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    //   "Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
     // );
   } catch (e: any) {
-    window.alert("Erro no cadastro", e.message);
+    // window.alert("Erro no cadastro", e.message);
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -21662,14 +21662,15 @@ async () => {
       return re.test(String(email).toLowerCase());
     }
 
-    if (!name) {
-      // window.alert("Nome inválido", "Por favor, insira seu nome completo.");
+    if (name === '') {
+      // window.alert("Nome inválido. Por favor, insira seu nome completo.");
+      console.log({ name });
       return;
     }
 
-    if (!email || !validateEmail(email)) {
-      console.log({ email });
+    if (email === '' || !validateEmail(email)) {
       // window.alert("E-mail inválido", "Por favor, insira um e-mail válido.");
+      console.log({ email });
       return;
     }
 
@@ -21679,11 +21680,10 @@ async () => {
 
     await createUserWithEmailAndPassword(email, '123456', name);
     // window.alert(
-    //   "Conta criada",
-    //   "Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
+    //   "Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos."
     // );
   } catch (e: any) {
-    window.alert("Erro no cadastro", e.message);
+    // window.alert("Erro no cadastro", e.message);
   }
 }, async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
