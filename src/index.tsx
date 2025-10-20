@@ -7710,7 +7710,7 @@ async () => {
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
-    const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
+    const rawEmail = tools.getCtData('sc.A12.iptsChanges.partnerMail');
     console.log({ rawEmail });
     const email = (rawEmail ?? '').trim();
 
@@ -12404,7 +12404,7 @@ async () => {
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
-    const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
+    const rawEmail = tools.getCtData('sc.A12.iptsChanges.partnerMail');
     console.log({ rawEmail });
     const email = (rawEmail ?? '').trim();
 
@@ -17033,7 +17033,7 @@ async () => {
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
-    const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
+    const rawEmail = tools.getCtData('sc.A12.iptsChanges.partnerMail');
     console.log({ rawEmail });
     const email = (rawEmail ?? '').trim();
 
@@ -21652,7 +21652,7 @@ async () => {
     console.log({ rawName });
     const name = (rawName ?? '').trim();
     console.log({ name });
-    const rawEmail = tools.getCtData('sc.a12.iptChanges.partnerMail');
+    const rawEmail = tools.getCtData('sc.A12.iptsChanges.partnerMail');
     console.log({ rawEmail });
     const email = (rawEmail ?? '').trim();
 
