@@ -36984,7 +36984,7 @@ xmlns="http://www.w3.org/2000/svg"
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"c2register",
+          pathScreen:"c2edit",
 
           styles:[
         `{ backgroundColor: "$var_all.colors.smoke" }`, 
@@ -37091,24 +37091,21 @@ xmlns="http://www.w3.org/2000/svg"
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
 
-          path: [`sc.C2.iptsChanges.fullName`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.iptsChanges.fullName`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.C2.editData.fullName`
+          ],
 
           args,
+
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
