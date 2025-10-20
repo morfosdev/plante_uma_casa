@@ -7705,8 +7705,8 @@ paddingVertical: 8,
  arrFunctions: [
 async () => {
   try {
-    const pathName = 'sc.A12.iptsChanges.partnerName';
-    const pathEmail = 'sc.A12.iptsChanges.partnerMail';
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
 
     const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
@@ -7715,8 +7715,16 @@ async () => {
     const validateEmail = (v: string) => v.includes('@') && v.includes('.');
     console.log({ validateEmail: validateEmail(email) });
 
-    if (name === "") return; // nome vazio
-    if (email === "" || !validateEmail(email)) return; // e-mail inválido
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
 
     // Auth
     const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
@@ -12398,8 +12406,8 @@ paddingVertical: 8,
  arrFunctions: [
 async () => {
   try {
-    const pathName = 'sc.A12.iptsChanges.partnerName';
-    const pathEmail = 'sc.A12.iptsChanges.partnerMail';
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
 
     const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
@@ -12408,8 +12416,16 @@ async () => {
     const validateEmail = (v: string) => v.includes('@') && v.includes('.');
     console.log({ validateEmail: validateEmail(email) });
 
-    if (name === "") return; // nome vazio
-    if (email === "" || !validateEmail(email)) return; // e-mail inválido
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
 
     // Auth
     const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
@@ -17026,8 +17042,8 @@ paddingVertical: 8,
  arrFunctions: [
 async () => {
   try {
-    const pathName = 'sc.A12.iptsChanges.partnerName';
-    const pathEmail = 'sc.A12.iptsChanges.partnerMail';
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
 
     const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
@@ -17036,8 +17052,16 @@ async () => {
     const validateEmail = (v: string) => v.includes('@') && v.includes('.');
     console.log({ validateEmail: validateEmail(email) });
 
-    if (name === "") return; // nome vazio
-    if (email === "" || !validateEmail(email)) return; // e-mail inválido
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
 
     // Auth
     const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
@@ -21644,8 +21668,8 @@ paddingVertical: 8,
  arrFunctions: [
 async () => {
   try {
-    const pathName = 'sc.A12.iptsChanges.partnerName';
-    const pathEmail = 'sc.A12.iptsChanges.partnerMail';
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
 
     const name = (tools.getCtData(pathName) ?? '').trim();
     const email = (tools.getCtData(pathEmail) ?? '').trim();
@@ -21654,8 +21678,16 @@ async () => {
     const validateEmail = (v: string) => v.includes('@') && v.includes('.');
     console.log({ validateEmail: validateEmail(email) });
 
-    if (name === "") return; // nome vazio
-    if (email === "" || !validateEmail(email)) return; // e-mail inválido
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "" || !validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
 
     // Auth
     const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } =
