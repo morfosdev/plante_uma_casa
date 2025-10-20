@@ -7457,11 +7457,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a12.iptChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a12.iptChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -7511,11 +7511,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a12.iptChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a12.iptChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -7565,11 +7565,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -12313,11 +12313,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a12.iptChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a12.iptChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -12367,11 +12367,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a12.iptChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a12.iptChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -12421,11 +12421,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -17076,11 +17076,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a12.iptChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a12.iptChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -17130,11 +17130,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a12.iptChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a12.iptChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -17184,11 +17184,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -21857,11 +21857,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.a12.iptChanges.partnerName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.a12.iptChanges.partnerName`],
           value: [`$arg_callback`]
         }})],
 
@@ -21911,11 +21911,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.address`],
+          path: [`sc.a12.iptChanges.partnerMail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
+          keyPath: [`sc.a12.iptChanges.partnerMail`],
           value: [`$arg_callback`]
         }})],
 
@@ -21965,11 +21965,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.a12.iptChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
+          keyPath: [`sc.a12.iptChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
