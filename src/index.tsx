@@ -37696,22 +37696,7 @@ async (...args) =>
           value: [false]
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `AAAA`
-          ],
-
-          args,
-
-        }}/>],
+}})],            childrenItems:[() =><></>],
 
             args,
           }}/>
