@@ -3062,7 +3062,7 @@ justifyContent: 'center',
     const typeAccount = data?.typeAccount; // "adm" | "app" | "partner"
     if (typeAccount === 'adm') tools.goTo('a4list');
     else if (typeAccount === 'app') tools.goTo('b1list');
-    else if (typeAccount === 'partner') tools.goTo('a2list');
+    else if (typeAccount === 'partner') tools.goTo('b4list');
     else {
       // fallback
       tools.setData({ path: 'sc.A0.forms.showErr', value: true });
