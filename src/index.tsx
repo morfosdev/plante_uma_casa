@@ -4097,8 +4097,17 @@ justifyContent: 'center',
     tools.setData({ path: 'sc.A0D.forms.showErr', value: false });
     tools.setData({ path: 'sc.A0D.forms.showSuccess', value: true });
     tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
-  } catch (e: any) {
-    console.log('Error in setNewPass', { e: e.code });
+  }  catch (e) {
+    const code = e?.code ?? '';
+    let msg =
+      'Erro ao alterar a senha. Tente novamente.';
+    if (code === 'auth/weak-password') msg = 'A nova senha é muito fraca (mínimo de 6 caracteres).';
+    if (code === 'auth/expired-action-code') msg = 'Este link expirou. Solicite um novo e-mail.';
+    if (code === 'auth/invalid-action-code') msg = 'Link inválido ou já utilizado. Solicite um novo e-mail.';
+
+    tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: msg + (code ?? '') });
+    console.error(e);
   }
 }]
  , trigger: 'on press'
