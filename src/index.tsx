@@ -4110,7 +4110,7 @@ justifyContent: 'center',
     console.log({ msg });
     const newMsg = msg + code;
     console.log({ newMsg });
-    tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: newMsg });
+    tools.setData({ path: 'sc.A0D.msgs.msg1', value: newMsg });
     console.error(e);
   }
 }]
