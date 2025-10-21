@@ -3975,11 +3975,11 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{}`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
+ arrFunctions: [() => [ "sc.A0D.forms.showErr", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -3987,13 +3987,42 @@ justifyContent: 'center',
           ],
 
           arrStyles: [
-            `{
-	color: "red"
-}`
+            `{ color: "red" }`
           ],
 
           children: [
-            `$var_sc.A0.forms.msgs.msg1`
+            `$var_sc.A0D.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A0D.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A0D.msgs.msg1`
           ],
 
           args,
