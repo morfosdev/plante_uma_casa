@@ -3934,7 +3934,10 @@ justifyContent: 'center',
           args,
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+	placeholder: "Confirme sua Senha",
+	secureTextEntry: true
+}`],
 
           stylesArray: [`{ 
 	padding: 8,
