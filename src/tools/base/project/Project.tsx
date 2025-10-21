@@ -37,6 +37,8 @@ export const Project = ({ configData }: Tprops) => {
         const qs = Object.fromEntries(new URLSearchParams(search).entries());
         console.log({ qs });
 
+        goTo('a0dsetpass');
+
         // guarde params para a tela usar (confirmPasswordReset etc.)
         setData({
           path: 'sc.A0D.forms.iptsChanges',
@@ -46,8 +48,6 @@ export const Project = ({ configData }: Tprops) => {
             continueUrl: qs.continueUrl,
           },
         });
-
-        // goTo('a0dsetpass');
       }
     }
   }, []);
@@ -79,4 +79,3 @@ export const Project = ({ configData }: Tprops) => {
     </RN.View>
   );
 };
-
