@@ -4060,42 +4060,47 @@ justifyContent: 'center',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const A0D = tools.getCtData('sc.A0D.forms.iptsChanges');
-  console.log({ A0D });
+  try {
+    const A0D = tools.getCtData('sc.A0D.forms.iptsChanges');
+    console.log({ A0D });
 
-  const password = (A0D.userPassword ?? '').trim();
-  const confirmPassword = (A0D.confirmPassword ?? '').trim();
-  const oobCode = (A0D.oobCode ?? '').trim(); // obtido via link
+    const password = (A0D.userPassword ?? '').trim();
+    const confirmPassword = (A0D.confirmPassword ?? '').trim();
+    const oobCode = (A0D.oobCode ?? '').trim(); // obtido via link
 
-  // validações básicas
-  if (password.length < 6) {
+    // validações básicas
+    if (password.length < 6) {
+      tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A0D.msgs.msg1', value: 'A senha deve ter ao menos 6 caracteres.' });
+      return;
+    }
+    console.log("Login Pass Validated 1");
+
+    if (password !== confirmPassword) {
+      tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A0D.msgs.msg1', value: 'As senhas não coincidem.' });
+      return;
+    }
+
+    console.log("Login Pass Validated 2");
+    // Auth
+    const { getAuth, confirmPasswordReset } = await import('firebase/auth');
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+
+    await confirmPasswordReset(auth, oobCode, password);
+
+    // sucesso
+    console.log("Login Successful");
+    tools.setData({ path: 'sc.A0D.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A0D.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
+  } catch (e: any) {
     tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A0D.msgs.msg1', value: 'A senha deve ter ao menos 6 caracteres.' });
-    return;
+    tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Erro ao alterar a senha. ' + (e?.message ?? '') });
   }
-  console.log("Login Pass Validated 1");
-
-  if (password !== confirmPassword) {
-    tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A0D.msgs.msg1', value: 'As senhas não coincidem.' });
-    return;
-  }
-
-  console.log("Login Pass Validated 2");
-  // Auth
-  const { getAuth, confirmPasswordReset } = await import('firebase/auth');
-  const fbInit = tools.getCtData('all.temp.fireInit');
-  console.log({ fbInit });
-  const auth = fbInit ? getAuth(fbInit) : getAuth();
-
-
-  await confirmPasswordReset(auth, oobCode, password);
-
-  // sucesso
-  console.log("Login Successful");
-  tools.setData({ path: 'sc.A0D.forms.showErr', value: false });
-  tools.setData({ path: 'sc.A0D.forms.showSuccess', value: true });
-  tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
