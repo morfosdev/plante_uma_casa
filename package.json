@@ -17,7 +17,7 @@
     "eas:build:android2": "npx eas-cli build -p android --profile preview",
     "eas:build:ios": "npx eas-cli build -p ios --profile preview",
     "eas:submit:ios": "npx eas-cli submit --platform ios",
- "export:web:clear": "npx expo export:web --clear",
+ 		"export:web:clear": "npx expo export --platform web",
     "_____ START-HTTP-SERVER _____": "_",
     "server:web:build": "npx http-server",
     "_____ FIREBASE _____": "_",
