@@ -24,6 +24,29 @@ type Tprops = {
 export const Project = ({ configData }: Tprops) => {
   // ---------- set Data
   const { screens, arrInitFuncs } = configData;
+  const condWeb = Platform.OS === 'web';
+
+  // ---------- call Redirects (If Exists)
+  React.useEffect(() => {
+    if (condWeb) {
+      const { pathname, search } = window.location;
+      if (pathname.startsWith('/auth/setpassword')) {
+        const qs = Object.fromEntries(new URLSearchParams(search).entries());
+
+        // guarde params para a tela usar (confirmPasswordReset etc.)
+        tools.setData({
+          path: 'all.authData.passwordReset',
+          value: {
+            mode: qs.mode,
+            oobCode: qs.oobCode,
+            continueUrl: qs.continueUrl,
+          },
+        });
+
+        tools.goTo('a0dsetpass');
+      }
+    }
+  }, []);
 
   // ---------- call Functions (If Exists)
   React.useEffect(() => {
@@ -33,8 +56,6 @@ export const Project = ({ configData }: Tprops) => {
 
     callFn().catch(err => console.log('Project Start Functions', { err }));
   }, []);
-
-  const condWeb = Platform.OS === 'web';
 
   const baseStl: RN.ViewStyle = {
     flexDirection: 'column',
