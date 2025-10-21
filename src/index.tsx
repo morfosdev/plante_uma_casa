@@ -39546,7 +39546,7 @@ tools.setData({
         }}/>, 
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"a0csignup",
+          pathScreen:"a0dsetpass",
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
