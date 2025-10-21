@@ -4097,7 +4097,8 @@ justifyContent: 'center',
     tools.setData({ path: 'sc.A0D.forms.showErr', value: false });
     tools.setData({ path: 'sc.A0D.forms.showSuccess', value: true });
     tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
-  } catch (e: any) {
+  } catch (e) {
+console.log({e});
     tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
     tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Erro ao alterar a senha. ' + (e?.message ?? '') });
   }
