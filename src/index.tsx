@@ -39224,6 +39224,7 @@ whereConds ??`
 
           args,
         }}/>, 
+        
 
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"a0login_old",
@@ -39508,6 +39509,376 @@ tools.setData({
 
           children: [
             `Entrar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+          functions:[()=>{}],
+
+          args,
+        }}/>, 
+
+        (...args: any) => <Elements.Screen3 pass={{
+          pathScreen:"a0csignup",
+
+          styles:[
+        `{ width: "100%", height: "100%" }`, 
+        `{ alignItems: "center", justifyContent: "center" }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
+
+          screenElements:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	width: "80%",
+	maxWidth: 280,
+	minHeight: 150,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	padding: 10
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 80,
+	height: 30
+}],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/images%2FAdmin.png?alt=media&token=94ebd672-5bdd-4e25-81b7-a1b36e29e6e0`],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userEmail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userPassword`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: "red"
+}`
+          ],
+
+          children: [
+            `$var_sc.A0.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  // Lê inputs
+  const email = (
+    tools.getCtData('sc.A0C.forms.iptsChanges.userEmail') ?? 'adm@teste.com'
+  ).trim();
+  const senha = (
+    tools.getCtData('sc.A0C.forms.iptsChanges.userPassword') ?? '123456'
+  ).trim();
+  const nome = (
+    tools.getCtData('sc.A0C.forms.iptsChanges.userName') ?? 'Admin'
+  ).trim();
+
+  // Helpers p/ mensagens (ajuste os paths conforme seu UI)
+  const showMsg = (text: string, isError = false) => {
+    tools.setData({ path: 'sc.A0C.forms.showMsg', value: true });
+    tools.setData({ path: 'sc.A0C.forms.showErr', value: isError });
+    tools.setData({ path: 'sc.A0C.forms.msgs.msg1', value: text });
+  };
+
+  if (!email || !senha) {
+    showMsg('Informe e-mail e senha.', true);
+    return;
+  }
+  if (senha.length < 6) {
+    showMsg('A senha deve ter ao menos 6 caracteres.', true);
+    return;
+  }
+
+  // SDK imports
+  const {
+    getAuth,
+    createUserWithEmailAndPassword,
+    updateProfile,
+    sendEmailVerification,
+  } = await import('firebase/auth');
+
+  // Reaproveita app/auth se já existir
+  const fbInit = tools.getCtData('all.temp.fireInit');
+  const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+  // (Opcional) use seu domínio/dynamic link
+  const actionCodeSettings =
+    tools.getCtData('all.temp.actionCodeSettings') || undefined;
+
+  try {
+    const cred = await createUserWithEmailAndPassword(auth, email, senha);
+
+    if (nome) {
+      await updateProfile(cred.user, { displayName: nome });
+    }
+
+    await sendEmailVerification(cred.user, actionCodeSettings);
+
+    // Mensagem de sucesso
+    showMsg(
+      'Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos.',
+      false,
+    );
+
+    // (Opcional) limpar campos / navegar
+    tools.setData({
+      path: 'sc.A0C.forms.iptsChanges',
+      value: { userEmail: '', userPassword: '', userName: '' },
+    });
+    tools.goTo('login');
+  } catch (e: any) {
+    let msg = 'Não foi possível criar a conta.';
+    switch (e?.code) {
+      case 'auth/email-already-in-use':
+        msg = 'Este e-mail já está em uso.';
+        break;
+      case 'auth/invalid-email':
+        msg = 'E-mail inválido.';
+        break;
+      case 'auth/weak-password':
+        msg = 'Senha muito fraca.';
+        break;
+      default:
+        // console.log(e);
+        break;
+    }
+    showMsg(msg, true);
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "#FFF" }`
+          ],
+
+          children: [
+            `Criar Conta`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "auto" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a0bforgotpass");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '$var_all.colors.primary'
+}`
+          ],
+
+          children: [
+            `Recuperar Senha`
           ],
 
           args,
