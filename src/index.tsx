@@ -19,7 +19,7 @@
           import { tools } from './tools';
 
           // ---------- set Caps Inputs
-          const currRoute = 'a0login';
+          const currRoute = 'a0dsetpass';
 
           let args: any = [];
 
@@ -3904,29 +3904,10 @@ justifyContent: 'center',
           }}/>
         , 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
-	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
+          propsArray: [`{
+	placeholder: "Digite sua Senha",
+	secureTextEntry: true
 }`],
-
-          path: [`sc.A0D.forms.iptsChanges.userEmail`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0D.forms.iptsChanges.userEmail`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
 
           stylesArray: [`{ 
 	padding: 8,
@@ -3949,6 +3930,31 @@ justifyContent: 'center',
 	console.log({txt});
 	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
 }],
+
+          args,
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+	placeholder: "Confirme sua Senha",
+	secureTextEntry: true
+}`],
+
+          stylesArray: [`{ 
+	padding: 8,
+	paddingLeft: 2,
+	borderBottomColor: "$var_all.colors.primary",
+	borderBottomWidth: 2,
+	marginBottom: 16,
+	textAlign: "left"
+}`],
+
+          path: [`sc.A0D.forms.iptsChanges.confirmPassword`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0D.forms.iptsChanges.confirmPassword`],
+          value: [`$arg_callback`]
+        }})],
 
           args,
         }}/>, 
@@ -3975,11 +3981,11 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{}`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
+ arrFunctions: [() => [ "sc.A0D.forms.showErr", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -3987,13 +3993,42 @@ justifyContent: 'center',
           ],
 
           arrStyles: [
-            `{
-	color: "red"
-}`
+            `{ color: "red" }`
           ],
 
           children: [
-            `$var_sc.A0.forms.msgs.msg1`
+            `$var_sc.A0D.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A0D.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A0D.msgs.msg1`
           ],
 
           args,
@@ -4030,10 +4065,60 @@ justifyContent: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	const A0D = tools.getCtData('sc.A0D.forms.iptsChanges');
+ arrFunctions: [async () => {
+  try {
+    const A0D = tools.getCtData('sc.A0D.forms.iptsChanges');
+    console.log({ A0D });
 
-console.log({A0D});
+    const password = (A0D.userPassword ?? '').trim();
+    const confirmPassword = (A0D.confirmPassword ?? '').trim();
+    const oobCode = (A0D.oobCode ?? '').trim(); // obtido via link
+
+    // validações básicas
+    if (password.length < 6) {
+      tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A0D.msgs.msg1', value: 'A senha deve ter ao menos 6 caracteres.' });
+      return;
+    }
+    console.log("Login Pass Validated 1");
+
+    if (password !== confirmPassword) {
+      tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A0D.msgs.msg1', value: 'As senhas não coincidem.' });
+      return;
+    }
+
+    console.log("Login Pass Validated 2");
+    // Auth
+    const { getAuth, confirmPasswordReset } = await import('firebase/auth');
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+
+    await confirmPasswordReset(auth, oobCode, password);
+
+    // sucesso
+    console.log("Login Successful");
+    tools.setData({ path: 'sc.A0D.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A0D.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
+  } catch (e) {
+    const code = e?.code ?? '';
+    console.log({ code });
+    let msg =
+      'Erro ao alterar a senha. Tente novamente.';
+    if (code === 'auth/weak-password') msg = 'A nova senha é muito fraca (mínimo de 6 caracteres).';
+    if (code === 'auth/expired-action-code') msg = 'Este link expirou. Solicite um novo e-mail.';
+    if (code === 'auth/invalid-action-code') msg = 'Link inválido ou já utilizado. Solicite um novo e-mail.';
+
+    tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
+    console.log({ msg });
+    const newMsg = msg + code;
+    console.log({ newMsg });
+    tools.setData({ path: 'sc.A0D.msgs.msg1', value: newMsg });
+    console.error(e);
+  }
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -4070,6 +4155,46 @@ console.log({A0D});
  }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "auto" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a0login");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '#555555',
+	fontSize: 14,
+	fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `Voltar para Login`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
