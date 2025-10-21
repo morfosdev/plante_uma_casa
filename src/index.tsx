@@ -39973,6 +39973,15 @@ tools.setData({
 } } 
  } 
 , 
+'A0D': { 'forms': { 'iptsChanges': {
+	userEmail: "",
+	userPassword: "",
+	mode: "",
+	oobCode: "",
+	continueUrl: ""
+} } 
+ } 
+, 
 'A1': { 'forms': { 'iptsChanges': {   } 
  } 
  } 
