@@ -4107,7 +4107,7 @@ console.log({code});
     if (code === 'auth/invalid-action-code') msg = 'Link inválido ou já utilizado. Solicite um novo e-mail.';
 
     tools.setData({ path: 'sc.A0D.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: msg + (code ?? '') });
+    tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: msg + code });
     console.error(e);
   }
 }]
