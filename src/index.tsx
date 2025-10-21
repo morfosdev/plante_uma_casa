@@ -4034,7 +4034,7 @@ justifyContent: 'center',
   const A0D = tools.getCtData('sc.A0D.forms.iptsChanges');
   console.log({ A0D });
 
-  const password = (A0D.newPassword ?? '').trim();
+  const password = (A0D.userPassword ?? '').trim();
   const confirmPassword = (A0D.confirmPassword ?? '').trim();
   const oobCode = (A0D.oobCode ?? '').trim(); // obtido via link
 
