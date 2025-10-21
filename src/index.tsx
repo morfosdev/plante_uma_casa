@@ -19,7 +19,7 @@
           import { tools } from './tools';
 
           // ---------- set Caps Inputs
-          const currRoute = 'a0dsetpass';
+          const currRoute = 'a0login';
 
           let args: any = [];
 
