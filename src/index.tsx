@@ -4030,90 +4030,7 @@ justifyContent: 'center',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  // Lê inputs
-  const email = (
-    tools.getCtData('sc.A0C.forms.iptsChanges.userEmail') ?? 'adm@teste.com'
-  ).trim();
-  const senha = (
-    tools.getCtData('sc.A0C.forms.iptsChanges.userPassword') ?? '123456'
-  ).trim();
-  const nome = (
-    tools.getCtData('sc.A0C.forms.iptsChanges.userName') ?? 'Admin'
-  ).trim();
-
-  // Helpers p/ mensagens (ajuste os paths conforme seu UI)
-  const showMsg = (text: string, isError = false) => {
-    tools.setData({ path: 'sc.A0C.forms.showMsg', value: true });
-    tools.setData({ path: 'sc.A0C.forms.showErr', value: isError });
-    tools.setData({ path: 'sc.A0C.forms.msgs.msg1', value: text });
-  };
-
-  if (!email || !senha) {
-    showMsg('Informe e-mail e senha.', true);
-    return;
-  }
-  if (senha.length < 6) {
-    showMsg('A senha deve ter ao menos 6 caracteres.', true);
-    return;
-  }
-
-  // SDK imports
-  const {
-    getAuth,
-    createUserWithEmailAndPassword,
-    updateProfile,
-    sendEmailVerification,
-  } = await import('firebase/auth');
-
-  // Reaproveita app/auth se já existir
-  const fbInit = tools.getCtData('all.temp.fireInit');
-  const auth = fbInit ? getAuth(fbInit) : getAuth();
-
-  // (Opcional) use seu domínio/dynamic link
-  const actionCodeSettings =
-    tools.getCtData('all.temp.actionCodeSettings') || undefined;
-
-  try {
-    const cred = await createUserWithEmailAndPassword(auth, email, senha);
-
-    if (nome) {
-      await updateProfile(cred.user, { displayName: nome });
-    }
-
-    await sendEmailVerification(cred.user, actionCodeSettings);
-
-    // Mensagem de sucesso
-    showMsg(
-      'Conta criada. Enviamos um e-mail de verificação. Confirme para usar todos os recursos.',
-      false,
-    );
-
-    // (Opcional) limpar campos / navegar
-    tools.setData({
-      path: 'sc.A0C.forms.iptsChanges',
-      value: { userEmail: '', userPassword: '', userName: '' },
-    });
-    tools.goTo('login');
-  } catch (e: any) {
-    let msg = 'Não foi possível criar a conta.';
-    switch (e?.code) {
-      case 'auth/email-already-in-use':
-        msg = 'Este e-mail já está em uso.';
-        break;
-      case 'auth/invalid-email':
-        msg = 'E-mail inválido.';
-        break;
-      case 'auth/weak-password':
-        msg = 'Senha muito fraca.';
-        break;
-      default:
-        // console.log(e);
-        break;
-    }
-    showMsg(msg, true);
-  }
-}]
+ arrFunctions: [()=>{}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -4125,7 +4042,7 @@ justifyContent: 'center',
           ],
 
           children: [
-            `Criar Conta`
+            `Definir Senha`
           ],
 
           args,
