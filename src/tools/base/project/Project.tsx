@@ -10,6 +10,8 @@ import { StatusBar } from 'react-native';
 
 // ---------- import Local Tools
 import { mapElements } from './mapElements';
+import { setData } from './setData';
+import { goTo } from './goTo';
 
 // ---------- set Caps Inputs
 type Tprops = {
@@ -34,7 +36,7 @@ export const Project = ({ configData }: Tprops) => {
         const qs = Object.fromEntries(new URLSearchParams(search).entries());
 
         // guarde params para a tela usar (confirmPasswordReset etc.)
-        tools.setData({
+        setData({
           path: 'all.authData.passwordReset',
           value: {
             mode: qs.mode,
@@ -43,7 +45,7 @@ export const Project = ({ configData }: Tprops) => {
           },
         });
 
-        tools.goTo('a0dsetpass');
+        goTo('a0dsetpass');
       }
     }
   }, []);
