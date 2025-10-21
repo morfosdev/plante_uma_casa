@@ -4099,6 +4099,7 @@ justifyContent: 'center',
     tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
   }  catch (e) {
     const code = e?.code ?? '';
+console.log({code});
     let msg =
       'Erro ao alterar a senha. Tente novamente.';
     if (code === 'auth/weak-password') msg = 'A nova senha é muito fraca (mínimo de 6 caracteres).';
