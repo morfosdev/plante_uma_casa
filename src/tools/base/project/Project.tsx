@@ -32,12 +32,14 @@ export const Project = ({ configData }: Tprops) => {
   React.useEffect(() => {
     if (condWeb) {
       const { pathname, search } = window.location;
+      console.log({ pathname, search });
+
       if (pathname.startsWith('/auth/setpassword')) {
         const qs = Object.fromEntries(new URLSearchParams(search).entries());
 
         // guarde params para a tela usar (confirmPasswordReset etc.)
         setData({
-          path: 'all.authData.passwordReset',
+          path: 'sc.A0D.forms.iptsChanges',
           value: {
             mode: qs.mode,
             oobCode: qs.oobCode,
@@ -45,7 +47,7 @@ export const Project = ({ configData }: Tprops) => {
           },
         });
 
-        goTo('a0dsetpass');
+        // goTo('a0dsetpass');
       }
     }
   }, []);
@@ -77,3 +79,4 @@ export const Project = ({ configData }: Tprops) => {
     </RN.View>
   );
 };
+
