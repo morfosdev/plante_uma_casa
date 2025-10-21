@@ -4102,7 +4102,7 @@ justifyContent: 'center',
     console.log("Login Successful");
     tools.setData({ path: 'sc.A0D.forms.showErr', value: false });
     tools.setData({ path: 'sc.A0D.forms.showSuccess', value: true });
-    tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
+    tools.setData({ path: 'sc.A0D.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
   } catch (e) {
     const code = e?.code ?? '';
     console.log({ code });
