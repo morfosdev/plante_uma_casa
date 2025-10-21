@@ -4098,7 +4098,7 @@ justifyContent: 'center',
     tools.setData({ path: 'sc.A0D.forms.showSuccess', value: true });
     tools.setData({ path: 'sc.A0D.forms.msgs.msg1', value: 'Senha alterada! Volte para Login e entre com a nova senha' });
   } catch (e: any) {
-    console.log('Error in setNewPass', { e });
+    console.log('Error in setNewPass', { e: e.code });
   }
 }]
  , trigger: 'on press'
