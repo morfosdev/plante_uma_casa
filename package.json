@@ -1,3 +1,4 @@
+
 {
   "name": "plante-uma-casa",
   "main": "index.ts",
@@ -8,26 +9,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint",
-    "_____ EXPO EAS _____": "_",
-    "build:native:configure": "npx eas-cli build:configure",
-    "eas:upd:preview": "npx eas-cli update --branch preview",
-    "deploy:store:android1": "npx eas-cli build --platform android",
-    "eas:build:android2": "npx eas-cli build -p android --profile preview",
-    "eas:build:ios": "npx eas-cli build -p ios --profile preview",
-    "eas:submit:ios": "npx eas-cli submit --platform ios",
-    "_____ START-HTTP-SERVER _____": "_",
-    "server:web:build": "npx http-server",
-    "_____ FIREBASE _____": "_",
-    "firebase:init": "npx firebase-tools init",
-    "firebase:projects-list": "npx firebase-tools projects:list",
-    "firebase:set-project": "npx firebase-tools use xxxprj_name",
-    "deploy:complete:web": "yarn export:web:clear && yarn deploy:hosting",
-    "deploy:hosting": "npx firebase-tools deploy --only hosting",
-    "firebase:login": "npx firebase-tools login",
-    "firebase:login:ci:old": "npx firebase-tools login --no-localhost",
-    "firebase:login:ci": "npx firebase-tools login --no-localhost",
-    "deploy": "npx firebase-tools deploy --only functions"
+    "lint": "expo lint"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
@@ -73,3 +55,4 @@
   },
   "private": true
 }
+
