@@ -3915,13 +3915,18 @@ justifyContent: 'center',
 	textAlign: "left"
 }`],
 
-          path: [`sc.A0D.forms.iptsChanges.userEmail`],
+          path: [`sc.A0D.forms.iptsChanges.userPassword`],
 
-          funcsArray: [async (...args) =>
+          funcsArray: [
+        async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A0D.forms.iptsChanges.userEmail`],
+          keyPath: [`sc.A0D.forms.iptsChanges.userPassword`],
           value: [`$arg_callback`]
-        }})],
+        }}), (txt) => {
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
+}],
 
           args,
         }}/>, 
@@ -3937,18 +3942,13 @@ justifyContent: 'center',
 	textAlign: "left"
 }`],
 
-          path: [`sc.A0D.forms.iptsChanges.userPassword`],
+          path: [`sc.A0D.forms.iptsChanges.confirmPassword`],
 
-          funcsArray: [
-        async (...args) =>
+          funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A0D.forms.iptsChanges.userPassword`],
+          keyPath: [`sc.A0D.forms.iptsChanges.confirmPassword`],
           value: [`$arg_callback`]
-        }}), (txt) => {
-	const x = '';
-	console.log({txt});
-	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
-}],
+        }})],
 
           args,
         }}/>, 
