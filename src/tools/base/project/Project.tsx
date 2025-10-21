@@ -32,10 +32,10 @@ export const Project = ({ configData }: Tprops) => {
   React.useEffect(() => {
     if (condWeb) {
       const { pathname, search } = window.location;
-      console.log({ pathname, search });
 
       if (pathname.startsWith('/auth/setpassword')) {
         const qs = Object.fromEntries(new URLSearchParams(search).entries());
+        console.log({ qs });
 
         // guarde params para a tela usar (confirmPasswordReset etc.)
         setData({
