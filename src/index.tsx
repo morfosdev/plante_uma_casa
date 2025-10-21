@@ -3937,12 +3937,12 @@ justifyContent: 'center',
 	textAlign: "left"
 }`],
 
-          path: [`sc.A0.forms.iptsChanges.userPassword`],
+          path: [`sc.A0D.forms.iptsChanges.userPassword`],
 
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
+          keyPath: [`sc.A0D.forms.iptsChanges.userPassword`],
           value: [`$arg_callback`]
         }}), (txt) => {
 	const x = '';
