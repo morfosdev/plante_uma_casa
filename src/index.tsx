@@ -4153,6 +4153,7 @@ justifyContent: 'center',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -4166,6 +4167,45 @@ justifyContent: 'center',
  }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "auto" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a0bforgotpass");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '#555555',
+	fontSize: 14,
+	fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `Esqueceu sua senha?`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
