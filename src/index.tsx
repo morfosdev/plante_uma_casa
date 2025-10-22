@@ -32460,23 +32460,25 @@ borderRadius: 12,
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={35}
+    height={20}
+    fill="red"
+    viewBox="0 0 35 20"
+    {...props}
+  >
+    <Path
+      fill="#555"
+      d="M22.807 7.205a.634.634 0 0 0-.934 0L18 11.315l-3.873-4.11a.634.634 0 0 0-.934 0 .731.731 0 0 0 0 .991l4.333 4.599c.18.191.44.249.667.172a.65.65 0 0 0 .287-.179l4.327-4.592a.731.731 0 0 0 0-.99Z"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.8066 7.20526C22.5488 6.93158 22.1307 6.93158 21.8729 7.20526L18 11.3159L14.1271 7.20533C13.8693 6.93165 13.4512 6.93165 13.1934 7.20533C12.9355 7.479 12.9355 7.92273 13.1934 8.19641L17.5258 12.7947C17.7064 12.9865 17.9657 13.0439 18.1934 12.967C18.2985 12.9355 18.3977 12.8759 18.4804 12.7881L22.8066 8.19634C23.0645 7.92266 23.0645 7.47894 22.8066 7.20526Z" fill="#555555"/>
+</svg>
+
       `,
 
       altura: "14px",
