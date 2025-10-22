@@ -3417,7 +3417,7 @@ paddingHorizontal: 16,
  arrFunctions: [async () => {
   const path = 'sc.A0B.forms.iptsChanges.userEmail';
   const raw = tools.getCtData(path);
-  const email = (raw ?? '').trim();
+  const email = (raw ?? '').normalize('NFKC').trim().toLowerCase();
 
   if (!email) {
     tools.setData({ path: 'sc.A0B.forms.showErr', value: true });
