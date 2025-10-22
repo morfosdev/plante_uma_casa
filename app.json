@@ -11,6 +11,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "plantecasa",
     "android": {
       "package": "com.plante_casa"
     },
