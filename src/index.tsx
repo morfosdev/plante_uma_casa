@@ -8008,11 +8008,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerMail`],
+          path: [`sc.a11b.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerMail`],
+          keyPath: [`sc.a11b.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -13525,11 +13525,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerMail`],
+          path: [`sc.a11b.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerMail`],
+          keyPath: [`sc.a11b.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -18977,11 +18977,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerMail`],
+          path: [`sc.a11b.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerMail`],
+          keyPath: [`sc.a11b.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -24437,11 +24437,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerMail`],
+          path: [`sc.a11b.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerMail`],
+          keyPath: [`sc.a11b.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
