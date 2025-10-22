@@ -1,57 +1,87 @@
 
 // ---------- import Packs
 import React from 'react';
-import { Pressable, Text } from 'react-native';
+import {
+  Platform,
+  Pressable,
+  Text,
+  ActivityIndicator,
+  View,
+} from 'react-native';
+// import * as WebBrowser from 'expo-web-browser';
+// import * as Google from 'expo-auth-session/providers/google';
 
-// ---------- import Local Tools
-import { getStlValues, mapElements } from '../project';
+// Finaliza sessões pendentes (necessário para Web/Expo)
+// WebBrowser.maybeCompleteAuthSession();
+
+// ---------- import Local Tools (se usar)
+// import { getStlValues, mapElements } from '../project';
 
 type Tprops = {
   pass: {
-    elementProperties: any;
-    styles: any;
-    childrenItems: any;
-    pressableFunctions: any;
-    args: any;
+    arrFuncs?: {};
+    configs?: string[];
+    args?: {};
   };
 };
 
-// Login
-export const Login = (props: Tprops) => {
-  console.log('INICIO DO LOGIN', { props });
+// =========================================
+// Componente: Login para Nativo (Android/iOS)
+// =========================================
+const LoginNative = ({ args }: { args?: Tprops['pass']['args'] }) => {
+  const [loading, setLoading] = React.useState(false);
 
-  // ---------- set Props
-  const { arrFuncs, configs, args } = props.pass;
+  React.useEffect(() => {
+    (async () => {})();
+  }, []);
 
-  // ---------- set Variables Styles (If Exists)
-
-  // ---------- set Actions
-  const btn = async () => {
-    console.log('clicou no btn signin');
+  const handlePress = async () => {
+    try {
+      setLoading(true);
+      await promptAsync();
+    } catch (err) {
+      args?.onLoginError?.(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  // ---------- set Children Items
-
-  // ------- set User Element Properties (If Exists)
-  const userElProps = {};
-
-  const allProps = {
-    style: {
-      backgroundColor: '#315e2d',
-      width: 60,
-      height: 26,
-      borderRadius: 100,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    onPress: btn,
-  };
-
-  // ---------- set Render
   return (
-    <Pressable {...allProps}>
-      <Text style={{ color: '#fff', fontSize: 12 }}>Login Google</Text>
-    </Pressable>
+    <View style={{ alignItems: 'center' }}>
+      <Text>{'Native'}</Text>
+    </View>
   );
 };
 
+// =========================================
+// Componente: Login para Web
+// =========================================
+const LoginWeb = ({ args }: { args?: Tprops['pass']['args'] }) => {
+  React.useEffect(() => {
+    (async () => {})();
+  }, []);
+
+  const handlePress = async () => {};
+
+  return (
+    <View style={{ alignItems: 'center' }}>
+      <Text>{'WEB'}</Text>
+    </View>
+  );
+};
+
+// =========================================
+// Wrapper: decide por plataforma
+// =========================================
+export const Login = (props: Tprops) => {
+  const args = props?.pass?.args;
+  const [loading, setLoading] = React.useState(false);
+
+  // (Se precisar, aplique estilos vindos de props.pass.styles usando getStlValues)
+  // const baseStyle = getStlValues(props.pass.styles) // exemplo
+
+  if (Platform.OS === 'web') {
+    return <LoginWeb args={args} />;
+  }
+  return <LoginNative args={args} />;
+};
