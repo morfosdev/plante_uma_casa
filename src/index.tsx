@@ -7687,7 +7687,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7b.editOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -13792,7 +13792,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7b.editOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -19814,7 +19814,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7b.editOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -25844,7 +25844,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7b.editOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
