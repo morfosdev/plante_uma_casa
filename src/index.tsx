@@ -32567,7 +32567,6 @@ paddingHorizontal: 16,
             elementsProperties:['{}'],
 
             styles:[`{
-	width: '100%',
 	flexDirection: 'row',
 	alignItems: 'center',
 }`],
