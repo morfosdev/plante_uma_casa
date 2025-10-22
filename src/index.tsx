@@ -3421,50 +3421,33 @@ paddingHorizontal: 16,
 
   if (!email) {
     tools.setData({ path: 'sc.A0B.forms.showErr', value: true });
-    tools.setData({
-      path: 'sc.A0B.forms.msgs.msg1',
-      value: 'Informe um e-mail válido.',
-    });
+    tools.setData({ path: 'sc.A0B.forms.msgs.msg1', value: 'Informe um e-mail válido.' });
     return;
   }
 
   try {
-    const { getAuth, sendPasswordResetEmail, fetchSignInMethodsForEmail } = await import('firebase/auth');
-
-    let fbInit = tools.getCtData('all.temp.fireInit');
+    const { getAuth, sendPasswordResetEmail } = await import('firebase/auth');
+    const fbInit = tools.getCtData('all.temp.fireInit');
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
-    const app = auth.app;
-    console.log('Auth app =>', {
-      projectId: app.options.projectId,
-      authDomain: app.options.authDomain,
-      apiKey: app.options.apiKey,
-    });
+    // garanta que não há tenant setado por engano
+    // @ts-ignore
+    auth.tenantId = null;
 
-    const methods = await fetchSignInMethodsForEmail(auth, email);
-    console.log({ methods });
-    if (methods.length === 0) {
-      tools.setData({ path: 'sc.A0B.forms.showErr', value: true });
-      tools.setData({ path: 'sc.A0B.forms.msgs.msg1', value: 'E-mail não encontrado.' });
-      return;
-    }
-
-    await sendPasswordResetEmail(auth, email);
+    const acs = { url: 'https://seu-dominio.com/auth/complete-signup', handleCodeInApp: false };
+    await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: 'sc.A0B.forms.showErr', value: false });
     tools.setData({ path: 'sc.A0B.forms.showSuccess', value: true });
     tools.setData({
       path: 'sc.A0B.forms.msgs.msg2',
-      value:
-        'Enviamos as instruções para redefinir a senha no e-mail informado.',
+      value: 'Se o e-mail existir, enviaremos as instruções para redefinir a senha.',
     });
-  } catch (e) {
-    // mapeia alguns erros comuns
+  } catch (e: any) {
+    // trate apenas erros realmente bloqueantes
     let msg = 'Não foi possível enviar o e-mail de redefinição.';
     if (e?.code === 'auth/invalid-email') msg = 'E-mail inválido.';
-    if (e?.code === 'auth/too-many-requests')
-      msg = 'Muitas tentativas. Tente novamente mais tarde.';
-    // obs: Firebase pode retornar sucesso mesmo se o e-mail não existir, por segurança
+    if (e?.code === 'auth/too-many-requests') msg = 'Muitas tentativas. Tente novamente mais tarde.';
 
     console.log('Erro reset senha:', e?.code || e?.message);
     tools.setData({ path: 'sc.A0B.forms.showSuccess', value: false });
