@@ -6987,7 +6987,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_all.authUser.userName`
+            `$var_all.authUser.userEmail`
           ],
 
           args,
@@ -11841,7 +11841,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_all.authUser.userName`
+            `$var_all.authUser.userEmail`
           ],
 
           args,
@@ -16630,7 +16630,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_all.authUser.userName`
+            `$var_all.authUser.userEmail`
           ],
 
           args,
@@ -21409,7 +21409,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_all.authUser.userName`
+            `$var_all.authUser.userEmail`
           ],
 
           args,
