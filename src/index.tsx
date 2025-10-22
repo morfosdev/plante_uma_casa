@@ -3428,19 +3428,20 @@ paddingHorizontal: 16,
     return;
   }
 
-  const { getAuth, sendPasswordResetEmail, fetchSignInMethodsForEmail } = await import('firebase/auth');
-  const methods = await fetchSignInMethodsForEmail(auth, email);
-  console.log({ methods });
-  if (methods.length === 0) {
-    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
-    tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: 'E-mail não encontrado.' });
-    return;
-  }
-
-  let fbInit = tools.getCtData('all.temp.fireInit');
-  const auth = fbInit ? getAuth(fbInit) : getAuth();
-
   try {
+    const { getAuth, sendPasswordResetEmail, fetchSignInMethodsForEmail } = await import('firebase/auth');
+
+    let fbInit = tools.getCtData('all.temp.fireInit');
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length === 0) {
+      tools.setData({ path: 'sc.A0B.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A0B.forms.msgs.msg1', value: 'E-mail não encontrado.' });
+      return;
+    }
+
     await sendPasswordResetEmail(auth, email);
 
     tools.setData({ path: 'sc.A0B.forms.showErr', value: false });
