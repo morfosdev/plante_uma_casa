@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import * as Google from 'expo-auth-session/providers/google';
+import { makeRedirectUri } from 'expo-auth-session';
 
 // Finaliza sessões pendentes (necessário para Web/Expo)
 WebBrowser.maybeCompleteAuthSession();
@@ -26,9 +27,10 @@ type Tprops = {
 };
 
 // ---------- IDs do Google OAuth por plataforma (preencha!)
+const IOS_CLIENT_ID = '';
+
 const ANDROID_CLIENT_ID =
   '1099098264007-thb39j1g2ilg74mvrquruu01iaifj9e1.apps.googleusercontent.com';
-const IOS_CLIENT_ID = '';
 
 // Opcional (quando executando via Expo Go)
 const EXPO_CLIENT_ID =
@@ -40,11 +42,10 @@ const EXPO_CLIENT_ID =
 const LoginNative = () => {
   const [loading, setLoading] = React.useState(false);
 
-  // hook mais simples → retorna id_token diretamente
+  const redirectUri = makeRedirectUri({ scheme: 'plantecasa' });
   const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
     androidClientId: ANDROID_CLIENT_ID,
     iosClientId: IOS_CLIENT_ID,
-    expoClientId: EXPO_CLIENT_ID,
     selectAccount: true,
   });
 
@@ -76,7 +77,7 @@ const LoginNative = () => {
   const handlePress = async () => {
     try {
       setLoading(true);
-      await promptAsync();
+      await promptAsync({ useProxy: false, redirectUri });
     } catch (err) {
       setLoading(false);
       console.log('Erro', String(err));
