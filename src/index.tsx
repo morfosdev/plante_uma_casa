@@ -33739,7 +33739,7 @@ alignItems: "center",
           ],
 
           children: [
-            `Elaboração do projeto arquitetônico e complementares (estrutural, elétrico, hidráulico).`
+            `Elaboração do projeto arquitetônico e complementares.`
           ],
 
           args,
