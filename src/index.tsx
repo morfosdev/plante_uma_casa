@@ -37394,7 +37394,11 @@ xmlns="http://www.w3.org/2000/svg"
             args,
         }}/>],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [()=>{}]
+ , trigger: 'on init'
+}})],
 
           args,
         }}/>, 
@@ -38230,7 +38234,15 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
         }}/>],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocTool({ args, pass:{
+  arrRefStrings: ['noPath'],
+            arrFuncs: [()=>{}],
+        }})]
+ , trigger: 'on init'
+}})],
 
           args,
         }}/>, 
