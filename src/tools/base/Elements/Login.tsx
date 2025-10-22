@@ -42,15 +42,6 @@ const GOOGLE_EXPO_CLIENT_ID =
 const LoginNative = ({ args }: { args?: Tprops['pass']['args'] }) => {
   const [loading, setLoading] = React.useState(false);
 
-  const [request, response, promptAsync] = Google.useAuthRequest({
-    androidClientId: GOOGLE_ANDROID_CLIENT_ID,
-    iosClientId: GOOGLE_IOS_CLIENT_ID,
-    expoClientId: GOOGLE_EXPO_CLIENT_ID,
-
-    selectAccount: true,
-    scopes: ['openid', 'email', 'profile'],
-  });
-
   React.useEffect(() => {
     (async () => {})();
   }, []);
@@ -105,3 +96,4 @@ export const Login = (props: Tprops) => {
   }
   return <LoginNative args={args} />;
 };
+
