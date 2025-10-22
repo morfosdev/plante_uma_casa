@@ -7384,28 +7384,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -7492,28 +7470,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -7525,8 +7481,7 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -7545,27 +7500,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>],
 
             args,
@@ -12238,28 +12172,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -12346,28 +12258,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -12379,8 +12269,7 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -12399,27 +12288,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>],
 
             args,
@@ -17027,28 +16895,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -17135,28 +16981,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -17168,8 +16992,7 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -17188,27 +17011,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>],
 
             args,
@@ -21806,28 +21608,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -21914,28 +21694,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -21947,8 +21705,7 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -21967,27 +21724,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>],
 
             args,

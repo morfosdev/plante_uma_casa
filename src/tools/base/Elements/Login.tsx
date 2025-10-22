@@ -8,8 +8,8 @@ import {
   ActivityIndicator,
   View,
 } from 'react-native';
-// import * as WebBrowser from 'expo-web-browser';
-// import * as Google from 'expo-auth-session/providers/google';
+import * as WebBrowser from 'expo-web-browser';
+import * as Google from 'expo-auth-session/providers/google';
 
 // Finaliza sessões pendentes (necessário para Web/Expo)
 // WebBrowser.maybeCompleteAuthSession();
@@ -24,6 +24,17 @@ type Tprops = {
     args?: {};
   };
 };
+
+// ---------- IDs do Google OAuth por plataforma (preencha!)
+const GOOGLE_WEB_CLIENT_ID =
+  '1099098264007-sal5p8vma3t5fqk1gqql4sk2sns4iuq7.apps.googleusercontent.com';
+const GOOGLE_ANDROID_CLIENT_ID =
+  '1099098264007-thb39j1g2ilg74mvrquruu01iaifj9e1.apps.googleusercontent.com';
+const GOOGLE_IOS_CLIENT_ID = '';
+
+// Opcional (quando executando via Expo Go)
+const GOOGLE_EXPO_CLIENT_ID =
+  '1099098264007-sal5p8vma3t5fqk1gqql4sk2sns4iuq7.apps.googleusercontent.com';
 
 // =========================================
 // Componente: Login para Nativo (Android/iOS)
