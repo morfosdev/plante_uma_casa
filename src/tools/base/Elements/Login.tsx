@@ -18,7 +18,7 @@ type Tprops = {
 
 // Login
 export const Login = (props: Tprops) => {
-  console.log('INICIO DO LOGIN');
+  console.log('INICIO DO LOGIN', { props });
 
   // ---------- set Props
   const { elementProperties, styles, childrenItems, pressableFunctions, args } =
@@ -57,4 +57,3 @@ export const Login = (props: Tprops) => {
   // ---------- set Render
   return <Pressable {...allProps} />;
 };
-
