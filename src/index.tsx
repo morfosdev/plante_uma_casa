@@ -39906,6 +39906,15 @@ tools.setData({
 } } 
  } 
 , 
+'A0C': { 'forms': { 'iptsChanges': {
+	userEmail: "",
+	userPassword: "",
+	mode: "",
+	oobCode: "",
+	continueUrl: ""
+} } 
+ } 
+, 
 'A0D': { 'forms': { 'iptsChanges': {
 	userEmail: "",
 	userPassword: "",
