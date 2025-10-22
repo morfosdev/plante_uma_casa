@@ -12,3 +12,4 @@ export { BtnImagePicker } from './BtnImagePicker';
 export { Custom } from './Custom';
 export { IptPicker } from './IptPicker';
 export { Accordion } from './Accordion';
+export { Login } from './Login';
