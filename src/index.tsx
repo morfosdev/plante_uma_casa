@@ -38142,24 +38142,21 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
 
-          path: [`sc.C2.iptsChanges.phone`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.iptsChanges.phone`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.C2.iptsChanges.phone`
+          ],
 
           args,
+
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -38443,6 +38440,22 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `$var_sc.C2.editData.rg`
+          ],
+
+          args,
+
+        }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
