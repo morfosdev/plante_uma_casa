@@ -38471,6 +38471,22 @@ xmlns="http://www.w3.org/2000/svg"
 
           args,
 
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `$var_sc.C2.editData.rg`
+          ],
+
+          args,
+
         }}/>, (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
