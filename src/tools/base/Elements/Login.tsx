@@ -1,7 +1,7 @@
 
 // ---------- import Packs
 import React from 'react';
-import { Pressable } from 'react-native';
+import { Pressable, Text } from 'react-native';
 
 // ---------- import Local Tools
 import { getStlValues, mapElements } from '../project';
@@ -36,9 +36,22 @@ export const Login = (props: Tprops) => {
   const userElProps = {};
 
   const allProps = {
+    style: {
+      backgroundColor: '#315e2d',
+      width: 60,
+      height: 26,
+      borderRadius: 100,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
     onPress: btn,
   };
 
   // ---------- set Render
-  return <Pressable {...allProps} />;
+  return (
+    <Pressable {...allProps}>
+      <Text style={{ color: '#fff', fontSize: 12 }}>Login Google</Text>
+    </Pressable>
+  );
 };
+
