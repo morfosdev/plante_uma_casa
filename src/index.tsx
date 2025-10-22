@@ -4504,7 +4504,9 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: '$var_all.texts.sizes.small',
+	fontSize: 15,
+	fontWeight: '400',
+	color: '#555555',
 }`
           ],
 
@@ -9141,7 +9143,9 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: '$var_all.texts.sizes.small',
+	fontSize: 15,
+	fontWeight: '400',
+	color: '#555555',
 }`
           ],
 
@@ -13953,7 +13957,9 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: '$var_all.texts.sizes.small',
+	fontSize: 15,
+	fontWeight: '400',
+	color: '#555555',
 }`
           ],
 
@@ -18700,7 +18706,9 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: '$var_all.texts.sizes.small',
+	fontSize: 15,
+	fontWeight: '400',
+	color: '#555555',
 }`
           ],
 
