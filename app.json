@@ -1,4 +1,23 @@
 {
   "generated_by_flaxboll": "---",
-  "plugins": ["expo-font", "expo-router", "expo-web-browser"]
+  "plugins": [
+    "expo-font",
+    "expo-router",
+    "expo-web-browser"
+  ],
+  "expo": {
+    "name": "plante_uma_casa",
+    "slug": "plante_uma_casa",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "android": {
+      "package": "com.plante_casa"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8c28c8ae-6631-4f90-ac75-d66d1ac0620a"
+      }
+    }
+  }
 }
