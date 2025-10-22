@@ -23171,7 +23171,8 @@ async (...args) =>
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [`partners`],
             arrFuncs: [async (...args) =>
@@ -23179,7 +23180,18 @@ async (...args) =>
           keyPath: [`sc.a11.list`],
           value: [`$arg_callback`]
         }})],
-        }})]
+        }}), async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`users`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `typeAccount`, 
+        `===`, `partner`],
+        }})],
+ arrFuncs: [() => {}],
+ }})]
  , trigger: 'on init'
 }})],
 
