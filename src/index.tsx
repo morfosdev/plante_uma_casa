@@ -38237,7 +38237,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.getDocTool({ args, pass:{
-  arrRefStrings: ['noPath'],
+  arrRefStrings: [`users`],
             arrFuncs: [()=>{}],
         }})]
  , trigger: 'on init'
