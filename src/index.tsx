@@ -37986,15 +37986,11 @@ width: '155px',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b3.profile`],
-          value: [true]
-        }})]
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c7financial");
+        }
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -38835,15 +38831,11 @@ width: '155px',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b3.profile`],
-          value: [true]
-        }})]
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c7financial");
+        }
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -39743,15 +39735,11 @@ width: '155px',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b3.profile`],
-          value: [true]
-        }})]
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c7financial");
+        }
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
