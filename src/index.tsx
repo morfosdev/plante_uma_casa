@@ -3296,7 +3296,7 @@ paddingHorizontal: 16,
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
+          keyPath: [`sc.A0B.forms.iptsChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
