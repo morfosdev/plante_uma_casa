@@ -38044,7 +38044,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
               }
               ],
 
-      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+      URIvariablePath:[`$var_sc.C2.editData.image`],
 
       args,
     }}/>, 
@@ -38226,7 +38226,20 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
         }}/>],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocTool({ args, pass:{
+  arrRefStrings: [
+        `users`, `w7zpg5iI8o8PKhMV58xR`],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C2.editData`],
+          value: [`$arg_callback`]
+        }})],
+        }})]
+ , trigger: 'on init'
+}})],
 
           args,
         }}/>, 
