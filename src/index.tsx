@@ -38137,7 +38137,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `pauloantonio@gmail.com`
+            `$var_sc.C2.editData.userMail`
           ],
 
           args,
