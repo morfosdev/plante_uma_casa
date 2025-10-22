@@ -28,47 +28,84 @@ type Tprops = {
 // ---------- IDs do Google OAuth por plataforma (preencha!)
 const GOOGLE_WEB_CLIENT_ID =
   '1099098264007-sal5p8vma3t5fqk1gqql4sk2sns4iuq7.apps.googleusercontent.com';
-const GOOGLE_ANDROID_CLIENT_ID =
+const ANDROID_CLIENT_ID =
   '1099098264007-thb39j1g2ilg74mvrquruu01iaifj9e1.apps.googleusercontent.com';
-const GOOGLE_IOS_CLIENT_ID = '';
+const IOS_CLIENT_ID = '';
 
 // Opcional (quando executando via Expo Go)
-const GOOGLE_EXPO_CLIENT_ID =
+const EXPO_CLIENT_ID =
   '1099098264007-sal5p8vma3t5fqk1gqql4sk2sns4iuq7.apps.googleusercontent.com';
 
 // =========================================
 // Componente: Login para Nativo (Android/iOS)
 // =========================================
-const LoginNative = ({ args }: { args?: Tprops['pass']['args'] }) => {
+const LoginNative = () => {
   const [loading, setLoading] = React.useState(false);
 
-  const [request, response, promptAsync] = Google.useAuthRequest({
-    androidClientId: GOOGLE_ANDROID_CLIENT_ID,
-    iosClientId: GOOGLE_IOS_CLIENT_ID,
-    expoClientId: GOOGLE_EXPO_CLIENT_ID,
-
+  // hook mais simples → retorna id_token diretamente
+  const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
+    androidClientId: ANDROID_CLIENT_ID,
+    iosClientId: IOS_CLIENT_ID,
+    expoClientId: EXPO_CLIENT_ID,
     selectAccount: true,
-    scopes: ['openid', 'email', 'profile'],
   });
 
   React.useEffect(() => {
-    (async () => {})();
-  }, []);
+    if (!response) return;
+
+    if (response.type === 'success') {
+      const idToken = response.params?.id_token as string | undefined;
+      setLoading(false);
+      if (idToken) {
+        // aqui você autentica no backend/Firebase se quiser
+        // ex.: GoogleAuthProvider.credential(idToken)
+        console.log('Login OK', 'idToken: ' + idToken.slice(0, 18));
+        console.log('[LoginNative] id_token:', idToken);
+      } else {
+        console.log('Aviso', 'Login concluído, mas sem id_token.');
+      }
+    } else if (response.type === 'error') {
+      setLoading(false);
+      const msg = (response as any)?.error ?? 'Erro ao autenticar com Google.';
+      console.log('Erro no login', String(msg));
+      console.error('[LoginNative] error:', msg);
+    } else {
+      // cancelled / dismissed
+      setLoading(false);
+    }
+  }, [response]);
 
   const handlePress = async () => {
     try {
       setLoading(true);
       await promptAsync();
     } catch (err) {
-      args?.onLoginError?.(err);
-    } finally {
       setLoading(false);
+      console.log('Erro', String(err));
+      console.error('[LoginNative] promptAsync error:', err);
     }
   };
 
   return (
     <View style={{ alignItems: 'center' }}>
-      <Text>{'Native'}</Text>
+      <Pressable
+        onPress={handlePress}
+        disabled={!request || loading}
+        style={{
+          backgroundColor: '#315e2d',
+          paddingHorizontal: 20,
+          height: 44,
+          borderRadius: 999,
+          alignItems: 'center',
+          justifyContent: 'center',
+          opacity: !request || loading ? 0.7 : 1,
+        }}
+      >
+        <Text style={{ color: '#fff', fontWeight: '700' }}>
+          {loading ? 'Conectando…' : 'Entrar com Google'}
+        </Text>
+      </Pressable>
+      {loading ? <ActivityIndicator style={{ marginTop: 8 }} /> : null}
     </View>
   );
 };
@@ -76,7 +113,7 @@ const LoginNative = ({ args }: { args?: Tprops['pass']['args'] }) => {
 // =========================================
 // Componente: Login para Web
 // =========================================
-const LoginWeb = ({ args }: { args?: Tprops['pass']['args'] }) => {
+const LoginWeb = () => {
   React.useEffect(() => {
     (async () => {})();
   }, []);
@@ -101,7 +138,8 @@ export const Login = (props: Tprops) => {
   // const baseStyle = getStlValues(props.pass.styles) // exemplo
 
   if (Platform.OS === 'web') {
-    return <LoginWeb args={args} />;
+    return <LoginWeb />;
   }
-  return <LoginNative args={args} />;
+  return <LoginNative />;
 };
+
