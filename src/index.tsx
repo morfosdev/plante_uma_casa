@@ -38134,7 +38134,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `$var_sc.C2.editData.userMail`
+            "Escreva..."
           ],
 
           args,
