@@ -7954,11 +7954,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerName`],
+          path: [`sc.a7b.editOwner.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerName`],
+          keyPath: [`sc.a7b.editOwner.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -8008,11 +8008,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerMail`],
+          path: [`sc.a7b.editOwner.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerMail`],
+          keyPath: [`sc.a7b.editOwner.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -8044,7 +8044,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Obra`
+            `Lote`
           ],
 
           args,
@@ -8147,7 +8147,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -8166,6 +8167,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.email`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.email`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -14059,11 +14081,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerName`],
+          path: [`sc.a7b.editOwner.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerName`],
+          keyPath: [`sc.a7b.editOwner.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -14113,11 +14135,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerMail`],
+          path: [`sc.a7b.editOwner.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerMail`],
+          keyPath: [`sc.a7b.editOwner.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -14149,7 +14171,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Obra`
+            `Lote`
           ],
 
           args,
@@ -14252,7 +14274,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -14271,6 +14294,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.email`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.email`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -20081,11 +20125,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerName`],
+          path: [`sc.a7b.editOwner.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerName`],
+          keyPath: [`sc.a7b.editOwner.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -20135,11 +20179,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerMail`],
+          path: [`sc.a7b.editOwner.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerMail`],
+          keyPath: [`sc.a7b.editOwner.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -20171,7 +20215,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Obra`
+            `Lote`
           ],
 
           args,
@@ -20274,7 +20318,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -20293,6 +20338,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.email`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.email`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -26111,11 +26177,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerName`],
+          path: [`sc.a7b.editOwner.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerName`],
+          keyPath: [`sc.a7b.editOwner.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -26165,11 +26231,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerMail`],
+          path: [`sc.a7b.editOwner.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerMail`],
+          keyPath: [`sc.a7b.editOwner.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -26201,7 +26267,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Obra`
+            `Lote`
           ],
 
           args,
@@ -26304,7 +26370,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -26323,6 +26390,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.email`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.email`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
