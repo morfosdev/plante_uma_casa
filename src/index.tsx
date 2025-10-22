@@ -11118,7 +11118,7 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.a7b.editOwner`],
           value: [`$arg_item`]
         }})]
  , trigger: 'on press'
