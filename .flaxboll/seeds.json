@@ -2630,5 +2630,74 @@
       "capsCreatedAt": { "seconds": 1669821908, "nanoseconds": 764000000 },
       "capsUserID": "xxx1"
     }
+  },
+
+  "ccc_btnLogin": {
+    "capsCodeInfo": {
+      "1": {
+        "capsLabel": {
+          "pt-br": "Login Google",
+          "en": "Google Login"
+        },
+        "capsDescription": { "pt-br": "", "en": "" },
+        "capsCodeTypes": ["Elemento de Tela", "Google Login"],
+
+        "capsCodeText": "(...args:any) => <Elements.Login pass={{\n configs: [!#!Path List!#!], arrFuncs: [!#!OnValueChange Functions!#!], args \n }}/>",
+
+        "capsCodeInputs": {
+          "ccc_btnLogin-0": {
+            "capsIptCodeID": "ccc_btnLogin-0",
+            "capsIptPosition": "0",
+            "capsIptRemoved": false,
+
+            "capsIptType": "capsules",
+            "capsIptCapsInfo": {
+              "capsIptCapsLabel": {
+                "pt-br": "Configurações",
+                "en": "Configuration"
+              },
+              "capsIptCapsDescription": { "pt-br": "", "en": "" },
+
+              "capsIptCapsDfCode": "''",
+              "capsIptCapsTypesToAdd": ["string process"]
+            }
+          },
+          "ccc_btnLogin-1": {
+            "capsIptCodeID": "ccc_btnLogin-1",
+            "capsIptPosition": "1",
+            "capsIptRemoved": false,
+
+            "capsIptType": "capsules",
+            "capsIptCapsInfo": {
+              "capsIptCapsLabel": {
+                "pt-br": "OnValueChange",
+                "en": "OnValueChange"
+              },
+              "capsIptCapsDescription": { "pt-br": "", "en": "" },
+
+              "capsIptCapsDfCode": "() => {console.log('function default')}",
+              "capsIptCapsTypesToAdd": ["setVar", "custom capsule", "condition"]
+            }
+          }
+        },
+
+        "capsCodeVersionID": "1",
+        "capsVersionCreatedAt": {
+          "seconds": 1669821908,
+          "nanoseconds": 764000000
+        }
+      }
+    },
+
+    "capsType": "code",
+
+    "capsDB": {
+      "capsID": "ccc_btnLogin",
+
+      "capsPrjID": "yyy1",
+      "capsCreatedAt": { "seconds": 1669821908, "nanoseconds": 764000000 },
+      "capsUserID": "xxx1"
+    }
   }
 }
+
