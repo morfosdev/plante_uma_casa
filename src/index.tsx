@@ -3434,7 +3434,12 @@ paddingHorizontal: 16,
     // @ts-ignore
     auth.tenantId = null;
 
-    const acs = { url: 'https://seu-dominio.com/auth/complete-signup', handleCodeInApp: false };
+    const host = "http://localhost:5173";
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: 'sc.A0B.forms.showErr', value: false });
