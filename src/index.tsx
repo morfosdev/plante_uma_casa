@@ -4550,33 +4550,31 @@ width: '155px',
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={16}
+    width={10}
+    height={14}
     fill="red"
-    viewBox="0 0 16 16"
+    viewBox="0 0 10 14"
     {...props}
   >
     <Path
-      stroke="#555"
+      stroke="#000001"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M12.055 6.327c0 4.455-5.728 8.273-5.728 8.273S.6 10.782.6 6.327a5.727 5.727 0 1 1 11.455 0Z"
+      d="M9.5 5c0 2.49-4.5 8.5-4.5 8.5S.5 7.49.5 5a4.5 4.5 0 0 1 9 0Z"
     />
     <Path
-      stroke="#555"
+      stroke="#000001"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M6.327 8.236a1.91 1.91 0 1 0 0-3.818 1.91 1.91 0 0 0 0 3.818Z"
+      d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0546 6.32725C12.0546 10.7818 6.32737 14.6 6.32737 14.6C6.32737 14.6 0.600098 10.7818 0.600098 6.32725C0.600098 4.80828 1.2035 3.35153 2.27758 2.27745C3.35165 1.20338 4.8084 0.599976 6.32737 0.599976C7.84634 0.599976 9.30309 1.20338 10.3772 2.27745C11.4512 3.35153 12.0546 4.80828 12.0546 6.32725Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.32737 8.23634C7.38173 8.23634 8.23646 7.38161 8.23646 6.32725C8.23646 5.27289 7.38173 4.41816 6.32737 4.41816C5.27301 4.41816 4.41828 5.27289 4.41828 6.32725C4.41828 7.38161 5.27301 8.23634 6.32737 8.23634Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 5C9.5 7.49 5 13.5 5 13.5C5 13.5 0.5 7.49 0.5 5C0.5 3.80653 0.974106 2.66193 1.81802 1.81802C2.66193 0.974106 3.80653 0.5 5 0.5C6.19347 0.5 7.33807 0.974106 8.18198 1.81802C9.02589 2.66193 9.5 3.80653 9.5 5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
       `,
@@ -9205,33 +9203,31 @@ width: '155px',
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={16}
+    width={10}
+    height={14}
     fill="red"
-    viewBox="0 0 16 16"
+    viewBox="0 0 10 14"
     {...props}
   >
     <Path
-      stroke="#555"
+      stroke="#000001"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M12.055 6.327c0 4.455-5.728 8.273-5.728 8.273S.6 10.782.6 6.327a5.727 5.727 0 1 1 11.455 0Z"
+      d="M9.5 5c0 2.49-4.5 8.5-4.5 8.5S.5 7.49.5 5a4.5 4.5 0 0 1 9 0Z"
     />
     <Path
-      stroke="#555"
+      stroke="#000001"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M6.327 8.236a1.91 1.91 0 1 0 0-3.818 1.91 1.91 0 0 0 0 3.818Z"
+      d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0546 6.32725C12.0546 10.7818 6.32737 14.6 6.32737 14.6C6.32737 14.6 0.600098 10.7818 0.600098 6.32725C0.600098 4.80828 1.2035 3.35153 2.27758 2.27745C3.35165 1.20338 4.8084 0.599976 6.32737 0.599976C7.84634 0.599976 9.30309 1.20338 10.3772 2.27745C11.4512 3.35153 12.0546 4.80828 12.0546 6.32725Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.32737 8.23634C7.38173 8.23634 8.23646 7.38161 8.23646 6.32725C8.23646 5.27289 7.38173 4.41816 6.32737 4.41816C5.27301 4.41816 4.41828 5.27289 4.41828 6.32725C4.41828 7.38161 5.27301 8.23634 6.32737 8.23634Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 5C9.5 7.49 5 13.5 5 13.5C5 13.5 0.5 7.49 0.5 5C0.5 3.80653 0.974106 2.66193 1.81802 1.81802C2.66193 0.974106 3.80653 0.5 5 0.5C6.19347 0.5 7.33807 0.974106 8.18198 1.81802C9.02589 2.66193 9.5 3.80653 9.5 5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
       `,
@@ -14035,33 +14031,31 @@ width: '155px',
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={16}
+    width={10}
+    height={14}
     fill="red"
-    viewBox="0 0 16 16"
+    viewBox="0 0 10 14"
     {...props}
   >
     <Path
-      stroke="#555"
+      stroke="#000001"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M12.055 6.327c0 4.455-5.728 8.273-5.728 8.273S.6 10.782.6 6.327a5.727 5.727 0 1 1 11.455 0Z"
+      d="M9.5 5c0 2.49-4.5 8.5-4.5 8.5S.5 7.49.5 5a4.5 4.5 0 0 1 9 0Z"
     />
     <Path
-      stroke="#555"
+      stroke="#000001"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M6.327 8.236a1.91 1.91 0 1 0 0-3.818 1.91 1.91 0 0 0 0 3.818Z"
+      d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0546 6.32725C12.0546 10.7818 6.32737 14.6 6.32737 14.6C6.32737 14.6 0.600098 10.7818 0.600098 6.32725C0.600098 4.80828 1.2035 3.35153 2.27758 2.27745C3.35165 1.20338 4.8084 0.599976 6.32737 0.599976C7.84634 0.599976 9.30309 1.20338 10.3772 2.27745C11.4512 3.35153 12.0546 4.80828 12.0546 6.32725Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.32737 8.23634C7.38173 8.23634 8.23646 7.38161 8.23646 6.32725C8.23646 5.27289 7.38173 4.41816 6.32737 4.41816C5.27301 4.41816 4.41828 5.27289 4.41828 6.32725C4.41828 7.38161 5.27301 8.23634 6.32737 8.23634Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 5C9.5 7.49 5 13.5 5 13.5C5 13.5 0.5 7.49 0.5 5C0.5 3.80653 0.974106 2.66193 1.81802 1.81802C2.66193 0.974106 3.80653 0.5 5 0.5C6.19347 0.5 7.33807 0.974106 8.18198 1.81802C9.02589 2.66193 9.5 3.80653 9.5 5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
       `,
@@ -18800,33 +18794,31 @@ width: '155px',
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={16}
+    width={10}
+    height={14}
     fill="red"
-    viewBox="0 0 16 16"
+    viewBox="0 0 10 14"
     {...props}
   >
     <Path
-      stroke="#555"
+      stroke="#000001"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M12.055 6.327c0 4.455-5.728 8.273-5.728 8.273S.6 10.782.6 6.327a5.727 5.727 0 1 1 11.455 0Z"
+      d="M9.5 5c0 2.49-4.5 8.5-4.5 8.5S.5 7.49.5 5a4.5 4.5 0 0 1 9 0Z"
     />
     <Path
-      stroke="#555"
+      stroke="#000001"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M6.327 8.236a1.91 1.91 0 1 0 0-3.818 1.91 1.91 0 0 0 0 3.818Z"
+      d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0546 6.32725C12.0546 10.7818 6.32737 14.6 6.32737 14.6C6.32737 14.6 0.600098 10.7818 0.600098 6.32725C0.600098 4.80828 1.2035 3.35153 2.27758 2.27745C3.35165 1.20338 4.8084 0.599976 6.32737 0.599976C7.84634 0.599976 9.30309 1.20338 10.3772 2.27745C11.4512 3.35153 12.0546 4.80828 12.0546 6.32725Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.32737 8.23634C7.38173 8.23634 8.23646 7.38161 8.23646 6.32725C8.23646 5.27289 7.38173 4.41816 6.32737 4.41816C5.27301 4.41816 4.41828 5.27289 4.41828 6.32725C4.41828 7.38161 5.27301 8.23634 6.32737 8.23634Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 5C9.5 7.49 5 13.5 5 13.5C5 13.5 0.5 7.49 0.5 5C0.5 3.80653 0.974106 2.66193 1.81802 1.81802C2.66193 0.974106 3.80653 0.5 5 0.5C6.19347 0.5 7.33807 0.974106 8.18198 1.81802C9.02589 2.66193 9.5 3.80653 9.5 5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 6.5C5.82843 6.5 6.5 5.82843 6.5 5C6.5 4.17157 5.82843 3.5 5 3.5C4.17157 3.5 3.5 4.17157 3.5 5C3.5 5.82843 4.17157 6.5 5 6.5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
       `,
