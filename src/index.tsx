@@ -32582,7 +32582,11 @@ borderRadius: 12,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	color: '#555555',
+	fontSize: 15,
+	fontWeight: '400',
+}`
           ],
 
           children: [
@@ -32596,14 +32600,9 @@ borderRadius: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
