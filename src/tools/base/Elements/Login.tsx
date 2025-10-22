@@ -21,11 +21,9 @@ export const Login = (props: Tprops) => {
   console.log('INICIO DO LOGIN', { props });
 
   // ---------- set Props
-  const { elementProperties, styles, childrenItems, pressableFunctions, args } =
-    props.pass;
+  const { arrFuncs, configs, args } = props.pass;
 
   // ---------- set Variables Styles (If Exists)
-  const stl = getStlValues(styles);
 
   // ---------- set Actions
   const btn = async () => {
@@ -33,25 +31,12 @@ export const Login = (props: Tprops) => {
   };
 
   // ---------- set Children Items
-  const children = mapElements(childrenItems, args);
-  console.log({ children });
 
   // ------- set User Element Properties (If Exists)
   const userElProps = {};
 
-  for (const object of elementProperties) {
-    for (const keyProp in object) {
-      const valueProp = object[keyProp];
-      userElProps[keyProp] = valueProp;
-    }
-  }
-
   const allProps = {
-    style: [stl],
     onPress: btn,
-    children,
-
-    ...userElProps,
   };
 
   // ---------- set Render
