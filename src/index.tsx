@@ -4550,33 +4550,41 @@ width: '155px',
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={13}
-    height={16}
+    width={20}
+    height={20}
     fill="red"
-    viewBox="0 0 13 16"
+    viewBox="0 0 20 20"
     {...props}
   >
-    <Path
+    <G
       stroke="#555"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.2}
-      d="M12.055 6.327c0 4.455-5.728 8.273-5.728 8.273S.6 10.782.6 6.327a5.727 5.727 0 1 1 11.455 0Z"
-    />
-    <Path
-      stroke="#555"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M6.327 8.236a1.91 1.91 0 1 0 0-3.818 1.91 1.91 0 0 0 0 3.818Z"
-    />
+      clipPath="url(#a)"
+    >
+      <Path d="M15.454 9.11c0 4.454-5.727 8.272-5.727 8.272S4 13.564 4 9.11a5.727 5.727 0 0 1 11.454 0Z" />
+      <Path d="M9.727 11.019a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M2 2.382h16v16H2z" />
+      </ClipPath>
+    </Defs>
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0546 6.32725C12.0546 10.7818 6.32737 14.6 6.32737 14.6C6.32737 14.6 0.600098 10.7818 0.600098 6.32725C0.600098 4.80828 1.2035 3.35153 2.27758 2.27745C3.35165 1.20338 4.8084 0.599976 6.32737 0.599976C7.84634 0.599976 9.30309 1.20338 10.3772 2.27745C11.4512 3.35153 12.0546 4.80828 12.0546 6.32725Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.32737 8.23634C7.38173 8.23634 8.23646 7.38161 8.23646 6.32725C8.23646 5.27289 7.38173 4.41816 6.32737 4.41816C5.27301 4.41816 4.41828 5.27289 4.41828 6.32725C4.41828 7.38161 5.27301 8.23634 6.32737 8.23634Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_194_2286)">
+<path d="M15.4545 9.10947C15.4545 13.564 9.72727 17.3822 9.72727 17.3822C9.72727 17.3822 4 13.564 4 9.10947C4 7.59051 4.60341 6.13375 5.67748 5.05968C6.75155 3.98561 8.20831 3.3822 9.72727 3.3822C11.2462 3.3822 12.703 3.98561 13.7771 5.05968C14.8511 6.13375 15.4545 7.59051 15.4545 9.10947Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.72727 11.0186C10.7816 11.0186 11.6364 10.1638 11.6364 9.10948C11.6364 8.05511 10.7816 7.20038 9.72727 7.20038C8.67291 7.20038 7.81818 8.05511 7.81818 9.10948C7.81818 10.1638 8.67291 11.0186 9.72727 11.0186Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_194_2286">
+<rect width="16" height="16" fill="white" transform="translate(2 2.3822)"/>
+</clipPath>
+</defs>
 </svg>
 
       `,
@@ -9202,33 +9210,41 @@ width: '155px',
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={13}
-    height={16}
+    width={20}
+    height={20}
     fill="red"
-    viewBox="0 0 13 16"
+    viewBox="0 0 20 20"
     {...props}
   >
-    <Path
+    <G
       stroke="#555"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.2}
-      d="M12.055 6.327c0 4.455-5.728 8.273-5.728 8.273S.6 10.782.6 6.327a5.727 5.727 0 1 1 11.455 0Z"
-    />
-    <Path
-      stroke="#555"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M6.327 8.236a1.91 1.91 0 1 0 0-3.818 1.91 1.91 0 0 0 0 3.818Z"
-    />
+      clipPath="url(#a)"
+    >
+      <Path d="M15.454 9.11c0 4.454-5.727 8.272-5.727 8.272S4 13.564 4 9.11a5.727 5.727 0 0 1 11.454 0Z" />
+      <Path d="M9.727 11.019a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M2 2.382h16v16H2z" />
+      </ClipPath>
+    </Defs>
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0546 6.32725C12.0546 10.7818 6.32737 14.6 6.32737 14.6C6.32737 14.6 0.600098 10.7818 0.600098 6.32725C0.600098 4.80828 1.2035 3.35153 2.27758 2.27745C3.35165 1.20338 4.8084 0.599976 6.32737 0.599976C7.84634 0.599976 9.30309 1.20338 10.3772 2.27745C11.4512 3.35153 12.0546 4.80828 12.0546 6.32725Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.32737 8.23634C7.38173 8.23634 8.23646 7.38161 8.23646 6.32725C8.23646 5.27289 7.38173 4.41816 6.32737 4.41816C5.27301 4.41816 4.41828 5.27289 4.41828 6.32725C4.41828 7.38161 5.27301 8.23634 6.32737 8.23634Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_194_2286)">
+<path d="M15.4545 9.10947C15.4545 13.564 9.72727 17.3822 9.72727 17.3822C9.72727 17.3822 4 13.564 4 9.10947C4 7.59051 4.60341 6.13375 5.67748 5.05968C6.75155 3.98561 8.20831 3.3822 9.72727 3.3822C11.2462 3.3822 12.703 3.98561 13.7771 5.05968C14.8511 6.13375 15.4545 7.59051 15.4545 9.10947Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.72727 11.0186C10.7816 11.0186 11.6364 10.1638 11.6364 9.10948C11.6364 8.05511 10.7816 7.20038 9.72727 7.20038C8.67291 7.20038 7.81818 8.05511 7.81818 9.10948C7.81818 10.1638 8.67291 11.0186 9.72727 11.0186Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_194_2286">
+<rect width="16" height="16" fill="white" transform="translate(2 2.3822)"/>
+</clipPath>
+</defs>
 </svg>
 
       `,
@@ -14029,33 +14045,41 @@ width: '155px',
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={13}
-    height={16}
+    width={20}
+    height={20}
     fill="red"
-    viewBox="0 0 13 16"
+    viewBox="0 0 20 20"
     {...props}
   >
-    <Path
+    <G
       stroke="#555"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.2}
-      d="M12.055 6.327c0 4.455-5.728 8.273-5.728 8.273S.6 10.782.6 6.327a5.727 5.727 0 1 1 11.455 0Z"
-    />
-    <Path
-      stroke="#555"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M6.327 8.236a1.91 1.91 0 1 0 0-3.818 1.91 1.91 0 0 0 0 3.818Z"
-    />
+      clipPath="url(#a)"
+    >
+      <Path d="M15.454 9.11c0 4.454-5.727 8.272-5.727 8.272S4 13.564 4 9.11a5.727 5.727 0 0 1 11.454 0Z" />
+      <Path d="M9.727 11.019a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M2 2.382h16v16H2z" />
+      </ClipPath>
+    </Defs>
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0546 6.32725C12.0546 10.7818 6.32737 14.6 6.32737 14.6C6.32737 14.6 0.600098 10.7818 0.600098 6.32725C0.600098 4.80828 1.2035 3.35153 2.27758 2.27745C3.35165 1.20338 4.8084 0.599976 6.32737 0.599976C7.84634 0.599976 9.30309 1.20338 10.3772 2.27745C11.4512 3.35153 12.0546 4.80828 12.0546 6.32725Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.32737 8.23634C7.38173 8.23634 8.23646 7.38161 8.23646 6.32725C8.23646 5.27289 7.38173 4.41816 6.32737 4.41816C5.27301 4.41816 4.41828 5.27289 4.41828 6.32725C4.41828 7.38161 5.27301 8.23634 6.32737 8.23634Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_194_2286)">
+<path d="M15.4545 9.10947C15.4545 13.564 9.72727 17.3822 9.72727 17.3822C9.72727 17.3822 4 13.564 4 9.10947C4 7.59051 4.60341 6.13375 5.67748 5.05968C6.75155 3.98561 8.20831 3.3822 9.72727 3.3822C11.2462 3.3822 12.703 3.98561 13.7771 5.05968C14.8511 6.13375 15.4545 7.59051 15.4545 9.10947Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.72727 11.0186C10.7816 11.0186 11.6364 10.1638 11.6364 9.10948C11.6364 8.05511 10.7816 7.20038 9.72727 7.20038C8.67291 7.20038 7.81818 8.05511 7.81818 9.10948C7.81818 10.1638 8.67291 11.0186 9.72727 11.0186Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_194_2286">
+<rect width="16" height="16" fill="white" transform="translate(2 2.3822)"/>
+</clipPath>
+</defs>
 </svg>
 
       `,
@@ -18791,33 +18815,41 @@ width: '155px',
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={13}
-    height={16}
+    width={20}
+    height={20}
     fill="red"
-    viewBox="0 0 13 16"
+    viewBox="0 0 20 20"
     {...props}
   >
-    <Path
+    <G
       stroke="#555"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.2}
-      d="M12.055 6.327c0 4.455-5.728 8.273-5.728 8.273S.6 10.782.6 6.327a5.727 5.727 0 1 1 11.455 0Z"
-    />
-    <Path
-      stroke="#555"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="M6.327 8.236a1.91 1.91 0 1 0 0-3.818 1.91 1.91 0 0 0 0 3.818Z"
-    />
+      clipPath="url(#a)"
+    >
+      <Path d="M15.454 9.11c0 4.454-5.727 8.272-5.727 8.272S4 13.564 4 9.11a5.727 5.727 0 0 1 11.454 0Z" />
+      <Path d="M9.727 11.019a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M2 2.382h16v16H2z" />
+      </ClipPath>
+    </Defs>
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0546 6.32725C12.0546 10.7818 6.32737 14.6 6.32737 14.6C6.32737 14.6 0.600098 10.7818 0.600098 6.32725C0.600098 4.80828 1.2035 3.35153 2.27758 2.27745C3.35165 1.20338 4.8084 0.599976 6.32737 0.599976C7.84634 0.599976 9.30309 1.20338 10.3772 2.27745C11.4512 3.35153 12.0546 4.80828 12.0546 6.32725Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.32737 8.23634C7.38173 8.23634 8.23646 7.38161 8.23646 6.32725C8.23646 5.27289 7.38173 4.41816 6.32737 4.41816C5.27301 4.41816 4.41828 5.27289 4.41828 6.32725C4.41828 7.38161 5.27301 8.23634 6.32737 8.23634Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_194_2286)">
+<path d="M15.4545 9.10947C15.4545 13.564 9.72727 17.3822 9.72727 17.3822C9.72727 17.3822 4 13.564 4 9.10947C4 7.59051 4.60341 6.13375 5.67748 5.05968C6.75155 3.98561 8.20831 3.3822 9.72727 3.3822C11.2462 3.3822 12.703 3.98561 13.7771 5.05968C14.8511 6.13375 15.4545 7.59051 15.4545 9.10947Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.72727 11.0186C10.7816 11.0186 11.6364 10.1638 11.6364 9.10948C11.6364 8.05511 10.7816 7.20038 9.72727 7.20038C8.67291 7.20038 7.81818 8.05511 7.81818 9.10948C7.81818 10.1638 8.67291 11.0186 9.72727 11.0186Z" stroke="#555555" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_194_2286">
+<rect width="16" height="16" fill="white" transform="translate(2 2.3822)"/>
+</clipPath>
+</defs>
 </svg>
 
       `,
