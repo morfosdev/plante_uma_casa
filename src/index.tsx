@@ -32481,9 +32481,9 @@ borderRadius: 12,
 
       `,
 
-      altura: "14px",
+      altura: "20px",
 
-      largura: "14px",
+      largura: "35px",
 
       preenchimento: ['black'],
 
