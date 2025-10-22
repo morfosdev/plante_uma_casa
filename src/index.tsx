@@ -3429,10 +3429,6 @@ paddingHorizontal: 16,
   }
 
   const { getAuth, sendPasswordResetEmail, fetchSignInMethodsForEmail } = await import('firebase/auth');
-
-  let fbInit = tools.getCtData('all.temp.fireInit');
-  const auth = fbInit ? getAuth(fbInit) : getAuth();
-
   const methods = await fetchSignInMethodsForEmail(auth, email);
   console.log({ methods });
   if (methods.length === 0) {
@@ -3440,6 +3436,9 @@ paddingHorizontal: 16,
     tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: 'E-mail não encontrado.' });
     return;
   }
+
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  const auth = fbInit ? getAuth(fbInit) : getAuth();
 
   try {
     await sendPasswordResetEmail(auth, email);
@@ -38828,6 +38827,11 @@ width: '155px',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c7financial");
@@ -39673,6 +39677,11 @@ width: '155px',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c7financial");
@@ -40577,6 +40586,11 @@ width: '155px',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c7financial");
