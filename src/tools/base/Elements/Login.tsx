@@ -46,6 +46,7 @@ const LoginNative = () => {
   const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
     androidClientId: ANDROID_CLIENT_ID,
     iosClientId: IOS_CLIENT_ID,
+    redirectUri,
     selectAccount: true,
   });
 
@@ -77,7 +78,7 @@ const LoginNative = () => {
   const handlePress = async () => {
     try {
       setLoading(true);
-      await promptAsync({ useProxy: false, redirectUri });
+      await promptAsync();
     } catch (err) {
       setLoading(false);
       console.log('Erro', String(err));
@@ -141,3 +142,4 @@ export const Login = (props: Tprops) => {
   }
   return <LoginNative />;
 };
+
