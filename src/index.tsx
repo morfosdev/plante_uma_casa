@@ -509,7 +509,9 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -607,7 +609,9 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -704,7 +708,9 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -2040,7 +2046,9 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -2157,7 +2165,9 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -2255,7 +2265,9 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -2352,7 +2364,9 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -32530,7 +32544,9 @@ borderRadius: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -32562,7 +32578,12 @@ borderRadius: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "100%", padding: 5, backgroundColor: "#FFF", flexDirection: "row", alignItems: "center"}`],
+            styles:[`{ 
+padding: 5, 
+backgroundColor: "#FFF", 
+flexDirection: "row", 
+alignItems: "center",
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -32581,7 +32602,7 @@ borderRadius: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "$var_all.colors.secondary", borderRadius: 4, marginRight: 5}`],
+            styles:[`{ width: 16, height: 16, alignItems: "center", justifyContent: "center", backgroundColor: "$var_all.colors.secondary", borderRadius: 4, marginRight: 5}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -32627,7 +32648,7 @@ xmlns="http://www.w3.org/2000/svg"
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 20, height: 20, backgroundColor: "#FFF", borderRadius: 4, borderWidth: 2, borderColor: "#CCC", marginRight: 5}`],
+            styles:[`{ width: 16, height: 16, backgroundColor: "#FFF", borderRadius: 4, borderWidth: 2, borderColor: "#CCC", marginRight: 5}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -33114,7 +33135,9 @@ xmlns="http://www.w3.org/2000/svg"
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 20 }`],
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
