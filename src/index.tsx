@@ -38413,7 +38413,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `Endereço`
+            `Gênero`
           ],
 
           args,
@@ -38428,7 +38428,7 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           children: [
-            `$var_sc.C2.editData.address`
+            `$var_sc.C2.editData.gender`
           ],
 
           args,
