@@ -7605,12 +7605,12 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`condos`],
-            arrPathData: [`sc.a7.iptChanges`],
+  arrRefStrings: [`partners`],
+            arrPathData: [`sc.a7.iptsChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptChanges`],
+          keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
@@ -7681,7 +7681,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptChanges`],
+          keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -12459,12 +12459,12 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`condos`],
-            arrPathData: [`sc.a7.iptChanges`],
+  arrRefStrings: [`partners`],
+            arrPathData: [`sc.a7.iptsChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptChanges`],
+          keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
@@ -12535,7 +12535,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptChanges`],
+          keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -17248,12 +17248,12 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`condos`],
-            arrPathData: [`sc.a7.iptChanges`],
+  arrRefStrings: [`partners`],
+            arrPathData: [`sc.a7.iptsChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptChanges`],
+          keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
@@ -17324,7 +17324,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptChanges`],
+          keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -22027,12 +22027,12 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`condos`],
-            arrPathData: [`sc.a7.iptChanges`],
+  arrRefStrings: [`partners`],
+            arrPathData: [`sc.a7.iptsChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptChanges`],
+          keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
@@ -22103,7 +22103,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptChanges`],
+          keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
