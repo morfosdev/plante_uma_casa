@@ -7541,7 +7541,21 @@ paddingVertical: 8,
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`partners`],
             arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [()=>{}],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7.iptsChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.editOwner`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -12315,7 +12329,21 @@ paddingVertical: 8,
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`partners`],
             arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [()=>{}],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7.iptsChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.editOwner`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -17024,7 +17052,21 @@ paddingVertical: 8,
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`partners`],
             arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [()=>{}],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7.iptsChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.editOwner`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -21723,7 +21765,21 @@ paddingVertical: 8,
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`partners`],
             arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [()=>{}],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7.iptsChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.editOwner`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
