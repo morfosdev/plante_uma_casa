@@ -19295,7 +19295,25 @@ shadowRadius: 4,
 	alignItems: 'center',
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a11b.editPartner`],
+          value: [true]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a11b.editChanges`],
+          value: [`$arg_item`]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -19373,7 +19391,7 @@ shadowRadius: 4,
           ],
 
           children: [
-            `aaaa`
+            ``
           ],
 
           args,
