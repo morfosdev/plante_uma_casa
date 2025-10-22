@@ -32491,6 +32491,17 @@ borderRadius: 12,
 }`],
 
             functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
@@ -32523,8 +32534,7 @@ borderRadius: 12,
       preenchimento: ['black'],
 
       args,
-    }}/>, 
-        (...args:any) => <Elements.Text pass={{
+    }}/>, (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -32544,7 +32554,11 @@ borderRadius: 12,
 
           args,
 
-        }}/>, 
+        }}/>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
