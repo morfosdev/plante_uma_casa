@@ -23251,7 +23251,7 @@ async (...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `typeAccount`, 
-        `===`, `partner`],
+        `==`, `partner`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
