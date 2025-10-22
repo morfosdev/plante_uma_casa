@@ -38311,7 +38311,11 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
         functions.firebase.getDocTool({ args, pass:{
   arrRefStrings: [
         `users`, `w7zpg5iI8o8PKhMV58xR`],
-            arrFuncs: [()=>{}],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C2.editData`],
+          value: [`$arg_callback`]
+        }})],
         }})]
  , trigger: 'on init'
 }})],
