@@ -7954,11 +7954,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerName`],
+          path: [`sc.a11b.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerName`],
+          keyPath: [`sc.a11b.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -13471,11 +13471,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerName`],
+          path: [`sc.a11b.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerName`],
+          keyPath: [`sc.a11b.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -18923,11 +18923,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerName`],
+          path: [`sc.a11b.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerName`],
+          keyPath: [`sc.a11b.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -24383,11 +24383,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerName`],
+          path: [`sc.a11b.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerName`],
+          keyPath: [`sc.a11b.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
