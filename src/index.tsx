@@ -5917,7 +5917,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -5926,7 +5926,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -7737,7 +7737,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -7746,7 +7746,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -8466,7 +8466,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -8475,7 +8475,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -11434,7 +11434,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -11443,7 +11443,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -13254,7 +13254,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -13263,7 +13263,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -13983,7 +13983,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -13992,7 +13992,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -16886,7 +16886,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -16895,7 +16895,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -18706,7 +18706,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -18715,7 +18715,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -19435,7 +19435,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -19444,7 +19444,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -22346,7 +22346,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -22355,7 +22355,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -24166,7 +24166,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -24175,7 +24175,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -24895,7 +24895,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a11b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -24904,7 +24904,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }})]
  , trigger: 'on press'
