@@ -32811,9 +32811,9 @@ alignItems: "center",
 
       `,
 
-      altura: "30px",
+      altura: "50px",
 
-      largura: "30px",
+      largura: "50px",
 
       preenchimento: ['black'],
 
