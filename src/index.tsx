@@ -40993,7 +40993,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
 	minHeight: 80,
 	backgroundColor: "#FFF",
 	padding: 10,
-	flexDirection: 'row',
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
