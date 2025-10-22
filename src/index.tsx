@@ -19434,7 +19434,7 @@ shadowRadius: 4,
           ],
 
           children: [
-            `$arg_field`
+            `$arg_partnerActivity`
           ],
 
           args,
