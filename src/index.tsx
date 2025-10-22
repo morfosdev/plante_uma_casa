@@ -32551,7 +32551,7 @@ alignItems: "center",
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
-  const path = "all.toggles.checkboxTitle";
+  const path = "all.toggles.checkbox1";
   const currState = tools.getCtData(path);
   tools.functions.setVar({
 		args: '',
@@ -40951,6 +40951,11 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  } 
 , 
 'A0B': { 'forms': { 'iptsChanges': {
+	userEmail: ""
+} } 
+ } 
+, 
+'A0C': { 'forms': { 'iptsChanges': {
 	userEmail: ""
 } } 
  } 
