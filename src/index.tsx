@@ -4940,7 +4940,7 @@ async (...args) =>
             {}
           ],
 
-          pData: `sc.a1.list`,
+          pData: `sc.a7.list`,
 
           itemElements: [
             
@@ -8943,7 +8943,7 @@ async (...args) =>
    arrRefStrings: [`condos`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.list`],
+          keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
         }})],
         }})]
@@ -9836,7 +9836,7 @@ borderRadius: 12,
             {}
           ],
 
-          pData: `sc.a1.list`,
+          pData: `sc.a7.list`,
 
           itemElements: [
             
@@ -13797,7 +13797,7 @@ async (...args) =>
    arrRefStrings: [`lots`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.list`],
+          keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
         }})],
         }})]
@@ -14737,7 +14737,7 @@ height: 15,
             {}
           ],
 
-          pData: `sc.a1.list`,
+          pData: `sc.a7.list`,
 
           itemElements: [
             
@@ -18586,7 +18586,7 @@ async (...args) =>
    arrRefStrings: [`mockCondos`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.list`],
+          keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
         }})],
         }})]
