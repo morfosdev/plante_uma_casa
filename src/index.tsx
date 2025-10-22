@@ -32550,14 +32550,11 @@ borderRadius: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	width: '100%',
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -38137,7 +38134,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `$var_sc.C2.editData.doc.userMail`
+            `$var_sc.C2.editData.userMail`
           ],
 
           args,
