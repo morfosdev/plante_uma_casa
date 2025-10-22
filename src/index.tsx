@@ -4809,6 +4809,25 @@ async (...args) =>
             functions:[()=>{}],            childrenItems:[
         
 
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
+              }
+              ],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/image_44.png?alt=media&token=1fc7f67c-b200-4145-b3e6-403b080e4f37`],
+
+      args,
+    }}/>, 
+        
+
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
@@ -4860,7 +4879,6 @@ async (...args) =>
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -4913,25 +4931,7 @@ async (...args) =>
 
             args,
           }}/>
-        , 
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[
-              {
-                height: "50px",
-                width: "80px",
-                backgroundColor: "#FDFDFD",
-                borderWidth: 2,
-                borderColor: "#EEE"
-              }
-              ],
-
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/image_44.png?alt=media&token=1fc7f67c-b200-4145-b3e6-403b080e4f37`],
-
-      args,
-    }}/>],
+        ],
 
             args,
           }}/>
