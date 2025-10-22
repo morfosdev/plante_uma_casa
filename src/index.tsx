@@ -3434,6 +3434,13 @@ paddingHorizontal: 16,
     let fbInit = tools.getCtData('all.temp.fireInit');
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    const app = auth.app;
+    console.log('Auth app =>', {
+      projectId: app.options.projectId,
+      authDomain: app.options.authDomain,
+      apiKey: app.options.apiKey,
+    });
+
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length === 0) {
