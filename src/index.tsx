@@ -40968,39 +40968,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
-	width: "100%",
-	maxWidth: 300,
-	minHeight: 80,
-	backgroundColor: "#FFF",
-	padding: 10,
-	flexDirection: 'row',
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: '60px',
-	height:'60px',
-	borderRadius: '6px',
-	borderWidth: '1px',
-	borderColor: '#e6e7e8',
-}],
-
-      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ 
 	width: 10,
 	height: 10,
@@ -41014,6 +40981,38 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	width: "100%",
+	maxWidth: 300,
+	minHeight: 80,
+	backgroundColor: "#FFF",
+	padding: 10,
+	flexDirection: 'row',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Valor total da obra`
+          ],
+
+          args,
+
+        }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -41058,58 +41057,6 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `C7`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
