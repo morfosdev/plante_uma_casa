@@ -32489,6 +32489,7 @@ borderRadius: 12,
             styles:[`{
 	flexDirection: "row",
 	alignItems: "center",
+	justifyContent: 'space-between',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -34132,6 +34133,7 @@ alignItems: "center",
             styles:[`{
 	flexDirection: "row",
 	alignItems: "center",
+	justifyContent: 'space-between',
 }`],
 
             functions:[()=>{}],            childrenItems:[
