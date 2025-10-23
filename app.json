@@ -13,11 +13,20 @@
     "icon": "./assets/images/icon.png",
     "scheme": "plantecasa",
     "android": {
-      "package": "com.plante_casa"
+      "package": "com.plante_casa",
+      "runtimeVersion": "1.0.0"
     },
     "extra": {
       "eas": {
         "projectId": "8c28c8ae-6631-4f90-ac75-d66d1ac0620a"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8c28c8ae-6631-4f90-ac75-d66d1ac0620a"
+    },
+    "ios": {
+      "runtimeVersion": {
+        "policy": "appVersion"
       }
     }
   }
