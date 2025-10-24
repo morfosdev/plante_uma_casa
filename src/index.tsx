@@ -3124,6 +3124,8 @@ paddingHorizontal: 16,
 
     const data = snap.data();
 
+    console.log('Dados do usuário:', data);
+
     // Guarda no seu state/context
     tools.setData({
       path: 'all.authUser',
