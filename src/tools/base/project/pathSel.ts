@@ -1,14 +1,15 @@
 
-// ----------- set Path Selection
+// ----------- set Path Selection (defensivo)
 export const pathSel = (obj?: any, path?: any) => {
+  if (typeof path !== 'string' || !path) return undefined;
 
-  const pathArr = path.split('.');
+  const parts = path.split('.').filter(Boolean);
+  let cur = obj;
 
-  const reduceCb = (p, c) => {
-    return p && p[c];
-  };
-  const valueSel = pathArr.reduce(reduceCb, obj);
-
-  return valueSel;
+  for (const p of parts) {
+    if (cur == null) return undefined;
+    cur = cur[p];
+  }
+  return cur;
 };
 
