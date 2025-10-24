@@ -6725,7 +6725,6 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
@@ -6734,63 +6733,50 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = "Preencha os campos obrigatórios.";
-
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [message],
+        value: ["Preencha os campos obrigatórios."],
       },
     });
-
     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
   tools.functions.setVar({
     args: "",
     pass: {
       keyPath: ["sc.a1.validationMessage"],
-      value: [message],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
     },
   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-  // Garantir app inicializado
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
     fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e prepara atualização
   const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // ID do documento a atualizar
   const docId = tools.getCtData("sc.a1.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
@@ -6805,7 +6791,6 @@ paddingVertical: 8,
     return;
   }
 
-  // Monta os dados a atualizar
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
@@ -6826,6 +6811,31 @@ paddingVertical: 8,
         value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
   } catch (error) {
     console.error("❌ Erro ao atualizar documento:", error);
     tools.functions.setVar({
@@ -6835,35 +6845,9 @@ paddingVertical: 8,
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
-
-
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges"],
-        value: [""],
-      },
-    });
-
-//close Edit
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
-        value: [false],
-      },
-    });
-
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-};]
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -13353,7 +13337,6 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
@@ -13362,63 +13345,50 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = "Preencha os campos obrigatórios.";
-
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [message],
+        value: ["Preencha os campos obrigatórios."],
       },
     });
-
     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
   tools.functions.setVar({
     args: "",
     pass: {
       keyPath: ["sc.a1.validationMessage"],
-      value: [message],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
     },
   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-  // Garantir app inicializado
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
     fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e prepara atualização
   const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // ID do documento a atualizar
   const docId = tools.getCtData("sc.a1.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
@@ -13433,7 +13403,6 @@ paddingVertical: 8,
     return;
   }
 
-  // Monta os dados a atualizar
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
@@ -13454,6 +13423,31 @@ paddingVertical: 8,
         value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
   } catch (error) {
     console.error("❌ Erro ao atualizar documento:", error);
     tools.functions.setVar({
@@ -13463,35 +13457,9 @@ paddingVertical: 8,
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
-
-
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges"],
-        value: [""],
-      },
-    });
-
-//close Edit
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
-        value: [false],
-      },
-    });
-
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-};]
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -19898,7 +19866,6 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
@@ -19907,63 +19874,50 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = "Preencha os campos obrigatórios.";
-
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [message],
+        value: ["Preencha os campos obrigatórios."],
       },
     });
-
     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
   tools.functions.setVar({
     args: "",
     pass: {
       keyPath: ["sc.a1.validationMessage"],
-      value: [message],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
     },
   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-  // Garantir app inicializado
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
     fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e prepara atualização
   const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // ID do documento a atualizar
   const docId = tools.getCtData("sc.a1.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
@@ -19978,7 +19932,6 @@ paddingVertical: 8,
     return;
   }
 
-  // Monta os dados a atualizar
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
@@ -19999,6 +19952,31 @@ paddingVertical: 8,
         value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
   } catch (error) {
     console.error("❌ Erro ao atualizar documento:", error);
     tools.functions.setVar({
@@ -20008,35 +19986,9 @@ paddingVertical: 8,
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
-
-
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges"],
-        value: [""],
-      },
-    });
-
-//close Edit
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
-        value: [false],
-      },
-    });
-
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-};]
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -26451,7 +26403,6 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
@@ -26460,63 +26411,50 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = "Preencha os campos obrigatórios.";
-
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [message],
+        value: ["Preencha os campos obrigatórios."],
       },
     });
-
     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
   tools.functions.setVar({
     args: "",
     pass: {
       keyPath: ["sc.a1.validationMessage"],
-      value: [message],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
     },
   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-  // Garantir app inicializado
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
     fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e prepara atualização
   const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // ID do documento a atualizar
   const docId = tools.getCtData("sc.a1.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
@@ -26531,7 +26469,6 @@ paddingVertical: 8,
     return;
   }
 
-  // Monta os dados a atualizar
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
@@ -26552,6 +26489,31 @@ paddingVertical: 8,
         value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
   } catch (error) {
     console.error("❌ Erro ao atualizar documento:", error);
     tools.functions.setVar({
@@ -26561,35 +26523,9 @@ paddingVertical: 8,
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
-
-
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges"],
-        value: [""],
-      },
-    });
-
-//close Edit
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
-        value: [false],
-      },
-    });
-
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-};]
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
