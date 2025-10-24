@@ -1,15 +1,15 @@
 
 // ---------- import Packs
-import * as Google from 'expo-auth-session/providers/google';
-import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
-import * as RN from "react-native";
+import * as Google from "expo-auth-session/providers/google";
+import * as WebBrowser from "expo-web-browser";
 import {
     getAuth,
     GoogleAuthProvider,
     signInWithPopup,
     signInWithRedirect,
 } from "firebase/auth";
+import React from "react";
+import * as RN from "react-native";
 
 // Finaliza sessões pendentes (necessário para Web/Expo)
 WebBrowser.maybeCompleteAuthSession();
@@ -23,9 +23,9 @@ type Tprops = {
 };
 
 // ---------- IDs do Google OAuth por plataforma (preencha!)
-const IOS_CLIENT_ID = '';
+const IOS_CLIENT_ID = "";
 const ANDROID_CLIENT_ID =
-  '1099098264007-thb39j1g2ilg74mvrquruu01iaifj9e1.apps.googleusercontent.com';
+  "1099098264007-thb39j1g2ilg74mvrquruu01iaifj9e1.apps.googleusercontent.com";
 
 // =========================================
 // Componente: Login para Nativo (Android/iOS)
@@ -43,12 +43,12 @@ export const LoginNative = () => {
     if (!response) return;
     setLoading(false);
 
-    if (response.type === 'success') {
+    if (response.type === "success") {
       const idToken = response.params?.id_token as string | undefined;
-      console.log('[LoginAndroid] id_token:', idToken);
+      console.log("[LoginAndroid] id_token:", idToken);
       // -> autentique no backend/Firebase se desejar
-    } else if (response.type === 'error') {
-      console.error('[LoginAndroid] error:', (response as any)?.error);
+    } else if (response.type === "error") {
+      console.error("[LoginAndroid] error:", (response as any)?.error);
     }
   }, [response]);
 
@@ -59,27 +59,27 @@ export const LoginNative = () => {
       await promptAsync();
     } catch (err) {
       setLoading(false);
-      console.error('[LoginAndroid] promptAsync error:', err);
+      console.error("[LoginAndroid] promptAsync error:", err);
     }
   };
 
   return (
-    <RN.View style={{ alignItems: 'center' }}>
+    <RN.View style={{ alignItems: "center" }}>
       <RN.Pressable
         onPress={handlePress}
         disabled={!request || loading}
         style={{
-          backgroundColor: '#315e2d',
+          backgroundColor: "#315e2d",
           paddingHorizontal: 20,
           height: 44,
           borderRadius: 999,
-          alignItems: 'center',
-          justifyContent: 'center',
+          alignItems: "center",
+          justifyContent: "center",
           opacity: !request || loading ? 0.7 : 1,
         }}
       >
-        <RN.Text style={{ color: '#fff', fontWeight: '700' }}>
-          {loading ? 'Conectando…' : 'Entrar com Google'}
+        <RN.Text style={{ color: "#fff", fontWeight: "700" }}>
+          {loading ? "Conectando…" : "Entrar com Google"}
         </RN.Text>
       </RN.Pressable>
 
@@ -116,10 +116,7 @@ const LoginWeb = () => {
         await signInWithRedirect(auth, provider);
         return;
       }
-
-
     } catch (err) {
-
       console.error("Erro no login Google (web):", err);
     } finally {
       setLoading(false);
@@ -160,10 +157,9 @@ export const Login = (props: Tprops) => {
   const args = props?.pass?.args;
   const [loading, setLoading] = React.useState(false);
 
-  if (Platform.OS === 'web') {
+  if (RN.Platform.OS === "web") {
     return <LoginWeb />;
   }
   return <LoginNative />;
 };
-
 
