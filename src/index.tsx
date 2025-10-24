@@ -7630,11 +7630,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.lot`],
+          path: [`sc.A7.forms.iptsChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -7734,7 +7734,8 @@ async (...args) =>
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
-    { path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -7759,7 +7760,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: [message],
       },
     });
@@ -7773,7 +7774,7 @@ async (...args) =>
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a1.validationMessage"],
+      keyPath: ["sc.a7.validationMessage"],
       value: [message],
     },
   });
@@ -7795,11 +7796,11 @@ async (...args) =>
 
   // Monta os dados a salvar
   const newDoc = {
-    condo: getVal("sc.a1.iptChanges.condo"),
-    address: getVal("sc.a1.iptChanges.address"),
-    startDate: getVal("sc.a1.iptChanges.startDate"),
-    endDate: getVal("sc.a1.iptChanges.endDate"),
-    description: getVal("sc.a1.iptChanges.description"),
+    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     createdAt: serverTimestamp(),
   };
 
@@ -7810,7 +7811,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["🏢 Documento salvo com sucesso!"],
       },
     });
@@ -7819,7 +7820,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["Erro ao salvar dados. Verifique o console."],
       },
     });
@@ -7829,7 +7830,7 @@ async (...args) =>
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges"],
+        keyPath: ["sc.a7.iptChanges"],
         value: [""],
       },
     });
@@ -7838,7 +7839,7 @@ tools.functions.setVar({
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
+        keyPath: ["all.toggles.a7.add"],
         value: [false],
       },
     });
@@ -14097,11 +14098,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.lot`],
+          path: [`sc.A7.forms.iptsChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -14201,7 +14202,8 @@ async (...args) =>
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
-    { path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -14226,7 +14228,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: [message],
       },
     });
@@ -14240,7 +14242,7 @@ async (...args) =>
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a1.validationMessage"],
+      keyPath: ["sc.a7.validationMessage"],
       value: [message],
     },
   });
@@ -14262,11 +14264,11 @@ async (...args) =>
 
   // Monta os dados a salvar
   const newDoc = {
-    condo: getVal("sc.a1.iptChanges.condo"),
-    address: getVal("sc.a1.iptChanges.address"),
-    startDate: getVal("sc.a1.iptChanges.startDate"),
-    endDate: getVal("sc.a1.iptChanges.endDate"),
-    description: getVal("sc.a1.iptChanges.description"),
+    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     createdAt: serverTimestamp(),
   };
 
@@ -14277,7 +14279,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["🏢 Documento salvo com sucesso!"],
       },
     });
@@ -14286,7 +14288,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["Erro ao salvar dados. Verifique o console."],
       },
     });
@@ -14296,7 +14298,7 @@ async (...args) =>
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges"],
+        keyPath: ["sc.a7.iptChanges"],
         value: [""],
       },
     });
@@ -14305,7 +14307,7 @@ tools.functions.setVar({
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
+        keyPath: ["all.toggles.a7.add"],
         value: [false],
       },
     });
@@ -20481,11 +20483,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.lot`],
+          path: [`sc.A7.forms.iptsChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -20585,7 +20587,8 @@ async (...args) =>
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
-    { path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -20610,7 +20613,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: [message],
       },
     });
@@ -20624,7 +20627,7 @@ async (...args) =>
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a1.validationMessage"],
+      keyPath: ["sc.a7.validationMessage"],
       value: [message],
     },
   });
@@ -20646,11 +20649,11 @@ async (...args) =>
 
   // Monta os dados a salvar
   const newDoc = {
-    condo: getVal("sc.a1.iptChanges.condo"),
-    address: getVal("sc.a1.iptChanges.address"),
-    startDate: getVal("sc.a1.iptChanges.startDate"),
-    endDate: getVal("sc.a1.iptChanges.endDate"),
-    description: getVal("sc.a1.iptChanges.description"),
+    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     createdAt: serverTimestamp(),
   };
 
@@ -20661,7 +20664,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["🏢 Documento salvo com sucesso!"],
       },
     });
@@ -20670,7 +20673,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["Erro ao salvar dados. Verifique o console."],
       },
     });
@@ -20680,7 +20683,7 @@ async (...args) =>
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges"],
+        keyPath: ["sc.a7.iptChanges"],
         value: [""],
       },
     });
@@ -20689,7 +20692,7 @@ tools.functions.setVar({
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
+        keyPath: ["all.toggles.a7.add"],
         value: [false],
       },
     });
@@ -26873,11 +26876,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.lot`],
+          path: [`sc.A7.forms.iptsChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -26977,7 +26980,8 @@ async (...args) =>
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
-    { path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -27002,7 +27006,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: [message],
       },
     });
@@ -27016,7 +27020,7 @@ async (...args) =>
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a1.validationMessage"],
+      keyPath: ["sc.a7.validationMessage"],
       value: [message],
     },
   });
@@ -27038,11 +27042,11 @@ async (...args) =>
 
   // Monta os dados a salvar
   const newDoc = {
-    condo: getVal("sc.a1.iptChanges.condo"),
-    address: getVal("sc.a1.iptChanges.address"),
-    startDate: getVal("sc.a1.iptChanges.startDate"),
-    endDate: getVal("sc.a1.iptChanges.endDate"),
-    description: getVal("sc.a1.iptChanges.description"),
+    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     createdAt: serverTimestamp(),
   };
 
@@ -27053,7 +27057,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["🏢 Documento salvo com sucesso!"],
       },
     });
@@ -27062,7 +27066,7 @@ async (...args) =>
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["Erro ao salvar dados. Verifique o console."],
       },
     });
@@ -27072,7 +27076,7 @@ async (...args) =>
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges"],
+        keyPath: ["sc.a7.iptChanges"],
         value: [""],
       },
     });
@@ -27081,7 +27085,7 @@ tools.functions.setVar({
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
+        keyPath: ["all.toggles.a7.add"],
         value: [false],
       },
     });
