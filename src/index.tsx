@@ -5933,6 +5933,16 @@ paddingVertical: 8,
 
     console.log("💾 Validação OK — pode salvar!");
   }
+
+// Garantir app inicializado
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import('firebase/app');
+    const cfg = tools.getCtData('all.temp.fireConfig'); 
+		// opcional: pegue sua config do CT
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  }
 }
 ]
  , trigger: 'on press'
@@ -12139,6 +12149,16 @@ paddingVertical: 8,
 
     console.log("💾 Validação OK — pode salvar!");
   }
+
+// Garantir app inicializado
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import('firebase/app');
+    const cfg = tools.getCtData('all.temp.fireConfig'); 
+		// opcional: pegue sua config do CT
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  }
 }
 ]
  , trigger: 'on press'
@@ -18261,6 +18281,16 @@ paddingVertical: 8,
     });
 
     console.log("💾 Validação OK — pode salvar!");
+  }
+
+// Garantir app inicializado
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import('firebase/app');
+    const cfg = tools.getCtData('all.temp.fireConfig'); 
+		// opcional: pegue sua config do CT
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
   }
 }
 ]
@@ -24392,6 +24422,16 @@ paddingVertical: 8,
     });
 
     console.log("💾 Validação OK — pode salvar!");
+  }
+
+// Garantir app inicializado
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import('firebase/app');
+    const cfg = tools.getCtData('all.temp.fireConfig'); 
+		// opcional: pegue sua config do CT
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
   }
 }
 ]
