@@ -7733,7 +7733,7 @@ async (...args) =>
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
@@ -14200,7 +14200,7 @@ async (...args) =>
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
@@ -20584,7 +20584,7 @@ async (...args) =>
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
@@ -26976,7 +26976,7 @@ async (...args) =>
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
