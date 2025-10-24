@@ -41316,7 +41316,7 @@ alignItems: "center",
             {}
           ],
 
-          pData: `$var_sc.B7.statics.steps.0.subs`,
+          pData: `sc.B7.statics.steps.0.subs`,
 
           itemElements: [
             
