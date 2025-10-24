@@ -5881,7 +5881,58 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
+ arrFunctions: [() => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.iptChanges.address", name: "Endereço" },
+    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa os campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    const nomesCampos = emptyFields.map((f) => f.name).join(", ");
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a3.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios:");
+  } else {
+    message = "✅ Todos os campos foram preenchidos corretamente.";
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a3.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.log("💾 Validação OK — pode salvar!");
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -12034,7 +12085,58 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
+ arrFunctions: [() => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.iptChanges.address", name: "Endereço" },
+    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa os campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    const nomesCampos = emptyFields.map((f) => f.name).join(", ");
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a3.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios:");
+  } else {
+    message = "✅ Todos os campos foram preenchidos corretamente.";
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a3.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.log("💾 Validação OK — pode salvar!");
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -18104,7 +18206,58 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
+ arrFunctions: [() => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.iptChanges.address", name: "Endereço" },
+    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa os campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    const nomesCampos = emptyFields.map((f) => f.name).join(", ");
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a3.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios:");
+  } else {
+    message = "✅ Todos os campos foram preenchidos corretamente.";
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a3.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.log("💾 Validação OK — pode salvar!");
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -24182,7 +24335,58 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
+ arrFunctions: [() => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.iptChanges.address", name: "Endereço" },
+    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa os campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    const nomesCampos = emptyFields.map((f) => f.name).join(", ");
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a3.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios:");
+  } else {
+    message = "✅ Todos os campos foram preenchidos corretamente.";
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a3.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.log("💾 Validação OK — pode salvar!");
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
