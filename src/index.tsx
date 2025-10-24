@@ -6748,11 +6748,11 @@ async (...args) =>
         }}), async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
-    { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
-    { path: "sc.a1.iptChanges.address", name: "Endereço" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
-    { path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.editChanges.address", name: "Endereço" },
+    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
+    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -6772,7 +6772,7 @@ async (...args) =>
   let message = "";
 
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
+    message = "Preencha os campos obrigatórios.";
 
     tools.functions.setVar({
       args: "",
@@ -6796,9 +6796,9 @@ async (...args) =>
     },
   });
 
-  console.log("💾 Validação OK — salvando no Firebase...");
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-  // inicializar firebase
+  // Garantir app inicializado
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -6807,41 +6807,57 @@ async (...args) =>
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore e prepara atualização
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // Monta os dados a salvar
-  const newDoc = {
-    condo: getVal("sc.a1.iptChanges.condo"),
-    address: getVal("sc.a1.iptChanges.address"),
-    startDate: getVal("sc.a1.iptChanges.startDate"),
-    endDate: getVal("sc.a1.iptChanges.endDate"),
-    description: getVal("sc.a1.iptChanges.description"),
-    createdAt: serverTimestamp(),
+  // ID do documento a atualizar
+  const docId = tools.getCtData("sc.a1.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  // Monta os dados a atualizar
+  const updatedDoc = {
+    condo: getVal("sc.a1.editChanges.condo"),
+    address: getVal("sc.a1.editChanges.address"),
+    startDate: getVal("sc.a1.editChanges.startDate"),
+    endDate: getVal("sc.a1.editChanges.endDate"),
+    description: getVal("sc.a1.editChanges.description"),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-    const docRef = await addDoc(collection(db, "condos"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
   } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
+    console.error("❌ Erro ao atualizar documento:", error);
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
   }
+
 
 //clean iptsChanges
 tools.functions.setVar({
@@ -6869,7 +6885,7 @@ tools.functions.setVar({
         value: [false],
       },
     });
-}
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -13383,11 +13399,11 @@ async (...args) =>
         }}), async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
-    { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
-    { path: "sc.a1.iptChanges.address", name: "Endereço" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
-    { path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.editChanges.address", name: "Endereço" },
+    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
+    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -13407,7 +13423,7 @@ async (...args) =>
   let message = "";
 
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
+    message = "Preencha os campos obrigatórios.";
 
     tools.functions.setVar({
       args: "",
@@ -13431,9 +13447,9 @@ async (...args) =>
     },
   });
 
-  console.log("💾 Validação OK — salvando no Firebase...");
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-  // inicializar firebase
+  // Garantir app inicializado
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -13442,41 +13458,57 @@ async (...args) =>
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore e prepara atualização
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // Monta os dados a salvar
-  const newDoc = {
-    condo: getVal("sc.a1.iptChanges.condo"),
-    address: getVal("sc.a1.iptChanges.address"),
-    startDate: getVal("sc.a1.iptChanges.startDate"),
-    endDate: getVal("sc.a1.iptChanges.endDate"),
-    description: getVal("sc.a1.iptChanges.description"),
-    createdAt: serverTimestamp(),
+  // ID do documento a atualizar
+  const docId = tools.getCtData("sc.a1.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  // Monta os dados a atualizar
+  const updatedDoc = {
+    condo: getVal("sc.a1.editChanges.condo"),
+    address: getVal("sc.a1.editChanges.address"),
+    startDate: getVal("sc.a1.editChanges.startDate"),
+    endDate: getVal("sc.a1.editChanges.endDate"),
+    description: getVal("sc.a1.editChanges.description"),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-    const docRef = await addDoc(collection(db, "condos"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
   } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
+    console.error("❌ Erro ao atualizar documento:", error);
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
   }
+
 
 //clean iptsChanges
 tools.functions.setVar({
@@ -13504,7 +13536,7 @@ tools.functions.setVar({
         value: [false],
       },
     });
-}
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -19935,11 +19967,11 @@ async (...args) =>
         }}), async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
-    { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
-    { path: "sc.a1.iptChanges.address", name: "Endereço" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
-    { path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.editChanges.address", name: "Endereço" },
+    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
+    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -19959,7 +19991,7 @@ async (...args) =>
   let message = "";
 
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
+    message = "Preencha os campos obrigatórios.";
 
     tools.functions.setVar({
       args: "",
@@ -19983,9 +20015,9 @@ async (...args) =>
     },
   });
 
-  console.log("💾 Validação OK — salvando no Firebase...");
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-  // inicializar firebase
+  // Garantir app inicializado
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -19994,41 +20026,57 @@ async (...args) =>
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore e prepara atualização
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // Monta os dados a salvar
-  const newDoc = {
-    condo: getVal("sc.a1.iptChanges.condo"),
-    address: getVal("sc.a1.iptChanges.address"),
-    startDate: getVal("sc.a1.iptChanges.startDate"),
-    endDate: getVal("sc.a1.iptChanges.endDate"),
-    description: getVal("sc.a1.iptChanges.description"),
-    createdAt: serverTimestamp(),
+  // ID do documento a atualizar
+  const docId = tools.getCtData("sc.a1.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  // Monta os dados a atualizar
+  const updatedDoc = {
+    condo: getVal("sc.a1.editChanges.condo"),
+    address: getVal("sc.a1.editChanges.address"),
+    startDate: getVal("sc.a1.editChanges.startDate"),
+    endDate: getVal("sc.a1.editChanges.endDate"),
+    description: getVal("sc.a1.editChanges.description"),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-    const docRef = await addDoc(collection(db, "condos"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
   } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
+    console.error("❌ Erro ao atualizar documento:", error);
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
   }
+
 
 //clean iptsChanges
 tools.functions.setVar({
@@ -20056,7 +20104,7 @@ tools.functions.setVar({
         value: [false],
       },
     });
-}
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -26495,11 +26543,11 @@ async (...args) =>
         }}), async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
-    { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
-    { path: "sc.a1.iptChanges.address", name: "Endereço" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
-    { path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.editChanges.address", name: "Endereço" },
+    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
+    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -26519,7 +26567,7 @@ async (...args) =>
   let message = "";
 
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
+    message = "Preencha os campos obrigatórios.";
 
     tools.functions.setVar({
       args: "",
@@ -26543,9 +26591,9 @@ async (...args) =>
     },
   });
 
-  console.log("💾 Validação OK — salvando no Firebase...");
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-  // inicializar firebase
+  // Garantir app inicializado
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -26554,41 +26602,57 @@ async (...args) =>
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore e prepara atualização
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // Monta os dados a salvar
-  const newDoc = {
-    condo: getVal("sc.a1.iptChanges.condo"),
-    address: getVal("sc.a1.iptChanges.address"),
-    startDate: getVal("sc.a1.iptChanges.startDate"),
-    endDate: getVal("sc.a1.iptChanges.endDate"),
-    description: getVal("sc.a1.iptChanges.description"),
-    createdAt: serverTimestamp(),
+  // ID do documento a atualizar
+  const docId = tools.getCtData("sc.a1.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  // Monta os dados a atualizar
+  const updatedDoc = {
+    condo: getVal("sc.a1.editChanges.condo"),
+    address: getVal("sc.a1.editChanges.address"),
+    startDate: getVal("sc.a1.editChanges.startDate"),
+    endDate: getVal("sc.a1.editChanges.endDate"),
+    description: getVal("sc.a1.editChanges.description"),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-    const docRef = await addDoc(collection(db, "condos"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
   } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
+    console.error("❌ Erro ao atualizar documento:", error);
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
   }
+
 
 //clean iptsChanges
 tools.functions.setVar({
@@ -26616,7 +26680,7 @@ tools.functions.setVar({
         value: [false],
       },
     });
-}
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
