@@ -8158,6 +8158,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.totalValue`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -8169,8 +8191,7 @@ fontWeight: '700',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -8189,27 +8210,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a7b.editOwner.area`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.area`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>],
 
             args,
@@ -14307,6 +14307,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.totalValue`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -14318,8 +14340,7 @@ fontWeight: '700',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -14338,27 +14359,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a7b.editOwner.area`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.area`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>],
 
             args,
@@ -20373,6 +20373,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.totalValue`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -20384,8 +20406,7 @@ fontWeight: '700',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -20404,27 +20425,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a7b.editOwner.area`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.area`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>],
 
             args,
@@ -26447,6 +26447,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.totalValue`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -26458,8 +26480,7 @@ fontWeight: '700',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -26478,27 +26499,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a7b.editOwner.area`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.area`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>],
 
             args,
