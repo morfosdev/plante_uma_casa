@@ -6711,6 +6711,22 @@ borderRadius: 10,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -13328,6 +13344,22 @@ borderRadius: 10,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -19862,6 +19894,22 @@ borderRadius: 10,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -26404,6 +26452,22 @@ borderRadius: 10,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
