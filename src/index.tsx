@@ -7147,7 +7147,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7.addOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -7510,6 +7510,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -7554,11 +7576,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          path: [`sc.A7.forms.iptsChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          keyPath: [`sc.A7.forms.iptsChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -7596,6 +7618,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.totalValue`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -7607,7 +7651,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -7626,6 +7671,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.firstInstallment`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.firstInstallment`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -7663,26 +7729,133 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ arrFunctions: [async () => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
+    { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
+    { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // inicializar firebase
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "lots"), newDoc);
+    console.log("✅ Documento salvo com ID:", docRef.id);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["🏢 Documento salvo com sucesso!"],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao salvar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
+  }
+
+//clean iptsChanges
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges"],
+        value: [""],
+      },
+    });
+
+//close Add
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a7.addOwner"],
+        value: [false],
+      },
+    });
+
+//close sideRight
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -11078,7 +11251,7 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [true]
         }})]
  , trigger: 'on press'
@@ -13444,7 +13617,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7.addOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -13807,6 +13980,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -13851,11 +14046,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          path: [`sc.A7.forms.iptsChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          keyPath: [`sc.A7.forms.iptsChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -13893,6 +14088,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.totalValue`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -13904,7 +14121,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -13923,6 +14141,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.firstInstallment`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.firstInstallment`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -13960,26 +14199,133 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ arrFunctions: [async () => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
+    { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
+    { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // inicializar firebase
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "lots"), newDoc);
+    console.log("✅ Documento salvo com ID:", docRef.id);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["🏢 Documento salvo com sucesso!"],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao salvar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
+  }
+
+//clean iptsChanges
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges"],
+        value: [""],
+      },
+    });
+
+//close Add
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a7.addOwner"],
+        value: [false],
+      },
+    });
+
+//close sideRight
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -19658,7 +20004,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7.addOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -20021,6 +20367,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -20065,11 +20433,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          path: [`sc.A7.forms.iptsChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          keyPath: [`sc.A7.forms.iptsChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -20107,6 +20475,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.totalValue`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -20118,7 +20508,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -20137,6 +20528,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.firstInstallment`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.firstInstallment`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -20174,26 +20586,133 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ arrFunctions: [async () => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
+    { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
+    { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // inicializar firebase
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "lots"), newDoc);
+    console.log("✅ Documento salvo com ID:", docRef.id);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["🏢 Documento salvo com sucesso!"],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao salvar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
+  }
+
+//clean iptsChanges
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges"],
+        value: [""],
+      },
+    });
+
+//close Add
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a7.addOwner"],
+        value: [false],
+      },
+    });
+
+//close sideRight
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -25880,7 +26399,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7.addOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -26243,6 +26762,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -26287,11 +26828,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          path: [`sc.A7.forms.iptsChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          keyPath: [`sc.A7.forms.iptsChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -26329,6 +26870,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.totalValue`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -26340,7 +26903,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -26359,6 +26923,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.firstInstallment`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.firstInstallment`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -26396,26 +26981,133 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ arrFunctions: [async () => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
+    { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
+    { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // inicializar firebase
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "lots"), newDoc);
+    console.log("✅ Documento salvo com ID:", docRef.id);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["🏢 Documento salvo com sucesso!"],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao salvar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
+  }
+
+//clean iptsChanges
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges"],
+        value: [""],
+      },
+    });
+
+//close Add
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a7.addOwner"],
+        value: [false],
+      },
+    });
+
+//close sideRight
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
