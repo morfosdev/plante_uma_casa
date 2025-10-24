@@ -7687,7 +7687,7 @@ paddingHorizontal: 4,
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          keyPath: [`sc.A7.forms.iptsChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -14157,7 +14157,7 @@ paddingHorizontal: 4,
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          keyPath: [`sc.A7.forms.iptsChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -20544,7 +20544,7 @@ paddingHorizontal: 4,
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          keyPath: [`sc.A7.forms.iptsChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -26939,7 +26939,7 @@ paddingHorizontal: 4,
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          keyPath: [`sc.A7.forms.iptsChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
