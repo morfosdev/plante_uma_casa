@@ -39642,6 +39642,7 @@ borderRadius: 12,
             arrProps: [],
             arrItems: [(...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
+	data: "$var_sc.B7.statics.steps",
 	defaultOpenIdx: 0,
 	styles: {
 			backgroundColor: '#ccc',
