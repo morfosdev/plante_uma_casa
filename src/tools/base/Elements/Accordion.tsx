@@ -76,6 +76,7 @@ export const Accordion = (props) => {
   }
 
   const items = useData((ct) => pathSel(ct, keyOrUri) ?? []);
+  console.log("Dentro Accordion",{items});
 
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
@@ -91,31 +92,6 @@ export const Accordion = (props) => {
     setOpenIdx((prev) => (prev === idx ? null : idx));
   };
 
-  // Garante que cada entrada vire um React element válido
-  const asChild = (Item, idx) => {
-    try {
-      if (typeof Item === "function") {
-        const out = Item();
-        if (React.isValidElement(out)) return out;
-        if (typeof out === "string" || typeof out === "number")
-          return <Text>{String(out)}</Text>;
-        console.warn(
-          "Accordion: função no idx %s não retornou elemento válido.",
-          idx,
-          out
-        );
-        return null;
-      }
-      if (React.isValidElement(Item)) return Item;
-      if (typeof Item === "string" || typeof Item === "number")
-        return <Text>{String(Item)}</Text>;
-      console.warn("Accordion: item inválido no idx %s.", idx, Item);
-      return null;
-    } catch (e) {
-      console.error("Accordion: erro ao renderizar item %s ->", idx, e);
-      return null;
-    }
-  };
 
   console.log("Accordion", { props, openIdx, cfg0 });
   const userStyles = cfg0?.styles ?? {};
@@ -123,19 +99,11 @@ export const Accordion = (props) => {
   return (
     <>
       {items.map((Item, idx) => {
+        console.log("dentro do loop do Acc",{Item})
         const isOpen = openIdx === idx;
-        const child = asChild(Item, idx);
+        const child = !Item
         if (!child) return null;
-        return (
-          <ItemAcc
-            userStyles={userStyles}
-            key={idx}
-            open={isOpen}
-            onToggle={() => handleToggle(idx)}
-          >
-            {child}
-          </ItemAcc>
-        );
+        return <Text>Oi</Text>;
       })}
     </>
   );
