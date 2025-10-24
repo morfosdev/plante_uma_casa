@@ -7510,6 +7510,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -7541,28 +7563,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -7607,7 +7607,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -7626,6 +7627,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -7688,7 +7710,7 @@ async (...args) =>
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+    { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
@@ -7760,7 +7782,7 @@ async (...args) =>
   };
 
   try {
-    const docRef = await addDoc(collection(db, "partners"), newDoc);
+    const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
     tools.functions.setVar({
@@ -13933,6 +13955,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -13964,28 +14008,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -14030,7 +14052,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -14049,6 +14072,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -14111,7 +14155,7 @@ async (...args) =>
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+    { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
@@ -14183,7 +14227,7 @@ async (...args) =>
   };
 
   try {
-    const docRef = await addDoc(collection(db, "partners"), newDoc);
+    const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
     tools.functions.setVar({
@@ -20273,6 +20317,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -20304,28 +20370,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -20370,7 +20414,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -20389,6 +20434,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -20451,7 +20517,7 @@ async (...args) =>
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+    { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
@@ -20523,7 +20589,7 @@ async (...args) =>
   };
 
   try {
-    const docRef = await addDoc(collection(db, "partners"), newDoc);
+    const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
     tools.functions.setVar({
@@ -26621,6 +26687,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -26652,28 +26740,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -26718,7 +26784,8 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -26737,6 +26804,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.partnerActivity`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -26799,7 +26887,7 @@ async (...args) =>
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+    { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
@@ -26871,7 +26959,7 @@ async (...args) =>
   };
 
   try {
-    const docRef = await addDoc(collection(db, "partners"), newDoc);
+    const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
     tools.functions.setVar({
