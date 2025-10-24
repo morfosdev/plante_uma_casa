@@ -10,6 +10,12 @@ import {
   Text,
   View,
 } from 'react-native';
+import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signInWithRedirect,
+} from "firebase/auth";
 
 // Finaliza sessões pendentes (necessário para Web/Expo)
 WebBrowser.maybeCompleteAuthSession();
@@ -92,16 +98,64 @@ export const LoginNative = () => {
 // Componente: Login para Web
 // =========================================
 const LoginWeb = () => {
-  React.useEffect(() => {
-    (async () => {})();
-  }, []);
+  // Renderiza apenas no Web
+  if (RN.Platform.OS !== "web") return null;
 
-  const handlePress = async () => {};
+  const [loading, setLoading] = React.useState(false);
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  console.log({ fbInit });
+  const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+  const handleLogin = async () => {
+    try {
+      setLoading(true);
+
+      const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: "select_account" });
+
+      // Pop-up (recomendado). Se o navegador bloquear, cai para redirect.
+      let result;
+      try {
+        result = await signInWithPopup(auth, provider);
+      } catch (popupErr) {
+        // fallback para redirect (útil em bloqueio de pop-up)
+        await signInWithRedirect(auth, provider);
+        return;
+      }
+
+
+    } catch (err) {
+
+      console.error("Erro no login Google (web):", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <View style={{ alignItems: 'center' }}>
-      <Text>{'WEB'}</Text>
-    </View>
+    <RN.Pressable
+      onPress={handleLogin}
+      disabled={loading}
+      style={({ pressed }) => [
+        {
+          paddingVertical: 12,
+          paddingHorizontal: 16,
+          borderRadius: 8,
+          borderWidth: 1,
+          borderColor: "#ccc",
+          alignItems: "center",
+          justifyContent: "center",
+          opacity: pressed || loading ? 0.6 : 1,
+          backgroundColor: "#fff",
+        },
+      ]}
+      accessibilityRole="button"
+      accessibilityLabel="Entrar com conta Google (Web)"
+    >
+      <RN.Text style={{ fontWeight: "600" }}>
+        {loading ? "Conectando..." : "Entrar com Google"}
+      </RN.Text>
+    </RN.Pressable>
   );
 };
 
