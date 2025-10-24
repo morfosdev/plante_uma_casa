@@ -8183,7 +8183,7 @@ color: '#555555',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docID`],
+        `lots`, `$var_sc.a7b.editChanges.docID`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
@@ -14692,7 +14692,7 @@ color: '#555555',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docID`],
+        `lots`, `$var_sc.a7b.editChanges.docID`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
@@ -21118,7 +21118,7 @@ color: '#555555',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docID`],
+        `lots`, `$var_sc.a7b.editChanges.docID`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
@@ -27552,7 +27552,7 @@ color: '#555555',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docID`],
+        `lots`, `$var_sc.a7b.editChanges.docID`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
