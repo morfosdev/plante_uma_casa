@@ -7899,7 +7899,7 @@ paddingVertical: 8,
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -7916,6 +7916,8 @@ paddingVertical: 8,
   try {
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
+
+await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
@@ -14514,7 +14516,7 @@ paddingVertical: 8,
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -14531,6 +14533,8 @@ paddingVertical: 8,
   try {
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
+
+await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
@@ -21046,7 +21050,7 @@ paddingVertical: 8,
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -21063,6 +21067,8 @@ paddingVertical: 8,
   try {
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
+
+await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
@@ -27586,7 +27592,7 @@ paddingVertical: 8,
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -27603,6 +27609,8 @@ paddingVertical: 8,
   try {
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
+
+await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
