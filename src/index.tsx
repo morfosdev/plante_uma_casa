@@ -5887,8 +5887,8 @@ paddingVertical: 8,
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
     { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-		{ path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
-		{ path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -5898,7 +5898,7 @@ paddingVertical: 8,
     return val ?? "";
   };
 
-  // Checa os campos vazios
+  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -5908,7 +5908,6 @@ paddingVertical: 8,
   let message = "";
 
   if (emptyFields.length > 0) {
-    const nomesCampos = emptyFields.map((f) => f.name).join(", ");
     message = `Preencha os campos obrigatórios.`;
 
     tools.functions.setVar({
@@ -5919,29 +5918,65 @@ paddingVertical: 8,
       },
     });
 
-    console.warn("⚠️ Campos vazios");
-  } else {
-    message = "✅ Todos os campos foram preenchidos corretamente.";
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // Garantir app inicializado
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    condo: getVal("sc.a1.iptChanges.condo"),
+    address: getVal("sc.a1.iptChanges.address"),
+    startDate: getVal("sc.a1.iptChanges.startDate"),
+    endDate: getVal("sc.a1.iptChanges.endDate"),
+    description: getVal("sc.a1.iptChanges.description"),
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "condos"), newDoc);
+    console.log("✅ Documento salvo com ID:", docRef.id);
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [message],
+        value: ["🏢 Condomínio salvo com sucesso!"],
       },
     });
-
-    console.log("💾 Validação OK — pode salvar!");
-  }
-
-// Garantir app inicializado
-  let fbInit = tools.getCtData('all.temp.fireInit');
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import('firebase/app');
-    const cfg = tools.getCtData('all.temp.fireConfig'); 
-		// opcional: pegue sua config do CT
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  } catch (error) {
+    console.error("❌ Erro ao salvar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
   }
 }
 ]
@@ -12103,8 +12138,8 @@ paddingVertical: 8,
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
     { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-		{ path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
-		{ path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -12114,7 +12149,7 @@ paddingVertical: 8,
     return val ?? "";
   };
 
-  // Checa os campos vazios
+  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -12124,7 +12159,6 @@ paddingVertical: 8,
   let message = "";
 
   if (emptyFields.length > 0) {
-    const nomesCampos = emptyFields.map((f) => f.name).join(", ");
     message = `Preencha os campos obrigatórios.`;
 
     tools.functions.setVar({
@@ -12135,29 +12169,65 @@ paddingVertical: 8,
       },
     });
 
-    console.warn("⚠️ Campos vazios");
-  } else {
-    message = "✅ Todos os campos foram preenchidos corretamente.";
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // Garantir app inicializado
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    condo: getVal("sc.a1.iptChanges.condo"),
+    address: getVal("sc.a1.iptChanges.address"),
+    startDate: getVal("sc.a1.iptChanges.startDate"),
+    endDate: getVal("sc.a1.iptChanges.endDate"),
+    description: getVal("sc.a1.iptChanges.description"),
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "condos"), newDoc);
+    console.log("✅ Documento salvo com ID:", docRef.id);
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [message],
+        value: ["🏢 Condomínio salvo com sucesso!"],
       },
     });
-
-    console.log("💾 Validação OK — pode salvar!");
-  }
-
-// Garantir app inicializado
-  let fbInit = tools.getCtData('all.temp.fireInit');
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import('firebase/app');
-    const cfg = tools.getCtData('all.temp.fireConfig'); 
-		// opcional: pegue sua config do CT
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  } catch (error) {
+    console.error("❌ Erro ao salvar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
   }
 }
 ]
@@ -18236,8 +18306,8 @@ paddingVertical: 8,
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
     { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-		{ path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
-		{ path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -18247,7 +18317,7 @@ paddingVertical: 8,
     return val ?? "";
   };
 
-  // Checa os campos vazios
+  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -18257,7 +18327,6 @@ paddingVertical: 8,
   let message = "";
 
   if (emptyFields.length > 0) {
-    const nomesCampos = emptyFields.map((f) => f.name).join(", ");
     message = `Preencha os campos obrigatórios.`;
 
     tools.functions.setVar({
@@ -18268,29 +18337,65 @@ paddingVertical: 8,
       },
     });
 
-    console.warn("⚠️ Campos vazios");
-  } else {
-    message = "✅ Todos os campos foram preenchidos corretamente.";
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // Garantir app inicializado
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    condo: getVal("sc.a1.iptChanges.condo"),
+    address: getVal("sc.a1.iptChanges.address"),
+    startDate: getVal("sc.a1.iptChanges.startDate"),
+    endDate: getVal("sc.a1.iptChanges.endDate"),
+    description: getVal("sc.a1.iptChanges.description"),
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "condos"), newDoc);
+    console.log("✅ Documento salvo com ID:", docRef.id);
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [message],
+        value: ["🏢 Condomínio salvo com sucesso!"],
       },
     });
-
-    console.log("💾 Validação OK — pode salvar!");
-  }
-
-// Garantir app inicializado
-  let fbInit = tools.getCtData('all.temp.fireInit');
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import('firebase/app');
-    const cfg = tools.getCtData('all.temp.fireConfig'); 
-		// opcional: pegue sua config do CT
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  } catch (error) {
+    console.error("❌ Erro ao salvar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
   }
 }
 ]
@@ -24377,8 +24482,8 @@ paddingVertical: 8,
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
     { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-		{ path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
-		{ path: "sc.a1.iptChanges.description", name: "Descrição" },
+    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -24388,7 +24493,7 @@ paddingVertical: 8,
     return val ?? "";
   };
 
-  // Checa os campos vazios
+  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -24398,7 +24503,6 @@ paddingVertical: 8,
   let message = "";
 
   if (emptyFields.length > 0) {
-    const nomesCampos = emptyFields.map((f) => f.name).join(", ");
     message = `Preencha os campos obrigatórios.`;
 
     tools.functions.setVar({
@@ -24409,29 +24513,65 @@ paddingVertical: 8,
       },
     });
 
-    console.warn("⚠️ Campos vazios");
-  } else {
-    message = "✅ Todos os campos foram preenchidos corretamente.";
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // Garantir app inicializado
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    condo: getVal("sc.a1.iptChanges.condo"),
+    address: getVal("sc.a1.iptChanges.address"),
+    startDate: getVal("sc.a1.iptChanges.startDate"),
+    endDate: getVal("sc.a1.iptChanges.endDate"),
+    description: getVal("sc.a1.iptChanges.description"),
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "condos"), newDoc);
+    console.log("✅ Documento salvo com ID:", docRef.id);
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [message],
+        value: ["🏢 Condomínio salvo com sucesso!"],
       },
     });
-
-    console.log("💾 Validação OK — pode salvar!");
-  }
-
-// Garantir app inicializado
-  let fbInit = tools.getCtData('all.temp.fireInit');
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import('firebase/app');
-    const cfg = tools.getCtData('all.temp.fireConfig'); 
-		// opcional: pegue sua config do CT
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  } catch (error) {
+    console.error("❌ Erro ao salvar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
   }
 }
 ]
