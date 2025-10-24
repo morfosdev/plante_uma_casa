@@ -5881,7 +5881,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [
+() => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -5934,7 +5935,26 @@ paddingVertical: 8,
     console.log("💾 Validação OK — pode salvar!");
   }
 }
-]
+, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`condos`],
+            arrPathData: [`sc.a1.iptChanges`],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }})],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -12087,7 +12107,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [
+() => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -12140,7 +12161,26 @@ paddingVertical: 8,
     console.log("💾 Validação OK — pode salvar!");
   }
 }
-]
+, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`condos`],
+            arrPathData: [`sc.a1.iptChanges`],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }})],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -18210,7 +18250,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [
+() => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -18263,7 +18304,26 @@ paddingVertical: 8,
     console.log("💾 Validação OK — pode salvar!");
   }
 }
-]
+, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`condos`],
+            arrPathData: [`sc.a1.iptChanges`],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }})],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -24341,7 +24401,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [
+() => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -24394,7 +24455,26 @@ paddingVertical: 8,
     console.log("💾 Validação OK — pode salvar!");
   }
 }
-]
+, async (...args) =>
+        functions.firebase.setDocTool({ args, pass:{
+  arrRefStrings: [`condos`],
+            arrPathData: [`sc.a1.iptChanges`],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }})],
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
