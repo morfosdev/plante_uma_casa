@@ -7798,9 +7798,10 @@ paddingVertical: 8,
 
   // Monta os dados a salvar
   const newDoc = {
-    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
-    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    email: getVal("sc.A7.forms.iptsChanges.partnerMail"),
     lot: getVal("sc.A7.forms.iptsChanges.lot"),
+		area: getVal("sc.A7.forms.iptsChanges.area"),
     totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     createdAt: serverTimestamp(),
@@ -14268,9 +14269,10 @@ paddingVertical: 8,
 
   // Monta os dados a salvar
   const newDoc = {
-    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
-    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    email: getVal("sc.A7.forms.iptsChanges.partnerMail"),
     lot: getVal("sc.A7.forms.iptsChanges.lot"),
+		area: getVal("sc.A7.forms.iptsChanges.area"),
     totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     createdAt: serverTimestamp(),
@@ -20655,9 +20657,10 @@ paddingVertical: 8,
 
   // Monta os dados a salvar
   const newDoc = {
-    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
-    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    email: getVal("sc.A7.forms.iptsChanges.partnerMail"),
     lot: getVal("sc.A7.forms.iptsChanges.lot"),
+		area: getVal("sc.A7.forms.iptsChanges.area"),
     totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     createdAt: serverTimestamp(),
@@ -27050,9 +27053,10 @@ paddingVertical: 8,
 
   // Monta os dados a salvar
   const newDoc = {
-    partnerName: getVal("sc.A7.forms.iptsChanges.partnerName"),
-    partnerMail: getVal("sc.A7.forms.iptsChanges.partnerMail"),
+    owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
+    email: getVal("sc.A7.forms.iptsChanges.partnerMail"),
     lot: getVal("sc.A7.forms.iptsChanges.lot"),
+		area: getVal("sc.A7.forms.iptsChanges.area"),
     totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     createdAt: serverTimestamp(),
