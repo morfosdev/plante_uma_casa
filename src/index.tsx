@@ -47865,7 +47865,7 @@ tools.setData({
         }}/>, 
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"b4list",
+          pathScreen:"temp",
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
