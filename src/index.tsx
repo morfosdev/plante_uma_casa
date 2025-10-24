@@ -8170,11 +8170,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.totalValue`],
+          path: [`sc.a7b.editChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.totalValue`],
+          keyPath: [`sc.a7b.editChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -14342,11 +14342,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.totalValue`],
+          path: [`sc.a7b.editChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.totalValue`],
+          keyPath: [`sc.a7b.editChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -20431,11 +20431,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.totalValue`],
+          path: [`sc.a7b.editChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.totalValue`],
+          keyPath: [`sc.a7b.editChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -26528,11 +26528,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.totalValue`],
+          path: [`sc.a7b.editChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.totalValue`],
+          keyPath: [`sc.a7b.editChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
