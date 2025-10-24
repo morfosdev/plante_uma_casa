@@ -5998,6 +5998,14 @@ paddingVertical: 8,
       },
     });
   }
+
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -12267,6 +12275,14 @@ paddingVertical: 8,
       },
     });
   }
+
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -18453,6 +18469,14 @@ paddingVertical: 8,
       },
     });
   }
+
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -24647,6 +24671,14 @@ paddingVertical: 8,
       },
     });
   }
+
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
