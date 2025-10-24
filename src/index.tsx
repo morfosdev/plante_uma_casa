@@ -8008,11 +8008,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.email`],
+          path: [`sc.a7b.editChanges.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.email`],
+          keyPath: [`sc.a7b.editChanges.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -8062,11 +8062,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.lot`],
+          path: [`sc.a7b.editChanges.lot`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.lot`],
+          keyPath: [`sc.a7b.editChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -11184,7 +11184,7 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [`$arg_item`]
         }})]
  , trigger: 'on press'
@@ -14179,11 +14179,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.email`],
+          path: [`sc.a7b.editChanges.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.email`],
+          keyPath: [`sc.a7b.editChanges.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -14233,11 +14233,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.lot`],
+          path: [`sc.a7b.editChanges.lot`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.lot`],
+          keyPath: [`sc.a7b.editChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -20267,11 +20267,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.email`],
+          path: [`sc.a7b.editChanges.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.email`],
+          keyPath: [`sc.a7b.editChanges.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -20321,11 +20321,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.lot`],
+          path: [`sc.a7b.editChanges.lot`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.lot`],
+          keyPath: [`sc.a7b.editChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -26363,11 +26363,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.email`],
+          path: [`sc.a7b.editChanges.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.email`],
+          keyPath: [`sc.a7b.editChanges.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -26417,11 +26417,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.lot`],
+          path: [`sc.a7b.editChanges.lot`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.lot`],
+          keyPath: [`sc.a7b.editChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
