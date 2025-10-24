@@ -7737,16 +7737,16 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -7954,11 +7954,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.owner`],
+          path: [`sc.a7b.editChanges.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.owner`],
+          keyPath: [`sc.a7b.editChanges.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -8347,12 +8347,12 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -13908,16 +13908,16 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -14125,11 +14125,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.owner`],
+          path: [`sc.a7b.editChanges.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.owner`],
+          keyPath: [`sc.a7b.editChanges.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -14518,12 +14518,12 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -19996,16 +19996,16 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -20213,11 +20213,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.owner`],
+          path: [`sc.a7b.editChanges.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.owner`],
+          keyPath: [`sc.a7b.editChanges.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -20606,12 +20606,12 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -26092,16 +26092,16 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -26309,11 +26309,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.owner`],
+          path: [`sc.a7b.editChanges.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.owner`],
+          keyPath: [`sc.a7b.editChanges.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -26702,12 +26702,12 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
