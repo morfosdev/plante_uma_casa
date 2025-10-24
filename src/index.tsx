@@ -39736,7 +39736,7 @@ borderRadius: 12,
           ],
 
           children: [
-            `1. Planejamento e Projeto`
+            `$var_sc.B7.statics.steps.0.label`
           ],
 
           args,
