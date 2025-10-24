@@ -8432,11 +8432,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.owner`],
+          path: [`sc.A7.forms.editChanges.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.owner`],
+          keyPath: [`sc.A7.forms.editChanges.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -8486,11 +8486,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.email`],
+          path: [`sc.A7.forms.editChanges.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.email`],
+          keyPath: [`sc.A7.forms.editChanges.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -8540,11 +8540,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.lot`],
+          path: [`sc.A7.forms.editChanges.lot`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.lot`],
+          keyPath: [`sc.A7.forms.editChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -8594,11 +8594,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.area`],
+          path: [`sc.A7.forms.editChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.area`],
+          keyPath: [`sc.A7.forms.editChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -8786,8 +8786,8 @@ async (...args) =>
         }})],
         }}), async () => {
   const requiredFields = [
-    { path: "sc.A7.forms.editChanges.partnerName", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -15223,11 +15223,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.owner`],
+          path: [`sc.A7.forms.editChanges.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.owner`],
+          keyPath: [`sc.A7.forms.editChanges.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -15277,11 +15277,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.email`],
+          path: [`sc.A7.forms.editChanges.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.email`],
+          keyPath: [`sc.A7.forms.editChanges.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -15331,11 +15331,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.lot`],
+          path: [`sc.A7.forms.editChanges.lot`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.lot`],
+          keyPath: [`sc.A7.forms.editChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -15385,11 +15385,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.area`],
+          path: [`sc.A7.forms.editChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.area`],
+          keyPath: [`sc.A7.forms.editChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -15577,8 +15577,8 @@ async (...args) =>
         }})],
         }}), async () => {
   const requiredFields = [
-    { path: "sc.A7.forms.editChanges.partnerName", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -21931,11 +21931,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.owner`],
+          path: [`sc.A7.forms.editChanges.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.owner`],
+          keyPath: [`sc.A7.forms.editChanges.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -21985,11 +21985,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.email`],
+          path: [`sc.A7.forms.editChanges.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.email`],
+          keyPath: [`sc.A7.forms.editChanges.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -22039,11 +22039,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.lot`],
+          path: [`sc.A7.forms.editChanges.lot`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.lot`],
+          keyPath: [`sc.A7.forms.editChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -22093,11 +22093,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.area`],
+          path: [`sc.A7.forms.editChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.area`],
+          keyPath: [`sc.A7.forms.editChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -22285,8 +22285,8 @@ async (...args) =>
         }})],
         }}), async () => {
   const requiredFields = [
-    { path: "sc.A7.forms.editChanges.partnerName", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -28647,11 +28647,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.owner`],
+          path: [`sc.A7.forms.editChanges.owner`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.owner`],
+          keyPath: [`sc.A7.forms.editChanges.owner`],
           value: [`$arg_callback`]
         }})],
 
@@ -28701,11 +28701,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.email`],
+          path: [`sc.A7.forms.editChanges.email`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.email`],
+          keyPath: [`sc.A7.forms.editChanges.email`],
           value: [`$arg_callback`]
         }})],
 
@@ -28755,11 +28755,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.lot`],
+          path: [`sc.A7.forms.editChanges.lot`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.lot`],
+          keyPath: [`sc.A7.forms.editChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -28809,11 +28809,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.area`],
+          path: [`sc.A7.forms.editChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.area`],
+          keyPath: [`sc.A7.forms.editChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -29001,8 +29001,8 @@ async (...args) =>
         }})],
         }}), async () => {
   const requiredFields = [
-    { path: "sc.A7.forms.editChanges.partnerName", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
