@@ -8731,6 +8731,22 @@ paddingHorizontal: 4,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a7.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -8747,7 +8763,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `lots`, `sc.a7b.editChanges.docId`],
@@ -8767,7 +8784,132 @@ paddingVertical: 8,
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
-        }})]
+        }}), async () => {
+  const requiredFields = [
+    { path: "sc.A7.forms.editChanges.partnerName", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.editChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
+    { path: "sc.A7.forms.editChanges.area", name: "Área" },
+    { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.editChanges.firstInstallment", name: "Valor total da entrada" },
+  ];
+
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  if (emptyFields.length > 0) {
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Preencha os campos obrigatórios."],
+      },
+    });
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return;
+  }
+
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
+    },
+  });
+
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
+
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  const docId = tools.getCtData("sc.a7.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  const updatedDoc = {
+    owner: getVal("sc.A7.forms.editChanges.partnerName"),
+    email: getVal("sc.A7.forms.editChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.editChanges.lot"),
+		area: getVal("sc.A7.forms.editChanges.area"),
+    totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
+	updatedAt: serverTimestamp(),
+  };
+
+  try {
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["🏢 Dados atualizados com sucesso!"],
+      },
+    });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a7.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao atualizar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
+      },
+    });
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -15380,6 +15522,22 @@ paddingHorizontal: 4,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a7.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -15396,7 +15554,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `lots`, `sc.a7b.editChanges.docId`],
@@ -15416,7 +15575,132 @@ paddingVertical: 8,
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
-        }})]
+        }}), async () => {
+  const requiredFields = [
+    { path: "sc.A7.forms.editChanges.partnerName", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.editChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
+    { path: "sc.A7.forms.editChanges.area", name: "Área" },
+    { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.editChanges.firstInstallment", name: "Valor total da entrada" },
+  ];
+
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  if (emptyFields.length > 0) {
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Preencha os campos obrigatórios."],
+      },
+    });
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return;
+  }
+
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
+    },
+  });
+
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
+
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  const docId = tools.getCtData("sc.a7.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  const updatedDoc = {
+    owner: getVal("sc.A7.forms.editChanges.partnerName"),
+    email: getVal("sc.A7.forms.editChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.editChanges.lot"),
+		area: getVal("sc.A7.forms.editChanges.area"),
+    totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
+	updatedAt: serverTimestamp(),
+  };
+
+  try {
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["🏢 Dados atualizados com sucesso!"],
+      },
+    });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a7.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao atualizar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
+      },
+    });
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -21946,6 +22230,22 @@ paddingHorizontal: 4,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a7.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -21962,7 +22262,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `lots`, `sc.a7b.editChanges.docId`],
@@ -21982,7 +22283,132 @@ paddingVertical: 8,
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
-        }})]
+        }}), async () => {
+  const requiredFields = [
+    { path: "sc.A7.forms.editChanges.partnerName", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.editChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
+    { path: "sc.A7.forms.editChanges.area", name: "Área" },
+    { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.editChanges.firstInstallment", name: "Valor total da entrada" },
+  ];
+
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  if (emptyFields.length > 0) {
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Preencha os campos obrigatórios."],
+      },
+    });
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return;
+  }
+
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
+    },
+  });
+
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
+
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  const docId = tools.getCtData("sc.a7.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  const updatedDoc = {
+    owner: getVal("sc.A7.forms.editChanges.partnerName"),
+    email: getVal("sc.A7.forms.editChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.editChanges.lot"),
+		area: getVal("sc.A7.forms.editChanges.area"),
+    totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
+	updatedAt: serverTimestamp(),
+  };
+
+  try {
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["🏢 Dados atualizados com sucesso!"],
+      },
+    });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a7.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao atualizar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
+      },
+    });
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -28520,6 +28946,22 @@ paddingHorizontal: 4,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a7.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -28536,7 +28978,8 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `lots`, `sc.a7b.editChanges.docId`],
@@ -28556,7 +28999,132 @@ paddingVertical: 8,
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
-        }})]
+        }}), async () => {
+  const requiredFields = [
+    { path: "sc.A7.forms.editChanges.partnerName", name: "Nome do Proprietário" },
+    { path: "sc.A7.forms.editChanges.partnerMail", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
+    { path: "sc.A7.forms.editChanges.area", name: "Área" },
+    { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
+		{ path: "sc.A7.forms.editChanges.firstInstallment", name: "Valor total da entrada" },
+  ];
+
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  if (emptyFields.length > 0) {
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Preencha os campos obrigatórios."],
+      },
+    });
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return;
+  }
+
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
+    },
+  });
+
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
+
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  const docId = tools.getCtData("sc.a7.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  const updatedDoc = {
+    owner: getVal("sc.A7.forms.editChanges.partnerName"),
+    email: getVal("sc.A7.forms.editChanges.partnerMail"),
+    lot: getVal("sc.A7.forms.editChanges.lot"),
+		area: getVal("sc.A7.forms.editChanges.area"),
+    totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
+	updatedAt: serverTimestamp(),
+  };
+
+  try {
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["🏢 Dados atualizados com sucesso!"],
+      },
+    });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a7.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao atualizar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
+      },
+    });
+  }
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
