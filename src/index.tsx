@@ -7147,7 +7147,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7.addOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -7852,7 +7852,7 @@ async (...args) =>
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.iptChanges"],
+        keyPath: ["sc.A7.forms.iptsChanges"],
         value: [""],
       },
     });
@@ -7861,7 +7861,7 @@ tools.functions.setVar({
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.add"],
+        keyPath: ["all.toggles.a7.addOwner"],
         value: [false],
       },
     });
@@ -11271,7 +11271,7 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [true]
         }})]
  , trigger: 'on press'
@@ -13637,7 +13637,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7.addOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -14342,7 +14342,7 @@ async (...args) =>
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.iptChanges"],
+        keyPath: ["sc.A7.forms.iptsChanges"],
         value: [""],
       },
     });
@@ -14351,7 +14351,7 @@ tools.functions.setVar({
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.add"],
+        keyPath: ["all.toggles.a7.addOwner"],
         value: [false],
       },
     });
@@ -20044,7 +20044,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7.addOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -20749,7 +20749,7 @@ async (...args) =>
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.iptChanges"],
+        keyPath: ["sc.A7.forms.iptsChanges"],
         value: [""],
       },
     });
@@ -20758,7 +20758,7 @@ tools.functions.setVar({
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.add"],
+        keyPath: ["all.toggles.a7.addOwner"],
         value: [false],
       },
     });
@@ -26459,7 +26459,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a7.editOwner", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.a7.addOwner", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -27164,7 +27164,7 @@ async (...args) =>
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.iptChanges"],
+        keyPath: ["sc.A7.forms.iptsChanges"],
         value: [""],
       },
     });
@@ -27173,7 +27173,7 @@ tools.functions.setVar({
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.add"],
+        keyPath: ["all.toggles.a7.addOwner"],
         value: [false],
       },
     });
