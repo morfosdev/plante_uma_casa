@@ -5999,11 +5999,30 @@ paddingVertical: 8,
     });
   }
 
+//clean iptsChanges
 tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges"],
         value: [""],
+      },
+    });
+
+//close Add
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.add"],
+        value: [false],
+      },
+    });
+
+//close sideRight
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
       },
     });
 }
@@ -12277,11 +12296,30 @@ paddingVertical: 8,
     });
   }
 
+//clean iptsChanges
 tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges"],
         value: [""],
+      },
+    });
+
+//close Add
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.add"],
+        value: [false],
+      },
+    });
+
+//close sideRight
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
       },
     });
 }
@@ -18472,11 +18510,30 @@ paddingVertical: 8,
     });
   }
 
+//clean iptsChanges
 tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges"],
         value: [""],
+      },
+    });
+
+//close Add
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.add"],
+        value: [false],
+      },
+    });
+
+//close sideRight
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
       },
     });
 }
@@ -24675,11 +24732,30 @@ paddingVertical: 8,
     });
   }
 
+//clean iptsChanges
 tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges"],
         value: [""],
+      },
+    });
+
+//close Add
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.add"],
+        value: [false],
+      },
+    });
+
+//close sideRight
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
       },
     });
 }
