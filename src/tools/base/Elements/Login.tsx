@@ -1,15 +1,12 @@
 
+import React from "react";
+import * as RN from "react-native";
+
 // ---------- import Packs
 import * as Google from "expo-auth-session/providers/google";
 import * as WebBrowser from "expo-web-browser";
-import {
-    getAuth,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signInWithRedirect,
-} from "firebase/auth";
-import React from "react";
-import * as RN from "react-native";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, } from "firebase/auth";
+import { useData } from '../../..';
 
 // Finaliza sessões pendentes (necessário para Web/Expo)
 WebBrowser.maybeCompleteAuthSession();
@@ -96,8 +93,9 @@ const LoginWeb = () => {
   if (RN.Platform.OS !== "web") return null;
 
   const [loading, setLoading] = React.useState(false);
-  const fbInit = tools.getCtData("all.temp.fireInit");
+  const fbInit = useData(ct => ct.all.temp.fireInit);
   console.log({ fbInit });
+  
   const auth = fbInit ? getAuth(fbInit) : getAuth();
 
   const handleLogin = async () => {
@@ -162,4 +160,3 @@ export const Login = (props: Tprops) => {
   }
   return <LoginNative />;
 };
-
