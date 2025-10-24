@@ -40275,10 +40275,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b8.addSteps`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b9.editSteps`],
           value: [`$arg_item`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.b8.editChanges.stepId`],
+          value: [`s1.1`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -49462,6 +49467,35 @@ tools.setData({
 			value: 'H'
 		},
 	]
+} } 
+, 
+'B7': { 
+'forms': { 'iptsChanges': {   } 
+ } 
+, 
+'currId': "", 'statics': {
+  steps: [
+    {
+      label: "Planejamento e Projeto",
+      subs: [
+        {stepId: "s1.1", label: "Definição de Orçamento" },
+        {stepId: "s1.2", label: "Escolha do Terreno" },
+        {stepId: "s1.3", label: "Contratação de arquiteto/engenheiro" },
+        {stepId: "s1.4", label: "Elaboração do projeto arquitetônico e complementare..." },
+        {stepId: "s1.5", label: "Aprovação na prefeitura e órgãos competentes...." },
+      ],
+    },
+    {
+      label: "Preparo do Terreno",
+      subs: [
+        {stepId: "s2.1", label: "..." },
+        {stepId: "s2.2", label: "..." },
+        {stepId: "s2.3", label: "..." },
+        {stepId: "s2.4", label: "..." },
+        {stepId: "s2.5", label: "..." },
+      ],
+    },
+  ],
 } } 
 , 'A0C': { 'forms': { 'iptsChanges': {
 	userEmail: ""
