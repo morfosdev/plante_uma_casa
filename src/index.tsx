@@ -8094,12 +8094,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [
-        `sc.A7.forms.iptsChanges.partnerActivity`, `sc.a7b.editOwner.area`],
+          path: [`sc.a7b.editOwner.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a7b.editOwner.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -14222,12 +14221,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [
-        `sc.A7.forms.iptsChanges.partnerActivity`, `sc.a7b.editOwner.area`],
+          path: [`sc.a7b.editOwner.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a7b.editOwner.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -20267,12 +20265,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [
-        `sc.A7.forms.iptsChanges.partnerActivity`, `sc.a7b.editOwner.area`],
+          path: [`sc.a7b.editOwner.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a7b.editOwner.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -26320,12 +26317,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [
-        `sc.A7.forms.iptsChanges.partnerActivity`, `sc.a7b.editOwner.area`],
+          path: [`sc.a7b.editOwner.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          keyPath: [`sc.a7b.editOwner.area`],
           value: [`$arg_callback`]
         }})],
 
