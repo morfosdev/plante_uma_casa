@@ -5922,7 +5922,7 @@ paddingVertical: 8,
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -12537,7 +12537,7 @@ paddingVertical: 8,
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -19069,7 +19069,7 @@ paddingVertical: 8,
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -25609,7 +25609,7 @@ paddingVertical: 8,
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
