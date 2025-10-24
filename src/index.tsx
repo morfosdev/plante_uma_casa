@@ -5939,6 +5939,9 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "condos"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
+// Atualiza o documento para incluir o próprio ID
+    await updateDoc(docRef, { docId: docRef.id });
+
     tools.functions.setVar({
       args: "",
       pass: {
@@ -12551,6 +12554,9 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "condos"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
+// Atualiza o documento para incluir o próprio ID
+    await updateDoc(docRef, { docId: docRef.id });
+
     tools.functions.setVar({
       args: "",
       pass: {
@@ -19079,6 +19085,9 @@ paddingVertical: 8,
   try {
     const docRef = await addDoc(collection(db, "condos"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
+
+// Atualiza o documento para incluir o próprio ID
+    await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
@@ -25616,6 +25625,9 @@ paddingVertical: 8,
   try {
     const docRef = await addDoc(collection(db, "condos"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
+
+// Atualiza o documento para incluir o próprio ID
+    await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
