@@ -1,147 +1,162 @@
 
-// ---------- import Packs
-import JSON5 from 'json5';
-import React, { useEffect, useState } from 'react';
-import { Pressable, ScrollView, View } from 'react-native';
+import React from "react";
+import * as RN from "react-native";
 
-// ---------- import Local Tools
-import { getStlValues, mapElements, getVarValue, pathSel } from '../project';
+// ---------- import Packs
+import * as Google from "expo-auth-session/providers/google";
+import * as WebBrowser from "expo-web-browser";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, } from "firebase/auth";
 import { useData } from '../../..';
 
-export const css =
-  'color: lightblue; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
+// Finaliza sessões pendentes (necessário para Web/Expo)
+WebBrowser.maybeCompleteAuthSession();
 
-type Tconds = '==' | '!=' | '>' | '<' | '<=' | '>=';
 type Tprops = {
   pass: {
-    elementsProperties: any;
-    styles: any;
-    functions: any[];
-    childrenItems: any;
-    args: any;
+    arrFuncs?: {};
+    configs?: string[];
+    args?: {};
   };
 };
 
-export const processFunctions = async (arr: any[]) => {
-  const defaultVal = { trigger: '', arrFunctions: [] };
+// ---------- IDs do Google OAuth por plataforma (preencha!)
+const IOS_CLIENT_ID = "";
+const ANDROID_CLIENT_ID =
+  "1099098264007-thb39j1g2ilg74mvrquruu01iaifj9e1.apps.googleusercontent.com";
 
-  for (const fn of arr) {
-    if (typeof fn === 'function') {
-      const result = await fn();
-      return result || defaultVal;
-    }
-  }
+// =========================================
+// Componente: Login para Nativo (Android/iOS)
+// =========================================
+export const LoginNative = () => {
+  const [loading, setLoading] = React.useState(false);
 
-  return defaultVal;
-};
-
-// DynView / BOX
-export const DynView = (props: Tprops) => {
-  if (!props) return <></>;
-
-  const [sttTypeFunc, setTypeFunc] = useState('');
-  const [sttCondParts, setCondParts] = useState({
-    path: '',
-    operator: '==',
-    compareVal: null,
+  // Somente Android nativo
+  const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
+    androidClientId: ANDROID_CLIENT_ID,
+    selectAccount: true,
   });
-  const [sttPressFuncs, setPressFuncs] = useState<
-    Array<(args: any) => Promise<void>>
-  >([]);
 
-  let varValue = useData(ct => pathSel(ct, sttCondParts.path));
+  React.useEffect(() => {
+    if (!response) return;
+    setLoading(false);
 
-  // ---------- set Props
-  const { elementsProperties, styles, functions } = props.pass;
-  const { childrenItems, args } = props.pass;
-
-  const callFn = async () => {
-    const { trigger, arrFunctions } = await processFunctions(functions);
-    setTypeFunc(trigger);
-    setPressFuncs(arrFunctions);
-
-    // ------- set Init Functions (Capsules)
-    if (trigger === 'on init') {
-      for (const currFunc of arrFunctions) await currFunc(args);
+    if (response.type === "success") {
+      const idToken = response.params?.id_token as string | undefined;
+      console.log("[LoginAndroid] id_token:", idToken);
+      // -> autentique no backend/Firebase se desejar
+    } else if (response.type === "error") {
+      console.error("[LoginAndroid] error:", (response as any)?.error);
     }
-    if (trigger === 'on listen') {
-      for (const currFunc of arrFunctions) {
-        const res: [string, Tconds, any] = await currFunc(args);
-        const path = res[0];
-        const operator = res[1];
-        const compareVal = res[2];
+  }, [response]);
 
-        if (typeof path === 'string') {
-          console.log('VarPath', path);
-          setCondParts({ path, operator, compareVal });
-        }
-      }
+  const handlePress = async () => {
+    try {
+      setLoading(true);
+      // Nativo: sem proxy
+      await promptAsync();
+    } catch (err) {
+      setLoading(false);
+      console.error("[LoginAndroid] promptAsync error:", err);
     }
   };
 
-  useEffect(() => {
-    callFn();
-  }, []);
+  return (
+    <RN.View style={{ alignItems: "center" }}>
+      <RN.Pressable
+        onPress={handlePress}
+        disabled={!request || loading}
+        style={{
+          backgroundColor: "#315e2d",
+          paddingHorizontal: 20,
+          height: 44,
+          borderRadius: 999,
+          alignItems: "center",
+          justifyContent: "center",
+          opacity: !request || loading ? 0.7 : 1,
+        }}
+      >
+        <RN.Text style={{ color: "#fff", fontWeight: "700" }}>
+          {loading ? "Conectando…" : "Entrar com Google"}
+        </RN.Text>
+      </RN.Pressable>
 
-  // ---------- set Variables Styles (If Exists)
-  const stl = getStlValues(styles);
-
-  // ------- set User Element Properties (If Exists)
-  const userElProps: any = {};
-  for (let strObj of elementsProperties) {
-    if (!strObj) continue;
-    if (!props) continue;
-    if (typeof strObj !== 'string') continue;
-
-    const parsedObject = JSON5.parse(strObj);
-
-    for (const keyProp in parsedObject) {
-      const valueProp = parsedObject[keyProp];
-
-      const [hasVar, varValue] = getVarValue(valueProp);
-
-      if (hasVar) userElProps[keyProp] = varValue;
-      if (!hasVar) userElProps[keyProp] = valueProp;
-    }
-  }
-
-  const allProps = {
-    style: stl,
-    ...userElProps,
-  };
-
-  // ---------- set Render
-  if (!sttTypeFunc)
-    return <View {...allProps}>{mapElements(childrenItems, args)}</View>;
-
-  if (sttTypeFunc === 'on press') {
-    allProps.children = mapElements(childrenItems, args);
-    allProps.onPress = async () => {
-      for (const currFunc of sttPressFuncs) await currFunc(args);
-    };
-
-    return <Pressable {...allProps} />;
-  }
-
-  if (sttTypeFunc === 'on init')
-    return <View {...allProps}>{mapElements(childrenItems, args)}</View>;
-
-  if (sttTypeFunc === 'on listen') {
-    const operators = {
-      '==': (a, b) => a == b,
-      '!=': (a, b) => a != b,
-      '>': (a, b) => a > b,
-      '>=': (a, b) => a >= b,
-      '<': (a, b) => a < b,
-      '<=': (a, b) => a <= b,
-    };
-
-    const operatorFunc = operators[sttCondParts.operator];
-    const condShow = operatorFunc?.(varValue, sttCondParts.compareVal);
-
-    return (
-      condShow && <View {...allProps}>{mapElements(childrenItems, args)}</View>
-    );
-  }
+      {loading ? <RN.ActivityIndicator style={{ marginTop: 8 }} /> : null}
+    </RN.View>
+  );
 };
 
+// =========================================
+// Componente: Login para Web
+// =========================================
+const LoginWeb = () => {
+  // Renderiza apenas no Web
+  if (RN.Platform.OS !== "web") return null;
+
+  const [loading, setLoading] = React.useState(false);
+  const fbInit = useData(ct => ct.all.temp.fireInit);
+  console.log({ fbInit });
+  
+  const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+  const handleLogin = async () => {
+    try {
+      setLoading(true);
+
+      const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: "select_account" });
+
+      // Pop-up (recomendado). Se o navegador bloquear, cai para redirect.
+      let result;
+      try {
+        result = await signInWithPopup(auth, provider);
+      } catch (popupErr) {
+        // fallback para redirect (útil em bloqueio de pop-up)
+        await signInWithRedirect(auth, provider);
+        return;
+      }
+    } catch (err) {
+      console.error("Erro no login Google (web):", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <RN.Pressable
+      onPress={handleLogin}
+      disabled={loading}
+      style={({ pressed }) => [
+        {
+          paddingVertical: 12,
+          paddingHorizontal: 16,
+          borderRadius: 8,
+          borderWidth: 1,
+          borderColor: "#ccc",
+          alignItems: "center",
+          justifyContent: "center",
+          opacity: pressed || loading ? 0.6 : 1,
+          backgroundColor: "#fff",
+        },
+      ]}
+      accessibilityRole="button"
+      accessibilityLabel="Entrar com conta Google (Web)"
+    >
+      <RN.Text style={{ fontWeight: "600" }}>
+        {loading ? "Conectando..." : "Entrar com Google"}
+      </RN.Text>
+    </RN.Pressable>
+  );
+};
+
+// =========================================
+// Wrapper: decide por plataforma
+// =========================================
+export const Login = (props: Tprops) => {
+  const args = props?.pass?.args;
+  const [loading, setLoading] = React.useState(false);
+
+  if (RN.Platform.OS === "web") {
+    return <LoginWeb />;
+  }
+  return <LoginNative />;
+};
