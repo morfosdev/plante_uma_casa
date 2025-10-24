@@ -6863,7 +6863,7 @@ tools.functions.setVar({
         keyPath: ["all.toggles.sideRight"],
         value: [false],
       },
-    });
+    })
 };]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -13492,7 +13492,7 @@ tools.functions.setVar({
         keyPath: ["all.toggles.sideRight"],
         value: [false],
       },
-    });
+    })
 };]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -20038,7 +20038,7 @@ tools.functions.setVar({
         keyPath: ["all.toggles.sideRight"],
         value: [false],
       },
-    });
+    })
 };]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -26592,7 +26592,7 @@ tools.functions.setVar({
         keyPath: ["all.toggles.sideRight"],
         value: [false],
       },
-    });
+    })
 };]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -39710,7 +39710,6 @@ borderRadius: 12,
             arrProps: [],
             arrItems: [(...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
-	data: "$var_sc.B7.statics.steps",
 	defaultOpenIdx: 0,
 	styles: {
 			backgroundColor: '#ccc',
