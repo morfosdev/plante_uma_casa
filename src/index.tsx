@@ -5887,6 +5887,8 @@ paddingVertical: 8,
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
     { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+		{ path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+		{ path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -5912,19 +5914,19 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a3.validationMessage"],
+        keyPath: ["sc.a1.validationMessage"],
         value: [message],
       },
     });
 
-    console.warn("⚠️ Campos vazios:");
+    console.warn("⚠️ Campos vazios");
   } else {
     message = "✅ Todos os campos foram preenchidos corretamente.";
 
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a3.validationMessage"],
+        keyPath: ["sc.a1.validationMessage"],
         value: [message],
       },
     });
@@ -12091,6 +12093,8 @@ paddingVertical: 8,
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
     { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+		{ path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+		{ path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -12116,19 +12120,19 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a3.validationMessage"],
+        keyPath: ["sc.a1.validationMessage"],
         value: [message],
       },
     });
 
-    console.warn("⚠️ Campos vazios:");
+    console.warn("⚠️ Campos vazios");
   } else {
     message = "✅ Todos os campos foram preenchidos corretamente.";
 
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a3.validationMessage"],
+        keyPath: ["sc.a1.validationMessage"],
         value: [message],
       },
     });
@@ -18212,6 +18216,8 @@ paddingVertical: 8,
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
     { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+		{ path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+		{ path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -18237,19 +18243,19 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a3.validationMessage"],
+        keyPath: ["sc.a1.validationMessage"],
         value: [message],
       },
     });
 
-    console.warn("⚠️ Campos vazios:");
+    console.warn("⚠️ Campos vazios");
   } else {
     message = "✅ Todos os campos foram preenchidos corretamente.";
 
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a3.validationMessage"],
+        keyPath: ["sc.a1.validationMessage"],
         value: [message],
       },
     });
@@ -24341,6 +24347,8 @@ paddingVertical: 8,
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
     { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
+		{ path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
+		{ path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -24366,19 +24374,19 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a3.validationMessage"],
+        keyPath: ["sc.a1.validationMessage"],
         value: [message],
       },
     });
 
-    console.warn("⚠️ Campos vazios:");
+    console.warn("⚠️ Campos vazios");
   } else {
     message = "✅ Todos os campos foram preenchidos corretamente.";
 
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a3.validationMessage"],
+        keyPath: ["sc.a1.validationMessage"],
         value: [message],
       },
     });
