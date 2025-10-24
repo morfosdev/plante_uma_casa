@@ -7729,27 +7729,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
@@ -14219,27 +14199,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
@@ -20626,27 +20586,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
@@ -27041,27 +26981,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
