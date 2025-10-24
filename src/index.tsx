@@ -47872,6 +47872,7 @@ tools.setData({
         `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -51856,6 +51857,117 @@ async (...args) =>
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 35,
+	height: 70,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ flex: 1 }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 98,
+	height: 59,
+}],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	justifyContent: "start",
+	alignItems: "center"
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 30,
+	height: 30,
+	borderRadius: 200
+}],
+
+      URIvariablePath:[`$var_all.authUser.image`],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: 10,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ 
+	fontWeight: "bold",
+	fontSize: 12
+}`, `{ 
+	color: 'white',
+ }`
+          ],
+
+          children: [
+            `$var_all.authUser.userName`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
