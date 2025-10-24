@@ -3,13 +3,7 @@
 import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import {
-  ActivityIndicator,
-  Platform,
-  Pressable,
-  Text,
-  View,
-} from 'react-native';
+import * as RN from "react-native";
 import {
     getAuth,
     GoogleAuthProvider,
@@ -70,8 +64,8 @@ export const LoginNative = () => {
   };
 
   return (
-    <View style={{ alignItems: 'center' }}>
-      <Pressable
+    <RN.View style={{ alignItems: 'center' }}>
+      <RN.Pressable
         onPress={handlePress}
         disabled={!request || loading}
         style={{
@@ -84,13 +78,13 @@ export const LoginNative = () => {
           opacity: !request || loading ? 0.7 : 1,
         }}
       >
-        <Text style={{ color: '#fff', fontWeight: '700' }}>
+        <RN.Text style={{ color: '#fff', fontWeight: '700' }}>
           {loading ? 'Conectando…' : 'Entrar com Google'}
-        </Text>
-      </Pressable>
+        </RN.Text>
+      </RN.Pressable>
 
-      {loading ? <ActivityIndicator style={{ marginTop: 8 }} /> : null}
-    </View>
+      {loading ? <RN.ActivityIndicator style={{ marginTop: 8 }} /> : null}
+    </RN.View>
   );
 };
 
