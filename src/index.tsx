@@ -5934,7 +5934,7 @@ paddingVertical: 8,
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
-  // Garantir app inicializado
+  // inicializar firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -12185,7 +12185,7 @@ paddingVertical: 8,
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
-  // Garantir app inicializado
+  // inicializar firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -18353,7 +18353,7 @@ paddingVertical: 8,
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
-  // Garantir app inicializado
+  // inicializar firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -24529,7 +24529,7 @@ paddingVertical: 8,
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
-  // Garantir app inicializado
+  // inicializar firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
