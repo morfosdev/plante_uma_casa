@@ -8223,11 +8223,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.firstInstallment`],
+          path: [`sc.a7b.editChanges.firstInstallment`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.firstInstallment`],
+          keyPath: [`sc.a7b.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -14395,11 +14395,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.firstInstallment`],
+          path: [`sc.a7b.editChanges.firstInstallment`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.firstInstallment`],
+          keyPath: [`sc.a7b.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -20484,11 +20484,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.firstInstallment`],
+          path: [`sc.a7b.editChanges.firstInstallment`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.firstInstallment`],
+          keyPath: [`sc.a7b.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -26581,11 +26581,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.firstInstallment`],
+          path: [`sc.a7b.editChanges.firstInstallment`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.firstInstallment`],
+          keyPath: [`sc.a7b.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
