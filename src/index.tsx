@@ -8648,11 +8648,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.totalValue`],
+          path: [`sc.A7.forms.editChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.totalValue`],
+          keyPath: [`sc.A7.forms.editChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -8701,11 +8701,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.firstInstallment`],
+          path: [`sc.A7.forms.editChanges.firstInstallment`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.firstInstallment`],
+          keyPath: [`sc.A7.forms.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -15439,11 +15439,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.totalValue`],
+          path: [`sc.A7.forms.editChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.totalValue`],
+          keyPath: [`sc.A7.forms.editChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -15492,11 +15492,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.firstInstallment`],
+          path: [`sc.A7.forms.editChanges.firstInstallment`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.firstInstallment`],
+          keyPath: [`sc.A7.forms.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -22147,11 +22147,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.totalValue`],
+          path: [`sc.A7.forms.editChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.totalValue`],
+          keyPath: [`sc.A7.forms.editChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -22200,11 +22200,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.firstInstallment`],
+          path: [`sc.A7.forms.editChanges.firstInstallment`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.firstInstallment`],
+          keyPath: [`sc.A7.forms.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
@@ -28863,11 +28863,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.totalValue`],
+          path: [`sc.A7.forms.editChanges.totalValue`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.totalValue`],
+          keyPath: [`sc.A7.forms.editChanges.totalValue`],
           value: [`$arg_callback`]
         }})],
 
@@ -28916,11 +28916,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editChanges.firstInstallment`],
+          path: [`sc.A7.forms.editChanges.firstInstallment`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges.firstInstallment`],
+          keyPath: [`sc.A7.forms.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
 
