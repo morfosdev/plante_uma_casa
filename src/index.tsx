@@ -5881,7 +5881,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -12097,7 +12097,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -18230,7 +18230,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -24371,7 +24371,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
