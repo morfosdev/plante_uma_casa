@@ -1,7 +1,7 @@
 
-import JSON5 from 'json5';
 import React from 'react';
-import { Pressable, Text } from 'react-native';
+import JSON5 from 'json5';
+import { Pressable, View, Text } from 'react-native';
 
 export const Accordion = props => {
   const { configs, arrElements } = props.pass ?? {};
@@ -23,7 +23,6 @@ export const Accordion = props => {
     ? safeParse(configs[0])
     : safeParse(configs);
   const items = Array.isArray(arrElements) ? arrElements : [];
-  console.log('Accordion configs:', { cfg0 });
 
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
