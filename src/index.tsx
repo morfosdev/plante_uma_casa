@@ -7627,7 +7627,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -7644,6 +7645,27 @@ paddingHorizontal: 4,
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -14072,7 +14094,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -14089,6 +14112,27 @@ paddingHorizontal: 4,
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -20434,7 +20478,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -20451,6 +20496,27 @@ paddingHorizontal: 4,
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
@@ -26804,7 +26870,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -26821,6 +26888,27 @@ paddingHorizontal: 4,
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A7.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.lot`],
           value: [`$arg_callback`]
         }})],
 
