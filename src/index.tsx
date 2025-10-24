@@ -7651,7 +7651,8 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -7670,6 +7671,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.firstInstallment`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -14119,7 +14141,8 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -14138,6 +14161,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.firstInstallment`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -20504,7 +20548,8 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -20523,6 +20568,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.firstInstallment`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
@@ -26897,7 +26963,8 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -26916,6 +26983,27 @@ fontWeight: '700',
 
           args,
 
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.firstInstallment`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.totalValue`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
         }}/>],
 
             args,
