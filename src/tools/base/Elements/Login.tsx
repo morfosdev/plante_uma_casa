@@ -1,15 +1,16 @@
 
 // ---------- import Packs
-import * as Google from 'expo-auth-session/providers/google';
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
-  ActivityIndicator,
   Platform,
   Pressable,
   Text,
+  ActivityIndicator,
   View,
 } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
+import * as Google from 'expo-auth-session/providers/google';
+import { makeRedirectUri } from 'expo-auth-session';
 
 // Finaliza sessões pendentes (necessário para Web/Expo)
 WebBrowser.maybeCompleteAuthSession();
@@ -31,39 +32,57 @@ const IOS_CLIENT_ID = '';
 const ANDROID_CLIENT_ID =
   '1099098264007-thb39j1g2ilg74mvrquruu01iaifj9e1.apps.googleusercontent.com';
 
+// Opcional (quando executando via Expo Go)
+const EXPO_CLIENT_ID =
+  '1099098264007-sal5p8vma3t5fqk1gqql4sk2sns4iuq7.apps.googleusercontent.com';
+
 // =========================================
 // Componente: Login para Nativo (Android/iOS)
 // =========================================
-export const LoginAndroid = () => {
+const LoginNative = () => {
   const [loading, setLoading] = React.useState(false);
 
-  // Somente Android nativo
+  const redirectUri = makeRedirectUri({ scheme: 'plantecasa' });
   const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
     androidClientId: ANDROID_CLIENT_ID,
+    iosClientId: IOS_CLIENT_ID,
+    redirectUri,
     selectAccount: true,
   });
 
   React.useEffect(() => {
     if (!response) return;
-    setLoading(false);
 
     if (response.type === 'success') {
       const idToken = response.params?.id_token as string | undefined;
-      console.log('[LoginAndroid] id_token:', idToken);
-      // -> autentique no backend/Firebase se desejar
+      setLoading(false);
+      if (idToken) {
+        // aqui você autentica no backend/Firebase se quiser
+        // ex.: GoogleAuthProvider.credential(idToken)
+        console.log('Login OK', 'idToken: ' + idToken.slice(0, 18));
+        console.log('[LoginNative] id_token:', idToken);
+      } else {
+        console.log('Aviso', 'Login concluído, mas sem id_token.');
+      }
     } else if (response.type === 'error') {
-      console.error('[LoginAndroid] error:', (response as any)?.error);
+      setLoading(false);
+      const msg = (response as any)?.error ?? 'Erro ao autenticar com Google.';
+      console.log('Erro no login', String(msg));
+      console.error('[LoginNative] error:', msg);
+    } else {
+      // cancelled / dismissed
+      setLoading(false);
     }
   }, [response]);
 
   const handlePress = async () => {
     try {
       setLoading(true);
-      // Nativo: sem proxy
-      await promptAsync({ useProxy: false });
+      await promptAsync();
     } catch (err) {
       setLoading(false);
-      console.error('[LoginAndroid] promptAsync error:', err);
+      console.log('Erro', String(err));
+      console.error('[LoginNative] promptAsync error:', err);
     }
   };
 
@@ -86,7 +105,6 @@ export const LoginAndroid = () => {
           {loading ? 'Conectando…' : 'Entrar com Google'}
         </Text>
       </Pressable>
-
       {loading ? <ActivityIndicator style={{ marginTop: 8 }} /> : null}
     </View>
   );
