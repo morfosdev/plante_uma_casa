@@ -8116,11 +8116,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.area`],
+          path: [`sc.a7b.editChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.area`],
+          keyPath: [`sc.a7b.editChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -14288,11 +14288,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.area`],
+          path: [`sc.a7b.editChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.area`],
+          keyPath: [`sc.a7b.editChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -20377,11 +20377,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.area`],
+          path: [`sc.a7b.editChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.area`],
+          keyPath: [`sc.a7b.editChanges.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -26474,11 +26474,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.area`],
+          path: [`sc.a7b.editChanges.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.area`],
+          keyPath: [`sc.a7b.editChanges.area`],
           value: [`$arg_callback`]
         }})],
 
