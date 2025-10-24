@@ -6724,28 +6724,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `condos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
@@ -6868,11 +6847,11 @@ tools.functions.setVar({
       },
     });
 
-//close Add
+//close Edit
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
+        keyPath: ["all.toggles.a1.editCondo"],
         value: [false],
       },
     });
@@ -6885,8 +6864,7 @@ tools.functions.setVar({
         value: [false],
       },
     });
-};
-]
+};]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -13375,28 +13353,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `condos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
@@ -13519,11 +13476,11 @@ tools.functions.setVar({
       },
     });
 
-//close Add
+//close Edit
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
+        keyPath: ["all.toggles.a1.editCondo"],
         value: [false],
       },
     });
@@ -13536,8 +13493,7 @@ tools.functions.setVar({
         value: [false],
       },
     });
-};
-]
+};]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -19943,28 +19899,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `condos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
@@ -20087,11 +20022,11 @@ tools.functions.setVar({
       },
     });
 
-//close Add
+//close Edit
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
+        keyPath: ["all.toggles.a1.editCondo"],
         value: [false],
       },
     });
@@ -20104,8 +20039,7 @@ tools.functions.setVar({
         value: [false],
       },
     });
-};
-]
+};]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -26519,28 +26453,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `condos`, `$var_sc.a1.editChanges.docId`],
-            arrPathData: [`sc.a1.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
@@ -26663,11 +26576,11 @@ tools.functions.setVar({
       },
     });
 
-//close Add
+//close Edit
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
+        keyPath: ["all.toggles.a1.editCondo"],
         value: [false],
       },
     });
@@ -26680,8 +26593,7 @@ tools.functions.setVar({
         value: [false],
       },
     });
-};
-]
+};]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
