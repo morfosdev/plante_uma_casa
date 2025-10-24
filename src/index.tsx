@@ -8736,7 +8736,7 @@ paddingVertical: 8,
  arrFunctions: [async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docID`],
+        `lots`, `sc.a7b.editChanges.docId`],
             arrPathData: [`sc.a7b.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -15371,7 +15371,7 @@ paddingVertical: 8,
  arrFunctions: [async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docID`],
+        `lots`, `sc.a7b.editChanges.docId`],
             arrPathData: [`sc.a7b.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -21923,7 +21923,7 @@ paddingVertical: 8,
  arrFunctions: [async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docID`],
+        `lots`, `sc.a7b.editChanges.docId`],
             arrPathData: [`sc.a7b.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -28483,7 +28483,7 @@ paddingVertical: 8,
  arrFunctions: [async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docID`],
+        `lots`, `sc.a7b.editChanges.docId`],
             arrPathData: [`sc.a7b.editChanges`],
             arrFuncs: [
         async (...args) =>
