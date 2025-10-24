@@ -8050,6 +8050,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -8179,11 +8201,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.email`],
+          path: [`sc.a7b.editOwner.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.email`],
+          keyPath: [`sc.a7b.editOwner.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -14177,6 +14199,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -14306,11 +14350,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.email`],
+          path: [`sc.a7b.editOwner.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.email`],
+          keyPath: [`sc.a7b.editOwner.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -20221,6 +20265,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -20350,11 +20416,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.email`],
+          path: [`sc.a7b.editOwner.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.email`],
+          keyPath: [`sc.a7b.editOwner.area`],
           value: [`$arg_callback`]
         }})],
 
@@ -26273,6 +26339,28 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a7b.editOwner.lot`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7b.editOwner.lot`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -26402,11 +26490,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a7b.editOwner.email`],
+          path: [`sc.a7b.editOwner.area`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editOwner.email`],
+          keyPath: [`sc.a7b.editOwner.area`],
           value: [`$arg_callback`]
         }})],
 
