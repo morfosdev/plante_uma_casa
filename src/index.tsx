@@ -8270,18 +8270,19 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `lots`, `sc.a7b.editChanges.docID`],
+            arrPathData: [`sc.a7b.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -14441,18 +14442,19 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `lots`, `sc.a7b.editChanges.docID`],
+            arrPathData: [`sc.a7b.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -20529,18 +20531,19 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `lots`, `sc.a7b.editChanges.docID`],
+            arrPathData: [`sc.a7b.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -26625,18 +26628,19 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`partners`],
-            arrPathData: [`sc.a7.iptsChanges`],
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `lots`, `sc.a7b.editChanges.docID`],
+            arrPathData: [`sc.a7b.editChanges`],
             arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
+          keyPath: [`sc.a7b.editChanges`],
           value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a7b.editOwner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
