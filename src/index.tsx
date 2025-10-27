@@ -9723,14 +9723,11 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#f5f5f5',
+width: '100%',
+height: '100%',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -16744,14 +16741,11 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#f5f5f5',
+width: '100%',
+height: '100%',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -23742,14 +23736,11 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#f5f5f5',
+width: '100%',
+height: '100%',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -30688,14 +30679,11 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#f5f5f5',
+width: '100%',
+height: '100%',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
