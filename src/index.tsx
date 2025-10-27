@@ -46932,6 +46932,7 @@ requiredFields.forEach(f => {
 		userRg: getVal("sc.C2.forms.iptsChanges.userRg"),
 		userPhone: getVal("sc.C2.forms.iptsChanges.userPhone"),
     userAddress: getVal("sc.C2.forms.iptsChanges.userAddress"),
+		typeAccount: "app",
     createdAt: serverTimestamp(),
   };
 
