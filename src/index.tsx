@@ -46620,7 +46620,126 @@ xmlns="http://www.w3.org/2000/svg"
   shadowRadius: 20,
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  // Lista de campos obrigatórios
+  const requiredFields = [
+    { path: "sc.C2.iptsChanges.fullName", name: "Nome completo" },
+    { path: "sc.C2.iptsChanges.rg", name: "RG" },
+    { path: "sc.C2.iptsChanges.phone", name: "Telefone" },
+    { path: "sc.C2.iptsChanges.address", name: "Endereço" },
+  ];
+
+  // Função auxiliar para obter valor seguro
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  // Checa campos vazios
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  // Define mensagem e estado final
+  let message = "";
+
+  if (emptyFields.length > 0) {
+    message = `Preencha os campos obrigatórios.`;
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.C2.validationMessage"],
+        value: [message],
+      },
+    });
+
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return; // ⚠️ Interrompe o processo se houver campos vazios
+  }
+
+  // Se todos os campos estiverem preenchidos
+  message = "✅ Todos os campos foram preenchidos corretamente.";
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.C2.validationMessage"],
+      value: [message],
+    },
+  });
+
+  console.log("💾 Validação OK — salvando no Firebase...");
+
+  // Inicializar Firebase
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig");
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  // Importa Firestore e salva o documento
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  // Monta os dados a salvar
+  const newDoc = {
+    fullName: getVal("sc.C2.iptsChanges.fullName"),
+    rg: getVal("sc.C2.iptsChanges.rg"),
+    phone: getVal("sc.C2.iptsChanges.phone"),
+    address: getVal("sc.C2.iptsChanges.address"),
+    typeAccount: "app",
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    // Salva novo usuário
+    const docRef = await addDoc(collection(db, "users"), newDoc);
+    console.log("✅ Usuário salvo com ID:", docRef.id);
+
+    // Atualiza o documento com o próprio ID
+    await updateDoc(docRef, { docId: docRef.id });
+
+    // Mensagem de sucesso
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.C2.validationMessage"],
+        value: ["🎉 Usuário cadastrado com sucesso!"],
+      },
+    });
+
+    // Limpa campos
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.C2.iptsChanges"],
+        value: [""],
+      },
+    });
+
+    // Redireciona para a próxima tela
+    tools.goTo("c5steps");
+
+  } catch (error) {
+    console.error("❌ Erro ao salvar usuário:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.C2.validationMessage"],
+        value: ["Erro ao salvar dados. Verifique o console."],
+      },
+    });
+  }
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
