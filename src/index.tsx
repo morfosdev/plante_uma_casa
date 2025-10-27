@@ -18407,6 +18407,7 @@ fontWeight: '700',
             `{
 fontSize: 14,
 fontWeight: '400',
+left: 4,
 }`
           ],
 
