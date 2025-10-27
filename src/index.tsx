@@ -46507,11 +46507,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.forms.iptsChanges.fullName`],
+          path: [`sc.C2.forms.iptsChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.fullName`],
+          keyPath: [`sc.C2.forms.iptsChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -46969,6 +46969,9 @@ tools.functions.setVar({
         value: [""],
       },
     });
+
+// Redireciona para tela "c5steps"
+    tools.goTo("c5steps");
 }
 ]
  , trigger: 'on press'
