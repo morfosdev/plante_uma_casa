@@ -41952,10 +41952,13 @@ paddingHorizontal: 16,
   arrItems: [() => {
   const data = useData((ct) => ct.sc?.B7?.lists?.list1);
   let condMatch = false;
-
   console.log({ args, data });
+  
+  const item = tools.findFlatItem(args);
+  console.log({ item });
+
   data?.forEach((item: any) => {
-    if (item?.stepId === "s1.1") {
+    if (item?.stepId === item.stepId) {
         console.log({item})
       condMatch = true;
     }
