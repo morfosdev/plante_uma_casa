@@ -48596,10 +48596,10 @@ xmlns="http://www.w3.org/2000/svg"
  arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
-    { path: "sc.C2.iptsChanges.fullName", name: "Nome completo" },
-    { path: "sc.C2.iptsChanges.rg", name: "RG" },
-    { path: "sc.C2.iptsChanges.phone", name: "Telefone" },
-    { path: "sc.C2.iptsChanges.address", name: "Endereço" },
+    { path: "sc.C2.forms.iptsChanges.userName", name: "Nome Completo" },
+    { path: "sc.C2.forms.iptsChanges.userRg", name: "RG" },
+    { path: "sc.C2.forms.iptsChanges.userPhone", name: "Telefone" },
+    { path: "sc.C2.forms.iptsChanges.userAddress", name: "Endereço" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -48645,7 +48645,7 @@ xmlns="http://www.w3.org/2000/svg"
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
-  // Inicializar Firebase
+  // inicializar firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -48660,45 +48660,29 @@ xmlns="http://www.w3.org/2000/svg"
 
   // Monta os dados a salvar
   const newDoc = {
-    fullName: getVal("sc.C2.iptsChanges.fullName"),
-    rg: getVal("sc.C2.iptsChanges.rg"),
-    phone: getVal("sc.C2.iptsChanges.phone"),
-    address: getVal("sc.C2.iptsChanges.address"),
-    typeAccount: "app",
+    userName: getVal("sc.C2.forms.iptsChanges.userName"),
+		userRg: getVal("sc.C2.forms.iptsChanges.userRg"),
+		userPhone: getVal("sc.C2.forms.iptsChanges.userPhone"),
+    userAddress: getVal("sc.C2.forms.iptsChanges.userAddress"),
     createdAt: serverTimestamp(),
   };
 
   try {
-    // Salva novo usuário
     const docRef = await addDoc(collection(db, "users"), newDoc);
-    console.log("✅ Usuário salvo com ID:", docRef.id);
+    console.log("✅ Documento salvo com ID:", docRef.id);
 
-    // Atualiza o documento com o próprio ID
+// Atualiza o documento para incluir o próprio ID
     await updateDoc(docRef, { docId: docRef.id });
 
-    // Mensagem de sucesso
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.C2.validationMessage"],
-        value: ["🎉 Usuário cadastrado com sucesso!"],
+        value: ["🏢 Condomínio salvo com sucesso!"],
       },
     });
-
-    // Limpa campos
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.C2.iptsChanges"],
-        value: [""],
-      },
-    });
-
-    // Redireciona para a próxima tela
-    tools.goTo("c5steps");
-
   } catch (error) {
-    console.error("❌ Erro ao salvar usuário:", error);
+    console.error("❌ Erro ao salvar documento:", error);
     tools.functions.setVar({
       args: "",
       pass: {
@@ -48707,6 +48691,15 @@ xmlns="http://www.w3.org/2000/svg"
       },
     });
   }
+
+//clean iptsChanges
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.C2.forms.iptsChanges"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
