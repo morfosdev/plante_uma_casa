@@ -6306,7 +6306,22 @@ color: '#555555',
 	backgroundColor: "transparent"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `X`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -13625,7 +13640,22 @@ color: '#555555',
 	backgroundColor: "transparent"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `X`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -20921,7 +20951,22 @@ color: '#555555',
 	backgroundColor: "transparent"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `X`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -28165,7 +28210,22 @@ color: '#555555',
 	backgroundColor: "transparent"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `X`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
