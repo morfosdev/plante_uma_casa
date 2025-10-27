@@ -35417,6 +35417,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 14,
 fontWeight: '700',
+left: 4,
 }`
           ],
 
@@ -35427,6 +35428,18 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -35457,6 +35470,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 14,
 fontWeight: '700',
+left: 4,
 }`
           ],
 
@@ -35467,6 +35481,18 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -35637,29 +35663,9 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data`
-          ],
-
-          args,
-
-        }}/>],
+ }}/>],
 
             args,
           }}/>
@@ -39884,6 +39890,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 14,
 fontWeight: '700',
+left: 4,
 }`
           ],
 
@@ -39894,6 +39901,18 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -39924,6 +39943,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 14,
 fontWeight: '700',
+left: 4,
 }`
           ],
 
@@ -39934,6 +39954,18 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -40104,29 +40136,9 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data`
-          ],
-
-          args,
-
-        }}/>],
+ }}/>],
 
             args,
           }}/>
@@ -45187,6 +45199,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 14,
 fontWeight: '700',
+left: 4,
 }`
           ],
 
@@ -45197,6 +45210,18 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -45227,6 +45252,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 14,
 fontWeight: '700',
+left: 4,
 }`
           ],
 
@@ -45237,6 +45263,18 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -45407,29 +45445,9 @@ paddingHorizontal: 4,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data`
-          ],
-
-          args,
-
-        }}/>],
+ }}/>],
 
             args,
           }}/>
@@ -46489,11 +46507,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.forms.iptsChanges.userName`],
+          path: [`sc.C2.forms.iptsChanges.fullName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.userName`],
+          keyPath: [`sc.C2.forms.iptsChanges.fullName`],
           value: [`$arg_callback`]
         }})],
 
