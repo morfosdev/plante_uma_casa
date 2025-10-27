@@ -8817,7 +8817,7 @@ paddingVertical: 8,
   const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  const docId = tools.getCtData("sc.a7.editChanges.docId");
+  const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
     console.error("❌ ID do documento inválido:", docId);
@@ -8857,7 +8857,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.editChanges"],
+        keyPath: ["sc.A7.forms.editChanges"],
         value: [{}],
       },
     });
@@ -15587,7 +15587,7 @@ paddingVertical: 8,
   const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  const docId = tools.getCtData("sc.a7.editChanges.docId");
+  const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
     console.error("❌ ID do documento inválido:", docId);
@@ -15627,7 +15627,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.editChanges"],
+        keyPath: ["sc.A7.forms.editChanges"],
         value: [{}],
       },
     });
@@ -22310,7 +22310,7 @@ paddingVertical: 8,
   const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  const docId = tools.getCtData("sc.a7.editChanges.docId");
+  const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
     console.error("❌ ID do documento inválido:", docId);
@@ -22350,7 +22350,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.editChanges"],
+        keyPath: ["sc.A7.forms.editChanges"],
         value: [{}],
       },
     });
@@ -29005,7 +29005,7 @@ paddingVertical: 8,
   const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  const docId = tools.getCtData("sc.a7.editChanges.docId");
+  const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
     console.error("❌ ID do documento inválido:", docId);
@@ -29045,7 +29045,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.editChanges"],
+        keyPath: ["sc.A7.forms.editChanges"],
         value: [{}],
       },
     });
