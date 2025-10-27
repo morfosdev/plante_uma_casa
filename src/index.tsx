@@ -8088,21 +8088,7 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
@@ -15120,21 +15106,7 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
@@ -22129,21 +22101,7 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
@@ -26065,10 +26023,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a11b.editChanges`],
           value: [`$arg_item`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.addOwner`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -29086,21 +29049,7 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.iptsChanges`],
-          value: [undefined]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
