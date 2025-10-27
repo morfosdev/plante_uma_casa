@@ -6926,6 +6926,15 @@ paddingVertical: 8,
       },
     });
 
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
+
     // Limpa dados e fecha modais
     tools.functions.setVar({
       args: "",
@@ -7015,32 +7024,13 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[
-        async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -14017,6 +14007,15 @@ paddingVertical: 8,
       },
     });
 
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
+
     // Limpa dados e fecha modais
     tools.functions.setVar({
       args: "",
@@ -14106,32 +14105,13 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[
-        async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -21085,6 +21065,15 @@ paddingVertical: 8,
       },
     });
 
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
+
     // Limpa dados e fecha modais
     tools.functions.setVar({
       args: "",
@@ -21174,32 +21163,13 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[
-        async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -28101,6 +28071,15 @@ paddingVertical: 8,
       },
     });
 
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
+
     // Limpa dados e fecha modais
     tools.functions.setVar({
       args: "",
@@ -28190,32 +28169,13 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[
-        async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
