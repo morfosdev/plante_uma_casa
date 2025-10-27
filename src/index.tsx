@@ -47901,6 +47901,11 @@ xmlns="http://www.w3.org/2000/svg"
     return val ?? "";
   };
 
+requiredFields.forEach(f => {
+  console.log(f.name, "→", getVal(f.path));
+});
+
+
   // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
