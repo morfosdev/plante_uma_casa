@@ -46480,16 +46480,7 @@ xmlns="http://www.w3.org/2000/svg"
   shadowRadius: 20,
 }`],
 
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c5steps");
-        }
-        ]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
