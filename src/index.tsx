@@ -12031,15 +12031,10 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), 
-async (...args) =>
+        }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A7.forms.editChanges`],
           value: [`$arg_item`]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -26028,15 +26023,10 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), 
-async (...args) =>
+        }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a11b.editChanges`],
           value: [`$arg_item`]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
