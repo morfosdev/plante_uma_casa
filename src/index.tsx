@@ -8215,7 +8215,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
 async (...args) =>
@@ -8361,11 +8361,11 @@ color: '#555555',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `$var_sc.a7b.editChanges.docId`],
+        `lots`, `$var_sc.A7.forms.editChanges.docId`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
         async (...args) =>
@@ -8991,7 +8991,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
 async (...args) =>
@@ -15198,7 +15198,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
 async (...args) =>
@@ -15344,11 +15344,11 @@ color: '#555555',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `$var_sc.a7b.editChanges.docId`],
+        `lots`, `$var_sc.A7.forms.editChanges.docId`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
         async (...args) =>
@@ -15974,7 +15974,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
 async (...args) =>
@@ -22158,7 +22158,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
 async (...args) =>
@@ -22304,11 +22304,11 @@ color: '#555555',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `$var_sc.a7b.editChanges.docId`],
+        `lots`, `$var_sc.A7.forms.editChanges.docId`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
         async (...args) =>
@@ -22934,7 +22934,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
 async (...args) =>
@@ -29066,7 +29066,7 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
 async (...args) =>
@@ -29212,11 +29212,11 @@ color: '#555555',
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `lots`, `$var_sc.a7b.editChanges.docId`],
+        `lots`, `$var_sc.A7.forms.editChanges.docId`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
         async (...args) =>
@@ -29842,7 +29842,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
+          keyPath: [`sc.A7.forms.editChanges`],
           value: [ ]
         }}), 
 async (...args) =>
