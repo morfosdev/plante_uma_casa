@@ -6227,6 +6227,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), async (...args) =>
@@ -6926,15 +6931,6 @@ paddingVertical: 8,
       },
     });
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
-
     // Limpa dados e fecha modais
     tools.functions.setVar({
       args: "",
@@ -6969,6 +6965,15 @@ tools.functions.setVar({
       },
     });
   }
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -7030,6 +7035,11 @@ borderColor: '#315E2D',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
           value: [``]
         }}), 
 async (...args) =>
@@ -13308,6 +13318,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), async (...args) =>
@@ -14007,15 +14022,6 @@ paddingVertical: 8,
       },
     });
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
-
     // Limpa dados e fecha modais
     tools.functions.setVar({
       args: "",
@@ -14050,6 +14056,15 @@ tools.functions.setVar({
       },
     });
   }
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -14111,6 +14126,11 @@ borderColor: '#315E2D',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
           value: [``]
         }}), 
 async (...args) =>
@@ -20366,6 +20386,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), async (...args) =>
@@ -21065,15 +21090,6 @@ paddingVertical: 8,
       },
     });
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
-
     // Limpa dados e fecha modais
     tools.functions.setVar({
       args: "",
@@ -21108,6 +21124,15 @@ tools.functions.setVar({
       },
     });
   }
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -21169,6 +21194,11 @@ borderColor: '#315E2D',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
           value: [``]
         }}), 
 async (...args) =>
@@ -27372,6 +27402,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), async (...args) =>
@@ -28071,15 +28106,6 @@ paddingVertical: 8,
       },
     });
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
-
     // Limpa dados e fecha modais
     tools.functions.setVar({
       args: "",
@@ -28114,6 +28140,15 @@ tools.functions.setVar({
       },
     });
   }
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -28175,6 +28210,11 @@ borderColor: '#315E2D',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
           value: [``]
         }}), 
 async (...args) =>
