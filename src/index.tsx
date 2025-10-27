@@ -46500,11 +46500,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.forms.iptsChanges.rg`],
+          path: [`sc.C2.forms.iptsChanges.userRg`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.rg`],
+          keyPath: [`sc.C2.forms.iptsChanges.userRg`],
           value: [`$arg_callback`]
         }})],
 
@@ -46535,11 +46535,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.forms.iptsChanges.phone`],
+          path: [`sc.C2.forms.iptsChanges.userPhone`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.phone`],
+          keyPath: [`sc.C2.forms.iptsChanges.userPhone`],
           value: [`$arg_callback`]
         }})],
 
@@ -46570,11 +46570,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.forms.iptsChanges.address`],
+          path: [`sc.C2.forms.iptsChanges.userAddress`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.address`],
+          keyPath: [`sc.C2.forms.iptsChanges.userAddress`],
           value: [`$arg_callback`]
         }})],
 
