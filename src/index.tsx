@@ -41960,13 +41960,14 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
+  arrItems: [(args) => {
   const data = useData((ct) => ct.sc?.B7?.lists?.list1);
-  let condMatch;
+  let condMatch = false;
 
-  console.log({ data });
+  console.log({ args, data });
   data?.forEach((item: any) => {
     if (item?.stepId === "s1.1") {
+        console.log({item})
       condMatch = true;
     }
   });
