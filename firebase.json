@@ -16,8 +16,8 @@
     }
   ],
   "hosting": {
-    "public": "public",
-    "site": "painel-plante-uma-casa",
+    "public": "dist",
+    "site": "app-plante-uma-casa",
     "ignore": [
       "firebase.json",
       "**/.*",
