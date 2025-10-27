@@ -7366,7 +7366,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a1.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -9263,12 +9263,12 @@ color: '#555555',
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -14387,7 +14387,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a1.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -16284,12 +16284,12 @@ color: '#555555',
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -21385,7 +21385,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a1.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -23282,12 +23282,12 @@ color: '#555555',
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -28331,7 +28331,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
+          keyPath: [`all.toggles.a1.add`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -30228,12 +30228,12 @@ color: '#555555',
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
