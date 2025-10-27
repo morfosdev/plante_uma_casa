@@ -41957,9 +41957,9 @@ paddingHorizontal: 16,
   const item = tools.findFlatItem(args);
   console.log({ item });
 
-  data?.forEach((item: any) => {
-    if (item?.stepId === item.stepId) {
-        console.log({item})
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+        console.log({d: d?.stepId , item: item.stepId});
       condMatch = true;
     }
   });
