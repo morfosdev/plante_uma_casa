@@ -6222,8 +6222,8 @@ flex: 1,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -13303,8 +13303,8 @@ flex: 1,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -20361,8 +20361,8 @@ flex: 1,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -27367,8 +27367,8 @@ flex: 1,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
