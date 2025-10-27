@@ -35148,6 +35148,12 @@ async (...args) =>
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -35192,30 +35198,35 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
+    fill="red"
+    viewBox="0 0 18 16"
+    {...props}
+  >
+    <Path
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
-      altura: "14px",
+      altura: "16px",
 
-      largura: "14px",
+      largura: "16px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -35258,7 +35269,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -35274,7 +35289,9 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
@@ -39561,6 +39578,12 @@ async (...args) =>
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -39605,30 +39628,35 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
+    fill="red"
+    viewBox="0 0 18 16"
+    {...props}
+  >
+    <Path
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
-      altura: "14px",
+      altura: "16px",
 
-      largura: "14px",
+      largura: "16px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -39671,7 +39699,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -39687,7 +39719,9 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
@@ -44810,6 +44844,12 @@ async (...args) =>
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
 }`, `{ 
 	width: "100%",
 	flexDirection: "row",
@@ -44854,30 +44894,35 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
+    fill="red"
+    viewBox="0 0 18 16"
+    {...props}
+  >
+    <Path
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
       `,
 
-      altura: "14px",
+      altura: "16px",
 
-      largura: "14px",
+      largura: "16px",
 
-      preenchimento: ['black'],
+      preenchimento: [`transparent`],
 
       args,
     }}/>],
@@ -44920,7 +44965,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
           ],
 
           children: [
@@ -44936,7 +44985,9 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: "$var_all.texts.sizes.large",
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
 }`
           ],
 
