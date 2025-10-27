@@ -46304,17 +46304,11 @@ async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`steps`],
- arrWhere: [
- (...args) =>
+ arrWhere: [(...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `email`, 
         `==`, `$var_sc.b8.editChanges.email`],
-        }}), (...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        `userPassword`, 
-        `==`, `$var_sc.A0.forms.iptsChanges.userPassword`],
         }})],
  arrFuncs: [(args) => {
   console.log('minha custom login 1', args);
