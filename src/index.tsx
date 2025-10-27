@@ -10639,7 +10639,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome`
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -10647,7 +10647,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "1",
 }`],
 
           stylesArray: [`{
@@ -10693,7 +10693,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `E-mail`
+            `Valor`
           ],
 
           args,
@@ -10701,7 +10701,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "R$ 600,00",
 }`],
 
           stylesArray: [`{
@@ -10747,14 +10747,14 @@ fontWeight: '700',
           ],
 
           children: [
-            `Área de Atuação`
+            `Data`
           ],
 
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "24/09/25",
 }`],
 
           stylesArray: [`{
@@ -11048,7 +11048,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -11057,7 +11057,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -17958,7 +17958,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome`
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -17966,7 +17966,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "1",
 }`],
 
           stylesArray: [`{
@@ -18012,7 +18012,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `E-mail`
+            `Valor`
           ],
 
           args,
@@ -18020,7 +18020,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "R$ 600,00",
 }`],
 
           stylesArray: [`{
@@ -18066,14 +18066,14 @@ fontWeight: '700',
           ],
 
           children: [
-            `Área de Atuação`
+            `Data`
           ],
 
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "24/09/25",
 }`],
 
           stylesArray: [`{
@@ -18367,7 +18367,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -18376,7 +18376,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -25254,7 +25254,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome`
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -25262,7 +25262,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "1",
 }`],
 
           stylesArray: [`{
@@ -25308,7 +25308,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `E-mail`
+            `Valor`
           ],
 
           args,
@@ -25316,7 +25316,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "R$ 600,00",
 }`],
 
           stylesArray: [`{
@@ -25362,14 +25362,14 @@ fontWeight: '700',
           ],
 
           children: [
-            `Área de Atuação`
+            `Data`
           ],
 
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "24/09/25",
 }`],
 
           stylesArray: [`{
@@ -25663,7 +25663,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -25672,7 +25672,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -32498,7 +32498,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome`
+            `Quantidade de Parcelas`
           ],
 
           args,
@@ -32506,7 +32506,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "1",
 }`],
 
           stylesArray: [`{
@@ -32552,7 +32552,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `E-mail`
+            `Valor`
           ],
 
           args,
@@ -32560,7 +32560,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "R$ 600,00",
 }`],
 
           stylesArray: [`{
@@ -32606,14 +32606,14 @@ fontWeight: '700',
           ],
 
           children: [
-            `Área de Atuação`
+            `Data`
           ],
 
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+placeholder: "24/09/25",
 }`],
 
           stylesArray: [`{
@@ -32907,7 +32907,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a12.iptChanges`],
+          keyPath: [`sc.a10.iptChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -32916,7 +32916,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.a10.addFinance`],
           value: [false]
         }})]
  , trigger: 'on press'
