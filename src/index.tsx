@@ -35558,7 +35558,19 @@ borderRadius: 10,
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.BtnImagePicker pass={{
+ }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
  }}/>],
 
@@ -40452,7 +40464,19 @@ borderRadius: 10,
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.BtnImagePicker pass={{
+ }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
  }}/>],
 
@@ -46182,7 +46206,19 @@ borderRadius: 10,
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.BtnImagePicker pass={{
+ }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
  }}/>],
 
