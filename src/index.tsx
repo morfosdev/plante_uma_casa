@@ -5317,6 +5317,11 @@ flex: 1,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
           value: [undefined]
         }}), 
@@ -6091,6 +6096,11 @@ borderColor: '#315E2D',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
@@ -12398,6 +12408,11 @@ flex: 1,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
           value: [undefined]
         }}), 
@@ -13172,6 +13187,11 @@ borderColor: '#315E2D',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
@@ -19456,6 +19476,11 @@ flex: 1,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
           value: [undefined]
         }}), 
@@ -20230,6 +20255,11 @@ borderColor: '#315E2D',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
@@ -26462,6 +26492,11 @@ flex: 1,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
           value: [undefined]
         }}), 
@@ -27236,6 +27271,11 @@ borderColor: '#315E2D',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
