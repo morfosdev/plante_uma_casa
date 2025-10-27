@@ -47689,7 +47689,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `sc.C2.forms.editChanges.userEmail`
+            `$var_sc.C2.forms.editChanges.userEmail`
           ],
 
           args,
@@ -47753,7 +47753,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `sc.C2.forms.editChanges.userRg`
+            `$var_sc.C2.forms.editChanges.userRg`
           ],
 
           args,
