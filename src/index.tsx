@@ -8836,8 +8836,8 @@ paddingVertical: 8,
 
 // Monta os dados a salvar
   const updatedDoc = {
-    owner: getVal("sc.A7.forms.editChanges.partnerName"),
-    email: getVal("sc.A7.forms.editChanges.partnerMail"),
+    owner: getVal("sc.A7.forms.editChanges.owner"),
+    email: getVal("sc.A7.forms.editChanges.email"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -15612,8 +15612,8 @@ paddingVertical: 8,
 
 // Monta os dados a salvar
   const updatedDoc = {
-    owner: getVal("sc.A7.forms.editChanges.partnerName"),
-    email: getVal("sc.A7.forms.editChanges.partnerMail"),
+    owner: getVal("sc.A7.forms.editChanges.owner"),
+    email: getVal("sc.A7.forms.editChanges.email"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -22365,8 +22365,8 @@ paddingVertical: 8,
 
 // Monta os dados a salvar
   const updatedDoc = {
-    owner: getVal("sc.A7.forms.editChanges.partnerName"),
-    email: getVal("sc.A7.forms.editChanges.partnerMail"),
+    owner: getVal("sc.A7.forms.editChanges.owner"),
+    email: getVal("sc.A7.forms.editChanges.email"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -29066,8 +29066,8 @@ paddingVertical: 8,
 
 // Monta os dados a salvar
   const updatedDoc = {
-    owner: getVal("sc.A7.forms.editChanges.partnerName"),
-    email: getVal("sc.A7.forms.editChanges.partnerMail"),
+    owner: getVal("sc.A7.forms.editChanges.owner"),
+    email: getVal("sc.A7.forms.editChanges.email"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
