@@ -35466,9 +35466,7 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -35476,25 +35474,6 @@ borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
-
-          path: [`sc.a1.iptChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
 
           path: [`sc.b8.editChanges.responsible`],
 
@@ -35541,11 +35520,12 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.b8.editChanges.description`],
 
@@ -39994,9 +39974,7 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -40004,25 +39982,6 @@ borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
-
-          path: [`sc.a1.iptChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
 
           path: [`sc.b8.editChanges.responsible`],
 
@@ -40069,11 +40028,12 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.b8.editChanges.description`],
 
@@ -45358,9 +45318,7 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
+          propsArray: [{}],
 
           stylesArray: [`{
 borderBottomWidth: 1,
@@ -45368,25 +45326,6 @@ borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
-
-          path: [`sc.a1.iptChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
 
           path: [`sc.b8.editChanges.responsible`],
 
@@ -45433,11 +45372,12 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
 
           path: [`sc.b8.editChanges.description`],
 
