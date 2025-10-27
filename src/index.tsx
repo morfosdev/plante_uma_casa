@@ -4450,9 +4450,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.profile`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -11315,9 +11320,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.profile`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -18357,9 +18367,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.profile`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -25376,9 +25391,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.profile`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
           value: [false]
         }})]
  , trigger: 'on press'
