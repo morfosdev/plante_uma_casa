@@ -35555,7 +35555,10 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
+        , 
+        (...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(images) => {console.log({images});}], args,
+ }}/>, (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
  }}/>],
 
@@ -40446,7 +40449,10 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
+        , 
+        (...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(images) => {console.log({images});}], args,
+ }}/>, (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
  }}/>],
 
@@ -46173,7 +46179,10 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
+        , 
+        (...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(images) => {console.log({images});}], args,
+ }}/>, (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
  }}/>],
 
