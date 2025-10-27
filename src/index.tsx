@@ -8806,6 +8806,8 @@ paddingVertical: 8,
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
+
+// Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -8814,10 +8816,11 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+// Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  const docId = tools.getCtData("sc.a7.editChanges.docId");
+  const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
     console.error("❌ ID do documento inválido:", docId);
@@ -8831,6 +8834,7 @@ paddingVertical: 8,
     return;
   }
 
+// Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.partnerName"),
     email: getVal("sc.A7.forms.editChanges.partnerMail"),
@@ -8842,13 +8846,15 @@ paddingVertical: 8,
   };
 
   try {
+// Salva o doc
     await updateDoc(doc(db, "condos", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
+
 
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
@@ -15576,6 +15582,8 @@ paddingVertical: 8,
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
+
+// Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -15584,10 +15592,11 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+// Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  const docId = tools.getCtData("sc.a7.editChanges.docId");
+  const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
     console.error("❌ ID do documento inválido:", docId);
@@ -15601,6 +15610,7 @@ paddingVertical: 8,
     return;
   }
 
+// Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.partnerName"),
     email: getVal("sc.A7.forms.editChanges.partnerMail"),
@@ -15612,13 +15622,15 @@ paddingVertical: 8,
   };
 
   try {
+// Salva o doc
     await updateDoc(doc(db, "condos", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
+
 
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
@@ -22307,6 +22319,8 @@ paddingVertical: 8,
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
+
+// Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -22315,10 +22329,11 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+// Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  const docId = tools.getCtData("sc.a7.editChanges.docId");
+  const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
     console.error("❌ ID do documento inválido:", docId);
@@ -22332,6 +22347,7 @@ paddingVertical: 8,
     return;
   }
 
+// Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.partnerName"),
     email: getVal("sc.A7.forms.editChanges.partnerMail"),
@@ -22343,13 +22359,15 @@ paddingVertical: 8,
   };
 
   try {
+// Salva o doc
     await updateDoc(doc(db, "condos", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
+
 
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
@@ -29002,6 +29020,8 @@ paddingVertical: 8,
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
+
+// Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -29010,10 +29030,11 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+// Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  const docId = tools.getCtData("sc.a7.editChanges.docId");
+  const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
 
   if (!docId || typeof docId !== "string") {
     console.error("❌ ID do documento inválido:", docId);
@@ -29027,6 +29048,7 @@ paddingVertical: 8,
     return;
   }
 
+// Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.partnerName"),
     email: getVal("sc.A7.forms.editChanges.partnerMail"),
@@ -29038,13 +29060,15 @@ paddingVertical: 8,
   };
 
   try {
+// Salva o doc
     await updateDoc(doc(db, "condos", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
+
 
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.validationMessage"],
+        keyPath: ["sc.a7.validationMessage"],
         value: ["🏢 Dados atualizados com sucesso!"],
       },
     });
