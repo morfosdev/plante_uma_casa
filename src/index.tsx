@@ -41949,7 +41949,7 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(args) => {
+  arrItems: [() => {
   const data = useData((ct) => ct.sc?.B7?.lists?.list1);
   let condMatch = false;
 
