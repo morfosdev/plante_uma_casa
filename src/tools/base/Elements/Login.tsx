@@ -93,7 +93,7 @@ const LoginWeb = () => {
   if (RN.Platform.OS !== "web") return null;
 
   const [loading, setLoading] = React.useState(false);
-  const fbInit = useData(ct => ct.all.temp.fireInit);
+  const fbInit = useData(ct => ct?.all?.temp?.fireInit);
   console.log({ fbInit });
   
   const auth = fbInit ? getAuth(fbInit) : getAuth();
