@@ -41948,17 +41948,6 @@ paddingHorizontal: 16,
             functions:[()=>{}],            childrenItems:[
         
 
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	flexDirection: 'row',
-	alignItems: 'center',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
  (...args:any) => <Elements.Custom pass={{
   arrItems: [(args) => {
   const data = useData((ct) => ct.sc?.B7?.lists?.list1);
@@ -41996,6 +41985,17 @@ paddingHorizontal: 16,
 }] 
 }}/>
 , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
