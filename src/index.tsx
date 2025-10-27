@@ -46057,11 +46057,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.iptsChanges.fullName`],
+          path: [`sc.C2.forms.iptsChanges.fullName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.iptsChanges.fullName`],
+          keyPath: [`sc.C2.forms.iptsChanges.fullName`],
           value: [`$arg_callback`]
         }})],
 
@@ -46092,11 +46092,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.iptsChanges.rg`],
+          path: [`sc.C2.forms.iptsChanges.rg`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.iptsChanges.rg`],
+          keyPath: [`sc.C2.forms.iptsChanges.rg`],
           value: [`$arg_callback`]
         }})],
 
@@ -46127,11 +46127,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.iptsChanges.phone`],
+          path: [`sc.C2.forms.iptsChanges.phone`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.iptsChanges.phone`],
+          keyPath: [`sc.C2.forms.iptsChanges.phone`],
           value: [`$arg_callback`]
         }})],
 
@@ -46162,11 +46162,11 @@ async (...args) =>
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`sc.C2.iptsChanges.address`],
+          path: [`sc.C2.forms.iptsChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.iptsChanges.address`],
+          keyPath: [`sc.C2.forms.iptsChanges.address`],
           value: [`$arg_callback`]
         }})],
 
@@ -46440,11 +46440,7 @@ xmlns="http://www.w3.org/2000/svg"
             args,
         }}/>],
 
-          functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on init'
-}})],
+          functions:[()=>{}],
 
           args,
         }}/>, 
