@@ -47785,7 +47785,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `$var_sc.C2.iptsChanges.phone`
+            `$var_sc.C2.forms.editChanges.userPhone`
           ],
 
           args,
@@ -47817,7 +47817,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `$var_sc.C2.editData.address`
+            `$var_sc.C2.forms.editChanges.userAddress`
           ],
 
           args,
@@ -47848,7 +47848,7 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           ],
 
           children: [
-            `$var_sc.C2.editData.gender`
+            `$var_sc.C2.forms.editChanges.userGender`
           ],
 
           args,
