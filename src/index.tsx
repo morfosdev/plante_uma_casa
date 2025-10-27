@@ -6223,7 +6223,7 @@ flex: 1,
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -7035,7 +7035,7 @@ borderColor: '#315E2D',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -13314,7 +13314,7 @@ flex: 1,
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -14126,7 +14126,7 @@ borderColor: '#315E2D',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -20382,7 +20382,7 @@ flex: 1,
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -21194,7 +21194,7 @@ borderColor: '#315E2D',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -27398,7 +27398,7 @@ flex: 1,
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -28210,7 +28210,7 @@ borderColor: '#315E2D',
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
