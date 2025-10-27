@@ -18426,7 +18426,11 @@ async (...args) =>
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#555555',
+fontSize: 12,
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -18435,13 +18439,17 @@ async (...args) =>
 
           args,
 
-        }}/>, (...args:any) => <Elements.Text pass={{
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 14,
+fontWeight: '400',
+}`
           ],
 
           children: [
@@ -18450,7 +18458,52 @@ async (...args) =>
 
           args,
 
-        }}/>],
+        }}/>, (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={272}
+    height={8}
+    fill="red"
+    viewBox="0 0 272 8"
+    {...props}
+  >
+    <G clipPath="url(#a)">
+      <Rect width={272} height={8} fill="#F0F1FF" rx={4} />
+      <Rect width={221} height={8} fill="#315E2D" rx={4} />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Rect width={272} height={8} fill="#fff" rx={4} />
+      </ClipPath>
+    </Defs>
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="272" height="8" viewBox="0 0 272 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_213_1843)">
+<rect width="272" height="8" rx="4" fill="#F0F1FF"/>
+<rect width="221" height="8" rx="4" fill="#315E2D"/>
+</g>
+<defs>
+<clipPath id="clip0_213_1843">
+<rect width="272" height="8" rx="4" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+      `,
+
+      altura: "8px",
+
+      largura: "272px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
