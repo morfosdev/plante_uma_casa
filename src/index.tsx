@@ -6030,7 +6030,7 @@ tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [],
+        value: [""],
       },
     });
 }
@@ -13111,7 +13111,7 @@ tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [],
+        value: [""],
       },
     });
 }
@@ -20169,7 +20169,7 @@ tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [],
+        value: [""],
       },
     });
 }
@@ -27175,7 +27175,7 @@ tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: [],
+        value: [""],
       },
     });
 }
