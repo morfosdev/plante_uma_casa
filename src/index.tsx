@@ -35414,22 +35414,19 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
+          propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.b8.editChanges.date`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.b8.editChanges.date`],
           value: [`$arg_callback`]
         }})],
 
@@ -35570,28 +35567,9 @@ borderRadius: 10,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.b8.editChanges.date`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges.date`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>],
+ }}/>],
 
             args,
           }}/>
@@ -40230,22 +40208,19 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
+          propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.b8.editChanges.date`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.b8.editChanges.date`],
           value: [`$arg_callback`]
         }})],
 
@@ -40386,28 +40361,9 @@ borderRadius: 10,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.b8.editChanges.date`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges.date`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>],
+ }}/>],
 
             args,
           }}/>
@@ -45882,22 +45838,19 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Escreva...",
-}`],
+          propsArray: [{}],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
-          path: [`sc.a1.iptChanges.condo`],
+          path: [`sc.b8.editChanges.date`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.condo`],
+          keyPath: [`sc.b8.editChanges.date`],
           value: [`$arg_callback`]
         }})],
 
@@ -46038,28 +45991,9 @@ borderRadius: 10,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.BtnImagePicker pass={{
+        , (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(images) => {console.log({images});}], args,
- }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [{
-                color: 'black',
-                fontSize: 14,
-                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
-              }],
-
-          path: [`sc.b8.editChanges.date`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges.date`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>],
+ }}/>],
 
             args,
           }}/>
