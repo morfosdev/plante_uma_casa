@@ -35388,41 +35388,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-	padding: 18,
-	borderWidth: 1,
-	borderColor: '#f5f5f5',
-	borderRadius: 20,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(images) => {console.log({images});}], args,
- }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
 paddingHorizontal: 20,
 width: '100%',
 }`],
@@ -35442,7 +35407,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Data`
           ],
 
           args,
@@ -35450,7 +35415,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -35496,7 +35461,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Endereço`
+            `Responsável`
           ],
 
           args,
@@ -35504,7 +35469,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Rua das Flores, 123',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -35550,115 +35515,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a1.iptChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a1.iptChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição`
+            `Descrição Detalhada`
           ],
 
           args,
@@ -36007,24 +35864,6 @@ fontWeight: '700',
         ],
             args,
         }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -40440,41 +40279,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-	padding: 18,
-	borderWidth: 1,
-	borderColor: '#f5f5f5',
-	borderRadius: 20,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(images) => {console.log({images});}], args,
- }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
 paddingHorizontal: 20,
 width: '100%',
 }`],
@@ -40494,7 +40298,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Data`
           ],
 
           args,
@@ -40502,7 +40306,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -40548,7 +40352,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Endereço`
+            `Responsável`
           ],
 
           args,
@@ -40556,7 +40360,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Rua das Flores, 123',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -40602,115 +40406,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a1.iptChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a1.iptChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição`
+            `Descrição Detalhada`
           ],
 
           args,
@@ -41059,24 +40755,6 @@ fontWeight: '700',
         ],
             args,
         }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -46328,41 +46006,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-	padding: 18,
-	borderWidth: 1,
-	borderColor: '#f5f5f5',
-	borderRadius: 20,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(images) => {console.log({images});}], args,
- }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
 paddingHorizontal: 20,
 width: '100%',
 }`],
@@ -46382,7 +46025,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Nome do Condomínio`
+            `Data`
           ],
 
           args,
@@ -46390,7 +46033,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -46436,7 +46079,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Endereço`
+            `Responsável`
           ],
 
           args,
@@ -46444,7 +46087,7 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Rua das Flores, 123',
+placeholder: "Escreva...",
 }`],
 
           stylesArray: [`{
@@ -46490,115 +46133,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a1.iptChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-}`],
-
-          path: [`sc.a1.iptChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição`
+            `Descrição Detalhada`
           ],
 
           args,
@@ -46947,24 +46482,6 @@ fontWeight: '700',
         ],
             args,
         }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
         
 
           (...args:any) => <Elements.DynView pass={{
