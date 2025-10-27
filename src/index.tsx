@@ -46835,6 +46835,24 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+		color: 'red',
+}`
+          ],
+
+          children: [
+            `$var_sc.C2.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -46947,7 +46965,7 @@ requiredFields.forEach(f => {
       args: "",
       pass: {
         keyPath: ["sc.C2.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["🏢 Documento salvo com sucesso!"],
       },
     });
   } catch (error) {
