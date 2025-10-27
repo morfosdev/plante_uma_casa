@@ -10401,171 +10401,6 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg></svg>
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: ['black'],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Formulário de`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-}`
-          ],
-
-          children: [
-            `FINANCEIRO`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "white",
-	alignItems: "center",
 	paddingVertical: 4,
 	paddingHorizontal: 10,
 	shadowColor: '#000',
@@ -10744,6 +10579,517 @@ color: '#555555',
 	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 14,
+	paddingHorizontal: 18,
+	width: '100%',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Nome`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerName`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.iptsChanges.partnerName`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `E-mail`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.partnerMail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Área de Atuação`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red" }`
+          ],
+
+          children: [
+            `$var_sc.A12.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A12.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  try {
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
+    const pathPartner = 'sc.A12.forms.iptsChanges.partnerActivity';
+
+    const name = (tools.getCtData(pathName) ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
+    const partnerActivity = (tools.getCtData(pathPartner) ?? '').trim();
+    console.log({ name, email });
+
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
+    console.log({ validateEmail: validateEmail(email) });
+
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
+      return;
+    }
+
+    // Auth
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail, fetchSignInMethodsForEmail } =
+      await import('firebase/auth');
+
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length > 0) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return; // quebra o fluxo
+    }
+
+    const tempPass = '123456'; // ou gere uma senha aleatória
+    console.log({ tempPass });
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
+
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
+    }
+
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    {
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import('firebase/firestore');
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+
+      const uid = cred.user.uid;
+      const dataToSet = {
+        docId: uid,
+        createdAt: serverTimestamp(),
+        userName: name,
+        userEmail: email,
+        userImage: cred.user.photoURL || '',
+        partnerActivity,
+        typeAccount: "partner",
+      };
+
+      await setDoc(doc(db, 'users', uid), dataToSet, { merge: true });
+      console.log('users doc criado/atualizado:', { uid, dataToSet });
+    }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
+
+    // (opcional) enviar verificação
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+    // await sendEmailVerification(cred.user);
+await sendPasswordResetEmail(auth, email, acs);
+
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso!' });
+
+
+    // Limpar mensagens após 2 segundos
+    const delay = () => {
+      tools.setData({ path: 'all.toggles.sideRight', value: false });
+      tools.setData({ path: 'all.toggles.a12.add', value: false });
+      tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+      tools.setData({ path: 'sc.A12.forms.iptsChanges', value: { partnerName: "", partnerMail: "", partnerActivity: "" } });
+    }
+
+    setTimeout(delay, 2500);
+
+    // sucesso...
+  } catch (e: any) {
+    if (e?.code === 'auth/email-already-in-use') {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return;
+    }
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + (e?.message ?? '') });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a12.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -17374,171 +17720,6 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg></svg>
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: ['black'],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Formulário de`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-}`
-          ],
-
-          children: [
-            `FINANCEIRO`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "white",
-	alignItems: "center",
 	paddingVertical: 4,
 	paddingHorizontal: 10,
 	shadowColor: '#000',
@@ -17717,6 +17898,517 @@ color: '#555555',
 	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 14,
+	paddingHorizontal: 18,
+	width: '100%',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Nome`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerName`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.iptsChanges.partnerName`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `E-mail`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.partnerMail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Área de Atuação`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red" }`
+          ],
+
+          children: [
+            `$var_sc.A12.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A12.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  try {
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
+    const pathPartner = 'sc.A12.forms.iptsChanges.partnerActivity';
+
+    const name = (tools.getCtData(pathName) ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
+    const partnerActivity = (tools.getCtData(pathPartner) ?? '').trim();
+    console.log({ name, email });
+
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
+    console.log({ validateEmail: validateEmail(email) });
+
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
+      return;
+    }
+
+    // Auth
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail, fetchSignInMethodsForEmail } =
+      await import('firebase/auth');
+
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length > 0) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return; // quebra o fluxo
+    }
+
+    const tempPass = '123456'; // ou gere uma senha aleatória
+    console.log({ tempPass });
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
+
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
+    }
+
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    {
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import('firebase/firestore');
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+
+      const uid = cred.user.uid;
+      const dataToSet = {
+        docId: uid,
+        createdAt: serverTimestamp(),
+        userName: name,
+        userEmail: email,
+        userImage: cred.user.photoURL || '',
+        partnerActivity,
+        typeAccount: "partner",
+      };
+
+      await setDoc(doc(db, 'users', uid), dataToSet, { merge: true });
+      console.log('users doc criado/atualizado:', { uid, dataToSet });
+    }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
+
+    // (opcional) enviar verificação
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+    // await sendEmailVerification(cred.user);
+await sendPasswordResetEmail(auth, email, acs);
+
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso!' });
+
+
+    // Limpar mensagens após 2 segundos
+    const delay = () => {
+      tools.setData({ path: 'all.toggles.sideRight', value: false });
+      tools.setData({ path: 'all.toggles.a12.add', value: false });
+      tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+      tools.setData({ path: 'sc.A12.forms.iptsChanges', value: { partnerName: "", partnerMail: "", partnerActivity: "" } });
+    }
+
+    setTimeout(delay, 2500);
+
+    // sucesso...
+  } catch (e: any) {
+    if (e?.code === 'auth/email-already-in-use') {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return;
+    }
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + (e?.message ?? '') });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a12.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -24324,171 +25016,6 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg></svg>
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: ['black'],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Formulário de`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-}`
-          ],
-
-          children: [
-            `FINANCEIRO`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "white",
-	alignItems: "center",
 	paddingVertical: 4,
 	paddingHorizontal: 10,
 	shadowColor: '#000',
@@ -24667,6 +25194,517 @@ color: '#555555',
 	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 14,
+	paddingHorizontal: 18,
+	width: '100%',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Nome`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerName`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.iptsChanges.partnerName`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `E-mail`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.partnerMail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Área de Atuação`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red" }`
+          ],
+
+          children: [
+            `$var_sc.A12.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A12.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  try {
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
+    const pathPartner = 'sc.A12.forms.iptsChanges.partnerActivity';
+
+    const name = (tools.getCtData(pathName) ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
+    const partnerActivity = (tools.getCtData(pathPartner) ?? '').trim();
+    console.log({ name, email });
+
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
+    console.log({ validateEmail: validateEmail(email) });
+
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
+      return;
+    }
+
+    // Auth
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail, fetchSignInMethodsForEmail } =
+      await import('firebase/auth');
+
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length > 0) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return; // quebra o fluxo
+    }
+
+    const tempPass = '123456'; // ou gere uma senha aleatória
+    console.log({ tempPass });
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
+
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
+    }
+
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    {
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import('firebase/firestore');
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+
+      const uid = cred.user.uid;
+      const dataToSet = {
+        docId: uid,
+        createdAt: serverTimestamp(),
+        userName: name,
+        userEmail: email,
+        userImage: cred.user.photoURL || '',
+        partnerActivity,
+        typeAccount: "partner",
+      };
+
+      await setDoc(doc(db, 'users', uid), dataToSet, { merge: true });
+      console.log('users doc criado/atualizado:', { uid, dataToSet });
+    }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
+
+    // (opcional) enviar verificação
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+    // await sendEmailVerification(cred.user);
+await sendPasswordResetEmail(auth, email, acs);
+
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso!' });
+
+
+    // Limpar mensagens após 2 segundos
+    const delay = () => {
+      tools.setData({ path: 'all.toggles.sideRight', value: false });
+      tools.setData({ path: 'all.toggles.a12.add', value: false });
+      tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+      tools.setData({ path: 'sc.A12.forms.iptsChanges', value: { partnerName: "", partnerMail: "", partnerActivity: "" } });
+    }
+
+    setTimeout(delay, 2500);
+
+    // sucesso...
+  } catch (e: any) {
+    if (e?.code === 'auth/email-already-in-use') {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return;
+    }
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + (e?.message ?? '') });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a12.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -31222,171 +32260,6 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	tools.goTo("b1home")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
-    {...props}
-  >
-    <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg></svg>
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: ['black'],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Formulário de`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-}`
-          ],
-
-          children: [
-            `FINANCEIRO`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "white",
-	alignItems: "center",
 	paddingVertical: 4,
 	paddingHorizontal: 10,
 	shadowColor: '#000',
@@ -31565,6 +32438,517 @@ color: '#555555',
 	justifyContent: "center",
 	backgroundColor: "transparent"
 }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 14,
+	paddingHorizontal: 18,
+	width: '100%',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Nome`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerName`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.iptsChanges.partnerName`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `E-mail`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerMail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.partnerMail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Área de Atuação`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Escreva...",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.A12.forms.iptsChanges.partnerActivity`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.iptsChanges.partnerActivity`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red" }`
+          ],
+
+          children: [
+            `$var_sc.A12.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A12.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  try {
+    const pathName = 'sc.A12.forms.iptsChanges.partnerName';
+    const pathEmail = 'sc.A12.forms.iptsChanges.partnerMail';
+    const pathPartner = 'sc.A12.forms.iptsChanges.partnerActivity';
+
+    const name = (tools.getCtData(pathName) ?? '').trim();
+    const email = (tools.getCtData(pathEmail) ?? '').trim();
+    const partnerActivity = (tools.getCtData(pathPartner) ?? '').trim();
+    console.log({ name, email });
+
+    const validateEmail = (v: string) => v.includes('@') && v.includes('.');
+    console.log({ validateEmail: validateEmail(email) });
+
+    if (name === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Nome.' });
+      return;
+    }
+    if (email === "") {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Preencha o Email.' });
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Email inválido.' });
+      return;
+    }
+
+    // Auth
+    const { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification, sendPasswordResetEmail, fetchSignInMethodsForEmail } =
+      await import('firebase/auth');
+
+    const fbInit = tools.getCtData('all.temp.fireInit');
+    console.log({ fbInit });
+    const auth = fbInit ? getAuth(fbInit) : getAuth();
+
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length > 0) {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return; // quebra o fluxo
+    }
+
+    const tempPass = '123456'; // ou gere uma senha aleatória
+    console.log({ tempPass });
+    const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
+    console.log({ cred });
+
+
+    if (name) {
+      await updateProfile(cred.user, { displayName: name });
+    }
+
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    {
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import('firebase/firestore');
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+
+      const uid = cred.user.uid;
+      const dataToSet = {
+        docId: uid,
+        createdAt: serverTimestamp(),
+        userName: name,
+        userEmail: email,
+        userImage: cred.user.photoURL || '',
+        partnerActivity,
+        typeAccount: "partner",
+      };
+
+      await setDoc(doc(db, 'users', uid), dataToSet, { merge: true });
+      console.log('users doc criado/atualizado:', { uid, dataToSet });
+    }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
+
+    // (opcional) enviar verificação
+    const host = "http://localhost:5173";
+    // const host = "http://projeto-plante-uma-casa.web.app";
+
+    const acs = {
+      url: host + "/auth/complete-signup",
+      handleCodeInApp: false
+    }
+    // await sendEmailVerification(cred.user);
+await sendPasswordResetEmail(auth, email, acs);
+
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: false });
+    tools.setData({ path: 'sc.A12.forms.showSuccess', value: true });
+    tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: 'Usuário criado com sucesso!' });
+
+
+    // Limpar mensagens após 2 segundos
+    const delay = () => {
+      tools.setData({ path: 'all.toggles.sideRight', value: false });
+      tools.setData({ path: 'all.toggles.a12.add', value: false });
+      tools.setData({ path: 'sc.A12.forms.msgs.msg1', value: '' });
+      tools.setData({ path: 'sc.A12.forms.iptsChanges', value: { partnerName: "", partnerMail: "", partnerActivity: "" } });
+    }
+
+    setTimeout(delay, 2500);
+
+    // sucesso...
+  } catch (e: any) {
+    if (e?.code === 'auth/email-already-in-use') {
+      tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+      tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Esse usuário já foi criado anteriormente' });
+      return;
+    }
+
+    tools.setData({ path: 'sc.A12.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A12.msgs.msg1', value: 'Erro ao Criar Parceiro. ' + (e?.message ?? '') });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a12.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
