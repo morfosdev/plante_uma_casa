@@ -41961,7 +41961,7 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  const data = useData((ct) => ct.sc.B7.lists.list1);
+  const data = useData((ct) => ct.sc?.B7?.lists?.list1 ?? []);
   console.log({data})
 
   const stlRadio = {
