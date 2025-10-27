@@ -6024,6 +6024,15 @@ tools.functions.setVar({
         value: [false],
       },
     });
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -13096,6 +13105,15 @@ tools.functions.setVar({
         value: [false],
       },
     });
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -20145,6 +20163,15 @@ tools.functions.setVar({
         value: [false],
       },
     });
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -27140,6 +27167,15 @@ tools.functions.setVar({
       pass: {
         keyPath: ["all.toggles.sideRight"],
         value: [false],
+      },
+    });
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [],
       },
     });
 }
