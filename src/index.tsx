@@ -7366,7 +7366,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -8088,21 +8088,35 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -14384,7 +14398,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -15106,21 +15120,35 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -21379,7 +21407,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -22101,21 +22129,35 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -28322,7 +28364,7 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -29044,21 +29086,35 @@ borderWidth: 2,
 borderColor: '#315E2D',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.iptsChanges`],
           value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7.addOwner`],
           value: [false]
         }})]
  , trigger: 'on press'
