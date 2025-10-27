@@ -41962,7 +41962,14 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const data = useData((ct) => ct.sc?.B7?.lists?.list1);
-  console.log({data});
+  let condMatch;
+
+  console.log({ data });
+  data?.forEach((item: any) => {
+    if (item?.stepId === "s1.1") {
+      condMatch = true;
+    }
+  });
 
   const stlRadio = {
     borderRadius: 100,
@@ -41982,7 +41989,7 @@ paddingHorizontal: 16,
       <RN.Text style={{ color: "white" }}>✓</RN.Text>
     </RN.View>
   );
-  const condReturn = true ? iconActive() : iconInactive();
+  const condReturn = condMatch ? iconActive() : iconInactive();
 
   return condReturn;
 }] 
