@@ -8763,28 +8763,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docId`],
-            arrPathData: [`sc.A7.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
-          value: [ ]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
@@ -15554,28 +15533,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docId`],
-            arrPathData: [`sc.A7.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
-          value: [ ]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
@@ -22297,28 +22255,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docId`],
-            arrPathData: [`sc.A7.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
-          value: [ ]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
@@ -29013,28 +28950,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `lots`, `sc.a7b.editChanges.docId`],
-            arrPathData: [`sc.A7.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7b.editChanges`],
-          value: [ ]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
