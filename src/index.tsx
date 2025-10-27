@@ -8847,7 +8847,7 @@ paddingVertical: 8,
 
   try {
 // Salva o doc
-    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    await updateDoc(doc(db, "lots", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
 
 
@@ -15623,7 +15623,7 @@ paddingVertical: 8,
 
   try {
 // Salva o doc
-    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    await updateDoc(doc(db, "lots", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
 
 
@@ -22360,7 +22360,7 @@ paddingVertical: 8,
 
   try {
 // Salva o doc
-    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    await updateDoc(doc(db, "lots", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
 
 
@@ -29061,7 +29061,7 @@ paddingVertical: 8,
 
   try {
 // Salva o doc
-    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    await updateDoc(doc(db, "lots", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
 
 
