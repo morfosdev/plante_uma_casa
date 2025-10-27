@@ -1664,6 +1664,7 @@ width: '155px',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -1783,7 +1784,9 @@ justifyContent: 'center',
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.Login pass={{
+ configs: [''], arrFuncs: [() => {console.log('function default')}], args 
+ }}/>],
             args,
         }}/>],
 
@@ -46341,7 +46344,6 @@ async (...args) =>
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -46376,9 +46378,7 @@ async (...args) =>
 
             args,
           }}/>
-        , (...args:any) => <Elements.Login pass={{
- configs: [''], arrFuncs: [() => {console.log('function default')}], args 
- }}/>],
+        ],
 
             args,
           }}/>
