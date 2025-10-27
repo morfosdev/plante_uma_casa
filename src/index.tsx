@@ -41959,6 +41959,26 @@ paddingHorizontal: 16,
             functions:[()=>{}],            childrenItems:[
         
 
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+
+    const stlRadio = {
+        borderRadius: 100,
+        width: 22,
+        height: 22,
+    };
+
+    const iconActive = () => <RN.View style={[{backgroundColor: "green"}, stlRadio]}><RN.Text style={{color: "white"}}>✓</RN.Text></RN.View>
+    const iconInactive = () => <RN.View style={[{backgroundColor: "#ccc"}, stlRadio]}><RN.Text style={{color: "white"}}>✓</RN.Text></RN.View>
+    const condReturn = true ? iconActive() : iconInactive();
+
+  return condReturn
+}
+] 
+}}/>
+, 
+        
+
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
