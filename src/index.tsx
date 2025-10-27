@@ -18436,6 +18436,7 @@ backgroundColor: '#315E2D',
 borderRadius: 100,
 height: 8,
 width: 221,
+bottom: 8,
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
