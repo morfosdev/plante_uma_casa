@@ -9263,12 +9263,12 @@ color: '#555555',
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          keyPath: [`sc.a11b.editChanges`],
+          value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -16284,12 +16284,12 @@ color: '#555555',
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          keyPath: [`sc.a11b.editChanges`],
+          value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -23282,12 +23282,12 @@ color: '#555555',
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          keyPath: [`sc.a11b.editChanges`],
+          value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -30228,12 +30228,12 @@ color: '#555555',
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
-          value: [``]
+          keyPath: [`sc.a11b.editChanges`],
+          value: [undefined]
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.a11b.editPartner`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
