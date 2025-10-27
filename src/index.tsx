@@ -41311,7 +41311,6 @@ async (...args) =>
 }`],
 
             functions:[()=>{}],            childrenItems:[
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -41431,59 +41430,6 @@ async (...args) =>
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	height: 30,
-	backgroundColor: 'transparent',
-	paddingHorizontal: 30,
-	paddingVertical: 8,
-	borderWidth: 2,
-	borderRadius: 20,
-	borderColor: 'white',
-	justifyContent: 'center',
-	alignItems: 'center',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.editOwner`],
-          value: [true]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: 15,
-	fontWeight: '700',
-	color: 'white',
-}`
-          ],
-
-          children: [
-            `CRIAR`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
