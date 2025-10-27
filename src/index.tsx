@@ -9254,7 +9254,45 @@ color: '#555555',
 	backgroundColor: "transparent"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [(...args) =>
+        functions.firebase.deleteDocTool({ args, pass:{
+   arrRefStrings: [
+        `users`, `sc.a11b.editChanges.docId`],
+   arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `X`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -16237,7 +16275,45 @@ color: '#555555',
 	backgroundColor: "transparent"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [(...args) =>
+        functions.firebase.deleteDocTool({ args, pass:{
+   arrRefStrings: [
+        `users`, `sc.a11b.editChanges.docId`],
+   arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `X`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -23197,7 +23273,45 @@ color: '#555555',
 	backgroundColor: "transparent"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [(...args) =>
+        functions.firebase.deleteDocTool({ args, pass:{
+   arrRefStrings: [
+        `users`, `sc.a11b.editChanges.docId`],
+   arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `X`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -30105,7 +30219,45 @@ color: '#555555',
 	backgroundColor: "transparent"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [(...args) =>
+        functions.firebase.deleteDocTool({ args, pass:{
+   arrRefStrings: [
+        `users`, `sc.a11b.editChanges.docId`],
+   arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [``]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `X`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
