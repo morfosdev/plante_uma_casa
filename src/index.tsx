@@ -36579,7 +36579,7 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, arrUrls});
+console.log({args, urls});
 
 tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
@@ -40982,7 +40982,7 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, arrUrls});
+console.log({args, urls});
 
 tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
@@ -47094,7 +47094,7 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, arrUrls});
+console.log({args, urls});
 
 tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
