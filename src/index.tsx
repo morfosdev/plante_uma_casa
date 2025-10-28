@@ -36574,7 +36574,13 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+        functions.firebase.uploadFileTool({ args, pass:{
+            fbInit: [''],
+            arrFiles: [() => {}],
+            arrFuncs: [!#!functions return!#!],
+        }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
@@ -40968,7 +40974,13 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+        functions.firebase.uploadFileTool({ args, pass:{
+            fbInit: [''],
+            arrFiles: [() => {}],
+            arrFuncs: [!#!functions return!#!],
+        }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
@@ -47071,7 +47083,13 @@ async (...args) =>
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+        functions.firebase.uploadFileTool({ args, pass:{
+            fbInit: [''],
+            arrFiles: [() => {}],
+            arrFuncs: [!#!functions return!#!],
+        }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
