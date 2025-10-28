@@ -1,10 +1,11 @@
 
+
 // ---------- import Local Tools
 import { fireInit } from './fireInit';
 // const fireInit = () => console.log('fireInit');
 
-// import { uploadFile } from './uploadFile';
-const uploadFile = () => console.log('uploadFile');
+import { uploadFileTool } from './uploadFileTool';
+// const uploadFile = () => console.log('uploadFile');
 
 import { updateDocTool } from './updateDoc';
 // const updateDocTool = () => console.log('updateDoc');
@@ -30,7 +31,7 @@ import { where } from './where';
 export const firebase = {
   fireInit,
 
-  uploadFile,
+  uploadFileTool,
 
   getDocTool,
   getDocsTool,
@@ -42,3 +43,4 @@ export const firebase = {
   whereConds,
   where,
 };
+
