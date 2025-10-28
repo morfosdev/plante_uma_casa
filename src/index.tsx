@@ -42200,6 +42200,8 @@ paddingHorizontal: 16,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(args) => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
@@ -42221,6 +42223,7 @@ paddingHorizontal: 16,
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
   if (!condMatch) {
+    console.log("%cAdd New Step Mode", css1);
     tools.setData(set2A);
     tools.setData(set2B);
   }
@@ -42228,6 +42231,7 @@ paddingHorizontal: 16,
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
   if (condMatch) {
+    console.log("%cEdit Step Mode", css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
@@ -42237,7 +42241,8 @@ paddingHorizontal: 16,
 
   const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -42696,6 +42701,8 @@ paddingHorizontal: 16,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(args) => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
@@ -42717,6 +42724,7 @@ paddingHorizontal: 16,
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
   if (!condMatch) {
+    console.log("%cAdd New Step Mode", css1);
     tools.setData(set2A);
     tools.setData(set2B);
   }
@@ -42724,6 +42732,7 @@ paddingHorizontal: 16,
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
   if (condMatch) {
+    console.log("%cEdit Step Mode", css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
@@ -42733,7 +42742,8 @@ paddingHorizontal: 16,
 
   const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -43192,6 +43202,8 @@ paddingHorizontal: 16,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(args) => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
@@ -43213,6 +43225,7 @@ paddingHorizontal: 16,
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
   if (!condMatch) {
+    console.log("%cAdd New Step Mode", css1);
     tools.setData(set2A);
     tools.setData(set2B);
   }
@@ -43220,6 +43233,7 @@ paddingHorizontal: 16,
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
   if (condMatch) {
+    console.log("%cEdit Step Mode", css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
@@ -43229,7 +43243,8 @@ paddingHorizontal: 16,
 
   const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -43687,6 +43702,8 @@ paddingHorizontal: 16,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(args) => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
@@ -43708,6 +43725,7 @@ paddingHorizontal: 16,
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
   if (!condMatch) {
+    console.log("%cAdd New Step Mode", css1);
     tools.setData(set2A);
     tools.setData(set2B);
   }
@@ -43715,6 +43733,7 @@ paddingHorizontal: 16,
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
   if (condMatch) {
+    console.log("%cEdit Step Mode", css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
@@ -43724,7 +43743,8 @@ paddingHorizontal: 16,
 
   const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
