@@ -42273,7 +42273,7 @@ async (...args) =>
 
       `,
 
-      altura: "50px",
+      altura: "60px",
 
       largura: "50px",
 
@@ -42750,7 +42750,7 @@ async (...args) =>
 
       `,
 
-      altura: "50px",
+      altura: "60px",
 
       largura: "50px",
 
@@ -43226,7 +43226,7 @@ async (...args) =>
 
       `,
 
-      altura: "50px",
+      altura: "60px",
 
       largura: "50px",
 
