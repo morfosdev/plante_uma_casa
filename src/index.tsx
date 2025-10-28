@@ -36578,7 +36578,11 @@ async (...args) =>
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, url, idx) => {
+console.log({args, arrUrls, idx});
+
+tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: arrUrls});
+};],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
@@ -40977,7 +40981,11 @@ async (...args) =>
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, url, idx) => {
+console.log({args, arrUrls, idx});
+
+tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: arrUrls});
+};],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
@@ -47085,7 +47093,11 @@ async (...args) =>
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, url, idx) => {
+console.log({args, arrUrls, idx});
+
+tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: arrUrls});
+};],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
