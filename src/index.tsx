@@ -36588,7 +36588,7 @@ async (...args) =>
         }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `steps`, ``],
+        `steps`, `$var_sc.B9.forms.editChanges.docId`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [() => {}],
         }})]
@@ -41073,7 +41073,7 @@ async (...args) =>
         }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `steps`, ``],
+        `steps`, `$var_sc.B9.forms.editChanges.docId`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [() => {}],
         }})]
@@ -47263,7 +47263,7 @@ async (...args) =>
         }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `steps`, ``],
+        `steps`, `$var_sc.B9.forms.editChanges.docId`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [() => {}],
         }})]
