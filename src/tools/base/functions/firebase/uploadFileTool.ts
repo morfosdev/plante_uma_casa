@@ -14,7 +14,7 @@ export const uploadFileTool = async (props: Tprops) => {
   const { arrFiles, arrFuncs } = pass;
   console.log({ arrFiles, arrFuncs });
 
-  // ---------- set GetData Ref Strings
+  // ---------- set Paths Treatment
   const newArrImages = arrFiles.map((i) => {
     const varValue = testVarType(i, args);
     console.log("2", { varValue });
@@ -28,7 +28,7 @@ export const uploadFileTool = async (props: Tprops) => {
   const fbInit = getCtData("all.temp.fireInit");
 
   const storage = getStorage(fbInit);
-  const objData = newArrImages;
+  const objData = newArrImages[0];
   console.log({ objData });
 
   objData &&
@@ -48,3 +48,4 @@ export const uploadFileTool = async (props: Tprops) => {
       for (const currFunc of arrFuncs) await currFunc(args, firestoreURL, idx);
     });
 };
+
