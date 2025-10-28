@@ -42204,7 +42204,7 @@ paddingHorizontal: 16,
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtdData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
   stepsList?.forEach((d: any) => {
@@ -42700,7 +42700,7 @@ paddingHorizontal: 16,
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtdData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
   stepsList?.forEach((d: any) => {
@@ -43196,7 +43196,7 @@ paddingHorizontal: 16,
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtdData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
   stepsList?.forEach((d: any) => {
@@ -43691,7 +43691,7 @@ paddingHorizontal: 16,
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtdData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
   stepsList?.forEach((d: any) => {
