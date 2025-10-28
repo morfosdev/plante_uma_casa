@@ -42223,7 +42223,7 @@ paddingHorizontal: 16,
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
   if (!condMatch) {
-    console.log("%cAdd New Step Mode", css1);
+    console.log("%cAdd New Step Mode - " + pathNew, css1);
     tools.setData(set2A);
     tools.setData(set2B);
   }
@@ -42231,7 +42231,7 @@ paddingHorizontal: 16,
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
   if (condMatch) {
-    console.log("%cEdit Step Mode", css1);
+    console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
@@ -42724,7 +42724,7 @@ paddingHorizontal: 16,
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
   if (!condMatch) {
-    console.log("%cAdd New Step Mode", css1);
+    console.log("%cAdd New Step Mode - " + pathNew, css1);
     tools.setData(set2A);
     tools.setData(set2B);
   }
@@ -42732,7 +42732,7 @@ paddingHorizontal: 16,
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
   if (condMatch) {
-    console.log("%cEdit Step Mode", css1);
+    console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
@@ -43225,7 +43225,7 @@ paddingHorizontal: 16,
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
   if (!condMatch) {
-    console.log("%cAdd New Step Mode", css1);
+    console.log("%cAdd New Step Mode - " + pathNew, css1);
     tools.setData(set2A);
     tools.setData(set2B);
   }
@@ -43233,7 +43233,7 @@ paddingHorizontal: 16,
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
   if (condMatch) {
-    console.log("%cEdit Step Mode", css1);
+    console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
@@ -43725,7 +43725,7 @@ paddingHorizontal: 16,
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
   if (!condMatch) {
-    console.log("%cAdd New Step Mode", css1);
+    console.log("%cAdd New Step Mode - " + pathNew, css1);
     tools.setData(set2A);
     tools.setData(set2B);
   }
@@ -43733,7 +43733,7 @@ paddingHorizontal: 16,
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
   if (condMatch) {
-    console.log("%cEdit Step Mode", css1);
+    console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
