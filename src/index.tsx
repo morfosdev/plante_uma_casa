@@ -42199,27 +42199,7 @@ paddingHorizontal: 16,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [`$arg_item`]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges.stepId`],
-          value: [`$arg_stepId`]
-        }}), (args) => {
+ arrFunctions: [(args) => {
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
@@ -42706,27 +42686,7 @@ paddingHorizontal: 16,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [`$arg_item`]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges.stepId`],
-          value: [`$arg_stepId`]
-        }}), (args) => {
+ arrFunctions: [(args) => {
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
@@ -43213,27 +43173,7 @@ paddingHorizontal: 16,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [`$arg_item`]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges.stepId`],
-          value: [`$arg_stepId`]
-        }}), (args) => {
+ arrFunctions: [(args) => {
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
@@ -43719,27 +43659,7 @@ paddingHorizontal: 16,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [`$arg_item`]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges.stepId`],
-          value: [`$arg_stepId`]
-        }}), (args) => {
+ arrFunctions: [(args) => {
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
