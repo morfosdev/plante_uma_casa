@@ -6,12 +6,12 @@ import * as ImagePicker from 'expo-image-picker';
 
 type Tprops = {
   pass: {
-    variable?: string[]; // opcional: lista inicial
-    childrenItems?: any[]; // não usado aqui
-    arrFuncs?: any[]; // não usado aqui
-    args?: any; // não usado aqui
-    onChange?: (uris: string[]) => void; // callback opcional
-    max?: number; // limite opcional
+    variable?: string[];                // lista inicial de previews (URIs) - só UI
+    childrenItems?: any[];              // não usado
+    arrFuncs?: Array<(payload: any, args?: any) => any | Promise<any>>; // callbacks que recebem FILES/ASSETS
+    args?: any;                         // args repassados aos callbacks
+    onChange?: (uris: string[]) => void;// callback UI com as URIs (previews)
+    max?: number;                       // limite de itens
   };
 };
 
@@ -24,37 +24,51 @@ export const BtnImagePicker = (props: Tprops) => {
 const BtnImgPicWeb = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
   const inputRef = React.useRef<HTMLInputElement | null>(null);
-  const [images, setImages] = React.useState<string[]>(variable);
 
-  // revoke URLs ao desmontar
+  // UI: previews
+  const [images, setImages] = React.useState<string[]>(variable);
+  // Upload: Files reais
+  const [files, setFiles] = React.useState<File[]>([]);
+
+  // Dispara callbacks sempre que os FILES mudam
   React.useEffect(() => {
-    if (arrFuncs) {
-      for (const currFunc of arrFuncs) currFunc(images, args);
-    }
-    return () => images.forEach(u => URL.revokeObjectURL(u));
-  }, [images]);
+    if (arrFuncs) for (const fn of arrFuncs) fn(files, args);
+    // revoke das URLs quando componente desmontar
+    return () => images.forEach(u => u.startsWith('blob:') && URL.revokeObjectURL(u));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [files]);
 
   const pickWeb = () => inputRef.current?.click();
 
   const handleWebFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     const fl = event.target.files;
     if (!fl) return;
-    const selected = Array.from(fl).map(f => URL.createObjectURL(f));
-    const merged = max
-      ? [...images, ...selected].slice(0, max)
-      : [...images, ...selected];
-    setImages(merged);
-    onChange?.(merged);
-    // limpa o input pra permitir re-selecionar os mesmos arquivos
+
+    const newFiles = Array.from(fl);
+    const newPreviews = newFiles.map(f => URL.createObjectURL(f));
+
+    const nextPreviews = max ? [...images, ...newPreviews].slice(0, max) : [...images, ...newPreviews];
+    const nextFiles    = max ? [...files,  ...newFiles   ].slice(0, max) : [...files,  ...newFiles];
+
+    setImages(nextPreviews);
+    setFiles(nextFiles);
+    onChange?.(nextPreviews);
+
+    // permitir re-selecionar os mesmos arquivos
     event.target.value = '';
   };
 
   const removeAt = (idx: number) => {
-    const clone = [...images];
-    const [rm] = clone.splice(idx, 1);
+    const imgs = [...images];
+    const fls  = [...files];
+    const [rm] = imgs.splice(idx, 1);
+    fls.splice(idx, 1);
+
     if (rm?.startsWith('blob:')) URL.revokeObjectURL(rm);
-    setImages(clone);
-    onChange?.(clone);
+
+    setImages(imgs);
+    setFiles(fls);
+    onChange?.(imgs);
   };
 
   return (
@@ -62,9 +76,7 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
       <RN.View style={styles.container}>
         <ThumbGrid images={images} onRemove={removeAt} />
         <RN.Text style={styles.title}>Adicionar Imagens</RN.Text>
-        <RN.Text style={styles.subtitle}>
-          Selecione ou tire fotos para mostrar o progresso
-        </RN.Text>
+        <RN.Text style={styles.subtitle}>Selecione ou tire fotos para mostrar o progresso</RN.Text>
         <RN.Pressable style={styles.btn} onPress={pickWeb}>
           <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
         </RN.Pressable>
@@ -85,14 +97,18 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
 /* --------------- NATIVO --------------- */
 const BtnImgPicNat = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
-  const [images, setImages] = React.useState<string[]>(variable);
 
+  // UI: URIs para miniaturas
+  const [images, setImages] = React.useState<string[]>(variable);
+  // Upload: objetos ricos do ImagePicker
+  const [assets, setAssets] = React.useState<Array<{ uri: string; fileName?: string; mimeType?: string }>>([]);
+
+  // Dispara callbacks sempre que os ASSETS mudam
   React.useEffect(() => {
-    if (arrFuncs) {
-      for (const currFunc of arrFuncs) currFunc(images, args);
-    }
-    return () => setImages([]); // limpa ao desmontar
-  }, [images]);
+    if (arrFuncs) for (const fn of arrFuncs) fn(assets, args);
+    return () => { /* nada a revogar no nativo */ };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [assets]);
 
   const pickNative = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -103,36 +119,42 @@ const BtnImgPicNat = ({ pass }: Tprops) => {
 
     const result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsMultipleSelection: true, // múltiplas
-      selectionLimit: max ?? 0, // 0 = sem limite (iOS). Ignorado em algumas versões
+      allowsMultipleSelection: true,
+      selectionLimit: max ?? 0, // 0 = sem limite (iOS; pode ser ignorado em algumas versões)
       allowsEditing: false,
       quality: 1,
     });
 
     if (!result.canceled) {
-      const picked = result.assets.map(a => a.uri);
-      const merged = max
-        ? [...images, ...picked].slice(0, max)
-        : [...images, ...picked];
-      setImages(merged);
-      onChange?.(merged);
+      const newUris = result.assets.map(a => a.uri);
+      const nextUris = max ? [...images, ...newUris].slice(0, max) : [...images, ...newUris];
+
+      const newAssets = result.assets.map(a => ({
+        uri: a.uri,
+        fileName: a.fileName,
+        mimeType: a.mimeType,
+      }));
+      const nextAssets = max ? [...assets, ...newAssets].slice(0, max) : [...assets, ...newAssets];
+
+      setImages(nextUris);     // UI
+      setAssets(nextAssets);   // Upload
+      onChange?.(nextUris);
     }
   };
 
   const removeAt = (idx: number) => {
-    const clone = [...images];
-    clone.splice(idx, 1);
-    setImages(clone);
-    onChange?.(clone);
+    const imgs = [...images]; imgs.splice(idx, 1);
+    const ats  = [...assets]; ats.splice(idx, 1);
+    setImages(imgs);
+    setAssets(ats);
+    onChange?.(imgs);
   };
 
   return (
     <RN.View style={styles.container}>
       <ThumbGrid images={images} onRemove={removeAt} />
       <RN.Text style={styles.title}>Adicionar Imagens</RN.Text>
-      <RN.Text style={styles.subtitle}>
-        Selecione ou tire fotos para mostrar o progresso
-      </RN.Text>
+      <RN.Text style={styles.subtitle}>Selecione ou tire fotos para mostrar o progresso</RN.Text>
       <RN.Pressable style={styles.btn} onPress={pickNative}>
         <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
       </RN.Pressable>
@@ -154,11 +176,7 @@ const ThumbGrid = ({
       {images.map((uri, idx) => (
         <RN.View key={uri + idx} style={thumb.item}>
           <RN.Image source={{ uri }} style={thumb.img} />
-          <RN.Pressable
-            hitSlop={8}
-            style={thumb.x}
-            onPress={() => onRemove(idx)}
-          >
+          <RN.Pressable hitSlop={8} style={thumb.x} onPress={() => onRemove(idx)}>
             <RN.Text style={thumb.xTxt}>×</RN.Text>
           </RN.Pressable>
         </RN.View>
@@ -182,16 +200,8 @@ const styles = RN.StyleSheet.create({
     gap: 16,
     backgroundColor: '#fff',
   },
-  title: {
-    fontSize: 18,
-    fontWeight: '700',
-    textAlign: 'center',
-  },
-  subtitle: {
-    fontSize: 14,
-    textAlign: 'center',
-    color: '#4B5563',
-  },
+  title: { fontSize: 18, fontWeight: '700', textAlign: 'center' },
+  subtitle: { fontSize: 14, textAlign: 'center', color: '#4B5563' },
   btn: {
     backgroundColor: '#E8EDF5',
     justifyContent: 'center',
@@ -200,10 +210,7 @@ const styles = RN.StyleSheet.create({
     height: 36,
     paddingHorizontal: 16,
   },
-  btnTxt: {
-    fontSize: 14,
-    fontWeight: '700',
-  },
+  btnTxt: { fontSize: 14, fontWeight: '700' },
 });
 
 const thumb = RN.StyleSheet.create({
@@ -211,7 +218,6 @@ const thumb = RN.StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 8,
     justifyContent: 'center',
     columnGap: 10,
     rowGap: 10,
