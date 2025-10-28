@@ -42228,6 +42228,7 @@ paddingHorizontal: 16,
 
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
+        console.log({ d });
       condMatch = true;
       currId = d?.docId;
     }
@@ -42734,6 +42735,7 @@ paddingHorizontal: 16,
 
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
+        console.log({ d });
       condMatch = true;
       currId = d?.docId;
     }
@@ -43240,6 +43242,7 @@ paddingHorizontal: 16,
 
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
+        console.log({ d });
       condMatch = true;
       currId = d?.docId;
     }
@@ -43745,6 +43748,7 @@ paddingHorizontal: 16,
 
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
+        console.log({ d });
       condMatch = true;
       currId = d?.docId;
     }
