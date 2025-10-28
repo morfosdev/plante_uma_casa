@@ -36582,7 +36582,7 @@ async (...args) =>
 console.log({args, arrUrls});
 
 tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
-};],
+}],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
@@ -40985,7 +40985,7 @@ async (...args) =>
 console.log({args, arrUrls});
 
 tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
-};],
+}],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
@@ -47097,7 +47097,7 @@ async (...args) =>
 console.log({args, arrUrls});
 
 tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
-};],
+}],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
