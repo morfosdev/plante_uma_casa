@@ -42223,11 +42223,13 @@ paddingHorizontal: 16,
   const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
+  let currId;
   console.log({ item, stepsList });
 
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
       condMatch = true;
+      currId = d?.docId;
     }
   });
 
@@ -42251,11 +42253,13 @@ paddingHorizontal: 16,
 
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
+  const set3C = { path: 'sc.B9.forms.editChanges.docId', value: currId };
   // ---- set 3
   if (condMatch) {
     console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
+    tools.setData(set3C);
   }
 }]
  , trigger: 'on press'
@@ -42725,11 +42729,13 @@ paddingHorizontal: 16,
   const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
+  let currId;
   console.log({ item, stepsList });
 
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
       condMatch = true;
+      currId = d?.docId;
     }
   });
 
@@ -42753,11 +42759,13 @@ paddingHorizontal: 16,
 
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
+  const set3C = { path: 'sc.B9.forms.editChanges.docId', value: currId };
   // ---- set 3
   if (condMatch) {
     console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
+    tools.setData(set3C);
   }
 }]
  , trigger: 'on press'
@@ -43227,11 +43235,13 @@ paddingHorizontal: 16,
   const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
+  let currId;
   console.log({ item, stepsList });
 
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
       condMatch = true;
+      currId = d?.docId;
     }
   });
 
@@ -43255,11 +43265,13 @@ paddingHorizontal: 16,
 
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
+  const set3C = { path: 'sc.B9.forms.editChanges.docId', value: currId };
   // ---- set 3
   if (condMatch) {
     console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
+    tools.setData(set3C);
   }
 }]
  , trigger: 'on press'
@@ -43728,11 +43740,13 @@ paddingHorizontal: 16,
   const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
+  let currId;
   console.log({ item, stepsList });
 
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
       condMatch = true;
+      currId = d?.docId;
     }
   });
 
@@ -43756,11 +43770,13 @@ paddingHorizontal: 16,
 
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
+  const set3C = { path: 'sc.B9.forms.editChanges.docId', value: currId };
   // ---- set 3
   if (condMatch) {
     console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
+    tools.setData(set3C);
   }
 }]
  , trigger: 'on press'
