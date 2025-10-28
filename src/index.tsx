@@ -50790,9 +50790,9 @@ tools.setData({
     {
       label: "2. Preparo do Terreno",
       subs: [
-        {stepId: "s2.1", label: "..." },
-        {stepId: "s2.2", label: "..." },
-        {stepId: "s2.3", label: "..." },
+        {stepId: "s2.1", label: "Limpeza e terraplenagem." },
+        {stepId: "s2.2", label: "Sondagem do solo (se necessário)." },
+        {stepId: "s2.3", label: "Marcação da obra (gabarito)." },
         {stepId: "s2.4", label: "..." },
         {stepId: "s2.5", label: "..." },
       ],
