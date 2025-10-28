@@ -36578,10 +36578,10 @@ async (...args) =>
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, url, idx) => {
-console.log({args, arrUrls, idx});
+ arrFuncs: [(args, urls) => {
+console.log({args, arrUrls});
 
-tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: arrUrls});
+tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 };],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
@@ -40981,10 +40981,10 @@ async (...args) =>
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, url, idx) => {
-console.log({args, arrUrls, idx});
+ arrFuncs: [(args, urls) => {
+console.log({args, arrUrls});
 
-tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: arrUrls});
+tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 };],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
@@ -47093,10 +47093,10 @@ async (...args) =>
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, url, idx) => {
-console.log({args, arrUrls, idx});
+ arrFuncs: [(args, urls) => {
+console.log({args, arrUrls});
 
-tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: arrUrls});
+tools.setdata({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 };],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{

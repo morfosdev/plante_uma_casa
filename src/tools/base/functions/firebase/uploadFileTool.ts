@@ -4,7 +4,7 @@ import { getCtData, testVarType } from "../../project";
 
 type Tprops = {
   args: any;
-  pass: { arrFiles: any[]; arrFuncs?: Array<(a: any, url: string, idx: number) => any> };
+  pass: { arrFiles: any[]; arrFuncs?: Array<(a: any, urls: string[], idx?: number) => any> };
 };
 
 // --- helpers
@@ -59,6 +59,7 @@ export const uploadFileTool = async (props: Tprops) => {
   const fbInit = getCtData("all.temp.fireInit");
   const storage = getStorage(fbInit);
 
+  // --- faz upload de cada imagem e guarda as URLs
   const results = await Promise.all(
     inputs.map(async (currData: any, idx: number) => {
       try {
@@ -71,20 +72,25 @@ export const uploadFileTool = async (props: Tprops) => {
         await uploadBytes(fileRef, blob);
         const url = await getDownloadURL(fileRef);
 
-        if (arrFuncs && arrFuncs.length) {
-          for (const fn of arrFuncs) {
-            await fn(args, url, idx);
-          }
-        }
-
         console.log("upload ok:", { idx, path, url });
-        return { ok: true, idx, url: url, path: path };
+        return { ok: true, idx: idx, url: url, path: path };
       } catch (err) {
         console.error("falha no upload:", idx, err);
-        return { ok: false, idx, error: String(err) };
+        return { ok: false, idx: idx, error: String(err) };
       }
     })
   );
+
+  // --- coleta somente as URLs válidas
+  const urls = results.filter(r => r.ok).map(r => r.url);
+  console.log("URLs finais:", urls);
+
+  // --- chama funções externas APÓS todos os uploads
+  if (arrFuncs && arrFuncs.length) {
+    for (const fn of arrFuncs) {
+      await fn(args, urls);
+    }
+  }
 
   console.log("Resultados:", results);
   return results;
