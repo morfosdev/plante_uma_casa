@@ -1,29 +1,39 @@
 
+import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+import { getCtData, testVarType } from "../../project";
+
 type Tprops = {
   args: any;
-  pass: { fbInit: any[]; arrFiles: any[]; arrFuncs: any[] };
+  pass: { arrFiles: any[]; arrFuncs: any[] };
 };
 
 export const uploadFile = async (props: Tprops) => {
-  console.log('UPLOAD DE ARQUIVOS');
+  console.log("UPLOAD DE ARQUIVOS");
   // ---------- set Props
   const { args, pass } = props;
-  const { fbInit, arrFiles, arrFuncs } = pass;
-  console.log({ fbInit, arrFiles, arrFuncs });
+  const { arrFiles, arrFuncs } = pass;
+  console.log({ arrFiles, arrFuncs });
 
-  // ---------- set Local Imports
-  const { getStorage, uploadBytes, uploadString, ref, getDownloadURL } =
-    await import('@firebase/storage');
+  // ---------- set GetData Ref Strings
+  const newArrImages = arrFiles.map((i) => {
+    const varValue = testVarType(i, args);
+    console.log("2", { varValue });
+
+    return varValue;
+  });
 
   // -----------------------------
   // -------- set Firestore Call 1
   // -----------------------------
-  const storage = getStorage(fbInit[0]);
-  const objData = arrFiles[0];
+  const fbInit = getCtData("all.temp.fireInit");
+
+  const storage = getStorage(fbInit);
+  const objData = newArrImages;
   console.log({ objData });
 
   objData &&
-    objData.assets.forEach(async (currData: any, idx: number) => {
+    objData.forEach(async (currData: any, idx: number) => {
+        console.log({ currData });
       const time = Date.now().toString();
       const strRefFile = ref(storage, `images/` + time + currData.name);
       console.log({ strRefFile });
@@ -38,4 +48,3 @@ export const uploadFile = async (props: Tprops) => {
       for (const currFunc of arrFuncs) await currFunc(args, firestoreURL, idx);
     });
 };
-
