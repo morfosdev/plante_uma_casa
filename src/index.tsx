@@ -42273,9 +42273,9 @@ async (...args) =>
 
       `,
 
-      altura: "60px",
+      altura: "50px",
 
-      largura: "50px",
+      largura: "60px",
 
       preenchimento: ['black'],
 
@@ -42750,9 +42750,9 @@ async (...args) =>
 
       `,
 
-      altura: "60px",
+      altura: "50px",
 
-      largura: "50px",
+      largura: "60px",
 
       preenchimento: ['black'],
 
@@ -43226,9 +43226,9 @@ async (...args) =>
 
       `,
 
-      altura: "60px",
+      altura: "50px",
 
-      largura: "50px",
+      largura: "60px",
 
       preenchimento: ['black'],
 
