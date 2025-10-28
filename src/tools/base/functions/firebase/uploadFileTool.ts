@@ -4,48 +4,88 @@ import { getCtData, testVarType } from "../../project";
 
 type Tprops = {
   args: any;
-  pass: { arrFiles: any[]; arrFuncs: any[] };
+  pass: { arrFiles: any[]; arrFuncs?: Array<(a: any, url: string, idx: number) => any> };
 };
+
+// --- helpers
+const safeName = (name: string) =>
+  (name || "file.bin").replace(/[^w.-]+/g, "_").slice(-150);
+
+const extFromMime = (mime?: string) =>
+  mime && mime.indexOf("/") !== -1 ? "." + mime.split("/")[1] : "";
+
+async function toBlobAndName(input: any, idx: number): Promise<{ blob: Blob; name: string }> {
+  // WEB: File/Blob real
+  if (input instanceof Blob) {
+    const name =
+      (input as any).name ||
+      "upload_" + Date.now() + "_" + idx + (extFromMime((input as any).type) || ".bin");
+    return { blob: input, name: safeName(name) };
+  }
+
+  // NATIVO: { uri, fileName?, mimeType? }
+  if (input && typeof input === "object" && typeof input.uri === "string") {
+    const res = await fetch(input.uri);
+    const blob = await res.blob();
+    const name =
+      input.fileName ||
+      "upload_" + Date.now() + "_" + idx + (extFromMime(input.mimeType || blob.type) || ".bin");
+    return { blob, name: safeName(name) };
+  }
+
+  // STRING (blob:/file:/content:/http:)
+  if (typeof input === "string") {
+    const res = await fetch(input);
+    const blob = await res.blob();
+    const name = "upload_" + Date.now() + "_" + idx + (extFromMime(blob.type) || ".bin");
+    return { blob, name: safeName(name) };
+  }
+
+  throw new Error("Formato de arquivo não suportado");
+}
 
 export const uploadFileTool = async (props: Tprops) => {
   console.log("UPLOAD DE ARQUIVOS");
-  // ---------- set Props
   const { args, pass } = props;
-  const { arrFiles, arrFuncs } = pass;
+  const { arrFiles, arrFuncs } = pass || {};
   console.log({ arrFiles, arrFuncs });
 
-  // ---------- set Paths Treatment
-  const newArrImages = arrFiles.map((i) => {
-    const varValue = testVarType(i, args);
-    console.log("2", { varValue });
+  if (!arrFiles || !arrFiles.length) return [];
 
-    return varValue;
-  });
+  const resolved = arrFiles.map((v) => testVarType(v, args));
+  const inputs: any[] = Array.isArray(resolved[0]) ? resolved[0] : resolved;
+  console.log("inputs normalizados:", inputs);
 
-  // -----------------------------
-  // -------- set Firestore Call 1
-  // -----------------------------
   const fbInit = getCtData("all.temp.fireInit");
-
   const storage = getStorage(fbInit);
-  const objData = newArrImages[0];
-  console.log({ objData });
 
-  objData &&
-    objData.forEach(async (currData: any, idx: number) => {
-        console.log({ currData });
-      const time = Date.now().toString();
-      const strRefFile = ref(storage, `images/` + time + currData.name);
-      console.log({ strRefFile });
-      const file = objData.output[idx];
-      console.log({ file });
-      await uploadBytes(strRefFile, file);
+  const results = await Promise.all(
+    inputs.map(async (currData: any, idx: number) => {
+      try {
+        const data = await toBlobAndName(currData, idx);
+        const blob = data.blob;
+        const name = data.name;
+        const path = "images/" + Date.now() + "_" + idx + "_" + name;
+        const fileRef = ref(storage, path);
 
-      // ---------- set Return Functions
-      const firestoreURL = await getDownloadURL(strRefFile);
-      console.log({ firestoreURL });
+        await uploadBytes(fileRef, blob);
+        const url = await getDownloadURL(fileRef);
 
-      for (const currFunc of arrFuncs) await currFunc(args, firestoreURL, idx);
-    });
+        if (arrFuncs && arrFuncs.length) {
+          for (const fn of arrFuncs) {
+            await fn(args, url, idx);
+          }
+        }
+
+        console.log("upload ok:", { idx, path, url });
+        return { ok: true, idx, url: url, path: path };
+      } catch (err) {
+        console.error("falha no upload:", idx, err);
+        return { ok: false, idx, error: String(err) };
+      }
+    })
+  );
+
+  console.log("Resultados:", results);
+  return results;
 };
-
