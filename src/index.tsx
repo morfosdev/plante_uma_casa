@@ -42203,6 +42203,15 @@ paddingHorizontal: 16,
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
+  const item = tools.findFlatItem(args);
+  const stepsList = tools.getCtdData("sc.B7.lists.list1");
+
+  let condMatch = false;
+  stepsList?.forEach((d: any) => {
+    if (d?.stepId === item?.stepId) {
+      condMatch = true;
+    }
+  });
 
   // ---- set 1
   const set1 = { path: pathSideRight, value: true };
@@ -42211,22 +42220,22 @@ paddingHorizontal: 16,
   // ---- set 2
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
-  tools.setData(set2A);
-  tools.setData(set2B);
-
+  if (!condMatch) {
+    tools.setData(set2A);
+    tools.setData(set2B);
+  }
   // ---- set 3
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
-  tools.setData(set3A);
-  tools.setData(set3B);
+  if (condMatch) {
+    tools.setData(set3A);
+    tools.setData(set3B);
+  }
 
   // ---- set 4
-console.log({args});
-  const item = tools.findFlatItem(args);
-  console.log({item});
-  const yyy = item.stepId;
-  console.log({yyy});
-  const set4 = { path: "sc.b8.editChanges.stepId", value: yyy };
+  const stepId = item.stepId;
+
+  const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
 }]
  , trigger: 'on press'
@@ -42690,6 +42699,15 @@ paddingHorizontal: 16,
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
+  const item = tools.findFlatItem(args);
+  const stepsList = tools.getCtdData("sc.B7.lists.list1");
+
+  let condMatch = false;
+  stepsList?.forEach((d: any) => {
+    if (d?.stepId === item?.stepId) {
+      condMatch = true;
+    }
+  });
 
   // ---- set 1
   const set1 = { path: pathSideRight, value: true };
@@ -42698,22 +42716,22 @@ paddingHorizontal: 16,
   // ---- set 2
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
-  tools.setData(set2A);
-  tools.setData(set2B);
-
+  if (!condMatch) {
+    tools.setData(set2A);
+    tools.setData(set2B);
+  }
   // ---- set 3
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
-  tools.setData(set3A);
-  tools.setData(set3B);
+  if (condMatch) {
+    tools.setData(set3A);
+    tools.setData(set3B);
+  }
 
   // ---- set 4
-console.log({args});
-  const item = tools.findFlatItem(args);
-  console.log({item});
-  const yyy = item.stepId;
-  console.log({yyy});
-  const set4 = { path: "sc.b8.editChanges.stepId", value: yyy };
+  const stepId = item.stepId;
+
+  const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
 }]
  , trigger: 'on press'
@@ -43177,6 +43195,15 @@ paddingHorizontal: 16,
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
+  const item = tools.findFlatItem(args);
+  const stepsList = tools.getCtdData("sc.B7.lists.list1");
+
+  let condMatch = false;
+  stepsList?.forEach((d: any) => {
+    if (d?.stepId === item?.stepId) {
+      condMatch = true;
+    }
+  });
 
   // ---- set 1
   const set1 = { path: pathSideRight, value: true };
@@ -43185,22 +43212,22 @@ paddingHorizontal: 16,
   // ---- set 2
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
-  tools.setData(set2A);
-  tools.setData(set2B);
-
+  if (!condMatch) {
+    tools.setData(set2A);
+    tools.setData(set2B);
+  }
   // ---- set 3
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
-  tools.setData(set3A);
-  tools.setData(set3B);
+  if (condMatch) {
+    tools.setData(set3A);
+    tools.setData(set3B);
+  }
 
   // ---- set 4
-console.log({args});
-  const item = tools.findFlatItem(args);
-  console.log({item});
-  const yyy = item.stepId;
-  console.log({yyy});
-  const set4 = { path: "sc.b8.editChanges.stepId", value: yyy };
+  const stepId = item.stepId;
+
+  const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
 }]
  , trigger: 'on press'
@@ -43663,6 +43690,15 @@ paddingHorizontal: 16,
   const pathSideRight = "all.toggles.sideRight";
   const pathEdit = "all.toggles.b9.editSteps";
   const pathNew = "all.toggles.b8.addSteps";
+  const item = tools.findFlatItem(args);
+  const stepsList = tools.getCtdData("sc.B7.lists.list1");
+
+  let condMatch = false;
+  stepsList?.forEach((d: any) => {
+    if (d?.stepId === item?.stepId) {
+      condMatch = true;
+    }
+  });
 
   // ---- set 1
   const set1 = { path: pathSideRight, value: true };
@@ -43671,22 +43707,22 @@ paddingHorizontal: 16,
   // ---- set 2
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
-  tools.setData(set2A);
-  tools.setData(set2B);
-
+  if (!condMatch) {
+    tools.setData(set2A);
+    tools.setData(set2B);
+  }
   // ---- set 3
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
-  tools.setData(set3A);
-  tools.setData(set3B);
+  if (condMatch) {
+    tools.setData(set3A);
+    tools.setData(set3B);
+  }
 
   // ---- set 4
-console.log({args});
-  const item = tools.findFlatItem(args);
-  console.log({item});
-  const yyy = item.stepId;
-  console.log({yyy});
-  const set4 = { path: "sc.b8.editChanges.stepId", value: yyy };
+  const stepId = item.stepId;
+
+  const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
 }]
  , trigger: 'on press'
