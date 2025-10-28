@@ -42241,7 +42241,7 @@ paddingHorizontal: 16,
 
   const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -42742,7 +42742,7 @@ paddingHorizontal: 16,
 
   const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -43243,7 +43243,7 @@ paddingHorizontal: 16,
 
   const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -43743,7 +43743,7 @@ paddingHorizontal: 16,
 
   const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
   tools.setData(set4);
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
