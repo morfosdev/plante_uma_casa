@@ -42214,11 +42214,40 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b9.editSteps`],
           value: [`$arg_item`]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b8.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }})]
+        }}), () => {
+  const pathSideRight = "all.toggles.sideRight";
+  const pathEdit = "all.toggles.b9.editSteps";
+  const pathNew = "all.toggles.b8.addSteps";
+
+  // ---- set 1
+  const set1 = { path: pathSideRight, value: true };
+  tools.setData(set1);
+
+  // ---- set 2
+  const set2A = { path: pathNew, value: true };
+  const set2B = { path: pathEdit, value: false };
+  tools.setData(set2A);
+  tools.setData(set2B);
+
+  // ---- set 3
+  const set3A = { path: pathEdit, value: true };
+  const set3B = { path: pathNew, value: false };
+  tools.setData(set3A);
+  tools.setData(set3B);
+
+  // ---- set 4
+  const item = tools.findFlatItem(args);
+  console.log({item});
+  const yyy = item.stepId;
+  console.log({yyy});
+  const set4 = { path: "sc.b8.editChanges.stepId", value: yyy };
+  tools.setData(set4);
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -42691,11 +42720,40 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b9.editSteps`],
           value: [`$arg_item`]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b8.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }})]
+        }}), () => {
+  const pathSideRight = "all.toggles.sideRight";
+  const pathEdit = "all.toggles.b9.editSteps";
+  const pathNew = "all.toggles.b8.addSteps";
+
+  // ---- set 1
+  const set1 = { path: pathSideRight, value: true };
+  tools.setData(set1);
+
+  // ---- set 2
+  const set2A = { path: pathNew, value: true };
+  const set2B = { path: pathEdit, value: false };
+  tools.setData(set2A);
+  tools.setData(set2B);
+
+  // ---- set 3
+  const set3A = { path: pathEdit, value: true };
+  const set3B = { path: pathNew, value: false };
+  tools.setData(set3A);
+  tools.setData(set3B);
+
+  // ---- set 4
+  const item = tools.findFlatItem(args);
+  console.log({item});
+  const yyy = item.stepId;
+  console.log({yyy});
+  const set4 = { path: "sc.b8.editChanges.stepId", value: yyy };
+  tools.setData(set4);
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -43168,11 +43226,40 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b9.editSteps`],
           value: [`$arg_item`]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b8.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }})]
+        }}), () => {
+  const pathSideRight = "all.toggles.sideRight";
+  const pathEdit = "all.toggles.b9.editSteps";
+  const pathNew = "all.toggles.b8.addSteps";
+
+  // ---- set 1
+  const set1 = { path: pathSideRight, value: true };
+  tools.setData(set1);
+
+  // ---- set 2
+  const set2A = { path: pathNew, value: true };
+  const set2B = { path: pathEdit, value: false };
+  tools.setData(set2A);
+  tools.setData(set2B);
+
+  // ---- set 3
+  const set3A = { path: pathEdit, value: true };
+  const set3B = { path: pathNew, value: false };
+  tools.setData(set3A);
+  tools.setData(set3B);
+
+  // ---- set 4
+  const item = tools.findFlatItem(args);
+  console.log({item});
+  const yyy = item.stepId;
+  console.log({yyy});
+  const set4 = { path: "sc.b8.editChanges.stepId", value: yyy };
+  tools.setData(set4);
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -43644,11 +43731,40 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b9.editSteps`],
           value: [`$arg_item`]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b8.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }})]
+        }}), () => {
+  const pathSideRight = "all.toggles.sideRight";
+  const pathEdit = "all.toggles.b9.editSteps";
+  const pathNew = "all.toggles.b8.addSteps";
+
+  // ---- set 1
+  const set1 = { path: pathSideRight, value: true };
+  tools.setData(set1);
+
+  // ---- set 2
+  const set2A = { path: pathNew, value: true };
+  const set2B = { path: pathEdit, value: false };
+  tools.setData(set2A);
+  tools.setData(set2B);
+
+  // ---- set 3
+  const set3A = { path: pathEdit, value: true };
+  const set3B = { path: pathNew, value: false };
+  tools.setData(set3A);
+  tools.setData(set3B);
+
+  // ---- set 4
+  const item = tools.findFlatItem(args);
+  console.log({item});
+  const yyy = item.stepId;
+  console.log({yyy});
+  const set4 = { path: "sc.b8.editChanges.stepId", value: yyy };
+  tools.setData(set4);
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
