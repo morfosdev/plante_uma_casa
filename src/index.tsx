@@ -42148,6 +42148,7 @@ paddingHorizontal: 16,
             styles:[`{
 	flexDirection: 'row',
 	alignItems: 'center',
+	flex: 1
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -42157,7 +42158,7 @@ paddingHorizontal: 16,
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 5,
+	width: 15,
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
