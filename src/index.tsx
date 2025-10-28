@@ -50297,10 +50297,11 @@ tools.setData({
 'forms': { 'iptsChanges': {   } 
  } 
 , 
-'currId': "", 'statics': {
+'currId': "", 'statics': 
+{
   steps: [
     {
-      label: "Planejamento e Projeto",
+      label: "1. Planejamento e Projeto",
       subs: [
         {stepId: "s1.1", label: "Definição de Orçamento" },
         {stepId: "s1.2", label: "Escolha do Terreno" },
@@ -50310,13 +50311,33 @@ tools.setData({
       ],
 		},
     {
-      label: "Preparo do Terreno",
+      label: "2. Preparo do Terreno",
       subs: [
         {stepId: "s2.1", label: "..." },
         {stepId: "s2.2", label: "..." },
         {stepId: "s2.3", label: "..." },
         {stepId: "s2.4", label: "..." },
         {stepId: "s2.5", label: "..." },
+      ],
+    },
+    {
+      label: "3. Fundações",
+      subs: [
+        {stepId: "s3.1", label: "..." },
+        {stepId: "s3.2", label: "..." },
+        {stepId: "s3.3", label: "..." },
+        {stepId: "s3.4", label: "..." },
+        {stepId: "s3.5", label: "..." },
+      ],
+    },
+    {
+      label: "4. Estrutura",
+      subs: [
+        {stepId: "s4.1", label: "..." },
+        {stepId: "s4.2", label: "..." },
+        {stepId: "s4.3", label: "..." },
+        {stepId: "s4.4", label: "..." },
+        {stepId: "s4.5", label: "..." },
       ],
     }
   ]
