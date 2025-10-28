@@ -36565,7 +36565,8 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
@@ -36584,6 +36585,12 @@ flexDirection: 'row',
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
+        }}), async (...args) =>
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `steps`, ``],
+            arrPathData: [`sc.B9.forms.editChanges`],
+            arrFuncs: [() => {}],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -41043,7 +41050,8 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
@@ -41062,6 +41070,12 @@ flexDirection: 'row',
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
+        }}), async (...args) =>
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `steps`, ``],
+            arrPathData: [`sc.B9.forms.editChanges`],
+            arrFuncs: [() => {}],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -42209,6 +42223,8 @@ paddingHorizontal: 16,
   const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
+  console.log({ item, stepsList });
+
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
       condMatch = true;
@@ -42219,30 +42235,29 @@ paddingHorizontal: 16,
   const set1 = { path: pathSideRight, value: true };
   tools.setData(set1);
 
-  // ---- set 2
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
+  // ---- set 2
   if (!condMatch) {
     console.log("%cAdd New Step Mode - " + pathNew, css1);
     tools.setData(set2A);
     tools.setData(set2B);
+
+    const stepId = item.stepId;
+
+    const set4 = { path: "sc.B8.forms.iptsChanges.stepId", value: stepId };
+    tools.setData(set4);
   }
-  // ---- set 3
+
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
+  // ---- set 3
   if (condMatch) {
     console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
-
-  // ---- set 4
-  const stepId = item.stepId;
-
-  const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
-  tools.setData(set4);
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -42710,6 +42725,8 @@ paddingHorizontal: 16,
   const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
+  console.log({ item, stepsList });
+
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
       condMatch = true;
@@ -42720,30 +42737,29 @@ paddingHorizontal: 16,
   const set1 = { path: pathSideRight, value: true };
   tools.setData(set1);
 
-  // ---- set 2
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
+  // ---- set 2
   if (!condMatch) {
     console.log("%cAdd New Step Mode - " + pathNew, css1);
     tools.setData(set2A);
     tools.setData(set2B);
+
+    const stepId = item.stepId;
+
+    const set4 = { path: "sc.B8.forms.iptsChanges.stepId", value: stepId };
+    tools.setData(set4);
   }
-  // ---- set 3
+
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
+  // ---- set 3
   if (condMatch) {
     console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
-
-  // ---- set 4
-  const stepId = item.stepId;
-
-  const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
-  tools.setData(set4);
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -43211,6 +43227,8 @@ paddingHorizontal: 16,
   const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
+  console.log({ item, stepsList });
+
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
       condMatch = true;
@@ -43221,30 +43239,29 @@ paddingHorizontal: 16,
   const set1 = { path: pathSideRight, value: true };
   tools.setData(set1);
 
-  // ---- set 2
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
+  // ---- set 2
   if (!condMatch) {
     console.log("%cAdd New Step Mode - " + pathNew, css1);
     tools.setData(set2A);
     tools.setData(set2B);
+
+    const stepId = item.stepId;
+
+    const set4 = { path: "sc.B8.forms.iptsChanges.stepId", value: stepId };
+    tools.setData(set4);
   }
-  // ---- set 3
+
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
+  // ---- set 3
   if (condMatch) {
     console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
-
-  // ---- set 4
-  const stepId = item.stepId;
-
-  const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
-  tools.setData(set4);
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -43711,6 +43728,8 @@ paddingHorizontal: 16,
   const stepsList = tools.getCtData("sc.B7.lists.list1");
 
   let condMatch = false;
+  console.log({ item, stepsList });
+
   stepsList?.forEach((d: any) => {
     if (d?.stepId === item?.stepId) {
       condMatch = true;
@@ -43721,30 +43740,29 @@ paddingHorizontal: 16,
   const set1 = { path: pathSideRight, value: true };
   tools.setData(set1);
 
-  // ---- set 2
   const set2A = { path: pathNew, value: true };
   const set2B = { path: pathEdit, value: false };
+  // ---- set 2
   if (!condMatch) {
     console.log("%cAdd New Step Mode - " + pathNew, css1);
     tools.setData(set2A);
     tools.setData(set2B);
+
+    const stepId = item.stepId;
+
+    const set4 = { path: "sc.B8.forms.iptsChanges.stepId", value: stepId };
+    tools.setData(set4);
   }
-  // ---- set 3
+
   const set3A = { path: pathEdit, value: true };
   const set3B = { path: pathNew, value: false };
+  // ---- set 3
   if (condMatch) {
     console.log("%cEdit Step Mode - " + pathEdit, css1);
     tools.setData(set3A);
     tools.setData(set3B);
   }
-
-  // ---- set 4
-  const stepId = item.stepId;
-
-  const set4 = { path: "sc.b8.editChanges.stepId", value: stepId };
-  tools.setData(set4);
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -47206,7 +47224,8 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
@@ -47225,6 +47244,12 @@ flexDirection: 'row',
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
+        }}), async (...args) =>
+        functions.firebase.updateDocTool({ args, pass:{
+   arrRefStrings: [
+        `steps`, ``],
+            arrPathData: [`sc.B9.forms.editChanges`],
+            arrFuncs: [() => {}],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
