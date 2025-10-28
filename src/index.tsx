@@ -36577,7 +36577,7 @@ async (...args) =>
  arrFunctions: [
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [''],
+ arrFiles: [`all.temp.images`],
  arrFuncs: [() => {}],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
@@ -40976,7 +40976,7 @@ async (...args) =>
  arrFunctions: [
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [''],
+ arrFiles: [`all.temp.images`],
  arrFuncs: [() => {}],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
@@ -47084,7 +47084,7 @@ async (...args) =>
  arrFunctions: [
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [''],
+ arrFiles: [`all.temp.images`],
  arrFuncs: [() => {}],
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
