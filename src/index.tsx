@@ -36565,27 +36565,7 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`steps`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
@@ -41050,27 +41030,7 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`steps`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
@@ -47244,27 +47204,7 @@ flexDirection: 'row',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.setDocTool({ args, pass:{
-  arrRefStrings: [`steps`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
