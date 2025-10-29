@@ -34311,8 +34311,8 @@ height: 15,
         }
         , async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.B6.list`],
-          value: [`$arg_callback`]
+          keyPath: [`sc.B6.condoId`],
+          value: [`$arg_callback.docId`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
