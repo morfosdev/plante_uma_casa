@@ -50392,7 +50392,8 @@ color: '#555555',
           propsArray: [{}],
 
           stylesArray: [`{ 
-	padding: 5,
+	paddingHorizontal: 4,
+	paddingVertical: 1,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
 	width: '100%',
@@ -50470,7 +50471,8 @@ placeholder: 'Ex: 00.000.000-00',
 }`],
 
           stylesArray: [`{ 
-	padding: 5,
+	paddingHorizontal: 4,
+	paddingVertical: 1,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
 	width: '100%',
@@ -50547,7 +50549,8 @@ placeholder: 'Ex: (00) 00000-0000',
 }`],
 
           stylesArray: [`{ 
-	padding: 5,
+	paddingHorizontal: 4,
+	paddingVertical: 1,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
 	width: '100%',
