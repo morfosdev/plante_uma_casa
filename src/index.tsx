@@ -51415,7 +51415,7 @@ async (...args) =>
 
       largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, 
@@ -52285,7 +52285,7 @@ async (...args) =>
 
       largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, 
@@ -53214,7 +53214,7 @@ async (...args) =>
 
       largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, 
