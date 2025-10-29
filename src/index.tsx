@@ -4064,25 +4064,20 @@ backgroundColor: 'transparent',
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+        
 
-          arrStyles: [
-            `{
-fontSize: 20,
-fontWeight: '700',
-}`
-          ],
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
 
-          children: [
-            `Definir Senha`
-          ],
+      styles:[{
+	width: 80,
+	height: 30
+}],
 
-          args,
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/images%2FAdmin.png?alt=media&token=94ebd672-5bdd-4e25-81b7-a1b36e29e6e0`],
 
-        }}/>, 
+      args,
+    }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
