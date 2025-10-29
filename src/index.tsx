@@ -9819,7 +9819,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.editCondo"],
+        keyPath: ["all.toggles.a11b.editPartner"],
         value: [false],
       },
     });
@@ -9836,7 +9836,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
@@ -9846,7 +9846,7 @@ paddingVertical: 8,
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: [""],
       },
     });
@@ -17082,7 +17082,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.editCondo"],
+        keyPath: ["all.toggles.a11b.editPartner"],
         value: [false],
       },
     });
@@ -17099,7 +17099,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
@@ -17109,7 +17109,7 @@ paddingVertical: 8,
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: [""],
       },
     });
@@ -24322,7 +24322,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.editCondo"],
+        keyPath: ["all.toggles.a11b.editPartner"],
         value: [false],
       },
     });
@@ -24339,7 +24339,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
@@ -24349,7 +24349,7 @@ paddingVertical: 8,
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: [""],
       },
     });
@@ -31510,7 +31510,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.editCondo"],
+        keyPath: ["all.toggles.a11b.editPartner"],
         value: [false],
       },
     });
@@ -31527,7 +31527,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
@@ -31537,7 +31537,7 @@ paddingVertical: 8,
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: [""],
       },
     });
