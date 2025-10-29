@@ -5795,8 +5795,8 @@ paddingHorizontal: 4,
         pass: {
           keyPath: ["sc.a1.iptChanges.startDate"],
           // se seu projeto espera array, descomente a linha abaixo e comente a outra
-          // value: [formatted]
-          value: formatted
+          value: [formatted]
+          //value: formatted
         }
       });
     }
@@ -13136,8 +13136,8 @@ paddingHorizontal: 4,
         pass: {
           keyPath: ["sc.a1.iptChanges.startDate"],
           // se seu projeto espera array, descomente a linha abaixo e comente a outra
-          // value: [formatted]
-          value: formatted
+          value: [formatted]
+          //value: formatted
         }
       });
     }
@@ -20454,8 +20454,8 @@ paddingHorizontal: 4,
         pass: {
           keyPath: ["sc.a1.iptChanges.startDate"],
           // se seu projeto espera array, descomente a linha abaixo e comente a outra
-          // value: [formatted]
-          value: formatted
+          value: [formatted]
+          //value: formatted
         }
       });
     }
@@ -27720,8 +27720,8 @@ paddingHorizontal: 4,
         pass: {
           keyPath: ["sc.a1.iptChanges.startDate"],
           // se seu projeto espera array, descomente a linha abaixo e comente a outra
-          // value: [formatted]
-          value: formatted
+          value: [formatted]
+          //value: formatted
         }
       });
     }
