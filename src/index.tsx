@@ -9046,6 +9046,15 @@ paddingVertical: 8,
       },
     });
   }
+
+//clean validation message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -16176,6 +16185,15 @@ paddingVertical: 8,
       },
     });
   }
+
+//clean validation message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -23283,6 +23301,15 @@ paddingVertical: 8,
       },
     });
   }
+
+//clean validation message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
@@ -30338,6 +30365,15 @@ paddingVertical: 8,
       },
     });
   }
+
+//clean validation message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [""],
+      },
+    });
 }
 ]
  , trigger: 'on press'
