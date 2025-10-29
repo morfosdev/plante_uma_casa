@@ -9247,8 +9247,13 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.validationMessage`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -9819,7 +9824,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.editCondo"],
+        keyPath: ["all.toggles.a11b.editPartner"],
         value: [false],
       },
     });
@@ -9836,7 +9841,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
@@ -9846,7 +9851,7 @@ paddingVertical: 8,
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: [""],
       },
     });
@@ -9910,8 +9915,13 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.validationMessage`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -10029,7 +10039,7 @@ height: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -10637,7 +10647,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -16510,8 +16520,13 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.validationMessage`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -17082,7 +17097,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.editCondo"],
+        keyPath: ["all.toggles.a11b.editPartner"],
         value: [false],
       },
     });
@@ -17099,7 +17114,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
@@ -17109,7 +17124,7 @@ paddingVertical: 8,
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: [""],
       },
     });
@@ -17173,8 +17188,13 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.validationMessage`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -17292,7 +17312,7 @@ height: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -17900,7 +17920,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -23750,8 +23770,13 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.validationMessage`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -24322,7 +24347,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.editCondo"],
+        keyPath: ["all.toggles.a11b.editPartner"],
         value: [false],
       },
     });
@@ -24339,7 +24364,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
@@ -24349,7 +24374,7 @@ paddingVertical: 8,
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: [""],
       },
     });
@@ -24413,8 +24438,13 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.validationMessage`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -24532,7 +24562,7 @@ height: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -25140,7 +25170,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -30938,8 +30968,13 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.validationMessage`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -31510,7 +31545,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a7.editCondo"],
+        keyPath: ["all.toggles.a11b.editPartner"],
         value: [false],
       },
     });
@@ -31527,7 +31562,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: ["Erro ao atualizar os dados. Verifique o console."],
       },
     });
@@ -31537,7 +31572,7 @@ paddingVertical: 8,
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a7.validationMessage"],
+        keyPath: ["sc.A11.validationMessage"],
         value: [""],
       },
     });
@@ -31601,8 +31636,13 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.validationMessage`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -31720,7 +31760,7 @@ height: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -32328,7 +32368,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
