@@ -5910,32 +5910,63 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
-  // Garante que txt seja string
-  txt = txt ? String(txt) : "";
+  try {
+    // Garante string
+    if (typeof txt !== "string") txt = String(txt ?? "");
 
-  // Remove tudo que não for número
-  let digits = txt.replace(/D/g, "").slice(0, 8); // só 8 dígitos
+    console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
 
-  // Formata automaticamente DD/MM/AAAA
-  let formatted = "";
-  if (digits.length <= 2) {
-    formatted = digits; // só dia
-  } else if (digits.length <= 4) {
-    formatted = digits.replace(/^(d{2})(d{1,2})$/, "!#!/!#!"); // dia/mes
-  } else {
-    formatted = digits.replace(/^(d{2})(d{2})(d{1,4})$/, "!#!/!#!/$3"); // dia/mes/ano
+    // Método 1: preferencial - pega todos os dígitos com match
+    let digitArr = txt.match(/d/g);
+    let digits = (digitArr && digitArr.length) ? digitArr.join("") : "";
+
+    // Se match falhar por algum motivo, fallback robusto:
+    if (!digits) {
+      digits = Array.from(txt).filter(ch => "0123456789".includes(ch)).join("");
+    }
+
+    console.log("Somente dígitos extraídos:", digits);
+
+    // Limita a 8 dígitos (DDMMAAAA)
+    digits = digits.slice(0, 8);
+
+    // Formata dinamicamente DD/MM/AAAA
+    let formatted = digits;
+    if (digits.length > 4) {
+      // quando tem DDMM + AAAA...
+      formatted = digits.replace(/^(d{2})(d{2})(d{0,4})/, "!#!/!#!/$3");
+    } else if (digits.length > 2) {
+      // quando tem DD + MM
+      formatted = digits.replace(/^(d{2})(d{0,2})/, "!#!/!#!");
+    }
+
+    console.log("Formatado:", formatted);
+
+    // Salva no contexto (usar o que seu projeto aceita; tools.setData é preferível aqui)
+    if (typeof tools.setData === "function") {
+      tools.setData({
+        path: "sc.a1.iptChanges.startDate",
+        value: formatted
+      });
+    } else if (tools.functions && typeof tools.functions.setVar === "function") {
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["sc.a1.iptChanges.startDate"],
+          value: formatted // ou [formatted] se seu projeto usar array
+        }
+      });
+    } else {
+      console.warn("Nenhum setter disponível (tools.setData / tools.functions.setVar).");
+    }
+
+    // retornar caso o componente use o retorno
+    return formatted;
+  } catch (err) {
+    console.error("Erro na máscara de data:", err);
+    return txt;
   }
-
-  // Atualiza o valor no Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
-
-  // Retorna o valor formatado para renderizar no input
-  return formatted;
-}
-],
+}],
 
           args,
         }}/>, 
@@ -13224,32 +13255,63 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
-  // Garante que txt seja string
-  txt = txt ? String(txt) : "";
+  try {
+    // Garante string
+    if (typeof txt !== "string") txt = String(txt ?? "");
 
-  // Remove tudo que não for número
-  let digits = txt.replace(/D/g, "").slice(0, 8); // só 8 dígitos
+    console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
 
-  // Formata automaticamente DD/MM/AAAA
-  let formatted = "";
-  if (digits.length <= 2) {
-    formatted = digits; // só dia
-  } else if (digits.length <= 4) {
-    formatted = digits.replace(/^(d{2})(d{1,2})$/, "!#!/!#!"); // dia/mes
-  } else {
-    formatted = digits.replace(/^(d{2})(d{2})(d{1,4})$/, "!#!/!#!/$3"); // dia/mes/ano
+    // Método 1: preferencial - pega todos os dígitos com match
+    let digitArr = txt.match(/d/g);
+    let digits = (digitArr && digitArr.length) ? digitArr.join("") : "";
+
+    // Se match falhar por algum motivo, fallback robusto:
+    if (!digits) {
+      digits = Array.from(txt).filter(ch => "0123456789".includes(ch)).join("");
+    }
+
+    console.log("Somente dígitos extraídos:", digits);
+
+    // Limita a 8 dígitos (DDMMAAAA)
+    digits = digits.slice(0, 8);
+
+    // Formata dinamicamente DD/MM/AAAA
+    let formatted = digits;
+    if (digits.length > 4) {
+      // quando tem DDMM + AAAA...
+      formatted = digits.replace(/^(d{2})(d{2})(d{0,4})/, "!#!/!#!/$3");
+    } else if (digits.length > 2) {
+      // quando tem DD + MM
+      formatted = digits.replace(/^(d{2})(d{0,2})/, "!#!/!#!");
+    }
+
+    console.log("Formatado:", formatted);
+
+    // Salva no contexto (usar o que seu projeto aceita; tools.setData é preferível aqui)
+    if (typeof tools.setData === "function") {
+      tools.setData({
+        path: "sc.a1.iptChanges.startDate",
+        value: formatted
+      });
+    } else if (tools.functions && typeof tools.functions.setVar === "function") {
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["sc.a1.iptChanges.startDate"],
+          value: formatted // ou [formatted] se seu projeto usar array
+        }
+      });
+    } else {
+      console.warn("Nenhum setter disponível (tools.setData / tools.functions.setVar).");
+    }
+
+    // retornar caso o componente use o retorno
+    return formatted;
+  } catch (err) {
+    console.error("Erro na máscara de data:", err);
+    return txt;
   }
-
-  // Atualiza o valor no Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
-
-  // Retorna o valor formatado para renderizar no input
-  return formatted;
-}
-],
+}],
 
           args,
         }}/>, 
@@ -20515,32 +20577,63 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
-  // Garante que txt seja string
-  txt = txt ? String(txt) : "";
+  try {
+    // Garante string
+    if (typeof txt !== "string") txt = String(txt ?? "");
 
-  // Remove tudo que não for número
-  let digits = txt.replace(/D/g, "").slice(0, 8); // só 8 dígitos
+    console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
 
-  // Formata automaticamente DD/MM/AAAA
-  let formatted = "";
-  if (digits.length <= 2) {
-    formatted = digits; // só dia
-  } else if (digits.length <= 4) {
-    formatted = digits.replace(/^(d{2})(d{1,2})$/, "!#!/!#!"); // dia/mes
-  } else {
-    formatted = digits.replace(/^(d{2})(d{2})(d{1,4})$/, "!#!/!#!/$3"); // dia/mes/ano
+    // Método 1: preferencial - pega todos os dígitos com match
+    let digitArr = txt.match(/d/g);
+    let digits = (digitArr && digitArr.length) ? digitArr.join("") : "";
+
+    // Se match falhar por algum motivo, fallback robusto:
+    if (!digits) {
+      digits = Array.from(txt).filter(ch => "0123456789".includes(ch)).join("");
+    }
+
+    console.log("Somente dígitos extraídos:", digits);
+
+    // Limita a 8 dígitos (DDMMAAAA)
+    digits = digits.slice(0, 8);
+
+    // Formata dinamicamente DD/MM/AAAA
+    let formatted = digits;
+    if (digits.length > 4) {
+      // quando tem DDMM + AAAA...
+      formatted = digits.replace(/^(d{2})(d{2})(d{0,4})/, "!#!/!#!/$3");
+    } else if (digits.length > 2) {
+      // quando tem DD + MM
+      formatted = digits.replace(/^(d{2})(d{0,2})/, "!#!/!#!");
+    }
+
+    console.log("Formatado:", formatted);
+
+    // Salva no contexto (usar o que seu projeto aceita; tools.setData é preferível aqui)
+    if (typeof tools.setData === "function") {
+      tools.setData({
+        path: "sc.a1.iptChanges.startDate",
+        value: formatted
+      });
+    } else if (tools.functions && typeof tools.functions.setVar === "function") {
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["sc.a1.iptChanges.startDate"],
+          value: formatted // ou [formatted] se seu projeto usar array
+        }
+      });
+    } else {
+      console.warn("Nenhum setter disponível (tools.setData / tools.functions.setVar).");
+    }
+
+    // retornar caso o componente use o retorno
+    return formatted;
+  } catch (err) {
+    console.error("Erro na máscara de data:", err);
+    return txt;
   }
-
-  // Atualiza o valor no Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
-
-  // Retorna o valor formatado para renderizar no input
-  return formatted;
-}
-],
+}],
 
           args,
         }}/>, 
@@ -27754,32 +27847,63 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
-  // Garante que txt seja string
-  txt = txt ? String(txt) : "";
+  try {
+    // Garante string
+    if (typeof txt !== "string") txt = String(txt ?? "");
 
-  // Remove tudo que não for número
-  let digits = txt.replace(/D/g, "").slice(0, 8); // só 8 dígitos
+    console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
 
-  // Formata automaticamente DD/MM/AAAA
-  let formatted = "";
-  if (digits.length <= 2) {
-    formatted = digits; // só dia
-  } else if (digits.length <= 4) {
-    formatted = digits.replace(/^(d{2})(d{1,2})$/, "!#!/!#!"); // dia/mes
-  } else {
-    formatted = digits.replace(/^(d{2})(d{2})(d{1,4})$/, "!#!/!#!/$3"); // dia/mes/ano
+    // Método 1: preferencial - pega todos os dígitos com match
+    let digitArr = txt.match(/d/g);
+    let digits = (digitArr && digitArr.length) ? digitArr.join("") : "";
+
+    // Se match falhar por algum motivo, fallback robusto:
+    if (!digits) {
+      digits = Array.from(txt).filter(ch => "0123456789".includes(ch)).join("");
+    }
+
+    console.log("Somente dígitos extraídos:", digits);
+
+    // Limita a 8 dígitos (DDMMAAAA)
+    digits = digits.slice(0, 8);
+
+    // Formata dinamicamente DD/MM/AAAA
+    let formatted = digits;
+    if (digits.length > 4) {
+      // quando tem DDMM + AAAA...
+      formatted = digits.replace(/^(d{2})(d{2})(d{0,4})/, "!#!/!#!/$3");
+    } else if (digits.length > 2) {
+      // quando tem DD + MM
+      formatted = digits.replace(/^(d{2})(d{0,2})/, "!#!/!#!");
+    }
+
+    console.log("Formatado:", formatted);
+
+    // Salva no contexto (usar o que seu projeto aceita; tools.setData é preferível aqui)
+    if (typeof tools.setData === "function") {
+      tools.setData({
+        path: "sc.a1.iptChanges.startDate",
+        value: formatted
+      });
+    } else if (tools.functions && typeof tools.functions.setVar === "function") {
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["sc.a1.iptChanges.startDate"],
+          value: formatted // ou [formatted] se seu projeto usar array
+        }
+      });
+    } else {
+      console.warn("Nenhum setter disponível (tools.setData / tools.functions.setVar).");
+    }
+
+    // retornar caso o componente use o retorno
+    return formatted;
+  } catch (err) {
+    console.error("Erro na máscara de data:", err);
+    return txt;
   }
-
-  // Atualiza o valor no Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
-
-  // Retorna o valor formatado para renderizar no input
-  return formatted;
-}
-],
+}],
 
           args,
         }}/>, 
