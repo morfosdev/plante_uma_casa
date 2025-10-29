@@ -36731,7 +36731,7 @@ width: '100%',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.b8.addSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.b9.editSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -41700,7 +41700,7 @@ width: '100%',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.b8.addSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.b9.editSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -48369,7 +48369,7 @@ width: '100%',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.b8.addSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.b9.editSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
