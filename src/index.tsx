@@ -50101,7 +50101,14 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 9, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 27,
+paddingVertical: 7,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
