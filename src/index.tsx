@@ -50446,7 +50446,7 @@ color: '#555555',
           ],
 
           children: [
-            `Nome Completo`
+            `RG`
           ],
 
           args,
@@ -50454,18 +50454,17 @@ color: '#555555',
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
-          stylesArray: [`{ 
-	padding: 5,
-	borderBottomColor: "#CCCCCC",
-	borderBottomWidth: 1,
-	width: '100%',
-}`],
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
 
-          path: [`sc.C2.forms.iptsChanges.userName`],
+          path: [`sc.C2.forms.iptsChanges.userRg`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.userName`],
+          keyPath: [`sc.C2.forms.iptsChanges.userRg`],
           value: [`$arg_callback`]
         }})],
 
