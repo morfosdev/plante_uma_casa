@@ -50680,7 +50680,7 @@ placeholder: 'Pesquisar endereço',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "100%", padding: 5, backgroundColor: "#FFF", flexDirection: "row", alignItems: "center"}`],
+            styles:[`{ padding: 5, backgroundColor: "#FFF", flexDirection: "row", alignItems: "center"}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
