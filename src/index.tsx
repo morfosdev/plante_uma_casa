@@ -5756,30 +5756,30 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(value) => {
+  // Garantir que o valor é string
+  if (!value) value = "";
+
   // Remove tudo que não for número
   let cleaned = value.replace(/D/g, "");
 
-  // Limita a 8 caracteres (DDMMAAAA)
+  // Limita a 8 dígitos (DDMMAAAA)
   if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
 
   // Adiciona as barras conforme o usuário digita
   let formatted = cleaned;
   if (cleaned.length > 4) {
-    formatted = cleaned.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
+    formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
   } else if (cleaned.length > 2) {
-    formatted = cleaned.replace(/(d{2})(d{1,2})/, "!#!/!#!");
+    formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
   }
 
-  // Atualiza a variável com o valor formatado
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.iptChanges.startDate"],
-      value: [formatted],
-    },
+  // Atualiza a variável no contexto Flaxboll
+  tools.setData({
+    path: "sc.a1.iptChanges.startDate",
+    value: formatted,
   });
 
-  // Retorna o valor formatado (caso o campo use retorno direto)
+  // Retorna o valor formatado (usado pelo input)
   return formatted;
 }
 ],
@@ -13071,30 +13071,30 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(value) => {
+  // Garantir que o valor é string
+  if (!value) value = "";
+
   // Remove tudo que não for número
   let cleaned = value.replace(/D/g, "");
 
-  // Limita a 8 caracteres (DDMMAAAA)
+  // Limita a 8 dígitos (DDMMAAAA)
   if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
 
   // Adiciona as barras conforme o usuário digita
   let formatted = cleaned;
   if (cleaned.length > 4) {
-    formatted = cleaned.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
+    formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
   } else if (cleaned.length > 2) {
-    formatted = cleaned.replace(/(d{2})(d{1,2})/, "!#!/!#!");
+    formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
   }
 
-  // Atualiza a variável com o valor formatado
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.iptChanges.startDate"],
-      value: [formatted],
-    },
+  // Atualiza a variável no contexto Flaxboll
+  tools.setData({
+    path: "sc.a1.iptChanges.startDate",
+    value: formatted,
   });
 
-  // Retorna o valor formatado (caso o campo use retorno direto)
+  // Retorna o valor formatado (usado pelo input)
   return formatted;
 }
 ],
@@ -20363,30 +20363,30 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(value) => {
+  // Garantir que o valor é string
+  if (!value) value = "";
+
   // Remove tudo que não for número
   let cleaned = value.replace(/D/g, "");
 
-  // Limita a 8 caracteres (DDMMAAAA)
+  // Limita a 8 dígitos (DDMMAAAA)
   if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
 
   // Adiciona as barras conforme o usuário digita
   let formatted = cleaned;
   if (cleaned.length > 4) {
-    formatted = cleaned.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
+    formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
   } else if (cleaned.length > 2) {
-    formatted = cleaned.replace(/(d{2})(d{1,2})/, "!#!/!#!");
+    formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
   }
 
-  // Atualiza a variável com o valor formatado
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.iptChanges.startDate"],
-      value: [formatted],
-    },
+  // Atualiza a variável no contexto Flaxboll
+  tools.setData({
+    path: "sc.a1.iptChanges.startDate",
+    value: formatted,
   });
 
-  // Retorna o valor formatado (caso o campo use retorno direto)
+  // Retorna o valor formatado (usado pelo input)
   return formatted;
 }
 ],
@@ -27603,30 +27603,30 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(value) => {
+  // Garantir que o valor é string
+  if (!value) value = "";
+
   // Remove tudo que não for número
   let cleaned = value.replace(/D/g, "");
 
-  // Limita a 8 caracteres (DDMMAAAA)
+  // Limita a 8 dígitos (DDMMAAAA)
   if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
 
   // Adiciona as barras conforme o usuário digita
   let formatted = cleaned;
   if (cleaned.length > 4) {
-    formatted = cleaned.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
+    formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
   } else if (cleaned.length > 2) {
-    formatted = cleaned.replace(/(d{2})(d{1,2})/, "!#!/!#!");
+    formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
   }
 
-  // Atualiza a variável com o valor formatado
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.iptChanges.startDate"],
-      value: [formatted],
-    },
+  // Atualiza a variável no contexto Flaxboll
+  tools.setData({
+    path: "sc.a1.iptChanges.startDate",
+    value: formatted,
   });
 
-  // Retorna o valor formatado (caso o campo use retorno direto)
+  // Retorna o valor formatado (usado pelo input)
   return formatted;
 }
 ],
