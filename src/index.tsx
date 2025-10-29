@@ -50143,7 +50143,11 @@ paddingVertical: 7,
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+fontWeight: '700',
+color: '#fff',
+}`
           ],
 
           children: [
