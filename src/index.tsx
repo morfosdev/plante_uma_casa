@@ -50021,7 +50021,7 @@ async (...args) =>
 
           styles:[
         `{ alignItems: "center", justifyContent: "center" }`, 
-        `{ width: "100%", height: "100%" }`, `{ backgroundColor: "$var_all.colors.primary" }`],
+        `{ width: "100%", height: "100%" }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
           screenElements:[
 
