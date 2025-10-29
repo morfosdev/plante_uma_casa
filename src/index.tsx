@@ -34311,7 +34311,7 @@ height: 15,
         }
         , async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.B6.condoId`],
+          keyPath: [`sc.B6.item`],
           value: [`$arg_item`]
         }})]
  , trigger: 'on press'
