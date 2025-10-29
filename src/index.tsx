@@ -37488,7 +37488,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.b9.editSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.b8.addSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -42457,7 +42457,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.b9.editSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.b8.addSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -49126,7 +49126,7 @@ fontWeight: '700',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.b9.editSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.b8.addSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
