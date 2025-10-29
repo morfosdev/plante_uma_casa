@@ -5757,32 +5757,9 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [(txt) => {
-  // Garante que seja texto
-  if (typeof txt !== "string") txt = String(txt ?? "");
-
-  // Remove tudo que não for número
-  let digits = txt.replace(/D/g, "");
-
-  // Limita a 8 dígitos (DDMMAAAA)
-  digits = digits.slice(0, 8);
-
-  // Aplica a formatação DD/MM/AAAA
-  let formatted = digits;
-  if (digits.length > 4) {
-    formatted = digits.replace(/^(d{2})(d{2})(d{0,4})$/, "!#!/!#!/$3");
-  } else if (digits.length > 2) {
-    formatted = digits.replace(/^(d{2})(d{0,2})$/, "!#!/!#!");
-  }
-
-  console.log("Digitado:", txt);
-  console.log("Formatado:", formatted);
-
-  // Atualiza o valor no Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
+          funcsArray: [
+(txt) => {
+  console.log("Valor recebido no input:", txt);
 }
 ],
 
@@ -13072,32 +13049,9 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [(txt) => {
-  // Garante que seja texto
-  if (typeof txt !== "string") txt = String(txt ?? "");
-
-  // Remove tudo que não for número
-  let digits = txt.replace(/D/g, "");
-
-  // Limita a 8 dígitos (DDMMAAAA)
-  digits = digits.slice(0, 8);
-
-  // Aplica a formatação DD/MM/AAAA
-  let formatted = digits;
-  if (digits.length > 4) {
-    formatted = digits.replace(/^(d{2})(d{2})(d{0,4})$/, "!#!/!#!/$3");
-  } else if (digits.length > 2) {
-    formatted = digits.replace(/^(d{2})(d{0,2})$/, "!#!/!#!");
-  }
-
-  console.log("Digitado:", txt);
-  console.log("Formatado:", formatted);
-
-  // Atualiza o valor no Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
+          funcsArray: [
+(txt) => {
+  console.log("Valor recebido no input:", txt);
 }
 ],
 
@@ -20364,32 +20318,9 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [(txt) => {
-  // Garante que seja texto
-  if (typeof txt !== "string") txt = String(txt ?? "");
-
-  // Remove tudo que não for número
-  let digits = txt.replace(/D/g, "");
-
-  // Limita a 8 dígitos (DDMMAAAA)
-  digits = digits.slice(0, 8);
-
-  // Aplica a formatação DD/MM/AAAA
-  let formatted = digits;
-  if (digits.length > 4) {
-    formatted = digits.replace(/^(d{2})(d{2})(d{0,4})$/, "!#!/!#!/$3");
-  } else if (digits.length > 2) {
-    formatted = digits.replace(/^(d{2})(d{0,2})$/, "!#!/!#!");
-  }
-
-  console.log("Digitado:", txt);
-  console.log("Formatado:", formatted);
-
-  // Atualiza o valor no Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
+          funcsArray: [
+(txt) => {
+  console.log("Valor recebido no input:", txt);
 }
 ],
 
@@ -27604,32 +27535,9 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [(txt) => {
-  // Garante que seja texto
-  if (typeof txt !== "string") txt = String(txt ?? "");
-
-  // Remove tudo que não for número
-  let digits = txt.replace(/D/g, "");
-
-  // Limita a 8 dígitos (DDMMAAAA)
-  digits = digits.slice(0, 8);
-
-  // Aplica a formatação DD/MM/AAAA
-  let formatted = digits;
-  if (digits.length > 4) {
-    formatted = digits.replace(/^(d{2})(d{2})(d{0,4})$/, "!#!/!#!/$3");
-  } else if (digits.length > 2) {
-    formatted = digits.replace(/^(d{2})(d{0,2})$/, "!#!/!#!");
-  }
-
-  console.log("Digitado:", txt);
-  console.log("Formatado:", formatted);
-
-  // Atualiza o valor no Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
+          funcsArray: [
+(txt) => {
+  console.log("Valor recebido no input:", txt);
 }
 ],
 
