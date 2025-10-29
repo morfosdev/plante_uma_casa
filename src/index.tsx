@@ -49990,7 +49990,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: "400px",
+	width: "100%",
 	height: "131px",
 	backgroundColor: "$var_all.colors.primary",		
 	alignItems: 'center',
