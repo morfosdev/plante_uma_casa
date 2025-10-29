@@ -1161,7 +1161,7 @@ const path1 = "all.toggles.box1";
           ],
 
           children: [
-            `Entrar c/ Google`
+            `Google`
           ],
 
           args,
@@ -50110,7 +50110,7 @@ async (...args) =>
           ],
 
           children: [
-            `Entrar c/ Google`
+            `Google`
           ],
 
           args,
