@@ -5755,11 +5755,34 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
+          funcsArray: [(value) => {
+  // Remove tudo que não for número
+  let cleaned = value.replace(/D/g, "");
+
+  // Limita a 8 caracteres (DDMMAAAA)
+  if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+
+  // Adiciona as barras conforme o usuário digita
+  let formatted = cleaned;
+  if (cleaned.length > 4) {
+    formatted = cleaned.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
+  } else if (cleaned.length > 2) {
+    formatted = cleaned.replace(/(d{2})(d{1,2})/, "!#!/!#!");
+  }
+
+  // Atualiza a variável com o valor formatado
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.iptChanges.startDate"],
+      value: [formatted],
+    },
+  });
+
+  // Retorna o valor formatado (caso o campo use retorno direto)
+  return formatted;
+}
+],
 
           args,
         }}/>, 
@@ -13047,11 +13070,34 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
+          funcsArray: [(value) => {
+  // Remove tudo que não for número
+  let cleaned = value.replace(/D/g, "");
+
+  // Limita a 8 caracteres (DDMMAAAA)
+  if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+
+  // Adiciona as barras conforme o usuário digita
+  let formatted = cleaned;
+  if (cleaned.length > 4) {
+    formatted = cleaned.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
+  } else if (cleaned.length > 2) {
+    formatted = cleaned.replace(/(d{2})(d{1,2})/, "!#!/!#!");
+  }
+
+  // Atualiza a variável com o valor formatado
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.iptChanges.startDate"],
+      value: [formatted],
+    },
+  });
+
+  // Retorna o valor formatado (caso o campo use retorno direto)
+  return formatted;
+}
+],
 
           args,
         }}/>, 
@@ -20316,11 +20362,34 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
+          funcsArray: [(value) => {
+  // Remove tudo que não for número
+  let cleaned = value.replace(/D/g, "");
+
+  // Limita a 8 caracteres (DDMMAAAA)
+  if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+
+  // Adiciona as barras conforme o usuário digita
+  let formatted = cleaned;
+  if (cleaned.length > 4) {
+    formatted = cleaned.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
+  } else if (cleaned.length > 2) {
+    formatted = cleaned.replace(/(d{2})(d{1,2})/, "!#!/!#!");
+  }
+
+  // Atualiza a variável com o valor formatado
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.iptChanges.startDate"],
+      value: [formatted],
+    },
+  });
+
+  // Retorna o valor formatado (caso o campo use retorno direto)
+  return formatted;
+}
+],
 
           args,
         }}/>, 
@@ -27533,11 +27602,34 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
+          funcsArray: [(value) => {
+  // Remove tudo que não for número
+  let cleaned = value.replace(/D/g, "");
+
+  // Limita a 8 caracteres (DDMMAAAA)
+  if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+
+  // Adiciona as barras conforme o usuário digita
+  let formatted = cleaned;
+  if (cleaned.length > 4) {
+    formatted = cleaned.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
+  } else if (cleaned.length > 2) {
+    formatted = cleaned.replace(/(d{2})(d{1,2})/, "!#!/!#!");
+  }
+
+  // Atualiza a variável com o valor formatado
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.iptChanges.startDate"],
+      value: [formatted],
+    },
+  });
+
+  // Retorna o valor formatado (caso o campo use retorno direto)
+  return formatted;
+}
+],
 
           args,
         }}/>, 
