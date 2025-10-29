@@ -33413,75 +33413,6 @@ height: 15,
             elementsProperties:['{}'],
 
             styles:[`{
-	flexDirection: 'row',
-	width: 300,
-	zIndex: 1,
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	backgroundColor: '#E8EDF5',
-	paddingHorizontal: 16,
-	paddingVertical: 8,
-	borderRadius: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("a11list");
-        }
-        ]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 14,
-fontWeight: '500',
-}`
-          ],
-
-          children: [
-            `Parceiros`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 15,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
 	backgroundColor: '#E8EDF5',
 	paddingHorizontal: 16,
 	paddingVertical: 8,
@@ -33516,10 +33447,6 @@ fontWeight: '500',
           args,
 
         }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
