@@ -1,1 +1,1 @@
-{"1761748363311":{"actionType":"saveAll","createdAt":"1761748363311","actionID":"1761748363311","userID":"#TEMP","path":"system.capsules.8abe2226-b89c-4398-b08f-50f59f28b837.capsUseCodeInfo.capsUseInputs.sss_custom_caps-0.capsIptTxtValue","oldValue":"\n","newValue":"\n(txt) => {\n  console.log(\"Valor recebido no input:\", txt);\n}\n"}}
+{"1761748465978":{"actionType":"saveAll","createdAt":"1761748465978","actionID":"1761748465978","userID":"#TEMP","path":"system.capsules.250e4027-14cd-488e-8aa6-36bb3f6c1b02.capsUseCodeInfo.capsUseConections","oldValue":"9","newValue":"8"}}

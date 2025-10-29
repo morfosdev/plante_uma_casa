@@ -3242,15 +3242,17 @@ paddingHorizontal: 16,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
+            styles:[`{ 
+	width: 400,
+	height: 450,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
+	alignItems: "center",
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
