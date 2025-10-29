@@ -4085,15 +4085,19 @@ backgroundColor: 'transparent',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
+            styles:[`{ 
+	width: 400,
+	height: 450,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
+	alignItems: "center",
+	justifyContent: "center",
+	padding: 25,
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
+}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -53478,7 +53482,6 @@ whereConds ??`
 
           args,
         }}/>, 
-        
 
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"a0login_old",
@@ -53812,39 +53815,6 @@ tools.setData({
             args,
           }}/>
         ],
-
-          functions:[()=>{}],
-
-          args,
-        }}/>, 
-
-        (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"'a0-tela-azul-clara'",
-
-          styles:[
-              {
-                backgroundColor: '#101',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                width: '100%',
-              }
-              ],
-
-          screenElements:[() => {
-                  const textStyle = {
-                    fontSize: 20,
-                    color: '#fff2',
-                    textAlign:'center',
-                    maxWidth: 200,
-                    // maxWidth: '200px'<= #ATTENTION: Native ERROR! No string!
-                  };
-
-                  return (
-                    <RN.Text style={textStyle}>
-                      {'Adicione Elementos nessa tela!'}
-                    </RN.Text>);
-                }],
 
           functions:[()=>{}],
 
