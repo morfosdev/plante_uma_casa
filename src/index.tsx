@@ -50046,6 +50046,39 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{ 
+	width: "400px",
+	height: "147px",
+	backgroundColor: "$var_all.colors.primary",		
+	alignItems: 'center',
+	justifyContent: 'center',
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 163,
+	height: 98,
+}],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
 	width: 10,
 	height: 10,
 	alignItems: "center",
