@@ -50224,16 +50224,11 @@ color: '#CCCCCC',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{
+            styles:[`{
 	backgroundColor: "$var_all.colors.primary",
-	paddingHorizontal: 35,
+	padding: 4,
 	height: 70,
+	alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
