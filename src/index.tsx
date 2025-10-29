@@ -50272,7 +50272,7 @@ color: '#CCCCCC',
             args,
           }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{ padding: 20 }`],
+            styles: [`{ padding: 20, alignItems: 'center', }`],
             arrProps: [],
             arrItems: [
         
@@ -50894,6 +50894,24 @@ color: '#555555',
 
             args,
           }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
         , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -50916,24 +50934,6 @@ color: '#555555',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-		color: 'red',
-}`
-          ],
-
-          children: [
-            `$var_sc.C2.validationMessage`
-          ],
-
-          args,
-
-        }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
