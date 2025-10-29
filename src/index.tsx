@@ -49984,6 +49984,10 @@ padding: 18,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	alignItems: "center",
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
