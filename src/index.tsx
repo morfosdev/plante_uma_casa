@@ -34288,16 +34288,11 @@ async (...args) =>
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.b3.profile`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -34403,7 +34398,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL DO ADMINISTRADOR`
+            `PERFIL`
           ],
 
           args,
@@ -38930,16 +38925,11 @@ async (...args) =>
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.b3.profile`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -39045,7 +39035,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL DO ADMINISTRADOR`
+            `PERFIL`
           ],
 
           args,
@@ -45272,16 +45262,11 @@ async (...args) =>
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
+          keyPath: [`all.toggles.b3.profile`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -45387,7 +45372,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL DO ADMINISTRADOR`
+            `PERFIL`
           ],
 
           args,
