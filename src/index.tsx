@@ -34316,11 +34316,6 @@ height: 15,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B6.item`],
-          value: [`$arg_item`]
-        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b6list");
@@ -43269,8 +43264,7 @@ async (...args) =>
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [`lots`],
             arrFuncs: [async (...args) =>
@@ -43278,16 +43272,7 @@ async (...args) =>
           keyPath: [`sc.b6.list`],
           value: [`$arg_callback`]
         }})],
-        }}), async (...args) =>
- functions.firebase.where({ args, pass:{
-
-  arrRefStrings: [`lots`],
- arrWhere: [(...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [`condId`],
-        }})],
- arrFuncs: [() => {}],
- }})]
+        }})]
  , trigger: 'on init'
 }})],
 
