@@ -50035,6 +50035,7 @@ async (...args) =>
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -50069,7 +50070,22 @@ async (...args) =>
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
