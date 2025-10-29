@@ -49974,15 +49974,14 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
-	width: "80%",
-	maxWidth: 280,
-	minHeight: 150,
+            styles:[`{ 
+	width: "100%",
+	maxWidth: 358,
+	height: 400,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
-	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
+	alignItems: "center",
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -49992,7 +49991,7 @@ async (...args) =>
 
             styles:[`{ 
 	width: "400px",
-	height: "147px",
+	height: "131px",
 	backgroundColor: "$var_all.colors.primary",		
 	alignItems: 'center',
 	justifyContent: 'center',
