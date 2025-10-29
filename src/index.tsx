@@ -50024,6 +50024,7 @@ async (...args) =>
         `{ width: "100%", height: "100%" }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -50088,6 +50089,555 @@ async (...args) =>
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	padding: 0
+}`, `{ 
+	width: 400,
+	height: 450,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	padding: 25,
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: "400px",
+	height: "147px",
+	backgroundColor: "$var_all.colors.primary",		
+	alignItems: 'center',
+	justifyContent: 'center',
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 163,
+	height: 98,
+}],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 400,
+	height: 303,
+	backgroundColor: "#FFF",
+	alignItems: "center",
+	paddingHorizontal: 25,
+	paddingVertical: 30,
+	borderBottomLeftRadius: 20,
+  borderBottomRightRadius: 20,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 14,
+	fontWeight: '500',
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Login`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 5,
+	borderBottomColor: "#CCCCCC",
+	borderBottomWidth: 1,
+	width: '100%',
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userEmail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 14,
+	fontWeight: '500',
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Senha`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+	width: '105%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [`{ 
+	padding: 5,
+	borderBottomColor: "#CCCCCC",
+	borderBottomWidth: 1,
+	width: '100%',
+}`],
+
+          path: [`sc.A0.forms.iptsChanges.userPassword`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
+}],
+
+          args,
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	right: '30px',
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={16}
+    height={12}
+    fill="red"
+    viewBox="0 0 16 12"
+    {...props}
+  >
+    <Path
+      fill="#555"
+      d="M15.328 5.758c-.023-.05-.565-1.254-1.771-2.46C11.95 1.691 9.92.842 7.686.842c-2.234 0-4.264.849-5.871 2.456C.609 4.504.064 5.71.044 5.758a.512.512 0 0 0 0 .417c.022.05.565 1.253 1.77 2.46 1.608 1.606 3.638 2.455 5.872 2.455s4.264-.85 5.87-2.456c1.207-1.206 1.75-2.409 1.772-2.46a.513.513 0 0 0 0-.416Zm-7.642 4.307c-1.972 0-3.694-.717-5.12-2.13a8.551 8.551 0 0 1-1.478-1.97 8.538 8.538 0 0 1 1.478-1.969c1.426-1.413 3.148-2.13 5.12-2.13 1.971 0 3.694.717 5.12 2.13a8.548 8.548 0 0 1 1.48 1.97c-.462.862-2.473 4.099-6.6 4.099Zm0-7.174a3.075 3.075 0 1 0 0 6.15 3.075 3.075 0 0 0 0-6.15Zm0 5.124a2.05 2.05 0 1 1 0-4.099 2.05 2.05 0 0 1 0 4.1Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.3277 5.75824C15.3052 5.70764 14.7627 4.50412 13.5566 3.29804C11.9496 1.69099 9.91982 0.841675 7.68572 0.841675C5.45162 0.841675 3.42183 1.69099 1.81479 3.29804C0.608708 4.50412 0.063633 5.70956 0.0437772 5.75824C0.0146423 5.82377 -0.000411987 5.89469 -0.000411987 5.96641C-0.000411987 6.03812 0.0146423 6.10904 0.0437772 6.17457C0.0661951 6.22517 0.608708 7.42805 1.81479 8.63414C3.42183 10.2405 5.45162 11.0899 7.68572 11.0899C9.91982 11.0899 11.9496 10.2405 13.5566 8.63414C14.7627 7.42805 15.3052 6.22517 15.3277 6.17457C15.3568 6.10904 15.3719 6.03812 15.3719 5.96641C15.3719 5.89469 15.3568 5.82377 15.3277 5.75824ZM7.68572 10.065C5.71423 10.065 3.99189 9.34831 2.56611 7.93534C1.98112 7.35354 1.48341 6.69014 1.08845 5.96577C1.48325 5.24129 1.98098 4.57787 2.56611 3.99619C3.99189 2.58323 5.71423 1.86649 7.68572 1.86649C9.65721 1.86649 11.3795 2.58323 12.8053 3.99619C13.3915 4.57778 13.8903 5.24119 14.2862 5.96577C13.8244 6.82789 11.8125 10.065 7.68572 10.065ZM7.68572 2.89131C7.07765 2.89131 6.48324 3.07163 5.97764 3.40945C5.47205 3.74728 5.07799 4.22744 4.84529 4.78922C4.6126 5.35101 4.55171 5.96918 4.67034 6.56556C4.78897 7.16195 5.08178 7.70976 5.51175 8.13973C5.94172 8.56971 6.48954 8.86252 7.08592 8.98115C7.68231 9.09978 8.30048 9.03889 8.86226 8.80619C9.42405 8.57349 9.90421 8.17943 10.242 7.67384C10.5799 7.16825 10.7602 6.57384 10.7602 5.96577C10.7593 5.15063 10.4351 4.36912 9.85875 3.79273C9.28236 3.21635 8.50086 2.89216 7.68572 2.89131ZM7.68572 8.0154C7.28034 8.0154 6.88406 7.89519 6.547 7.66998C6.20994 7.44476 5.94723 7.12465 5.7921 6.75013C5.63697 6.37561 5.59638 5.96349 5.67547 5.5659C5.75455 5.16831 5.94976 4.8031 6.23641 4.51645C6.52305 4.22981 6.88826 4.0346 7.28586 3.95551C7.68345 3.87643 8.09556 3.91702 8.47008 4.07215C8.8446 4.22728 9.16471 4.48999 9.38993 4.82705C9.61515 5.16411 9.73536 5.56039 9.73536 5.96577C9.73536 6.50936 9.51941 7.0307 9.13503 7.41508C8.75065 7.79946 8.22932 8.0154 7.68572 8.0154Z" fill="#555555"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A0.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: "red"
+}`
+          ],
+
+          children: [
+            `$var_sc.A0.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 30,
+	height: 30,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 130,
+	height: 36,
+	borderRadius: 10,
+	paddingHorizontal: 30,
+	paddingVertical: 8,
+	backgroundColor: '#315E2D',
+	alignItems: 'center',
+	justifyContent: 'center',
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  console.log('Login Firebase c/ Email e Senha');
+
+  const rawEmail = tools.getCtData('sc.A0.forms.iptsChanges.userEmail');
+  const rawSenha = tools.getCtData('sc.A0.forms.iptsChanges.userPassword');
+  const email = (rawEmail ?? '').trim();
+  const senha = rawSenha ?? '';
+
+  if (!email || !senha) {
+    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+    tools.setData({
+      path: 'sc.A0.forms.msgs.msg1',
+      value: 'Informe e-mail e senha.',
+    });
+    return;
+  }
+
+  // Auth
+  const { getAuth, signInWithEmailAndPassword } = await import('firebase/auth');
+
+  // Garantir app inicializado
+  let fbInit = tools.getCtData('all.temp.fireInit');
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import('firebase/app');
+    const cfg = tools.getCtData('all.temp.fireConfig'); // opcional: pegue sua config do CT
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: 'all.temp.fireInit', value: fbInit });
+  }
+
+  const auth = getAuth(fbInit);
+  console.log('Login Firebase c/ Email e Senha → auth ok');
+
+  try {
+    const cred = await signInWithEmailAndPassword(auth, email, senha);
+    console.log('Usuário logado:', cred.user.uid);
+
+    // Firestore
+    const { getFirestore, doc, getDoc } = await import('firebase/firestore');
+    const db = getFirestore(fbInit);
+
+    const snap = await getDoc(doc(db, 'users', cred.user.uid));
+    if (!snap.exists()) {
+      // Opcional: crie doc padrão em vez de lançar erro
+      // import { setDoc } from "firebase/firestore"; await setDoc(doc(db,"users", cred.user.uid), { typeAccount:"app", userAuthID: cred.user.uid, userEmail: email });
+      throw new Error('PERFIL_INEXISTENTE');
+    }
+
+    const data = snap.data();
+
+    console.log('Dados do usuário:', data);
+
+    // Guarda no seu state/context
+    tools.setData({
+      path: 'all.authUser',
+      value: { uid: cred.user.uid, email: cred.user.email, ...data },
+    });
+
+    // Roteamento por tipo de conta
+    const typeAccount = data?.typeAccount; // "adm" | "app" | "partner"
+    if (typeAccount === 'adm') tools.goTo('a4list');
+    else if (typeAccount === 'app') tools.goTo('b1list');
+    else if (typeAccount === 'partner') tools.goTo('b4list');
+    else {
+      // fallback
+      tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+      tools.setData({
+        path: 'sc.A0.forms.msgs.msg1',
+        value:
+          'O email ' +
+          cred.user.email +
+          ' não tem permissão de acesso. Contate o Administrador.',
+      });
+    }
+
+    return cred.user;
+  } catch (err: any) {
+    console.error('Erro no login:', err);
+
+    const code = err?.code || err?.message || '';
+    let msg = 'Email ou Senha inválidos.';
+
+    if (code.includes('auth/invalid-email')) msg = 'E-mail inválido.';
+    else if (
+      code.includes('auth/wrong-password') ||
+      code.includes('auth/user-not-found')
+    )
+      msg = 'Usuário ou senha incorretos.';
+    else if (code.includes('auth/too-many-requests'))
+      msg = 'Muitas tentativas. Aguarde alguns minutos.';
+    else if (code.includes('PERFIL_INEXISTENTE'))
+      msg = 'Perfil do usuário não encontrado. Contate o suporte.';
+
+    tools.setData({ path: 'sc.A0.forms.showErr', value: true });
+    tools.setData({ path: 'sc.A0.forms.msgs.msg1', value: msg });
+    return;
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	color: "#FFF",
+	fontSize: 15,
+	fontWeight: '500',
+}`
+          ],
+
+          children: [
+            `Confirmar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 30,
+	height: 30,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "auto" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a0bforgotpass");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '#555555',
+	fontSize: 14,
+	fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `Esqueceu sua senha?`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
