@@ -34316,16 +34316,16 @@ height: 15,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B6.item`],
+          value: [`$arg_item`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b6list");
         }
-        , async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B6.item`],
-          value: [`$arg_item`]
-        }})]
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
