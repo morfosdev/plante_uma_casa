@@ -3549,14 +3549,10 @@ color: '#fff',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: 'transparent',
+}
+`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -3573,11 +3569,15 @@ color: '#fff',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+	fontSize: 14,
+	fontWeight: '400',
+	color: '#555555',
+}`
           ],
 
           children: [
-            `Voltar a tela login`
+            `Voltar ao login`
           ],
 
           args,
