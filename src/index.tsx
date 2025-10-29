@@ -9556,11 +9556,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.userEmail`],
+          path: [`sc.A11.forms.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.userEmail`],
+          keyPath: [`sc.A11.forms.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -9609,11 +9609,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerActivity`],
+          path: [`sc.A11.forms.editChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerActivity`],
+          keyPath: [`sc.A11.forms.editChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -16819,11 +16819,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.userEmail`],
+          path: [`sc.A11.forms.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.userEmail`],
+          keyPath: [`sc.A11.forms.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -16872,11 +16872,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerActivity`],
+          path: [`sc.A11.forms.editChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerActivity`],
+          keyPath: [`sc.A11.forms.editChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -24059,11 +24059,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.userEmail`],
+          path: [`sc.A11.forms.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.userEmail`],
+          keyPath: [`sc.A11.forms.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -24112,11 +24112,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerActivity`],
+          path: [`sc.A11.forms.editChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerActivity`],
+          keyPath: [`sc.A11.forms.editChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
@@ -31247,11 +31247,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.userEmail`],
+          path: [`sc.A11.forms.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.userEmail`],
+          keyPath: [`sc.A11.forms.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -31300,11 +31300,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.partnerActivity`],
+          path: [`sc.A11.forms.editChanges.partnerActivity`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.partnerActivity`],
+          keyPath: [`sc.A11.forms.editChanges.partnerActivity`],
           value: [`$arg_callback`]
         }})],
 
