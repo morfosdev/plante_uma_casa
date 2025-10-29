@@ -9701,6 +9701,22 @@ paddingHorizontal: 4,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.A11.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -16964,6 +16980,22 @@ paddingHorizontal: 4,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.A11.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -24204,6 +24236,22 @@ paddingHorizontal: 4,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.A11.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -31392,6 +31440,22 @@ paddingHorizontal: 4,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.A11.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
