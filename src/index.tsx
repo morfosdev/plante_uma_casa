@@ -4106,7 +4106,10 @@ backgroundColor: 'transparent',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 20,
+fontWeight: '700',
+}`
           ],
 
           children: [
