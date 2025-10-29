@@ -50023,8 +50023,8 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 20,
+	height: 20,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
@@ -50035,7 +50035,40 @@ async (...args) =>
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`
+          ],
+
+          args,
+
+        }}/>, 
         
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -50070,22 +50103,7 @@ async (...args) =>
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`
-          ],
-
-          args,
-
-        }}/>],
+        ],
 
             args,
           }}/>
