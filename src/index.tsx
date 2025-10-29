@@ -8341,7 +8341,10 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-await updateDoc(docRef, { docId: docRef.id });
+await updateDoc(docRef, { 
+      docId: docRef.id,
+      condoId: docRef.id 
+    });
 
     tools.functions.setVar({
       args: "",
@@ -15686,7 +15689,10 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-await updateDoc(docRef, { docId: docRef.id });
+await updateDoc(docRef, { 
+      docId: docRef.id,
+      condoId: docRef.id 
+    });
 
     tools.functions.setVar({
       args: "",
@@ -23008,7 +23014,10 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-await updateDoc(docRef, { docId: docRef.id });
+await updateDoc(docRef, { 
+      docId: docRef.id,
+      condoId: docRef.id 
+    });
 
     tools.functions.setVar({
       args: "",
@@ -30278,7 +30287,10 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-await updateDoc(docRef, { docId: docRef.id });
+await updateDoc(docRef, { 
+      docId: docRef.id,
+      condoId: docRef.id 
+    });
 
     tools.functions.setVar({
       args: "",
