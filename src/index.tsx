@@ -5761,26 +5761,10 @@ paddingHorizontal: 4,
           keyPath: [`sc.a1.iptChanges.startDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
-  // Remove tudo que não for número
-  let v = txt.replace(/D/g, "");
-
-  // Aplica a formatação DD/MM/AAAA
-  if (v.length > 2 && v.length <= 4) {
-    v = v.replace(/(d{2})(d{1,2})/, "!#!/!#!");
-  } else if (v.length > 4) {
-    v = v.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
-  }
-
-  // Limita a 10 caracteres no máximo
-  v = v.substring(0, 10);
-
-  // Atualiza o valor formatado no campo
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: v
-  });
-}
-],
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.a1.iptChanges.startDate", value: txt });
+}],
 
           args,
         }}/>, 
@@ -13074,26 +13058,10 @@ paddingHorizontal: 4,
           keyPath: [`sc.a1.iptChanges.startDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
-  // Remove tudo que não for número
-  let v = txt.replace(/D/g, "");
-
-  // Aplica a formatação DD/MM/AAAA
-  if (v.length > 2 && v.length <= 4) {
-    v = v.replace(/(d{2})(d{1,2})/, "!#!/!#!");
-  } else if (v.length > 4) {
-    v = v.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
-  }
-
-  // Limita a 10 caracteres no máximo
-  v = v.substring(0, 10);
-
-  // Atualiza o valor formatado no campo
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: v
-  });
-}
-],
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.a1.iptChanges.startDate", value: txt });
+}],
 
           args,
         }}/>, 
@@ -20364,26 +20332,10 @@ paddingHorizontal: 4,
           keyPath: [`sc.a1.iptChanges.startDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
-  // Remove tudo que não for número
-  let v = txt.replace(/D/g, "");
-
-  // Aplica a formatação DD/MM/AAAA
-  if (v.length > 2 && v.length <= 4) {
-    v = v.replace(/(d{2})(d{1,2})/, "!#!/!#!");
-  } else if (v.length > 4) {
-    v = v.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
-  }
-
-  // Limita a 10 caracteres no máximo
-  v = v.substring(0, 10);
-
-  // Atualiza o valor formatado no campo
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: v
-  });
-}
-],
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.a1.iptChanges.startDate", value: txt });
+}],
 
           args,
         }}/>, 
@@ -27602,26 +27554,10 @@ paddingHorizontal: 4,
           keyPath: [`sc.a1.iptChanges.startDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
-  // Remove tudo que não for número
-  let v = txt.replace(/D/g, "");
-
-  // Aplica a formatação DD/MM/AAAA
-  if (v.length > 2 && v.length <= 4) {
-    v = v.replace(/(d{2})(d{1,2})/, "!#!/!#!");
-  } else if (v.length > 4) {
-    v = v.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
-  }
-
-  // Limita a 10 caracteres no máximo
-  v = v.substring(0, 10);
-
-  // Atualiza o valor formatado no campo
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: v
-  });
-}
-],
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.a1.iptChanges.startDate", value: txt });
+}],
 
           args,
         }}/>, 
