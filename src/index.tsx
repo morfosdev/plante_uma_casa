@@ -50617,14 +50617,14 @@ color: '#555555',
           ],
 
           children: [
-            `Telefone`
+            `Endereço`
           ],
 
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Ex: (00) 00000-0000',
+placeholder: 'Pesquisar endereço',
 }`],
 
           stylesArray: [`{ 
@@ -50635,11 +50635,11 @@ placeholder: 'Ex: (00) 00000-0000',
 	width: '100%',
 }`],
 
-          path: [`sc.C2.forms.iptsChanges.userPhone`],
+          path: [`sc.C2.forms.iptsChanges.userAddress`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.userPhone`],
+          keyPath: [`sc.C2.forms.iptsChanges.userAddress`],
           value: [`$arg_callback`]
         }})],
 
