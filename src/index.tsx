@@ -3296,16 +3296,34 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{ placeholder: "Informe seu e-mail" }`],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `E-mail`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{ placeholder: "Digite seu e-mail" }`],
+
+          stylesArray: [`{
+	padding: 5,
+	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
+	width: '100%',
 }`],
 
           path: [`sc.A0B.forms.iptsChanges.userEmail`],
