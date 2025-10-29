@@ -50303,7 +50303,8 @@ height: 5,
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -50322,7 +50323,44 @@ fontWeight: '700',
 
           args,
 
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `Nome Completo`
+          ],
+
+          args,
+
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
