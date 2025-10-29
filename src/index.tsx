@@ -49988,6 +49988,7 @@ padding: 18,
 }`],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -50183,7 +50184,26 @@ color: '#fff',
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '400',
+color: '#CCCCCC',
+}`
+          ],
+
+          children: [
+            `Ver. app 0.1.0`
+          ],
+
+          args,
+
+        }}/>],
 
           functions:[()=>{}],
 
