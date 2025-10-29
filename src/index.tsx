@@ -50268,16 +50268,13 @@ color: '#CCCCCC',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+padding: 30,
+backgroundColor: '#fff',
+}`],
 
             functions:[()=>{}],            childrenItems:[
+        
 
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
@@ -50295,7 +50292,26 @@ color: '#CCCCCC',
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
 
       args,
-    }}/>],
+    }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: '#555555',
+fontSize: 12,
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `pauloantonio@gmail.com`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
