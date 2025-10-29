@@ -50536,14 +50536,14 @@ color: '#555555',
           ],
 
           children: [
-            `RG`
+            `Telefone`
           ],
 
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Ex: 00.000.000-00',
+placeholder: 'Ex: (00) 00000-0000',
 }`],
 
           stylesArray: [`{ 
@@ -50553,11 +50553,11 @@ placeholder: 'Ex: 00.000.000-00',
 	width: '100%',
 }`],
 
-          path: [`sc.C2.forms.iptsChanges.userRg`],
+          path: [`sc.C2.forms.iptsChanges.userPhone`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.userRg`],
+          keyPath: [`sc.C2.forms.iptsChanges.userPhone`],
           value: [`$arg_callback`]
         }})],
 
