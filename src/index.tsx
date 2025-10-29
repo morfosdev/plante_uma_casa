@@ -9502,11 +9502,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.userName`],
+          path: [`sc.A11.forms.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.userName`],
+          keyPath: [`sc.A11.forms.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -9717,28 +9717,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.a11b.editChanges.docId`],
-            arrPathData: [`sc.a11b.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
     { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
@@ -16786,11 +16765,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.userName`],
+          path: [`sc.A11.forms.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.userName`],
+          keyPath: [`sc.A11.forms.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -17001,28 +16980,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.a11b.editChanges.docId`],
-            arrPathData: [`sc.a11b.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
     { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
@@ -24047,11 +24005,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.userName`],
+          path: [`sc.A11.forms.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.userName`],
+          keyPath: [`sc.A11.forms.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -24262,28 +24220,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.a11b.editChanges.docId`],
-            arrPathData: [`sc.a11b.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
     { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
@@ -31256,11 +31193,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.a11b.editChanges.userName`],
+          path: [`sc.A11.forms.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges.userName`],
+          keyPath: [`sc.A11.forms.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -31471,28 +31408,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.a11b.editChanges.docId`],
-            arrPathData: [`sc.a11b.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
     { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
@@ -42296,7 +42212,7 @@ async (...args) =>
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("b6list");
+          return tools.goTo("a4list");
         }
         ]
  , trigger: 'on press'
