@@ -50452,7 +50452,9 @@ color: '#555555',
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+placeholder: 'Ex: 00.000.000-00',
+}`],
 
           stylesArray: [`{ 
 	padding: 5,
