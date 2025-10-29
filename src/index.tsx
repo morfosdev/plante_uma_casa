@@ -5910,32 +5910,29 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
-  // Garantir que txt seja string
+  // Garante que txt seja string
   txt = txt ? String(txt) : "";
 
-  // Extrai apenas números
-  let digits = txt.replace(/D/g, "").slice(0, 8);
+  // Remove tudo que não for número
+  let digits = txt.replace(/D/g, "").slice(0, 8); // só 8 dígitos
 
-  // Formata como DD/MM/AAAA
+  // Formata automaticamente DD/MM/AAAA
   let formatted = "";
-  if (digits.length > 4) {
-    formatted = digits.replace(/^(d{2})(d{2})(d{0,4})$/, "!#!/!#!/$3");
-  } else if (digits.length > 2) {
-    formatted = digits.replace(/^(d{2})(d{0,2})$/, "!#!/!#!");
+  if (digits.length <= 2) {
+    formatted = digits; // só dia
+  } else if (digits.length <= 4) {
+    formatted = digits.replace(/^(d{2})(d{1,2})$/, "!#!/!#!"); // dia/mes
   } else {
-    formatted = digits;
+    formatted = digits.replace(/^(d{2})(d{2})(d{1,4})$/, "!#!/!#!/$3"); // dia/mes/ano
   }
 
-  console.log("Digitado:", txt);
-  console.log("Formatado:", formatted);
-
-  // Atualiza a variável no Flaxboll
+  // Atualiza o valor no Flaxboll
   tools.setData({
     path: "sc.a1.iptChanges.startDate",
     value: formatted,
   });
 
-  // Retorna o valor formatado para que o input mostre
+  // Retorna o valor formatado para renderizar no input
   return formatted;
 }
 ],
@@ -13227,32 +13224,29 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
-  // Garantir que txt seja string
+  // Garante que txt seja string
   txt = txt ? String(txt) : "";
 
-  // Extrai apenas números
-  let digits = txt.replace(/D/g, "").slice(0, 8);
+  // Remove tudo que não for número
+  let digits = txt.replace(/D/g, "").slice(0, 8); // só 8 dígitos
 
-  // Formata como DD/MM/AAAA
+  // Formata automaticamente DD/MM/AAAA
   let formatted = "";
-  if (digits.length > 4) {
-    formatted = digits.replace(/^(d{2})(d{2})(d{0,4})$/, "!#!/!#!/$3");
-  } else if (digits.length > 2) {
-    formatted = digits.replace(/^(d{2})(d{0,2})$/, "!#!/!#!");
+  if (digits.length <= 2) {
+    formatted = digits; // só dia
+  } else if (digits.length <= 4) {
+    formatted = digits.replace(/^(d{2})(d{1,2})$/, "!#!/!#!"); // dia/mes
   } else {
-    formatted = digits;
+    formatted = digits.replace(/^(d{2})(d{2})(d{1,4})$/, "!#!/!#!/$3"); // dia/mes/ano
   }
 
-  console.log("Digitado:", txt);
-  console.log("Formatado:", formatted);
-
-  // Atualiza a variável no Flaxboll
+  // Atualiza o valor no Flaxboll
   tools.setData({
     path: "sc.a1.iptChanges.startDate",
     value: formatted,
   });
 
-  // Retorna o valor formatado para que o input mostre
+  // Retorna o valor formatado para renderizar no input
   return formatted;
 }
 ],
@@ -20521,32 +20515,29 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
-  // Garantir que txt seja string
+  // Garante que txt seja string
   txt = txt ? String(txt) : "";
 
-  // Extrai apenas números
-  let digits = txt.replace(/D/g, "").slice(0, 8);
+  // Remove tudo que não for número
+  let digits = txt.replace(/D/g, "").slice(0, 8); // só 8 dígitos
 
-  // Formata como DD/MM/AAAA
+  // Formata automaticamente DD/MM/AAAA
   let formatted = "";
-  if (digits.length > 4) {
-    formatted = digits.replace(/^(d{2})(d{2})(d{0,4})$/, "!#!/!#!/$3");
-  } else if (digits.length > 2) {
-    formatted = digits.replace(/^(d{2})(d{0,2})$/, "!#!/!#!");
+  if (digits.length <= 2) {
+    formatted = digits; // só dia
+  } else if (digits.length <= 4) {
+    formatted = digits.replace(/^(d{2})(d{1,2})$/, "!#!/!#!"); // dia/mes
   } else {
-    formatted = digits;
+    formatted = digits.replace(/^(d{2})(d{2})(d{1,4})$/, "!#!/!#!/$3"); // dia/mes/ano
   }
 
-  console.log("Digitado:", txt);
-  console.log("Formatado:", formatted);
-
-  // Atualiza a variável no Flaxboll
+  // Atualiza o valor no Flaxboll
   tools.setData({
     path: "sc.a1.iptChanges.startDate",
     value: formatted,
   });
 
-  // Retorna o valor formatado para que o input mostre
+  // Retorna o valor formatado para renderizar no input
   return formatted;
 }
 ],
@@ -27763,32 +27754,29 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
-  // Garantir que txt seja string
+  // Garante que txt seja string
   txt = txt ? String(txt) : "";
 
-  // Extrai apenas números
-  let digits = txt.replace(/D/g, "").slice(0, 8);
+  // Remove tudo que não for número
+  let digits = txt.replace(/D/g, "").slice(0, 8); // só 8 dígitos
 
-  // Formata como DD/MM/AAAA
+  // Formata automaticamente DD/MM/AAAA
   let formatted = "";
-  if (digits.length > 4) {
-    formatted = digits.replace(/^(d{2})(d{2})(d{0,4})$/, "!#!/!#!/$3");
-  } else if (digits.length > 2) {
-    formatted = digits.replace(/^(d{2})(d{0,2})$/, "!#!/!#!");
+  if (digits.length <= 2) {
+    formatted = digits; // só dia
+  } else if (digits.length <= 4) {
+    formatted = digits.replace(/^(d{2})(d{1,2})$/, "!#!/!#!"); // dia/mes
   } else {
-    formatted = digits;
+    formatted = digits.replace(/^(d{2})(d{2})(d{1,4})$/, "!#!/!#!/$3"); // dia/mes/ano
   }
 
-  console.log("Digitado:", txt);
-  console.log("Formatado:", formatted);
-
-  // Atualiza a variável no Flaxboll
+  // Atualiza o valor no Flaxboll
   tools.setData({
     path: "sc.a1.iptChanges.startDate",
     value: formatted,
   });
 
-  // Retorna o valor formatado para que o input mostre
+  // Retorna o valor formatado para renderizar no input
   return formatted;
 }
 ],
