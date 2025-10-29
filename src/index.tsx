@@ -50184,6 +50184,24 @@ color: '#fff',
 
             args,
           }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
         , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
