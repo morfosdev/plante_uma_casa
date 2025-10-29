@@ -33329,6 +33329,17 @@ height: 15,
             elementsProperties:['{}'],
 
             styles:[`{
+	flexDirection: 'row',
+	width: 300,
+	zIndex: 1,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 	backgroundColor: '#E8EDF5',
 	paddingHorizontal: 16,
 	paddingVertical: 8,
@@ -33363,6 +33374,10 @@ fontWeight: '500',
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
