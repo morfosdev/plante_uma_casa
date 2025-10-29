@@ -3284,8 +3284,8 @@ fontWeight: '700',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 30,
+	height: 30,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
@@ -3360,8 +3360,8 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 30,
+	height: 30,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
@@ -3445,8 +3445,8 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 30,
+	height: 30,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
@@ -3544,7 +3544,6 @@ color: '#fff',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -3583,23 +3582,6 @@ backgroundColor: 'transparent',
           args,
 
         }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
