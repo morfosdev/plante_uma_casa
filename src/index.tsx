@@ -50048,6 +50048,7 @@ padding: 18,
 fontSize: 12,
 fontWeight: '400',
 color: '#555555',
+width: '75%',
 }`
           ],
 
