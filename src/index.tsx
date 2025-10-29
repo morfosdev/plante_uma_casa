@@ -26798,7 +26798,7 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a11b.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges`],
           value: [`$arg_item`]
         }})]
  , trigger: 'on press'
