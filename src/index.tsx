@@ -33071,7 +33071,11 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "100%", height: "100%" }`],
+            styles:[`{
+	flex: 1,
+	height: "100%",
+	backgroundColor: '#f5f5f5',
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
