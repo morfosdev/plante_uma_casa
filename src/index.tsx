@@ -34310,7 +34310,6 @@ color: '#555555',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -34353,76 +34352,6 @@ fontWeight: '700',
 
           children: [
             `$var_all.authUser.userEmail`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	width: "90%",
-	maxWidth: 280,
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_all.authUser.email`
           ],
 
           args,
@@ -38808,7 +38737,6 @@ color: '#555555',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -38851,76 +38779,6 @@ fontWeight: '700',
 
           children: [
             `$var_all.authUser.userEmail`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	width: "90%",
-	maxWidth: 280,
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_all.authUser.email`
           ],
 
           args,
@@ -45006,7 +44864,6 @@ color: '#555555',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -45049,76 +44906,6 @@ fontWeight: '700',
 
           children: [
             `$var_all.authUser.userEmail`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	width: "90%",
-	maxWidth: 280,
-	minHeight: 150,
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	padding: 10
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_all.authUser.email`
           ],
 
           args,
