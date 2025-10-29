@@ -50271,6 +50271,8 @@ color: '#CCCCCC',
             styles:[`{
 padding: 30,
 backgroundColor: '#fff',
+borderRadius: 20,
+alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
