@@ -50765,7 +50765,11 @@ marginRight: 5
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '700',
+color: '#555555',
+}`
           ],
 
           children: [
@@ -50868,7 +50872,11 @@ marginRight: 5
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 10,
+fontWeight: '700',
+color: '#555555',
+}`
           ],
 
           children: [
