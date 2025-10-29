@@ -5756,31 +5756,57 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(value) => {
-  // Garantir que o valor é string
-  if (!value) value = "";
+  try {
+    // Garante string
+    value = value ?? "";
+    value = String(value);
 
-  // Remove tudo que não for número
-  let cleaned = value.replace(/D/g, "");
+    // DEBUG: ver o que chega
+    console.log("[dateMask] raw value:", value);
 
-  // Limita a 8 dígitos (DDMMAAAA)
-  if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+    // Remove tudo que não for dígito
+    let cleaned = value.replace(/D/g, "");
 
-  // Adiciona as barras conforme o usuário digita
-  let formatted = cleaned;
-  if (cleaned.length > 4) {
-    formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
-  } else if (cleaned.length > 2) {
-    formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
+    // Limita a 8 dígitos (DDMMAAAA)
+    if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+
+    // Formata dinamicamente DD/MM/AAAA
+    let formatted = cleaned;
+    if (cleaned.length > 4) {
+      formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
+    } else if (cleaned.length > 2) {
+      formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
+    }
+
+    // DEBUG: mostrar o resultado antes de salvar
+    console.log("[dateMask] formatted:", formatted);
+
+    // SALVAR no Flaxboll - duas opções: use a que seu projeto aceita
+    // 1) Recomendada: tools.setData (salva como string simples)
+    if (typeof tools.setData === "function") {
+      tools.setData({
+        path: "sc.a1.iptChanges.startDate",
+        value: formatted
+      });
+    } else {
+      // 2) Fallback: tools.functions.setVar (alguns projetos usam esse)
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["sc.a1.iptChanges.startDate"],
+          // se seu projeto espera array, descomente a linha abaixo e comente a outra
+          // value: [formatted]
+          value: formatted
+        }
+      });
+    }
+
+    // Retorna o formatado (alguns inputs usam o retorno para mostrar o novo texto)
+    return formatted;
+  } catch (err) {
+    console.error("[dateMask] erro:", err);
+    return value;
   }
-
-  // Atualiza a variável no contexto Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
-
-  // Retorna o valor formatado (usado pelo input)
-  return formatted;
 }
 ],
 
@@ -13071,31 +13097,57 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(value) => {
-  // Garantir que o valor é string
-  if (!value) value = "";
+  try {
+    // Garante string
+    value = value ?? "";
+    value = String(value);
 
-  // Remove tudo que não for número
-  let cleaned = value.replace(/D/g, "");
+    // DEBUG: ver o que chega
+    console.log("[dateMask] raw value:", value);
 
-  // Limita a 8 dígitos (DDMMAAAA)
-  if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+    // Remove tudo que não for dígito
+    let cleaned = value.replace(/D/g, "");
 
-  // Adiciona as barras conforme o usuário digita
-  let formatted = cleaned;
-  if (cleaned.length > 4) {
-    formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
-  } else if (cleaned.length > 2) {
-    formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
+    // Limita a 8 dígitos (DDMMAAAA)
+    if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+
+    // Formata dinamicamente DD/MM/AAAA
+    let formatted = cleaned;
+    if (cleaned.length > 4) {
+      formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
+    } else if (cleaned.length > 2) {
+      formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
+    }
+
+    // DEBUG: mostrar o resultado antes de salvar
+    console.log("[dateMask] formatted:", formatted);
+
+    // SALVAR no Flaxboll - duas opções: use a que seu projeto aceita
+    // 1) Recomendada: tools.setData (salva como string simples)
+    if (typeof tools.setData === "function") {
+      tools.setData({
+        path: "sc.a1.iptChanges.startDate",
+        value: formatted
+      });
+    } else {
+      // 2) Fallback: tools.functions.setVar (alguns projetos usam esse)
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["sc.a1.iptChanges.startDate"],
+          // se seu projeto espera array, descomente a linha abaixo e comente a outra
+          // value: [formatted]
+          value: formatted
+        }
+      });
+    }
+
+    // Retorna o formatado (alguns inputs usam o retorno para mostrar o novo texto)
+    return formatted;
+  } catch (err) {
+    console.error("[dateMask] erro:", err);
+    return value;
   }
-
-  // Atualiza a variável no contexto Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
-
-  // Retorna o valor formatado (usado pelo input)
-  return formatted;
 }
 ],
 
@@ -20363,31 +20415,57 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(value) => {
-  // Garantir que o valor é string
-  if (!value) value = "";
+  try {
+    // Garante string
+    value = value ?? "";
+    value = String(value);
 
-  // Remove tudo que não for número
-  let cleaned = value.replace(/D/g, "");
+    // DEBUG: ver o que chega
+    console.log("[dateMask] raw value:", value);
 
-  // Limita a 8 dígitos (DDMMAAAA)
-  if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+    // Remove tudo que não for dígito
+    let cleaned = value.replace(/D/g, "");
 
-  // Adiciona as barras conforme o usuário digita
-  let formatted = cleaned;
-  if (cleaned.length > 4) {
-    formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
-  } else if (cleaned.length > 2) {
-    formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
+    // Limita a 8 dígitos (DDMMAAAA)
+    if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+
+    // Formata dinamicamente DD/MM/AAAA
+    let formatted = cleaned;
+    if (cleaned.length > 4) {
+      formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
+    } else if (cleaned.length > 2) {
+      formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
+    }
+
+    // DEBUG: mostrar o resultado antes de salvar
+    console.log("[dateMask] formatted:", formatted);
+
+    // SALVAR no Flaxboll - duas opções: use a que seu projeto aceita
+    // 1) Recomendada: tools.setData (salva como string simples)
+    if (typeof tools.setData === "function") {
+      tools.setData({
+        path: "sc.a1.iptChanges.startDate",
+        value: formatted
+      });
+    } else {
+      // 2) Fallback: tools.functions.setVar (alguns projetos usam esse)
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["sc.a1.iptChanges.startDate"],
+          // se seu projeto espera array, descomente a linha abaixo e comente a outra
+          // value: [formatted]
+          value: formatted
+        }
+      });
+    }
+
+    // Retorna o formatado (alguns inputs usam o retorno para mostrar o novo texto)
+    return formatted;
+  } catch (err) {
+    console.error("[dateMask] erro:", err);
+    return value;
   }
-
-  // Atualiza a variável no contexto Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
-
-  // Retorna o valor formatado (usado pelo input)
-  return formatted;
 }
 ],
 
@@ -27603,31 +27681,57 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(value) => {
-  // Garantir que o valor é string
-  if (!value) value = "";
+  try {
+    // Garante string
+    value = value ?? "";
+    value = String(value);
 
-  // Remove tudo que não for número
-  let cleaned = value.replace(/D/g, "");
+    // DEBUG: ver o que chega
+    console.log("[dateMask] raw value:", value);
 
-  // Limita a 8 dígitos (DDMMAAAA)
-  if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+    // Remove tudo que não for dígito
+    let cleaned = value.replace(/D/g, "");
 
-  // Adiciona as barras conforme o usuário digita
-  let formatted = cleaned;
-  if (cleaned.length > 4) {
-    formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
-  } else if (cleaned.length > 2) {
-    formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
+    // Limita a 8 dígitos (DDMMAAAA)
+    if (cleaned.length > 8) cleaned = cleaned.slice(0, 8);
+
+    // Formata dinamicamente DD/MM/AAAA
+    let formatted = cleaned;
+    if (cleaned.length > 4) {
+      formatted = cleaned.replace(/^(d{2})(d{2})(d{1,4}).*/, "!#!/!#!/$3");
+    } else if (cleaned.length > 2) {
+      formatted = cleaned.replace(/^(d{2})(d{1,2})/, "!#!/!#!");
+    }
+
+    // DEBUG: mostrar o resultado antes de salvar
+    console.log("[dateMask] formatted:", formatted);
+
+    // SALVAR no Flaxboll - duas opções: use a que seu projeto aceita
+    // 1) Recomendada: tools.setData (salva como string simples)
+    if (typeof tools.setData === "function") {
+      tools.setData({
+        path: "sc.a1.iptChanges.startDate",
+        value: formatted
+      });
+    } else {
+      // 2) Fallback: tools.functions.setVar (alguns projetos usam esse)
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["sc.a1.iptChanges.startDate"],
+          // se seu projeto espera array, descomente a linha abaixo e comente a outra
+          // value: [formatted]
+          value: formatted
+        }
+      });
+    }
+
+    // Retorna o formatado (alguns inputs usam o retorno para mostrar o novo texto)
+    return formatted;
+  } catch (err) {
+    console.error("[dateMask] erro:", err);
+    return value;
   }
-
-  // Atualiza a variável no contexto Flaxboll
-  tools.setData({
-    path: "sc.a1.iptChanges.startDate",
-    value: formatted,
-  });
-
-  // Retorna o valor formatado (usado pelo input)
-  return formatted;
 }
 ],
 
