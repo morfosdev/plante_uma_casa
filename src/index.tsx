@@ -50718,14 +50718,14 @@ marginRight: 5
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+backgroundColor: '#315E2D',
+width: 12,
+height: 12,
+top: 2,
+borderRadius: 10,
+alignSelf: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
