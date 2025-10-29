@@ -50802,7 +50802,15 @@ marginRight: 5
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "$var_all.colors.secondary", borderRadius: 4, marginRight: 5}`],
+            styles:[`{ 
+width: 20, 
+height: 20, 
+backgroundColor: "#FFF", 
+borderRadius: 10, 
+borderWidth: 2, 
+borderColor: "#315E2D", 
+marginRight: 5
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
