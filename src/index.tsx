@@ -50766,7 +50766,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 10,
+fontSize: 12,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -50873,7 +50873,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 10,
+fontSize: 12,
 fontWeight: '700',
 color: '#555555',
 }`
