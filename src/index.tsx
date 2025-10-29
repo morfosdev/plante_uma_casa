@@ -5755,7 +5755,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [(value) => {
+          funcsArray: [() => {
   // Garantir que o valor é string
   if (!value) value = "";
 
@@ -13070,7 +13070,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [(value) => {
+          funcsArray: [() => {
   // Garantir que o valor é string
   if (!value) value = "";
 
@@ -20362,7 +20362,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [(value) => {
+          funcsArray: [() => {
   // Garantir que o valor é string
   if (!value) value = "";
 
@@ -27602,7 +27602,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [(value) => {
+          funcsArray: [() => {
   // Garantir que o valor é string
   if (!value) value = "";
 
