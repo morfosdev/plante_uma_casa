@@ -5755,12 +5755,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
+          funcsArray: [(txt) => {
   // Remove tudo que não for número
   let v = txt.replace(/D/g, "");
 
@@ -13068,12 +13063,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
+          funcsArray: [(txt) => {
   // Remove tudo que não for número
   let v = txt.replace(/D/g, "");
 
@@ -20358,12 +20348,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
+          funcsArray: [(txt) => {
   // Remove tudo que não for número
   let v = txt.replace(/D/g, "");
 
@@ -27596,12 +27581,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.startDate`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
+          funcsArray: [(txt) => {
   // Remove tudo que não for número
   let v = txt.replace(/D/g, "");
 
