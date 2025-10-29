@@ -5756,6 +5756,8 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
+  console.log("Digitado:", txt);
+
   // Remove tudo que não for número
   let v = txt.replace(/D/g, "");
 
@@ -5766,14 +5768,19 @@ paddingHorizontal: 4,
     v = v.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
   }
 
-  // Limita a 10 caracteres no máximo
+  // Limita a 10 caracteres
   v = v.substring(0, 10);
 
-  // Atualiza o valor formatado no campo
+  console.log("Formatado:", v);
+
+  // Atualiza o valor formatado no CT
   tools.setData({
     path: "sc.a1.iptChanges.startDate",
     value: v
   });
+
+  // Retorna o valor formatado, caso o componente aceite retorno
+  return v;
 }
 ],
 
@@ -13064,6 +13071,8 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
+  console.log("Digitado:", txt);
+
   // Remove tudo que não for número
   let v = txt.replace(/D/g, "");
 
@@ -13074,14 +13083,19 @@ paddingHorizontal: 4,
     v = v.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
   }
 
-  // Limita a 10 caracteres no máximo
+  // Limita a 10 caracteres
   v = v.substring(0, 10);
 
-  // Atualiza o valor formatado no campo
+  console.log("Formatado:", v);
+
+  // Atualiza o valor formatado no CT
   tools.setData({
     path: "sc.a1.iptChanges.startDate",
     value: v
   });
+
+  // Retorna o valor formatado, caso o componente aceite retorno
+  return v;
 }
 ],
 
@@ -20349,6 +20363,8 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
+  console.log("Digitado:", txt);
+
   // Remove tudo que não for número
   let v = txt.replace(/D/g, "");
 
@@ -20359,14 +20375,19 @@ paddingHorizontal: 4,
     v = v.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
   }
 
-  // Limita a 10 caracteres no máximo
+  // Limita a 10 caracteres
   v = v.substring(0, 10);
 
-  // Atualiza o valor formatado no campo
+  console.log("Formatado:", v);
+
+  // Atualiza o valor formatado no CT
   tools.setData({
     path: "sc.a1.iptChanges.startDate",
     value: v
   });
+
+  // Retorna o valor formatado, caso o componente aceite retorno
+  return v;
 }
 ],
 
@@ -27582,6 +27603,8 @@ paddingHorizontal: 4,
           path: [`sc.a1.iptChanges.startDate`],
 
           funcsArray: [(txt) => {
+  console.log("Digitado:", txt);
+
   // Remove tudo que não for número
   let v = txt.replace(/D/g, "");
 
@@ -27592,14 +27615,19 @@ paddingHorizontal: 4,
     v = v.replace(/(d{2})(d{2})(d{1,4})/, "!#!/!#!/$3");
   }
 
-  // Limita a 10 caracteres no máximo
+  // Limita a 10 caracteres
   v = v.substring(0, 10);
 
-  // Atualiza o valor formatado no campo
+  console.log("Formatado:", v);
+
+  // Atualiza o valor formatado no CT
   tools.setData({
     path: "sc.a1.iptChanges.startDate",
     value: v
   });
+
+  // Retorna o valor formatado, caso o componente aceite retorno
+  return v;
 }
 ],
 
