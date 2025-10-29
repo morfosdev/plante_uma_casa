@@ -34,7 +34,8 @@
         `{ width: "100%", height: "100%" }`, 
         `{ backgroundColor: "$var_all.colors.primary" }`, `{ padding: 20 }`],
 
-          screenElements:[(...args:any) => <Elements.ScrollBar pass={{
+          screenElements:[
+        (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
@@ -2429,7 +2430,18 @@ paddingHorizontal: 16,
         ], args 
  }}/>],
             args,
-        }}/>],
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[``],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
           functions:[()=>{}],
 
