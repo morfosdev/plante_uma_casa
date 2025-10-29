@@ -5755,7 +5755,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [() => {
+          funcsArray: [(value) => {
   // Garantir que o valor é string
   if (!value) value = "";
 
@@ -13070,7 +13070,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [() => {
+          funcsArray: [(value) => {
   // Garantir que o valor é string
   if (!value) value = "";
 
@@ -20362,7 +20362,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [() => {
+          funcsArray: [(value) => {
   // Garantir que o valor é string
   if (!value) value = "";
 
@@ -27602,7 +27602,7 @@ paddingHorizontal: 4,
 
           path: [`sc.a1.iptChanges.startDate`],
 
-          funcsArray: [() => {
+          funcsArray: [(value) => {
   // Garantir que o valor é string
   if (!value) value = "";
 
@@ -35389,6 +35389,695 @@ color: '#555555',
             args,
           }}/>
         , 
+        (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 6,
+	paddingHorizontal: 18,
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	padding: 18,
+	borderWidth: 1,
+	borderColor: '#f5f5f5',
+	borderRadius: 20,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Images B9",{value});
+
+	const path = "all.temp.images";
+	tools.setData({path, value});
+}], args,
+ }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+paddingHorizontal: 20,
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Nome do Condomínio`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Ex: Residência dos Silvas",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.condo`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.condo`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Endereço`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'Rua das Flores, 123',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.address`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.address`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.startDate`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.startDate`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.endDate`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.endDate`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+multiline: 'true',
+}`],
+
+          stylesArray: [`{
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
+}`],
+
+          path: [`sc.a1.editChanges.description`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.description`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Images B9",{value});
+
+	const path = "all.temp.images";
+	tools.setData({path, value});
+}], args,
+ }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  const requiredFields = [
+    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.editChanges.address", name: "Endereço" },
+    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
+    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.editChanges.description", name: "Descrição" },
+  ];
+
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  if (emptyFields.length > 0) {
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Preencha os campos obrigatórios."],
+      },
+    });
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return;
+  }
+
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
+    },
+  });
+
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
+
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  const docId = tools.getCtData("sc.a1.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  const updatedDoc = {
+    condo: getVal("sc.a1.editChanges.condo"),
+    address: getVal("sc.a1.editChanges.address"),
+    startDate: getVal("sc.a1.editChanges.startDate"),
+    endDate: getVal("sc.a1.editChanges.endDate"),
+    description: getVal("sc.a1.editChanges.description"),
+    updatedAt: serverTimestamp(),
+  };
+
+  try {
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["🏢 Dados atualizados com sucesso!"],
+      },
+    });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao atualizar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
+      },
+    });
+  }
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [` `]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+            args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -39891,6 +40580,695 @@ color: '#555555',
             args,
           }}/>
         , 
+        (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 6,
+	paddingHorizontal: 18,
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	padding: 18,
+	borderWidth: 1,
+	borderColor: '#f5f5f5',
+	borderRadius: 20,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Images B9",{value});
+
+	const path = "all.temp.images";
+	tools.setData({path, value});
+}], args,
+ }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+paddingHorizontal: 20,
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Nome do Condomínio`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Ex: Residência dos Silvas",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.condo`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.condo`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Endereço`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'Rua das Flores, 123',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.address`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.address`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.startDate`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.startDate`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.endDate`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.endDate`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+multiline: 'true',
+}`],
+
+          stylesArray: [`{
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
+}`],
+
+          path: [`sc.a1.editChanges.description`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.description`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Images B9",{value});
+
+	const path = "all.temp.images";
+	tools.setData({path, value});
+}], args,
+ }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  const requiredFields = [
+    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.editChanges.address", name: "Endereço" },
+    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
+    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.editChanges.description", name: "Descrição" },
+  ];
+
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  if (emptyFields.length > 0) {
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Preencha os campos obrigatórios."],
+      },
+    });
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return;
+  }
+
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
+    },
+  });
+
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
+
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  const docId = tools.getCtData("sc.a1.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  const updatedDoc = {
+    condo: getVal("sc.a1.editChanges.condo"),
+    address: getVal("sc.a1.editChanges.address"),
+    startDate: getVal("sc.a1.editChanges.startDate"),
+    endDate: getVal("sc.a1.editChanges.endDate"),
+    description: getVal("sc.a1.editChanges.description"),
+    updatedAt: serverTimestamp(),
+  };
+
+  try {
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["🏢 Dados atualizados com sucesso!"],
+      },
+    });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao atualizar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
+      },
+    });
+  }
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [` `]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+            args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -46093,6 +47471,695 @@ color: '#555555',
             args,
           }}/>
         , 
+        (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 6,
+	paddingHorizontal: 18,
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	padding: 18,
+	borderWidth: 1,
+	borderColor: '#f5f5f5',
+	borderRadius: 20,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Images B9",{value});
+
+	const path = "all.temp.images";
+	tools.setData({path, value});
+}], args,
+ }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+paddingHorizontal: 20,
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Nome do Condomínio`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "Ex: Residência dos Silvas",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.condo`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.condo`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Endereço`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'Rua das Flores, 123',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.address`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.address`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.startDate`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.startDate`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+}`],
+
+          path: [`sc.a1.editChanges.endDate`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.endDate`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+multiline: 'true',
+}`],
+
+          stylesArray: [`{
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
+}`],
+
+          path: [`sc.a1.editChanges.description`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges.description`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.BtnImagePicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Images B9",{value});
+
+	const path = "all.temp.images";
+	tools.setData({path, value});
+}], args,
+ }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: 'red', }`
+          ],
+
+          children: [
+            `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  const requiredFields = [
+    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
+    { path: "sc.a1.editChanges.address", name: "Endereço" },
+    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
+    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
+    { path: "sc.a1.editChanges.description", name: "Descrição" },
+  ];
+
+  const getVal = (path) => {
+    const val = tools.getCtData(path);
+    if (Array.isArray(val)) return val[0] ?? "";
+    return val ?? "";
+  };
+
+  const emptyFields = requiredFields.filter((f) => {
+    const v = getVal(f.path);
+    return v === "" || v === null || v === undefined;
+  });
+
+  if (emptyFields.length > 0) {
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Preencha os campos obrigatórios."],
+      },
+    });
+    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    return;
+  }
+
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: ["✅ Todos os campos foram preenchidos corretamente."],
+    },
+  });
+
+  console.log("💾 Validação OK — atualizando documento no Firebase...");
+
+  let fbInit = tools.getCtData("all.temp.fireInit");
+  if (!fbInit) {
+    const { initializeApp, getApps } = await import("firebase/app");
+    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
+    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
+    tools.setData({ path: "all.temp.fireInit", value: fbInit });
+  }
+
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const db = getFirestore(fbInit);
+
+  const docId = tools.getCtData("sc.a1.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ ID do documento inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["ID do documento inválido. Não foi possível atualizar."],
+      },
+    });
+    return;
+  }
+
+  const updatedDoc = {
+    condo: getVal("sc.a1.editChanges.condo"),
+    address: getVal("sc.a1.editChanges.address"),
+    startDate: getVal("sc.a1.editChanges.startDate"),
+    endDate: getVal("sc.a1.editChanges.endDate"),
+    description: getVal("sc.a1.editChanges.description"),
+    updatedAt: serverTimestamp(),
+  };
+
+  try {
+    await updateDoc(doc(db, "condos", docId), updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", docId);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["🏢 Dados atualizados com sucesso!"],
+      },
+    });
+
+    // Limpa dados e fecha modais
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.editChanges"],
+        value: [{}],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.a1.editCondo"],
+        value: [false],
+      },
+    });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.sideRight"],
+        value: [false],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao atualizar documento:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: ["Erro ao atualizar os dados. Verifique o console."],
+      },
+    });
+  }
+
+//clean text message
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationMessage"],
+        value: [""],
+      },
+    });
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [` `]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.validationMessage`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondo`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+            args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
