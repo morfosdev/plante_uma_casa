@@ -3354,26 +3354,6 @@ color: '#555555',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{ placeholder: "Digite seu e-mail" }`],
-
-          stylesArray: [`{
-	padding: 5,
-	borderBottomColor: "#CCCCCC",
-	borderBottomWidth: 2,
-	width: '100%',
-}`],
-
-          path: [`sc.A0B.forms.iptsChanges.userEmail`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0B.forms.iptsChanges.userEmail`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -3482,7 +3462,14 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 10, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -3539,11 +3526,15 @@ color: '#555555',
           ],
 
           arrStyles: [
-            `{ color: "#FFF" }`
+            `{
+fontSize: 15,
+fontWeight: '700',
+color: '#fff',
+}`
           ],
 
           children: [
-            `Enviar`
+            `Enviar Link`
           ],
 
           args,
