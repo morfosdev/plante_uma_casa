@@ -50699,44 +50699,39 @@ placeholder: 'Pesquisar endereço',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "$var_all.colors.secondary", borderRadius: 4, marginRight: 5}`],
+            styles:[`{ 
+width: 20, 
+height: 20, 
+backgroundColor: "#FFF", 
+borderRadius: 10, 
+borderWidth: 2, 
+borderColor: "#315E2D", 
+marginRight: 5
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.checkboxMasculino", "==", true ]]
  , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    width={40}
-    height={40}
-    viewBox="0 0 40 40"
-    {...props}
-  >
-    <Path
-      stroke="#FFF"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={4.17}
-      d="M33.333 10 15 28.333 6.667 20"
-    />
-  </Svg>)
-      },
+}})],            childrenItems:[
 
-      svgOriginal: `
-        <svg></svg>
-      `,
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
 
-      altura: "14px",
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
 
-      largura: "14px",
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
-      preenchimento: [`transparent`],
-
-      args,
-    }}/>],
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
