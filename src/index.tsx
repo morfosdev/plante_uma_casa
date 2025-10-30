@@ -37514,7 +37514,7 @@ paddingHorizontal: 4,
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
- }}/>, (...args:any) => <Elements.BtnDocPicker pass={{
+ }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [() => console.log({args})], args,
  }}/>],
 
@@ -37582,7 +37582,12 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [() => {}],
+ }}), async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`steps`],
             arrPathData: [`sc.b8.editChanges`],
@@ -42491,7 +42496,7 @@ paddingHorizontal: 4,
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
- }}/>, (...args:any) => <Elements.BtnDocPicker pass={{
+ }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [() => console.log({args})], args,
  }}/>],
 
@@ -42559,7 +42564,12 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [() => {}],
+ }}), async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`steps`],
             arrPathData: [`sc.b8.editChanges`],
@@ -49215,7 +49225,7 @@ paddingHorizontal: 4,
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
- }}/>, (...args:any) => <Elements.BtnDocPicker pass={{
+ }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [() => console.log({args})], args,
  }}/>],
 
@@ -49283,7 +49293,12 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [() => {}],
+ }}), async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`steps`],
             arrPathData: [`sc.b8.editChanges`],
