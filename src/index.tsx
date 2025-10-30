@@ -39286,6 +39286,11 @@ async (...args) =>
           keyPath: [`sc.b8.editChanges.email`],
           value: [`$arg_email`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.forms.editChanges.email`],
+          value: [`$arg_email`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b7list");
@@ -44382,7 +44387,6 @@ paddingHorizontal: 16,
 
     const condMatch = Boolean(matched);
     const currId = matched?.docId;
-    const currMail = matched?.email;
 
     console.log({ item, stepsList, matched, condMatch });
 
@@ -44397,13 +44401,10 @@ paddingHorizontal: 16,
         tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
 
         // Evita undefined: use vazio ou herde do item
-        const newEmail = item?.email ?? "";
-        tools.setData({ path: "sc.b8.editChanges.email", value: newEmail });
 
         // (Opcional) limpar possíveis resíduos do form de edição
         tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
         tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-        tools.setData({ path: "sc.B9.forms.editChanges.email", value: "" });
         return;
     }
 
@@ -44415,7 +44416,6 @@ paddingHorizontal: 16,
 
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-    tools.setData({ path: "sc.B9.forms.editChanges.email", value: currMail ?? "" });
 
     // (Opcional) limpar possíveis resíduos do form de novo
     tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
@@ -44907,7 +44907,6 @@ paddingHorizontal: 16,
 
     const condMatch = Boolean(matched);
     const currId = matched?.docId;
-    const currMail = matched?.email;
 
     console.log({ item, stepsList, matched, condMatch });
 
@@ -44922,13 +44921,10 @@ paddingHorizontal: 16,
         tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
 
         // Evita undefined: use vazio ou herde do item
-        const newEmail = item?.email ?? "";
-        tools.setData({ path: "sc.b8.editChanges.email", value: newEmail });
 
         // (Opcional) limpar possíveis resíduos do form de edição
         tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
         tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-        tools.setData({ path: "sc.B9.forms.editChanges.email", value: "" });
         return;
     }
 
@@ -44940,7 +44936,6 @@ paddingHorizontal: 16,
 
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-    tools.setData({ path: "sc.B9.forms.editChanges.email", value: currMail ?? "" });
 
     // (Opcional) limpar possíveis resíduos do form de novo
     tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
@@ -45432,7 +45427,6 @@ paddingHorizontal: 16,
 
     const condMatch = Boolean(matched);
     const currId = matched?.docId;
-    const currMail = matched?.email;
 
     console.log({ item, stepsList, matched, condMatch });
 
@@ -45447,13 +45441,10 @@ paddingHorizontal: 16,
         tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
 
         // Evita undefined: use vazio ou herde do item
-        const newEmail = item?.email ?? "";
-        tools.setData({ path: "sc.b8.editChanges.email", value: newEmail });
 
         // (Opcional) limpar possíveis resíduos do form de edição
         tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
         tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-        tools.setData({ path: "sc.B9.forms.editChanges.email", value: "" });
         return;
     }
 
@@ -45465,7 +45456,6 @@ paddingHorizontal: 16,
 
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-    tools.setData({ path: "sc.B9.forms.editChanges.email", value: currMail ?? "" });
 
     // (Opcional) limpar possíveis resíduos do form de novo
     tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
@@ -45956,7 +45946,6 @@ paddingHorizontal: 16,
 
     const condMatch = Boolean(matched);
     const currId = matched?.docId;
-    const currMail = matched?.email;
 
     console.log({ item, stepsList, matched, condMatch });
 
@@ -45971,13 +45960,10 @@ paddingHorizontal: 16,
         tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
 
         // Evita undefined: use vazio ou herde do item
-        const newEmail = item?.email ?? "";
-        tools.setData({ path: "sc.b8.editChanges.email", value: newEmail });
 
         // (Opcional) limpar possíveis resíduos do form de edição
         tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
         tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-        tools.setData({ path: "sc.B9.forms.editChanges.email", value: "" });
         return;
     }
 
@@ -45989,7 +45975,6 @@ paddingHorizontal: 16,
 
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-    tools.setData({ path: "sc.B9.forms.editChanges.email", value: currMail ?? "" });
 
     // (Opcional) limpar possíveis resíduos do form de novo
     tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
