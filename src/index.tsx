@@ -44394,11 +44394,11 @@ paddingHorizontal: 16,
         tools.setData({ path: pathEdit, value: false });
 
         // stepId sempre preenchido
-        tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: stepId });
+        tools.setData({ path: "sc.B8.forms.editChanges.stepId", value: stepId });
 
         // Evita undefined: use vazio ou herde do item
         const newEmail = item?.email ?? "";
-        tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: newEmail });
+        tools.setData({ path: "sc.B8.forms.editChanges.email", value: newEmail });
 
         // (Opcional) limpar possíveis resíduos do form de edição
         tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
@@ -44919,11 +44919,11 @@ paddingHorizontal: 16,
         tools.setData({ path: pathEdit, value: false });
 
         // stepId sempre preenchido
-        tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: stepId });
+        tools.setData({ path: "sc.B8.forms.editChanges.stepId", value: stepId });
 
         // Evita undefined: use vazio ou herde do item
         const newEmail = item?.email ?? "";
-        tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: newEmail });
+        tools.setData({ path: "sc.B8.forms.editChanges.email", value: newEmail });
 
         // (Opcional) limpar possíveis resíduos do form de edição
         tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
@@ -45444,11 +45444,11 @@ paddingHorizontal: 16,
         tools.setData({ path: pathEdit, value: false });
 
         // stepId sempre preenchido
-        tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: stepId });
+        tools.setData({ path: "sc.B8.forms.editChanges.stepId", value: stepId });
 
         // Evita undefined: use vazio ou herde do item
         const newEmail = item?.email ?? "";
-        tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: newEmail });
+        tools.setData({ path: "sc.B8.forms.editChanges.email", value: newEmail });
 
         // (Opcional) limpar possíveis resíduos do form de edição
         tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
@@ -45968,11 +45968,11 @@ paddingHorizontal: 16,
         tools.setData({ path: pathEdit, value: false });
 
         // stepId sempre preenchido
-        tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: stepId });
+        tools.setData({ path: "sc.B8.forms.editChanges.stepId", value: stepId });
 
         // Evita undefined: use vazio ou herde do item
         const newEmail = item?.email ?? "";
-        tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: newEmail });
+        tools.setData({ path: "sc.B8.forms.editChanges.email", value: newEmail });
 
         // (Opcional) limpar possíveis resíduos do form de edição
         tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
