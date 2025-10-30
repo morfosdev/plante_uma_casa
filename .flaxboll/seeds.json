@@ -2508,7 +2508,7 @@
           "en": ""
         },
         "capsCodeTypes": ["Elemento de Tela", "DocumentPicker"],
-        "capsCodeText": "(...args:any) => <Elements.BtnDocPicker pass={{\n arrFuncs: [!#!return functions!#!], args,\n }}/>",
+        "capsCodeText": "(...args:any) => <Elements.BtnDocumentPicker pass={{\n arrFuncs: [!#!return functions!#!], args,\n }}/>",
         "capsCodeInputs": {
           "ccc_documentPicker-0": {
             "capsIptCodeID": "ccc_documentPicker-0",
