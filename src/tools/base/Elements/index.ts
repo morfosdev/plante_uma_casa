@@ -9,6 +9,7 @@ export { IptTxtEdit } from './IptTxtEdit';
 export { ScrollBar } from './ScrollBar';
 export { SvgView1 } from './SvgView1'; // SVG da erro no webcontainer
 export { BtnImagePicker } from './BtnImagePicker';
+export { BtnDocumentPicker } from './BtnDocumentPicker';
 export { Custom } from './Custom';
 export { IptPicker } from './IptPicker';
 export { Accordion } from './Accordion';
