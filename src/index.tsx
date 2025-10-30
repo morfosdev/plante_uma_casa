@@ -37873,7 +37873,7 @@ async (...args) =>
           ],
 
           children: [
-            `ADICIONAR ETAPA`
+            `EDITAR ETAPA`
           ],
 
           args,
@@ -42842,7 +42842,7 @@ async (...args) =>
           ],
 
           children: [
-            `ADICIONAR ETAPA`
+            `EDITAR ETAPA`
           ],
 
           args,
@@ -49511,7 +49511,7 @@ async (...args) =>
           ],
 
           children: [
-            `ADICIONAR ETAPA`
+            `EDITAR ETAPA`
           ],
 
           args,
