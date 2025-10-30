@@ -81,7 +81,7 @@ const BtnWeb = ({ pass }: Tprops) => {
     <>
       <RN.View style={styles.container}>
         <ThumbGrid images={images} onRemove={removeAt} />
-        <RN.Text style={styles.title}>Adicionar Imagens</RN.Text>
+        <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
         <RN.Text style={styles.subtitle}>
           Selecione ou tire fotos para mostrar o progresso
         </RN.Text>
@@ -171,7 +171,7 @@ const BtnNat = ({ pass }: Tprops) => {
   return (
     <RN.View style={styles.container}>
       <ThumbGrid images={images} onRemove={removeAt} />
-      <RN.Text style={styles.title}>Adicionar Imagens</RN.Text>
+      <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
       <RN.Text style={styles.subtitle}>
         Selecione ou tire fotos para mostrar o progresso
       </RN.Text>
