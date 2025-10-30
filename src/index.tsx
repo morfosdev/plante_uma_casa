@@ -44354,54 +44354,72 @@ paddingHorizontal: 16,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(args) => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-  const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
-  const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+    const css1 =
+        "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  let condMatch = false;
-  let currId;
-  console.log({ item, stepsList });
+    const item = tools.findFlatItem(args);
+    const stepsList = tools.getCtData("sc.B7.lists.list1");
+    const stepIdRaw = item?.stepId;
 
-  stepsList?.forEach((d: any) => {
-    if (d?.stepId === item?.stepId) {
-        console.log({ d });
-      condMatch = true;
-      currId = d?.docId;
+    // ---- Guards
+    if (!item || stepIdRaw == null) {
+        console.warn("Step handler: item ou stepId ausente.", { item });
+        return;
     }
-  });
 
-  // ---- set 1
-  const set1 = { path: pathSideRight, value: true };
-  tools.setData(set1);
+    const stepId = String(stepIdRaw);
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    const pathNew = "all.toggles.b8.addSteps";
 
-  const set2A = { path: pathNew, value: true };
-  const set2B = { path: pathEdit, value: false };
-  // ---- set 2
-  if (!condMatch) {
-    console.log("%cAdd New Step Mode - " + pathNew, css1);
-    tools.setData(set2A);
-    tools.setData(set2B);
+    // Abre painel lateral (comum)
+    tools.setData({ path: pathSideRight, value: true });
 
-    const stepId = item.stepId;
+    // Procura match por stepId
+    const matched = Array.isArray(stepsList)
+        ? stepsList.find((d: any) => String(d?.stepId) === stepId)
+        : undefined;
 
-    const set4 = { path: "sc.B8.forms.iptsChanges.stepId", value: stepId };
-    tools.setData(set4);
-  }
+    const condMatch = Boolean(matched);
+    const currId = matched?.docId;
+    const currMail = matched?.email;
 
-  const set3A = { path: pathEdit, value: true };
-  const set3B = { path: pathNew, value: false };
-  const set3C = { path: 'sc.B9.forms.editChanges.docId', value: currId };
-  // ---- set 3
-  if (condMatch) {
+    console.log({ item, stepsList, matched, condMatch });
+
+    if (!condMatch) {
+        // ---- Modo Adicionar
+        console.log("%cAdd New Step Mode - " + pathNew, css1);
+
+        tools.setData({ path: pathNew, value: true });
+        tools.setData({ path: pathEdit, value: false });
+
+        // stepId sempre preenchido
+        tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: stepId });
+
+        // Evita undefined: use vazio ou herde do item
+        const newEmail = item?.email ?? "";
+        tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: newEmail });
+
+        // (Opcional) limpar possíveis resíduos do form de edição
+        tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
+        tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
+        tools.setData({ path: "sc.B9.forms.editChanges.email", value: "" });
+        return;
+    }
+
+    // ---- Modo Editar
     console.log("%cEdit Step Mode - " + pathEdit, css1);
-    tools.setData(set3A);
-    tools.setData(set3B);
-    tools.setData(set3C);
-  }
+
+    tools.setData({ path: pathEdit, value: true });
+    tools.setData({ path: pathNew, value: false });
+
+    tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
+    tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
+    tools.setData({ path: "sc.B9.forms.editChanges.email", value: currMail ?? "" });
+
+    // (Opcional) limpar possíveis resíduos do form de novo
+    tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+    tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: "" });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -44861,54 +44879,72 @@ paddingHorizontal: 16,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(args) => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-  const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
-  const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+    const css1 =
+        "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  let condMatch = false;
-  let currId;
-  console.log({ item, stepsList });
+    const item = tools.findFlatItem(args);
+    const stepsList = tools.getCtData("sc.B7.lists.list1");
+    const stepIdRaw = item?.stepId;
 
-  stepsList?.forEach((d: any) => {
-    if (d?.stepId === item?.stepId) {
-        console.log({ d });
-      condMatch = true;
-      currId = d?.docId;
+    // ---- Guards
+    if (!item || stepIdRaw == null) {
+        console.warn("Step handler: item ou stepId ausente.", { item });
+        return;
     }
-  });
 
-  // ---- set 1
-  const set1 = { path: pathSideRight, value: true };
-  tools.setData(set1);
+    const stepId = String(stepIdRaw);
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    const pathNew = "all.toggles.b8.addSteps";
 
-  const set2A = { path: pathNew, value: true };
-  const set2B = { path: pathEdit, value: false };
-  // ---- set 2
-  if (!condMatch) {
-    console.log("%cAdd New Step Mode - " + pathNew, css1);
-    tools.setData(set2A);
-    tools.setData(set2B);
+    // Abre painel lateral (comum)
+    tools.setData({ path: pathSideRight, value: true });
 
-    const stepId = item.stepId;
+    // Procura match por stepId
+    const matched = Array.isArray(stepsList)
+        ? stepsList.find((d: any) => String(d?.stepId) === stepId)
+        : undefined;
 
-    const set4 = { path: "sc.B8.forms.iptsChanges.stepId", value: stepId };
-    tools.setData(set4);
-  }
+    const condMatch = Boolean(matched);
+    const currId = matched?.docId;
+    const currMail = matched?.email;
 
-  const set3A = { path: pathEdit, value: true };
-  const set3B = { path: pathNew, value: false };
-  const set3C = { path: 'sc.B9.forms.editChanges.docId', value: currId };
-  // ---- set 3
-  if (condMatch) {
+    console.log({ item, stepsList, matched, condMatch });
+
+    if (!condMatch) {
+        // ---- Modo Adicionar
+        console.log("%cAdd New Step Mode - " + pathNew, css1);
+
+        tools.setData({ path: pathNew, value: true });
+        tools.setData({ path: pathEdit, value: false });
+
+        // stepId sempre preenchido
+        tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: stepId });
+
+        // Evita undefined: use vazio ou herde do item
+        const newEmail = item?.email ?? "";
+        tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: newEmail });
+
+        // (Opcional) limpar possíveis resíduos do form de edição
+        tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
+        tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
+        tools.setData({ path: "sc.B9.forms.editChanges.email", value: "" });
+        return;
+    }
+
+    // ---- Modo Editar
     console.log("%cEdit Step Mode - " + pathEdit, css1);
-    tools.setData(set3A);
-    tools.setData(set3B);
-    tools.setData(set3C);
-  }
+
+    tools.setData({ path: pathEdit, value: true });
+    tools.setData({ path: pathNew, value: false });
+
+    tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
+    tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
+    tools.setData({ path: "sc.B9.forms.editChanges.email", value: currMail ?? "" });
+
+    // (Opcional) limpar possíveis resíduos do form de novo
+    tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+    tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: "" });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -45368,54 +45404,72 @@ paddingHorizontal: 16,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(args) => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-  const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
-  const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+    const css1 =
+        "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  let condMatch = false;
-  let currId;
-  console.log({ item, stepsList });
+    const item = tools.findFlatItem(args);
+    const stepsList = tools.getCtData("sc.B7.lists.list1");
+    const stepIdRaw = item?.stepId;
 
-  stepsList?.forEach((d: any) => {
-    if (d?.stepId === item?.stepId) {
-        console.log({ d });
-      condMatch = true;
-      currId = d?.docId;
+    // ---- Guards
+    if (!item || stepIdRaw == null) {
+        console.warn("Step handler: item ou stepId ausente.", { item });
+        return;
     }
-  });
 
-  // ---- set 1
-  const set1 = { path: pathSideRight, value: true };
-  tools.setData(set1);
+    const stepId = String(stepIdRaw);
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    const pathNew = "all.toggles.b8.addSteps";
 
-  const set2A = { path: pathNew, value: true };
-  const set2B = { path: pathEdit, value: false };
-  // ---- set 2
-  if (!condMatch) {
-    console.log("%cAdd New Step Mode - " + pathNew, css1);
-    tools.setData(set2A);
-    tools.setData(set2B);
+    // Abre painel lateral (comum)
+    tools.setData({ path: pathSideRight, value: true });
 
-    const stepId = item.stepId;
+    // Procura match por stepId
+    const matched = Array.isArray(stepsList)
+        ? stepsList.find((d: any) => String(d?.stepId) === stepId)
+        : undefined;
 
-    const set4 = { path: "sc.B8.forms.iptsChanges.stepId", value: stepId };
-    tools.setData(set4);
-  }
+    const condMatch = Boolean(matched);
+    const currId = matched?.docId;
+    const currMail = matched?.email;
 
-  const set3A = { path: pathEdit, value: true };
-  const set3B = { path: pathNew, value: false };
-  const set3C = { path: 'sc.B9.forms.editChanges.docId', value: currId };
-  // ---- set 3
-  if (condMatch) {
+    console.log({ item, stepsList, matched, condMatch });
+
+    if (!condMatch) {
+        // ---- Modo Adicionar
+        console.log("%cAdd New Step Mode - " + pathNew, css1);
+
+        tools.setData({ path: pathNew, value: true });
+        tools.setData({ path: pathEdit, value: false });
+
+        // stepId sempre preenchido
+        tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: stepId });
+
+        // Evita undefined: use vazio ou herde do item
+        const newEmail = item?.email ?? "";
+        tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: newEmail });
+
+        // (Opcional) limpar possíveis resíduos do form de edição
+        tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
+        tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
+        tools.setData({ path: "sc.B9.forms.editChanges.email", value: "" });
+        return;
+    }
+
+    // ---- Modo Editar
     console.log("%cEdit Step Mode - " + pathEdit, css1);
-    tools.setData(set3A);
-    tools.setData(set3B);
-    tools.setData(set3C);
-  }
+
+    tools.setData({ path: pathEdit, value: true });
+    tools.setData({ path: pathNew, value: false });
+
+    tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
+    tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
+    tools.setData({ path: "sc.B9.forms.editChanges.email", value: currMail ?? "" });
+
+    // (Opcional) limpar possíveis resíduos do form de novo
+    tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+    tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: "" });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -45874,54 +45928,72 @@ paddingHorizontal: 16,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [(args) => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-  const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
-  const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+    const css1 =
+        "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  let condMatch = false;
-  let currId;
-  console.log({ item, stepsList });
+    const item = tools.findFlatItem(args);
+    const stepsList = tools.getCtData("sc.B7.lists.list1");
+    const stepIdRaw = item?.stepId;
 
-  stepsList?.forEach((d: any) => {
-    if (d?.stepId === item?.stepId) {
-        console.log({ d });
-      condMatch = true;
-      currId = d?.docId;
+    // ---- Guards
+    if (!item || stepIdRaw == null) {
+        console.warn("Step handler: item ou stepId ausente.", { item });
+        return;
     }
-  });
 
-  // ---- set 1
-  const set1 = { path: pathSideRight, value: true };
-  tools.setData(set1);
+    const stepId = String(stepIdRaw);
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    const pathNew = "all.toggles.b8.addSteps";
 
-  const set2A = { path: pathNew, value: true };
-  const set2B = { path: pathEdit, value: false };
-  // ---- set 2
-  if (!condMatch) {
-    console.log("%cAdd New Step Mode - " + pathNew, css1);
-    tools.setData(set2A);
-    tools.setData(set2B);
+    // Abre painel lateral (comum)
+    tools.setData({ path: pathSideRight, value: true });
 
-    const stepId = item.stepId;
+    // Procura match por stepId
+    const matched = Array.isArray(stepsList)
+        ? stepsList.find((d: any) => String(d?.stepId) === stepId)
+        : undefined;
 
-    const set4 = { path: "sc.B8.forms.iptsChanges.stepId", value: stepId };
-    tools.setData(set4);
-  }
+    const condMatch = Boolean(matched);
+    const currId = matched?.docId;
+    const currMail = matched?.email;
 
-  const set3A = { path: pathEdit, value: true };
-  const set3B = { path: pathNew, value: false };
-  const set3C = { path: 'sc.B9.forms.editChanges.docId', value: currId };
-  // ---- set 3
-  if (condMatch) {
+    console.log({ item, stepsList, matched, condMatch });
+
+    if (!condMatch) {
+        // ---- Modo Adicionar
+        console.log("%cAdd New Step Mode - " + pathNew, css1);
+
+        tools.setData({ path: pathNew, value: true });
+        tools.setData({ path: pathEdit, value: false });
+
+        // stepId sempre preenchido
+        tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: stepId });
+
+        // Evita undefined: use vazio ou herde do item
+        const newEmail = item?.email ?? "";
+        tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: newEmail });
+
+        // (Opcional) limpar possíveis resíduos do form de edição
+        tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
+        tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
+        tools.setData({ path: "sc.B9.forms.editChanges.email", value: "" });
+        return;
+    }
+
+    // ---- Modo Editar
     console.log("%cEdit Step Mode - " + pathEdit, css1);
-    tools.setData(set3A);
-    tools.setData(set3B);
-    tools.setData(set3C);
-  }
+
+    tools.setData({ path: pathEdit, value: true });
+    tools.setData({ path: pathNew, value: false });
+
+    tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
+    tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
+    tools.setData({ path: "sc.B9.forms.editChanges.email", value: currMail ?? "" });
+
+    // (Opcional) limpar possíveis resíduos do form de novo
+    tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+    tools.setData({ path: "sc.B8.forms.iptsChanges.email", value: "" });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
