@@ -53192,11 +53192,16 @@ async (...args) =>
           keyPath: [`all.toggles.c3Menu`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c2edit");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.checkboxGender`],
+          value: [true]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -54934,11 +54939,16 @@ async (...args) =>
           keyPath: [`all.toggles.c3Menu`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c2edit");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.checkboxGender`],
+          value: [true]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -57645,11 +57655,16 @@ async (...args) =>
           keyPath: [`all.toggles.c3Menu`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c2edit");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.checkboxGender`],
+          value: [true]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
