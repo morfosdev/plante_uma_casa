@@ -5376,8 +5376,8 @@ width: 15,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.condoData`],
-          value: [`$arg_item`]
+          keyPath: [`sc.A7.forms.iptsChanges.condId`],
+          value: [`$arg_item.docId`]
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
@@ -53288,8 +53288,8 @@ width: 33,
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 20,
+	height: 20,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
