@@ -53554,19 +53554,9 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
-          value: [undefined]
-        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("a0login");
+          return tools.goTo("c1login");
         }
         ]
  , trigger: 'on press'
@@ -55302,19 +55292,9 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
-          value: [undefined]
-        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("a0login");
+          return tools.goTo("c1login");
         }
         ]
  , trigger: 'on press'
@@ -58023,19 +58003,9 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
-          value: [undefined]
-        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("a0login");
+          return tools.goTo("c1login");
         }
         ]
  , trigger: 'on press'
