@@ -54540,8 +54540,8 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 40,
-	height: 40,
+	width: 20,
+	height: 20,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
