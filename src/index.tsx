@@ -8376,10 +8376,7 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-await updateDoc(docRef, { 
-      docId: docRef.id,
-      condoId: docRef.id 
-    });
+await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
@@ -15740,10 +15737,7 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-await updateDoc(docRef, { 
-      docId: docRef.id,
-      condoId: docRef.id 
-    });
+await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
@@ -23081,10 +23075,7 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-await updateDoc(docRef, { 
-      docId: docRef.id,
-      condoId: docRef.id 
-    });
+await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
@@ -30370,10 +30361,7 @@ paddingVertical: 8,
     const docRef = await addDoc(collection(db, "lots"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-await updateDoc(docRef, { 
-      docId: docRef.id,
-      condoId: docRef.id 
-    });
+await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
@@ -53365,11 +53353,7 @@ width: 33,
           ],
 
           arrStyles: [
-            `{
-color: '#121417',
-fontSize: 16,
-fontWeight: '700',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -53384,11 +53368,7 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{
-color: '#61758A',
-fontSize: 14,
-fontWeight: '400',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
