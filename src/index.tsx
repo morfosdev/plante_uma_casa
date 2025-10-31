@@ -8345,6 +8345,21 @@ paddingVertical: 8,
   const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
+// 🔹 Pega o condoId da variável no Flaxboll
+  const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
+
+  if (!condoId) {
+    console.warn("⚠️ Nenhum condomínio selecionado (condoId ausente).");
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Selecione um condomínio antes de salvar."],
+      },
+    });
+    return;
+  }
+
   // Monta os dados a salvar
   const newDoc = {
     owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
@@ -15693,6 +15708,21 @@ paddingVertical: 8,
   const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
+// 🔹 Pega o condoId da variável no Flaxboll
+  const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
+
+  if (!condoId) {
+    console.warn("⚠️ Nenhum condomínio selecionado (condoId ausente).");
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Selecione um condomínio antes de salvar."],
+      },
+    });
+    return;
+  }
+
   // Monta os dados a salvar
   const newDoc = {
     owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
@@ -23018,6 +23048,21 @@ paddingVertical: 8,
   const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
+// 🔹 Pega o condoId da variável no Flaxboll
+  const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
+
+  if (!condoId) {
+    console.warn("⚠️ Nenhum condomínio selecionado (condoId ausente).");
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Selecione um condomínio antes de salvar."],
+      },
+    });
+    return;
+  }
+
   // Monta os dados a salvar
   const newDoc = {
     owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
@@ -30290,6 +30335,21 @@ paddingVertical: 8,
   // Importa Firestore e salva o documento
   const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
+
+// 🔹 Pega o condoId da variável no Flaxboll
+  const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
+
+  if (!condoId) {
+    console.warn("⚠️ Nenhum condomínio selecionado (condoId ausente).");
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["Selecione um condomínio antes de salvar."],
+      },
+    });
+    return;
+  }
 
   // Monta os dados a salvar
   const newDoc = {
