@@ -2892,7 +2892,10 @@ paddingHorizontal: 16,
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+	placeholder: "Digite sua Senha",
+	secureTextEntry: true
+}`],
 
           stylesArray: [`{ 
 	padding: 5,
