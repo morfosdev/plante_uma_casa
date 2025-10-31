@@ -1426,6 +1426,7 @@ xmlns="http://www.w3.org/2000/svg"
         `{ 
 	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
+	height: 50,
 }
 
 `, `{ 
@@ -1460,13 +1461,25 @@ xmlns="http://www.w3.org/2000/svg"
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
-width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
-<Path       stroke="#FFF"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={10}
+    fill="red"
+    viewBox="0 0 20 10"
+    {...props}
+  >
+    <Rect width={20} height={3} fill="#fff" rx={1.5} />
+    <Rect width={15} height={3} y={7} fill="#fff" rx={1.5} />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4.37114e-07" y="8.74228e-07" width="20" height="3" rx="1.5" fill="white"/>
+<rect x="4.37114e-07" y="7" width="15" height="3" rx="1.5" fill="white"/>
+</svg>
+
       `,
 
       altura: "16px",
@@ -51973,6 +51986,7 @@ color: '#555',
         `{ 
 	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
+	height: 50,
 }
 
 `, `{ 
@@ -52007,13 +52021,25 @@ color: '#555',
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
-width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
-<Path       stroke="#FFF"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={10}
+    fill="red"
+    viewBox="0 0 20 10"
+    {...props}
+  >
+    <Rect width={20} height={3} fill="#fff" rx={1.5} />
+    <Rect width={15} height={3} y={7} fill="#fff" rx={1.5} />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4.37114e-07" y="8.74228e-07" width="20" height="3" rx="1.5" fill="white"/>
+<rect x="4.37114e-07" y="7" width="15" height="3" rx="1.5" fill="white"/>
+</svg>
+
       `,
 
       altura: "16px",
@@ -53043,6 +53069,7 @@ color: '#555',
         `{ 
 	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
+	height: 50,
 }
 
 `, `{ 
@@ -53077,13 +53104,25 @@ color: '#555',
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
-width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
-<Path       stroke="#FFF"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={10}
+    fill="red"
+    viewBox="0 0 20 10"
+    {...props}
+  >
+    <Rect width={20} height={3} fill="#fff" rx={1.5} />
+    <Rect width={15} height={3} y={7} fill="#fff" rx={1.5} />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4.37114e-07" y="8.74228e-07" width="20" height="3" rx="1.5" fill="white"/>
+<rect x="4.37114e-07" y="7" width="15" height="3" rx="1.5" fill="white"/>
+</svg>
+
       `,
 
       altura: "16px",
@@ -54172,6 +54211,7 @@ color: '#555',
         `{ 
 	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
+	height: 50,
 }
 
 `, `{ 
@@ -54206,13 +54246,25 @@ color: '#555',
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg     xmlns="http://www.w3.org/2000/svg"
-width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}   >
-<Path       stroke="#FFF"       strokeLinecap="round"       strokeLinejoin="round"       d="M13.5 1H.5m13 5H.5m13 5H.5"     />   </Svg>)
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={10}
+    fill="red"
+    viewBox="0 0 20 10"
+    {...props}
+  >
+    <Rect width={20} height={3} fill="#fff" rx={1.5} />
+    <Rect width={15} height={3} y={7} fill="#fff" rx={1.5} />
+  </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4.37114e-07" y="8.74228e-07" width="20" height="3" rx="1.5" fill="white"/>
+<rect x="4.37114e-07" y="7" width="15" height="3" rx="1.5" fill="white"/>
+</svg>
+
       `,
 
       altura: "16px",
