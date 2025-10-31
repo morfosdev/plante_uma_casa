@@ -58634,6 +58634,7 @@ bottom: 8,
 }`],
 
             functions:[()=>{}],            childrenItems:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -58743,6 +58744,39 @@ fontWeight: '700',
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#315E2D',
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: 'white',
+fontSize: 12,
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Enviar Comprovante`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
