@@ -53103,9 +53103,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -53135,7 +53135,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -53231,9 +53231,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -53263,7 +53263,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -53374,9 +53374,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -53406,7 +53406,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -53517,9 +53517,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -53549,7 +53549,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -53637,9 +53637,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -53669,7 +53669,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -54848,9 +54848,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -54880,7 +54880,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -54976,9 +54976,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -55008,7 +55008,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -55119,9 +55119,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -55151,7 +55151,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -55262,9 +55262,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -55294,7 +55294,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -55382,9 +55382,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -55414,7 +55414,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -57564,9 +57564,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -57596,7 +57596,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -57692,9 +57692,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -57724,7 +57724,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -57835,9 +57835,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -57867,7 +57867,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -57978,9 +57978,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -58010,7 +58010,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
@@ -58098,9 +58098,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -58130,7 +58130,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '400',
 color: '#555',
 }`
