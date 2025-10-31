@@ -51772,7 +51772,6 @@ padding: 18,
             styles:[`{ 
 	width: "100%",
 	maxWidth: 358,
-	height: 400,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	alignItems: "center",
