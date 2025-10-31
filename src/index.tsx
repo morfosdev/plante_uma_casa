@@ -53353,7 +53353,11 @@ width: 33,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#121417',
+fontSize: 16,
+fontWeight: '700',
+}`
           ],
 
           children: [
