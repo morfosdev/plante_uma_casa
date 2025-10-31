@@ -43338,7 +43338,12 @@ async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`lots`],
- arrWhere: [[() => ({ field: 'xx', operator: '==', value: 'xx' })]],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `email`, 
+        `==`, `$var_all.authUser.email`],
+        }})],
  arrFuncs: [() => {}],
  }})]
  , trigger: 'on init'
