@@ -54305,11 +54305,11 @@ placeholder: 'Ex: (00) 00000-0000',
 	width: '100%',
 }`],
 
-          path: [`sc.C2.forms.iptsChanges.userPhone`],
+          path: [`sc.C2.forms.editChanges.userPhone`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.userPhone`],
+          keyPath: [`sc.C2.forms.editChanges.userPhone`],
           value: [`$arg_callback`]
         }})],
 
@@ -54384,11 +54384,11 @@ placeholder: 'Pesquisar endereço',
 	width: '100%',
 }`],
 
-          path: [`sc.C2.forms.iptsChanges.userAddress`],
+          path: [`sc.C2.forms.editChanges.userAddress`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.userAddress`],
+          keyPath: [`sc.C2.forms.editChanges.userAddress`],
           value: [`$arg_callback`]
         }})],
 
