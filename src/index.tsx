@@ -52801,8 +52801,6 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 130,
-	height: 36,
 	borderRadius: 10,
 	paddingHorizontal: 30,
 	paddingVertical: 8,
