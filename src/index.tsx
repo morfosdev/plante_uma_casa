@@ -54377,7 +54377,6 @@ color: '#555555',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -54484,22 +54483,234 @@ color: '#555555',
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ flexDirection: "row", }`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, backgroundColor: "#FFF", flexDirection: "row", alignItems: "center"}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkboxGender";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+width: 15, 
+height: 15, 
+backgroundColor: "#FFF", 
+borderRadius: 10, 
+borderWidth: 2, 
+borderColor: "#315E2D", 
+marginRight: 5
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkboxGender", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#315E2D',
+width: 9,
+height: 9,
+top: 1,
+borderRadius: 10,
+alignSelf: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+width: 15, 
+height: 15, 
+backgroundColor: "#FFF", 
+borderRadius: 10, 
+borderWidth: 2, 
+borderColor: "#315E2D", 
+marginRight: 5
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkboxGender", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
         , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 11,
+fontWeight: '700',
+color: '#555555',
+}`
           ],
 
           children: [
-            `$var_sc.C2.forms.editChanges.userGender`
+            `Masculino`
           ],
 
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, backgroundColor: "#FFF", flexDirection: "row", alignItems: "center"}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkboxGender";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+width: 15, 
+height: 15, 
+backgroundColor: "#FFF", 
+borderRadius: 10, 
+borderWidth: 2, 
+borderColor: "#315E2D", 
+marginRight: 5
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkboxGender", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#315E2D',
+width: 9,
+height: 9,
+top: 1,
+borderRadius: 10,
+alignSelf: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+width: 15, 
+height: 15, 
+backgroundColor: "#FFF", 
+borderRadius: 10, 
+borderWidth: 2, 
+borderColor: "#315E2D", 
+marginRight: 5
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkboxGender", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 11,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `Feminino`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
