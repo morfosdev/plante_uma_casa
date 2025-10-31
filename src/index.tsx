@@ -43325,16 +43325,7 @@ async (...args) =>
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`lots`],
-            arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.b6.list`],
-          value: [`$arg_callback`]
-        }})],
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`lots`],
@@ -43344,7 +43335,11 @@ async (...args) =>
         `email`, 
         `==`, `$var_all.authUser.email`],
         }})],
- arrFuncs: [() => {}],
+ arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.b6.list`],
+          value: [`$arg_callback`]
+        }})],
  }})]
  , trigger: 'on init'
 }})],
