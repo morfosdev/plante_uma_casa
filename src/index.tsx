@@ -51285,6 +51285,109 @@ tools.functions.setVar({
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{
+alignItems: 'center',
+flexDirection: 'row',
+paddingHorizontal: '24',
+paddingVertical: '8',
+borderRadius: '8px',
+width: '100%',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [false]
+        }}), 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c2edit");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={15}
+    fill="red"
+    viewBox="0 0 18 15"
+    {...props}
+  >
+    <Path
+      fill="#315E2D"
+      d="M6.983.207a.75.75 0 1 1 1.034 1.086L2.264 6.75H17.25a.75.75 0 0 1 0 1.5H2.288l5.73 5.457a.75.75 0 1 1-1.035 1.086L.44 8.56a1.498 1.498 0 0 1 .013-2.134l6.53-6.22Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.98287 0.206799C7.2825 -0.0785762 7.75763 -0.0673261 8.043 0.232674C8.32875 0.532674 8.31675 1.00742 8.01713 1.29317L2.26387 6.7498H17.25C17.664 6.7498 18 7.0858 18 7.4998C18 7.9138 17.664 8.2498 17.25 8.2498H2.28788L8.01713 13.7068C8.31713 13.9925 8.32875 14.4673 8.043 14.7673C7.89563 14.9218 7.698 14.9998 7.5 14.9998C7.314 14.9998 7.128 14.9312 6.98287 14.7928L0.4395 8.5603C0.156 8.27717 0 7.90067 0 7.4998C0 7.09892 0.156 6.72242 0.452625 6.42655L6.98287 0.206799Z" fill="#315E2D"/>
+</svg>
+
+      `,
+
+      altura: "20px",
+
+      largura: "20px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+fontWeight: '400',
+color: '#555',
+}`
+          ],
+
+          children: [
+            `Meu Perfil`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ 
 	width: 20,
 	height: 20,
@@ -52235,6 +52338,109 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  arrFunctions: [() => [ "all.toggles.c3Menu", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+alignItems: 'center',
+flexDirection: 'row',
+paddingHorizontal: '24',
+paddingVertical: '8',
+borderRadius: '8px',
+width: '100%',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [false]
+        }}), 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c2edit");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={15}
+    fill="red"
+    viewBox="0 0 18 15"
+    {...props}
+  >
+    <Path
+      fill="#315E2D"
+      d="M6.983.207a.75.75 0 1 1 1.034 1.086L2.264 6.75H17.25a.75.75 0 0 1 0 1.5H2.288l5.73 5.457a.75.75 0 1 1-1.035 1.086L.44 8.56a1.498 1.498 0 0 1 .013-2.134l6.53-6.22Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.98287 0.206799C7.2825 -0.0785762 7.75763 -0.0673261 8.043 0.232674C8.32875 0.532674 8.31675 1.00742 8.01713 1.29317L2.26387 6.7498H17.25C17.664 6.7498 18 7.0858 18 7.4998C18 7.9138 17.664 8.2498 17.25 8.2498H2.28788L8.01713 13.7068C8.31713 13.9925 8.32875 14.4673 8.043 14.7673C7.89563 14.9218 7.698 14.9998 7.5 14.9998C7.314 14.9998 7.128 14.9312 6.98287 14.7928L0.4395 8.5603C0.156 8.27717 0 7.90067 0 7.4998C0 7.09892 0.156 6.72242 0.452625 6.42655L6.98287 0.206799Z" fill="#315E2D"/>
+</svg>
+
+      `,
+
+      altura: "20px",
+
+      largura: "20px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+fontWeight: '400',
+color: '#555',
+}`
+          ],
+
+          children: [
+            `Meu Perfil`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -53249,6 +53455,109 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
  arrFunctions: [() => [ "all.toggles.c3Menu", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+alignItems: 'center',
+flexDirection: 'row',
+paddingHorizontal: '24',
+paddingVertical: '8',
+borderRadius: '8px',
+width: '100%',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.c3Menu`],
+          value: [false]
+        }}), 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c2edit");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={15}
+    fill="red"
+    viewBox="0 0 18 15"
+    {...props}
+  >
+    <Path
+      fill="#315E2D"
+      d="M6.983.207a.75.75 0 1 1 1.034 1.086L2.264 6.75H17.25a.75.75 0 0 1 0 1.5H2.288l5.73 5.457a.75.75 0 1 1-1.035 1.086L.44 8.56a1.498 1.498 0 0 1 .013-2.134l6.53-6.22Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.98287 0.206799C7.2825 -0.0785762 7.75763 -0.0673261 8.043 0.232674C8.32875 0.532674 8.31675 1.00742 8.01713 1.29317L2.26387 6.7498H17.25C17.664 6.7498 18 7.0858 18 7.4998C18 7.9138 17.664 8.2498 17.25 8.2498H2.28788L8.01713 13.7068C8.31713 13.9925 8.32875 14.4673 8.043 14.7673C7.89563 14.9218 7.698 14.9998 7.5 14.9998C7.314 14.9998 7.128 14.9312 6.98287 14.7928L0.4395 8.5603C0.156 8.27717 0 7.90067 0 7.4998C0 7.09892 0.156 6.72242 0.452625 6.42655L6.98287 0.206799Z" fill="#315E2D"/>
+</svg>
+
+      `,
+
+      altura: "20px",
+
+      largura: "20px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+fontWeight: '400',
+color: '#555',
+}`
+          ],
+
+          children: [
+            `Meu Perfil`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
         
 
           (...args:any) => <Elements.DynView pass={{
