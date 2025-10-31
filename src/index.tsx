@@ -52562,8 +52562,8 @@ placeholder: 'Pesquisar endereço',
             elementsProperties:['{}'],
 
             styles:[`{ 
-width: 20, 
-height: 20, 
+width: 15, 
+height: 15, 
 backgroundColor: "#FFF", 
 borderRadius: 10, 
 borderWidth: 2, 
@@ -52582,9 +52582,9 @@ marginRight: 5
 
             styles:[`{
 backgroundColor: '#315E2D',
-width: 12,
-height: 12,
-top: 2,
+width: 9,
+height: 9,
+top: 1,
 borderRadius: 10,
 alignSelf: 'center',
 }`],
@@ -52604,8 +52604,8 @@ alignSelf: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-width: 20, 
-height: 20, 
+width: 15, 
+height: 15, 
 backgroundColor: "#FFF", 
 borderRadius: 10, 
 borderWidth: 2, 
@@ -52628,7 +52628,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 11,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -52669,8 +52669,8 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{ 
-width: 20, 
-height: 20, 
+width: 15, 
+height: 15, 
 backgroundColor: "#FFF", 
 borderRadius: 10, 
 borderWidth: 2, 
@@ -52689,9 +52689,9 @@ marginRight: 5
 
             styles:[`{
 backgroundColor: '#315E2D',
-width: 12,
-height: 12,
-top: 2,
+width: 9,
+height: 9,
+top: 1,
 borderRadius: 10,
 alignSelf: 'center',
 }`],
@@ -52711,8 +52711,8 @@ alignSelf: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-width: 20, 
-height: 20, 
+width: 15, 
+height: 15, 
 backgroundColor: "#FFF", 
 borderRadius: 10, 
 borderWidth: 2, 
@@ -52735,7 +52735,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 11,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -54271,8 +54271,8 @@ placeholder: 'Pesquisar endereço',
             elementsProperties:['{}'],
 
             styles:[`{ 
-width: 20, 
-height: 20, 
+width: 15, 
+height: 15, 
 backgroundColor: "#FFF", 
 borderRadius: 10, 
 borderWidth: 2, 
@@ -54291,9 +54291,9 @@ marginRight: 5
 
             styles:[`{
 backgroundColor: '#315E2D',
-width: 12,
-height: 12,
-top: 2,
+width: 9,
+height: 9,
+top: 1,
 borderRadius: 10,
 alignSelf: 'center',
 }`],
@@ -54313,8 +54313,8 @@ alignSelf: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-width: 20, 
-height: 20, 
+width: 15, 
+height: 15, 
 backgroundColor: "#FFF", 
 borderRadius: 10, 
 borderWidth: 2, 
@@ -54337,7 +54337,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 11,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -54379,8 +54379,8 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{ 
-width: 20, 
-height: 20, 
+width: 15, 
+height: 15, 
 backgroundColor: "#FFF", 
 borderRadius: 10, 
 borderWidth: 2, 
@@ -54399,9 +54399,9 @@ marginRight: 5
 
             styles:[`{
 backgroundColor: '#315E2D',
-width: 12,
-height: 12,
-top: 2,
+width: 9,
+height: 9,
+top: 1,
 borderRadius: 10,
 alignSelf: 'center',
 }`],
@@ -54421,8 +54421,8 @@ alignSelf: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-width: 20, 
-height: 20, 
+width: 15, 
+height: 15, 
 backgroundColor: "#FFF", 
 borderRadius: 10, 
 borderWidth: 2, 
@@ -54445,7 +54445,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 11,
 fontWeight: '700',
 color: '#555555',
 }`
