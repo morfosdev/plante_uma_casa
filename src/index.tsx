@@ -8345,7 +8345,7 @@ paddingVertical: 8,
   const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-// 🔹 Pega o condoId da variável no Flaxboll
+// Pega o condoId salvo na A4
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
 
   if (!condoId) {
@@ -8368,6 +8368,7 @@ paddingVertical: 8,
 		area: getVal("sc.A7.forms.iptsChanges.area"),
     totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+		condoId: condoId, // associa o lote ao condomínio
     createdAt: serverTimestamp(),
   };
 
@@ -15708,7 +15709,7 @@ paddingVertical: 8,
   const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-// 🔹 Pega o condoId da variável no Flaxboll
+// Pega o condoId salvo na A4
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
 
   if (!condoId) {
@@ -15731,6 +15732,7 @@ paddingVertical: 8,
 		area: getVal("sc.A7.forms.iptsChanges.area"),
     totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+		condoId: condoId, // associa o lote ao condomínio
     createdAt: serverTimestamp(),
   };
 
@@ -23048,7 +23050,7 @@ paddingVertical: 8,
   const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-// 🔹 Pega o condoId da variável no Flaxboll
+// Pega o condoId salvo na A4
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
 
   if (!condoId) {
@@ -23071,6 +23073,7 @@ paddingVertical: 8,
 		area: getVal("sc.A7.forms.iptsChanges.area"),
     totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+		condoId: condoId, // associa o lote ao condomínio
     createdAt: serverTimestamp(),
   };
 
@@ -30336,7 +30339,7 @@ paddingVertical: 8,
   const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-// 🔹 Pega o condoId da variável no Flaxboll
+// Pega o condoId salvo na A4
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
 
   if (!condoId) {
@@ -30359,6 +30362,7 @@ paddingVertical: 8,
 		area: getVal("sc.A7.forms.iptsChanges.area"),
     totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+		condoId: condoId, // associa o lote ao condomínio
     createdAt: serverTimestamp(),
   };
 
