@@ -53305,15 +53305,14 @@ width: 33,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ 
+            styles:[`{ 
 	width: "100%",
-	maxWidth: 300,
-	minHeight: 80,
 	backgroundColor: "#FFF",
-	padding: 10,
+	paddingVertical: 8,
+	paddingHorizontal: 14,
 	flexDirection: 'row',
-}`, `{ alignItems: "center", justifyContent: "center" }`],
+	alignItems: "center", 
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -53324,7 +53323,7 @@ width: 33,
       styles:[{
 	width: '60px',
 	height:'60px',
-	borderRadius: '6px',
+	borderRadius: 10,
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
 }],
