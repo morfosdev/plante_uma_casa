@@ -38267,7 +38267,8 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, `$var_.all.authUser.docId`],
+        `users`, 
+        `$var_.all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -43268,7 +43269,8 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, `$var_.all.authUser.docId`],
+        `users`, 
+        `$var_.all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -51632,7 +51634,8 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, `$var_.all.authUser.docId`],
+        `users`, 
+        `$var_.all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
