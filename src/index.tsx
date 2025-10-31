@@ -52943,7 +52943,7 @@ tools.functions.setVar({
           arrStyles: [
             `{ 
 	color: "#FFF",
-	fontSize: 15,
+	fontSize: 12,
 	fontWeight: '500',
 }`
           ],
