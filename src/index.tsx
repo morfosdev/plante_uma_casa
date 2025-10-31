@@ -52782,6 +52782,7 @@ color: '#555555',
             `{
 		color: 'red',
 		marginBottom: 10,
+	fontSize: 11,
 }`
           ],
 
