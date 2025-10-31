@@ -1426,10 +1426,8 @@ xmlns="http://www.w3.org/2000/svg"
         `{ 
 	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
-	height: 50,
-}
-
-`, `{ 
+	height: 70,
+}`, `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
@@ -51986,10 +51984,8 @@ color: '#555',
         `{ 
 	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
-	height: 50,
-}
-
-`, `{ 
+	height: 70,
+}`, `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
@@ -53069,10 +53065,8 @@ color: '#555',
         `{ 
 	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
-	height: 50,
-}
-
-`, `{ 
+	height: 70,
+}`, `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
@@ -54211,10 +54205,8 @@ color: '#555',
         `{ 
 	backgroundColor: "$var_all.colors.primary",
 	alignItems: "center",
-	height: 50,
-}
-
-`, `{ 
+	height: 70,
+}`, `{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
