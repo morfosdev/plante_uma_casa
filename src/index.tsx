@@ -51840,10 +51840,11 @@ padding: 18,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 10,
 fontWeight: '400',
 color: '#555555',
-width: '75%',
+paddingHorizontal: 15,
+textAlign: 'center',
 }`
           ],
 
