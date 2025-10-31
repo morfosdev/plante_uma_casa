@@ -38295,12 +38295,12 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
+          keyPath: [`sc.B9.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -43277,12 +43277,12 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
+          keyPath: [`sc.B9.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -50013,12 +50013,12 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
+          keyPath: [`sc.B9.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
