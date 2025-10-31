@@ -53343,7 +53343,7 @@ width: 33,
             elementsProperties:['{}'],
 
             styles:[`{
-	padding: 10,
+	padding: 6,
 }`],
 
             functions:[()=>{}],            childrenItems:[
