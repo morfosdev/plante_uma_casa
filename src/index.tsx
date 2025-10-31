@@ -58634,7 +58634,6 @@ bottom: 8,
 }`],
 
             functions:[()=>{}],            childrenItems:[
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -58727,80 +58726,6 @@ flexDirection: 'row',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: '#555555',
-fontSize: 12,
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Valor Total da Obra`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 14,
-fontWeight: '400',
-left: 4,
-}`
-          ],
-
-          children: [
-            `R$ 2.200.000`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#F0F1FF',
-borderRadius: 100,
-height: 8,
-width: '100%',
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#315E2D',
-borderRadius: 100,
-height: 8,
-width: '60%',
-bottom: 8,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
