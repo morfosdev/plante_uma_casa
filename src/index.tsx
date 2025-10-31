@@ -54557,8 +54557,6 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 130,
-	height: 36,
 	borderRadius: 10,
 	paddingHorizontal: 30,
 	paddingVertical: 8,
@@ -54701,7 +54699,7 @@ tools.functions.setVar({
           arrStyles: [
             `{ 
 	color: "#FFF",
-	fontSize: 15,
+	fontSize: 12,
 	fontWeight: '500',
 }`
           ],
