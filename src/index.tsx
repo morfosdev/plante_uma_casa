@@ -37822,7 +37822,12 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`sc.B9.forms.editChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -38261,7 +38266,21 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
             arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [() => {}],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.forms.editChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b9.editSteps`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -42804,7 +42823,12 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`sc.B9.forms.editChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -43243,7 +43267,21 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
             arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [() => {}],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.forms.editChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b9.editSteps`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -49540,7 +49578,12 @@ fontWeight: '700',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`sc.B9.forms.editChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -49979,7 +50022,21 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
    arrRefStrings: [
         `steps`, `$var_sc.B9.forms.editChanges.docId`],
             arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [() => {}],
+            arrFuncs: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.forms.editChanges`],
+          value: [undefined]
+        }}), 
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b9.editSteps`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})],
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
