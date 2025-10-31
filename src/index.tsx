@@ -52547,7 +52547,7 @@ placeholder: 'Pesquisar endereço',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
-  const path = "all.toggles.checkboxMasculino";
+  const path = "all.toggles.checkboxGender";
   const currState = tools.getCtData(path);
   tools.functions.setVar({
 		args: '',
@@ -52573,7 +52573,7 @@ marginRight: 5
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.checkboxMasculino", "==", false ]]
+ arrFunctions: [() => [ "all.toggles.checkboxGender", "==", false ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
 
@@ -52615,7 +52615,7 @@ marginRight: 5
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.checkboxMasculino", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.checkboxGender", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[() =><></>],
 
@@ -52654,7 +52654,7 @@ color: '#555555',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
-  const path = "all.toggles.checkboxFeminino";
+  const path = "all.toggles.checkboxGender";
   const currState = tools.getCtData(path);
   tools.functions.setVar({
 		args: '',
@@ -52680,7 +52680,7 @@ marginRight: 5
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.checkboxFeminino", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.checkboxGender", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
 
@@ -52722,7 +52722,7 @@ marginRight: 5
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.checkboxFeminino", "==", false ]]
+ arrFunctions: [() => [ "all.toggles.checkboxGender", "==", false ]]
  , trigger: 'on listen'
 }})],            childrenItems:[() =><></>],
 
