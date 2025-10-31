@@ -58607,8 +58607,8 @@ bottom: 8,
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 20,
+	height: 20,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
@@ -58814,8 +58814,8 @@ fontWeight: '700',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 10,
-	height: 10,
+	width: 20,
+	height: 20,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
