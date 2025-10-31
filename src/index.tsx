@@ -51849,7 +51849,7 @@ width: '75%',
           ],
 
           children: [
-            `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`
+            `Ambiente exclusivo para clientes acompanharem o desenvolvimento da construção.`
           ],
 
           args,
