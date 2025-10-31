@@ -51790,7 +51790,7 @@ padding: 18,
 
             styles:[`{ 
 	width: "100%",
-	height: "131px",
+	height: "110px",
 	backgroundColor: "$var_all.colors.primary",		
 	alignItems: 'center',
 	justifyContent: 'center',
@@ -51804,8 +51804,8 @@ padding: 18,
       elementsProperties:[{}],
 
       styles:[{
-	width: 163,
-	height: 98,
+	width: 125,
+	height: 75,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -51911,6 +51911,7 @@ color: '#555555',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -51953,6 +51954,23 @@ color: '#fff',
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
