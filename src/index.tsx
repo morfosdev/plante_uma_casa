@@ -52124,7 +52124,6 @@ color: '#CCCCCC',
             elementsProperties:['{}'],
 
             styles:[`{
-paddingVertical: 30,
 paddingHorizontal: 15,
 backgroundColor: '#fff',
 borderRadius: 20,
