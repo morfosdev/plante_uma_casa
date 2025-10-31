@@ -58748,6 +58748,24 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -58755,6 +58773,10 @@ fontWeight: '700',
             styles:[`{
 backgroundColor: '#315E2D',
 width: '100%',
+alignItems: 'center',
+justifyContent: 'center',
+padding: 4,
+borderRadius: 15,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
