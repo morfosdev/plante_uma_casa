@@ -53845,7 +53845,11 @@ width: 33,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#555555',
+fontSize: 12,
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -54074,7 +54078,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `pauloantonio@gmail.com`
+            `$var_sc.C2.forms.editChanges.userEmail`
           ],
 
           args,
