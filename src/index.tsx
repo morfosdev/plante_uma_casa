@@ -5371,6 +5371,11 @@ width: 15,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.condId`],
+          value: [`$arg_item.docId`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a7list");
