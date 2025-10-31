@@ -57379,8 +57379,7 @@ tools.setData({
 'forms': { 'iptsChanges': {   } 
  } 
 , 
-'currId': "", 'statics': 
-{
+'currId': "", 'statics': {
   steps: [
     {
       label: "1. Planejamento e Projeto",
@@ -57388,16 +57387,16 @@ tools.setData({
         {stepId: "s1.1", label: "Definição de Orçamento" },
         {stepId: "s1.2", label: "Escolha do Terreno" },
         {stepId: "s1.3", label: "Contratação de arquiteto/engenheiro" },
-        {stepId: "s1.4", label: "Elaboração do projeto arquitetônico e complementare..." },
-        {stepId: "s1.5", label: "Aprovação na prefeitura e órgãos competentes...." },
+        {stepId: "s1.4", label: "Elaboração do projeto arquitetônico e complementares (estrutural, elétrico, hidráulico)" },
+        {stepId: "s1.5", label: "Aprovação na prefeitura e órgãos competentes" },
       ],
 		},
     {
       label: "2. Preparo do Terreno",
       subs: [
-        {stepId: "s2.1", label: "Limpeza e terraplenagem." },
-        {stepId: "s2.2", label: "Sondagem do solo (se necessário)." },
-        {stepId: "s2.3", label: "Marcação da obra (gabarito)." },
+        {stepId: "s2.1", label: "Limpeza e terraplenagem" },
+        {stepId: "s2.2", label: "Sondagem do solo (se necessário)" },
+        {stepId: "s2.3", label: "Marcação da obra (gabarito)" },
         {stepId: "s2.4", label: "..." },
         {stepId: "s2.5", label: "..." },
       ],
@@ -57405,9 +57404,9 @@ tools.setData({
     {
       label: "3. Fundações",
       subs: [
-        {stepId: "s3.1", label: "..." },
-        {stepId: "s3.2", label: "..." },
-        {stepId: "s3.3", label: "..." },
+        {stepId: "s3.1", label: "Escavação" },
+        {stepId: "s3.2", label: "Fundação (sapatas, estacas, radier, conforme projeto)" },
+        {stepId: "s3.3", label: "Instalação inicial de infraestrutura (tubulações enterradas)" },
         {stepId: "s3.4", label: "..." },
         {stepId: "s3.5", label: "..." },
       ],
@@ -57415,13 +57414,43 @@ tools.setData({
     {
       label: "4. Estrutura",
       subs: [
-        {stepId: "s4.1", label: "..." },
-        {stepId: "s4.2", label: "..." },
-        {stepId: "s4.3", label: "..." },
+        {stepId: "s4.1", label: "Pilares, vigas e lajes" },
+        {stepId: "s4.2", label: "Elevação da alvenaria (paredes)" },
+        {stepId: "s4.3", label: "Estrutura da cobertura" },
         {stepId: "s4.4", label: "..." },
         {stepId: "s4.5", label: "..." },
       ],
-    }
+    },
+	{
+      label: "5. Fechamentos e Cobertura",
+      subs: [
+        {stepId: "s5.1", label: "Cobertura (telhado ou laje impermeabilizada)" },
+        {stepId: "s5.2", label: "Instalação de portas e janelas (esquadrias)" },
+        {stepId: "s5.3", label: "Revestimentos externos" },
+        {stepId: "s5.4", label: "..." },
+        {stepId: "s5.5", label: "..." },
+      ],
+    },
+	{
+      label: "6. Instalações e Acabamentos",
+      subs: [
+        {stepId: "s6.1", label: "Elétrica, hidráulica e gás" },
+        {stepId: "s6.2", label: "Revestimentos internos (pisos, azulejos, forros)" },
+        {stepId: "s6.3", label: "Pintura" },
+        {stepId: "s6.4", label: "Louças, metais e iluminação" },
+        {stepId: "s6.5", label: "..." },
+      ],
+    },
+	{
+      label: "7. Entrega e Regularização",
+      subs: [
+        {stepId: "s7.1", label: "Vistoria final" },
+        {stepId: "s7.2", label: "Ajustes e correções (pós-obra)" },
+        {stepId: "s7.3", label: "Emissão do “Habite-se”" },
+        {stepId: "s7.4", label: "Registro no cartório" },
+        {stepId: "s7.5", label: "..." },
+      ],
+    },
   ]
 } } 
 , 'A0C': { 'forms': { 'iptsChanges': {
