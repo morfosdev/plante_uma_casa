@@ -1480,9 +1480,9 @@ xmlns="http://www.w3.org/2000/svg"
 
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
       preenchimento: ['black'],
 
@@ -1506,25 +1506,20 @@ xmlns="http://www.w3.org/2000/svg"
 	justifyContent: "flex-start"
  }`, `{ padding: 10 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+            functions:[()=>{}],            childrenItems:[
 
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-	color: "#FFF"
-}`
-          ],
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
 
-          children: [
-            `Título`
-          ],
+      styles:[{
+	width: 98,
+	height: 59,
+}],
 
-          args,
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
 
-        }}/>],
+      args,
+    }}/>],
 
             args,
           }}/>
@@ -5373,8 +5368,8 @@ width: 15,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.condoData`],
-          value: [`$arg_item`]
+          keyPath: [`sc.A7.forms.iptsChanges.condId`],
+          value: [`$arg_item.docId`]
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
@@ -52043,9 +52038,9 @@ color: '#555',
 
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
       preenchimento: ['black'],
 
@@ -52069,25 +52064,20 @@ color: '#555',
 	justifyContent: "flex-start"
  }`, `{ padding: 10 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+            functions:[()=>{}],            childrenItems:[
 
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-	color: "#FFF"
-}`
-          ],
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
 
-          children: [
-            `Título`
-          ],
+      styles:[{
+	width: 98,
+	height: 59,
+}],
 
-          args,
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
 
-        }}/>],
+      args,
+    }}/>],
 
             args,
           }}/>
@@ -53124,9 +53114,9 @@ color: '#555',
 
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
       preenchimento: ['black'],
 
@@ -53150,25 +53140,20 @@ color: '#555',
 	justifyContent: "flex-start"
  }`, `{ padding: 10 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+            functions:[()=>{}],            childrenItems:[
 
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-	color: "#FFF"
-}`
-          ],
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
 
-          children: [
-            `Título`
-          ],
+      styles:[{
+	width: 98,
+	height: 59,
+}],
 
-          args,
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
 
-        }}/>],
+      args,
+    }}/>],
 
             args,
           }}/>
@@ -54264,9 +54249,9 @@ color: '#555',
 
       `,
 
-      altura: "16px",
+      altura: "24px",
 
-      largura: "16px",
+      largura: "24px",
 
       preenchimento: ['black'],
 
@@ -54290,25 +54275,20 @@ color: '#555',
 	justifyContent: "flex-start"
  }`, `{ padding: 10 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+            functions:[()=>{}],            childrenItems:[
 
-          arrStyles: [
-            `{
-	fontSize: "$var_all.texts.sizes.large",
-	color: "#FFF"
-}`
-          ],
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
 
-          children: [
-            `Título`
-          ],
+      styles:[{
+	width: 98,
+	height: 59,
+}],
 
-          args,
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
 
-        }}/>],
+      args,
+    }}/>],
 
             args,
           }}/>
