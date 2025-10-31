@@ -52115,7 +52115,7 @@ color: '#CCCCCC',
             args,
           }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{ padding: 10, alignItems: 'center', }`],
+            styles: [`{ padding: 10, }`],
             arrProps: [],
             arrItems: [
         
