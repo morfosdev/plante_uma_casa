@@ -51941,7 +51941,7 @@ paddingVertical: 7,
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 12,
 fontWeight: '700',
 color: '#fff',
 }`
@@ -52004,7 +52004,7 @@ color: '#fff',
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 12,
 fontWeight: '400',
 color: '#CCCCCC',
 }`
