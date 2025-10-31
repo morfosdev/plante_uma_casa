@@ -51285,6 +51285,24 @@ tools.functions.setVar({
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{
 alignItems: 'center',
 flexDirection: 'row',
@@ -51373,7 +51391,7 @@ color: '#555',
           ],
 
           children: [
-            `Meu Perfil`
+            `Voltar`
           ],
 
           args,
@@ -52343,6 +52361,24 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{
 alignItems: 'center',
 flexDirection: 'row',
@@ -52431,7 +52467,7 @@ color: '#555',
           ],
 
           children: [
-            `Meu Perfil`
+            `Voltar`
           ],
 
           args,
@@ -53460,6 +53496,24 @@ width={14}     height={12}     fill="red"     viewBox="0 0 14 12"     {...props}
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{
 alignItems: 'center',
 flexDirection: 'row',
@@ -53548,7 +53602,7 @@ color: '#555',
           ],
 
           children: [
-            `Meu Perfil`
+            `Voltar`
           ],
 
           args,
