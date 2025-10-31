@@ -58664,7 +58664,11 @@ flexDirection: 'row',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#555555',
+fontSize: 12,
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -58679,7 +58683,11 @@ flexDirection: 'row',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#CCCCCC',
+fontSize: 12,
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -58712,7 +58720,11 @@ flexDirection: 'row',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#555555',
+fontSize: 12,
+fontWeight: '700',
+}`
           ],
 
           children: [
