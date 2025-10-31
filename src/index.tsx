@@ -58484,7 +58484,6 @@ width: 33,
         `{
 	width: "100%",
 	height: "100%",
-	alignItems: 'center',
 }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -58502,69 +58501,6 @@ width: 33,
  }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	width: "100%",
-	maxWidth: 300,
-	minHeight: 80,
-	backgroundColor: "#FFF",
-	padding: 10,
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Valor total da obra`
-          ],
-
-          args,
-
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	padding: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `R$ 2.200,00`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
@@ -58634,7 +58570,7 @@ left: 4,
 backgroundColor: '#F0F1FF',
 borderRadius: 100,
 height: 8,
-width: 272,
+width: '100%',
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -58650,7 +58586,7 @@ width: 272,
 backgroundColor: '#315E2D',
 borderRadius: 100,
 height: 8,
-width: 221,
+width: '60%',
 bottom: 8,
 }`],
 
