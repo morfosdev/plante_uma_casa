@@ -53434,7 +53434,7 @@ fontWeight: '400',
 fontSize: 14,
 fontWeight: '400',
 color: '#121417',
-paddingVertical: 15,
+paddingHorizontal: 15,
 }`
           ],
 
