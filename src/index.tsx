@@ -51928,11 +51928,16 @@ paddingVertical: 7,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c2register");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.checkboxGender`],
+          value: [true]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
