@@ -1479,9 +1479,9 @@ xmlns="http://www.w3.org/2000/svg"
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -53778,9 +53778,9 @@ color: '#555',
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -55523,9 +55523,9 @@ color: '#555',
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -58239,9 +58239,9 @@ color: '#555',
 
       `,
 
-      altura: "24px",
+      altura: "16px",
 
-      largura: "24px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
