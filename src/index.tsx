@@ -53418,11 +53418,7 @@ fontWeight: '400',
           ],
 
           arrStyles: [
-            `{
-fontSize: 14,
-fontWeight: '400',
-color: '#121417',
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
