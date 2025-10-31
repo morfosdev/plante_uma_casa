@@ -1507,8 +1507,8 @@ alignItems: 'center',
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: 71,
+	height: 42,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -52082,7 +52082,7 @@ color: '#CCCCCC',
             styles:[`{
 	backgroundColor: "$var_all.colors.primary",
 	padding: 4,
-	height: 70,
+	height: 50,
 	alignItems: 'center',
 }`],
 
@@ -52099,8 +52099,8 @@ color: '#CCCCCC',
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: 71,
+	height: 42,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -53795,8 +53795,8 @@ alignItems: 'center',
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: 71,
+	height: 42,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -55533,8 +55533,8 @@ alignItems: 'center',
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: 71,
+	height: 42,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -58244,8 +58244,8 @@ alignItems: 'center',
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: 71,
+	height: 42,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
