@@ -43325,21 +43325,21 @@ async (...args) =>
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
- functions.firebase.where({ args, pass:{
-
-  arrRefStrings: [`lots`],
- arrWhere: [(...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        `email`, 
-        `==`, `$var_all.authUser.email`],
-        }})],
- arrFuncs: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`lots`],
+            arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b6.list`],
           value: [`$arg_callback`]
         }})],
+        }}), async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`lots`],
+ arrWhere: [[() => ({ field: 'xx', operator: '==', value: 'xx' })]],
+ arrFuncs: [() => {}],
  }})]
  , trigger: 'on init'
 }})],
@@ -53432,14 +53432,9 @@ paddingHorizontal: 15,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+padding: 10,
+}`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
