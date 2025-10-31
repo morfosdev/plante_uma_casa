@@ -44515,6 +44515,13 @@ paddingHorizontal: 16,
     tools.setData({ path: pathEdit, value: true });
     tools.setData({ path: pathNew, value: false });
 
+// Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+// Campos específicos importantes
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
@@ -45035,6 +45042,13 @@ paddingHorizontal: 16,
     tools.setData({ path: pathEdit, value: true });
     tools.setData({ path: pathNew, value: false });
 
+// Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+// Campos específicos importantes
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
@@ -45555,6 +45569,13 @@ paddingHorizontal: 16,
     tools.setData({ path: pathEdit, value: true });
     tools.setData({ path: pathNew, value: false });
 
+// Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+// Campos específicos importantes
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
@@ -46074,6 +46095,13 @@ paddingHorizontal: 16,
     tools.setData({ path: pathEdit, value: true });
     tools.setData({ path: pathNew, value: false });
 
+// Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+// Campos específicos importantes
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
@@ -53928,6 +53956,13 @@ paddingHorizontal: 16,
     tools.setData({ path: pathEdit, value: true });
     tools.setData({ path: pathNew, value: false });
 
+// Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+// Campos específicos importantes
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
@@ -54448,6 +54483,13 @@ paddingHorizontal: 16,
     tools.setData({ path: pathEdit, value: true });
     tools.setData({ path: pathNew, value: false });
 
+// Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+// Campos específicos importantes
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
@@ -54968,6 +55010,13 @@ paddingHorizontal: 16,
     tools.setData({ path: pathEdit, value: true });
     tools.setData({ path: pathNew, value: false });
 
+// Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+// Campos específicos importantes
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
@@ -55487,6 +55536,13 @@ paddingHorizontal: 16,
     tools.setData({ path: pathEdit, value: true });
     tools.setData({ path: pathNew, value: false });
 
+// Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+// Campos específicos importantes
     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
