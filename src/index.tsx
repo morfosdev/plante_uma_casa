@@ -53372,7 +53372,11 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#61758A',
+fontSize: 14,
+fontWeight: '400',
+}`
           ],
 
           children: [
