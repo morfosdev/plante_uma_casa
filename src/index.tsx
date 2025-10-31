@@ -57382,7 +57382,7 @@ tools.setData({
 'currId': "", 'statics': {
   steps: [
     {
-      label: "1. Planejamento e Projeto",
+      label: "1. PlanejamentoXX e Projeto",
       subs: [
         {stepId: "s1.1", label: "Definição de Orçamento" },
         {stepId: "s1.2", label: "Escolha do Terreno" },
