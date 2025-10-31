@@ -53365,7 +53365,11 @@ width: 33,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#121417',
+fontSize: 16,
+fontWeight: '700',
+}`
           ],
 
           children: [
@@ -53380,7 +53384,11 @@ width: 33,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: '#61758A',
+fontSize: 14,
+fontWeight: '400',
+}`
           ],
 
           children: [
