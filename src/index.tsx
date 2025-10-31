@@ -1430,6 +1430,7 @@ xmlns="http://www.w3.org/2000/svg"
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "space-between",
+	padding: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -1495,14 +1496,10 @@ xmlns="http://www.w3.org/2000/svg"
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+            styles:[`{
+flex: 1,
+alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -1540,8 +1537,8 @@ xmlns="http://www.w3.org/2000/svg"
       elementsProperties:[{}],
 
       styles:[{
-height: 120,
-width: 120,
+height: 33,
+width: 33,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
@@ -51999,6 +51996,7 @@ color: '#555',
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "space-between",
+	padding: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -52064,14 +52062,10 @@ color: '#555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+            styles:[`{
+flex: 1,
+alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -52109,8 +52103,8 @@ color: '#555',
       elementsProperties:[{}],
 
       styles:[{
-height: 120,
-width: 120,
+height: 33,
+width: 33,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
@@ -53086,6 +53080,7 @@ color: '#555',
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "space-between",
+	padding: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -53151,14 +53146,10 @@ color: '#555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+            styles:[`{
+flex: 1,
+alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -53196,8 +53187,8 @@ color: '#555',
       elementsProperties:[{}],
 
       styles:[{
-height: 120,
-width: 120,
+height: 33,
+width: 33,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
@@ -54232,6 +54223,7 @@ color: '#555',
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "space-between",
+	padding: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -54297,14 +54289,10 @@ color: '#555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+            styles:[`{
+flex: 1,
+alignItems: 'center',
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -54342,8 +54330,8 @@ color: '#555',
       elementsProperties:[{}],
 
       styles:[{
-height: 120,
-width: 120,
+height: 33,
+width: 33,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
