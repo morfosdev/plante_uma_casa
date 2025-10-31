@@ -54147,11 +54147,11 @@ color: '#555555',
 	width: '100%',
 }`],
 
-          path: [`sc.C2.forms.iptsChanges.userName`],
+          path: [`sc.C2.forms.editChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.userName`],
+          keyPath: [`sc.C2.forms.editChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
@@ -54226,11 +54226,11 @@ placeholder: 'Ex: 00.000.000-00',
 	width: '100%',
 }`],
 
-          path: [`sc.C2.forms.iptsChanges.userRg`],
+          path: [`sc.C2.forms.editChanges.userRg`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.iptsChanges.userRg`],
+          keyPath: [`sc.C2.forms.editChanges.userRg`],
           value: [`$arg_callback`]
         }})],
 
