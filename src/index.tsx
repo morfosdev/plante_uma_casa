@@ -51840,7 +51840,7 @@ padding: 18,
 
           arrStyles: [
             `{
-fontSize: 10,
+fontSize: 12,
 fontWeight: '400',
 color: '#555555',
 paddingHorizontal: 15,
