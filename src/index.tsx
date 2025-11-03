@@ -39402,17 +39402,10 @@ async (...args) =>
           value: [`$arg_email`]
         }}), 
 async (...args) =>
- functions.firebase.where({ args, pass:{
-
-  arrRefStrings: [`users`],
- arrWhere: [(...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        `userEmail`, 
-        `==`, `$var_sc.B9.forms.editChanges.email`],
-        }})],
- arrFuncs: [() => {}],
- }}), 
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.currents.currId1`],
+          value: [`$arg_ownerId`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b7list");
