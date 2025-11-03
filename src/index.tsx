@@ -38307,7 +38307,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
    arrRefStrings: [
         `users`, 
         `$var_.all.authUser.docId`, 
-        `steps`, `$args_`],
+        `steps`, `$var_sc.B9.forms.editChanges.stepId`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -43335,7 +43335,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
    arrRefStrings: [
         `users`, 
         `$var_.all.authUser.docId`, 
-        `steps`, `$args_`],
+        `steps`, `$var_sc.B9.forms.editChanges.stepId`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -51740,7 +51740,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
    arrRefStrings: [
         `users`, 
         `$var_.all.authUser.docId`, 
-        `steps`, `$args_`],
+        `steps`, `$var_sc.B9.forms.editChanges.stepId`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
