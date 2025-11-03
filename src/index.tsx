@@ -44261,9 +44261,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -44317,9 +44317,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -44790,9 +44790,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -44846,9 +44846,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -45319,9 +45319,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -45375,9 +45375,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -45848,9 +45848,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -45904,9 +45904,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -46377,9 +46377,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -46433,9 +46433,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -46906,9 +46906,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -46962,9 +46962,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -47434,9 +47434,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -47490,9 +47490,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -55996,9 +55996,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -56052,9 +56052,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -56396,9 +56396,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -56452,9 +56452,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -56796,9 +56796,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -56852,9 +56852,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
@@ -57195,9 +57195,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: ['black'],
 
@@ -57251,9 +57251,9 @@ alignItems: "center",
 
       `,
 
-      altura: "18px",
+      altura: "16px",
 
-      largura: "18px",
+      largura: "16px",
 
       preenchimento: [`transparent`],
 
