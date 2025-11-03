@@ -55625,7 +55625,6 @@ width: 33,
         `{
 	width: "100%",
 	height: "100%",
-	alignItems: 'center',
 }`, `{ backgroundColor: "$var_all.colors.smoke" }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -55778,8 +55777,8 @@ fontWeight: '400',
 
           arrStyles: [
             `{
-fontSize: 11,
-fontWeight: '400',
+fontSize: 10,
+fontWeight: '500',
 color: '#121417',
 paddingHorizontal: 15,
 }`
