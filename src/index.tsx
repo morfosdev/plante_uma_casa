@@ -5447,6 +5447,7 @@ width: '100%',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -6416,6 +6417,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -7363,6 +7365,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -7634,6 +7637,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -12820,6 +12824,7 @@ width: '100%',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -13789,6 +13794,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -14736,6 +14742,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -15007,6 +15014,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -20154,6 +20162,7 @@ width: '100%',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -21123,6 +21132,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -22070,6 +22080,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -22341,6 +22352,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -27452,6 +27464,7 @@ width: '100%',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -28421,6 +28434,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -29368,6 +29382,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -29639,6 +29654,7 @@ fontWeight: '700',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -34476,6 +34492,7 @@ width: '100%',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -35411,6 +35428,7 @@ async (...args) =>
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -37028,6 +37046,7 @@ async (...args) =>
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -39478,6 +39497,7 @@ width: '100%',
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -40413,6 +40433,7 @@ async (...args) =>
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -42030,6 +42051,7 @@ async (...args) =>
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -47857,6 +47879,7 @@ paddingHorizontal: 16,
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -48792,6 +48815,7 @@ async (...args) =>
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
@@ -50409,6 +50433,7 @@ async (...args) =>
             styles:[`{
 flex: 1,
 width: '100%',
+backgroundColor: '#f5f5f5',
 }`],
 
             functions:[async (...args) =>
