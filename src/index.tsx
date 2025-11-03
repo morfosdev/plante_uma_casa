@@ -55700,7 +55700,7 @@ width: 33,
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 13,
+fontSize: 12,
 fontWeight: '700',
 }`
           ],
