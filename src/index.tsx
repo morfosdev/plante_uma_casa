@@ -55654,8 +55654,8 @@ width: 33,
       elementsProperties:[{}],
 
       styles:[{
-	width: '60px',
-	height:'60px',
+	width: 50,
+	height: 50,
 	borderRadius: 10,
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
@@ -55700,7 +55700,7 @@ width: 33,
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 14,
+fontSize: 13,
 fontWeight: '700',
 }`
           ],
@@ -55719,7 +55719,7 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#61758A',
-fontSize: 12,
+fontSize: 11,
 fontWeight: '400',
 }`
           ],
