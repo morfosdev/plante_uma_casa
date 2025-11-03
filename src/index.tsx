@@ -58772,7 +58772,7 @@ fontWeight: '500',
 	backgroundColor: '#fff',
 	padding: 14,
 	borderRadius: 12,
-	width: '90%',
+	width: '100%',
 	alignSelf: 'center',
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
@@ -58787,17 +58787,8 @@ fontWeight: '500',
             elementsProperties:['{}'],
 
             styles:[`{
-flexDirection: 'row',
 justifyContent: 'space-between',
 }`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{}`],
 
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
@@ -58820,54 +58811,7 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: '#CCCCCC',
-fontSize: 11,
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `10/09/2025`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -58881,16 +58825,31 @@ fontWeight: '700',
           ],
 
           children: [
-            `R$ 600.000`
+            `R$ 600.000,00`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: '#CCCCCC',
+fontSize: 11,
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Vencimento: 10/09/2025`
           ],
 
           args,
 
         }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
@@ -58919,12 +58878,12 @@ fontWeight: '700',
 
             styles:[`{
 backgroundColor: '#315E2D',
-width: '85%',
 alignItems: 'center',
 justifyContent: 'center',
 alignSelf: 'center',
-padding: 4,
-borderRadius: 7,
+paddingVertical: 5,
+paddingHorizontal: 12,
+borderRadius: 6,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -58936,7 +58895,7 @@ borderRadius: 7,
             `{
 color: 'white',
 fontSize: 12,
-fontWeight: '700',
+fontWeight: '500',
 }`
           ],
 
