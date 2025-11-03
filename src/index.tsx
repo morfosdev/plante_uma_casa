@@ -58379,7 +58379,8 @@ padding: 12,
 
             styles:[`{
 	backgroundColor: '#ffffff80',
-	padding: 10,
+	paddingHorizontal: 14,
+	paddingVertical: 10,
 	borderRadius: 14,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
@@ -58388,6 +58389,24 @@ padding: 12,
 }`],
 
             functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 6,
+	height: 6,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
