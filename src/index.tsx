@@ -58378,7 +58378,7 @@ padding: 12,
             elementsProperties:['{}'],
 
             styles:[`{
-	backgroundColor: '#ffffff80',
+	backgroundColor: '#fff',
 	paddingHorizontal: 14,
 	paddingVertical: 10,
 	borderRadius: 14,
@@ -58489,7 +58489,7 @@ left: 4,
             elementsProperties:['{}'],
 
             styles:[`{
-backgroundColor: '#fff',
+backgroundColor: '#ededed',
 borderRadius: 100,
 height: 6,
 width: '100%',
