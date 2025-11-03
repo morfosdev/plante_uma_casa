@@ -39401,6 +39401,18 @@ async (...args) =>
           keyPath: [`sc.B9.forms.editChanges.email`],
           value: [`$arg_email`]
         }}), 
+async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`users`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `userEmail`, 
+        `==`, `$arg_email`],
+        }})],
+ arrFuncs: [() => {}],
+ }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b7list");
