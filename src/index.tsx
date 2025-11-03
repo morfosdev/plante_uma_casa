@@ -493,7 +493,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -593,7 +593,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -692,7 +692,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2047,7 +2047,7 @@ justifyContent: 'center',
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2166,7 +2166,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2266,7 +2266,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2365,7 +2365,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -44159,9 +44159,9 @@ borderRadius: 12,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -44174,7 +44174,7 @@ borderRadius: 12,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -44686,9 +44686,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -44701,7 +44701,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -45213,9 +45213,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -45228,7 +45228,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -45740,9 +45740,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -45755,7 +45755,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -46267,9 +46267,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -46282,7 +46282,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -46794,9 +46794,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -46809,7 +46809,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -47320,9 +47320,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -47335,7 +47335,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -55879,9 +55879,9 @@ paddingHorizontal: 20,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -55894,7 +55894,7 @@ paddingHorizontal: 20,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -56277,9 +56277,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -56292,7 +56292,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -56675,9 +56675,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -56690,7 +56690,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -57072,9 +57072,9 @@ paddingHorizontal: 16,
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "35px",
+      largura: "30px",
 
       preenchimento: ['black'],
 
@@ -57087,7 +57087,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
