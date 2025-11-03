@@ -38303,7 +38303,7 @@ console.log({args, urls});
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
  }}), async () => {
-      const css1 =
+  const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
@@ -38311,13 +38311,17 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
-  
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   const data = tools.getCtData("sc.B9.forms.editChanges");
 
   try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
     const refDoc = doc(db, "users", userId);
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
@@ -38326,6 +38330,13 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     };
 
     await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setCtData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setCtData({ path: pathSideRight, value: false });
+    tools.setCtData({ path: pathEdit, value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -43347,7 +43358,7 @@ console.log({args, urls});
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
  }}), async () => {
-      const css1 =
+  const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
@@ -43355,13 +43366,17 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
-  
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   const data = tools.getCtData("sc.B9.forms.editChanges");
 
   try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
     const refDoc = doc(db, "users", userId);
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
@@ -43370,6 +43385,13 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     };
 
     await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setCtData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setCtData({ path: pathSideRight, value: false });
+    tools.setCtData({ path: pathEdit, value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -51763,7 +51785,7 @@ console.log({args, urls});
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
  }}), async () => {
-      const css1 =
+  const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
@@ -51771,13 +51793,17 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
-  
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   const data = tools.getCtData("sc.B9.forms.editChanges");
 
   try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
     const refDoc = doc(db, "users", userId);
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
@@ -51786,6 +51812,13 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     };
 
     await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setCtData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setCtData({ path: pathSideRight, value: false });
+    tools.setCtData({ path: pathEdit, value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
