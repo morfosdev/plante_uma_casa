@@ -56129,12 +56129,12 @@ paddingHorizontal: 16,
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
     <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
     </RN.View>
   );
   const condReturn = condMatch ? iconActive() : iconInactive();
@@ -56529,12 +56529,12 @@ paddingHorizontal: 16,
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
     <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
     </RN.View>
   );
   const condReturn = condMatch ? iconActive() : iconInactive();
@@ -56929,12 +56929,12 @@ paddingHorizontal: 16,
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
     <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
     </RN.View>
   );
   const condReturn = condMatch ? iconActive() : iconInactive();
@@ -57328,12 +57328,12 @@ paddingHorizontal: 16,
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
     <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
     </RN.View>
   );
   const condReturn = condMatch ? iconActive() : iconInactive();
