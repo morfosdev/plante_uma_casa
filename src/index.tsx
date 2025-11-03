@@ -58566,7 +58566,7 @@ bottom: 6,
           arrStyles: [
             `{
 fontSize: 11,
-fontWeight: '500',
+fontWeight: 'bold',
 }`
           ],
 
@@ -58713,9 +58713,9 @@ backgroundColor: '#315E2D',
 alignItems: 'center',
 justifyContent: 'center',
 alignSelf: 'center',
-paddingVertical: 5,
-paddingHorizontal: 12,
-borderRadius: 6,
+paddingVertical: 4,
+paddingHorizontal: 10,
+borderRadius: 5,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
