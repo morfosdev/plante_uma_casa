@@ -51853,11 +51853,14 @@ async (...args) =>
         `docId`, 
         `==`, `$var_sc.B9.currents.currId1`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B7.lists.list1`],
           value: [`$arg_callback`]
-        }})],
+        }}), (args) => {
+	console.log("custom do where get user by ownerId",{args});
+}],
  }})]
  , trigger: 'on init'
 }})],
