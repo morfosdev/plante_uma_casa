@@ -38311,7 +38311,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
+  
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   const data = tools.getCtData("sc.B9.forms.editChanges");
 
@@ -43352,7 +43354,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
+  
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   const data = tools.getCtData("sc.B9.forms.editChanges");
 
@@ -51765,7 +51769,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
+  
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   const data = tools.getCtData("sc.B9.forms.editChanges");
 
