@@ -52218,7 +52218,7 @@ height: 90,
 width: 90,
 }],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
+      URIvariablePath:[`all.authUser.userImage`],
 
       args,
     }}/>, 
