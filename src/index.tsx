@@ -51982,10 +51982,15 @@ paddingVertical: 7,
           // ---------- get Function from A_Project Scope
           return tools.goTo("c2register");
         }
-        , async (...args) =>
+        , 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.checkboxGender`],
           value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`'all.authUser.userEmail'`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -52245,7 +52250,8 @@ fontWeight: '500',
           ],
 
           children: [
-            `pauloantonio@gmail.com`
+            
+        `pauloantonio@gmail.com`, `'all.authUser.userEmail'`
           ],
 
           args,
@@ -59738,7 +59744,11 @@ tools.setData({
 'medium': "14px", 'large': "16px" } 
 , 'contents': {   } 
  } 
-, 'authUser': {} } 
+, 'authUser': {
+userName: "João Pedro",
+userEmail: "joaopedro@email.com",
+userImage: "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+} } 
 , 'sc': { 
 'A0': { 'forms': { 'iptsChanges': {
 	userEmail: "leandrowebmaster@gmail.com",
