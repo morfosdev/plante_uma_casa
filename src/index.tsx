@@ -58619,6 +58619,35 @@ fontWeight: 'bold',
             elementsProperties:['{}'],
 
             styles:[`{
+flexDirection: 'row',
+justifyContent: 'space-between',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 justifyContent: 'space-between',
 }`],
 
@@ -58682,6 +58711,10 @@ fontWeight: '700',
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
