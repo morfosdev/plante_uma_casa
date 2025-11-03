@@ -51862,6 +51862,7 @@ async (...args) =>
   console.log("custom do where get user by ownerId", { args });
   const objSteps = args[0].steps;
   const arrSteps = Array.isArray(objSteps) ? Object.values(objSteps) : [];
+  console.log("custom do where get user by ownerId", { arrSteps });
 
   tools.setData({ path: "sc.B7.lists.list1", value: arrSteps });
 }],
