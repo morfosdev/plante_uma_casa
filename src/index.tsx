@@ -38334,9 +38334,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
     const pathEdit = "all.toggles.b9.editSteps";
-    tools.setCtData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setCtData({ path: pathSideRight, value: false });
-    tools.setCtData({ path: pathEdit, value: false });
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -43389,9 +43389,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
     const pathEdit = "all.toggles.b9.editSteps";
-    tools.setCtData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setCtData({ path: pathSideRight, value: false });
-    tools.setCtData({ path: pathEdit, value: false });
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -51816,9 +51816,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
     const pathEdit = "all.toggles.b9.editSteps";
-    tools.setCtData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setCtData({ path: pathSideRight, value: false });
-    tools.setCtData({ path: pathEdit, value: false });
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
