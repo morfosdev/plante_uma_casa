@@ -38302,30 +38302,7 @@ console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
- }}), 
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, 
-        `steps`, `$var_sc.B9.forms.editChanges.stepId`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ }}), async () => {
       const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
@@ -43366,30 +43343,7 @@ console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
- }}), 
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, 
-        `steps`, `$var_sc.B9.forms.editChanges.stepId`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ }}), async () => {
       const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
@@ -51802,30 +51756,7 @@ console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
- }}), 
-async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, 
-        `steps`, `$var_sc.B9.forms.editChanges.stepId`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }}), async () => {
+ }}), async () => {
       const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
