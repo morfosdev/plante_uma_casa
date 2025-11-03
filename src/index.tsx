@@ -51846,12 +51846,12 @@ async (...args) =>
  arrFunctions: [async (...args) =>
  functions.firebase.where({ args, pass:{
 
-  arrRefStrings: [`steps`],
+  arrRefStrings: [`users`],
  arrWhere: [(...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
-        `email`, 
-        `==`, `$var_sc.b8.editChanges.email`],
+        `docId`, 
+        `==`, `$var_sc.B9.currents.currId1`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
