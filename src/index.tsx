@@ -58379,7 +58379,7 @@ padding: 12,
 
             styles:[`{
 	backgroundColor: '#ffffff80',
-	padding: 14,
+	padding: 10,
 	borderRadius: 14,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
