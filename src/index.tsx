@@ -39415,13 +39415,13 @@ shadowRadius: 4,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges.email`],
-          value: [`$arg_email`]
+          keyPath: [`sc.B9.currents.currId1`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges.email`],
-          value: [`$arg_email`]
+          keyPath: [`sc.B7.lists.list1`],
+          value: [[]]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
