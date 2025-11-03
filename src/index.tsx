@@ -58381,7 +58381,7 @@ padding: 12,
 	backgroundColor: '#fff',
 	paddingHorizontal: 14,
 	paddingVertical: 10,
-	borderRadius: 14,
+	borderRadius: 10,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -58547,7 +58547,7 @@ bottom: 6,
             styles:[`{
 	backgroundColor: '#fff',
 	padding: 14,
-	borderRadius: 14,
+	borderRadius: 12,
 	width: '90%',
 	alignSelf: 'center',
 	shadowColor: '#000',
@@ -58755,8 +58755,10 @@ fontWeight: '700',
 
             styles:[`{
 	backgroundColor: '#fff',
-	padding: 20,
-	borderRadius: 20,
+	padding: 14,
+	borderRadius: 12,
+	width: '90%',
+	alignSelf: 'center',
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -58828,7 +58830,7 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#CCCCCC',
-fontSize: 12,
+fontSize: 11,
 fontWeight: '700',
 }`
           ],
@@ -58884,8 +58886,8 @@ fontWeight: '700',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 20,
-	height: 20,
+	width: 10,
+	height: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
@@ -58902,11 +58904,12 @@ fontWeight: '700',
 
             styles:[`{
 backgroundColor: '#315E2D',
-width: '100%',
+width: '85%',
 alignItems: 'center',
 justifyContent: 'center',
+alignSelf: 'center',
 padding: 4,
-borderRadius: 15,
+borderRadius: 7,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
