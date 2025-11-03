@@ -38322,7 +38322,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const dataToUpdate = {
-      ["steps." + stepId]: { ...data },
+      ["steps." + newId]: { ...data },
     };
 
     await updateDoc(refDoc, dataToUpdate);
@@ -43366,7 +43366,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const dataToUpdate = {
-      ["steps." + stepId]: { ...data },
+      ["steps." + newId]: { ...data },
     };
 
     await updateDoc(refDoc, dataToUpdate);
@@ -51782,7 +51782,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const dataToUpdate = {
-      ["steps." + stepId]: { ...data },
+      ["steps." + newId]: { ...data },
     };
 
     await updateDoc(refDoc, dataToUpdate);
