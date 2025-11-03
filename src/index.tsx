@@ -9438,14 +9438,11 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flex: 1,
+width: '100%',
+backgroundColor: '#f5f5f5',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -16812,14 +16809,11 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flex: 1,
+width: '100%',
+backgroundColor: '#f5f5f5',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -24147,14 +24141,11 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flex: 1,
+width: '100%',
+backgroundColor: '#f5f5f5',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -31446,14 +31437,11 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+flex: 1,
+width: '100%',
+backgroundColor: '#f5f5f5',
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
