@@ -52320,11 +52320,11 @@ color: '#555555',
 	fontSize: 11,
 }`],
 
-          path: [`all.authUser.userName`],
+          path: [`all.authUser.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.authUser.userName`],
+          keyPath: [`all.authUser.userEmail`],
           value: [`$arg_callback`]
         }})],
 
