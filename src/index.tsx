@@ -38319,6 +38319,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
   try {
     const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(/./g, "_"); // substitui pontos por underscores
 
     const dataToUpdate = {
       ["steps." + stepId]: { ...data },
@@ -38328,7 +38329,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
-      path: "users." + userId,
+      path: "users." + newId,
       dataToUpdate,
     });
   } catch (err) {
@@ -43362,6 +43363,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
   try {
     const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(/./g, "_"); // substitui pontos por underscores
 
     const dataToUpdate = {
       ["steps." + stepId]: { ...data },
@@ -43371,7 +43373,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
-      path: "users." + userId,
+      path: "users." + newId,
       dataToUpdate,
     });
   } catch (err) {
@@ -51777,6 +51779,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
   try {
     const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(/./g, "_"); // substitui pontos por underscores
 
     const dataToUpdate = {
       ["steps." + stepId]: { ...data },
@@ -51786,7 +51789,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
-      path: "users." + userId,
+      path: "users." + newId,
       dataToUpdate,
     });
   } catch (err) {
