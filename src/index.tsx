@@ -58452,14 +58452,33 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 11,
-fontWeight: '400',
-left: 4,
+fontSize: 14,
+fontWeight: '500',
 }`
           ],
 
           children: [
             `R$ 2.200.000`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: '#555555',
+fontSize: 11,
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Progresso do Pagamento`
           ],
 
           args,
@@ -58521,6 +58540,40 @@ bottom: 6,
             args,
           }}/>
         , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Parcelas`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
