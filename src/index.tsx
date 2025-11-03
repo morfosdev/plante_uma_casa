@@ -58564,7 +58564,10 @@ bottom: 6,
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+fontSize: 11,
+fontWeigth: '500',
+}`
           ],
 
           children: [
