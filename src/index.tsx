@@ -58624,14 +58624,6 @@ justifyContent: 'space-between',
 }`],
 
             functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{}`],
-
-            functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -58652,54 +58644,7 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: '#CCCCCC',
-fontSize: 11,
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `10/09/2025`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -58713,16 +58658,31 @@ fontWeight: '700',
           ],
 
           children: [
-            `R$ 600.000`
+            `R$ 600.000,00`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: '#CCCCCC',
+fontSize: 11,
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Vencimento: 10/09/2025`
           ],
 
           args,
 
         }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
