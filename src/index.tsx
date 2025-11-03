@@ -8246,60 +8246,41 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // Lista de campos obrigatórios
+  // ---- 1️⃣ Validação de campos obrigatórios ----
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
-		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+    { path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
   ];
 
-  // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: [message],
+        value: ["⚠️ Preencha os campos obrigatórios."],
       },
     });
-
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a7.validationMessage"],
-      value: [message],
-    },
-  });
-
-  console.log("💾 Validação OK — salvando no Firebase...");
-
-  // inicializar firebase
+  // ---- 2️⃣ Inicialização do Firebase ----
+  console.log("💾 Iniciando salvamento no Firebase...");
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -8308,97 +8289,118 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { 
+    getFirestore, collection, addDoc, updateDoc, query, where, getDocs, serverTimestamp 
+  } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-// Pega o condoId salvo na A4
+  // ---- 3️⃣ Captura os dados do formulário ----
+  const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
+  const name = getVal("sc.A7.forms.iptsChanges.partnerName");
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
 
   if (!condoId) {
-    console.warn("⚠️ Nenhum condomínio selecionado (condoId ausente).");
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["Selecione um condomínio antes de salvar."],
+        value: ["⚠️ Condomínio ausente."],
+      },
+    });
+    console.warn("Condomínio ausente.");
+    return;
+  }
+
+  // ---- 4️⃣ Verifica se o usuário já existe ----
+  const usersRef = collection(db, "users");
+  const userQuery = query(usersRef, where("userEmail", "==", email));
+  const userSnapshot = await getDocs(userQuery);
+
+  let ownerId;
+  let userExists = false;
+
+  if (!userSnapshot.empty) {
+    // Usuário encontrado
+    userExists = true;
+    const userDoc = userSnapshot.docs[0];
+    ownerId = userDoc.id;
+    console.log("✅ Usuário encontrado:", ownerId);
+  } else {
+    // Usuário novo
+    console.log("🆕 Criando novo usuário...");
+    const newUserRef = await addDoc(usersRef, {
+      userEmail: email,
+      userName: name,
+      createdAt: serverTimestamp(),
+    });
+    ownerId = newUserRef.id;
+
+    // Atualiza o campo docId dentro do próprio documento
+    await updateDoc(newUserRef, { docId: ownerId });
+  }
+
+  // ---- 5️⃣ Cria o documento do lote ----
+  const lotsRef = collection(db, "lots");
+  const newLot = {
+    owner: name,
+    userEmail: email,
+    ownerId: ownerId,
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    area: getVal("sc.A7.forms.iptsChanges.area"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    condoId: condoId,
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(lotsRef, newLot);
+    await updateDoc(docRef, { docId: docRef.id });
+
+    console.log("✅ Lote salvo com ID:", docRef.id);
+
+    // Feedback de sucesso
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [
+          userExists
+            ? "🏠 Lote vinculado ao proprietário existente!"
+            : "🆕 Proprietário e lote cadastrados com sucesso!",
+        ],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao salvar lote:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["❌ Erro ao salvar os dados. Verifique o console."],
       },
     });
     return;
   }
 
-  // Monta os dados a salvar
-  const newDoc = {
-    owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
-    email: getVal("sc.A7.forms.iptsChanges.partnerMail"),
-    lot: getVal("sc.A7.forms.iptsChanges.lot"),
-		area: getVal("sc.A7.forms.iptsChanges.area"),
-    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
-		condoId: condoId, // associa o lote ao condomínio
-    createdAt: serverTimestamp(),
-  };
-
-  try {
-    const docRef = await addDoc(collection(db, "lots"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
-
-await updateDoc(docRef, { docId: docRef.id });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: ["🏢 Documento salvo com sucesso!"],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
-      },
-    });
-  }
-
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A7.forms.iptsChanges"],
-        value: [""],
-      },
-    });
-
-//close Add
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a7.addOwner"],
-        value: [false],
-      },
-    });
-
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: [""],
-      },
-    });
-}
+  // ---- 6️⃣ Limpeza e fechamento de painéis ----
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["all.toggles.a7.addOwner"], value: [false] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["all.toggles.sideRight"], value: [false] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
+  });
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -15617,60 +15619,41 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // Lista de campos obrigatórios
+  // ---- 1️⃣ Validação de campos obrigatórios ----
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
-		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+    { path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
   ];
 
-  // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: [message],
+        value: ["⚠️ Preencha os campos obrigatórios."],
       },
     });
-
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a7.validationMessage"],
-      value: [message],
-    },
-  });
-
-  console.log("💾 Validação OK — salvando no Firebase...");
-
-  // inicializar firebase
+  // ---- 2️⃣ Inicialização do Firebase ----
+  console.log("💾 Iniciando salvamento no Firebase...");
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -15679,97 +15662,118 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { 
+    getFirestore, collection, addDoc, updateDoc, query, where, getDocs, serverTimestamp 
+  } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-// Pega o condoId salvo na A4
+  // ---- 3️⃣ Captura os dados do formulário ----
+  const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
+  const name = getVal("sc.A7.forms.iptsChanges.partnerName");
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
 
   if (!condoId) {
-    console.warn("⚠️ Nenhum condomínio selecionado (condoId ausente).");
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["Selecione um condomínio antes de salvar."],
+        value: ["⚠️ Condomínio ausente."],
+      },
+    });
+    console.warn("Condomínio ausente.");
+    return;
+  }
+
+  // ---- 4️⃣ Verifica se o usuário já existe ----
+  const usersRef = collection(db, "users");
+  const userQuery = query(usersRef, where("userEmail", "==", email));
+  const userSnapshot = await getDocs(userQuery);
+
+  let ownerId;
+  let userExists = false;
+
+  if (!userSnapshot.empty) {
+    // Usuário encontrado
+    userExists = true;
+    const userDoc = userSnapshot.docs[0];
+    ownerId = userDoc.id;
+    console.log("✅ Usuário encontrado:", ownerId);
+  } else {
+    // Usuário novo
+    console.log("🆕 Criando novo usuário...");
+    const newUserRef = await addDoc(usersRef, {
+      userEmail: email,
+      userName: name,
+      createdAt: serverTimestamp(),
+    });
+    ownerId = newUserRef.id;
+
+    // Atualiza o campo docId dentro do próprio documento
+    await updateDoc(newUserRef, { docId: ownerId });
+  }
+
+  // ---- 5️⃣ Cria o documento do lote ----
+  const lotsRef = collection(db, "lots");
+  const newLot = {
+    owner: name,
+    userEmail: email,
+    ownerId: ownerId,
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    area: getVal("sc.A7.forms.iptsChanges.area"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    condoId: condoId,
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(lotsRef, newLot);
+    await updateDoc(docRef, { docId: docRef.id });
+
+    console.log("✅ Lote salvo com ID:", docRef.id);
+
+    // Feedback de sucesso
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [
+          userExists
+            ? "🏠 Lote vinculado ao proprietário existente!"
+            : "🆕 Proprietário e lote cadastrados com sucesso!",
+        ],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao salvar lote:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["❌ Erro ao salvar os dados. Verifique o console."],
       },
     });
     return;
   }
 
-  // Monta os dados a salvar
-  const newDoc = {
-    owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
-    email: getVal("sc.A7.forms.iptsChanges.partnerMail"),
-    lot: getVal("sc.A7.forms.iptsChanges.lot"),
-		area: getVal("sc.A7.forms.iptsChanges.area"),
-    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
-		condoId: condoId, // associa o lote ao condomínio
-    createdAt: serverTimestamp(),
-  };
-
-  try {
-    const docRef = await addDoc(collection(db, "lots"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
-
-await updateDoc(docRef, { docId: docRef.id });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: ["🏢 Documento salvo com sucesso!"],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
-      },
-    });
-  }
-
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A7.forms.iptsChanges"],
-        value: [""],
-      },
-    });
-
-//close Add
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a7.addOwner"],
-        value: [false],
-      },
-    });
-
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: [""],
-      },
-    });
-}
+  // ---- 6️⃣ Limpeza e fechamento de painéis ----
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["all.toggles.a7.addOwner"], value: [false] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["all.toggles.sideRight"], value: [false] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
+  });
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -22949,60 +22953,41 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // Lista de campos obrigatórios
+  // ---- 1️⃣ Validação de campos obrigatórios ----
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
-		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+    { path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
   ];
 
-  // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: [message],
+        value: ["⚠️ Preencha os campos obrigatórios."],
       },
     });
-
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a7.validationMessage"],
-      value: [message],
-    },
-  });
-
-  console.log("💾 Validação OK — salvando no Firebase...");
-
-  // inicializar firebase
+  // ---- 2️⃣ Inicialização do Firebase ----
+  console.log("💾 Iniciando salvamento no Firebase...");
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -23011,97 +22996,118 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { 
+    getFirestore, collection, addDoc, updateDoc, query, where, getDocs, serverTimestamp 
+  } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-// Pega o condoId salvo na A4
+  // ---- 3️⃣ Captura os dados do formulário ----
+  const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
+  const name = getVal("sc.A7.forms.iptsChanges.partnerName");
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
 
   if (!condoId) {
-    console.warn("⚠️ Nenhum condomínio selecionado (condoId ausente).");
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["Selecione um condomínio antes de salvar."],
+        value: ["⚠️ Condomínio ausente."],
+      },
+    });
+    console.warn("Condomínio ausente.");
+    return;
+  }
+
+  // ---- 4️⃣ Verifica se o usuário já existe ----
+  const usersRef = collection(db, "users");
+  const userQuery = query(usersRef, where("userEmail", "==", email));
+  const userSnapshot = await getDocs(userQuery);
+
+  let ownerId;
+  let userExists = false;
+
+  if (!userSnapshot.empty) {
+    // Usuário encontrado
+    userExists = true;
+    const userDoc = userSnapshot.docs[0];
+    ownerId = userDoc.id;
+    console.log("✅ Usuário encontrado:", ownerId);
+  } else {
+    // Usuário novo
+    console.log("🆕 Criando novo usuário...");
+    const newUserRef = await addDoc(usersRef, {
+      userEmail: email,
+      userName: name,
+      createdAt: serverTimestamp(),
+    });
+    ownerId = newUserRef.id;
+
+    // Atualiza o campo docId dentro do próprio documento
+    await updateDoc(newUserRef, { docId: ownerId });
+  }
+
+  // ---- 5️⃣ Cria o documento do lote ----
+  const lotsRef = collection(db, "lots");
+  const newLot = {
+    owner: name,
+    userEmail: email,
+    ownerId: ownerId,
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    area: getVal("sc.A7.forms.iptsChanges.area"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    condoId: condoId,
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(lotsRef, newLot);
+    await updateDoc(docRef, { docId: docRef.id });
+
+    console.log("✅ Lote salvo com ID:", docRef.id);
+
+    // Feedback de sucesso
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [
+          userExists
+            ? "🏠 Lote vinculado ao proprietário existente!"
+            : "🆕 Proprietário e lote cadastrados com sucesso!",
+        ],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao salvar lote:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["❌ Erro ao salvar os dados. Verifique o console."],
       },
     });
     return;
   }
 
-  // Monta os dados a salvar
-  const newDoc = {
-    owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
-    email: getVal("sc.A7.forms.iptsChanges.partnerMail"),
-    lot: getVal("sc.A7.forms.iptsChanges.lot"),
-		area: getVal("sc.A7.forms.iptsChanges.area"),
-    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
-		condoId: condoId, // associa o lote ao condomínio
-    createdAt: serverTimestamp(),
-  };
-
-  try {
-    const docRef = await addDoc(collection(db, "lots"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
-
-await updateDoc(docRef, { docId: docRef.id });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: ["🏢 Documento salvo com sucesso!"],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
-      },
-    });
-  }
-
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A7.forms.iptsChanges"],
-        value: [""],
-      },
-    });
-
-//close Add
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a7.addOwner"],
-        value: [false],
-      },
-    });
-
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: [""],
-      },
-    });
-}
+  // ---- 6️⃣ Limpeza e fechamento de painéis ----
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["all.toggles.a7.addOwner"], value: [false] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["all.toggles.sideRight"], value: [false] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
+  });
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -30245,60 +30251,41 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // Lista de campos obrigatórios
+  // ---- 1️⃣ Validação de campos obrigatórios ----
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
-		{ path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+    { path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
   ];
 
-  // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-  // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: [message],
+        value: ["⚠️ Preencha os campos obrigatórios."],
       },
     });
-
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a7.validationMessage"],
-      value: [message],
-    },
-  });
-
-  console.log("💾 Validação OK — salvando no Firebase...");
-
-  // inicializar firebase
+  // ---- 2️⃣ Inicialização do Firebase ----
+  console.log("💾 Iniciando salvamento no Firebase...");
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -30307,97 +30294,118 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { 
+    getFirestore, collection, addDoc, updateDoc, query, where, getDocs, serverTimestamp 
+  } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-// Pega o condoId salvo na A4
+  // ---- 3️⃣ Captura os dados do formulário ----
+  const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
+  const name = getVal("sc.A7.forms.iptsChanges.partnerName");
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
 
   if (!condoId) {
-    console.warn("⚠️ Nenhum condomínio selecionado (condoId ausente).");
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["Selecione um condomínio antes de salvar."],
+        value: ["⚠️ Condomínio ausente."],
+      },
+    });
+    console.warn("Condomínio ausente.");
+    return;
+  }
+
+  // ---- 4️⃣ Verifica se o usuário já existe ----
+  const usersRef = collection(db, "users");
+  const userQuery = query(usersRef, where("userEmail", "==", email));
+  const userSnapshot = await getDocs(userQuery);
+
+  let ownerId;
+  let userExists = false;
+
+  if (!userSnapshot.empty) {
+    // Usuário encontrado
+    userExists = true;
+    const userDoc = userSnapshot.docs[0];
+    ownerId = userDoc.id;
+    console.log("✅ Usuário encontrado:", ownerId);
+  } else {
+    // Usuário novo
+    console.log("🆕 Criando novo usuário...");
+    const newUserRef = await addDoc(usersRef, {
+      userEmail: email,
+      userName: name,
+      createdAt: serverTimestamp(),
+    });
+    ownerId = newUserRef.id;
+
+    // Atualiza o campo docId dentro do próprio documento
+    await updateDoc(newUserRef, { docId: ownerId });
+  }
+
+  // ---- 5️⃣ Cria o documento do lote ----
+  const lotsRef = collection(db, "lots");
+  const newLot = {
+    owner: name,
+    userEmail: email,
+    ownerId: ownerId,
+    lot: getVal("sc.A7.forms.iptsChanges.lot"),
+    area: getVal("sc.A7.forms.iptsChanges.area"),
+    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
+    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    condoId: condoId,
+    createdAt: serverTimestamp(),
+  };
+
+  try {
+    const docRef = await addDoc(lotsRef, newLot);
+    await updateDoc(docRef, { docId: docRef.id });
+
+    console.log("✅ Lote salvo com ID:", docRef.id);
+
+    // Feedback de sucesso
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: [
+          userExists
+            ? "🏠 Lote vinculado ao proprietário existente!"
+            : "🆕 Proprietário e lote cadastrados com sucesso!",
+        ],
+      },
+    });
+  } catch (error) {
+    console.error("❌ Erro ao salvar lote:", error);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a7.validationMessage"],
+        value: ["❌ Erro ao salvar os dados. Verifique o console."],
       },
     });
     return;
   }
 
-  // Monta os dados a salvar
-  const newDoc = {
-    owner: getVal("sc.A7.forms.iptsChanges.partnerName"),
-    email: getVal("sc.A7.forms.iptsChanges.partnerMail"),
-    lot: getVal("sc.A7.forms.iptsChanges.lot"),
-		area: getVal("sc.A7.forms.iptsChanges.area"),
-    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
-		condoId: condoId, // associa o lote ao condomínio
-    createdAt: serverTimestamp(),
-  };
-
-  try {
-    const docRef = await addDoc(collection(db, "lots"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
-
-await updateDoc(docRef, { docId: docRef.id });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: ["🏢 Documento salvo com sucesso!"],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
-      },
-    });
-  }
-
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A7.forms.iptsChanges"],
-        value: [""],
-      },
-    });
-
-//close Add
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a7.addOwner"],
-        value: [false],
-      },
-    });
-
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: [""],
-      },
-    });
-}
+  // ---- 6️⃣ Limpeza e fechamento de painéis ----
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["all.toggles.a7.addOwner"], value: [false] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["all.toggles.sideRight"], value: [false] },
+  });
+  tools.functions.setVar({
+    args: "",
+    pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
+  });
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
