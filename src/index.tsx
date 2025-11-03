@@ -58451,10 +58451,28 @@ left: 4,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{ 
+	width: 5,
+	height: 5,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{
 backgroundColor: '#F0F1FF',
 borderRadius: 100,
-height: 8,
+height: 6,
 width: '100%',
 }`],
 
@@ -58470,9 +58488,9 @@ width: '100%',
             styles:[`{
 backgroundColor: '#315E2D',
 borderRadius: 100,
-height: 8,
+height: 6,
 width: '60%',
-bottom: 8,
+bottom: 6,
 }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
