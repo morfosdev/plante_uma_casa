@@ -55802,7 +55802,7 @@ paddingHorizontal: 15,
             elementsProperties:['{}'],
 
             styles:[`{
-paddingHorizontal: 20,
+paddingHorizontal: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Accordion pass={{
