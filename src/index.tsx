@@ -58619,7 +58619,6 @@ fontWeigth: '500',
             elementsProperties:['{}'],
 
             styles:[`{
-flexDirection: 'row',
 justifyContent: 'space-between',
 }`],
 
@@ -58711,12 +58710,12 @@ fontWeight: '700',
 
             styles:[`{
 backgroundColor: '#315E2D',
-width: '85%',
 alignItems: 'center',
 justifyContent: 'center',
 alignSelf: 'center',
-padding: 4,
-borderRadius: 7,
+paddingVerticaldo: 5,
+paddingHorizontal: 12,
+borderRadius: 6,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -58728,7 +58727,7 @@ borderRadius: 7,
             `{
 color: 'white',
 fontSize: 12,
-fontWeight: '700',
+fontWeight: '500',
 }`
           ],
 
