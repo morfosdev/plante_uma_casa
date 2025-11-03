@@ -1,1 +1,1 @@
-{"1762194485237":{"actionType":"saveAll","createdAt":"1762194485237","actionID":"1762194485237","userID":"#TEMP","path":"system.capsules.8211e45e-9b28-4577-90c2-6d1111a23a03.capsUseCodeInfo.capsUseLabel.en","oldValue":"$var_.all.authUser.docId","newValue":"$var_sc.B9.currents.currId1"}}
+{"1762195417687":{"actionType":"saveAll","createdAt":"1762195417687","actionID":"1762195417687","userID":"#TEMP","path":"system.capsules.371ae0c4-856b-4b4e-9a6a-a0a632e145e3.capsUseCodeInfo.capsUseLabel.en","oldValue":"func_updateDoc - user.ste","newValue":"func_updateDoc - user.steps"}}

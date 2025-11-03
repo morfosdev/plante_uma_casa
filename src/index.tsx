@@ -38302,7 +38302,8 @@ console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
- }}), async (...args) =>
+ }}), 
+async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
@@ -38324,7 +38325,37 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
-        }})]
+        }}), async () => {
+      const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    const refDoc = doc(db, "users", userId);
+
+    const dataToUpdate = {
+      ["steps." + stepId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + userId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -43335,7 +43366,8 @@ console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
- }}), async (...args) =>
+ }}), 
+async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
@@ -43357,7 +43389,37 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
-        }})]
+        }}), async () => {
+      const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    const refDoc = doc(db, "users", userId);
+
+    const dataToUpdate = {
+      ["steps." + stepId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + userId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -51740,7 +51802,8 @@ console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
- }}), async (...args) =>
+ }}), 
+async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
@@ -51762,7 +51825,37 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
-        }})]
+        }}), async () => {
+      const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    const refDoc = doc(db, "users", userId);
+
+    const dataToUpdate = {
+      ["steps." + stepId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + userId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
