@@ -55778,7 +55778,7 @@ fontWeight: '400',
           arrStyles: [
             `{
 fontSize: 10,
-fontWeight: '500',
+fontWeight: 'bold',
 color: '#121417',
 paddingHorizontal: 15,
 }`
@@ -58726,8 +58726,8 @@ borderRadius: 5,
           arrStyles: [
             `{
 color: 'white',
-fontSize: 12,
-fontWeight: '500',
+fontSize: 11,
+fontWeight: '400',
 }`
           ],
 
