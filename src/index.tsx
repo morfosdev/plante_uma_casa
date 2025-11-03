@@ -38319,7 +38319,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
   try {
     const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(/./g, "_"); // substitui pontos por underscores
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const dataToUpdate = {
       ["steps." + stepId]: { ...data },
@@ -43363,7 +43363,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
   try {
     const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(/./g, "_"); // substitui pontos por underscores
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const dataToUpdate = {
       ["steps." + stepId]: { ...data },
@@ -51779,7 +51779,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 
   try {
     const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(/./g, "_"); // substitui pontos por underscores
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const dataToUpdate = {
       ["steps." + stepId]: { ...data },
