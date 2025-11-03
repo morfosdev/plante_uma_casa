@@ -58396,7 +58396,7 @@ padding: 12,
           arrStyles: [
             `{
 color: '#555555',
-fontSize: 12,
+fontSize: 11,
 fontWeight: '700',
 }`
           ],
@@ -58433,7 +58433,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 11,
 fontWeight: '400',
 left: 4,
 }`
@@ -58470,7 +58470,7 @@ left: 4,
             elementsProperties:['{}'],
 
             styles:[`{
-backgroundColor: '#F0F1FF',
+backgroundColor: '#fff',
 borderRadius: 100,
 height: 6,
 width: '100%',
