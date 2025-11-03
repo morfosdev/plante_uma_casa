@@ -51859,7 +51859,11 @@ async (...args) =>
           keyPath: [`sc.B7.lists.list1`],
           value: [`$arg_callback`]
         }}), (args) => {
-	console.log("custom do where get user by ownerId",{args});
+  console.log("custom do where get user by ownerId", { args });
+  const objSteps = args[0].steps;
+  const arrSteps = Array.isArray(objSteps) ? Object.values(objSteps) : [];
+
+  tools.setData({ path: "sc.B7.lists.list1", value: arrSteps });
 }],
  }})]
  , trigger: 'on init'
