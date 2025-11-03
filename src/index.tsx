@@ -55813,7 +55813,8 @@ paddingHorizontal: 20,
 			backgroundColor: '#ccc',
 			width: "100%",
 			borderRadius: 10,
-			marginBottom: 14
+			marginBottom: 14,
+			minHeight: 35,
 	}
 }`], arrElements: [
  
