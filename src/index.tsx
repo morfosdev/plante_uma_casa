@@ -34367,6 +34367,11 @@ async (...args) =>
           keyPath: [`sc.B6.forms.iptsChanges.condoData`],
           value: [`$arg_item`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B6.currents.currId1`],
+          value: [`$arg_docId`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b6list");
@@ -43389,8 +43394,8 @@ async (...args) =>
  arrWhere: [(...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
-        `email`, 
-        `==`, `$var_all.authUser.email`],
+        `condoId`, 
+        `==`, `$var_sc.B6.currents.currId1`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
