@@ -58566,7 +58566,7 @@ bottom: 6,
           arrStyles: [
             `{
 fontSize: 11,
-fontWeigth: '500',
+fontWeight: '500',
 }`
           ],
 
@@ -58713,7 +58713,7 @@ backgroundColor: '#315E2D',
 alignItems: 'center',
 justifyContent: 'center',
 alignSelf: 'center',
-paddingVerticaldo: 5,
+paddingVertical: 5,
 paddingHorizontal: 12,
 borderRadius: 6,
 }`],
