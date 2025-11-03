@@ -44120,6 +44120,8 @@ borderRadius: 12,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -44647,6 +44649,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -45174,6 +45178,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -45701,6 +45707,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -46228,6 +46236,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -46755,6 +46765,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -47281,6 +47293,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -55841,6 +55855,8 @@ paddingHorizontal: 10,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -56239,6 +56255,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -56637,6 +56655,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -57034,6 +57054,8 @@ paddingHorizontal: 16,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
 }`],
 
             functions:[()=>{}],            childrenItems:[
