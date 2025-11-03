@@ -58396,7 +58396,7 @@ padding: 12,
           arrStyles: [
             `{
 color: '#555555',
-fontSize: 11,
+fontSize: 12,
 fontWeight: '700',
 }`
           ],
@@ -58433,7 +58433,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 14,
 fontWeight: '400',
 left: 4,
 }`
