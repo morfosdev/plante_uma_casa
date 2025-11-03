@@ -58427,6 +58427,25 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '500',
+}`
+          ],
+
+          children: [
+            `R$ 500.000,00`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -58445,25 +58464,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 14,
-fontWeight: '500',
-}`
-          ],
-
-          children: [
-            `R$ 2.200.000`
-          ],
-
-          args,
-
-        }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
