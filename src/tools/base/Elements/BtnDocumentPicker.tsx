@@ -93,7 +93,7 @@ const BtnWeb = ({ pass }: Tprops) => {
       <RN.View style={styles.container}>
         <ThumbGrid documents={docUris} names={docNames} onRemove={removeAt} />
 
-        {!docUris && (
+        {docUris.length === 0 && (
           <>
             <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
             <RN.Text style={styles.subtitle}>
@@ -200,7 +200,7 @@ const BtnNat = ({ pass }: Tprops) => {
     <RN.View style={styles.container}>
       <ThumbGrid documents={docUris} names={docNames} onRemove={removeAt} />
 
-      {!docUris && (
+      {docUris.length === 0 && (
         <>
           <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
           <RN.Text style={styles.subtitle}>
@@ -322,4 +322,3 @@ const thumb = RN.StyleSheet.create({
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
   xTxt2: { fontSize: 14, lineHeight: 16 },
 });
-
