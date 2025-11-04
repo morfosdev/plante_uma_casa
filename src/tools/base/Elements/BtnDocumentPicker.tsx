@@ -229,7 +229,6 @@ const ThumbGrid = ({
   if (!documents.length) return null;
   return (
     <RN.View style={thumb.grid}>
-      <RN.Text style={thumb.xTxt2}>Nome do Arquivo</RN.Text>
       {documents.map((uri, idx) => (
         <RN.View key={uri + idx} style={thumb.item}>
           {/* Nome do documento */}
@@ -291,27 +290,15 @@ const thumb = RN.StyleSheet.create({
   grid: {
     width: "100%",
     flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    columnGap: 10,
-    rowGap: 10,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: "#E5E7EB",
     padding: 8,
     marginBottom: 8,
-  },
-  item: {
-    position: "relative",
-    width: "45%",
-    aspectRatio: 1.6,
     borderRadius: 6,
-    overflow: "hidden",
   },
+  item: {},
   img: { width: "100%", height: "100%" },
   x: {
-    position: "absolute",
-    top: 4,
-    right: 4,
     width: 22,
     height: 22,
     borderRadius: 11,
