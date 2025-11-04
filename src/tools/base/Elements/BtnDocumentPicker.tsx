@@ -1,8 +1,8 @@
 
 // ---------- import Packs
-import React from 'react';
-import * as RN from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
+import * as ImagePicker from "expo-image-picker";
+import React from "react";
+import * as RN from "react-native";
 
 type Tprops = {
   pass: {
@@ -16,7 +16,7 @@ type Tprops = {
 };
 
 export const BtnDocumentPicker = (props: Tprops) => {
-  const isWeb = RN.Platform.OS === 'web';
+  const isWeb = RN.Platform.OS === "web";
   return isWeb ? <BtnWeb {...props} /> : <BtnNat {...props} />;
 };
 
@@ -35,19 +35,19 @@ const BtnWeb = ({ pass }: Tprops) => {
     if (arrFuncs) for (const fn of arrFuncs) fn(files, args);
     // revoke das URLs quando componente desmontar
     return () =>
-      images.forEach(u => u.startsWith('blob:') && URL.revokeObjectURL(u));
+      images.forEach((u) => u.startsWith("blob:") && URL.revokeObjectURL(u));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [files]);
 
   const pickWeb = () => inputRef.current?.click();
 
   const handleWebFile = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log('Document Picker - Web - Selected files', event.target.files);
+    console.log("Document Picker - Web - Selected files", event.target.files);
     const fl = event.target.files;
     if (!fl) return;
 
     const newFiles = Array.from(fl);
-    const newPreviews = newFiles.map(f => URL.createObjectURL(f));
+    const newPreviews = newFiles.map((f) => URL.createObjectURL(f));
 
     const nextPreviews = max
       ? [...images, ...newPreviews].slice(0, max)
@@ -61,7 +61,7 @@ const BtnWeb = ({ pass }: Tprops) => {
     onChange?.(nextPreviews);
 
     // permitir re-selecionar os mesmos arquivos
-    event.target.value = '';
+    event.target.value = "";
   };
 
   const removeAt = (idx: number) => {
@@ -70,7 +70,7 @@ const BtnWeb = ({ pass }: Tprops) => {
     const [rm] = imgs.splice(idx, 1);
     fls.splice(idx, 1);
 
-    if (rm?.startsWith('blob:')) URL.revokeObjectURL(rm);
+    if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
 
     setImages(imgs);
     setFiles(fls);
@@ -93,9 +93,10 @@ const BtnWeb = ({ pass }: Tprops) => {
       <input
         ref={inputRef}
         type="file"
-        accept="image/*"
+        // Somente documentos
+        accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         multiple
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
         onChange={handleWebFile}
       />
     </>
@@ -124,8 +125,8 @@ const BtnNat = ({ pass }: Tprops) => {
 
   const pickNative = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (status !== 'granted') {
-      alert('Permissão para acessar a galeria foi negada');
+    if (status !== "granted") {
+      alert("Permissão para acessar a galeria foi negada");
       return;
     }
 
@@ -138,12 +139,12 @@ const BtnNat = ({ pass }: Tprops) => {
     });
 
     if (!result.canceled) {
-      const newUris = result.assets.map(a => a.uri);
+      const newUris = result.assets.map((a) => a.uri);
       const nextUris = max
         ? [...images, ...newUris].slice(0, max)
         : [...images, ...newUris];
 
-      const newAssets = result.assets.map(a => ({
+      const newAssets = result.assets.map((a) => ({
         uri: a.uri,
         fileName: a.fileName,
         mimeType: a.mimeType,
@@ -195,12 +196,12 @@ const ThumbGrid = ({
     <RN.View style={thumb.grid}>
       {images.map((uri, idx) => (
         <RN.View key={uri + idx} style={thumb.item}>
-          <RN.Image source={{ uri }} style={thumb.img} />
           <RN.Pressable
             hitSlop={8}
             style={thumb.x}
             onPress={() => onRemove(idx)}
           >
+            <RN.Text style={thumb.xTxt}>Nome do Arquivo</RN.Text>
             <RN.Text style={thumb.xTxt}>×</RN.Text>
           </RN.Pressable>
         </RN.View>
@@ -212,58 +213,58 @@ const ThumbGrid = ({
 /* ---------------- STYLES ---------------- */
 const styles = RN.StyleSheet.create({
   container: {
-    width: '100%',
+    width: "100%",
     minHeight: 180,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderStyle: 'dashed',
-    borderColor: '#D5DBE3',
+    alignItems: "center",
+    justifyContent: "center",
+    borderStyle: "dashed",
+    borderColor: "#D5DBE3",
     borderRadius: 12,
     borderWidth: 2,
     padding: 20,
     gap: 16,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
-  title: { fontSize: 18, fontWeight: '700', textAlign: 'center' },
-  subtitle: { fontSize: 14, textAlign: 'center', color: '#4B5563' },
+  title: { fontSize: 18, fontWeight: "700", textAlign: "center" },
+  subtitle: { fontSize: 14, textAlign: "center", color: "#4B5563" },
   btn: {
-    backgroundColor: '#E8EDF5',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "#E8EDF5",
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 10,
     height: 36,
     paddingHorizontal: 16,
   },
-  btnTxt: { fontSize: 14, fontWeight: '700' },
+  btnTxt: { fontSize: 14, fontWeight: "700" },
 });
 
 const thumb = RN.StyleSheet.create({
   grid: {
-    width: '100%',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
+    width: "100%",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
     columnGap: 10,
     rowGap: 10,
   },
   item: {
-    position: 'relative',
-    width: '45%',
+    position: "relative",
+    width: "45%",
     aspectRatio: 1.6,
     borderRadius: 6,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
-  img: { width: '100%', height: '100%' },
+  img: { width: "100%", height: "100%" },
   x: {
-    position: 'absolute',
+    position: "absolute",
     top: 4,
     right: 4,
     width: 22,
     height: 22,
     borderRadius: 11,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "rgba(0,0,0,0.5)",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  xTxt: { color: '#fff', fontSize: 16, lineHeight: 16, fontWeight: '700' },
+  xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
 });
