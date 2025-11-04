@@ -194,6 +194,7 @@ const ThumbGrid = ({
   if (!images.length) return null;
   return (
     <RN.View style={thumb.grid}>
+      <RN.Text style={thumb.xTxt2}>Nome do Arquivo</RN.Text>
       {images.map((uri, idx) => (
         <RN.View key={uri + idx} style={thumb.item}>
           <RN.Pressable
@@ -201,7 +202,6 @@ const ThumbGrid = ({
             style={thumb.x}
             onPress={() => onRemove(idx)}
           >
-            <RN.Text style={thumb.xTxt}>Nome do Arquivo</RN.Text>
             <RN.Text style={thumb.xTxt}>×</RN.Text>
           </RN.Pressable>
         </RN.View>
@@ -246,6 +246,10 @@ const thumb = RN.StyleSheet.create({
     justifyContent: "center",
     columnGap: 10,
     rowGap: 10,
+    borderWidth: 2,
+    borderColor: "#E5E7EB",
+    padding: 8,
+    marginBottom: 8,
   },
   item: {
     position: "relative",
@@ -267,4 +271,6 @@ const thumb = RN.StyleSheet.create({
     justifyContent: "center",
   },
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
+  xTxt2: { fontSize: 14, lineHeight: 16 },
 });
+
