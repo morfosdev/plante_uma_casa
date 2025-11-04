@@ -8400,7 +8400,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -15773,7 +15773,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -23107,7 +23107,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -30405,7 +30405,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
