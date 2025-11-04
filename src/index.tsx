@@ -38280,13 +38280,16 @@ async (...args) =>
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
+        , 
+        (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(value) => {
 	console.log("Set Images B9",{value});
 
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
+ }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
+ arrFuncs: [() => console.log({args})], args,
  }}/>],
 
             args,
@@ -43335,13 +43338,16 @@ async (...args) =>
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
+        , 
+        (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(value) => {
 	console.log("Set Images B9",{value});
 
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
+ }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
+ arrFuncs: [() => console.log({args})], args,
  }}/>],
 
             args,
@@ -51762,13 +51768,16 @@ async (...args) =>
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
+        , 
+        (...args:any) => <Elements.BtnImagePicker pass={{
  arrFuncs: [(value) => {
 	console.log("Set Images B9",{value});
 
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
+ }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
+ arrFuncs: [() => console.log({args})], args,
  }}/>],
 
             args,
