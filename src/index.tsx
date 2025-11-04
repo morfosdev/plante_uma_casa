@@ -37656,6 +37656,11 @@ async (...args) =>
  arrFuncs: [() => {}],
  }}), 
 async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [() => {}],
+ }}), 
+async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
   arrRefStrings: [`steps`],
             arrPathData: [`sc.b8.editChanges`],
@@ -42716,6 +42721,11 @@ paddingVertical: 8,
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [() => {}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [() => {}],
  }}), 
 async (...args) =>
@@ -51151,6 +51161,11 @@ paddingVertical: 8,
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [() => {}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [() => {}],
  }}), 
 async (...args) =>
