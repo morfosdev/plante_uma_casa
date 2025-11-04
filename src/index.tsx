@@ -38323,6 +38323,15 @@ console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
 }],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+}],
  }}), async () => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
@@ -43390,6 +43399,15 @@ async (...args) =>
 console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
  }}), async () => {
   const css1 =
@@ -51830,6 +51848,15 @@ async (...args) =>
 console.log({args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
  }}), async () => {
   const css1 =
