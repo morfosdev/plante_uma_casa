@@ -238,7 +238,7 @@ const ThumbGrid = ({
             <RN.Text
               numberOfLines={2}
               ellipsizeMode="tail"
-              style={{ fontWeight: "700", fontSize: 12, textAlign: "center" }}
+              style={{ fontSize: 12, textAlign: "center" }}
             >
               {names?.[idx] ?? "Documento"}
             </RN.Text>
@@ -289,6 +289,9 @@ const styles = RN.StyleSheet.create({
 const thumb = RN.StyleSheet.create({
   grid: {
     width: "100%",
+  },
+  item: {
+    width: "100%",
     flexDirection: "row",
     borderWidth: 1,
     borderColor: "#E5E7EB",
@@ -296,7 +299,6 @@ const thumb = RN.StyleSheet.create({
     marginBottom: 8,
     borderRadius: 6,
   },
-  item: {},
   img: { width: "100%", height: "100%" },
   x: {
     width: 22,
