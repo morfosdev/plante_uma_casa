@@ -91,12 +91,17 @@ const BtnWeb = ({ pass }: Tprops) => {
   return (
     <>
       <RN.View style={styles.container}>
-        <ThumbGrid images={docUris} names={docNames} onRemove={removeAt} />
+        <ThumbGrid documents={docUris} names={docNames} onRemove={removeAt} />
 
-        <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
-        <RN.Text style={styles.subtitle}>
-          Selecione arquivos PDF, Word ou TXT
-        </RN.Text>
+        {!docUris && (
+          <>
+            <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
+            <RN.Text style={styles.subtitle}>
+              Selecione arquivos PDF, Word ou TXT
+            </RN.Text>
+          </>
+        )}
+
         <RN.Pressable style={styles.btn} onPress={pickWeb}>
           <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
         </RN.Pressable>
@@ -193,11 +198,17 @@ const BtnNat = ({ pass }: Tprops) => {
 
   return (
     <RN.View style={styles.container}>
-      <ThumbGrid images={docUris} names={docNames} onRemove={removeAt} />
-      <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
-      <RN.Text style={styles.subtitle}>
-        Selecione arquivos PDF, Word ou TXT
-      </RN.Text>
+      <ThumbGrid documents={docUris} names={docNames} onRemove={removeAt} />
+
+      {!docUris && (
+        <>
+          <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
+          <RN.Text style={styles.subtitle}>
+            Selecione arquivos PDF, Word ou TXT
+          </RN.Text>
+        </>
+      )}
+
       <RN.Pressable style={styles.btn} onPress={pickNative}>
         <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
       </RN.Pressable>
@@ -207,19 +218,19 @@ const BtnNat = ({ pass }: Tprops) => {
 
 /* ------- Grade de miniaturas reutilizável ------- */
 const ThumbGrid = ({
-  images,
+  documents,
   names,
   onRemove,
 }: {
-  images: string[];
+  documents: string[];
   names?: string[];
   onRemove: (idx: number) => void;
 }) => {
-  if (!images.length) return null;
+  if (!documents.length) return null;
   return (
     <RN.View style={thumb.grid}>
       <RN.Text style={thumb.xTxt2}>Nome do Arquivo</RN.Text>
-      {images.map((uri, idx) => (
+      {documents.map((uri, idx) => (
         <RN.View key={uri + idx} style={thumb.item}>
           {/* Nome do documento */}
           <RN.View
@@ -311,3 +322,4 @@ const thumb = RN.StyleSheet.create({
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
   xTxt2: { fontSize: 14, lineHeight: 16 },
 });
+
