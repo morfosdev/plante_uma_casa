@@ -11494,16 +11494,17 @@ paddingVertical: 8,
       return;
     }
 
-    // 🔹 Extrai os valores do formulário
-    const numberOfInstallments = form?.numberOfInstallments ?? "";
-    const totalValue = form?.totalValue ?? "";
-    const date = form?.date ?? "";
-    const description = form?.description ?? "";
-    const value = form?.value ?? "";
+    // 🔹 Extrai os valores do formulário com fallback seguro
+    const numberOfInstallments = form?.numberOfInstallments || "";
+    const totalValue = form?.totalValue || "";
+    const date = form?.date || "";
+    const description = form?.description || "";
+    const value = form?.value || "";
+    const installmentId = form?.installmentId || "i1"; // 👈 garante um valor válido
 
-    // 🔹 Monta o mapa do primeiro installment (i1)
+    // 🔹 Monta o mapa do installment
     const installmentData = {
-      installmentId: "i1",
+      installmentId,
       date,
       description,
       value,
@@ -11513,10 +11514,10 @@ paddingVertical: 8,
     const dataToUpdate = {
       numberOfInstallments,
       totalValue,
-      ["installments." + form.installmentId]: installmentData
+      ["installments." + installmentId]: installmentData, // 👈 evita 'undefined'
     };
 
-    // 🔹 Atualiza o documento
+    // 🔹 Atualiza o documento no Firestore
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
@@ -11527,7 +11528,7 @@ paddingVertical: 8,
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
-    // 🔹 Feedback opcional na tela
+    // 🔹 Feedback opcional
     tools.functions.setVar({
       args: "",
       pass: {
@@ -11546,7 +11547,8 @@ paddingVertical: 8,
       },
     });
   }
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -18943,16 +18945,17 @@ paddingVertical: 8,
       return;
     }
 
-    // 🔹 Extrai os valores do formulário
-    const numberOfInstallments = form?.numberOfInstallments ?? "";
-    const totalValue = form?.totalValue ?? "";
-    const date = form?.date ?? "";
-    const description = form?.description ?? "";
-    const value = form?.value ?? "";
+    // 🔹 Extrai os valores do formulário com fallback seguro
+    const numberOfInstallments = form?.numberOfInstallments || "";
+    const totalValue = form?.totalValue || "";
+    const date = form?.date || "";
+    const description = form?.description || "";
+    const value = form?.value || "";
+    const installmentId = form?.installmentId || "i1"; // 👈 garante um valor válido
 
-    // 🔹 Monta o mapa do primeiro installment (i1)
+    // 🔹 Monta o mapa do installment
     const installmentData = {
-      installmentId: "i1",
+      installmentId,
       date,
       description,
       value,
@@ -18962,10 +18965,10 @@ paddingVertical: 8,
     const dataToUpdate = {
       numberOfInstallments,
       totalValue,
-      ["installments." + form.installmentId]: installmentData
+      ["installments." + installmentId]: installmentData, // 👈 evita 'undefined'
     };
 
-    // 🔹 Atualiza o documento
+    // 🔹 Atualiza o documento no Firestore
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
@@ -18976,7 +18979,7 @@ paddingVertical: 8,
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
-    // 🔹 Feedback opcional na tela
+    // 🔹 Feedback opcional
     tools.functions.setVar({
       args: "",
       pass: {
@@ -18995,7 +18998,8 @@ paddingVertical: 8,
       },
     });
   }
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -26338,16 +26342,17 @@ paddingVertical: 8,
       return;
     }
 
-    // 🔹 Extrai os valores do formulário
-    const numberOfInstallments = form?.numberOfInstallments ?? "";
-    const totalValue = form?.totalValue ?? "";
-    const date = form?.date ?? "";
-    const description = form?.description ?? "";
-    const value = form?.value ?? "";
+    // 🔹 Extrai os valores do formulário com fallback seguro
+    const numberOfInstallments = form?.numberOfInstallments || "";
+    const totalValue = form?.totalValue || "";
+    const date = form?.date || "";
+    const description = form?.description || "";
+    const value = form?.value || "";
+    const installmentId = form?.installmentId || "i1"; // 👈 garante um valor válido
 
-    // 🔹 Monta o mapa do primeiro installment (i1)
+    // 🔹 Monta o mapa do installment
     const installmentData = {
-      installmentId: "i1",
+      installmentId,
       date,
       description,
       value,
@@ -26357,10 +26362,10 @@ paddingVertical: 8,
     const dataToUpdate = {
       numberOfInstallments,
       totalValue,
-      ["installments." + form.installmentId]: installmentData
+      ["installments." + installmentId]: installmentData, // 👈 evita 'undefined'
     };
 
-    // 🔹 Atualiza o documento
+    // 🔹 Atualiza o documento no Firestore
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
@@ -26371,7 +26376,7 @@ paddingVertical: 8,
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
-    // 🔹 Feedback opcional na tela
+    // 🔹 Feedback opcional
     tools.functions.setVar({
       args: "",
       pass: {
@@ -26390,7 +26395,8 @@ paddingVertical: 8,
       },
     });
   }
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -33712,16 +33718,17 @@ paddingVertical: 8,
       return;
     }
 
-    // 🔹 Extrai os valores do formulário
-    const numberOfInstallments = form?.numberOfInstallments ?? "";
-    const totalValue = form?.totalValue ?? "";
-    const date = form?.date ?? "";
-    const description = form?.description ?? "";
-    const value = form?.value ?? "";
+    // 🔹 Extrai os valores do formulário com fallback seguro
+    const numberOfInstallments = form?.numberOfInstallments || "";
+    const totalValue = form?.totalValue || "";
+    const date = form?.date || "";
+    const description = form?.description || "";
+    const value = form?.value || "";
+    const installmentId = form?.installmentId || "i1"; // 👈 garante um valor válido
 
-    // 🔹 Monta o mapa do primeiro installment (i1)
+    // 🔹 Monta o mapa do installment
     const installmentData = {
-      installmentId: "i1",
+      installmentId,
       date,
       description,
       value,
@@ -33731,10 +33738,10 @@ paddingVertical: 8,
     const dataToUpdate = {
       numberOfInstallments,
       totalValue,
-      ["installments." + form.installmentId]: installmentData
+      ["installments." + installmentId]: installmentData, // 👈 evita 'undefined'
     };
 
-    // 🔹 Atualiza o documento
+    // 🔹 Atualiza o documento no Firestore
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
@@ -33745,7 +33752,7 @@ paddingVertical: 8,
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
-    // 🔹 Feedback opcional na tela
+    // 🔹 Feedback opcional
     tools.functions.setVar({
       args: "",
       pass: {
@@ -33764,7 +33771,8 @@ paddingVertical: 8,
       },
     });
   }
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
