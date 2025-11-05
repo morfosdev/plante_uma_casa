@@ -19872,7 +19872,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.A9.lists.list1[0].totalValue`
+            `$var_sc.A9.lists.list1[0].installments.totalValue`
           ],
 
           args,
