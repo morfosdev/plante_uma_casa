@@ -7304,7 +7304,7 @@ paddingVertical: 8,
   }
 
   console.log("🔍 --- FIM DEBUG ---");
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -14844,7 +14844,7 @@ paddingVertical: 8,
   }
 
   console.log("🔍 --- FIM DEBUG ---");
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -22330,7 +22330,7 @@ paddingVertical: 8,
   }
 
   console.log("🔍 --- FIM DEBUG ---");
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -29795,7 +29795,7 @@ paddingVertical: 8,
   }
 
   console.log("🔍 --- FIM DEBUG ---");
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
