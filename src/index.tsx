@@ -6130,7 +6130,25 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.iptChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -13580,7 +13598,25 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.iptChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -20976,7 +21012,25 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.iptChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
@@ -28351,7 +28405,25 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.iptChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
