@@ -11480,38 +11480,34 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
-  const installmentId = tools.getCtData(
-    "sc.A10.forms.editChanges.installmentId"
-  );
-  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
+  const installmentId = tools.getCtData("sc.A10.forms.editChanges.installmentId");
   const lotId = tools.getCtData("sc.A10.currents.currId1");
   const data = tools.getCtData("sc.A10.forms.editChanges");
 
+  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
+
   try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
+    // Cria o ID sanitizado (sem pontos)
+    const newId = String(installmentId).replace(/./g, "_");
+
+    // Em vez de usar computed property, criamos o objeto manualmente
+    const fieldPath = "installment." + newId;
+
+    // O updateDoc exige um objeto simples (chave: valor)
+    const dataToUpdate = {};
+    dataToUpdate[fieldPath] = data;
 
     const refDoc = doc(db, "lots", lotId);
-    const newId = installmentId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["installment." + newId]: { ...data },
-    };
 
     await updateDoc(refDoc, dataToUpdate);
 
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.a10.addFinance";
+    // Limpa e fecha os toggles
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
+    tools.setData({ path: "all.toggles.sideRight", value: false });
+    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -18905,38 +18901,34 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
-  const installmentId = tools.getCtData(
-    "sc.A10.forms.editChanges.installmentId"
-  );
-  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
+  const installmentId = tools.getCtData("sc.A10.forms.editChanges.installmentId");
   const lotId = tools.getCtData("sc.A10.currents.currId1");
   const data = tools.getCtData("sc.A10.forms.editChanges");
 
+  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
+
   try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
+    // Cria o ID sanitizado (sem pontos)
+    const newId = String(installmentId).replace(/./g, "_");
+
+    // Em vez de usar computed property, criamos o objeto manualmente
+    const fieldPath = "installment." + newId;
+
+    // O updateDoc exige um objeto simples (chave: valor)
+    const dataToUpdate = {};
+    dataToUpdate[fieldPath] = data;
 
     const refDoc = doc(db, "lots", lotId);
-    const newId = installmentId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["installment." + newId]: { ...data },
-    };
 
     await updateDoc(refDoc, dataToUpdate);
 
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.a10.addFinance";
+    // Limpa e fecha os toggles
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
+    tools.setData({ path: "all.toggles.sideRight", value: false });
+    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -26276,38 +26268,34 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
-  const installmentId = tools.getCtData(
-    "sc.A10.forms.editChanges.installmentId"
-  );
-  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
+  const installmentId = tools.getCtData("sc.A10.forms.editChanges.installmentId");
   const lotId = tools.getCtData("sc.A10.currents.currId1");
   const data = tools.getCtData("sc.A10.forms.editChanges");
 
+  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
+
   try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
+    // Cria o ID sanitizado (sem pontos)
+    const newId = String(installmentId).replace(/./g, "_");
+
+    // Em vez de usar computed property, criamos o objeto manualmente
+    const fieldPath = "installment." + newId;
+
+    // O updateDoc exige um objeto simples (chave: valor)
+    const dataToUpdate = {};
+    dataToUpdate[fieldPath] = data;
 
     const refDoc = doc(db, "lots", lotId);
-    const newId = installmentId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["installment." + newId]: { ...data },
-    };
 
     await updateDoc(refDoc, dataToUpdate);
 
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.a10.addFinance";
+    // Limpa e fecha os toggles
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
+    tools.setData({ path: "all.toggles.sideRight", value: false });
+    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -33626,38 +33614,34 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
-  const installmentId = tools.getCtData(
-    "sc.A10.forms.editChanges.installmentId"
-  );
-  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
+  const installmentId = tools.getCtData("sc.A10.forms.editChanges.installmentId");
   const lotId = tools.getCtData("sc.A10.currents.currId1");
   const data = tools.getCtData("sc.A10.forms.editChanges");
 
+  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
+
   try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
+    // Cria o ID sanitizado (sem pontos)
+    const newId = String(installmentId).replace(/./g, "_");
+
+    // Em vez de usar computed property, criamos o objeto manualmente
+    const fieldPath = "installment." + newId;
+
+    // O updateDoc exige um objeto simples (chave: valor)
+    const dataToUpdate = {};
+    dataToUpdate[fieldPath] = data;
 
     const refDoc = doc(db, "lots", lotId);
-    const newId = installmentId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["installment." + newId]: { ...data },
-    };
 
     await updateDoc(refDoc, dataToUpdate);
 
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.a10.addFinance";
+    // Limpa e fecha os toggles
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
+    tools.setData({ path: "all.toggles.sideRight", value: false });
+    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
