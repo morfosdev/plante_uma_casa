@@ -20251,7 +20251,7 @@ shadowRadius: 4,
           ],
 
           children: [
-            `$arg_owner`
+            `$arg_item[0].installments.totalValue`
           ],
 
           args,
