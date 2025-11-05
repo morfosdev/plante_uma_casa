@@ -11547,8 +11547,7 @@ paddingVertical: 8,
       },
     });
   }
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -18998,8 +18997,7 @@ paddingVertical: 8,
       },
     });
   }
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -26395,8 +26393,7 @@ paddingVertical: 8,
       },
     });
   }
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -33771,8 +33768,7 @@ paddingVertical: 8,
       },
     });
   }
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
