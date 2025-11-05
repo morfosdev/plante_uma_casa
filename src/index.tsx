@@ -11260,11 +11260,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.numberOfInstallments`],
+          path: [`sc.A10.forms.editChanges.numberOfInstallments`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.numberOfInstallments`],
+          keyPath: [`sc.A10.forms.editChanges.numberOfInstallments`],
           value: [`$arg_callback`]
         }})],
 
@@ -11314,11 +11314,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.i1.value`],
+          path: [`sc.A10.forms.editChanges.value`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.i1.value`],
+          keyPath: [`sc.A10.forms.editChanges.value`],
           value: [`$arg_callback`]
         }})],
 
@@ -11367,11 +11367,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.i1.date`],
+          path: [`sc.A10.forms.editChanges.date`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.i1.date`],
+          keyPath: [`sc.A10.forms.editChanges.date`],
           value: [`$arg_callback`]
         }})],
 
@@ -18710,11 +18710,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.numberOfInstallments`],
+          path: [`sc.A10.forms.editChanges.numberOfInstallments`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.numberOfInstallments`],
+          keyPath: [`sc.A10.forms.editChanges.numberOfInstallments`],
           value: [`$arg_callback`]
         }})],
 
@@ -18764,11 +18764,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.i1.value`],
+          path: [`sc.A10.forms.editChanges.value`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.i1.value`],
+          keyPath: [`sc.A10.forms.editChanges.value`],
           value: [`$arg_callback`]
         }})],
 
@@ -18817,11 +18817,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.i1.date`],
+          path: [`sc.A10.forms.editChanges.date`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.i1.date`],
+          keyPath: [`sc.A10.forms.editChanges.date`],
           value: [`$arg_callback`]
         }})],
 
@@ -26106,11 +26106,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.numberOfInstallments`],
+          path: [`sc.A10.forms.editChanges.numberOfInstallments`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.numberOfInstallments`],
+          keyPath: [`sc.A10.forms.editChanges.numberOfInstallments`],
           value: [`$arg_callback`]
         }})],
 
@@ -26160,11 +26160,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.i1.value`],
+          path: [`sc.A10.forms.editChanges.value`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.i1.value`],
+          keyPath: [`sc.A10.forms.editChanges.value`],
           value: [`$arg_callback`]
         }})],
 
@@ -26213,11 +26213,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.i1.date`],
+          path: [`sc.A10.forms.editChanges.date`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.i1.date`],
+          keyPath: [`sc.A10.forms.editChanges.date`],
           value: [`$arg_callback`]
         }})],
 
@@ -33481,11 +33481,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.numberOfInstallments`],
+          path: [`sc.A10.forms.editChanges.numberOfInstallments`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.numberOfInstallments`],
+          keyPath: [`sc.A10.forms.editChanges.numberOfInstallments`],
           value: [`$arg_callback`]
         }})],
 
@@ -33535,11 +33535,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.i1.value`],
+          path: [`sc.A10.forms.editChanges.value`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.i1.value`],
+          keyPath: [`sc.A10.forms.editChanges.value`],
           value: [`$arg_callback`]
         }})],
 
@@ -33588,11 +33588,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.installments.i1.date`],
+          path: [`sc.A10.forms.editChanges.date`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installments.i1.date`],
+          keyPath: [`sc.A10.forms.editChanges.date`],
           value: [`$arg_callback`]
         }})],
 
