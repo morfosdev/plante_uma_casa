@@ -11476,74 +11476,97 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+  const css1 = 'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
   try {
     // 🔹 Inicializa o Firestore
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-    const fbInit = tools.getCtData("all.temp.fireInit");
+    const { getFirestore, doc, updateDoc } = await import('firebase/firestore');
+    const fbInit = tools.getCtData('all.temp.fireInit');
     const db = getFirestore(fbInit);
 
-    // 🔹 Obtém o ID do lote e os dados do formulário
-    const lotId = tools.getCtData("sc.A10.currents.currId1");
-    const form = tools.getCtData("sc.A10.forms.editChanges");
+    // 🔹 Obtém dados do formulário e o docId do lote
+    const lotId = tools.getCtData('sc.A10.currents.currId1');
+    const form = tools.getCtData('sc.A10.forms.editChanges');
 
     if (!lotId) {
-      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      console.warn('❌ Nenhum lote selecionado (lotId ausente)');
       return;
     }
 
-    // 🔹 Extrai os valores do formulário com fallback seguro
-    const numberOfInstallments = form?.numberOfInstallments || "";
-    const totalValue = form?.totalValue || "";
-    const date = form?.date || "";
-    const description = form?.description || "";
-    const value = form?.value || "";
-    const installmentId = form?.installmentId || "i1"; // 👈 garante um valor válido
+    // 🔹 Extrai campos do formulário
+    const rawValue = form?.value || '';
+    const rawInstallments = form?.numberOfInstallments || '0';
+    const date = form?.date || '';
+    const description = form?.description || '';
 
-    // 🔹 Monta o mapa do installment
-    const installmentData = {
-      installmentId,
-      date,
-      description,
-      value,
+    const numberOfInstallments = parseInt(rawInstallments);
+    const value = parseFloat(String(rawValue).replace(/[^d.-]/g, '')) || 0;
+
+    if (numberOfInstallments <= 0 || value <= 0) {
+      console.warn('❌ Número de parcelas ou valor inválido');
+      return;
+    }
+
+    // 🔹 Calcula automaticamente o valor total
+    const calculatedTotal = value * numberOfInstallments;
+
+    // Usa o totalValue informado ou o calculado
+    const totalValue =
+      parseFloat(String(form?.totalValue || '').replace(/[^d.-]/g, '')) ||
+      calculatedTotal;
+
+    // 🔹 Monta o mapa de parcelas (installments)
+    const installmentsMap = {
+      totalValue: totalValue.toFixed(2),
+      numberOfInstallments,
     };
+
+    // 🔹 Cria um map i1, i2, i3... com os mesmos dados base
+    for (let i = 1; i <= numberOfInstallments; i++) {
+      const id = 'i' + i;
+      installmentsMap[id] = {
+        installmentId: id,
+        date,
+        description,
+        value: value.toFixed(2),
+      };
+    }
 
     // 🔹 Monta o objeto de atualização
     const dataToUpdate = {
-      numberOfInstallments,
-      totalValue,
-      ["installments." + installmentId]: installmentData, // 👈 evita 'undefined'
+      installments: installmentsMap,
     };
 
     // 🔹 Atualiza o documento no Firestore
-    const refDoc = doc(db, "lots", lotId);
+    const refDoc = doc(db, 'lots', lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+    console.log('%c✅ Dados atualizados com sucesso:', css1, dataToUpdate);
 
-    // 🔹 Limpa o formulário e fecha o painel
-    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+    // 🔹 Limpa o formulário e fecha o painel lateral
+    tools.setData({ path: 'sc.A10.forms.editChanges', value: {} });
+    tools.setData({ path: 'all.toggles.sideRight', value: false });
+    tools.setData({ path: 'all.toggles.a10.addFinance', value: false });
 
-    // 🔹 Feedback opcional
+    // 🔹 Mensagem de feedback
     tools.functions.setVar({
-      args: "",
+      args: '',
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["💾 Dados salvos com sucesso!"],
+        keyPath: ['sc.A10.feedbackMessage'],
+        value: [
+          '💾 Parcelas geradas e salvas com sucesso! Total: R$ ' +
+            totalValue.toFixed(2),
+        ],
       },
     });
   } catch (err) {
-    console.error("❌ Erro ao salvar no Firebase:", err);
+    console.error('❌ Erro ao salvar no Firebase:', err);
 
     tools.functions.setVar({
-      args: "",
+      args: '',
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
+        keyPath: ['sc.A10.feedbackMessage'],
+        value: ['⚠️ Erro ao salvar. Verifique o console.'],
       },
     });
   }
@@ -18926,74 +18949,97 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+  const css1 = 'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
   try {
     // 🔹 Inicializa o Firestore
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-    const fbInit = tools.getCtData("all.temp.fireInit");
+    const { getFirestore, doc, updateDoc } = await import('firebase/firestore');
+    const fbInit = tools.getCtData('all.temp.fireInit');
     const db = getFirestore(fbInit);
 
-    // 🔹 Obtém o ID do lote e os dados do formulário
-    const lotId = tools.getCtData("sc.A10.currents.currId1");
-    const form = tools.getCtData("sc.A10.forms.editChanges");
+    // 🔹 Obtém dados do formulário e o docId do lote
+    const lotId = tools.getCtData('sc.A10.currents.currId1');
+    const form = tools.getCtData('sc.A10.forms.editChanges');
 
     if (!lotId) {
-      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      console.warn('❌ Nenhum lote selecionado (lotId ausente)');
       return;
     }
 
-    // 🔹 Extrai os valores do formulário com fallback seguro
-    const numberOfInstallments = form?.numberOfInstallments || "";
-    const totalValue = form?.totalValue || "";
-    const date = form?.date || "";
-    const description = form?.description || "";
-    const value = form?.value || "";
-    const installmentId = form?.installmentId || "i1"; // 👈 garante um valor válido
+    // 🔹 Extrai campos do formulário
+    const rawValue = form?.value || '';
+    const rawInstallments = form?.numberOfInstallments || '0';
+    const date = form?.date || '';
+    const description = form?.description || '';
 
-    // 🔹 Monta o mapa do installment
-    const installmentData = {
-      installmentId,
-      date,
-      description,
-      value,
+    const numberOfInstallments = parseInt(rawInstallments);
+    const value = parseFloat(String(rawValue).replace(/[^d.-]/g, '')) || 0;
+
+    if (numberOfInstallments <= 0 || value <= 0) {
+      console.warn('❌ Número de parcelas ou valor inválido');
+      return;
+    }
+
+    // 🔹 Calcula automaticamente o valor total
+    const calculatedTotal = value * numberOfInstallments;
+
+    // Usa o totalValue informado ou o calculado
+    const totalValue =
+      parseFloat(String(form?.totalValue || '').replace(/[^d.-]/g, '')) ||
+      calculatedTotal;
+
+    // 🔹 Monta o mapa de parcelas (installments)
+    const installmentsMap = {
+      totalValue: totalValue.toFixed(2),
+      numberOfInstallments,
     };
+
+    // 🔹 Cria um map i1, i2, i3... com os mesmos dados base
+    for (let i = 1; i <= numberOfInstallments; i++) {
+      const id = 'i' + i;
+      installmentsMap[id] = {
+        installmentId: id,
+        date,
+        description,
+        value: value.toFixed(2),
+      };
+    }
 
     // 🔹 Monta o objeto de atualização
     const dataToUpdate = {
-      numberOfInstallments,
-      totalValue,
-      ["installments." + installmentId]: installmentData, // 👈 evita 'undefined'
+      installments: installmentsMap,
     };
 
     // 🔹 Atualiza o documento no Firestore
-    const refDoc = doc(db, "lots", lotId);
+    const refDoc = doc(db, 'lots', lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+    console.log('%c✅ Dados atualizados com sucesso:', css1, dataToUpdate);
 
-    // 🔹 Limpa o formulário e fecha o painel
-    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+    // 🔹 Limpa o formulário e fecha o painel lateral
+    tools.setData({ path: 'sc.A10.forms.editChanges', value: {} });
+    tools.setData({ path: 'all.toggles.sideRight', value: false });
+    tools.setData({ path: 'all.toggles.a10.addFinance', value: false });
 
-    // 🔹 Feedback opcional
+    // 🔹 Mensagem de feedback
     tools.functions.setVar({
-      args: "",
+      args: '',
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["💾 Dados salvos com sucesso!"],
+        keyPath: ['sc.A10.feedbackMessage'],
+        value: [
+          '💾 Parcelas geradas e salvas com sucesso! Total: R$ ' +
+            totalValue.toFixed(2),
+        ],
       },
     });
   } catch (err) {
-    console.error("❌ Erro ao salvar no Firebase:", err);
+    console.error('❌ Erro ao salvar no Firebase:', err);
 
     tools.functions.setVar({
-      args: "",
+      args: '',
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
+        keyPath: ['sc.A10.feedbackMessage'],
+        value: ['⚠️ Erro ao salvar. Verifique o console.'],
       },
     });
   }
@@ -26322,74 +26368,97 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+  const css1 = 'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
   try {
     // 🔹 Inicializa o Firestore
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-    const fbInit = tools.getCtData("all.temp.fireInit");
+    const { getFirestore, doc, updateDoc } = await import('firebase/firestore');
+    const fbInit = tools.getCtData('all.temp.fireInit');
     const db = getFirestore(fbInit);
 
-    // 🔹 Obtém o ID do lote e os dados do formulário
-    const lotId = tools.getCtData("sc.A10.currents.currId1");
-    const form = tools.getCtData("sc.A10.forms.editChanges");
+    // 🔹 Obtém dados do formulário e o docId do lote
+    const lotId = tools.getCtData('sc.A10.currents.currId1');
+    const form = tools.getCtData('sc.A10.forms.editChanges');
 
     if (!lotId) {
-      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      console.warn('❌ Nenhum lote selecionado (lotId ausente)');
       return;
     }
 
-    // 🔹 Extrai os valores do formulário com fallback seguro
-    const numberOfInstallments = form?.numberOfInstallments || "";
-    const totalValue = form?.totalValue || "";
-    const date = form?.date || "";
-    const description = form?.description || "";
-    const value = form?.value || "";
-    const installmentId = form?.installmentId || "i1"; // 👈 garante um valor válido
+    // 🔹 Extrai campos do formulário
+    const rawValue = form?.value || '';
+    const rawInstallments = form?.numberOfInstallments || '0';
+    const date = form?.date || '';
+    const description = form?.description || '';
 
-    // 🔹 Monta o mapa do installment
-    const installmentData = {
-      installmentId,
-      date,
-      description,
-      value,
+    const numberOfInstallments = parseInt(rawInstallments);
+    const value = parseFloat(String(rawValue).replace(/[^d.-]/g, '')) || 0;
+
+    if (numberOfInstallments <= 0 || value <= 0) {
+      console.warn('❌ Número de parcelas ou valor inválido');
+      return;
+    }
+
+    // 🔹 Calcula automaticamente o valor total
+    const calculatedTotal = value * numberOfInstallments;
+
+    // Usa o totalValue informado ou o calculado
+    const totalValue =
+      parseFloat(String(form?.totalValue || '').replace(/[^d.-]/g, '')) ||
+      calculatedTotal;
+
+    // 🔹 Monta o mapa de parcelas (installments)
+    const installmentsMap = {
+      totalValue: totalValue.toFixed(2),
+      numberOfInstallments,
     };
+
+    // 🔹 Cria um map i1, i2, i3... com os mesmos dados base
+    for (let i = 1; i <= numberOfInstallments; i++) {
+      const id = 'i' + i;
+      installmentsMap[id] = {
+        installmentId: id,
+        date,
+        description,
+        value: value.toFixed(2),
+      };
+    }
 
     // 🔹 Monta o objeto de atualização
     const dataToUpdate = {
-      numberOfInstallments,
-      totalValue,
-      ["installments." + installmentId]: installmentData, // 👈 evita 'undefined'
+      installments: installmentsMap,
     };
 
     // 🔹 Atualiza o documento no Firestore
-    const refDoc = doc(db, "lots", lotId);
+    const refDoc = doc(db, 'lots', lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+    console.log('%c✅ Dados atualizados com sucesso:', css1, dataToUpdate);
 
-    // 🔹 Limpa o formulário e fecha o painel
-    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+    // 🔹 Limpa o formulário e fecha o painel lateral
+    tools.setData({ path: 'sc.A10.forms.editChanges', value: {} });
+    tools.setData({ path: 'all.toggles.sideRight', value: false });
+    tools.setData({ path: 'all.toggles.a10.addFinance', value: false });
 
-    // 🔹 Feedback opcional
+    // 🔹 Mensagem de feedback
     tools.functions.setVar({
-      args: "",
+      args: '',
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["💾 Dados salvos com sucesso!"],
+        keyPath: ['sc.A10.feedbackMessage'],
+        value: [
+          '💾 Parcelas geradas e salvas com sucesso! Total: R$ ' +
+            totalValue.toFixed(2),
+        ],
       },
     });
   } catch (err) {
-    console.error("❌ Erro ao salvar no Firebase:", err);
+    console.error('❌ Erro ao salvar no Firebase:', err);
 
     tools.functions.setVar({
-      args: "",
+      args: '',
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
+        keyPath: ['sc.A10.feedbackMessage'],
+        value: ['⚠️ Erro ao salvar. Verifique o console.'],
       },
     });
   }
@@ -33697,74 +33766,97 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+  const css1 = 'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
   try {
     // 🔹 Inicializa o Firestore
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-    const fbInit = tools.getCtData("all.temp.fireInit");
+    const { getFirestore, doc, updateDoc } = await import('firebase/firestore');
+    const fbInit = tools.getCtData('all.temp.fireInit');
     const db = getFirestore(fbInit);
 
-    // 🔹 Obtém o ID do lote e os dados do formulário
-    const lotId = tools.getCtData("sc.A10.currents.currId1");
-    const form = tools.getCtData("sc.A10.forms.editChanges");
+    // 🔹 Obtém dados do formulário e o docId do lote
+    const lotId = tools.getCtData('sc.A10.currents.currId1');
+    const form = tools.getCtData('sc.A10.forms.editChanges');
 
     if (!lotId) {
-      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      console.warn('❌ Nenhum lote selecionado (lotId ausente)');
       return;
     }
 
-    // 🔹 Extrai os valores do formulário com fallback seguro
-    const numberOfInstallments = form?.numberOfInstallments || "";
-    const totalValue = form?.totalValue || "";
-    const date = form?.date || "";
-    const description = form?.description || "";
-    const value = form?.value || "";
-    const installmentId = form?.installmentId || "i1"; // 👈 garante um valor válido
+    // 🔹 Extrai campos do formulário
+    const rawValue = form?.value || '';
+    const rawInstallments = form?.numberOfInstallments || '0';
+    const date = form?.date || '';
+    const description = form?.description || '';
 
-    // 🔹 Monta o mapa do installment
-    const installmentData = {
-      installmentId,
-      date,
-      description,
-      value,
+    const numberOfInstallments = parseInt(rawInstallments);
+    const value = parseFloat(String(rawValue).replace(/[^d.-]/g, '')) || 0;
+
+    if (numberOfInstallments <= 0 || value <= 0) {
+      console.warn('❌ Número de parcelas ou valor inválido');
+      return;
+    }
+
+    // 🔹 Calcula automaticamente o valor total
+    const calculatedTotal = value * numberOfInstallments;
+
+    // Usa o totalValue informado ou o calculado
+    const totalValue =
+      parseFloat(String(form?.totalValue || '').replace(/[^d.-]/g, '')) ||
+      calculatedTotal;
+
+    // 🔹 Monta o mapa de parcelas (installments)
+    const installmentsMap = {
+      totalValue: totalValue.toFixed(2),
+      numberOfInstallments,
     };
+
+    // 🔹 Cria um map i1, i2, i3... com os mesmos dados base
+    for (let i = 1; i <= numberOfInstallments; i++) {
+      const id = 'i' + i;
+      installmentsMap[id] = {
+        installmentId: id,
+        date,
+        description,
+        value: value.toFixed(2),
+      };
+    }
 
     // 🔹 Monta o objeto de atualização
     const dataToUpdate = {
-      numberOfInstallments,
-      totalValue,
-      ["installments." + installmentId]: installmentData, // 👈 evita 'undefined'
+      installments: installmentsMap,
     };
 
     // 🔹 Atualiza o documento no Firestore
-    const refDoc = doc(db, "lots", lotId);
+    const refDoc = doc(db, 'lots', lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+    console.log('%c✅ Dados atualizados com sucesso:', css1, dataToUpdate);
 
-    // 🔹 Limpa o formulário e fecha o painel
-    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+    // 🔹 Limpa o formulário e fecha o painel lateral
+    tools.setData({ path: 'sc.A10.forms.editChanges', value: {} });
+    tools.setData({ path: 'all.toggles.sideRight', value: false });
+    tools.setData({ path: 'all.toggles.a10.addFinance', value: false });
 
-    // 🔹 Feedback opcional
+    // 🔹 Mensagem de feedback
     tools.functions.setVar({
-      args: "",
+      args: '',
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["💾 Dados salvos com sucesso!"],
+        keyPath: ['sc.A10.feedbackMessage'],
+        value: [
+          '💾 Parcelas geradas e salvas com sucesso! Total: R$ ' +
+            totalValue.toFixed(2),
+        ],
       },
     });
   } catch (err) {
-    console.error("❌ Erro ao salvar no Firebase:", err);
+    console.error('❌ Erro ao salvar no Firebase:', err);
 
     tools.functions.setVar({
-      args: "",
+      args: '',
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
+        keyPath: ['sc.A10.feedbackMessage'],
+        value: ['⚠️ Erro ao salvar. Verifique o console.'],
       },
     });
   }
