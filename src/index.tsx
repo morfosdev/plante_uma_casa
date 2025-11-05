@@ -7270,151 +7270,41 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  const requiredFields = [
-    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
-    { path: "sc.a1.editChanges.address", name: "Endereço" },
-    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
-    { path: "sc.a1.editChanges.description", name: "Descrição" },
+ arrFunctions: [() => {
+  const getVal = (path) => tools.getCtData(path);
+
+  const paths = [
+    "sc.a1.editChanges.images",
+    "sc.a1.editChanges.documents",
   ];
 
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (val === null || val === undefined) return "";
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val;
-  };
+  console.log("🔍 --- DEBUG UPLOADERS ---");
 
-  const getArrayVal = (path) => {
-    let val = tools.getCtData(path);
-    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
-    if (Array.isArray(val)) return val;
-    if (typeof val === "string") {
+  for (let i = 0; i < paths.length; i++) {
+    // Pega o caminho direto do array
+    const val = getVal(paths[i]);
+
+    console.log(paths[i], ":", val);
+
+    if (Array.isArray(val)) {
+      console.log("➡️ Tipo: array", val.length, val);
+    } else if (val && typeof val === "object") {
+      console.log("➡️ Tipo: objeto", val);
+    } else if (typeof val === "string") {
+      console.log("➡️ Tipo: string", val.length, val);
       try {
         const parsed = JSON.parse(val);
-        return Array.isArray(parsed) ? parsed : [parsed];
+        console.log("✅ JSON.parse() OK:", parsed);
       } catch {
-        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
+        console.warn("⚠️ Não é JSON válido");
       }
+    } else {
+      console.log("❌ Valor vazio ou indefinido:", val);
     }
-    return [val];
-  };
-
-  // 🔹 Verifica campos obrigatórios
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
-
-  if (emptyFields.length > 0) {
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["Preencha os campos obrigatórios."],
-      },
-    });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return;
   }
 
-  console.log("💾 Validação OK — atualizando documento no Firebase...");
-
-  // 🔹 Inicializa o Firebase
-  let fbInit = tools.getCtData("all.temp.fireInit");
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: "all.temp.fireInit", value: fbInit });
-  }
-
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
-  const db = getFirestore(fbInit);
-
-  const docId = tools.getCtData("sc.a1.editChanges.docId");
-
-  if (!docId || typeof docId !== "string") {
-    console.error("❌ ID do documento inválido:", docId);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["ID do documento inválido. Não foi possível atualizar."],
-      },
-    });
-    return;
-  }
-
-  // 🔹 Monta o objeto para atualização
-  const updatedDoc = {
-    condo: getVal("sc.a1.editChanges.condo"),
-    address: getVal("sc.a1.editChanges.address"),
-    startDate: getVal("sc.a1.editChanges.startDate"),
-    endDate: getVal("sc.a1.editChanges.endDate"),
-    description: getVal("sc.a1.editChanges.description"),
-    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
-    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
-    updatedAt: serverTimestamp(),
-  };
-
-  try {
-    await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", updatedDoc);
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Dados atualizados com sucesso!"],
-      },
-    });
-
-    // 🔹 Limpa formulário e fecha painéis
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.editChanges"],
-        value: [{}],
-      },
-    });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
-        value: [false],
-      },
-    });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao atualizar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["Erro ao atualizar os dados. Verifique o console."],
-      },
-    });
-  }
-
-  // 🔹 Limpa mensagens após o processo
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.validationMessage"],
-      value: [""],
-    },
-  });
-}
+  console.log("🔍 --- FIM DEBUG ---");
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -14920,151 +14810,41 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  const requiredFields = [
-    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
-    { path: "sc.a1.editChanges.address", name: "Endereço" },
-    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
-    { path: "sc.a1.editChanges.description", name: "Descrição" },
+ arrFunctions: [() => {
+  const getVal = (path) => tools.getCtData(path);
+
+  const paths = [
+    "sc.a1.editChanges.images",
+    "sc.a1.editChanges.documents",
   ];
 
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (val === null || val === undefined) return "";
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val;
-  };
+  console.log("🔍 --- DEBUG UPLOADERS ---");
 
-  const getArrayVal = (path) => {
-    let val = tools.getCtData(path);
-    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
-    if (Array.isArray(val)) return val;
-    if (typeof val === "string") {
+  for (let i = 0; i < paths.length; i++) {
+    // Pega o caminho direto do array
+    const val = getVal(paths[i]);
+
+    console.log(paths[i], ":", val);
+
+    if (Array.isArray(val)) {
+      console.log("➡️ Tipo: array", val.length, val);
+    } else if (val && typeof val === "object") {
+      console.log("➡️ Tipo: objeto", val);
+    } else if (typeof val === "string") {
+      console.log("➡️ Tipo: string", val.length, val);
       try {
         const parsed = JSON.parse(val);
-        return Array.isArray(parsed) ? parsed : [parsed];
+        console.log("✅ JSON.parse() OK:", parsed);
       } catch {
-        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
+        console.warn("⚠️ Não é JSON válido");
       }
+    } else {
+      console.log("❌ Valor vazio ou indefinido:", val);
     }
-    return [val];
-  };
-
-  // 🔹 Verifica campos obrigatórios
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
-
-  if (emptyFields.length > 0) {
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["Preencha os campos obrigatórios."],
-      },
-    });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return;
   }
 
-  console.log("💾 Validação OK — atualizando documento no Firebase...");
-
-  // 🔹 Inicializa o Firebase
-  let fbInit = tools.getCtData("all.temp.fireInit");
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: "all.temp.fireInit", value: fbInit });
-  }
-
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
-  const db = getFirestore(fbInit);
-
-  const docId = tools.getCtData("sc.a1.editChanges.docId");
-
-  if (!docId || typeof docId !== "string") {
-    console.error("❌ ID do documento inválido:", docId);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["ID do documento inválido. Não foi possível atualizar."],
-      },
-    });
-    return;
-  }
-
-  // 🔹 Monta o objeto para atualização
-  const updatedDoc = {
-    condo: getVal("sc.a1.editChanges.condo"),
-    address: getVal("sc.a1.editChanges.address"),
-    startDate: getVal("sc.a1.editChanges.startDate"),
-    endDate: getVal("sc.a1.editChanges.endDate"),
-    description: getVal("sc.a1.editChanges.description"),
-    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
-    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
-    updatedAt: serverTimestamp(),
-  };
-
-  try {
-    await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", updatedDoc);
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Dados atualizados com sucesso!"],
-      },
-    });
-
-    // 🔹 Limpa formulário e fecha painéis
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.editChanges"],
-        value: [{}],
-      },
-    });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
-        value: [false],
-      },
-    });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao atualizar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["Erro ao atualizar os dados. Verifique o console."],
-      },
-    });
-  }
-
-  // 🔹 Limpa mensagens após o processo
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.validationMessage"],
-      value: [""],
-    },
-  });
-}
+  console.log("🔍 --- FIM DEBUG ---");
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -22516,151 +22296,41 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  const requiredFields = [
-    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
-    { path: "sc.a1.editChanges.address", name: "Endereço" },
-    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
-    { path: "sc.a1.editChanges.description", name: "Descrição" },
+ arrFunctions: [() => {
+  const getVal = (path) => tools.getCtData(path);
+
+  const paths = [
+    "sc.a1.editChanges.images",
+    "sc.a1.editChanges.documents",
   ];
 
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (val === null || val === undefined) return "";
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val;
-  };
+  console.log("🔍 --- DEBUG UPLOADERS ---");
 
-  const getArrayVal = (path) => {
-    let val = tools.getCtData(path);
-    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
-    if (Array.isArray(val)) return val;
-    if (typeof val === "string") {
+  for (let i = 0; i < paths.length; i++) {
+    // Pega o caminho direto do array
+    const val = getVal(paths[i]);
+
+    console.log(paths[i], ":", val);
+
+    if (Array.isArray(val)) {
+      console.log("➡️ Tipo: array", val.length, val);
+    } else if (val && typeof val === "object") {
+      console.log("➡️ Tipo: objeto", val);
+    } else if (typeof val === "string") {
+      console.log("➡️ Tipo: string", val.length, val);
       try {
         const parsed = JSON.parse(val);
-        return Array.isArray(parsed) ? parsed : [parsed];
+        console.log("✅ JSON.parse() OK:", parsed);
       } catch {
-        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
+        console.warn("⚠️ Não é JSON válido");
       }
+    } else {
+      console.log("❌ Valor vazio ou indefinido:", val);
     }
-    return [val];
-  };
-
-  // 🔹 Verifica campos obrigatórios
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
-
-  if (emptyFields.length > 0) {
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["Preencha os campos obrigatórios."],
-      },
-    });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return;
   }
 
-  console.log("💾 Validação OK — atualizando documento no Firebase...");
-
-  // 🔹 Inicializa o Firebase
-  let fbInit = tools.getCtData("all.temp.fireInit");
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: "all.temp.fireInit", value: fbInit });
-  }
-
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
-  const db = getFirestore(fbInit);
-
-  const docId = tools.getCtData("sc.a1.editChanges.docId");
-
-  if (!docId || typeof docId !== "string") {
-    console.error("❌ ID do documento inválido:", docId);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["ID do documento inválido. Não foi possível atualizar."],
-      },
-    });
-    return;
-  }
-
-  // 🔹 Monta o objeto para atualização
-  const updatedDoc = {
-    condo: getVal("sc.a1.editChanges.condo"),
-    address: getVal("sc.a1.editChanges.address"),
-    startDate: getVal("sc.a1.editChanges.startDate"),
-    endDate: getVal("sc.a1.editChanges.endDate"),
-    description: getVal("sc.a1.editChanges.description"),
-    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
-    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
-    updatedAt: serverTimestamp(),
-  };
-
-  try {
-    await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", updatedDoc);
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Dados atualizados com sucesso!"],
-      },
-    });
-
-    // 🔹 Limpa formulário e fecha painéis
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.editChanges"],
-        value: [{}],
-      },
-    });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
-        value: [false],
-      },
-    });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao atualizar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["Erro ao atualizar os dados. Verifique o console."],
-      },
-    });
-  }
-
-  // 🔹 Limpa mensagens após o processo
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.validationMessage"],
-      value: [""],
-    },
-  });
-}
+  console.log("🔍 --- FIM DEBUG ---");
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -30091,151 +29761,41 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  const requiredFields = [
-    { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
-    { path: "sc.a1.editChanges.address", name: "Endereço" },
-    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
-    { path: "sc.a1.editChanges.description", name: "Descrição" },
+ arrFunctions: [() => {
+  const getVal = (path) => tools.getCtData(path);
+
+  const paths = [
+    "sc.a1.editChanges.images",
+    "sc.a1.editChanges.documents",
   ];
 
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (val === null || val === undefined) return "";
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val;
-  };
+  console.log("🔍 --- DEBUG UPLOADERS ---");
 
-  const getArrayVal = (path) => {
-    let val = tools.getCtData(path);
-    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
-    if (Array.isArray(val)) return val;
-    if (typeof val === "string") {
+  for (let i = 0; i < paths.length; i++) {
+    // Pega o caminho direto do array
+    const val = getVal(paths[i]);
+
+    console.log(paths[i], ":", val);
+
+    if (Array.isArray(val)) {
+      console.log("➡️ Tipo: array", val.length, val);
+    } else if (val && typeof val === "object") {
+      console.log("➡️ Tipo: objeto", val);
+    } else if (typeof val === "string") {
+      console.log("➡️ Tipo: string", val.length, val);
       try {
         const parsed = JSON.parse(val);
-        return Array.isArray(parsed) ? parsed : [parsed];
+        console.log("✅ JSON.parse() OK:", parsed);
       } catch {
-        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
+        console.warn("⚠️ Não é JSON válido");
       }
+    } else {
+      console.log("❌ Valor vazio ou indefinido:", val);
     }
-    return [val];
-  };
-
-  // 🔹 Verifica campos obrigatórios
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
-
-  if (emptyFields.length > 0) {
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["Preencha os campos obrigatórios."],
-      },
-    });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return;
   }
 
-  console.log("💾 Validação OK — atualizando documento no Firebase...");
-
-  // 🔹 Inicializa o Firebase
-  let fbInit = tools.getCtData("all.temp.fireInit");
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig") ?? {};
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: "all.temp.fireInit", value: fbInit });
-  }
-
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
-  const db = getFirestore(fbInit);
-
-  const docId = tools.getCtData("sc.a1.editChanges.docId");
-
-  if (!docId || typeof docId !== "string") {
-    console.error("❌ ID do documento inválido:", docId);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["ID do documento inválido. Não foi possível atualizar."],
-      },
-    });
-    return;
-  }
-
-  // 🔹 Monta o objeto para atualização
-  const updatedDoc = {
-    condo: getVal("sc.a1.editChanges.condo"),
-    address: getVal("sc.a1.editChanges.address"),
-    startDate: getVal("sc.a1.editChanges.startDate"),
-    endDate: getVal("sc.a1.editChanges.endDate"),
-    description: getVal("sc.a1.editChanges.description"),
-    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
-    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
-    updatedAt: serverTimestamp(),
-  };
-
-  try {
-    await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", updatedDoc);
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Dados atualizados com sucesso!"],
-      },
-    });
-
-    // 🔹 Limpa formulário e fecha painéis
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.editChanges"],
-        value: [{}],
-      },
-    });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
-        value: [false],
-      },
-    });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao atualizar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: ["Erro ao atualizar os dados. Verifique o console."],
-      },
-    });
-  }
-
-  // 🔹 Limpa mensagens após o processo
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.validationMessage"],
-      value: [""],
-    },
-  });
-}
+  console.log("🔍 --- FIM DEBUG ---");
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
