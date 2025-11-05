@@ -7014,7 +7014,7 @@ borderRadius: 10,
           }}/>
         , (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [(value) => {
-	console.log("Set Documents A1",{value});
+	console.log("Set Documents A1b",{value});
 
 	const path = "all.temp.documents";
 	tools.setData({path, value});
@@ -7156,6 +7156,8 @@ paddingVertical: 8,
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
+	images: getVal("sc.a1.editChanges.images"),
+	files: getVal("sc.a1.editChanges.documents"),
     updatedAt: serverTimestamp(),
   };
 
@@ -14464,7 +14466,7 @@ borderRadius: 10,
           }}/>
         , (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [(value) => {
-	console.log("Set Documents A1",{value});
+	console.log("Set Documents A1b",{value});
 
 	const path = "all.temp.documents";
 	tools.setData({path, value});
@@ -14606,6 +14608,8 @@ paddingVertical: 8,
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
+	images: getVal("sc.a1.editChanges.images"),
+	files: getVal("sc.a1.editChanges.documents"),
     updatedAt: serverTimestamp(),
   };
 
@@ -21860,7 +21864,7 @@ borderRadius: 10,
           }}/>
         , (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [(value) => {
-	console.log("Set Documents A1",{value});
+	console.log("Set Documents A1b",{value});
 
 	const path = "all.temp.documents";
 	tools.setData({path, value});
@@ -22002,6 +22006,8 @@ paddingVertical: 8,
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
+	images: getVal("sc.a1.editChanges.images"),
+	files: getVal("sc.a1.editChanges.documents"),
     updatedAt: serverTimestamp(),
   };
 
@@ -29235,7 +29241,7 @@ borderRadius: 10,
           }}/>
         , (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [(value) => {
-	console.log("Set Documents A1",{value});
+	console.log("Set Documents A1b",{value});
 
 	const path = "all.temp.documents";
 	tools.setData({path, value});
@@ -29377,6 +29383,8 @@ paddingVertical: 8,
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
+	images: getVal("sc.a1.editChanges.images"),
+	files: getVal("sc.a1.editChanges.documents"),
     updatedAt: serverTimestamp(),
   };
 
