@@ -26360,7 +26360,8 @@ fontWeight: '700',
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [`mockCondos`],
             arrFuncs: [async (...args) =>
@@ -26368,7 +26369,22 @@ fontWeight: '700',
           keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
         }})],
-        }})]
+        }}), async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`lots`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_sc.A10.currents.currId1`],
+        }})],
+ arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A9.lists.list1`],
+          value: [`$arg_callback`]
+        }})],
+ }})]
  , trigger: 'on init'
 }})],
 
