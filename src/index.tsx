@@ -12729,6 +12729,21 @@ async (...args) =>
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.currents.currId1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.currents.currId1`],
+          value: [`$arg_docId`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A9.lists.list1`],
+          value: [[]]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a9finManagement");
