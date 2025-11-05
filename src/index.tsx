@@ -6046,7 +6046,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -6057,18 +6056,19 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
+        ],
 
             args,
           }}/>
         , 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Documents A1",{value});
+
+	const path = "all.temp.documents";
+	tools.setData({path, value});
+}], args,
+ }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -13496,7 +13496,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -13507,18 +13506,19 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
+        ],
 
             args,
           }}/>
         , 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Documents A1",{value});
+
+	const path = "all.temp.documents";
+	tools.setData({path, value});
+}], args,
+ }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -20892,7 +20892,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -20903,18 +20902,19 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
+        ],
 
             args,
           }}/>
         , 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Documents A1",{value});
+
+	const path = "all.temp.documents";
+	tools.setData({path, value});
+}], args,
+ }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -28267,7 +28267,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -28278,18 +28277,19 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
+        ],
 
             args,
           }}/>
         , 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
+ arrFuncs: [(value) => {
+	console.log("Set Documents A1",{value});
+
+	const path = "all.temp.documents";
+	tools.setData({path, value});
+}], args,
+ }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
