@@ -11517,7 +11517,7 @@ paddingVertical: 8,
   } catch (err) {
     console.error("Erro do updateDoc", { err });
   }
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -18938,7 +18938,7 @@ paddingVertical: 8,
   } catch (err) {
     console.error("Erro do updateDoc", { err });
   }
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -26305,7 +26305,7 @@ paddingVertical: 8,
   } catch (err) {
     console.error("Erro do updateDoc", { err });
   }
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -33651,7 +33651,7 @@ paddingVertical: 8,
   } catch (err) {
     console.error("Erro do updateDoc", { err });
   }
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
