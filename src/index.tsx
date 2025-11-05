@@ -11479,46 +11479,74 @@ paddingVertical: 8,
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const installmentId = tools.getCtData("sc.A10.forms.editChanges.installmentId");
-  const lotId = tools.getCtData("sc.A10.currents.currId1");
-  const data = tools.getCtData("sc.A10.forms.editChanges");
-
-  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
-
   try {
-    // Cria o ID sanitizado (sem pontos)
-    const newId = String(installmentId).replace(/./g, "_");
+    // 🔹 Inicializa o Firestore
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
 
-    // Em vez de usar computed property, criamos o objeto manualmente
-    const fieldPath = "installment." + newId;
+    // 🔹 Obtém o ID do lote e os dados do formulário
+    const lotId = tools.getCtData("sc.A10.currents.currId1");
+    const form = tools.getCtData("sc.A10.forms.editChanges");
 
-    // O updateDoc exige um objeto simples (chave: valor)
-    const dataToUpdate = {};
-    dataToUpdate[fieldPath] = data;
+    if (!lotId) {
+      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      return;
+    }
 
+    // 🔹 Extrai os valores do formulário
+    const numberOfInstallments = form?.numberOfInstallments ?? "";
+    const totalValue = form?.totalValue ?? "";
+    const date = form?.date ?? "";
+    const description = form?.description ?? "";
+    const value = form?.value ?? "";
+
+    // 🔹 Monta o mapa do primeiro installment (i1)
+    const installmentData = {
+      installmentId: "i1",
+      date,
+      description,
+      value,
+    };
+
+    // 🔹 Monta o objeto de atualização
+    const dataToUpdate = {
+      numberOfInstallments,
+      totalValue,
+      ["installments." + form.installmentId]: installmentData
+    };
+
+    // 🔹 Atualiza o documento
     const refDoc = doc(db, "lots", lotId);
-
     await updateDoc(refDoc, dataToUpdate);
 
-    // Limpa e fecha os toggles
+    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+
+    // 🔹 Limpa o formulário e fecha o painel
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "lots." + newId,
-      dataToUpdate,
+    // 🔹 Feedback opcional na tela
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["💾 Dados salvos com sucesso!"],
+      },
     });
   } catch (err) {
-    console.error("Erro do updateDoc", { err });
+    console.error("❌ Erro ao salvar no Firebase:", err);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["⚠️ Erro ao salvar. Verifique o console."],
+      },
+    });
   }
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -18900,46 +18928,74 @@ paddingVertical: 8,
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const installmentId = tools.getCtData("sc.A10.forms.editChanges.installmentId");
-  const lotId = tools.getCtData("sc.A10.currents.currId1");
-  const data = tools.getCtData("sc.A10.forms.editChanges");
-
-  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
-
   try {
-    // Cria o ID sanitizado (sem pontos)
-    const newId = String(installmentId).replace(/./g, "_");
+    // 🔹 Inicializa o Firestore
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
 
-    // Em vez de usar computed property, criamos o objeto manualmente
-    const fieldPath = "installment." + newId;
+    // 🔹 Obtém o ID do lote e os dados do formulário
+    const lotId = tools.getCtData("sc.A10.currents.currId1");
+    const form = tools.getCtData("sc.A10.forms.editChanges");
 
-    // O updateDoc exige um objeto simples (chave: valor)
-    const dataToUpdate = {};
-    dataToUpdate[fieldPath] = data;
+    if (!lotId) {
+      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      return;
+    }
 
+    // 🔹 Extrai os valores do formulário
+    const numberOfInstallments = form?.numberOfInstallments ?? "";
+    const totalValue = form?.totalValue ?? "";
+    const date = form?.date ?? "";
+    const description = form?.description ?? "";
+    const value = form?.value ?? "";
+
+    // 🔹 Monta o mapa do primeiro installment (i1)
+    const installmentData = {
+      installmentId: "i1",
+      date,
+      description,
+      value,
+    };
+
+    // 🔹 Monta o objeto de atualização
+    const dataToUpdate = {
+      numberOfInstallments,
+      totalValue,
+      ["installments." + form.installmentId]: installmentData
+    };
+
+    // 🔹 Atualiza o documento
     const refDoc = doc(db, "lots", lotId);
-
     await updateDoc(refDoc, dataToUpdate);
 
-    // Limpa e fecha os toggles
+    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+
+    // 🔹 Limpa o formulário e fecha o painel
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "lots." + newId,
-      dataToUpdate,
+    // 🔹 Feedback opcional na tela
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["💾 Dados salvos com sucesso!"],
+      },
     });
   } catch (err) {
-    console.error("Erro do updateDoc", { err });
+    console.error("❌ Erro ao salvar no Firebase:", err);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["⚠️ Erro ao salvar. Verifique o console."],
+      },
+    });
   }
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -26267,46 +26323,74 @@ paddingVertical: 8,
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const installmentId = tools.getCtData("sc.A10.forms.editChanges.installmentId");
-  const lotId = tools.getCtData("sc.A10.currents.currId1");
-  const data = tools.getCtData("sc.A10.forms.editChanges");
-
-  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
-
   try {
-    // Cria o ID sanitizado (sem pontos)
-    const newId = String(installmentId).replace(/./g, "_");
+    // 🔹 Inicializa o Firestore
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
 
-    // Em vez de usar computed property, criamos o objeto manualmente
-    const fieldPath = "installment." + newId;
+    // 🔹 Obtém o ID do lote e os dados do formulário
+    const lotId = tools.getCtData("sc.A10.currents.currId1");
+    const form = tools.getCtData("sc.A10.forms.editChanges");
 
-    // O updateDoc exige um objeto simples (chave: valor)
-    const dataToUpdate = {};
-    dataToUpdate[fieldPath] = data;
+    if (!lotId) {
+      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      return;
+    }
 
+    // 🔹 Extrai os valores do formulário
+    const numberOfInstallments = form?.numberOfInstallments ?? "";
+    const totalValue = form?.totalValue ?? "";
+    const date = form?.date ?? "";
+    const description = form?.description ?? "";
+    const value = form?.value ?? "";
+
+    // 🔹 Monta o mapa do primeiro installment (i1)
+    const installmentData = {
+      installmentId: "i1",
+      date,
+      description,
+      value,
+    };
+
+    // 🔹 Monta o objeto de atualização
+    const dataToUpdate = {
+      numberOfInstallments,
+      totalValue,
+      ["installments." + form.installmentId]: installmentData
+    };
+
+    // 🔹 Atualiza o documento
     const refDoc = doc(db, "lots", lotId);
-
     await updateDoc(refDoc, dataToUpdate);
 
-    // Limpa e fecha os toggles
+    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+
+    // 🔹 Limpa o formulário e fecha o painel
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "lots." + newId,
-      dataToUpdate,
+    // 🔹 Feedback opcional na tela
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["💾 Dados salvos com sucesso!"],
+      },
     });
   } catch (err) {
-    console.error("Erro do updateDoc", { err });
+    console.error("❌ Erro ao salvar no Firebase:", err);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["⚠️ Erro ao salvar. Verifique o console."],
+      },
+    });
   }
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -33613,46 +33697,74 @@ paddingVertical: 8,
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const installmentId = tools.getCtData("sc.A10.forms.editChanges.installmentId");
-  const lotId = tools.getCtData("sc.A10.currents.currId1");
-  const data = tools.getCtData("sc.A10.forms.editChanges");
-
-  console.log("%cinstallmentId a atualizar:", css1, { installmentId });
-
   try {
-    // Cria o ID sanitizado (sem pontos)
-    const newId = String(installmentId).replace(/./g, "_");
+    // 🔹 Inicializa o Firestore
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
 
-    // Em vez de usar computed property, criamos o objeto manualmente
-    const fieldPath = "installment." + newId;
+    // 🔹 Obtém o ID do lote e os dados do formulário
+    const lotId = tools.getCtData("sc.A10.currents.currId1");
+    const form = tools.getCtData("sc.A10.forms.editChanges");
 
-    // O updateDoc exige um objeto simples (chave: valor)
-    const dataToUpdate = {};
-    dataToUpdate[fieldPath] = data;
+    if (!lotId) {
+      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      return;
+    }
 
+    // 🔹 Extrai os valores do formulário
+    const numberOfInstallments = form?.numberOfInstallments ?? "";
+    const totalValue = form?.totalValue ?? "";
+    const date = form?.date ?? "";
+    const description = form?.description ?? "";
+    const value = form?.value ?? "";
+
+    // 🔹 Monta o mapa do primeiro installment (i1)
+    const installmentData = {
+      installmentId: "i1",
+      date,
+      description,
+      value,
+    };
+
+    // 🔹 Monta o objeto de atualização
+    const dataToUpdate = {
+      numberOfInstallments,
+      totalValue,
+      ["installments." + form.installmentId]: installmentData
+    };
+
+    // 🔹 Atualiza o documento
     const refDoc = doc(db, "lots", lotId);
-
     await updateDoc(refDoc, dataToUpdate);
 
-    // Limpa e fecha os toggles
+    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+
+    // 🔹 Limpa o formulário e fecha o painel
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
 
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "lots." + newId,
-      dataToUpdate,
+    // 🔹 Feedback opcional na tela
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["💾 Dados salvos com sucesso!"],
+      },
     });
   } catch (err) {
-    console.error("Erro do updateDoc", { err });
+    console.error("❌ Erro ao salvar no Firebase:", err);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["⚠️ Erro ao salvar. Verifique o console."],
+      },
+    });
   }
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
