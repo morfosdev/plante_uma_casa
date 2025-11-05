@@ -26360,16 +26360,7 @@ fontWeight: '700',
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`mockCondos`],
-            arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.list`],
-          value: [`$arg_callback`]
-        }})],
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`lots`],
