@@ -20105,7 +20105,7 @@ shadowRadius: 4,
           ],
 
           children: [
-            `$arg_[0].owner`
+            `$arg_owner`
           ],
 
           args,
