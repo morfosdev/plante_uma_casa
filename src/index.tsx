@@ -6221,6 +6221,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
+		images: getVal("sc.a1.iptChanges.arrImages"),
+		files: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -13689,6 +13691,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
+		images: getVal("sc.a1.iptChanges.arrImages"),
+		files: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -21103,6 +21107,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
+		images: getVal("sc.a1.iptChanges.arrImages"),
+		files: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -28496,6 +28502,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
+		images: getVal("sc.a1.iptChanges.arrImages"),
+		files: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
