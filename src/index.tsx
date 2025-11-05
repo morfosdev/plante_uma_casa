@@ -26379,11 +26379,19 @@ async (...args) =>
         `docId`, 
         `==`, `$var_sc.A10.currents.currId1`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A9.lists.list1`],
           value: [`$arg_callback`]
-        }})],
+        }}), (args) => {
+  console.log("custom do where get lot by docId", { args });
+  const objInstallments = args[0].installments;
+  const arrInstallments = typeof objInstallments === 'object' ? Object.values(objInstallments) : [];
+  console.log("custom do where get lot by docId", { arrInstallments });
+
+  tools.setData({ path: "sc.A9.lists.list1", value: arrInstallments });
+}],
  }})]
  , trigger: 'on init'
 }})],
