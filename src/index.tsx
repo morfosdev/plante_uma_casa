@@ -11476,15 +11476,14 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const css1 = 'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
+  const css1 =
+    'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
   try {
-    // 🔹 Inicializa o Firestore
     const { getFirestore, doc, updateDoc } = await import('firebase/firestore');
     const fbInit = tools.getCtData('all.temp.fireInit');
     const db = getFirestore(fbInit);
 
-    // 🔹 Obtém dados do formulário e o docId do lote
     const lotId = tools.getCtData('sc.A10.currents.currId1');
     const form = tools.getCtData('sc.A10.forms.editChanges');
 
@@ -11493,26 +11492,31 @@ paddingVertical: 8,
       return;
     }
 
-    // 🔹 Extrai campos do formulário
-    const rawValue = form?.value || '';
-    const rawInstallments = form?.numberOfInstallments || '0';
-    const date = form?.date || '';
-    const description = form?.description || '';
+    // 🔹 Extrai e normaliza os campos do formulário
+    const rawValue = (form?.value || '').toString().replace(',', '.').trim();
+    const rawInstallments = (form?.numberOfInstallments || '').toString().trim();
+    const date = (form?.date || '').trim();
+    const description = (form?.description || '').trim();
 
-    const numberOfInstallments = parseInt(rawInstallments);
-    const value = parseFloat(String(rawValue).replace(/[^d.-]/g, '')) || 0;
+    // 🔹 Converte para número de forma segura
+    const numberOfInstallments = parseInt(rawInstallments, 10);
+    const value = parseFloat(rawValue);
 
-    if (numberOfInstallments <= 0 || value <= 0) {
-      console.warn('❌ Número de parcelas ou valor inválido');
+    if (isNaN(numberOfInstallments) || isNaN(value) || numberOfInstallments <= 0 || value <= 0) {
+      console.warn('❌ Número de parcelas ou valor inválido:', {
+        numberOfInstallments,
+        value,
+        rawValue,
+        rawInstallments,
+      });
       return;
     }
 
     // 🔹 Calcula automaticamente o valor total
     const calculatedTotal = value * numberOfInstallments;
 
-    // Usa o totalValue informado ou o calculado
     const totalValue =
-      parseFloat(String(form?.totalValue || '').replace(/[^d.-]/g, '')) ||
+      parseFloat(String(form?.totalValue || '').replace(/[^d,.-]/g, '').replace(',', '.')) ||
       calculatedTotal;
 
     // 🔹 Monta o mapa de parcelas (installments)
@@ -11532,23 +11536,17 @@ paddingVertical: 8,
       };
     }
 
-    // 🔹 Monta o objeto de atualização
-    const dataToUpdate = {
-      installments: installmentsMap,
-    };
-
-    // 🔹 Atualiza o documento no Firestore
+    // 🔹 Atualiza o documento
+    const dataToUpdate = { installments: installmentsMap };
     const refDoc = doc(db, 'lots', lotId);
     await updateDoc(refDoc, dataToUpdate);
 
     console.log('%c✅ Dados atualizados com sucesso:', css1, dataToUpdate);
 
-    // 🔹 Limpa o formulário e fecha o painel lateral
     tools.setData({ path: 'sc.A10.forms.editChanges', value: {} });
     tools.setData({ path: 'all.toggles.sideRight', value: false });
     tools.setData({ path: 'all.toggles.a10.addFinance', value: false });
 
-    // 🔹 Mensagem de feedback
     tools.functions.setVar({
       args: '',
       pass: {
@@ -11561,7 +11559,6 @@ paddingVertical: 8,
     });
   } catch (err) {
     console.error('❌ Erro ao salvar no Firebase:', err);
-
     tools.functions.setVar({
       args: '',
       pass: {
@@ -18949,15 +18946,14 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const css1 = 'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
+  const css1 =
+    'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
   try {
-    // 🔹 Inicializa o Firestore
     const { getFirestore, doc, updateDoc } = await import('firebase/firestore');
     const fbInit = tools.getCtData('all.temp.fireInit');
     const db = getFirestore(fbInit);
 
-    // 🔹 Obtém dados do formulário e o docId do lote
     const lotId = tools.getCtData('sc.A10.currents.currId1');
     const form = tools.getCtData('sc.A10.forms.editChanges');
 
@@ -18966,26 +18962,31 @@ paddingVertical: 8,
       return;
     }
 
-    // 🔹 Extrai campos do formulário
-    const rawValue = form?.value || '';
-    const rawInstallments = form?.numberOfInstallments || '0';
-    const date = form?.date || '';
-    const description = form?.description || '';
+    // 🔹 Extrai e normaliza os campos do formulário
+    const rawValue = (form?.value || '').toString().replace(',', '.').trim();
+    const rawInstallments = (form?.numberOfInstallments || '').toString().trim();
+    const date = (form?.date || '').trim();
+    const description = (form?.description || '').trim();
 
-    const numberOfInstallments = parseInt(rawInstallments);
-    const value = parseFloat(String(rawValue).replace(/[^d.-]/g, '')) || 0;
+    // 🔹 Converte para número de forma segura
+    const numberOfInstallments = parseInt(rawInstallments, 10);
+    const value = parseFloat(rawValue);
 
-    if (numberOfInstallments <= 0 || value <= 0) {
-      console.warn('❌ Número de parcelas ou valor inválido');
+    if (isNaN(numberOfInstallments) || isNaN(value) || numberOfInstallments <= 0 || value <= 0) {
+      console.warn('❌ Número de parcelas ou valor inválido:', {
+        numberOfInstallments,
+        value,
+        rawValue,
+        rawInstallments,
+      });
       return;
     }
 
     // 🔹 Calcula automaticamente o valor total
     const calculatedTotal = value * numberOfInstallments;
 
-    // Usa o totalValue informado ou o calculado
     const totalValue =
-      parseFloat(String(form?.totalValue || '').replace(/[^d.-]/g, '')) ||
+      parseFloat(String(form?.totalValue || '').replace(/[^d,.-]/g, '').replace(',', '.')) ||
       calculatedTotal;
 
     // 🔹 Monta o mapa de parcelas (installments)
@@ -19005,23 +19006,17 @@ paddingVertical: 8,
       };
     }
 
-    // 🔹 Monta o objeto de atualização
-    const dataToUpdate = {
-      installments: installmentsMap,
-    };
-
-    // 🔹 Atualiza o documento no Firestore
+    // 🔹 Atualiza o documento
+    const dataToUpdate = { installments: installmentsMap };
     const refDoc = doc(db, 'lots', lotId);
     await updateDoc(refDoc, dataToUpdate);
 
     console.log('%c✅ Dados atualizados com sucesso:', css1, dataToUpdate);
 
-    // 🔹 Limpa o formulário e fecha o painel lateral
     tools.setData({ path: 'sc.A10.forms.editChanges', value: {} });
     tools.setData({ path: 'all.toggles.sideRight', value: false });
     tools.setData({ path: 'all.toggles.a10.addFinance', value: false });
 
-    // 🔹 Mensagem de feedback
     tools.functions.setVar({
       args: '',
       pass: {
@@ -19034,7 +19029,6 @@ paddingVertical: 8,
     });
   } catch (err) {
     console.error('❌ Erro ao salvar no Firebase:', err);
-
     tools.functions.setVar({
       args: '',
       pass: {
@@ -26368,15 +26362,14 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const css1 = 'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
+  const css1 =
+    'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
   try {
-    // 🔹 Inicializa o Firestore
     const { getFirestore, doc, updateDoc } = await import('firebase/firestore');
     const fbInit = tools.getCtData('all.temp.fireInit');
     const db = getFirestore(fbInit);
 
-    // 🔹 Obtém dados do formulário e o docId do lote
     const lotId = tools.getCtData('sc.A10.currents.currId1');
     const form = tools.getCtData('sc.A10.forms.editChanges');
 
@@ -26385,26 +26378,31 @@ paddingVertical: 8,
       return;
     }
 
-    // 🔹 Extrai campos do formulário
-    const rawValue = form?.value || '';
-    const rawInstallments = form?.numberOfInstallments || '0';
-    const date = form?.date || '';
-    const description = form?.description || '';
+    // 🔹 Extrai e normaliza os campos do formulário
+    const rawValue = (form?.value || '').toString().replace(',', '.').trim();
+    const rawInstallments = (form?.numberOfInstallments || '').toString().trim();
+    const date = (form?.date || '').trim();
+    const description = (form?.description || '').trim();
 
-    const numberOfInstallments = parseInt(rawInstallments);
-    const value = parseFloat(String(rawValue).replace(/[^d.-]/g, '')) || 0;
+    // 🔹 Converte para número de forma segura
+    const numberOfInstallments = parseInt(rawInstallments, 10);
+    const value = parseFloat(rawValue);
 
-    if (numberOfInstallments <= 0 || value <= 0) {
-      console.warn('❌ Número de parcelas ou valor inválido');
+    if (isNaN(numberOfInstallments) || isNaN(value) || numberOfInstallments <= 0 || value <= 0) {
+      console.warn('❌ Número de parcelas ou valor inválido:', {
+        numberOfInstallments,
+        value,
+        rawValue,
+        rawInstallments,
+      });
       return;
     }
 
     // 🔹 Calcula automaticamente o valor total
     const calculatedTotal = value * numberOfInstallments;
 
-    // Usa o totalValue informado ou o calculado
     const totalValue =
-      parseFloat(String(form?.totalValue || '').replace(/[^d.-]/g, '')) ||
+      parseFloat(String(form?.totalValue || '').replace(/[^d,.-]/g, '').replace(',', '.')) ||
       calculatedTotal;
 
     // 🔹 Monta o mapa de parcelas (installments)
@@ -26424,23 +26422,17 @@ paddingVertical: 8,
       };
     }
 
-    // 🔹 Monta o objeto de atualização
-    const dataToUpdate = {
-      installments: installmentsMap,
-    };
-
-    // 🔹 Atualiza o documento no Firestore
+    // 🔹 Atualiza o documento
+    const dataToUpdate = { installments: installmentsMap };
     const refDoc = doc(db, 'lots', lotId);
     await updateDoc(refDoc, dataToUpdate);
 
     console.log('%c✅ Dados atualizados com sucesso:', css1, dataToUpdate);
 
-    // 🔹 Limpa o formulário e fecha o painel lateral
     tools.setData({ path: 'sc.A10.forms.editChanges', value: {} });
     tools.setData({ path: 'all.toggles.sideRight', value: false });
     tools.setData({ path: 'all.toggles.a10.addFinance', value: false });
 
-    // 🔹 Mensagem de feedback
     tools.functions.setVar({
       args: '',
       pass: {
@@ -26453,7 +26445,6 @@ paddingVertical: 8,
     });
   } catch (err) {
     console.error('❌ Erro ao salvar no Firebase:', err);
-
     tools.functions.setVar({
       args: '',
       pass: {
@@ -33766,15 +33757,14 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const css1 = 'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
+  const css1 =
+    'color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
   try {
-    // 🔹 Inicializa o Firestore
     const { getFirestore, doc, updateDoc } = await import('firebase/firestore');
     const fbInit = tools.getCtData('all.temp.fireInit');
     const db = getFirestore(fbInit);
 
-    // 🔹 Obtém dados do formulário e o docId do lote
     const lotId = tools.getCtData('sc.A10.currents.currId1');
     const form = tools.getCtData('sc.A10.forms.editChanges');
 
@@ -33783,26 +33773,31 @@ paddingVertical: 8,
       return;
     }
 
-    // 🔹 Extrai campos do formulário
-    const rawValue = form?.value || '';
-    const rawInstallments = form?.numberOfInstallments || '0';
-    const date = form?.date || '';
-    const description = form?.description || '';
+    // 🔹 Extrai e normaliza os campos do formulário
+    const rawValue = (form?.value || '').toString().replace(',', '.').trim();
+    const rawInstallments = (form?.numberOfInstallments || '').toString().trim();
+    const date = (form?.date || '').trim();
+    const description = (form?.description || '').trim();
 
-    const numberOfInstallments = parseInt(rawInstallments);
-    const value = parseFloat(String(rawValue).replace(/[^d.-]/g, '')) || 0;
+    // 🔹 Converte para número de forma segura
+    const numberOfInstallments = parseInt(rawInstallments, 10);
+    const value = parseFloat(rawValue);
 
-    if (numberOfInstallments <= 0 || value <= 0) {
-      console.warn('❌ Número de parcelas ou valor inválido');
+    if (isNaN(numberOfInstallments) || isNaN(value) || numberOfInstallments <= 0 || value <= 0) {
+      console.warn('❌ Número de parcelas ou valor inválido:', {
+        numberOfInstallments,
+        value,
+        rawValue,
+        rawInstallments,
+      });
       return;
     }
 
     // 🔹 Calcula automaticamente o valor total
     const calculatedTotal = value * numberOfInstallments;
 
-    // Usa o totalValue informado ou o calculado
     const totalValue =
-      parseFloat(String(form?.totalValue || '').replace(/[^d.-]/g, '')) ||
+      parseFloat(String(form?.totalValue || '').replace(/[^d,.-]/g, '').replace(',', '.')) ||
       calculatedTotal;
 
     // 🔹 Monta o mapa de parcelas (installments)
@@ -33822,23 +33817,17 @@ paddingVertical: 8,
       };
     }
 
-    // 🔹 Monta o objeto de atualização
-    const dataToUpdate = {
-      installments: installmentsMap,
-    };
-
-    // 🔹 Atualiza o documento no Firestore
+    // 🔹 Atualiza o documento
+    const dataToUpdate = { installments: installmentsMap };
     const refDoc = doc(db, 'lots', lotId);
     await updateDoc(refDoc, dataToUpdate);
 
     console.log('%c✅ Dados atualizados com sucesso:', css1, dataToUpdate);
 
-    // 🔹 Limpa o formulário e fecha o painel lateral
     tools.setData({ path: 'sc.A10.forms.editChanges', value: {} });
     tools.setData({ path: 'all.toggles.sideRight', value: false });
     tools.setData({ path: 'all.toggles.a10.addFinance', value: false });
 
-    // 🔹 Mensagem de feedback
     tools.functions.setVar({
       args: '',
       pass: {
@@ -33851,7 +33840,6 @@ paddingVertical: 8,
     });
   } catch (err) {
     console.error('❌ Erro ao salvar no Firebase:', err);
-
     tools.functions.setVar({
       args: '',
       pass: {
