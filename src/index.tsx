@@ -19872,7 +19872,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.A9.lists.list1.totalValue`
+            `sc.A9.lists.list1[0].totalValue`
           ],
 
           args,
@@ -52265,15 +52265,6 @@ async (...args) =>
           keyPath: [`'all.authUser.userEmail'`],
           value: [false]
         }}), 
-() => {
-	const path = "all.authUser";
-	const value = {
-		userEmail: "joao.p10@email.com",
-		userName: "João Pedro",
-		userImage: "https://cdn-icons-png.flaticon.com/512/219/219983.png"
-	};
-	tools.setData({path, value});
-}, 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c2register");
