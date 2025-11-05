@@ -8336,11 +8336,9 @@ paddingVertical: 8,
     console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
     console.log("🆕 Criando novo usuário...");
-    // Criamos um docId manualmente
     const newUserRef = doc(collection(db, "users"));
     ownerId = newUserRef.id;
 
-    // Usa setDoc (garante que o docId seja o mesmo)
     await setDoc(newUserRef, {
       docId: ownerId,
       userEmail: email,
@@ -8394,7 +8392,7 @@ paddingVertical: 8,
     return;
   }
 
-  // Limpa e fecha painéis
+  // Limpa campos e fecha painéis
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
@@ -8411,7 +8409,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -15720,11 +15718,9 @@ paddingVertical: 8,
     console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
     console.log("🆕 Criando novo usuário...");
-    // Criamos um docId manualmente
     const newUserRef = doc(collection(db, "users"));
     ownerId = newUserRef.id;
 
-    // Usa setDoc (garante que o docId seja o mesmo)
     await setDoc(newUserRef, {
       docId: ownerId,
       userEmail: email,
@@ -15778,7 +15774,7 @@ paddingVertical: 8,
     return;
   }
 
-  // Limpa e fecha painéis
+  // Limpa campos e fecha painéis
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
@@ -15795,7 +15791,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -23065,11 +23061,9 @@ paddingVertical: 8,
     console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
     console.log("🆕 Criando novo usuário...");
-    // Criamos um docId manualmente
     const newUserRef = doc(collection(db, "users"));
     ownerId = newUserRef.id;
 
-    // Usa setDoc (garante que o docId seja o mesmo)
     await setDoc(newUserRef, {
       docId: ownerId,
       userEmail: email,
@@ -23123,7 +23117,7 @@ paddingVertical: 8,
     return;
   }
 
-  // Limpa e fecha painéis
+  // Limpa campos e fecha painéis
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
@@ -23140,7 +23134,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -30374,11 +30368,9 @@ paddingVertical: 8,
     console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
     console.log("🆕 Criando novo usuário...");
-    // Criamos um docId manualmente
     const newUserRef = doc(collection(db, "users"));
     ownerId = newUserRef.id;
 
-    // Usa setDoc (garante que o docId seja o mesmo)
     await setDoc(newUserRef, {
       docId: ownerId,
       userEmail: email,
@@ -30432,7 +30424,7 @@ paddingVertical: 8,
     return;
   }
 
-  // Limpa e fecha painéis
+  // Limpa campos e fecha painéis
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
@@ -30449,7 +30441,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-};
+}
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
