@@ -7092,14 +7092,29 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  const getVal = (path, keepArray = false) => {
+  const getVal = (path) => {
     const val = tools.getCtData(path);
-    if (keepArray && Array.isArray(val)) return val; // 🔹 Retorna o array completo se for pedido
+    if (val === null || val === undefined) return "";
     if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
+    return val;
   };
 
-  // 🔹 Verificação de campos obrigatórios
+  const getArrayVal = (path) => {
+    let val = tools.getCtData(path);
+    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
+    if (Array.isArray(val)) return val;
+    if (typeof val === "string") {
+      try {
+        const parsed = JSON.parse(val);
+        return Array.isArray(parsed) ? parsed : [parsed];
+      } catch {
+        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
+      }
+    }
+    return [val];
+  };
+
+  // 🔹 Verifica campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -7117,16 +7132,9 @@ paddingVertical: 8,
     return;
   }
 
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
-    },
-  });
-
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
+  // 🔹 Inicializa o Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -7152,21 +7160,21 @@ paddingVertical: 8,
     return;
   }
 
-  // 🔹 Cria o objeto atualizado
+  // 🔹 Monta o objeto para atualização
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    images: getVal("sc.a1.editChanges.images", true), // 🔹 Retorna array completo
-    files: getVal("sc.a1.editChanges.documents", true), // 🔹 Retorna array completo
+    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
+    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
   try {
     await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", docId, updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", updatedDoc);
 
     tools.functions.setVar({
       args: "",
@@ -7176,7 +7184,7 @@ paddingVertical: 8,
       },
     });
 
-    // 🔹 Limpa os dados e fecha modais
+    // 🔹 Limpa formulário e fecha painéis
     tools.functions.setVar({
       args: "",
       pass: {
@@ -7211,7 +7219,7 @@ paddingVertical: 8,
     });
   }
 
-  // 🔹 Limpa mensagem depois da execução
+  // 🔹 Limpa mensagens após o processo
   tools.functions.setVar({
     args: "",
     pass: {
@@ -14547,14 +14555,29 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  const getVal = (path, keepArray = false) => {
+  const getVal = (path) => {
     const val = tools.getCtData(path);
-    if (keepArray && Array.isArray(val)) return val; // 🔹 Retorna o array completo se for pedido
+    if (val === null || val === undefined) return "";
     if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
+    return val;
   };
 
-  // 🔹 Verificação de campos obrigatórios
+  const getArrayVal = (path) => {
+    let val = tools.getCtData(path);
+    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
+    if (Array.isArray(val)) return val;
+    if (typeof val === "string") {
+      try {
+        const parsed = JSON.parse(val);
+        return Array.isArray(parsed) ? parsed : [parsed];
+      } catch {
+        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
+      }
+    }
+    return [val];
+  };
+
+  // 🔹 Verifica campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -14572,16 +14595,9 @@ paddingVertical: 8,
     return;
   }
 
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
-    },
-  });
-
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
+  // 🔹 Inicializa o Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -14607,21 +14623,21 @@ paddingVertical: 8,
     return;
   }
 
-  // 🔹 Cria o objeto atualizado
+  // 🔹 Monta o objeto para atualização
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    images: getVal("sc.a1.editChanges.images", true), // 🔹 Retorna array completo
-    files: getVal("sc.a1.editChanges.documents", true), // 🔹 Retorna array completo
+    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
+    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
   try {
     await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", docId, updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", updatedDoc);
 
     tools.functions.setVar({
       args: "",
@@ -14631,7 +14647,7 @@ paddingVertical: 8,
       },
     });
 
-    // 🔹 Limpa os dados e fecha modais
+    // 🔹 Limpa formulário e fecha painéis
     tools.functions.setVar({
       args: "",
       pass: {
@@ -14666,7 +14682,7 @@ paddingVertical: 8,
     });
   }
 
-  // 🔹 Limpa mensagem depois da execução
+  // 🔹 Limpa mensagens após o processo
   tools.functions.setVar({
     args: "",
     pass: {
@@ -21948,14 +21964,29 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  const getVal = (path, keepArray = false) => {
+  const getVal = (path) => {
     const val = tools.getCtData(path);
-    if (keepArray && Array.isArray(val)) return val; // 🔹 Retorna o array completo se for pedido
+    if (val === null || val === undefined) return "";
     if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
+    return val;
   };
 
-  // 🔹 Verificação de campos obrigatórios
+  const getArrayVal = (path) => {
+    let val = tools.getCtData(path);
+    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
+    if (Array.isArray(val)) return val;
+    if (typeof val === "string") {
+      try {
+        const parsed = JSON.parse(val);
+        return Array.isArray(parsed) ? parsed : [parsed];
+      } catch {
+        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
+      }
+    }
+    return [val];
+  };
+
+  // 🔹 Verifica campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -21973,16 +22004,9 @@ paddingVertical: 8,
     return;
   }
 
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
-    },
-  });
-
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
+  // 🔹 Inicializa o Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -22008,21 +22032,21 @@ paddingVertical: 8,
     return;
   }
 
-  // 🔹 Cria o objeto atualizado
+  // 🔹 Monta o objeto para atualização
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    images: getVal("sc.a1.editChanges.images", true), // 🔹 Retorna array completo
-    files: getVal("sc.a1.editChanges.documents", true), // 🔹 Retorna array completo
+    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
+    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
   try {
     await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", docId, updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", updatedDoc);
 
     tools.functions.setVar({
       args: "",
@@ -22032,7 +22056,7 @@ paddingVertical: 8,
       },
     });
 
-    // 🔹 Limpa os dados e fecha modais
+    // 🔹 Limpa formulário e fecha painéis
     tools.functions.setVar({
       args: "",
       pass: {
@@ -22067,7 +22091,7 @@ paddingVertical: 8,
     });
   }
 
-  // 🔹 Limpa mensagem depois da execução
+  // 🔹 Limpa mensagens após o processo
   tools.functions.setVar({
     args: "",
     pass: {
@@ -29328,14 +29352,29 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  const getVal = (path, keepArray = false) => {
+  const getVal = (path) => {
     const val = tools.getCtData(path);
-    if (keepArray && Array.isArray(val)) return val; // 🔹 Retorna o array completo se for pedido
+    if (val === null || val === undefined) return "";
     if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
+    return val;
   };
 
-  // 🔹 Verificação de campos obrigatórios
+  const getArrayVal = (path) => {
+    let val = tools.getCtData(path);
+    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
+    if (Array.isArray(val)) return val;
+    if (typeof val === "string") {
+      try {
+        const parsed = JSON.parse(val);
+        return Array.isArray(parsed) ? parsed : [parsed];
+      } catch {
+        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
+      }
+    }
+    return [val];
+  };
+
+  // 🔹 Verifica campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -29353,16 +29392,9 @@ paddingVertical: 8,
     return;
   }
 
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a1.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
-    },
-  });
-
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
+  // 🔹 Inicializa o Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -29388,21 +29420,21 @@ paddingVertical: 8,
     return;
   }
 
-  // 🔹 Cria o objeto atualizado
+  // 🔹 Monta o objeto para atualização
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    images: getVal("sc.a1.editChanges.images", true), // 🔹 Retorna array completo
-    files: getVal("sc.a1.editChanges.documents", true), // 🔹 Retorna array completo
+    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
+    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
   try {
     await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", docId, updatedDoc);
+    console.log("✅ Documento atualizado com sucesso:", updatedDoc);
 
     tools.functions.setVar({
       args: "",
@@ -29412,7 +29444,7 @@ paddingVertical: 8,
       },
     });
 
-    // 🔹 Limpa os dados e fecha modais
+    // 🔹 Limpa formulário e fecha painéis
     tools.functions.setVar({
       args: "",
       pass: {
@@ -29447,7 +29479,7 @@ paddingVertical: 8,
     });
   }
 
-  // 🔹 Limpa mensagem depois da execução
+  // 🔹 Limpa mensagens após o processo
   tools.functions.setVar({
     args: "",
     pass: {
