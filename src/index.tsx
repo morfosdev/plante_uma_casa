@@ -8246,7 +8246,6 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // ---- 1️⃣ Validação de campos obrigatórios ----
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
@@ -8279,8 +8278,9 @@ paddingVertical: 8,
     return;
   }
 
-  // ---- 2️⃣ Inicialização do Firebase ----
   console.log("💾 Iniciando salvamento no Firebase...");
+
+  // Inicializa o Firebase se ainda não estiver pronto
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -8289,12 +8289,22 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { 
-    getFirestore, collection, addDoc, updateDoc, query, where, getDocs, serverTimestamp 
+  const {
+    getFirestore,
+    collection,
+    doc,
+    setDoc,
+    addDoc,
+    updateDoc,
+    query,
+    where,
+    getDocs,
+    serverTimestamp,
   } = await import("firebase/firestore");
+
   const db = getFirestore(fbInit);
 
-  // ---- 3️⃣ Captura os dados do formulário ----
+  // Pega dados do formulário
   const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
   const name = getVal("sc.A7.forms.iptsChanges.partnerName");
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
@@ -8304,42 +8314,44 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["⚠️ Condomínio ausente."],
+        value: ["⚠️ Selecione um condomínio antes de salvar."],
       },
     });
     console.warn("Condomínio ausente.");
     return;
   }
 
-  // ---- 4️⃣ Verifica se o usuário já existe ----
+  // Busca usuário existente
   const usersRef = collection(db, "users");
-  const userQuery = query(usersRef, where("userEmail", "==", email));
-  const userSnapshot = await getDocs(userQuery);
+  const q = query(usersRef, where("userEmail", "==", email));
+  const querySnapshot = await getDocs(q);
 
   let ownerId;
   let userExists = false;
 
-  if (!userSnapshot.empty) {
-    // Usuário encontrado
+  if (!querySnapshot.empty) {
     userExists = true;
-    const userDoc = userSnapshot.docs[0];
+    const userDoc = querySnapshot.docs[0];
     ownerId = userDoc.id;
-    console.log("✅ Usuário encontrado:", ownerId);
+    console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
-    // Usuário novo
     console.log("🆕 Criando novo usuário...");
-    const newUserRef = await addDoc(usersRef, {
+    // Criamos um docId manualmente
+    const newUserRef = doc(collection(db, "users"));
+    ownerId = newUserRef.id;
+
+    // Usa setDoc (garante que o docId seja o mesmo)
+    await setDoc(newUserRef, {
+      docId: ownerId,
       userEmail: email,
       userName: name,
       createdAt: serverTimestamp(),
     });
-    ownerId = newUserRef.id;
 
-    // Atualiza o campo docId dentro do próprio documento
-    await updateDoc(newUserRef, { docId: ownerId });
+    console.log("✅ Novo usuário criado com docId:", ownerId);
   }
 
-  // ---- 5️⃣ Cria o documento do lote ----
+  // Cria o lote vinculado ao proprietário
   const lotsRef = collection(db, "lots");
   const newLot = {
     owner: name,
@@ -8359,7 +8371,6 @@ paddingVertical: 8,
 
     console.log("✅ Lote salvo com ID:", docRef.id);
 
-    // Feedback de sucesso
     tools.functions.setVar({
       args: "",
       pass: {
@@ -8383,7 +8394,7 @@ paddingVertical: 8,
     return;
   }
 
-  // ---- 6️⃣ Limpeza e fechamento de painéis ----
+  // Limpa e fecha painéis
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
@@ -8400,7 +8411,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-}
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -15619,7 +15630,6 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // ---- 1️⃣ Validação de campos obrigatórios ----
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
@@ -15652,8 +15662,9 @@ paddingVertical: 8,
     return;
   }
 
-  // ---- 2️⃣ Inicialização do Firebase ----
   console.log("💾 Iniciando salvamento no Firebase...");
+
+  // Inicializa o Firebase se ainda não estiver pronto
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -15662,12 +15673,22 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { 
-    getFirestore, collection, addDoc, updateDoc, query, where, getDocs, serverTimestamp 
+  const {
+    getFirestore,
+    collection,
+    doc,
+    setDoc,
+    addDoc,
+    updateDoc,
+    query,
+    where,
+    getDocs,
+    serverTimestamp,
   } = await import("firebase/firestore");
+
   const db = getFirestore(fbInit);
 
-  // ---- 3️⃣ Captura os dados do formulário ----
+  // Pega dados do formulário
   const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
   const name = getVal("sc.A7.forms.iptsChanges.partnerName");
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
@@ -15677,42 +15698,44 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["⚠️ Condomínio ausente."],
+        value: ["⚠️ Selecione um condomínio antes de salvar."],
       },
     });
     console.warn("Condomínio ausente.");
     return;
   }
 
-  // ---- 4️⃣ Verifica se o usuário já existe ----
+  // Busca usuário existente
   const usersRef = collection(db, "users");
-  const userQuery = query(usersRef, where("userEmail", "==", email));
-  const userSnapshot = await getDocs(userQuery);
+  const q = query(usersRef, where("userEmail", "==", email));
+  const querySnapshot = await getDocs(q);
 
   let ownerId;
   let userExists = false;
 
-  if (!userSnapshot.empty) {
-    // Usuário encontrado
+  if (!querySnapshot.empty) {
     userExists = true;
-    const userDoc = userSnapshot.docs[0];
+    const userDoc = querySnapshot.docs[0];
     ownerId = userDoc.id;
-    console.log("✅ Usuário encontrado:", ownerId);
+    console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
-    // Usuário novo
     console.log("🆕 Criando novo usuário...");
-    const newUserRef = await addDoc(usersRef, {
+    // Criamos um docId manualmente
+    const newUserRef = doc(collection(db, "users"));
+    ownerId = newUserRef.id;
+
+    // Usa setDoc (garante que o docId seja o mesmo)
+    await setDoc(newUserRef, {
+      docId: ownerId,
       userEmail: email,
       userName: name,
       createdAt: serverTimestamp(),
     });
-    ownerId = newUserRef.id;
 
-    // Atualiza o campo docId dentro do próprio documento
-    await updateDoc(newUserRef, { docId: ownerId });
+    console.log("✅ Novo usuário criado com docId:", ownerId);
   }
 
-  // ---- 5️⃣ Cria o documento do lote ----
+  // Cria o lote vinculado ao proprietário
   const lotsRef = collection(db, "lots");
   const newLot = {
     owner: name,
@@ -15732,7 +15755,6 @@ paddingVertical: 8,
 
     console.log("✅ Lote salvo com ID:", docRef.id);
 
-    // Feedback de sucesso
     tools.functions.setVar({
       args: "",
       pass: {
@@ -15756,7 +15778,7 @@ paddingVertical: 8,
     return;
   }
 
-  // ---- 6️⃣ Limpeza e fechamento de painéis ----
+  // Limpa e fecha painéis
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
@@ -15773,7 +15795,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-}
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -22953,7 +22975,6 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // ---- 1️⃣ Validação de campos obrigatórios ----
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
@@ -22986,8 +23007,9 @@ paddingVertical: 8,
     return;
   }
 
-  // ---- 2️⃣ Inicialização do Firebase ----
   console.log("💾 Iniciando salvamento no Firebase...");
+
+  // Inicializa o Firebase se ainda não estiver pronto
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -22996,12 +23018,22 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { 
-    getFirestore, collection, addDoc, updateDoc, query, where, getDocs, serverTimestamp 
+  const {
+    getFirestore,
+    collection,
+    doc,
+    setDoc,
+    addDoc,
+    updateDoc,
+    query,
+    where,
+    getDocs,
+    serverTimestamp,
   } = await import("firebase/firestore");
+
   const db = getFirestore(fbInit);
 
-  // ---- 3️⃣ Captura os dados do formulário ----
+  // Pega dados do formulário
   const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
   const name = getVal("sc.A7.forms.iptsChanges.partnerName");
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
@@ -23011,42 +23043,44 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["⚠️ Condomínio ausente."],
+        value: ["⚠️ Selecione um condomínio antes de salvar."],
       },
     });
     console.warn("Condomínio ausente.");
     return;
   }
 
-  // ---- 4️⃣ Verifica se o usuário já existe ----
+  // Busca usuário existente
   const usersRef = collection(db, "users");
-  const userQuery = query(usersRef, where("userEmail", "==", email));
-  const userSnapshot = await getDocs(userQuery);
+  const q = query(usersRef, where("userEmail", "==", email));
+  const querySnapshot = await getDocs(q);
 
   let ownerId;
   let userExists = false;
 
-  if (!userSnapshot.empty) {
-    // Usuário encontrado
+  if (!querySnapshot.empty) {
     userExists = true;
-    const userDoc = userSnapshot.docs[0];
+    const userDoc = querySnapshot.docs[0];
     ownerId = userDoc.id;
-    console.log("✅ Usuário encontrado:", ownerId);
+    console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
-    // Usuário novo
     console.log("🆕 Criando novo usuário...");
-    const newUserRef = await addDoc(usersRef, {
+    // Criamos um docId manualmente
+    const newUserRef = doc(collection(db, "users"));
+    ownerId = newUserRef.id;
+
+    // Usa setDoc (garante que o docId seja o mesmo)
+    await setDoc(newUserRef, {
+      docId: ownerId,
       userEmail: email,
       userName: name,
       createdAt: serverTimestamp(),
     });
-    ownerId = newUserRef.id;
 
-    // Atualiza o campo docId dentro do próprio documento
-    await updateDoc(newUserRef, { docId: ownerId });
+    console.log("✅ Novo usuário criado com docId:", ownerId);
   }
 
-  // ---- 5️⃣ Cria o documento do lote ----
+  // Cria o lote vinculado ao proprietário
   const lotsRef = collection(db, "lots");
   const newLot = {
     owner: name,
@@ -23066,7 +23100,6 @@ paddingVertical: 8,
 
     console.log("✅ Lote salvo com ID:", docRef.id);
 
-    // Feedback de sucesso
     tools.functions.setVar({
       args: "",
       pass: {
@@ -23090,7 +23123,7 @@ paddingVertical: 8,
     return;
   }
 
-  // ---- 6️⃣ Limpeza e fechamento de painéis ----
+  // Limpa e fecha painéis
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
@@ -23107,7 +23140,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-}
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -30251,7 +30284,6 @@ paddingVertical: 8,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // ---- 1️⃣ Validação de campos obrigatórios ----
   const requiredFields = [
     { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
@@ -30284,8 +30316,9 @@ paddingVertical: 8,
     return;
   }
 
-  // ---- 2️⃣ Inicialização do Firebase ----
   console.log("💾 Iniciando salvamento no Firebase...");
+
+  // Inicializa o Firebase se ainda não estiver pronto
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -30294,12 +30327,22 @@ paddingVertical: 8,
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { 
-    getFirestore, collection, addDoc, updateDoc, query, where, getDocs, serverTimestamp 
+  const {
+    getFirestore,
+    collection,
+    doc,
+    setDoc,
+    addDoc,
+    updateDoc,
+    query,
+    where,
+    getDocs,
+    serverTimestamp,
   } = await import("firebase/firestore");
+
   const db = getFirestore(fbInit);
 
-  // ---- 3️⃣ Captura os dados do formulário ----
+  // Pega dados do formulário
   const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
   const name = getVal("sc.A7.forms.iptsChanges.partnerName");
   const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
@@ -30309,42 +30352,44 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["⚠️ Condomínio ausente."],
+        value: ["⚠️ Selecione um condomínio antes de salvar."],
       },
     });
     console.warn("Condomínio ausente.");
     return;
   }
 
-  // ---- 4️⃣ Verifica se o usuário já existe ----
+  // Busca usuário existente
   const usersRef = collection(db, "users");
-  const userQuery = query(usersRef, where("userEmail", "==", email));
-  const userSnapshot = await getDocs(userQuery);
+  const q = query(usersRef, where("userEmail", "==", email));
+  const querySnapshot = await getDocs(q);
 
   let ownerId;
   let userExists = false;
 
-  if (!userSnapshot.empty) {
-    // Usuário encontrado
+  if (!querySnapshot.empty) {
     userExists = true;
-    const userDoc = userSnapshot.docs[0];
+    const userDoc = querySnapshot.docs[0];
     ownerId = userDoc.id;
-    console.log("✅ Usuário encontrado:", ownerId);
+    console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
-    // Usuário novo
     console.log("🆕 Criando novo usuário...");
-    const newUserRef = await addDoc(usersRef, {
+    // Criamos um docId manualmente
+    const newUserRef = doc(collection(db, "users"));
+    ownerId = newUserRef.id;
+
+    // Usa setDoc (garante que o docId seja o mesmo)
+    await setDoc(newUserRef, {
+      docId: ownerId,
       userEmail: email,
       userName: name,
       createdAt: serverTimestamp(),
     });
-    ownerId = newUserRef.id;
 
-    // Atualiza o campo docId dentro do próprio documento
-    await updateDoc(newUserRef, { docId: ownerId });
+    console.log("✅ Novo usuário criado com docId:", ownerId);
   }
 
-  // ---- 5️⃣ Cria o documento do lote ----
+  // Cria o lote vinculado ao proprietário
   const lotsRef = collection(db, "lots");
   const newLot = {
     owner: name,
@@ -30364,7 +30409,6 @@ paddingVertical: 8,
 
     console.log("✅ Lote salvo com ID:", docRef.id);
 
-    // Feedback de sucesso
     tools.functions.setVar({
       args: "",
       pass: {
@@ -30388,7 +30432,7 @@ paddingVertical: 8,
     return;
   }
 
-  // ---- 6️⃣ Limpeza e fechamento de painéis ----
+  // Limpa e fecha painéis
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
@@ -30405,7 +30449,7 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-}
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
