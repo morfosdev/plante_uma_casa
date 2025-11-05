@@ -19872,7 +19872,7 @@ left: 4,
           ],
 
           children: [
-            `R$ 2.200.000`
+            `$var_sc.A9.lists.list1.totalValue`
           ],
 
           args,
