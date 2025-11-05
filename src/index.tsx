@@ -7092,12 +7092,14 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  const getVal = (path) => {
+  const getVal = (path, keepArray = false) => {
     const val = tools.getCtData(path);
+    if (keepArray && Array.isArray(val)) return val; // 🔹 Retorna o array completo se for pedido
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
+  // 🔹 Verificação de campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -7150,20 +7152,21 @@ paddingVertical: 8,
     return;
   }
 
+  // 🔹 Cria o objeto atualizado
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-	images: getVal("sc.a1.editChanges.images"),
-	files: getVal("sc.a1.editChanges.documents"),
+    images: getVal("sc.a1.editChanges.images", true), // 🔹 Retorna array completo
+    files: getVal("sc.a1.editChanges.documents", true), // 🔹 Retorna array completo
     updatedAt: serverTimestamp(),
   };
 
   try {
     await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", docId);
+    console.log("✅ Documento atualizado com sucesso:", docId, updatedDoc);
 
     tools.functions.setVar({
       args: "",
@@ -7173,7 +7176,7 @@ paddingVertical: 8,
       },
     });
 
-    // Limpa dados e fecha modais
+    // 🔹 Limpa os dados e fecha modais
     tools.functions.setVar({
       args: "",
       pass: {
@@ -7208,14 +7211,14 @@ paddingVertical: 8,
     });
   }
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
+  // 🔹 Limpa mensagem depois da execução
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [""],
+    },
+  });
 }
 ]
  , trigger: 'on press'
@@ -14544,12 +14547,14 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  const getVal = (path) => {
+  const getVal = (path, keepArray = false) => {
     const val = tools.getCtData(path);
+    if (keepArray && Array.isArray(val)) return val; // 🔹 Retorna o array completo se for pedido
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
+  // 🔹 Verificação de campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -14602,20 +14607,21 @@ paddingVertical: 8,
     return;
   }
 
+  // 🔹 Cria o objeto atualizado
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-	images: getVal("sc.a1.editChanges.images"),
-	files: getVal("sc.a1.editChanges.documents"),
+    images: getVal("sc.a1.editChanges.images", true), // 🔹 Retorna array completo
+    files: getVal("sc.a1.editChanges.documents", true), // 🔹 Retorna array completo
     updatedAt: serverTimestamp(),
   };
 
   try {
     await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", docId);
+    console.log("✅ Documento atualizado com sucesso:", docId, updatedDoc);
 
     tools.functions.setVar({
       args: "",
@@ -14625,7 +14631,7 @@ paddingVertical: 8,
       },
     });
 
-    // Limpa dados e fecha modais
+    // 🔹 Limpa os dados e fecha modais
     tools.functions.setVar({
       args: "",
       pass: {
@@ -14660,14 +14666,14 @@ paddingVertical: 8,
     });
   }
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
+  // 🔹 Limpa mensagem depois da execução
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [""],
+    },
+  });
 }
 ]
  , trigger: 'on press'
@@ -21942,12 +21948,14 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  const getVal = (path) => {
+  const getVal = (path, keepArray = false) => {
     const val = tools.getCtData(path);
+    if (keepArray && Array.isArray(val)) return val; // 🔹 Retorna o array completo se for pedido
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
+  // 🔹 Verificação de campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -22000,20 +22008,21 @@ paddingVertical: 8,
     return;
   }
 
+  // 🔹 Cria o objeto atualizado
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-	images: getVal("sc.a1.editChanges.images"),
-	files: getVal("sc.a1.editChanges.documents"),
+    images: getVal("sc.a1.editChanges.images", true), // 🔹 Retorna array completo
+    files: getVal("sc.a1.editChanges.documents", true), // 🔹 Retorna array completo
     updatedAt: serverTimestamp(),
   };
 
   try {
     await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", docId);
+    console.log("✅ Documento atualizado com sucesso:", docId, updatedDoc);
 
     tools.functions.setVar({
       args: "",
@@ -22023,7 +22032,7 @@ paddingVertical: 8,
       },
     });
 
-    // Limpa dados e fecha modais
+    // 🔹 Limpa os dados e fecha modais
     tools.functions.setVar({
       args: "",
       pass: {
@@ -22058,14 +22067,14 @@ paddingVertical: 8,
     });
   }
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
+  // 🔹 Limpa mensagem depois da execução
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [""],
+    },
+  });
 }
 ]
  , trigger: 'on press'
@@ -29319,12 +29328,14 @@ paddingVertical: 8,
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
-  const getVal = (path) => {
+  const getVal = (path, keepArray = false) => {
     const val = tools.getCtData(path);
+    if (keepArray && Array.isArray(val)) return val; // 🔹 Retorna o array completo se for pedido
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
+  // 🔹 Verificação de campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
     const v = getVal(f.path);
     return v === "" || v === null || v === undefined;
@@ -29377,20 +29388,21 @@ paddingVertical: 8,
     return;
   }
 
+  // 🔹 Cria o objeto atualizado
   const updatedDoc = {
     condo: getVal("sc.a1.editChanges.condo"),
     address: getVal("sc.a1.editChanges.address"),
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-	images: getVal("sc.a1.editChanges.images"),
-	files: getVal("sc.a1.editChanges.documents"),
+    images: getVal("sc.a1.editChanges.images", true), // 🔹 Retorna array completo
+    files: getVal("sc.a1.editChanges.documents", true), // 🔹 Retorna array completo
     updatedAt: serverTimestamp(),
   };
 
   try {
     await updateDoc(doc(db, "condos", docId), updatedDoc);
-    console.log("✅ Documento atualizado com sucesso:", docId);
+    console.log("✅ Documento atualizado com sucesso:", docId, updatedDoc);
 
     tools.functions.setVar({
       args: "",
@@ -29400,7 +29412,7 @@ paddingVertical: 8,
       },
     });
 
-    // Limpa dados e fecha modais
+    // 🔹 Limpa os dados e fecha modais
     tools.functions.setVar({
       args: "",
       pass: {
@@ -29435,14 +29447,14 @@ paddingVertical: 8,
     });
   }
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
+  // 🔹 Limpa mensagem depois da execução
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [""],
+    },
+  });
 }
 ]
  , trigger: 'on press'
