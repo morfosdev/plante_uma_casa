@@ -52842,7 +52842,7 @@ async (...args) =>
 	const value = {
 		userName: "João Pedro",
 		userEmail: "joao.p@email.com",
-		userImage: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+		userImage: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg"
 	};
 
 	console.log("cond fullreg",{path, value});
