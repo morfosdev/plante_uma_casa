@@ -2894,7 +2894,7 @@ paddingHorizontal: 16,
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 	placeholder: "Digite sua Senha",
-	secureTextEntry: true
+	secureTextEntry: "$var_sc.A0.toggles.password"
 }`],
 
           stylesArray: [`{ 
@@ -60570,11 +60570,13 @@ userEmail: "joaopedro@email.com",
 userImage: "https://cdn-icons-png.flaticon.com/512/219/219983.png",
 } } 
 , 'sc': { 
-'A0': { 'forms': { 'iptsChanges': {
+'A0': { 
+'forms': { 'iptsChanges': {
 	userEmail: "leandrowebmaster@gmail.com",
 	userPassword: "123456",
 	teste: "123456"
 } } 
+, 'toggles': { 'password': true } 
  } 
 , 
 'A0B': { 'forms': { 'iptsChanges': {
