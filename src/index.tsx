@@ -53111,7 +53111,7 @@ fontWeight: '500',
           ],
 
           children: [
-            `all.authUser.userEmail`
+            `$var_all.authUser.userEmail`
           ],
 
           args,
