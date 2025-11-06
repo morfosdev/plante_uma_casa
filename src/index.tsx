@@ -53075,8 +53075,9 @@ alignItems: 'center',
       elementsProperties:[{}],
 
       styles:[{
-height: 90,
-width: 90,
+	height: 90,
+	width: 90,
+	borderRadius: 250
 }],
 
       URIvariablePath:[`all.authUser.userImage`],
@@ -54807,8 +54808,9 @@ alignItems: 'center',
       elementsProperties:[{}],
 
       styles:[{
-height: 90,
-width: 90,
+	height: 90,
+	width: 90,
+	borderRadius: 250
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
