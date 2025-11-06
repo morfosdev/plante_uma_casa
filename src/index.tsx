@@ -52831,8 +52831,7 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.checkboxGender`],
           value: [true]
-        }}), 
-() => {
+        }}), () => {
 	const path = "all.authUser";
 	const value = {
 		docId: "xqhhNW5lJJqx5mvX9wRK",
@@ -52844,12 +52843,17 @@ async (...args) =>
 
 	console.log("cond fullreg",{path, value});
 	tools.setData({path,value});
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c2register");
-        }
-        ]
+
+	// ---- set Cond Redirect
+	const fullRegister = value.fullRegister;
+
+	if(fullRegister){
+		tools.goTo('c5steps');
+	}
+	if(!fullRegister){
+		tools.goTo('c2register');
+	}
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
