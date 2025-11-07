@@ -45274,7 +45274,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	paddingHorizontal: 60,
+	paddingHorizontal: 45,
 	paddingVertical: 20,
 }`],
 
