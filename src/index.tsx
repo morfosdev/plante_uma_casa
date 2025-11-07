@@ -39898,7 +39898,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 26,
+	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
 }`
@@ -39917,7 +39917,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
+	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
 }`
