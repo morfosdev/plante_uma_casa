@@ -12804,7 +12804,8 @@ async (...args) =>
 
             styles:[`{ 
 	paddingVertical: 6,
-	paddingHorizontal: 8, 
+	paddingHorizontal: 8,
+	maxWidth: 130,
 	backgroundColor: "#fff",
 	borderRadius: 20, 
 	alignItems: "center",
