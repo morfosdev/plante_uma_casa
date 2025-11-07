@@ -20146,6 +20146,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20168,6 +20169,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20190,6 +20192,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20212,6 +20215,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20233,6 +20237,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
