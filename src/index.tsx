@@ -40250,6 +40250,12 @@ shadowRadius: 4,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("b7list");
+        }
+        , 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B9.currents.currId1`],
@@ -40259,17 +40265,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B7.lists.list1`],
           value: [[]]
-        }}), 
-async (...args) =>
+        }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B9.currents.currId1`],
           value: [`$arg_ownerId`]
-        }}), 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("b7list");
-        }
-        ]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
