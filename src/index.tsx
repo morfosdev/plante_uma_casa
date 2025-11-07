@@ -39976,6 +39976,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: '500',
 }`
           ],
 
@@ -39998,6 +39999,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: '500',
 }`
           ],
 
@@ -40020,6 +40022,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: '500',
 }`
           ],
 
@@ -40042,6 +40045,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
+	fontWeight: '500',
 }`
           ],
 
