@@ -38302,12 +38302,20 @@ paddingVertical: 8,
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+}],
  }}), 
 async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -38672,11 +38680,11 @@ color: '#555555',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -39089,12 +39097,20 @@ paddingVertical: 8,
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+}],
  }}), 
 async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -39195,12 +39211,12 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
+          keyPath: [`sc.B9.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -39246,28 +39262,7 @@ fontWeight: '700',
 
             args,
           }}/>
-        ],
-            args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -39359,51 +39354,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 
             args,
           }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
@@ -43692,12 +43645,20 @@ paddingVertical: 8,
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+}],
  }}), 
 async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -44062,11 +44023,11 @@ color: '#555555',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -44479,12 +44440,20 @@ paddingVertical: 8,
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+}],
  }}), 
 async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -44585,12 +44554,12 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
+          keyPath: [`sc.B9.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -44636,28 +44605,7 @@ fontWeight: '700',
 
             args,
           }}/>
-        ],
-            args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -44749,51 +44697,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 
             args,
           }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
@@ -52454,12 +52360,20 @@ paddingVertical: 8,
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+}],
  }}), 
 async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -52824,11 +52738,11 @@ color: '#555555',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -53241,12 +53155,20 @@ paddingVertical: 8,
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [() => {}],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+}],
  }}), 
 async (...args) =>
         functions.firebase.setDocTool({ args, pass:{
@@ -53347,12 +53269,12 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b8.editChanges`],
+          keyPath: [`sc.B9.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
@@ -53398,28 +53320,7 @@ fontWeight: '700',
 
             args,
           }}/>
-        ],
-            args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -53511,51 +53412,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 
             args,
           }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "$var_all.colors.primary", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
