@@ -27481,7 +27481,7 @@ async (...args) =>
           ],
 
           children: [
-            `Label`
+            `CRIAR NOVO`
           ],
 
           args,
