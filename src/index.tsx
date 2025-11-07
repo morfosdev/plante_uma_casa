@@ -45599,13 +45599,13 @@ paddingHorizontal: 16,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
   };
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 12, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
@@ -46128,13 +46128,13 @@ paddingHorizontal: 16,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
   };
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 12, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
@@ -46657,13 +46657,13 @@ paddingHorizontal: 16,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
   };
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 12, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
@@ -47186,13 +47186,13 @@ paddingHorizontal: 16,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
   };
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 12, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
@@ -47715,13 +47715,13 @@ paddingHorizontal: 16,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
   };
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 12, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
@@ -48244,13 +48244,13 @@ paddingHorizontal: 16,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
   };
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 12, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
@@ -48772,13 +48772,13 @@ paddingHorizontal: 16,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
   };
 
   const iconActive = () => (
     <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
-      <RN.Text style={{ color: "white" }}>✓</RN.Text>
+      <RN.Text style={{ color: "white", fontSize: 12, }}>✓</RN.Text>
     </RN.View>
   );
   const iconInactive = () => (
