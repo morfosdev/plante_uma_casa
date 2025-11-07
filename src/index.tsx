@@ -20052,7 +20052,7 @@ async (...args) =>
           arrStyles: [
             `{
 color: '#555555',
-fontSize: 12,
+fontSize: 13,
 fontWeight: '700',
 }`
           ],
