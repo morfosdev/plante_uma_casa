@@ -12528,7 +12528,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -12551,7 +12551,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -12574,7 +12574,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -12597,7 +12597,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -20146,7 +20146,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -20169,7 +20169,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -20192,7 +20192,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -20215,7 +20215,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -20237,7 +20237,7 @@ bottom: 8,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -27538,7 +27538,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -27561,7 +27561,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
@@ -27584,7 +27584,7 @@ async (...args) =>
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-	fontWeight: 'bold',
+	fontWeight: '500',
 }`
           ],
 
