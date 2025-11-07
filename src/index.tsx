@@ -45173,7 +45173,16 @@ async (...args) =>
 	padding: 7,
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("b6list");
+        }
+        ]
+ , trigger: 'on init'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
