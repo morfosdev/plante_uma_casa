@@ -40280,7 +40280,7 @@ async (...args) =>
             
         `{ color: "#FFF" }`, `{
 	color: "#315e2d",
-	fontSize: 12,
+	fontSize: 13,
 	fontWeight: 'bold', 
 }`
           ],
