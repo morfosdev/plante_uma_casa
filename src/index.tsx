@@ -62251,8 +62251,8 @@ userImage: "https://cdn-icons-png.flaticon.com/512/219/219983.png",
 , 'sc': { 
 'A0': { 
 'forms': { 'iptsChanges': {
-	userEmail: "leandrowebmaster@gmail.com",
-	userPassword: "123456",
+	userEmail: "leandro.noisecall@gmail.com",
+	userPassword: "1234567",
 	teste: "123456"
 } } 
 , 'toggles': { 'password': true } 
