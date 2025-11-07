@@ -1224,36 +1224,7 @@ const path1 = "all.toggles.box1";
 	alignItems: "center"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:[`$var_all.authUser.image`],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -4514,36 +4485,7 @@ fontWeight: '700',
 	alignItems: "center"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:[`$var_all.authUser.image`],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -5141,7 +5083,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
+	fontSize: 13,
 	fontWeight: '500',
 	color: 'white',
 }`
@@ -11859,36 +11801,7 @@ fontWeight: '700',
 	alignItems: "center"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:[`$var_all.authUser.image`],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -19399,36 +19312,7 @@ fontWeight: '700',
 	alignItems: "center"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:[`$var_all.authUser.image`],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -26900,36 +26784,7 @@ fontWeight: '700',
 	alignItems: "center"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:[`$var_all.authUser.image`],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -34357,36 +34212,7 @@ fontWeight: '700',
 	alignItems: "center"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:[`$var_all.authUser.image`],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -39485,36 +39311,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 	alignItems: "center"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:[`$var_all.authUser.image`],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -44840,36 +44637,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 	alignItems: "center"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{
-	width: 30,
-	height: 30,
-	borderRadius: 200
-}],
-
-      URIvariablePath:[`$var_all.authUser.image`],
-
-      args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
