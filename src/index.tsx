@@ -34946,6 +34946,19 @@ borderRadius: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+justifyContent: 'center',
+flexDirection: 'row',
+backgroundColor: 'transparent',
+
+}`],
+
+            functions:[()=>{}],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -35098,6 +35111,10 @@ fontWeight: '500',
 
       args,
     }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
