@@ -5308,7 +5308,7 @@ height: 15,
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 13,
 fontWeight: '500',
 }`
           ],
@@ -5370,7 +5370,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 13,
 fontWeight: '500',
 }`
           ],
@@ -34952,7 +34952,7 @@ backgroundColor: 'transparent',
 
           arrStyles: [
             `{
-fontSize: 16,
+fontSize: 13,
 fontWeight: '700',
 color: '#0D141C',
 }`
@@ -34972,7 +34972,7 @@ color: '#0D141C',
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 13,
 fontWeight: '400',
 color: '#4A739C',
 }`
@@ -35047,7 +35047,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 13,
 fontWeight: '500',
 }`
           ],
