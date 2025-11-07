@@ -5028,7 +5028,7 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingHorizontal: 45,
+	paddingHorizontal: 70,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -12370,7 +12370,7 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingHorizontal: 45,
+	paddingHorizontal: 70,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -19909,7 +19909,7 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingHorizontal: 45,
+	paddingHorizontal: 70,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -27411,7 +27411,7 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingHorizontal: 45,
+	paddingHorizontal: 70,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -34838,7 +34838,7 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingHorizontal: 45,
+	paddingHorizontal: 70,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -34943,18 +34943,6 @@ backgroundColor: 'transparent',
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
 borderRadius: 10,
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: '90%',
-flexDirection: 'row',
-backgroundColor: 'transparent',
-
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -35110,10 +35098,6 @@ fontWeight: '500',
 
       args,
     }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
@@ -39979,7 +39963,7 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingHorizontal: 45,
+	paddingHorizontal: 70,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -45334,7 +45318,7 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingHorizontal: 45,
+	paddingHorizontal: 70,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
