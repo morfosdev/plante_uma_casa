@@ -27382,7 +27382,7 @@ right: 2,
 
           arrStyles: [
             `{
-	fontSize: 26,
+	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
 }`
@@ -27401,7 +27401,7 @@ right: 2,
 
           arrStyles: [
             `{
-	fontSize: 15,
+	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
 }`
@@ -27458,8 +27458,8 @@ async (...args) =>
 
           arrStyles: [
             `{
-	fontSize: 15,
-	fontWeight: '700',
+	fontSize: 13,
+	fontWeight: '500',
 	color: 'white',
 }`
           ],
