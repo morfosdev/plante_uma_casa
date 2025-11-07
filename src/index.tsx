@@ -5191,6 +5191,7 @@ backgroundColor: 'transparent',
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
 borderRadius: 10,
+alignItems: 'center',
 }`],
 
             functions:[async (...args) =>
@@ -34947,6 +34948,7 @@ backgroundColor: 'transparent',
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
 borderRadius: 10,
+alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -35091,8 +35093,8 @@ fontWeight: '500',
       elementsProperties:[{}],
 
       styles:[{
-	width: 130,
-	height: 80,
+	width: 150,
+	height: 100,
 	borderRadius: '6px',
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
