@@ -12803,9 +12803,8 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: "fit-content", 
-	minWidth: 120, 
-	height: 30, 
+	paddingVertical: 6,
+	paddingHorizontal: 8, 
 	backgroundColor: "#fff",
 	borderRadius: 20, 
 	alignItems: "center",
