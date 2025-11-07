@@ -5179,7 +5179,7 @@ async (...args) =>
 
             styles:[`{
 width: '100%',
-justifyContent: 'center',
+justifyContent: 'flex-start',
 flexDirection: 'row',
 paddingHorizontal: '60px',
 paddingVertical: '30px',
@@ -34933,7 +34933,7 @@ async (...args) =>
 
             styles:[`{
 width: '100%',
-justifyContent: 'center',
+justifyContent: 'flex-start',
 flexDirection: 'row',
 paddingHorizontal: '60px',
 paddingVertical: '30px',
@@ -34951,8 +34951,7 @@ borderRadius: 10,
             elementsProperties:['{}'],
 
             styles:[`{
-width: '100%',
-justifyContent: 'center',
+width: '90%',
 flexDirection: 'row',
 backgroundColor: 'transparent',
 
