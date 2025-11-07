@@ -35076,8 +35076,8 @@ fontWeight: '500',
       elementsProperties:[{}],
 
       styles:[{
-	width: '260px',
-	height: '160px',
+	width: 200,
+	height: 150,
 	borderRadius: '6px',
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
