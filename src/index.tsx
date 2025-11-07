@@ -12527,6 +12527,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -12548,6 +12550,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -12569,6 +12573,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -12590,6 +12596,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -12610,6 +12618,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -12712,6 +12722,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -12733,6 +12745,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -12754,6 +12768,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -12775,6 +12791,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20132,6 +20150,8 @@ bottom: 8,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20153,6 +20173,8 @@ bottom: 8,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20174,6 +20196,8 @@ bottom: 8,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20195,6 +20219,8 @@ bottom: 8,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20215,6 +20241,8 @@ bottom: 8,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20294,6 +20322,8 @@ shadowRadius: 4,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -20314,6 +20344,8 @@ shadowRadius: 4,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -27512,6 +27544,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -27533,6 +27567,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -27554,6 +27590,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -27574,6 +27612,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -27676,6 +27716,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -27697,6 +27739,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -27718,6 +27762,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -27738,6 +27784,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -39941,6 +39989,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -39962,6 +40012,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -39983,6 +40035,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -40004,6 +40058,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -40024,6 +40080,8 @@ async (...args) =>
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -40108,6 +40166,8 @@ shadowRadius: 4,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -40129,6 +40189,8 @@ shadowRadius: 4,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -40150,6 +40212,8 @@ shadowRadius: 4,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
@@ -40171,6 +40235,8 @@ shadowRadius: 4,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
+	fontSize: 13,
+	fontWeight: 'bold',
 }`
           ],
 
