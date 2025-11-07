@@ -27273,7 +27273,7 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 70,
+	paddingLeft: 42,
 	paddingRight: 145,
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
