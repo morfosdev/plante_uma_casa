@@ -4648,9 +4648,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -4769,9 +4769,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -4893,9 +4893,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -11966,9 +11966,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -12087,9 +12087,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -12211,9 +12211,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -19478,9 +19478,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -19599,9 +19599,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -19723,9 +19723,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -26951,9 +26951,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
@@ -27072,9 +27072,9 @@ width: '100%',
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: [`white`],
 
@@ -27196,9 +27196,9 @@ async (...args) =>
 
       `,
 
-      altura: "20px",
+      altura: "15px",
 
-      largura: "20px",
+      largura: "15px",
 
       preenchimento: ['black'],
 
