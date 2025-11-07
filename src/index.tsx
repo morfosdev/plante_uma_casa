@@ -5184,6 +5184,11 @@ flexDirection: 'row',
 paddingHorizontal: '60px',
 paddingVertical: '30px',
 backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+borderRadius: 10,
 }`],
 
             functions:[async (...args) =>
@@ -34932,6 +34937,11 @@ flexDirection: 'row',
 paddingHorizontal: '60px',
 paddingVertical: '30px',
 backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+borderRadius: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -35095,6 +35105,7 @@ fontWeight: '500',
 
       styles:[`{
 width: '100%',
+padding: 10,
 }`],    args,
         }}/>],
             args,
