@@ -39020,9 +39020,28 @@ paddingHorizontal: 4,
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
- }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
+ }}/>, 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>],
+ }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.B9.forms.editChanges.date`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.forms.editChanges.date`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
 
             args,
           }}/>
@@ -44653,9 +44672,28 @@ paddingHorizontal: 4,
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
- }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
+ }}/>, 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>],
+ }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.B9.forms.editChanges.date`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.forms.editChanges.date`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
 
             args,
           }}/>
@@ -53658,9 +53696,28 @@ paddingHorizontal: 4,
 	const path = "all.temp.images";
 	tools.setData({path, value});
 }], args,
- }}/>, (...args:any) => <Elements.BtnDocumentPicker pass={{
+ }}/>, 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>],
+ }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [{}],
+
+          stylesArray: [{
+                color: 'black',
+                fontSize: 14,
+                // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
+              }],
+
+          path: [`sc.B9.forms.editChanges.date`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.forms.editChanges.date`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
 
             args,
           }}/>
