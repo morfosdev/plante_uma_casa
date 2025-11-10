@@ -28861,7 +28861,7 @@ fontWeight: '700',
   console.log("custom do where get lot by docId", { args });
   const objInstallments = args[0].installments;
   const arrInstallments = typeof objInstallments === 'object' ? Object.values(objInstallments) : [];
-  console.log("custom do where get lot by docId", { arrInstallments });
+  console.log("custom do where get lot by docId / Installments", { arrInstallments });
 
   tools.setData({ path: "sc.A9.lists.list1", value: arrInstallments });
 }],
