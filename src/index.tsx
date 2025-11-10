@@ -7807,7 +7807,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL DO ADMINISTRADOR`
+            `Perfil do administrador`
           ],
 
           args,
@@ -16036,7 +16036,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL DO ADMINISTRADOR`
+            `Perfil do administrador`
           ],
 
           args,
@@ -24212,7 +24212,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL DO ADMINISTRADOR`
+            `Perfil do administrador`
           ],
 
           args,
@@ -32366,7 +32366,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL DO ADMINISTRADOR`
+            `Perfil do administrador`
           ],
 
           args,
