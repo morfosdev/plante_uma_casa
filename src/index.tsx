@@ -12040,7 +12040,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Valor`
+            `Valor Pago`
           ],
 
           args,
@@ -20269,7 +20269,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Valor`
+            `Valor Pago`
           ],
 
           args,
@@ -28507,7 +28507,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Valor`
+            `Valor Pago`
           ],
 
           args,
@@ -36688,7 +36688,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Valor`
+            `Valor Pago`
           ],
 
           args,
