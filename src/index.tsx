@@ -21725,25 +21725,7 @@ shadowRadius: 4,
 	alignItems: 'center',
 }`],
 
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.editChanges`],
-          value: [`$arg_item`]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[
+            functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -21760,7 +21742,7 @@ async (...args) =>
           ],
 
           children: [
-            `$arg_owner`
+            `$arg_description`
           ],
 
           args,
@@ -21782,7 +21764,7 @@ async (...args) =>
           ],
 
           children: [
-            `$arg_userEmail`
+            `R$ $arg_value`
           ],
 
           args,
@@ -21804,13 +21786,12 @@ async (...args) =>
           ],
 
           children: [
-            `$arg_lot`
+            `$arg_date`
           ],
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
+        }}/>, (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -21826,78 +21807,12 @@ async (...args) =>
           ],
 
           children: [
-            `$arg_area`
-          ],
-
-          args,
-
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	height: 30, 
-	backgroundColor: "#fff",
-	borderRadius: 20, 
-	alignItems: "center",
-	justifyContent: "center",
-	borderWidth: 2,
-	borderColor: "#315e2d",
-  flexGrow: 1,
-  flexShrink: 1,
-  flexBasis: 80,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.currents.currId1`],
-          value: [``]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.currents.currId1`],
-          value: [`$arg_docId`]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A9.lists.list1`],
-          value: [[]]
-        }}), 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("a9finManagement");
-        }
-        ]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            
-        `{ color: "#FFF" }`, `{
-	color: "#315e2d",
-	fontSize: 12,
-	fontWeight: 'bold', 
-}`
-          ],
-
-          children: [
-            `Gestão Financeira`
+            `$var_sc.A9.data.numberOfInstallments`
           ],
 
           args,
 
         }}/>],
-
-            args,
-          }}/>
-        ],
 
             args,
           }}/>
