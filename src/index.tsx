@@ -28934,20 +28934,23 @@ console.log("Dados do Lote", { args });
 // ✅ Extrai todos os valores do objeto
   const allValues = Object.values(objLote);
 
-// ✅ Extrai e guarda numberOfInstallments e totalValue (se existirem)
+// ✅ Extrai e guarda numberOfInstallments, owner e totalValue (se existirem)
   const numberOfInstallments = objLote.numberOfInstallments || allValues.find(v => typeof v === "number") || null;
+	const owner = objLote.owner || allValues.find(v => typeof v === "string") || null;
   const totalValue = objLote.totalValue || allValues.find(v => typeof v === "string" && !v.installmentId) || null;
 
 // ✅ Exibe log detalhado
   console.log("📦 numberOfInstallments:", numberOfInstallments);
+	console.log("owner:", owner);
   console.log("💰 totalValue:", totalValue);
 	console.log("Dados:", allValues );
 
   // ✅ Define os dados para uso na tela
   tools.setData({ path: "sc.A9.lists.list1", value: allValues  });
 
-  // ✅ Armazena numberOfInstallments e totalValue separadamente
+  // ✅ Armazena numberOfInstallments, owner e totalValue separadamente
   tools.setData({ path: "sc.A9.iptsChanges.numberOfInstallments", value: numberOfInstallments });
+	tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
   tools.setData({ path: "sc.A9.iptsChanges.totalValue", value: totalValue });
 
 }],
