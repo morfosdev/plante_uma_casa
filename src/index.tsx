@@ -6753,7 +6753,7 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 13,
+	right: 12,
 	top: 12,
 	zIndex: 1,
 	alignItems: 'center',
@@ -14488,7 +14488,7 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 13,
+	right: 12,
 	top: 12,
 	zIndex: 1,
 	alignItems: 'center',
@@ -22170,7 +22170,7 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 13,
+	right: 12,
 	top: 12,
 	zIndex: 1,
 	alignItems: 'center',
@@ -29830,7 +29830,7 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 13,
+	right: 12,
 	top: 12,
 	zIndex: 1,
 	alignItems: 'center',
