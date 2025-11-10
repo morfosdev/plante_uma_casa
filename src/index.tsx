@@ -21718,6 +21718,8 @@ shadowRadius: 4,
 
             styles:[`{
 	flex: 1,
+	flexDirection: 'row',
+	alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
