@@ -6687,6 +6687,8 @@ async (...args) =>
 	borderColor: 'black',
 	width: 50,
 	height: 20,
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[
@@ -14325,6 +14327,8 @@ async (...args) =>
 	borderColor: 'black',
 	width: 50,
 	height: 20,
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[
@@ -21910,6 +21914,8 @@ async (...args) =>
 	borderColor: 'black',
 	width: 50,
 	height: 20,
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[
@@ -29473,6 +29479,8 @@ async (...args) =>
 	borderColor: 'black',
 	width: 50,
 	height: 20,
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[
