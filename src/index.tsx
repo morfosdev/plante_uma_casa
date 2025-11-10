@@ -6753,15 +6753,11 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 30,
-	top: 15,
+	right: 13,
+	top: 12,
 	zIndex: 1,
 	alignItems: 'center',
 	backgroundColor: 'transparent',
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
 }`],
 
             functions:[async (...args) =>
@@ -6775,13 +6771,6 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
-	borderRadius: 6,
-	borderWidth: 1,
-	borderColor: 'black',
-	paddingVertical: 4,
-	paddingHorizontal: 18,
-	alignItems: 'center',
-	justifyContent: 'center',
 }`],
 
             functions:[async (...args) =>
@@ -14499,15 +14488,11 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 30,
-	top: 15,
+	right: 13,
+	top: 12,
 	zIndex: 1,
 	alignItems: 'center',
 	backgroundColor: 'transparent',
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
 }`],
 
             functions:[async (...args) =>
@@ -14521,13 +14506,6 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
-	borderRadius: 6,
-	borderWidth: 1,
-	borderColor: 'black',
-	paddingVertical: 4,
-	paddingHorizontal: 18,
-	alignItems: 'center',
-	justifyContent: 'center',
 }`],
 
             functions:[async (...args) =>
@@ -22192,15 +22170,11 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 30,
-	top: 15,
+	right: 13,
+	top: 12,
 	zIndex: 1,
 	alignItems: 'center',
 	backgroundColor: 'transparent',
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
 }`],
 
             functions:[async (...args) =>
@@ -22214,13 +22188,6 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
-	borderRadius: 6,
-	borderWidth: 1,
-	borderColor: 'black',
-	paddingVertical: 4,
-	paddingHorizontal: 18,
-	alignItems: 'center',
-	justifyContent: 'center',
 }`],
 
             functions:[async (...args) =>
@@ -29863,15 +29830,11 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 30,
-	top: 15,
+	right: 13,
+	top: 12,
 	zIndex: 1,
 	alignItems: 'center',
 	backgroundColor: 'transparent',
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
 }`],
 
             functions:[async (...args) =>
@@ -29885,13 +29848,6 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
-	borderRadius: 6,
-	borderWidth: 1,
-	borderColor: 'black',
-	paddingVertical: 4,
-	paddingHorizontal: 18,
-	alignItems: 'center',
-	justifyContent: 'center',
 }`],
 
             functions:[async (...args) =>
