@@ -21681,17 +21681,20 @@ height: 15,
             args,
           }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{ flex:1, width: '100%',}`],
+            styles: [`{
+borderRadius: 12,
+}`],
             arrProps: [],
             arrItems: [(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
 
-          pData: `sc.A9.lists.list1`,
+          pData: `sc.a7.list`,
 
           itemElements: [
             
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -21722,7 +21725,25 @@ shadowRadius: 4,
 	alignItems: 'center',
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a7b.editOwner`],
+          value: [true]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.editChanges`],
+          value: [`$arg_item`]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -21739,12 +21760,13 @@ shadowRadius: 4,
           ],
 
           children: [
-            `$arg_description`
+            `$arg_owner`
           ],
 
           args,
 
-        }}/>, (...args:any) => <Elements.Text pass={{
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -21760,7 +21782,113 @@ shadowRadius: 4,
           ],
 
           children: [
-            `$arg_address`
+            `$arg_userEmail`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+	fontSize: 13,
+}`
+          ],
+
+          children: [
+            `$arg_lot`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	color: '#555555',
+	fontSize: 13,
+}`
+          ],
+
+          children: [
+            `$arg_area`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.currents.currId1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.currents.currId1`],
+          value: [`$arg_docId`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A9.lists.list1`],
+          value: [[]]
+        }}), 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a9finManagement");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ color: "#FFF" }`, `{
+	color: "#315e2d",
+	fontSize: 12,
+	fontWeight: 'bold', 
+}`
+          ],
+
+          children: [
+            `Gestão Financeira`
           ],
 
           args,
@@ -21770,6 +21898,23 @@ shadowRadius: 4,
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: 25,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
