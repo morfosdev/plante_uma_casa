@@ -6623,8 +6623,8 @@ async (...args) =>
 	width: 50,
 	height: 20,
 	position: 'absolute',
-	right: 0,
-	top: -70,
+	right: 40,
+	top: 20,
 	zIndex: 1,
 	alignItems: 'center',
 	backgroundColor: 'transparent',
@@ -6645,6 +6645,11 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
+	borderRadius: 6,
+	borderWidth: 1,
+	borderColor: 'black',
+	width: 50,
+	height: 20,
 }`],
 
             functions:[
@@ -6675,7 +6680,22 @@ async (...args) =>
         }})],
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[() =><></>],
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Excluir`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -14204,8 +14224,8 @@ async (...args) =>
 	width: 50,
 	height: 20,
 	position: 'absolute',
-	right: 0,
-	top: -70,
+	right: 40,
+	top: 20,
 	zIndex: 1,
 	alignItems: 'center',
 	backgroundColor: 'transparent',
@@ -14226,6 +14246,11 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
+	borderRadius: 6,
+	borderWidth: 1,
+	borderColor: 'black',
+	width: 50,
+	height: 20,
 }`],
 
             functions:[
@@ -14256,7 +14281,22 @@ async (...args) =>
         }})],
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[() =><></>],
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Excluir`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -21732,8 +21772,8 @@ async (...args) =>
 	width: 50,
 	height: 20,
 	position: 'absolute',
-	right: 0,
-	top: -70,
+	right: 40,
+	top: 20,
 	zIndex: 1,
 	alignItems: 'center',
 	backgroundColor: 'transparent',
@@ -21754,6 +21794,11 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
+	borderRadius: 6,
+	borderWidth: 1,
+	borderColor: 'black',
+	width: 50,
+	height: 20,
 }`],
 
             functions:[
@@ -21784,7 +21829,22 @@ async (...args) =>
         }})],
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[() =><></>],
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Excluir`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -29238,8 +29298,8 @@ async (...args) =>
 	width: 50,
 	height: 20,
 	position: 'absolute',
-	right: 0,
-	top: -70,
+	right: 40,
+	top: 20,
 	zIndex: 1,
 	alignItems: 'center',
 	backgroundColor: 'transparent',
@@ -29260,6 +29320,11 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
+	borderRadius: 6,
+	borderWidth: 1,
+	borderColor: 'black',
+	width: 50,
+	height: 20,
 }`],
 
             functions:[
@@ -29290,7 +29355,22 @@ async (...args) =>
         }})],
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[() =><></>],
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Excluir`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
