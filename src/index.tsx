@@ -6657,8 +6657,6 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 50,
-	height: 20,
 	position: 'absolute',
 	right: 30,
 	top: 15,
@@ -14297,8 +14295,6 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 50,
-	height: 20,
 	position: 'absolute',
 	right: 30,
 	top: 15,
@@ -21884,8 +21880,6 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 50,
-	height: 20,
 	position: 'absolute',
 	right: 30,
 	top: 15,
@@ -29449,8 +29443,6 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	width: 50,
-	height: 20,
 	position: 'absolute',
 	right: 30,
 	top: 15,
