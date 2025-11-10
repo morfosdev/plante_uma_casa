@@ -28871,7 +28871,7 @@ fontWeight: '700',
 
   // Define na variável de lista
   tools.setData({ path: "sc.A9.lists.list1", value: validInstallments });
-};
+}
 ],
  }})]
  , trigger: 'on init'
