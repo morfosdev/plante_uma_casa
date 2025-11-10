@@ -6619,14 +6619,20 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	width: 50,
+	height: 20,
+	position: 'absolute',
+	right: 0,
+	top: -70,
+	zIndex: 1,
+	alignItems: 'center',
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -6637,14 +6643,9 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	backgroundColor: 'transparent',
+}`],
 
             functions:[
         async (...args) =>
@@ -14199,14 +14200,20 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	width: 50,
+	height: 20,
+	position: 'absolute',
+	right: 0,
+	top: -70,
+	zIndex: 1,
+	alignItems: 'center',
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -14217,14 +14224,9 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	backgroundColor: 'transparent',
+}`],
 
             functions:[
         async (...args) =>
@@ -21726,14 +21728,20 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	width: 50,
+	height: 20,
+	position: 'absolute',
+	right: 0,
+	top: -70,
+	zIndex: 1,
+	alignItems: 'center',
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -21744,14 +21752,9 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	backgroundColor: 'transparent',
+}`],
 
             functions:[
         async (...args) =>
@@ -29231,14 +29234,20 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	width: 50,
+	height: 20,
+	position: 'absolute',
+	right: 0,
+	top: -70,
+	zIndex: 1,
+	alignItems: 'center',
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -29249,14 +29258,9 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+	backgroundColor: 'transparent',
+}`],
 
             functions:[
         async (...args) =>
