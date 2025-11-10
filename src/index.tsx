@@ -8084,7 +8084,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO LOTE / PROPRIETÁRIO`
+            `Cadastro lote/proprietário`
           ],
 
           args,
@@ -8985,7 +8985,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO LOTE / PROPRIETÁRIO`
+            `Cadastro lote/proprietário`
           ],
 
           args,
@@ -16313,7 +16313,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO LOTE / PROPRIETÁRIO`
+            `Cadastro lote/proprietário`
           ],
 
           args,
@@ -17214,7 +17214,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO LOTE / PROPRIETÁRIO`
+            `Cadastro lote/proprietário`
           ],
 
           args,
@@ -24489,7 +24489,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO LOTE / PROPRIETÁRIO`
+            `Cadastro lote/proprietário`
           ],
 
           args,
@@ -25390,7 +25390,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO LOTE / PROPRIETÁRIO`
+            `Cadastro lote/proprietário`
           ],
 
           args,
@@ -32643,7 +32643,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO LOTE / PROPRIETÁRIO`
+            `Cadastro lote/proprietário`
           ],
 
           args,
@@ -33544,7 +33544,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO LOTE / PROPRIETÁRIO`
+            `Cadastro lote/proprietário`
           ],
 
           args,
