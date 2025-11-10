@@ -21493,7 +21493,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.A9.data.totalValue`
+            `$var_sc.A9.iptsChanges.totalValue`
           ],
 
           args,
