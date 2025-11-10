@@ -7199,7 +7199,7 @@ paddingVertical: 8,
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
@@ -7351,7 +7351,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -14721,7 +14721,7 @@ paddingVertical: 8,
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
@@ -14873,7 +14873,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -22190,7 +22190,7 @@ paddingVertical: 8,
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
@@ -22342,7 +22342,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -29637,7 +29637,7 @@ paddingVertical: 8,
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
@@ -29789,7 +29789,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#315E2D',
 fontWeight: '700',
 }`
