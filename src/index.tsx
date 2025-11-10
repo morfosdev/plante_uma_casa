@@ -28859,11 +28859,19 @@ fontWeight: '700',
           value: [`$arg_callback`]
         }}), (args) => {
   console.log("custom do where get lot by docId", { args });
-  const objInstallments = args[0].installments;
-  const arrInstallments = typeof objInstallments === 'object' ? Object.values(objInstallments) : [];
-  console.log("custom do where get lot by docId / Installments", { arrInstallments });
 
-  tools.setData({ path: "sc.A9.lists.list1", value: arrInstallments });
+	const objLot = args[0];
+	const arrLot = typeof objLot === 'object' ? Object.values(objLot) : [];
+
+  const objInstallments = args[0].installments; 
+	const arrInstallments = typeof objInstallments === 'object' ? Object.values(objInstallments) : [];
+
+  console.log("Array Lot:", { arrLot });
+
+	console.log("Array Installments", { arrInstallments });
+
+  tools.setData({ path: "sc.A9.lists.list1", value: arrLot });
+	tools.setData({ path: "sc.A9.lists.list2", value: arrInstallments });
 }],
  }})]
  , trigger: 'on init'
