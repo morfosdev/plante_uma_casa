@@ -7220,83 +7220,6 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-backgroundColor: "#315E2D", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const getVal = (path) => tools.getCtData(path);
-
-  const paths = [
-    "sc.a1.editChanges.images",
-    "sc.a1.editChanges.documents",
-  ];
-
-  console.log("🔍 --- DEBUG UPLOADERS ---");
-
-  for (let i = 0; i < paths.length; i++) {
-    // Pega o caminho direto do array
-    const val = getVal(paths[i]);
-
-    console.log(paths[i], ":", val);
-
-    if (Array.isArray(val)) {
-      console.log("➡️ Tipo: array", val.length, val);
-    } else if (val && typeof val === "object") {
-      console.log("➡️ Tipo: objeto", val);
-    } else if (typeof val === "string") {
-      console.log("➡️ Tipo: string", val.length, val);
-      try {
-        const parsed = JSON.parse(val);
-        console.log("✅ JSON.parse() OK:", parsed);
-      } catch {
-        console.warn("⚠️ Não é JSON válido");
-      }
-    } else {
-      console.log("❌ Valor vazio ou indefinido:", val);
-    }
-  }
-
-  console.log("🔍 --- FIM DEBUG ---");
-}
-]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `TEMP`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -7367,6 +7290,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -7374,6 +7298,82 @@ fontWeight: '700',
             styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const getVal = (path) => tools.getCtData(path);
+
+  const paths = [
+    "sc.a1.editChanges.images",
+    "sc.a1.editChanges.documents",
+  ];
+
+  console.log("🔍 --- DEBUG UPLOADERS ---");
+
+  for (let i = 0; i < paths.length; i++) {
+    // Pega o caminho direto do array
+    const val = getVal(paths[i]);
+
+    console.log(paths[i], ":", val);
+
+    if (Array.isArray(val)) {
+      console.log("➡️ Tipo: array", val.length, val);
+    } else if (val && typeof val === "object") {
+      console.log("➡️ Tipo: objeto", val);
+    } else if (typeof val === "string") {
+      console.log("➡️ Tipo: string", val.length, val);
+      try {
+        const parsed = JSON.parse(val);
+        console.log("✅ JSON.parse() OK:", parsed);
+      } catch {
+        console.warn("⚠️ Não é JSON válido");
+      }
+    } else {
+      console.log("❌ Valor vazio ou indefinido:", val);
+    }
+  }
+
+  console.log("🔍 --- FIM DEBUG ---");
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `TEMP`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -14741,83 +14741,6 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-backgroundColor: "#315E2D", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const getVal = (path) => tools.getCtData(path);
-
-  const paths = [
-    "sc.a1.editChanges.images",
-    "sc.a1.editChanges.documents",
-  ];
-
-  console.log("🔍 --- DEBUG UPLOADERS ---");
-
-  for (let i = 0; i < paths.length; i++) {
-    // Pega o caminho direto do array
-    const val = getVal(paths[i]);
-
-    console.log(paths[i], ":", val);
-
-    if (Array.isArray(val)) {
-      console.log("➡️ Tipo: array", val.length, val);
-    } else if (val && typeof val === "object") {
-      console.log("➡️ Tipo: objeto", val);
-    } else if (typeof val === "string") {
-      console.log("➡️ Tipo: string", val.length, val);
-      try {
-        const parsed = JSON.parse(val);
-        console.log("✅ JSON.parse() OK:", parsed);
-      } catch {
-        console.warn("⚠️ Não é JSON válido");
-      }
-    } else {
-      console.log("❌ Valor vazio ou indefinido:", val);
-    }
-  }
-
-  console.log("🔍 --- FIM DEBUG ---");
-}
-]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `TEMP`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -14888,6 +14811,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -14895,6 +14819,82 @@ fontWeight: '700',
             styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const getVal = (path) => tools.getCtData(path);
+
+  const paths = [
+    "sc.a1.editChanges.images",
+    "sc.a1.editChanges.documents",
+  ];
+
+  console.log("🔍 --- DEBUG UPLOADERS ---");
+
+  for (let i = 0; i < paths.length; i++) {
+    // Pega o caminho direto do array
+    const val = getVal(paths[i]);
+
+    console.log(paths[i], ":", val);
+
+    if (Array.isArray(val)) {
+      console.log("➡️ Tipo: array", val.length, val);
+    } else if (val && typeof val === "object") {
+      console.log("➡️ Tipo: objeto", val);
+    } else if (typeof val === "string") {
+      console.log("➡️ Tipo: string", val.length, val);
+      try {
+        const parsed = JSON.parse(val);
+        console.log("✅ JSON.parse() OK:", parsed);
+      } catch {
+        console.warn("⚠️ Não é JSON válido");
+      }
+    } else {
+      console.log("❌ Valor vazio ou indefinido:", val);
+    }
+  }
+
+  console.log("🔍 --- FIM DEBUG ---");
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `TEMP`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -22209,83 +22209,6 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-backgroundColor: "#315E2D", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const getVal = (path) => tools.getCtData(path);
-
-  const paths = [
-    "sc.a1.editChanges.images",
-    "sc.a1.editChanges.documents",
-  ];
-
-  console.log("🔍 --- DEBUG UPLOADERS ---");
-
-  for (let i = 0; i < paths.length; i++) {
-    // Pega o caminho direto do array
-    const val = getVal(paths[i]);
-
-    console.log(paths[i], ":", val);
-
-    if (Array.isArray(val)) {
-      console.log("➡️ Tipo: array", val.length, val);
-    } else if (val && typeof val === "object") {
-      console.log("➡️ Tipo: objeto", val);
-    } else if (typeof val === "string") {
-      console.log("➡️ Tipo: string", val.length, val);
-      try {
-        const parsed = JSON.parse(val);
-        console.log("✅ JSON.parse() OK:", parsed);
-      } catch {
-        console.warn("⚠️ Não é JSON válido");
-      }
-    } else {
-      console.log("❌ Valor vazio ou indefinido:", val);
-    }
-  }
-
-  console.log("🔍 --- FIM DEBUG ---");
-}
-]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `TEMP`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -22356,6 +22279,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -22363,6 +22287,82 @@ fontWeight: '700',
             styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const getVal = (path) => tools.getCtData(path);
+
+  const paths = [
+    "sc.a1.editChanges.images",
+    "sc.a1.editChanges.documents",
+  ];
+
+  console.log("🔍 --- DEBUG UPLOADERS ---");
+
+  for (let i = 0; i < paths.length; i++) {
+    // Pega o caminho direto do array
+    const val = getVal(paths[i]);
+
+    console.log(paths[i], ":", val);
+
+    if (Array.isArray(val)) {
+      console.log("➡️ Tipo: array", val.length, val);
+    } else if (val && typeof val === "object") {
+      console.log("➡️ Tipo: objeto", val);
+    } else if (typeof val === "string") {
+      console.log("➡️ Tipo: string", val.length, val);
+      try {
+        const parsed = JSON.parse(val);
+        console.log("✅ JSON.parse() OK:", parsed);
+      } catch {
+        console.warn("⚠️ Não é JSON válido");
+      }
+    } else {
+      console.log("❌ Valor vazio ou indefinido:", val);
+    }
+  }
+
+  console.log("🔍 --- FIM DEBUG ---");
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `TEMP`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -29655,83 +29655,6 @@ fontWeight: '700',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-backgroundColor: "#315E2D", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const getVal = (path) => tools.getCtData(path);
-
-  const paths = [
-    "sc.a1.editChanges.images",
-    "sc.a1.editChanges.documents",
-  ];
-
-  console.log("🔍 --- DEBUG UPLOADERS ---");
-
-  for (let i = 0; i < paths.length; i++) {
-    // Pega o caminho direto do array
-    const val = getVal(paths[i]);
-
-    console.log(paths[i], ":", val);
-
-    if (Array.isArray(val)) {
-      console.log("➡️ Tipo: array", val.length, val);
-    } else if (val && typeof val === "object") {
-      console.log("➡️ Tipo: objeto", val);
-    } else if (typeof val === "string") {
-      console.log("➡️ Tipo: string", val.length, val);
-      try {
-        const parsed = JSON.parse(val);
-        console.log("✅ JSON.parse() OK:", parsed);
-      } catch {
-        console.warn("⚠️ Não é JSON válido");
-      }
-    } else {
-      console.log("❌ Valor vazio ou indefinido:", val);
-    }
-  }
-
-  console.log("🔍 --- FIM DEBUG ---");
-}
-]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `TEMP`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -29802,6 +29725,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -29809,6 +29733,82 @@ fontWeight: '700',
             styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const getVal = (path) => tools.getCtData(path);
+
+  const paths = [
+    "sc.a1.editChanges.images",
+    "sc.a1.editChanges.documents",
+  ];
+
+  console.log("🔍 --- DEBUG UPLOADERS ---");
+
+  for (let i = 0; i < paths.length; i++) {
+    // Pega o caminho direto do array
+    const val = getVal(paths[i]);
+
+    console.log(paths[i], ":", val);
+
+    if (Array.isArray(val)) {
+      console.log("➡️ Tipo: array", val.length, val);
+    } else if (val && typeof val === "object") {
+      console.log("➡️ Tipo: objeto", val);
+    } else if (typeof val === "string") {
+      console.log("➡️ Tipo: string", val.length, val);
+      try {
+        const parsed = JSON.parse(val);
+        console.log("✅ JSON.parse() OK:", parsed);
+      } catch {
+        console.warn("⚠️ Não é JSON válido");
+      }
+    } else {
+      console.log("❌ Valor vazio ou indefinido:", val);
+    }
+  }
+
+  console.log("🔍 --- FIM DEBUG ---");
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `TEMP`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
