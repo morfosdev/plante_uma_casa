@@ -11902,7 +11902,7 @@ color: '#555555',
           ],
 
           children: [
-            `FINANCEIRO`
+            `Financeiro`
           ],
 
           args,
@@ -20131,7 +20131,7 @@ color: '#555555',
           ],
 
           children: [
-            `FINANCEIRO`
+            `Financeiro`
           ],
 
           args,
@@ -28307,7 +28307,7 @@ color: '#555555',
           ],
 
           children: [
-            `FINANCEIRO`
+            `Financeiro`
           ],
 
           args,
@@ -36461,7 +36461,7 @@ color: '#555555',
           ],
 
           children: [
-            `FINANCEIRO`
+            `Financeiro`
           ],
 
           args,
