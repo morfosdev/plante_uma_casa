@@ -6592,9 +6592,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.btnDelete`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
           value: [true]
         }})]
  , trigger: 'on press'
@@ -6652,6 +6657,7 @@ async (...args) =>
 
       args,
     }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -6733,6 +6739,108 @@ async (...args) =>
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	position: 'absolute',
+	right: 30,
+	top: 15,
+	zIndex: 1,
+	alignItems: 'center',
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.btnDelete", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	backgroundColor: 'transparent',
+	borderRadius: 6,
+	borderWidth: 1,
+	borderColor: 'black',
+	paddingVertical: 4,
+	paddingHorizontal: 18,
+	alignItems: 'center',
+	justifyContent: 'center',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={4}
+    height={19}
+    fill="red"
+    viewBox="0 0 4 19"
+    {...props}
+  >
+    <Path
+      fill="#000"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 9.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path fill="#000" d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z" />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 9.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="4" height="19" viewBox="0 0 4 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" fill="black"/>
+<path d="M0.50003 9.49985C0.50003 10.3283 1.1716 10.9998 2.00003 10.9998C2.82846 10.9998 3.50003 10.3283 3.50003 9.49985C3.50003 8.67142 2.82846 7.99985 2.00003 7.99985C1.1716 7.99985 0.50003 8.67142 0.50003 9.49985Z" fill="black"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" fill="black"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" fill="black"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.50003 9.49985C0.50003 10.3283 1.1716 10.9998 2.00003 10.9998C2.82846 10.9998 3.50003 10.3283 3.50003 9.49985C3.50003 8.67142 2.82846 7.99985 2.00003 7.99985C1.1716 7.99985 0.50003 8.67142 0.50003 9.49985Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "15px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
@@ -14230,9 +14338,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.btnDelete`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
           value: [true]
         }})]
  , trigger: 'on press'
@@ -14290,6 +14403,7 @@ async (...args) =>
 
       args,
     }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -14371,6 +14485,108 @@ async (...args) =>
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	position: 'absolute',
+	right: 30,
+	top: 15,
+	zIndex: 1,
+	alignItems: 'center',
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.btnDelete", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	backgroundColor: 'transparent',
+	borderRadius: 6,
+	borderWidth: 1,
+	borderColor: 'black',
+	paddingVertical: 4,
+	paddingHorizontal: 18,
+	alignItems: 'center',
+	justifyContent: 'center',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={4}
+    height={19}
+    fill="red"
+    viewBox="0 0 4 19"
+    {...props}
+  >
+    <Path
+      fill="#000"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 9.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path fill="#000" d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z" />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 9.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="4" height="19" viewBox="0 0 4 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" fill="black"/>
+<path d="M0.50003 9.49985C0.50003 10.3283 1.1716 10.9998 2.00003 10.9998C2.82846 10.9998 3.50003 10.3283 3.50003 9.49985C3.50003 8.67142 2.82846 7.99985 2.00003 7.99985C1.1716 7.99985 0.50003 8.67142 0.50003 9.49985Z" fill="black"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" fill="black"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" fill="black"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.50003 9.49985C0.50003 10.3283 1.1716 10.9998 2.00003 10.9998C2.82846 10.9998 3.50003 10.3283 3.50003 9.49985C3.50003 8.67142 2.82846 7.99985 2.00003 7.99985C1.1716 7.99985 0.50003 8.67142 0.50003 9.49985Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "15px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
@@ -21815,9 +22031,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.btnDelete`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
           value: [true]
         }})]
  , trigger: 'on press'
@@ -21875,6 +22096,7 @@ async (...args) =>
 
       args,
     }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -21956,6 +22178,108 @@ async (...args) =>
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	position: 'absolute',
+	right: 30,
+	top: 15,
+	zIndex: 1,
+	alignItems: 'center',
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.btnDelete", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	backgroundColor: 'transparent',
+	borderRadius: 6,
+	borderWidth: 1,
+	borderColor: 'black',
+	paddingVertical: 4,
+	paddingHorizontal: 18,
+	alignItems: 'center',
+	justifyContent: 'center',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={4}
+    height={19}
+    fill="red"
+    viewBox="0 0 4 19"
+    {...props}
+  >
+    <Path
+      fill="#000"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 9.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path fill="#000" d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z" />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 9.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="4" height="19" viewBox="0 0 4 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" fill="black"/>
+<path d="M0.50003 9.49985C0.50003 10.3283 1.1716 10.9998 2.00003 10.9998C2.82846 10.9998 3.50003 10.3283 3.50003 9.49985C3.50003 8.67142 2.82846 7.99985 2.00003 7.99985C1.1716 7.99985 0.50003 8.67142 0.50003 9.49985Z" fill="black"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" fill="black"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" fill="black"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.50003 9.49985C0.50003 10.3283 1.1716 10.9998 2.00003 10.9998C2.82846 10.9998 3.50003 10.3283 3.50003 9.49985C3.50003 8.67142 2.82846 7.99985 2.00003 7.99985C1.1716 7.99985 0.50003 8.67142 0.50003 9.49985Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "15px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
@@ -29378,9 +29702,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.btnDelete`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
           value: [true]
         }})]
  , trigger: 'on press'
@@ -29438,6 +29767,7 @@ async (...args) =>
 
       args,
     }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -29519,6 +29849,108 @@ async (...args) =>
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	position: 'absolute',
+	right: 30,
+	top: 15,
+	zIndex: 1,
+	alignItems: 'center',
+	backgroundColor: 'transparent',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.btnDelete", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	backgroundColor: 'transparent',
+	borderRadius: 6,
+	borderWidth: 1,
+	borderColor: 'black',
+	paddingVertical: 4,
+	paddingHorizontal: 18,
+	alignItems: 'center',
+	justifyContent: 'center',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={4}
+    height={19}
+    fill="red"
+    viewBox="0 0 4 19"
+    {...props}
+  >
+    <Path
+      fill="#000"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 9.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path fill="#000" d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z" />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 9.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 16.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="4" height="19" viewBox="0 0 4 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" fill="black"/>
+<path d="M0.50003 9.49985C0.50003 10.3283 1.1716 10.9998 2.00003 10.9998C2.82846 10.9998 3.50003 10.3283 3.50003 9.49985C3.50003 8.67142 2.82846 7.99985 2.00003 7.99985C1.1716 7.99985 0.50003 8.67142 0.50003 9.49985Z" fill="black"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" fill="black"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" fill="black"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.50003 9.49985C0.50003 10.3283 1.1716 10.9998 2.00003 10.9998C2.82846 10.9998 3.50003 10.3283 3.50003 9.49985C3.50003 8.67142 2.82846 7.99985 2.00003 7.99985C1.1716 7.99985 0.50003 8.67142 0.50003 9.49985Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 16.4998C0.5 17.3283 1.17157 17.9998 2 17.9998C2.82843 17.9998 3.5 17.3283 3.5 16.4998C3.5 15.6714 2.82843 14.9998 2 14.9998C1.17157 14.9998 0.5 15.6714 0.5 16.4998Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "15px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
