@@ -28857,15 +28857,22 @@ fontWeight: '700',
  arrFuncs: [(args) => {
   console.log("custom do where get lot by docId", { args });
 
+  const objInstallments = args[0].installments;
+  const arrInstallments = typeof objInstallments === "object"
+    ? Object.values(objInstallments)
+    : [];
 
-  const objInstallments = args[0].installments; 
-	const arrInstallments = typeof objInstallments === 'object' ? Object.values(objInstallments) : [];
+  // 🔹 Filtra apenas os objetos que representam parcelas (i1, i2, etc.)
+  const validInstallments = arrInstallments.filter(
+    (item) => typeof item === "object" && item.installmentId
+  );
 
+  console.log("✅ Parcelas filtradas:", validInstallments);
 
-	console.log("Array Installments", { arrInstallments });
-
-	tools.setData({ path: "sc.A9.lists.list1", value: arrInstallments });
-}],
+  // Define na variável de lista
+  tools.setData({ path: "sc.A9.lists.list1", value: validInstallments });
+};
+],
  }})]
  , trigger: 'on init'
 }})],
