@@ -28914,11 +28914,25 @@ fontWeight: '700',
         `docId`, 
         `==`, `$var_sc.A10.currents.currId1`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A9.iptsChanges`],
           value: [`$arg_callback`]
-        }})],
+        }}), (args) => {
+
+console.log("Dados do Lote", { args });
+
+  const objLote = args[0];
+
+  // ✅ Garante que é um objeto válido
+  if (typeof objLote !== "object" || objLote === null) {
+    console.log("❌ lote inválido:", objLote);
+    return;
+  }
+
+
+}],
  }})]
  , trigger: 'on init'
 }})],
