@@ -11986,7 +11986,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Quantidade de Parcelas`
+            `Descrição`
           ],
 
           args,
@@ -12004,11 +12004,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.numberOfInstallments`],
+          path: [`sc.A10.forms.editChanges.installmentDescription`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.numberOfInstallments`],
+          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
           value: [`$arg_callback`]
         }})],
 
@@ -20215,7 +20215,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Quantidade de Parcelas`
+            `Descrição`
           ],
 
           args,
@@ -20233,11 +20233,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.numberOfInstallments`],
+          path: [`sc.A10.forms.editChanges.installmentDescription`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.numberOfInstallments`],
+          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
           value: [`$arg_callback`]
         }})],
 
@@ -28453,7 +28453,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Quantidade de Parcelas`
+            `Descrição`
           ],
 
           args,
@@ -28471,11 +28471,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.numberOfInstallments`],
+          path: [`sc.A10.forms.editChanges.installmentDescription`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.numberOfInstallments`],
+          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
           value: [`$arg_callback`]
         }})],
 
@@ -36634,7 +36634,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Quantidade de Parcelas`
+            `Descrição`
           ],
 
           args,
@@ -36652,11 +36652,11 @@ paddingVertical: 2,
 paddingHorizontal: 4,
 }`],
 
-          path: [`sc.A10.forms.editChanges.numberOfInstallments`],
+          path: [`sc.A10.forms.editChanges.installmentDescription`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.numberOfInstallments`],
+          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
           value: [`$arg_callback`]
         }})],
 
