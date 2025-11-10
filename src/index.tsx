@@ -21343,7 +21343,7 @@ right: 2,
           ],
 
           children: [
-            `Lotes - Proprietário`
+            `$var_sc.A9.iptsChanges.owner`
           ],
 
           args,
