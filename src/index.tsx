@@ -10008,7 +10008,7 @@ async (...args) =>
 	top: 15,
 	zIndex: 1,
 	alignItems: 'center',
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -10025,7 +10025,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 	borderRadius: 6,
 	borderWidth: 1,
 	borderColor: 'black',
@@ -18001,7 +18001,7 @@ async (...args) =>
 	top: 15,
 	zIndex: 1,
 	alignItems: 'center',
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -18018,7 +18018,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 	borderRadius: 6,
 	borderWidth: 1,
 	borderColor: 'black',
@@ -25941,7 +25941,7 @@ async (...args) =>
 	top: 15,
 	zIndex: 1,
 	alignItems: 'center',
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -25958,7 +25958,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 	borderRadius: 6,
 	borderWidth: 1,
 	borderColor: 'black',
@@ -33859,7 +33859,7 @@ async (...args) =>
 	top: 15,
 	zIndex: 1,
 	alignItems: 'center',
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 	shadowColor: '#000',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
@@ -33876,7 +33876,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 	borderRadius: 6,
 	borderWidth: 1,
 	borderColor: 'black',
