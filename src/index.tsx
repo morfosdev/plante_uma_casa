@@ -21737,7 +21737,7 @@ shadowRadius: 4,
           ],
 
           children: [
-            `$arg_totalValue`
+            `$arg_description`
           ],
 
           args,
