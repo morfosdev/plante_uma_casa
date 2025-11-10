@@ -6753,11 +6753,10 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 12,
-	top: 12,
 	zIndex: 1,
-	alignItems: 'center',
 	backgroundColor: 'transparent',
+	width: 40,
+	height: 40,
 }`],
 
             functions:[async (...args) =>
@@ -6771,6 +6770,10 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
+	width: 40,
+	height: 40,
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[
@@ -14507,11 +14510,10 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 12,
-	top: 12,
 	zIndex: 1,
-	alignItems: 'center',
 	backgroundColor: 'transparent',
+	width: 40,
+	height: 40,
 }`],
 
             functions:[async (...args) =>
@@ -14525,6 +14527,10 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
+	width: 40,
+	height: 40,
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[
@@ -22208,11 +22214,10 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 12,
-	top: 12,
 	zIndex: 1,
-	alignItems: 'center',
 	backgroundColor: 'transparent',
+	width: 40,
+	height: 40,
 }`],
 
             functions:[async (...args) =>
@@ -22226,6 +22231,10 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
+	width: 40,
+	height: 40,
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[
@@ -29887,11 +29896,10 @@ async (...args) =>
 
             styles:[`{
 	position: 'absolute',
-	right: 12,
-	top: 12,
 	zIndex: 1,
-	alignItems: 'center',
 	backgroundColor: 'transparent',
+	width: 40,
+	height: 40,
 }`],
 
             functions:[async (...args) =>
@@ -29905,6 +29913,10 @@ async (...args) =>
 
             styles:[`{
 	backgroundColor: 'transparent',
+	width: 40,
+	height: 40,
+	alignItems: 'center',
+	justifyContent: 'center',
 }`],
 
             functions:[
