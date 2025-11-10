@@ -6599,22 +6599,50 @@ async (...args) =>
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={4}
+    height={14}
+    fill="red"
+    viewBox="0 0 4 14"
+    {...props}
+  >
+    <Path
+      fill="#000"
+      d="M.5 12a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 7a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 12a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 7a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+  </Svg>)
+      },
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+      svgOriginal: `
+        <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 12C0.5 12.8284 1.17157 13.5 2 13.5C2.82843 13.5 3.5 12.8284 3.5 12C3.5 11.1716 2.82843 10.5 2 10.5C1.17157 10.5 0.5 11.1716 0.5 12Z" fill="black"/>
+<path d="M0.5 7C0.5 7.82843 1.17157 8.5 2 8.5C2.82843 8.5 3.5 7.82843 3.5 7C3.5 6.17157 2.82843 5.5 2 5.5C1.17157 5.5 0.5 6.17157 0.5 7Z" fill="black"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" fill="black"/>
+<path d="M0.5 12C0.5 12.8284 1.17157 13.5 2 13.5C2.82843 13.5 3.5 12.8284 3.5 12C3.5 11.1716 2.82843 10.5 2 10.5C1.17157 10.5 0.5 11.1716 0.5 12Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 7C0.5 7.82843 1.17157 8.5 2 8.5C2.82843 8.5 3.5 7.82843 3.5 7C3.5 6.17157 2.82843 5.5 2 5.5C1.17157 5.5 0.5 6.17157 0.5 7Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 
-          children: [
-            `TESTE`
-          ],
+      `,
 
-          args,
+      altura: "30px",
 
-        }}/>, 
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -14200,22 +14228,50 @@ async (...args) =>
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={4}
+    height={14}
+    fill="red"
+    viewBox="0 0 4 14"
+    {...props}
+  >
+    <Path
+      fill="#000"
+      d="M.5 12a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 7a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 12a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 7a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+  </Svg>)
+      },
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+      svgOriginal: `
+        <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 12C0.5 12.8284 1.17157 13.5 2 13.5C2.82843 13.5 3.5 12.8284 3.5 12C3.5 11.1716 2.82843 10.5 2 10.5C1.17157 10.5 0.5 11.1716 0.5 12Z" fill="black"/>
+<path d="M0.5 7C0.5 7.82843 1.17157 8.5 2 8.5C2.82843 8.5 3.5 7.82843 3.5 7C3.5 6.17157 2.82843 5.5 2 5.5C1.17157 5.5 0.5 6.17157 0.5 7Z" fill="black"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" fill="black"/>
+<path d="M0.5 12C0.5 12.8284 1.17157 13.5 2 13.5C2.82843 13.5 3.5 12.8284 3.5 12C3.5 11.1716 2.82843 10.5 2 10.5C1.17157 10.5 0.5 11.1716 0.5 12Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 7C0.5 7.82843 1.17157 8.5 2 8.5C2.82843 8.5 3.5 7.82843 3.5 7C3.5 6.17157 2.82843 5.5 2 5.5C1.17157 5.5 0.5 6.17157 0.5 7Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 
-          children: [
-            `TESTE`
-          ],
+      `,
 
-          args,
+      altura: "30px",
 
-        }}/>, 
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -21748,22 +21804,50 @@ async (...args) =>
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={4}
+    height={14}
+    fill="red"
+    viewBox="0 0 4 14"
+    {...props}
+  >
+    <Path
+      fill="#000"
+      d="M.5 12a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 7a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 12a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 7a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+  </Svg>)
+      },
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+      svgOriginal: `
+        <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 12C0.5 12.8284 1.17157 13.5 2 13.5C2.82843 13.5 3.5 12.8284 3.5 12C3.5 11.1716 2.82843 10.5 2 10.5C1.17157 10.5 0.5 11.1716 0.5 12Z" fill="black"/>
+<path d="M0.5 7C0.5 7.82843 1.17157 8.5 2 8.5C2.82843 8.5 3.5 7.82843 3.5 7C3.5 6.17157 2.82843 5.5 2 5.5C1.17157 5.5 0.5 6.17157 0.5 7Z" fill="black"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" fill="black"/>
+<path d="M0.5 12C0.5 12.8284 1.17157 13.5 2 13.5C2.82843 13.5 3.5 12.8284 3.5 12C3.5 11.1716 2.82843 10.5 2 10.5C1.17157 10.5 0.5 11.1716 0.5 12Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 7C0.5 7.82843 1.17157 8.5 2 8.5C2.82843 8.5 3.5 7.82843 3.5 7C3.5 6.17157 2.82843 5.5 2 5.5C1.17157 5.5 0.5 6.17157 0.5 7Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 
-          children: [
-            `TESTE`
-          ],
+      `,
 
-          args,
+      altura: "30px",
 
-        }}/>, 
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -29274,22 +29358,50 @@ async (...args) =>
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={4}
+    height={14}
+    fill="red"
+    viewBox="0 0 4 14"
+    {...props}
+  >
+    <Path
+      fill="#000"
+      d="M.5 12a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 7a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+    <Path
+      stroke="#000001"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M.5 12a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 7a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM.5 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+    />
+  </Svg>)
+      },
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+      svgOriginal: `
+        <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 12C0.5 12.8284 1.17157 13.5 2 13.5C2.82843 13.5 3.5 12.8284 3.5 12C3.5 11.1716 2.82843 10.5 2 10.5C1.17157 10.5 0.5 11.1716 0.5 12Z" fill="black"/>
+<path d="M0.5 7C0.5 7.82843 1.17157 8.5 2 8.5C2.82843 8.5 3.5 7.82843 3.5 7C3.5 6.17157 2.82843 5.5 2 5.5C1.17157 5.5 0.5 6.17157 0.5 7Z" fill="black"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" fill="black"/>
+<path d="M0.5 12C0.5 12.8284 1.17157 13.5 2 13.5C2.82843 13.5 3.5 12.8284 3.5 12C3.5 11.1716 2.82843 10.5 2 10.5C1.17157 10.5 0.5 11.1716 0.5 12Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 7C0.5 7.82843 1.17157 8.5 2 8.5C2.82843 8.5 3.5 7.82843 3.5 7C3.5 6.17157 2.82843 5.5 2 5.5C1.17157 5.5 0.5 6.17157 0.5 7Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.5 2C0.5 2.82843 1.17157 3.5 2 3.5C2.82843 3.5 3.5 2.82843 3.5 2C3.5 1.17157 2.82843 0.5 2 0.5C1.17157 0.5 0.5 1.17157 0.5 2Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 
-          children: [
-            `TESTE`
-          ],
+      `,
 
-          args,
+      altura: "30px",
 
-        }}/>, 
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
