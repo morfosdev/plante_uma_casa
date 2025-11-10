@@ -6587,6 +6587,72 @@ color: '#555555',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `TESTE`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.btnDelete", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
+ , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
@@ -6608,22 +6674,15 @@ color: '#555555',
         }})],
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+}})],            childrenItems:[() =><></>],
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+            args,
+          }}/>
+        ],
 
-          children: [
-            `X`
-          ],
-
-          args,
-
-        }}/>],
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -14108,6 +14167,72 @@ color: '#555555',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `TESTE`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.btnDelete", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
+ , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
@@ -14129,22 +14254,15 @@ color: '#555555',
         }})],
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+}})],            childrenItems:[() =><></>],
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+            args,
+          }}/>
+        ],
 
-          children: [
-            `X`
-          ],
-
-          args,
-
-        }}/>],
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -21576,6 +21694,72 @@ color: '#555555',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `TESTE`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.btnDelete", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
+ , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
@@ -21597,22 +21781,15 @@ color: '#555555',
         }})],
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+}})],            childrenItems:[() =><></>],
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+            args,
+          }}/>
+        ],
 
-          children: [
-            `X`
-          ],
-
-          args,
-
-        }}/>],
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -29022,6 +29199,72 @@ color: '#555555',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `TESTE`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.btnDelete", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
+ , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
@@ -29043,22 +29286,15 @@ color: '#555555',
         }})],
         }})]
  , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+}})],            childrenItems:[() =><></>],
 
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
+            args,
+          }}/>
+        ],
 
-          children: [
-            `X`
-          ],
-
-          args,
-
-        }}/>],
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
