@@ -28914,11 +28914,41 @@ fontWeight: '700',
         `docId`, 
         `==`, `$var_sc.A10.currents.currId1`],
         }})],
- arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A9.iptsChanges`],
-          value: [`$arg_callback`]
-        }})],
+ arrFuncs: [(args) => {
+  console.log("custom do where get lot by docId", { args });
+
+  const objLot = args[0];
+
+  // ✅ Garante que é um objeto válido
+  if (typeof objLot !== "object" || objLot === null) {
+    console.log("❌ lote inválido:", objLot);
+    return;
+  }
+
+  // ✅ Extrai todos os valores do objeto
+  const allValues = Object.values(objLot);
+
+  // ✅ Extrai e guarda numberOfInstallments e totalValue (se existirem)
+  // const numberOfInstallments = objLot.numberOfInstallments || allValues.find(v => typeof v === "number") || null;
+  // const totalValue = objLot.totalValue || allValues.find(v => typeof v === "string" && !v.installmentId) || null;
+
+  // ✅ Exibe log detalhado
+  //console.log("📦 numberOfInstallments:", numberOfInstallments);
+  //console.log("💰 totalValue:", totalValue);
+
+  // ✅ Define os dados para uso na tela
+  tools.setData({ path: "sc.A9.lists.list1", value: allValues });
+
+console.log("Lista", { 'sc.A9.lists.list1' });
+
+  // ✅ Armazena numberOfInstallments e totalValue separadamente
+  // tools.setData({
+    //path: "sc.A9.data.numberOfInstallments",
+    //value: numberOfInstallments,
+  //});
+  //tools.setData({ path: "sc.A9.data.totalValue", value: totalValue });
+}
+],
  }})]
  , trigger: 'on init'
 }})],
