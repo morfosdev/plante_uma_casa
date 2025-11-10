@@ -6776,10 +6776,6 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -6796,6 +6792,10 @@ async (...args) =>
           value: [false]
         }})]
  , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
+ , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
@@ -14530,10 +14530,6 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -14550,6 +14546,10 @@ async (...args) =>
           value: [false]
         }})]
  , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
+ , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
@@ -22231,10 +22231,6 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -22251,6 +22247,10 @@ async (...args) =>
           value: [false]
         }})]
  , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
+ , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
@@ -29910,10 +29910,6 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -29930,6 +29926,10 @@ async (...args) =>
           value: [false]
         }})]
  , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
+ , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
