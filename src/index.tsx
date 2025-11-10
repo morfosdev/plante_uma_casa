@@ -28914,48 +28914,11 @@ fontWeight: '700',
         `docId`, 
         `==`, `$var_sc.A10.currents.currId1`],
         }})],
- arrFuncs: [(args) => {
-  console.log("custom do where get lot by docId", { args });
-
-  const objInstallments = args[0].installments;
-
-  // ✅ Garante que é um objeto válido
-  if (typeof objInstallments !== "object" || objInstallments === null) {
-    console.log("❌ installments inválido:", objInstallments);
-    return;
-  }
-
-  // ✅ Extrai todos os valores do objeto
-  const allValues = Object.values(objInstallments);
-
-  // ✅ Extrai e guarda numberOfInstallments e totalValue (se existirem)
-  const numberOfInstallments = objInstallments.numberOfInstallments || allValues.find(v => typeof v === "number") || null;
-  const totalValue = objInstallments.totalValue || allValues.find(v => typeof v === "string" && !v.installmentId) || null;
-
-  // ✅ Filtra apenas parcelas válidas (com installmentId)
-  const validInstallments = allValues.filter(
-    (item) => typeof item === "object" && item.installmentId
-  );
-
-  // ✅ Ordena as parcelas (por número do ID)
-  validInstallments.sort((a, b) => {
-    const numA = parseInt(a.installmentId.replace("i", ""));
-    const numB = parseInt(b.installmentId.replace("i", ""));
-    return numA - numB;
-  });
-
-  // ✅ Exibe log detalhado
-  console.log("✅ Parcelas filtradas e ordenadas:", validInstallments);
-  console.log("📦 numberOfInstallments:", numberOfInstallments);
-  console.log("💰 totalValue:", totalValue);
-
-  // ✅ Define os dados para uso na tela
-  tools.setData({ path: "sc.A9.lists.list1", value: validInstallments });
-
-  // ✅ Armazena numberOfInstallments e totalValue separadamente
-  tools.setData({ path: "sc.A9.data.numberOfInstallments", value: numberOfInstallments });
-  tools.setData({ path: "sc.A9.data.totalValue", value: totalValue });
-}],
+ arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A9.iptsChanges`],
+          value: [`$arg_callback`]
+        }})],
  }})]
  , trigger: 'on init'
 }})],
