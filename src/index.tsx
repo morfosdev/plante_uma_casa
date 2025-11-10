@@ -38026,7 +38026,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL`
+            `Perfil`
           ],
 
           args,
@@ -43359,7 +43359,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL`
+            `Perfil`
           ],
 
           args,
@@ -52060,7 +52060,7 @@ color: '#555555',
           ],
 
           children: [
-            `PERFIL`
+            `Perfil`
           ],
 
           args,
