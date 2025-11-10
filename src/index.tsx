@@ -10135,7 +10135,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO PARCEIRO`
+            `Cadastro Parceiro`
           ],
 
           args,
@@ -11174,7 +11174,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO PARCEIRO`
+            `Cadastro Parceiro`
           ],
 
           args,
@@ -18364,7 +18364,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO PARCEIRO`
+            `Cadastro Parceiro`
           ],
 
           args,
@@ -19403,7 +19403,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO PARCEIRO`
+            `Cadastro Parceiro`
           ],
 
           args,
@@ -26540,7 +26540,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO PARCEIRO`
+            `Cadastro Parceiro`
           ],
 
           args,
@@ -27579,7 +27579,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO PARCEIRO`
+            `Cadastro Parceiro`
           ],
 
           args,
@@ -34694,7 +34694,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO PARCEIRO`
+            `Cadastro Parceiro`
           ],
 
           args,
@@ -35733,7 +35733,7 @@ color: '#555555',
           ],
 
           children: [
-            `CADASTRO PARCEIRO`
+            `Cadastro Parceiro`
           ],
 
           args,
