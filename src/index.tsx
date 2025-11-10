@@ -6773,10 +6773,29 @@ async (...args) =>
 	backgroundColor: 'transparent',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
  , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
@@ -14508,10 +14527,29 @@ async (...args) =>
 	backgroundColor: 'transparent',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
  , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
@@ -22190,10 +22228,29 @@ async (...args) =>
 	backgroundColor: 'transparent',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
  , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
@@ -29850,10 +29907,29 @@ async (...args) =>
 	backgroundColor: 'transparent',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.a1.editCondoThreeDots", "==", true ]]
  , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
