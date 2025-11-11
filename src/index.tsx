@@ -48792,13 +48792,12 @@ top: 2,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -49321,13 +49320,12 @@ top: 2,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -49850,13 +49848,12 @@ top: 2,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -50379,13 +50376,12 @@ top: 2,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -50908,13 +50904,12 @@ top: 2,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -51437,13 +51432,12 @@ top: 2,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -51965,13 +51959,12 @@ top: 2,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -60723,13 +60716,12 @@ paddingHorizontal: 16,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -61123,13 +61115,12 @@ paddingHorizontal: 16,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -61523,13 +61514,12 @@ paddingHorizontal: 16,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -61922,13 +61912,12 @@ paddingHorizontal: 16,
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
 
             args,
@@ -63817,13 +63806,12 @@ whereConds ??`
           ],
 
       styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],    args,
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
         }}/>],
             args,
         }}/>],
