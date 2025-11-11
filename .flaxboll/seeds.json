@@ -763,7 +763,7 @@
                 "pt-br": "",
                 "en": ""
               },
-              "capsIptCapsDfCode": "\n              {\n                backgroundColor: 'white',\n                justifyContent: 'center',\n                minHeight: 22,\n                width: \"100%\",\n              }\n              ",
+              "capsIptCapsDfCode": "\n {\n backgroundColor: 'white', \n  minHeight: 22,\n width: \"100%\",\n }\n",
               "capsIptCapsTypesToAdd": ["string process"]
             }
           }
@@ -2757,4 +2757,3 @@
     }
   }
 }
-
