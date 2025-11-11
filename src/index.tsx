@@ -48139,7 +48139,7 @@ async (...args) =>
           return tools.goTo("b6list");
         }
         ]
- , trigger: 'on init'
+ , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
