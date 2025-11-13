@@ -13557,6 +13557,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.currents.currId2`],
+          value: [`$arg_numberOfInstallments`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.A9.lists.list1`],
           value: [[]]
         }}), 
