@@ -63566,10 +63566,12 @@ fontWeight: '400',
     ? newArray.map((item, index) => {
         return {
           ...item,
-          formatedInstallments: index + '/' + numberOfInstallments
+          formatedInstallments: index + "/" + numberOfInstallments,
         };
       })
     : [];
+
+  console.log("Array Final:", finalArray);
 
   // ✅ Define os dados para uso na tela
   tools.setData({ path: "sc.C7.lists.list1", value: finalArray });
