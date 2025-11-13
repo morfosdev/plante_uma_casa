@@ -63738,8 +63738,8 @@ fontWeight: '400',
  arrWhere: [(...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
-        `userEmail`, 
-        `==`, `$var_sc.A10.currents.currId1`],
+        `docId`, 
+        `==`, `$var_all.authUser.lotId`],
         }})],
  arrFuncs: [(args) => {
   console.log("Dados do Lote", { args });
