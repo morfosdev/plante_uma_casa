@@ -63552,6 +63552,8 @@ fontWeight: '400',
   const installments = objLote?.installments ?? {};
   const newArray: any[] = Object.values(installments) ?? [];
 
+  console.log("objLote", objLote); 
+  
   // ✅ Extrai e guarda numberOfInstallments, owner e totalValue (se existirem)
   const numberOfInstallments = objLote.numberOfInstallments || null;
   const owner = objLote.owner || null;
@@ -63566,9 +63568,10 @@ fontWeight: '400',
   const condArray = newArray && newArray.length > 0;
   const finalArray = condArray
     ? newArray.map((item, index) => {
+        const count = index + 1;
         return {
           ...item,
-          formatedInstallments: index + "/" + numberOfInstallments,
+          formatedInstallments: count + "/" + numberOfInstallments,
         };
       })
     : [];
