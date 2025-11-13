@@ -12244,7 +12244,7 @@ paddingVertical: 8,
     // -------------------------
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
     const date = (form?.date || "").trim();
-    const description = (form?.description || "").trim();
+    const description = (form?.installmentDescription || "").trim();
     console.log("Campos normalizados:", { rawValue, date, description });
     const value = parseFloat(rawValue);
 
@@ -20522,7 +20522,7 @@ paddingVertical: 8,
     // -------------------------
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
     const date = (form?.date || "").trim();
-    const description = (form?.description || "").trim();
+    const description = (form?.installmentDescription || "").trim();
     console.log("Campos normalizados:", { rawValue, date, description });
     const value = parseFloat(rawValue);
 
@@ -28804,7 +28804,7 @@ paddingVertical: 8,
     // -------------------------
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
     const date = (form?.date || "").trim();
-    const description = (form?.description || "").trim();
+    const description = (form?.installmentDescription || "").trim();
     console.log("Campos normalizados:", { rawValue, date, description });
     const value = parseFloat(rawValue);
 
@@ -37027,7 +37027,7 @@ paddingVertical: 8,
     // -------------------------
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
     const date = (form?.date || "").trim();
-    const description = (form?.description || "").trim();
+    const description = (form?.installmentDescription || "").trim();
     console.log("Campos normalizados:", { rawValue, date, description });
     const value = parseFloat(rawValue);
 
