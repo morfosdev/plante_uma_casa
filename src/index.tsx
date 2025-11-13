@@ -12242,16 +12242,11 @@ paddingVertical: 8,
     // -------------------------
     // Normalização dos campos
     // -------------------------
-    const rawValue = (form?.value || "").toString().replace(",", ".").trim();
+    const rawValue = (form?.value || "").trim();
     const date = (form?.date || "").trim();
     const description = (form?.installmentDescription || "").trim();
     console.log("Campos normalizados:", { rawValue, date, description });
-    const value = parseFloat(rawValue);
-
-    if (isNaN(value) || value <= 0 || !date) {
-      console.warn("Valor ou data inválidos:", { value, rawValue, date });
-      return;
-    }
+    const value = rawValue;
 
     // -------------------------
     // Histórico do lote
@@ -12272,7 +12267,7 @@ paddingVertical: 8,
       installmentId: newInstallmentId,
       date,
       description,
-      value: value.toFixed(2),
+      value: value,
     };
     console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
 
@@ -20520,16 +20515,11 @@ paddingVertical: 8,
     // -------------------------
     // Normalização dos campos
     // -------------------------
-    const rawValue = (form?.value || "").toString().replace(",", ".").trim();
+    const rawValue = (form?.value || "").trim();
     const date = (form?.date || "").trim();
     const description = (form?.installmentDescription || "").trim();
     console.log("Campos normalizados:", { rawValue, date, description });
-    const value = parseFloat(rawValue);
-
-    if (isNaN(value) || value <= 0 || !date) {
-      console.warn("Valor ou data inválidos:", { value, rawValue, date });
-      return;
-    }
+    const value = rawValue;
 
     // -------------------------
     // Histórico do lote
@@ -20550,7 +20540,7 @@ paddingVertical: 8,
       installmentId: newInstallmentId,
       date,
       description,
-      value: value.toFixed(2),
+      value: value,
     };
     console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
 
@@ -28802,16 +28792,11 @@ paddingVertical: 8,
     // -------------------------
     // Normalização dos campos
     // -------------------------
-    const rawValue = (form?.value || "").toString().replace(",", ".").trim();
+    const rawValue = (form?.value || "").trim();
     const date = (form?.date || "").trim();
     const description = (form?.installmentDescription || "").trim();
     console.log("Campos normalizados:", { rawValue, date, description });
-    const value = parseFloat(rawValue);
-
-    if (isNaN(value) || value <= 0 || !date) {
-      console.warn("Valor ou data inválidos:", { value, rawValue, date });
-      return;
-    }
+    const value = rawValue;
 
     // -------------------------
     // Histórico do lote
@@ -28832,7 +28817,7 @@ paddingVertical: 8,
       installmentId: newInstallmentId,
       date,
       description,
-      value: value.toFixed(2),
+      value: value,
     };
     console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
 
@@ -37025,16 +37010,11 @@ paddingVertical: 8,
     // -------------------------
     // Normalização dos campos
     // -------------------------
-    const rawValue = (form?.value || "").toString().replace(",", ".").trim();
+    const rawValue = (form?.value || "").trim();
     const date = (form?.date || "").trim();
     const description = (form?.installmentDescription || "").trim();
     console.log("Campos normalizados:", { rawValue, date, description });
-    const value = parseFloat(rawValue);
-
-    if (isNaN(value) || value <= 0 || !date) {
-      console.warn("Valor ou data inválidos:", { value, rawValue, date });
-      return;
-    }
+    const value = rawValue;
 
     // -------------------------
     // Histórico do lote
@@ -37055,7 +37035,7 @@ paddingVertical: 8,
       installmentId: newInstallmentId,
       date,
       description,
-      value: value.toFixed(2),
+      value: value,
     };
     console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
 
