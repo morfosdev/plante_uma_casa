@@ -12230,6 +12230,7 @@ paddingVertical: 8,
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
+    const currId2Data = tools.getCtData("sc.A10.currents.currId2");
 
     console.log({ lotId });
     console.log({ form });
@@ -12241,7 +12242,7 @@ paddingVertical: 8,
 
     // 🔹 Extrai e normaliza os campos do formulário
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
-    const rawInstallments = (form?.numberOfInstallments || "")
+    const rawInstallments = (currId2Data || "")
       .toString()
       .trim();
     const date = (form?.date || "").trim();
@@ -20480,6 +20481,7 @@ paddingVertical: 8,
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
+    const currId2Data = tools.getCtData("sc.A10.currents.currId2");
 
     console.log({ lotId });
     console.log({ form });
@@ -20491,7 +20493,7 @@ paddingVertical: 8,
 
     // 🔹 Extrai e normaliza os campos do formulário
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
-    const rawInstallments = (form?.numberOfInstallments || "")
+    const rawInstallments = (currId2Data || "")
       .toString()
       .trim();
     const date = (form?.date || "").trim();
@@ -28734,6 +28736,7 @@ paddingVertical: 8,
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
+    const currId2Data = tools.getCtData("sc.A10.currents.currId2");
 
     console.log({ lotId });
     console.log({ form });
@@ -28745,7 +28748,7 @@ paddingVertical: 8,
 
     // 🔹 Extrai e normaliza os campos do formulário
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
-    const rawInstallments = (form?.numberOfInstallments || "")
+    const rawInstallments = (currId2Data || "")
       .toString()
       .trim();
     const date = (form?.date || "").trim();
@@ -36928,6 +36931,7 @@ paddingVertical: 8,
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
+    const currId2Data = tools.getCtData("sc.A10.currents.currId2");
 
     console.log({ lotId });
     console.log({ form });
@@ -36939,7 +36943,7 @@ paddingVertical: 8,
 
     // 🔹 Extrai e normaliza os campos do formulário
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
-    const rawInstallments = (form?.numberOfInstallments || "")
+    const rawInstallments = (currId2Data || "")
       .toString()
       .trim();
     const date = (form?.date || "").trim();
