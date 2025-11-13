@@ -63137,7 +63137,30 @@ bottom: 6,
         , 
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
+  arrItems: [() => {
+  const stlGrayBar: RN.ViewStyle = {
+    width: "100%",
+    height: 20,
+    backgroundColor: "gray",
+    borderRadius: 10,
+    overflow: "hidden",
+  };
+  const stlGreenBar: RN.ViewStyle = {
+    width: 150,
+    height: 20,
+    backgroundColor: "#315e2d",
+    borderRadius: 10,
+    overflow: "hidden",
+  };
+
+  return (
+    <>
+      <RN.View style={stlGrayBar}>
+        <RN.View style={stlGreenBar} />
+      </RN.View>
+    </>
+  );
+}] 
 }}/>
 ],
 
