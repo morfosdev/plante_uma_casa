@@ -63259,6 +63259,7 @@ fontWeight: 'bold',
 
           itemElements: [
             
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -63493,10 +63494,27 @@ fontWeight: '400',
 
             args,
           }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
         
           ],
 
-      styles:[`{}`],    args,
+      styles:[`{ padding: 8 }`],    args,
         }}/>],
 
             args,
