@@ -12224,86 +12224,108 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   try {
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const { getFirestore, doc, updateDoc } = await import(
+      "firebase/firestore"
+    );
     const fbInit = tools.getCtData("all.temp.fireInit");
     const db = getFirestore(fbInit);
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
-    const currId2Data = tools.getCtData("sc.A10.currents.currId2");
+    const data = tools.getCtData("sc.A9.currents.currLoteData"); // ← AQUI
 
-    console.log({ lotId });
-    console.log({ form });
+    console.log({ lotId, form, data });
 
     if (!lotId) {
-      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      console.warn("Nenhum lote selecionado (lotId ausente)");
       return;
     }
 
-    // 🔹 Extrai e normaliza os campos do formulário
+    // -------------------------
+    // Normalização dos campos
+    // -------------------------
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
-    const rawInstallments = (currId2Data || "")
-      .toString()
-      .trim();
     const date = (form?.date || "").trim();
     const description = (form?.description || "").trim();
-
-    // 🔹 Converte para número de forma segura
-    const numberOfInstallments = parseInt(rawInstallments, 10);
     const value = parseFloat(rawValue);
 
-    if (
-      isNaN(numberOfInstallments) ||
-      isNaN(value) ||
-      numberOfInstallments <= 0 ||
-      value <= 0
-    ) {
-      console.warn("❌ Número de parcelas ou valor inválido:", {
-        numberOfInstallments,
-        value,
-        rawValue,
-        rawInstallments,
-      });
+    if (isNaN(value) || value <= 0 || !date) {
+      console.warn("Valor ou data inválidos:", { value, rawValue, date });
       return;
     }
 
-    // 🔹 Calcula automaticamente o valor total
-    const calculatedTotal = value * numberOfInstallments;
+    // -------------------------
+    // Histórico do lote
+    // -------------------------
+    const existingInstallments = data?.installments || {};
 
-    const totalValue =
-      parseFloat(
-        String(form?.totalValue || "")
-          .replace(/[^d,.-]/g, "")
-          .replace(",", ".")
-      ) || calculatedTotal;
+    // Filtrar chaves tipo i1, i2, i3...
+    const installmentKeys = Object.keys(existingInstallments).filter((key) =>
+      /^id+$/.test(key)
+    );
 
-    // 🔹 Monta o mapa de parcelas (installments)
-    const installmentsMap = {
-      totalValue: totalValue.toFixed(2),
-      numberOfInstallments,
+    const nextIndex =
+      installmentKeys.length === 0
+        ? 1
+        : installmentKeys
+            .map((key) => parseInt(key.slice(1), 10))
+            .filter((n) => !isNaN(n))
+            .reduce((max, n) => Math.max(max, n), 0) + 1;
+
+    const newInstallmentId = "i" + nextIndex;
+
+    // -------------------------
+    // Nova parcela
+    // -------------------------
+    const newInstallment = {
+      installmentId: newInstallmentId,
+      date,
+      description,
+      value: value.toFixed(2),
     };
 
-    // 🔹 Cria um map i1, i2, i3... com os mesmos dados base
-    for (let i = 1; i <= numberOfInstallments; i++) {
-      const id = "i" + i;
-      installmentsMap[id] = {
-        installmentId: id,
-        date,
-        description,
-        value: value.toFixed(2),
-      };
-    }
+    // -------------------------
+    // Atualiza histórico
+    // -------------------------
+    const updatedInstallments = {
+      ...existingInstallments,
+      [newInstallmentId]: newInstallment,
+    };
 
-    // 🔹 Atualiza o documento
-    const dataToUpdate = { installments: installmentsMap };
+    // Reconta total de parcelas
+    const allKeys = Object.keys(updatedInstallments).filter((k) =>
+      /^id+$/.test(k)
+    );
+    const numberOfInstallments = allKeys.length;
+
+    // Soma total
+    const totalValue = allKeys.reduce((sum, key) => {
+      const v = parseFloat(
+        (updatedInstallments[key]?.value || "0").toString().replace(",", ".")
+      );
+      return sum + (isNaN(v) ? 0 : v);
+    }, 0);
+
+    // -------------------------
+    // Salvar no Firestore
+    // -------------------------
+    const dataToUpdate = {
+      installments: updatedInstallments,
+      numberOfInstallments,
+      totalValue: totalValue.toFixed(2),
+    };
+
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, {
-      ref: "lots" + lotId,
+    console.log("%c[OK] Parcela adicionada:", css1, {
+      newInstallment,
       dataToUpdate,
     });
 
+    // -------------------------
+    // Reset da UI
+    // -------------------------
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
@@ -12313,13 +12335,13 @@ paddingVertical: 8,
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: [
-          "💾 Parcelas geradas e salvas com sucesso! Total: R$ " +
+          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
             totalValue.toFixed(2),
         ],
       },
     });
   } catch (err) {
-    console.error("❌ Erro ao salvar no Firebase:", err);
+    console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
       args: "",
       pass: {
@@ -20475,86 +20497,108 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   try {
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const { getFirestore, doc, updateDoc } = await import(
+      "firebase/firestore"
+    );
     const fbInit = tools.getCtData("all.temp.fireInit");
     const db = getFirestore(fbInit);
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
-    const currId2Data = tools.getCtData("sc.A10.currents.currId2");
+    const data = tools.getCtData("sc.A9.currents.currLoteData"); // ← AQUI
 
-    console.log({ lotId });
-    console.log({ form });
+    console.log({ lotId, form, data });
 
     if (!lotId) {
-      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      console.warn("Nenhum lote selecionado (lotId ausente)");
       return;
     }
 
-    // 🔹 Extrai e normaliza os campos do formulário
+    // -------------------------
+    // Normalização dos campos
+    // -------------------------
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
-    const rawInstallments = (currId2Data || "")
-      .toString()
-      .trim();
     const date = (form?.date || "").trim();
     const description = (form?.description || "").trim();
-
-    // 🔹 Converte para número de forma segura
-    const numberOfInstallments = parseInt(rawInstallments, 10);
     const value = parseFloat(rawValue);
 
-    if (
-      isNaN(numberOfInstallments) ||
-      isNaN(value) ||
-      numberOfInstallments <= 0 ||
-      value <= 0
-    ) {
-      console.warn("❌ Número de parcelas ou valor inválido:", {
-        numberOfInstallments,
-        value,
-        rawValue,
-        rawInstallments,
-      });
+    if (isNaN(value) || value <= 0 || !date) {
+      console.warn("Valor ou data inválidos:", { value, rawValue, date });
       return;
     }
 
-    // 🔹 Calcula automaticamente o valor total
-    const calculatedTotal = value * numberOfInstallments;
+    // -------------------------
+    // Histórico do lote
+    // -------------------------
+    const existingInstallments = data?.installments || {};
 
-    const totalValue =
-      parseFloat(
-        String(form?.totalValue || "")
-          .replace(/[^d,.-]/g, "")
-          .replace(",", ".")
-      ) || calculatedTotal;
+    // Filtrar chaves tipo i1, i2, i3...
+    const installmentKeys = Object.keys(existingInstallments).filter((key) =>
+      /^id+$/.test(key)
+    );
 
-    // 🔹 Monta o mapa de parcelas (installments)
-    const installmentsMap = {
-      totalValue: totalValue.toFixed(2),
-      numberOfInstallments,
+    const nextIndex =
+      installmentKeys.length === 0
+        ? 1
+        : installmentKeys
+            .map((key) => parseInt(key.slice(1), 10))
+            .filter((n) => !isNaN(n))
+            .reduce((max, n) => Math.max(max, n), 0) + 1;
+
+    const newInstallmentId = "i" + nextIndex;
+
+    // -------------------------
+    // Nova parcela
+    // -------------------------
+    const newInstallment = {
+      installmentId: newInstallmentId,
+      date,
+      description,
+      value: value.toFixed(2),
     };
 
-    // 🔹 Cria um map i1, i2, i3... com os mesmos dados base
-    for (let i = 1; i <= numberOfInstallments; i++) {
-      const id = "i" + i;
-      installmentsMap[id] = {
-        installmentId: id,
-        date,
-        description,
-        value: value.toFixed(2),
-      };
-    }
+    // -------------------------
+    // Atualiza histórico
+    // -------------------------
+    const updatedInstallments = {
+      ...existingInstallments,
+      [newInstallmentId]: newInstallment,
+    };
 
-    // 🔹 Atualiza o documento
-    const dataToUpdate = { installments: installmentsMap };
+    // Reconta total de parcelas
+    const allKeys = Object.keys(updatedInstallments).filter((k) =>
+      /^id+$/.test(k)
+    );
+    const numberOfInstallments = allKeys.length;
+
+    // Soma total
+    const totalValue = allKeys.reduce((sum, key) => {
+      const v = parseFloat(
+        (updatedInstallments[key]?.value || "0").toString().replace(",", ".")
+      );
+      return sum + (isNaN(v) ? 0 : v);
+    }, 0);
+
+    // -------------------------
+    // Salvar no Firestore
+    // -------------------------
+    const dataToUpdate = {
+      installments: updatedInstallments,
+      numberOfInstallments,
+      totalValue: totalValue.toFixed(2),
+    };
+
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, {
-      ref: "lots" + lotId,
+    console.log("%c[OK] Parcela adicionada:", css1, {
+      newInstallment,
       dataToUpdate,
     });
 
+    // -------------------------
+    // Reset da UI
+    // -------------------------
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
@@ -20564,13 +20608,13 @@ paddingVertical: 8,
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: [
-          "💾 Parcelas geradas e salvas com sucesso! Total: R$ " +
+          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
             totalValue.toFixed(2),
         ],
       },
     });
   } catch (err) {
-    console.error("❌ Erro ao salvar no Firebase:", err);
+    console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
       args: "",
       pass: {
@@ -28730,86 +28774,108 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   try {
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const { getFirestore, doc, updateDoc } = await import(
+      "firebase/firestore"
+    );
     const fbInit = tools.getCtData("all.temp.fireInit");
     const db = getFirestore(fbInit);
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
-    const currId2Data = tools.getCtData("sc.A10.currents.currId2");
+    const data = tools.getCtData("sc.A9.currents.currLoteData"); // ← AQUI
 
-    console.log({ lotId });
-    console.log({ form });
+    console.log({ lotId, form, data });
 
     if (!lotId) {
-      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      console.warn("Nenhum lote selecionado (lotId ausente)");
       return;
     }
 
-    // 🔹 Extrai e normaliza os campos do formulário
+    // -------------------------
+    // Normalização dos campos
+    // -------------------------
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
-    const rawInstallments = (currId2Data || "")
-      .toString()
-      .trim();
     const date = (form?.date || "").trim();
     const description = (form?.description || "").trim();
-
-    // 🔹 Converte para número de forma segura
-    const numberOfInstallments = parseInt(rawInstallments, 10);
     const value = parseFloat(rawValue);
 
-    if (
-      isNaN(numberOfInstallments) ||
-      isNaN(value) ||
-      numberOfInstallments <= 0 ||
-      value <= 0
-    ) {
-      console.warn("❌ Número de parcelas ou valor inválido:", {
-        numberOfInstallments,
-        value,
-        rawValue,
-        rawInstallments,
-      });
+    if (isNaN(value) || value <= 0 || !date) {
+      console.warn("Valor ou data inválidos:", { value, rawValue, date });
       return;
     }
 
-    // 🔹 Calcula automaticamente o valor total
-    const calculatedTotal = value * numberOfInstallments;
+    // -------------------------
+    // Histórico do lote
+    // -------------------------
+    const existingInstallments = data?.installments || {};
 
-    const totalValue =
-      parseFloat(
-        String(form?.totalValue || "")
-          .replace(/[^d,.-]/g, "")
-          .replace(",", ".")
-      ) || calculatedTotal;
+    // Filtrar chaves tipo i1, i2, i3...
+    const installmentKeys = Object.keys(existingInstallments).filter((key) =>
+      /^id+$/.test(key)
+    );
 
-    // 🔹 Monta o mapa de parcelas (installments)
-    const installmentsMap = {
-      totalValue: totalValue.toFixed(2),
-      numberOfInstallments,
+    const nextIndex =
+      installmentKeys.length === 0
+        ? 1
+        : installmentKeys
+            .map((key) => parseInt(key.slice(1), 10))
+            .filter((n) => !isNaN(n))
+            .reduce((max, n) => Math.max(max, n), 0) + 1;
+
+    const newInstallmentId = "i" + nextIndex;
+
+    // -------------------------
+    // Nova parcela
+    // -------------------------
+    const newInstallment = {
+      installmentId: newInstallmentId,
+      date,
+      description,
+      value: value.toFixed(2),
     };
 
-    // 🔹 Cria um map i1, i2, i3... com os mesmos dados base
-    for (let i = 1; i <= numberOfInstallments; i++) {
-      const id = "i" + i;
-      installmentsMap[id] = {
-        installmentId: id,
-        date,
-        description,
-        value: value.toFixed(2),
-      };
-    }
+    // -------------------------
+    // Atualiza histórico
+    // -------------------------
+    const updatedInstallments = {
+      ...existingInstallments,
+      [newInstallmentId]: newInstallment,
+    };
 
-    // 🔹 Atualiza o documento
-    const dataToUpdate = { installments: installmentsMap };
+    // Reconta total de parcelas
+    const allKeys = Object.keys(updatedInstallments).filter((k) =>
+      /^id+$/.test(k)
+    );
+    const numberOfInstallments = allKeys.length;
+
+    // Soma total
+    const totalValue = allKeys.reduce((sum, key) => {
+      const v = parseFloat(
+        (updatedInstallments[key]?.value || "0").toString().replace(",", ".")
+      );
+      return sum + (isNaN(v) ? 0 : v);
+    }, 0);
+
+    // -------------------------
+    // Salvar no Firestore
+    // -------------------------
+    const dataToUpdate = {
+      installments: updatedInstallments,
+      numberOfInstallments,
+      totalValue: totalValue.toFixed(2),
+    };
+
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, {
-      ref: "lots" + lotId,
+    console.log("%c[OK] Parcela adicionada:", css1, {
+      newInstallment,
       dataToUpdate,
     });
 
+    // -------------------------
+    // Reset da UI
+    // -------------------------
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
@@ -28819,13 +28885,13 @@ paddingVertical: 8,
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: [
-          "💾 Parcelas geradas e salvas com sucesso! Total: R$ " +
+          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
             totalValue.toFixed(2),
         ],
       },
     });
   } catch (err) {
-    console.error("❌ Erro ao salvar no Firebase:", err);
+    console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
       args: "",
       pass: {
@@ -36926,86 +36992,108 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   try {
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const { getFirestore, doc, updateDoc } = await import(
+      "firebase/firestore"
+    );
     const fbInit = tools.getCtData("all.temp.fireInit");
     const db = getFirestore(fbInit);
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
-    const currId2Data = tools.getCtData("sc.A10.currents.currId2");
+    const data = tools.getCtData("sc.A9.currents.currLoteData"); // ← AQUI
 
-    console.log({ lotId });
-    console.log({ form });
+    console.log({ lotId, form, data });
 
     if (!lotId) {
-      console.warn("❌ Nenhum lote selecionado (lotId ausente)");
+      console.warn("Nenhum lote selecionado (lotId ausente)");
       return;
     }
 
-    // 🔹 Extrai e normaliza os campos do formulário
+    // -------------------------
+    // Normalização dos campos
+    // -------------------------
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
-    const rawInstallments = (currId2Data || "")
-      .toString()
-      .trim();
     const date = (form?.date || "").trim();
     const description = (form?.description || "").trim();
-
-    // 🔹 Converte para número de forma segura
-    const numberOfInstallments = parseInt(rawInstallments, 10);
     const value = parseFloat(rawValue);
 
-    if (
-      isNaN(numberOfInstallments) ||
-      isNaN(value) ||
-      numberOfInstallments <= 0 ||
-      value <= 0
-    ) {
-      console.warn("❌ Número de parcelas ou valor inválido:", {
-        numberOfInstallments,
-        value,
-        rawValue,
-        rawInstallments,
-      });
+    if (isNaN(value) || value <= 0 || !date) {
+      console.warn("Valor ou data inválidos:", { value, rawValue, date });
       return;
     }
 
-    // 🔹 Calcula automaticamente o valor total
-    const calculatedTotal = value * numberOfInstallments;
+    // -------------------------
+    // Histórico do lote
+    // -------------------------
+    const existingInstallments = data?.installments || {};
 
-    const totalValue =
-      parseFloat(
-        String(form?.totalValue || "")
-          .replace(/[^d,.-]/g, "")
-          .replace(",", ".")
-      ) || calculatedTotal;
+    // Filtrar chaves tipo i1, i2, i3...
+    const installmentKeys = Object.keys(existingInstallments).filter((key) =>
+      /^id+$/.test(key)
+    );
 
-    // 🔹 Monta o mapa de parcelas (installments)
-    const installmentsMap = {
-      totalValue: totalValue.toFixed(2),
-      numberOfInstallments,
+    const nextIndex =
+      installmentKeys.length === 0
+        ? 1
+        : installmentKeys
+            .map((key) => parseInt(key.slice(1), 10))
+            .filter((n) => !isNaN(n))
+            .reduce((max, n) => Math.max(max, n), 0) + 1;
+
+    const newInstallmentId = "i" + nextIndex;
+
+    // -------------------------
+    // Nova parcela
+    // -------------------------
+    const newInstallment = {
+      installmentId: newInstallmentId,
+      date,
+      description,
+      value: value.toFixed(2),
     };
 
-    // 🔹 Cria um map i1, i2, i3... com os mesmos dados base
-    for (let i = 1; i <= numberOfInstallments; i++) {
-      const id = "i" + i;
-      installmentsMap[id] = {
-        installmentId: id,
-        date,
-        description,
-        value: value.toFixed(2),
-      };
-    }
+    // -------------------------
+    // Atualiza histórico
+    // -------------------------
+    const updatedInstallments = {
+      ...existingInstallments,
+      [newInstallmentId]: newInstallment,
+    };
 
-    // 🔹 Atualiza o documento
-    const dataToUpdate = { installments: installmentsMap };
+    // Reconta total de parcelas
+    const allKeys = Object.keys(updatedInstallments).filter((k) =>
+      /^id+$/.test(k)
+    );
+    const numberOfInstallments = allKeys.length;
+
+    // Soma total
+    const totalValue = allKeys.reduce((sum, key) => {
+      const v = parseFloat(
+        (updatedInstallments[key]?.value || "0").toString().replace(",", ".")
+      );
+      return sum + (isNaN(v) ? 0 : v);
+    }, 0);
+
+    // -------------------------
+    // Salvar no Firestore
+    // -------------------------
+    const dataToUpdate = {
+      installments: updatedInstallments,
+      numberOfInstallments,
+      totalValue: totalValue.toFixed(2),
+    };
+
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, {
-      ref: "lots" + lotId,
+    console.log("%c[OK] Parcela adicionada:", css1, {
+      newInstallment,
       dataToUpdate,
     });
 
+    // -------------------------
+    // Reset da UI
+    // -------------------------
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
     tools.setData({ path: "all.toggles.a10.addFinance", value: false });
@@ -37015,13 +37103,13 @@ paddingVertical: 8,
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: [
-          "💾 Parcelas geradas e salvas com sucesso! Total: R$ " +
+          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
             totalValue.toFixed(2),
         ],
       },
     });
   } catch (err) {
-    console.error("❌ Erro ao salvar no Firebase:", err);
+    console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
       args: "",
       pass: {
