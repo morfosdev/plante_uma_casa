@@ -1,1 +1,1 @@
-{"1763054973836":{"actionType":"saveAll","createdAt":"1763054973836","actionID":"1763054973836","userID":"#TEMP","path":"system.capsules.693a04a2-3c2e-4730-aad8-e1053cccad7b.capsUseCodeInfo.capsUseInputs.ccc_stringValue-0.capsIptTxtValue","oldValue":"R$ 500.000,00","newValue":"$var_sc.C7.currents.currLoteData.totalValue"}}
+{"1763055096173":{"actionType":"saveAll","createdAt":"1763055096173","actionID":"1763055096173","userID":"#TEMP","path":"system.capsules.50860a6c-d6a2-4a20-92c5-adde33b1c1d5.capsUseCodeInfo.capsUseLabel.en","oldValue":"Progress","newValue":"ProgressBar"}}
