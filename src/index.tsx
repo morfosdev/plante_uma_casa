@@ -12231,6 +12231,9 @@ paddingVertical: 8,
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
 
+    console.log({ lotId });
+    console.log({ form });
+
     if (!lotId) {
       console.warn("❌ Nenhum lote selecionado (lotId ausente)");
       return;
@@ -12295,7 +12298,10 @@ paddingVertical: 8,
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+    console.log("%c✅ Dados atualizados com sucesso:", css1, {
+      ref: "lots" + lotId,
+      dataToUpdate,
+    });
 
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
@@ -20470,6 +20476,9 @@ paddingVertical: 8,
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
 
+    console.log({ lotId });
+    console.log({ form });
+
     if (!lotId) {
       console.warn("❌ Nenhum lote selecionado (lotId ausente)");
       return;
@@ -20534,7 +20543,10 @@ paddingVertical: 8,
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+    console.log("%c✅ Dados atualizados com sucesso:", css1, {
+      ref: "lots" + lotId,
+      dataToUpdate,
+    });
 
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
@@ -28718,6 +28730,9 @@ paddingVertical: 8,
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
 
+    console.log({ lotId });
+    console.log({ form });
+
     if (!lotId) {
       console.warn("❌ Nenhum lote selecionado (lotId ausente)");
       return;
@@ -28782,7 +28797,10 @@ paddingVertical: 8,
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+    console.log("%c✅ Dados atualizados com sucesso:", css1, {
+      ref: "lots" + lotId,
+      dataToUpdate,
+    });
 
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
@@ -36906,6 +36924,9 @@ paddingVertical: 8,
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
 
+    console.log({ lotId });
+    console.log({ form });
+
     if (!lotId) {
       console.warn("❌ Nenhum lote selecionado (lotId ausente)");
       return;
@@ -36970,7 +36991,10 @@ paddingVertical: 8,
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
 
-    console.log("%c✅ Dados atualizados com sucesso:", css1, dataToUpdate);
+    console.log("%c✅ Dados atualizados com sucesso:", css1, {
+      ref: "lots" + lotId,
+      dataToUpdate,
+    });
 
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
