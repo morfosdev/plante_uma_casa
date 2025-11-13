@@ -63548,7 +63548,7 @@ fontWeight: '400',
 
   // ✅ Extrai todos os valores do objeto
   const installments = objLote?.installments ?? {};
-  const newArray = Object.values(installments);
+  const newArray: any[] = Object.values(installments) ?? [];
 
   // ✅ Extrai e guarda numberOfInstallments, owner e totalValue (se existirem)
   const numberOfInstallments = objLote.numberOfInstallments || null;
@@ -63561,10 +63561,20 @@ fontWeight: '400',
   console.log("💰 totalValue:", totalValue);
   console.log("Dados:", newArray);
 
+  const condArray = newArray && newArray.length > 0;
+  const finalArray = condArray
+    ? newArray.map((item, index) => {
+        return {
+          ...item,
+          formatedInstallments: index + '/' + numberOfInstallments
+        };
+      })
+    : [];
+
   // ✅ Define os dados para uso na tela
-  tools.setData({ path: "sc.C7.lists.list1", value: newArray });
-  
-  // ✅ Armazena numberOfInstallments, owner e totalValue separadamente
+  tools.setData({ path: "sc.C7.lists.list1", value: finalArray });
+
+  // ✅ Armazena Todos os dados do lote
   tools.setData({ path: "sc.C7.currents.currLoteData", value: objLote });
 }],
  }})]
