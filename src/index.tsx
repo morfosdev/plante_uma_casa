@@ -28945,8 +28945,7 @@ fontWeight: '700',
         `==`, `$var_sc.A10.currents.currId1`],
         }})],
  arrFuncs: [(args) => {
-
-console.log("Dados do Lote", { args });
+  console.log("Dados do Lote", { args });
 
   const objLote = args[0];
 
@@ -28956,28 +28955,31 @@ console.log("Dados do Lote", { args });
     return;
   }
 
-// ✅ Extrai todos os valores do objeto
-  const allValues = Object.values(objLote);
+  // ✅ Extrai todos os valores do objeto
+  const installments = objLote?.installments ?? {};
+  const newArray = Object.values(installments);
 
-// ✅ Extrai e guarda numberOfInstallments, owner e totalValue (se existirem)
-  const numberOfInstallments = objLote.numberOfInstallments || allValues.find(v => typeof v === "number") || null;
-	const owner = objLote.owner || allValues.find(v => typeof v === "string") || null;
-  const totalValue = objLote.totalValue || allValues.find(v => typeof v === "string" && !v.installmentId) || null;
+  // ✅ Extrai e guarda numberOfInstallments, owner e totalValue (se existirem)
+  const numberOfInstallments = objLote.numberOfInstallments || null;
+  const owner = objLote.owner || null;
+  const totalValue = objLote.totalValue || null;
 
-// ✅ Exibe log detalhado
+  // ✅ Exibe log detalhado
   console.log("📦 numberOfInstallments:", numberOfInstallments);
-	console.log("owner:", owner);
+  console.log("owner:", owner);
   console.log("💰 totalValue:", totalValue);
-	console.log("Dados:", allValues );
+  console.log("Dados:", newArray);
 
   // ✅ Define os dados para uso na tela
-  tools.setData({ path: "sc.A9.lists.list1", value: allValues  });
+  tools.setData({ path: "sc.A9.lists.list1", value: newArray });
 
   // ✅ Armazena numberOfInstallments, owner e totalValue separadamente
-  tools.setData({ path: "sc.A9.iptsChanges.numberOfInstallments", value: numberOfInstallments });
-	tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
+  tools.setData({
+    path: "sc.A9.iptsChanges.numberOfInstallments",
+    value: numberOfInstallments,
+  });
+  tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
   tools.setData({ path: "sc.A9.iptsChanges.totalValue", value: totalValue });
-
 }],
  }})]
  , trigger: 'on init'
