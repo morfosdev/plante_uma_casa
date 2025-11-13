@@ -63138,7 +63138,7 @@ bottom: 6,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  const data = useData((ct) => ct.sc.A7.currents.currLoteData);
+  const data = useData((ct) => ct?.sc?.A7?.currents?.currLoteData);
   console.log({ data });
 
   const stlGrayBar: RN.ViewStyle = {
