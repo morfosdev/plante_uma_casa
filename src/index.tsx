@@ -63382,7 +63382,8 @@ fontWeight: '700',
           ],
 
           children: [
-            `Parcela 1/11`
+            
+        `Parcela `, `$arg_formatedInstallments`
           ],
 
           args,
@@ -63402,7 +63403,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `R$ 600.000,00`
+            `$arg_value`
           ],
 
           args,
@@ -63421,7 +63422,8 @@ fontWeight: '700',
           ],
 
           children: [
-            `Vencimento: 10/09/2025`
+            
+        `Vencimento: `, `$arg_date`
           ],
 
           args,
