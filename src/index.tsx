@@ -63143,14 +63143,14 @@ bottom: 6,
 
   const stlGrayBar: RN.ViewStyle = {
     width: "100%",
-    height: 20,
-    backgroundColor: "gray",
+    height: 6,
+    backgroundColor: "#ededed",
     borderRadius: 10,
     overflow: "hidden",
   };
   const stlGreenBar: RN.ViewStyle = {
     width: 150,
-    height: 20,
+    height: 6,
     backgroundColor: "#315e2d",
     borderRadius: 10,
     overflow: "hidden",
