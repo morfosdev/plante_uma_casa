@@ -12224,9 +12224,7 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   try {
-    const { getFirestore, doc, updateDoc } = await import(
-      "firebase/firestore"
-    );
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
     const fbInit = tools.getCtData("all.temp.fireInit");
     const db = getFirestore(fbInit);
 
@@ -12247,6 +12245,7 @@ paddingVertical: 8,
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
     const date = (form?.date || "").trim();
     const description = (form?.description || "").trim();
+    console.log("Campos normalizados:", { rawValue, date, description });
     const value = parseFloat(rawValue);
 
     if (isNaN(value) || value <= 0 || !date) {
@@ -12275,6 +12274,7 @@ paddingVertical: 8,
       description,
       value: value.toFixed(2),
     };
+    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
 
     // -------------------------
     // Atualiza histórico (mantém tudo + nova)
@@ -12283,6 +12283,8 @@ paddingVertical: 8,
       ...existingInstallments,
       [newInstallmentId]: newInstallment,
     };
+
+    console.log("Histórico atualizado:", { updatedInstallments });
 
     // Reconta total de parcelas com base nas chaves iN
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
@@ -12306,6 +12308,8 @@ paddingVertical: 8,
       numberOfInstallments,
       totalValue: totalValue.toFixed(2),
     };
+
+    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
 
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
@@ -20498,9 +20502,7 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   try {
-    const { getFirestore, doc, updateDoc } = await import(
-      "firebase/firestore"
-    );
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
     const fbInit = tools.getCtData("all.temp.fireInit");
     const db = getFirestore(fbInit);
 
@@ -20521,6 +20523,7 @@ paddingVertical: 8,
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
     const date = (form?.date || "").trim();
     const description = (form?.description || "").trim();
+    console.log("Campos normalizados:", { rawValue, date, description });
     const value = parseFloat(rawValue);
 
     if (isNaN(value) || value <= 0 || !date) {
@@ -20549,6 +20552,7 @@ paddingVertical: 8,
       description,
       value: value.toFixed(2),
     };
+    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
 
     // -------------------------
     // Atualiza histórico (mantém tudo + nova)
@@ -20557,6 +20561,8 @@ paddingVertical: 8,
       ...existingInstallments,
       [newInstallmentId]: newInstallment,
     };
+
+    console.log("Histórico atualizado:", { updatedInstallments });
 
     // Reconta total de parcelas com base nas chaves iN
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
@@ -20580,6 +20586,8 @@ paddingVertical: 8,
       numberOfInstallments,
       totalValue: totalValue.toFixed(2),
     };
+
+    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
 
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
@@ -28776,9 +28784,7 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   try {
-    const { getFirestore, doc, updateDoc } = await import(
-      "firebase/firestore"
-    );
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
     const fbInit = tools.getCtData("all.temp.fireInit");
     const db = getFirestore(fbInit);
 
@@ -28799,6 +28805,7 @@ paddingVertical: 8,
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
     const date = (form?.date || "").trim();
     const description = (form?.description || "").trim();
+    console.log("Campos normalizados:", { rawValue, date, description });
     const value = parseFloat(rawValue);
 
     if (isNaN(value) || value <= 0 || !date) {
@@ -28827,6 +28834,7 @@ paddingVertical: 8,
       description,
       value: value.toFixed(2),
     };
+    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
 
     // -------------------------
     // Atualiza histórico (mantém tudo + nova)
@@ -28835,6 +28843,8 @@ paddingVertical: 8,
       ...existingInstallments,
       [newInstallmentId]: newInstallment,
     };
+
+    console.log("Histórico atualizado:", { updatedInstallments });
 
     // Reconta total de parcelas com base nas chaves iN
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
@@ -28858,6 +28868,8 @@ paddingVertical: 8,
       numberOfInstallments,
       totalValue: totalValue.toFixed(2),
     };
+
+    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
 
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
@@ -36995,9 +37007,7 @@ paddingVertical: 8,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   try {
-    const { getFirestore, doc, updateDoc } = await import(
-      "firebase/firestore"
-    );
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
     const fbInit = tools.getCtData("all.temp.fireInit");
     const db = getFirestore(fbInit);
 
@@ -37018,6 +37028,7 @@ paddingVertical: 8,
     const rawValue = (form?.value || "").toString().replace(",", ".").trim();
     const date = (form?.date || "").trim();
     const description = (form?.description || "").trim();
+    console.log("Campos normalizados:", { rawValue, date, description });
     const value = parseFloat(rawValue);
 
     if (isNaN(value) || value <= 0 || !date) {
@@ -37046,6 +37057,7 @@ paddingVertical: 8,
       description,
       value: value.toFixed(2),
     };
+    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
 
     // -------------------------
     // Atualiza histórico (mantém tudo + nova)
@@ -37054,6 +37066,8 @@ paddingVertical: 8,
       ...existingInstallments,
       [newInstallmentId]: newInstallment,
     };
+
+    console.log("Histórico atualizado:", { updatedInstallments });
 
     // Reconta total de parcelas com base nas chaves iN
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
@@ -37077,6 +37091,8 @@ paddingVertical: 8,
       numberOfInstallments,
       totalValue: totalValue.toFixed(2),
     };
+
+    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
 
     const refDoc = doc(db, "lots", lotId);
     await updateDoc(refDoc, dataToUpdate);
