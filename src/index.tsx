@@ -12296,7 +12296,7 @@ paddingVertical: 8,
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      totalValue: 1000.0, // Refazer Cálculo
+      totalValue: "R$500.000,00", // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -20564,7 +20564,7 @@ paddingVertical: 8,
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      totalValue: 1000.0, // Refazer Cálculo
+      totalValue: "R$500.000,00", // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -28836,7 +28836,7 @@ paddingVertical: 8,
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      totalValue: 1000.0, // Refazer Cálculo
+      totalValue: "R$500.000,00", // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -37049,7 +37049,7 @@ paddingVertical: 8,
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      totalValue: 1000.0, // Refazer Cálculo
+      totalValue: "R$500.000,00", // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
