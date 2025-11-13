@@ -63139,7 +63139,14 @@ bottom: 6,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const data = useData((ct) => ct?.sc?.C7?.currents?.currLoteData);
-  console.log({ data });
+
+  // --- Progress
+  const total = data?.numberOfInstallments || 0;
+  const receipts = data?.receipts || {};
+  const count = Object.keys(receipts).length;
+  const progress = total > 0 ? count / total : 0;
+
+  const [grayWidthPx, setGrayWidthPx] = React.useState(0);
 
   const stlGrayBar: RN.ViewStyle = {
     width: "100%",
@@ -63148,20 +63155,23 @@ bottom: 6,
     borderRadius: 10,
     overflow: "hidden",
   };
+
   const stlGreenBar: RN.ViewStyle = {
-    width: 150,
+    width: grayWidthPx * progress,   // <-- número, sem literal
     height: 6,
     backgroundColor: "#315e2d",
     borderRadius: 10,
-    overflow: "hidden",
   };
 
   return (
-    <>
-      <RN.View style={stlGrayBar}>
-        <RN.View style={stlGreenBar} />
-      </RN.View>
-    </>
+    <RN.View
+      style={stlGrayBar}
+      onLayout={(ev) => {
+        setGrayWidthPx(ev.nativeEvent.layout.width);
+      }}
+    >
+      <RN.View style={stlGreenBar} />
+    </RN.View>
   );
 }] 
 }}/>
