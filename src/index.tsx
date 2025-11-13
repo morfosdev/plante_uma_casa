@@ -28998,14 +28998,15 @@ fontWeight: '700',
 
   // ✅ Define os dados para uso na tela
   tools.setData({ path: "sc.A9.lists.list1", value: newArray });
-
+  
   // ✅ Armazena numberOfInstallments, owner e totalValue separadamente
-  tools.setData({
-    path: "sc.A9.iptsChanges.numberOfInstallments",
-    value: numberOfInstallments,
-  });
-  tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
-  tools.setData({ path: "sc.A9.iptsChanges.totalValue", value: totalValue });
+  tools.setData({ path: "sc.A9.currents.currLoteData", value: objLote });
+  //   tools.setData({
+  //     path: "sc.A9.iptsChanges.numberOfInstallments",
+  //     value: numberOfInstallments,
+  //   });
+  //   tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
+  //   tools.setData({ path: "sc.A9.iptsChanges.totalValue", value: totalValue });
 }],
  }})]
  , trigger: 'on init'
