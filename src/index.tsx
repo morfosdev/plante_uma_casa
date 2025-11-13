@@ -28944,12 +28944,7 @@ fontWeight: '700',
         `docId`, 
         `==`, `$var_sc.A10.currents.currId1`],
         }})],
- arrFuncs: [
- async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A9.iptsChanges`],
-          value: [`$arg_callback`]
-        }}), (args) => {
+ arrFuncs: [(args) => {
 
 console.log("Dados do Lote", { args });
 
