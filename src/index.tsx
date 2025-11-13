@@ -12232,9 +12232,9 @@ paddingVertical: 8,
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
-    const data = tools.getCtData("sc.A9.currents.currLoteData"); // ← AQUI
+    const data = tools.getCtData("sc.A9.currents.currLoteData");
 
-    console.log({ lotId, form, data });
+    console.log("Dados do Lote", { lotId, form, data });
 
     if (!lotId) {
       console.warn("Nenhum lote selecionado (lotId ausente)");
@@ -12259,19 +12259,11 @@ paddingVertical: 8,
     // -------------------------
     const existingInstallments = data?.installments || {};
 
-    // Filtrar chaves tipo i1, i2, i3...
-    const installmentKeys = Object.keys(existingInstallments).filter((key) =>
-      /^id+$/.test(key)
-    );
-
-    const nextIndex =
-      installmentKeys.length === 0
-        ? 1
-        : installmentKeys
-            .map((key) => parseInt(key.slice(1), 10))
-            .filter((n) => !isNaN(n))
-            .reduce((max, n) => Math.max(max, n), 0) + 1;
-
+    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
+    let nextIndex = 1;
+    while (existingInstallments["i" + nextIndex]) {
+      nextIndex++;
+    }
     const newInstallmentId = "i" + nextIndex;
 
     // -------------------------
@@ -12285,14 +12277,14 @@ paddingVertical: 8,
     };
 
     // -------------------------
-    // Atualiza histórico
+    // Atualiza histórico (mantém tudo + nova)
     // -------------------------
     const updatedInstallments = {
       ...existingInstallments,
       [newInstallmentId]: newInstallment,
     };
 
-    // Reconta total de parcelas
+    // Reconta total de parcelas com base nas chaves iN
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
       /^id+$/.test(k)
     );
@@ -12321,6 +12313,15 @@ paddingVertical: 8,
     console.log("%c[OK] Parcela adicionada:", css1, {
       newInstallment,
       dataToUpdate,
+    });
+
+    // Opcional: atualizar o currLoteData local para já refletir na UI
+    tools.setData({
+      path: "sc.A9.currents.currLoteData",
+      value: {
+        ...(data || {}),
+        ...dataToUpdate,
+      },
     });
 
     // -------------------------
@@ -20505,9 +20506,9 @@ paddingVertical: 8,
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
-    const data = tools.getCtData("sc.A9.currents.currLoteData"); // ← AQUI
+    const data = tools.getCtData("sc.A9.currents.currLoteData");
 
-    console.log({ lotId, form, data });
+    console.log("Dados do Lote", { lotId, form, data });
 
     if (!lotId) {
       console.warn("Nenhum lote selecionado (lotId ausente)");
@@ -20532,19 +20533,11 @@ paddingVertical: 8,
     // -------------------------
     const existingInstallments = data?.installments || {};
 
-    // Filtrar chaves tipo i1, i2, i3...
-    const installmentKeys = Object.keys(existingInstallments).filter((key) =>
-      /^id+$/.test(key)
-    );
-
-    const nextIndex =
-      installmentKeys.length === 0
-        ? 1
-        : installmentKeys
-            .map((key) => parseInt(key.slice(1), 10))
-            .filter((n) => !isNaN(n))
-            .reduce((max, n) => Math.max(max, n), 0) + 1;
-
+    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
+    let nextIndex = 1;
+    while (existingInstallments["i" + nextIndex]) {
+      nextIndex++;
+    }
     const newInstallmentId = "i" + nextIndex;
 
     // -------------------------
@@ -20558,14 +20551,14 @@ paddingVertical: 8,
     };
 
     // -------------------------
-    // Atualiza histórico
+    // Atualiza histórico (mantém tudo + nova)
     // -------------------------
     const updatedInstallments = {
       ...existingInstallments,
       [newInstallmentId]: newInstallment,
     };
 
-    // Reconta total de parcelas
+    // Reconta total de parcelas com base nas chaves iN
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
       /^id+$/.test(k)
     );
@@ -20594,6 +20587,15 @@ paddingVertical: 8,
     console.log("%c[OK] Parcela adicionada:", css1, {
       newInstallment,
       dataToUpdate,
+    });
+
+    // Opcional: atualizar o currLoteData local para já refletir na UI
+    tools.setData({
+      path: "sc.A9.currents.currLoteData",
+      value: {
+        ...(data || {}),
+        ...dataToUpdate,
+      },
     });
 
     // -------------------------
@@ -28782,9 +28784,9 @@ paddingVertical: 8,
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
-    const data = tools.getCtData("sc.A9.currents.currLoteData"); // ← AQUI
+    const data = tools.getCtData("sc.A9.currents.currLoteData");
 
-    console.log({ lotId, form, data });
+    console.log("Dados do Lote", { lotId, form, data });
 
     if (!lotId) {
       console.warn("Nenhum lote selecionado (lotId ausente)");
@@ -28809,19 +28811,11 @@ paddingVertical: 8,
     // -------------------------
     const existingInstallments = data?.installments || {};
 
-    // Filtrar chaves tipo i1, i2, i3...
-    const installmentKeys = Object.keys(existingInstallments).filter((key) =>
-      /^id+$/.test(key)
-    );
-
-    const nextIndex =
-      installmentKeys.length === 0
-        ? 1
-        : installmentKeys
-            .map((key) => parseInt(key.slice(1), 10))
-            .filter((n) => !isNaN(n))
-            .reduce((max, n) => Math.max(max, n), 0) + 1;
-
+    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
+    let nextIndex = 1;
+    while (existingInstallments["i" + nextIndex]) {
+      nextIndex++;
+    }
     const newInstallmentId = "i" + nextIndex;
 
     // -------------------------
@@ -28835,14 +28829,14 @@ paddingVertical: 8,
     };
 
     // -------------------------
-    // Atualiza histórico
+    // Atualiza histórico (mantém tudo + nova)
     // -------------------------
     const updatedInstallments = {
       ...existingInstallments,
       [newInstallmentId]: newInstallment,
     };
 
-    // Reconta total de parcelas
+    // Reconta total de parcelas com base nas chaves iN
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
       /^id+$/.test(k)
     );
@@ -28871,6 +28865,15 @@ paddingVertical: 8,
     console.log("%c[OK] Parcela adicionada:", css1, {
       newInstallment,
       dataToUpdate,
+    });
+
+    // Opcional: atualizar o currLoteData local para já refletir na UI
+    tools.setData({
+      path: "sc.A9.currents.currLoteData",
+      value: {
+        ...(data || {}),
+        ...dataToUpdate,
+      },
     });
 
     // -------------------------
@@ -37000,9 +37003,9 @@ paddingVertical: 8,
 
     const lotId = tools.getCtData("sc.A10.currents.currId1");
     const form = tools.getCtData("sc.A10.forms.editChanges");
-    const data = tools.getCtData("sc.A9.currents.currLoteData"); // ← AQUI
+    const data = tools.getCtData("sc.A9.currents.currLoteData");
 
-    console.log({ lotId, form, data });
+    console.log("Dados do Lote", { lotId, form, data });
 
     if (!lotId) {
       console.warn("Nenhum lote selecionado (lotId ausente)");
@@ -37027,19 +37030,11 @@ paddingVertical: 8,
     // -------------------------
     const existingInstallments = data?.installments || {};
 
-    // Filtrar chaves tipo i1, i2, i3...
-    const installmentKeys = Object.keys(existingInstallments).filter((key) =>
-      /^id+$/.test(key)
-    );
-
-    const nextIndex =
-      installmentKeys.length === 0
-        ? 1
-        : installmentKeys
-            .map((key) => parseInt(key.slice(1), 10))
-            .filter((n) => !isNaN(n))
-            .reduce((max, n) => Math.max(max, n), 0) + 1;
-
+    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
+    let nextIndex = 1;
+    while (existingInstallments["i" + nextIndex]) {
+      nextIndex++;
+    }
     const newInstallmentId = "i" + nextIndex;
 
     // -------------------------
@@ -37053,14 +37048,14 @@ paddingVertical: 8,
     };
 
     // -------------------------
-    // Atualiza histórico
+    // Atualiza histórico (mantém tudo + nova)
     // -------------------------
     const updatedInstallments = {
       ...existingInstallments,
       [newInstallmentId]: newInstallment,
     };
 
-    // Reconta total de parcelas
+    // Reconta total de parcelas com base nas chaves iN
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
       /^id+$/.test(k)
     );
@@ -37089,6 +37084,15 @@ paddingVertical: 8,
     console.log("%c[OK] Parcela adicionada:", css1, {
       newInstallment,
       dataToUpdate,
+    });
+
+    // Opcional: atualizar o currLoteData local para já refletir na UI
+    tools.setData({
+      path: "sc.A9.currents.currLoteData",
+      value: {
+        ...(data || {}),
+        ...dataToUpdate,
+      },
     });
 
     // -------------------------
