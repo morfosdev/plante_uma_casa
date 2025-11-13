@@ -56613,7 +56613,7 @@ async (...args) =>
 	const value = {
 		docId: "xqhhNW5lJJqx5mvX9wRK",
 		userName: "João Pedro",
-		userEmail: "joao.p@email.com",
+		userEmail: "joão@gmail.com",
 		userImage: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
 		fullRegister: false
 	};
@@ -63737,7 +63737,7 @@ fontWeight: '400',
  arrWhere: [(...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
-        `docId`, 
+        `userEmail`, 
         `==`, `$var_sc.A10.currents.currId1`],
         }})],
  arrFuncs: [(args) => {
