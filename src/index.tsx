@@ -63555,7 +63555,7 @@ fontWeight: '400',
   console.log("objLote", objLote); 
   
   // ✅ Extrai e guarda numberOfInstallments, owner e totalValue (se existirem)
-  const numberOfInstallments = objLote.numberOfInstallments || null;
+  const numberOfInstallments = objLote.numberOfInstallments;
   const owner = objLote.owner || null;
   const totalValue = objLote.totalValue || null;
 
