@@ -12285,23 +12285,18 @@ paddingVertical: 8,
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
       /^id+$/.test(k)
     );
-    const numberOfInstallments = allKeys.length;
+
+    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
 
     // Soma total
-    const totalValue = allKeys.reduce((sum, key) => {
-      const v = parseFloat(
-        (updatedInstallments[key]?.value || "0").toString().replace(",", ".")
-      );
-      return sum + (isNaN(v) ? 0 : v);
-    }, 0);
+    const totalValue = "Xxx"; // Refazer Cálculo
 
     // -------------------------
     // Salvar no Firestore
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      numberOfInstallments,
-      totalValue: totalValue.toFixed(2),
+      totalValue: 1000.0, // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -20558,23 +20553,18 @@ paddingVertical: 8,
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
       /^id+$/.test(k)
     );
-    const numberOfInstallments = allKeys.length;
+
+    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
 
     // Soma total
-    const totalValue = allKeys.reduce((sum, key) => {
-      const v = parseFloat(
-        (updatedInstallments[key]?.value || "0").toString().replace(",", ".")
-      );
-      return sum + (isNaN(v) ? 0 : v);
-    }, 0);
+    const totalValue = "Xxx"; // Refazer Cálculo
 
     // -------------------------
     // Salvar no Firestore
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      numberOfInstallments,
-      totalValue: totalValue.toFixed(2),
+      totalValue: 1000.0, // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -28835,23 +28825,18 @@ paddingVertical: 8,
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
       /^id+$/.test(k)
     );
-    const numberOfInstallments = allKeys.length;
+
+    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
 
     // Soma total
-    const totalValue = allKeys.reduce((sum, key) => {
-      const v = parseFloat(
-        (updatedInstallments[key]?.value || "0").toString().replace(",", ".")
-      );
-      return sum + (isNaN(v) ? 0 : v);
-    }, 0);
+    const totalValue = "Xxx"; // Refazer Cálculo
 
     // -------------------------
     // Salvar no Firestore
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      numberOfInstallments,
-      totalValue: totalValue.toFixed(2),
+      totalValue: 1000.0, // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -37053,23 +37038,18 @@ paddingVertical: 8,
     const allKeys = Object.keys(updatedInstallments).filter((k) =>
       /^id+$/.test(k)
     );
-    const numberOfInstallments = allKeys.length;
+
+    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
 
     // Soma total
-    const totalValue = allKeys.reduce((sum, key) => {
-      const v = parseFloat(
-        (updatedInstallments[key]?.value || "0").toString().replace(",", ".")
-      );
-      return sum + (isNaN(v) ? 0 : v);
-    }, 0);
+    const totalValue = "Xxx"; // Refazer Cálculo
 
     // -------------------------
     // Salvar no Firestore
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      numberOfInstallments,
-      totalValue: totalValue.toFixed(2),
+      totalValue: 1000.0, // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
