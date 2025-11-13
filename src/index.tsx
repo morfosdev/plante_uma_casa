@@ -63731,16 +63731,54 @@ fontWeight: '400',
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [
-        `locations`, 
-        `$var_sc.B1.currId`, `localBikes`],
-            arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.lists.lst3`],
-          value: [`$arg_callback`]
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`lots`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_sc.A10.currents.currId1`],
         }})],
-        }})]
+ arrFuncs: [(args) => {
+  console.log("Dados do Lote", { args });
+
+  const objLote = args[0];
+
+  // ✅ Garante que é um objeto válido
+  if (typeof objLote !== "object" || objLote === null) {
+    console.log("❌ lote inválido:", objLote);
+    return;
+  }
+
+  // ✅ Extrai todos os valores do objeto
+  const installments = objLote?.installments ?? {};
+  const newArray = Object.values(installments);
+
+  // ✅ Extrai e guarda numberOfInstallments, owner e totalValue (se existirem)
+  const numberOfInstallments = objLote.numberOfInstallments || null;
+  const owner = objLote.owner || null;
+  const totalValue = objLote.totalValue || null;
+
+  // ✅ Exibe log detalhado
+  console.log("📦 numberOfInstallments:", numberOfInstallments);
+  console.log("owner:", owner);
+  console.log("💰 totalValue:", totalValue);
+  console.log("Dados:", newArray);
+
+  // ✅ Define os dados para uso na tela
+  tools.setData({ path: "sc.A9.lists.list1", value: newArray });
+  
+  // ✅ Armazena numberOfInstallments, owner e totalValue separadamente
+  tools.setData({ path: "sc.A9.currents.currLoteData", value: objLote });
+  //   tools.setData({
+  //     path: "sc.A9.iptsChanges.numberOfInstallments",
+  //     value: numberOfInstallments,
+  //   });
+  //   tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
+  //   tools.setData({ path: "sc.A9.iptsChanges.totalValue", value: totalValue });
+}],
+ }})]
  , trigger: 'on init'
 }})],
 
