@@ -63487,6 +63487,7 @@ fontWeight: '400',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -63721,7 +63722,260 @@ fontWeight: '400',
 
             args,
           }}/>
+        , (...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `sc.C7.lists.list1`,
+
+          itemElements: [
+            
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	backgroundColor: '#fff',
+	padding: 14,
+	borderRadius: 12,
+	width: '100%',
+	alignSelf: 'center',
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+flexDirection: 'row',
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#559f4e3d',
+alignItems: 'center',
+justifyContent: 'center',
+width: 30,
+height: 30,
+borderRadius: 15,
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={14}
+    height={14}
+    fill="red"
+    viewBox="0 0 14 14"
+    {...props}
+  >
+    <Path
+      stroke="#fff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M8.5.5h-7a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-7m-5-5 5 5m-5-5V5a.5.5 0 0 0 .5.5h4.5m-9-1V3m0 1.5c-.83 0-1.5 0-1.5 1C3 7 6 7 6 8.5c0 1-.67 1-1.5 1m0-5c.83 0 1.5.38 1.5 1m-3 3c0 .75.67 1 1.5 1m0 0V11m4-1.5h3"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 0.5H1.5C1.23478 0.5 0.98043 0.605357 0.792893 0.792893C0.605357 0.98043 0.5 1.23478 0.5 1.5V12.5C0.5 12.7652 0.605357 13.0196 0.792893 13.2071C0.98043 13.3946 1.23478 13.5 1.5 13.5H12.5C12.7652 13.5 13.0196 13.3946 13.2071 13.2071C13.3946 13.0196 13.5 12.7652 13.5 12.5V5.5M8.5 0.5L13.5 5.5M8.5 0.5V5C8.5 5.13261 8.55268 5.25979 8.64645 5.35355C8.74021 5.44732 8.86739 5.5 9 5.5H13.5M4.5 4.5V3M4.5 4.5C3.67 4.5 3 4.5 3 5.5C3 7 6 7 6 8.5C6 9.5 5.33 9.5 4.5 9.5M4.5 4.5C5.33 4.5 6 4.88 6 5.5M3 8.5C3 9.25 3.67 9.5 4.5 9.5M4.5 9.5V11M8.5 9.5H11.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "15px",
+
+      preenchimento: [`#559f4e3d`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+justifyContent: 'space-between',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: '#555555',
+fontSize: 11,
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Parcela 1/11`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: '#555555',
+fontSize: 11,
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `R$ 600.000,00`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: '#CCCCCC',
+fontSize: 11,
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Vencimento: 10/09/2025`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
         ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#315E2D',
+alignItems: 'center',
+justifyContent: 'center',
+alignSelf: 'center',
+paddingVertical: 4,
+paddingHorizontal: 10,
+borderRadius: 5,
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: 'white',
+fontSize: 11,
+fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `Enviar Comprovante`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        
+          ],
+
+      styles:[
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
+        }}/>],
 
             args,
           }}/>
@@ -63768,16 +64022,10 @@ fontWeight: '400',
   console.log("Dados:", newArray);
 
   // ✅ Define os dados para uso na tela
-  tools.setData({ path: "sc.A9.lists.list1", value: newArray });
+  tools.setData({ path: "sc.C7.lists.list1", value: newArray });
   
   // ✅ Armazena numberOfInstallments, owner e totalValue separadamente
-  tools.setData({ path: "sc.A9.currents.currLoteData", value: objLote });
-  //   tools.setData({
-  //     path: "sc.A9.iptsChanges.numberOfInstallments",
-  //     value: numberOfInstallments,
-  //   });
-  //   tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
-  //   tools.setData({ path: "sc.A9.iptsChanges.totalValue", value: totalValue });
+  tools.setData({ path: "sc.C7.currents.currLoteData", value: objLote });
 }],
  }})]
  , trigger: 'on init'
