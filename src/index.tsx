@@ -63100,41 +63100,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#ededed',
-borderRadius: 100,
-height: 6,
-width: '100%',
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#315E2D',
-borderRadius: 100,
-height: 6,
-width: '60%',
-bottom: 6,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
