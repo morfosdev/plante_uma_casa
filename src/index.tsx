@@ -63038,7 +63038,7 @@ fontWeight: '500',
           ],
 
           children: [
-            `R$ 500.000,00`
+            `$var_sc.C7.currents.currLoteData.totalValue`
           ],
 
           args,
