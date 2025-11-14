@@ -5401,7 +5401,7 @@ fontWeight: '500',
 	borderColor: '#e6e7e8',
 }],
 
-      URIvariablePath:[`https://www.condominioterranovabauru.com.br/cdn/fotos/portaria_terra_nova_bauru.jpg`],
+      URIvariablePath:[`$arg_images`],
 
       args,
     }}/>],
