@@ -13337,7 +13337,9 @@ async (...args) =>
             styles:[`{
 	paddingHorizontal: 60,
 	paddingVertical: 20,
-}`],
+	flex: 1,
+}
+`],
 
             functions:[()=>{}],            childrenItems:[
         
@@ -13483,9 +13485,7 @@ height: 15,
             args,
           }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{
-borderRadius: 12,
-}`],
+            styles: [],
             arrProps: [],
             arrItems: [(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
