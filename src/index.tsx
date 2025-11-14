@@ -4100,6 +4100,64 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `E-mail`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{ placeholder: "Digite seu e-mail" }`],
+
+          stylesArray: [`{
+	padding: 5,
+	borderBottomColor: "#CCCCCC",
+	borderBottomWidth: 2,
+	width: '100%',
+}`],
+
+          path: [`sc.A0B.forms.iptsChanges.userEmail`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0B.forms.iptsChanges.userEmail`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 	placeholder: "Digite sua Senha",
