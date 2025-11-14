@@ -5711,11 +5711,10 @@ alignItems: 'center',
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images A1",{value});
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.editChanges.images",{args, urls});
 
-	const path = "all.temp.images";
-	tools.setData({path, value});
+tools.setData({path: "sc.a1.editChanges.images", value: urls});
 }], args,
  }}/>, 
         
@@ -14037,11 +14036,10 @@ alignItems: 'center',
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images A1",{value});
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.editChanges.images",{args, urls});
 
-	const path = "all.temp.images";
-	tools.setData({path, value});
+tools.setData({path: "sc.a1.editChanges.images", value: urls});
 }], args,
  }}/>, 
         
@@ -22318,11 +22316,10 @@ alignItems: 'center',
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images A1",{value});
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.editChanges.images",{args, urls});
 
-	const path = "all.temp.images";
-	tools.setData({path, value});
+tools.setData({path: "sc.a1.editChanges.images", value: urls});
 }], args,
  }}/>, 
         
@@ -30583,11 +30580,10 @@ alignItems: 'center',
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images A1",{value});
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.editChanges.images",{args, urls});
 
-	const path = "all.temp.images";
-	tools.setData({path, value});
+tools.setData({path: "sc.a1.editChanges.images", value: urls});
 }], args,
  }}/>, 
         
