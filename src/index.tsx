@@ -42011,14 +42011,16 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+multiline: 'true',
+}`],
 
           stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
 }`],
 
           path: [`sc.B9.forms.editChanges.description`],
@@ -47354,14 +47356,16 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+multiline: 'true',
+}`],
 
           stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
 }`],
 
           path: [`sc.B9.forms.editChanges.description`],
@@ -56058,14 +56062,16 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{
+multiline: 'true',
+}`],
 
           stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
 }`],
 
           path: [`sc.B9.forms.editChanges.description`],
