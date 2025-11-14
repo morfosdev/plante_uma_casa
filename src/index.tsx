@@ -21904,14 +21904,11 @@ shadowRadius: 4,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
