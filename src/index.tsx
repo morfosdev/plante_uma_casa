@@ -13536,6 +13536,11 @@ shadowRadius: 4,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.a1.iptChanges`],
           value: [undefined]
         }}), 
@@ -13551,12 +13556,12 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
           keyPath: [`sc.A7.forms.editChanges`],
           value: [`$arg_item`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
