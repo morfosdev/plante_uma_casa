@@ -4172,13 +4172,9 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
+            styles:[`{
+height: 15,
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
