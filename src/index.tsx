@@ -21676,7 +21676,7 @@ bottom: 8,
             styles:[`{
 	flexDirection: 'row',
 	paddingVertical: 20,
-	paddingHorizontal: 40,
+	paddingHorizontal: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
