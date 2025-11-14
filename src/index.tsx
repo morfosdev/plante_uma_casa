@@ -38092,7 +38092,80 @@ borderRadius: 10,
 alignItems: 'center',
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [(args) => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const item = tools.findFlatItem(args);
+  const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const stepIdRaw = item?.stepId;
+
+  // ---- Guards
+  if (!item || stepIdRaw == null) {
+    console.warn("Step handler: item ou stepId ausente.", { item });
+    return;
+  }
+
+  const stepId = String(stepIdRaw);
+  const pathSideRight = "all.toggles.sideRight";
+  const pathEdit = "all.toggles.b9.editSteps";
+  const pathNew = "all.toggles.b8.addSteps";
+
+  // Abre painel lateral (comum)
+  tools.setData({ path: pathSideRight, value: true });
+
+  // Procura match por stepId
+  const matched = Array.isArray(stepsList)
+    ? stepsList.find((d: any) => String(d?.stepId) === stepId)
+    : undefined;
+
+  const condMatch = Boolean(matched);
+  const currId = matched?.docId;
+
+  console.log({ item, stepsList, matched, condMatch });
+
+  // if (!condMatch) {
+  //     // ---- Modo Adicionar
+  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
+
+  //     tools.setData({ path: pathNew, value: true });
+  //     tools.setData({ path: pathEdit, value: false });
+
+  //     // stepId sempre preenchido
+  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
+
+  //     // Evita undefined: use vazio ou herde do item
+
+  //     // (Opcional) limpar possíveis resíduos do form de edição
+  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
+  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
+  //     return;
+  // }
+
+  // ---- Modo Editar
+  console.log("%cEdit Step Mode - " + pathEdit, css1);
+
+  tools.setData({ path: pathEdit, value: true });
+  tools.setData({ path: pathNew, value: false });
+
+  // Define os valores base no formulário de edição
+  tools.setData({
+    path: "sc.B9.forms.editChanges",
+    value: matched, // ✅ Passa todos os dados do documento
+  });
+
+  // Campos específicos importantes
+  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
+
+  // (Opcional) limpar possíveis resíduos do form de novo
+  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+}
+]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
