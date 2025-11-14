@@ -1,1 +1,1 @@
-{"1763130232655":{"actionType":"saveAll","createdAt":"1763130232655","actionID":"1763130232655","userID":"#TEMP","path":"system.capsules.686da857-9a88-4c1d-8b1b-1a4b3c9bd10d.capsUseCodeInfo.capsUseDescription.en","oldValue":"","newValue":"Preencha os campos obrigatórios."}}
+{"1763130441075":{"actionType":"saveAll","createdAt":"1763130441075","actionID":"1763130441075","userID":"#TEMP","path":"system.capsules.686da857-9a88-4c1d-8b1b-1a4b3c9bd10d.capsUseCodeInfo.capsUseDescription.en","oldValue":"Preencha os campos obrigatórios.","newValue":"$var_sc.a7.validationMessage"}}

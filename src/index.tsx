@@ -8547,7 +8547,7 @@ fontSize: 12,
           ],
 
           children: [
-            `Preencha os campos obrigatórios.`
+            `$var_sc.a7.validationMessage`
           ],
 
           args,
@@ -8607,7 +8607,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["⚠️ Preencha os campos obrigatórios."],
+        value: ["Preencha os campos obrigatórios."],
       },
     });
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
@@ -9740,7 +9740,7 @@ fontSize: 12,
           ],
 
           children: [
-            `Preencha os campos obrigatórios.`
+            `$var_sc.a7.validationMessage`
           ],
 
           args,
@@ -16856,7 +16856,7 @@ fontSize: 12,
           ],
 
           children: [
-            `Preencha os campos obrigatórios.`
+            `$var_sc.a7.validationMessage`
           ],
 
           args,
@@ -16916,7 +16916,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["⚠️ Preencha os campos obrigatórios."],
+        value: ["Preencha os campos obrigatórios."],
       },
     });
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
@@ -18049,7 +18049,7 @@ fontSize: 12,
           ],
 
           children: [
-            `Preencha os campos obrigatórios.`
+            `$var_sc.a7.validationMessage`
           ],
 
           args,
@@ -25126,7 +25126,7 @@ fontSize: 12,
           ],
 
           children: [
-            `Preencha os campos obrigatórios.`
+            `$var_sc.a7.validationMessage`
           ],
 
           args,
@@ -25186,7 +25186,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["⚠️ Preencha os campos obrigatórios."],
+        value: ["Preencha os campos obrigatórios."],
       },
     });
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
@@ -26319,7 +26319,7 @@ fontSize: 12,
           ],
 
           children: [
-            `Preencha os campos obrigatórios.`
+            `$var_sc.a7.validationMessage`
           ],
 
           args,
@@ -33380,7 +33380,7 @@ fontSize: 12,
           ],
 
           children: [
-            `Preencha os campos obrigatórios.`
+            `$var_sc.a7.validationMessage`
           ],
 
           args,
@@ -33440,7 +33440,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.a7.validationMessage"],
-        value: ["⚠️ Preencha os campos obrigatórios."],
+        value: ["Preencha os campos obrigatórios."],
       },
     });
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
@@ -34573,7 +34573,7 @@ fontSize: 12,
           ],
 
           children: [
-            `Preencha os campos obrigatórios.`
+            `$var_sc.a7.validationMessage`
           ],
 
           args,
