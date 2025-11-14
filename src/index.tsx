@@ -4129,13 +4129,16 @@ color: '#555555',
           ],
 
           children: [
-            `E-mail`
+            `Senha`
           ],
 
           args,
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{ placeholder: "Digite seu e-mail" }`],
+          propsArray: [`{
+	placeholder: "Digite sua Senha",
+	secureTextEntry: true
+}`],
 
           stylesArray: [`{
 	padding: 5,
@@ -4144,13 +4147,18 @@ color: '#555555',
 	width: '100%',
 }`],
 
-          path: [`sc.A0B.forms.iptsChanges.userEmail`],
+          path: [`sc.A0D.forms.iptsChanges.userPassword`],
 
-          funcsArray: [async (...args) =>
+          funcsArray: [
+        async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A0B.forms.iptsChanges.userEmail`],
+          keyPath: [`sc.A0D.forms.iptsChanges.userPassword`],
           value: [`$arg_callback`]
-        }})],
+        }}), (txt) => {
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
+}],
 
           args,
         }}/>],
@@ -4164,13 +4172,11 @@ color: '#555555',
 	secureTextEntry: true
 }`],
 
-          stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
+          stylesArray: [`{
+	padding: 5,
+	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
+	width: '100%',
 }`],
 
           path: [`sc.A0D.forms.iptsChanges.userPassword`],
