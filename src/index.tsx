@@ -21774,20 +21774,6 @@ bottom: 8,
 
             args,
           }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-height: 15,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
         , (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{
 borderRadius: 12,
