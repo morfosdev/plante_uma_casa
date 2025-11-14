@@ -13536,6 +13536,16 @@ shadowRadius: 4,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a7b.editOwner`],
           value: [true]
         }}), 
