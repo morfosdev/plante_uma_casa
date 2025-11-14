@@ -4070,7 +4070,7 @@ backgroundColor: 'transparent',
 
           arrStyles: [
             `{
-fontSize: 20,
+fontSize: 15,
 fontWeight: '700',
 }`
           ],
@@ -4122,7 +4122,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -4145,6 +4145,7 @@ color: '#555555',
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 2,
 	width: '100%',
+	fontSize: 13,
 }`],
 
           path: [`sc.A0D.forms.iptsChanges.userPassword`],
@@ -4162,6 +4163,24 @@ color: '#555555',
 
           args,
         }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -4211,6 +4230,7 @@ color: '#555555',
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 2,
 	width: '100%',
+	fontSize: 13,
 }`],
 
           path: [`sc.A0D.forms.iptsChanges.confirmPassword`],
