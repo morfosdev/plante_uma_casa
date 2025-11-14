@@ -41601,11 +41601,12 @@ color: '#CCCCCC',
 fontSize: 14,
 fontWeight: '700',
 color: '#555555',
-}`
+}
+`
           ],
 
           children: [
-            `EDITAR ETAPA`
+            `Editar etapa`
           ],
 
           args,
@@ -46934,11 +46935,12 @@ color: '#CCCCCC',
 fontSize: 14,
 fontWeight: '700',
 color: '#555555',
-}`
+}
+`
           ],
 
           children: [
-            `EDITAR ETAPA`
+            `Editar etapa`
           ],
 
           args,
@@ -55628,11 +55630,12 @@ color: '#CCCCCC',
 fontSize: 14,
 fontWeight: '700',
 color: '#555555',
-}`
+}
+`
           ],
 
           children: [
-            `EDITAR ETAPA`
+            `Editar etapa`
           ],
 
           args,
