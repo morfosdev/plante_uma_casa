@@ -20890,14 +20890,21 @@ fontWeight: '700',
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`lots`],
-            arrFuncs: [async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`lots`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `$var_sc.A7.forms.iptsChanges.condoData.docId`, 
+        `==`, `condoId`],
+        }})],
+ arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
         }})],
-        }})]
+ }})]
  , trigger: 'on init'
 }})],
 
