@@ -4468,7 +4468,7 @@ height: 30,
           styles:[
         `{ width: "100%", height: "100%" }`, 
         `{ justifyContent: "flex-start" }`, `{
-backgroundColor: "white", 
+backgroundColor: "#f5f5f5", 
 }`],
 
           screenElements:[
@@ -12585,7 +12585,7 @@ fontWeight: '700',
           styles:[
         `{ width: "100%", height: "100%" }`, 
         `{
-backgroundColor: "white", 
+backgroundColor: "#f5f5f5", 
 }`, `{ justifyContent: "flex-start" }`],
 
           screenElements:[
@@ -29233,7 +29233,7 @@ fontWeight: '700',
           styles:[
         `{ width: "100%", height: "100%" }`, 
         `{ justifyContent: "flex-start" }`, `{
-backgroundColor: "white", 
+backgroundColor: "#f5f5f5", 
 }`],
 
           screenElements:[
