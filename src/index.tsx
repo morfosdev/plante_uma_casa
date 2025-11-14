@@ -4991,7 +4991,7 @@ async (...args) =>
 
             styles:[`{
 	flex: 1,
-	height: "100%",
+	height: "90%",
 	backgroundColor: '#f5f5f5',
 }`],
 
@@ -12583,7 +12583,9 @@ fontWeight: '700',
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
-        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
+        `{
+backgroundColor: "white", 
+}`, `{ justifyContent: "flex-start" }`],
 
           screenElements:[
         
@@ -12677,7 +12679,6 @@ fontWeight: '700',
         `{ width: "100%", height: "100%" }`, `{ 
 	width: "100%",
 	flexDirection: "row",
-	alignItems: "center",
 	justifyContent: "flex-start"
  }`],
 
@@ -13107,7 +13108,7 @@ async (...args) =>
 
             styles:[`{
 	flex: 1,
-	height: "100%",
+	height: "90%",
 	backgroundColor: '#f5f5f5',
 }`],
 
@@ -29754,7 +29755,7 @@ async (...args) =>
 
             styles:[`{
 	flex: 1,
-	height: "100%",
+	height: "90%",
 	backgroundColor: '#f5f5f5',
 }`],
 
@@ -37957,7 +37958,7 @@ async (...args) =>
 
             styles:[`{
 	flex: 1,
-	height: "100%",
+	height: "90%",
 	backgroundColor: '#f5f5f5',
 }`],
 
@@ -43069,7 +43070,7 @@ async (...args) =>
 
             styles:[`{
 	flex: 1,
-	height: "100%",
+	height: "90%",
 	backgroundColor: '#f5f5f5',
 }`],
 
@@ -48421,7 +48422,7 @@ async (...args) =>
 
             styles:[`{
 	flex: 1,
-	height: "100%",
+	height: "90%",
 	backgroundColor: '#f5f5f5',
 }`],
 
