@@ -21507,7 +21507,7 @@ right: 2,
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("a4list");
+          return tools.goTo("a7list");
         }
         ]
  , trigger: 'on press'
