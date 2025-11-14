@@ -4168,34 +4168,6 @@ color: '#555555',
         , 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-	placeholder: "Digite sua Senha",
-	secureTextEntry: true
-}`],
-
-          stylesArray: [`{
-	padding: 5,
-	borderBottomColor: "#CCCCCC",
-	borderBottomWidth: 2,
-	width: '100%',
-}`],
-
-          path: [`sc.A0D.forms.iptsChanges.userPassword`],
-
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0D.forms.iptsChanges.userPassword`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
-	const x = '';
-	console.log({txt});
-	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
-}],
-
-          args,
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
 	placeholder: "Confirme sua Senha",
 	secureTextEntry: true
 }`],
@@ -4460,6 +4432,7 @@ color: '#555555',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -4473,6 +4446,71 @@ color: '#555555',
  }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `Senha`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+	placeholder: "Digite sua Senha",
+	secureTextEntry: true
+}`],
+
+          stylesArray: [`{
+	padding: 5,
+	borderBottomColor: "#CCCCCC",
+	borderBottomWidth: 2,
+	width: '100%',
+}`],
+
+          path: [`sc.A0D.forms.iptsChanges.userPassword`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0D.forms.iptsChanges.userPassword`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+	const x = '';
+	console.log({txt});
+	tools.setData({path: "sc.A0.forms.iptsChanges.pass2", value: txt });
+}],
+
+          args,
+        }}/>],
 
             args,
           }}/>
