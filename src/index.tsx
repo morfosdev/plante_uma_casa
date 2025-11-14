@@ -4206,13 +4206,11 @@ color: '#555555',
 	secureTextEntry: true
 }`],
 
-          stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
+          stylesArray: [`{
+	padding: 5,
+	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
+	width: '100%',
 }`],
 
           path: [`sc.A0D.forms.iptsChanges.confirmPassword`],
@@ -4229,31 +4227,6 @@ color: '#555555',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-	placeholder: "Confirme sua Senha",
-	secureTextEntry: true
-}`],
-
-          stylesArray: [`{ 
-	padding: 8,
-	paddingLeft: 2,
-	borderBottomColor: "$var_all.colors.primary",
-	borderBottomWidth: 2,
-	marginBottom: 16,
-	textAlign: "left"
-}`],
-
-          path: [`sc.A0D.forms.iptsChanges.confirmPassword`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A0D.forms.iptsChanges.confirmPassword`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
