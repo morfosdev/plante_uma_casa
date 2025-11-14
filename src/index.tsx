@@ -4467,7 +4467,9 @@ height: 30,
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
-        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
+        `{ justifyContent: "flex-start" }`, `{
+backgroundColor: "white", 
+}`],
 
           screenElements:[
         
@@ -4561,7 +4563,6 @@ height: 30,
         `{ width: "100%", height: "100%" }`, `{ 
 	width: "100%",
 	flexDirection: "row",
-	alignItems: "center",
 	justifyContent: "flex-start"
  }`],
 
