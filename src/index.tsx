@@ -5352,11 +5352,6 @@ async (...args) =>
           keyPath: [`sc.A7.forms.iptsChanges.condoData`],
           value: [`$arg_item`]
         }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.currents.currId1`],
-          value: [`$arg_item.docId`]
-        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a7list");
