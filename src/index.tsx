@@ -41694,7 +41694,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-paddingHorizontal: 20,
 width: '100%',
 }`],
 
@@ -47028,7 +47027,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-paddingHorizontal: 20,
 width: '100%',
 }`],
 
@@ -55723,7 +55721,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-paddingHorizontal: 20,
 width: '100%',
 }`],
 
