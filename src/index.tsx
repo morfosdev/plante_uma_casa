@@ -10294,10 +10294,6 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
@@ -10319,6 +10315,10 @@ async (...args) =>
         }})],
         }})]
  , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
+ , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -18591,10 +18591,6 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
@@ -18616,6 +18612,10 @@ async (...args) =>
         }})],
         }})]
  , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
+ , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -26892,10 +26892,6 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
@@ -26917,6 +26913,10 @@ async (...args) =>
         }})],
         }})]
  , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
+ , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -35134,10 +35134,6 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
@@ -35159,6 +35155,10 @@ async (...args) =>
         }})],
         }})]
  , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a1.editCondoDelete", "==", true ]]
+ , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
