@@ -5711,12 +5711,19 @@ alignItems: 'center',
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images A1",{value});
+ arrFuncs: [() => {
+  // Pegar as imagens já salvas no doc
+  const existingImages = tools.getCtData("sc.a1.editChanges.images") || [];
 
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
+  console.log("Imagens existentes:", existingImages);
+
+  // Setar no campo temporário que você usa para exibir miniaturas
+  tools.setData({
+    path: "all.temp.images",
+    value: existingImages
+  });
+}
+], args,
  }}/>, 
         
 
@@ -14037,12 +14044,19 @@ alignItems: 'center',
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images A1",{value});
+ arrFuncs: [() => {
+  // Pegar as imagens já salvas no doc
+  const existingImages = tools.getCtData("sc.a1.editChanges.images") || [];
 
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
+  console.log("Imagens existentes:", existingImages);
+
+  // Setar no campo temporário que você usa para exibir miniaturas
+  tools.setData({
+    path: "all.temp.images",
+    value: existingImages
+  });
+}
+], args,
  }}/>, 
         
 
@@ -22318,12 +22332,19 @@ alignItems: 'center',
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images A1",{value});
+ arrFuncs: [() => {
+  // Pegar as imagens já salvas no doc
+  const existingImages = tools.getCtData("sc.a1.editChanges.images") || [];
 
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
+  console.log("Imagens existentes:", existingImages);
+
+  // Setar no campo temporário que você usa para exibir miniaturas
+  tools.setData({
+    path: "all.temp.images",
+    value: existingImages
+  });
+}
+], args,
  }}/>, 
         
 
@@ -30583,12 +30604,19 @@ alignItems: 'center',
           }}/>
         , 
         (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images A1",{value});
+ arrFuncs: [() => {
+  // Pegar as imagens já salvas no doc
+  const existingImages = tools.getCtData("sc.a1.editChanges.images") || [];
 
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
+  console.log("Imagens existentes:", existingImages);
+
+  // Setar no campo temporário que você usa para exibir miniaturas
+  tools.setData({
+    path: "all.temp.images",
+    value: existingImages
+  });
+}
+], args,
  }}/>, 
         
 
