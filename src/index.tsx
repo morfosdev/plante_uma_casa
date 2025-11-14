@@ -3273,7 +3273,7 @@ paddingHorizontal: 16,
 
           arrStyles: [
             `{
-fontSize: 20,
+fontSize: 15,
 fontWeight: '700',
 }`
           ],
@@ -3325,7 +3325,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -3345,6 +3345,7 @@ color: '#555555',
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 2,
 	width: '100%',
+	fontSize: 13,
 }`],
 
           path: [`sc.A0B.forms.iptsChanges.userEmail`],
