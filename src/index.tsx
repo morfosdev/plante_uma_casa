@@ -29222,7 +29222,7 @@ fontWeight: '700',
   //     path: "sc.A9.iptsChanges.numberOfInstallments",
   //     value: numberOfInstallments,
   //   });
-  //   tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
+  tools.setData({ path: "sc.A9.iptsChanges.owner", value: owner });
   //   tools.setData({ path: "sc.A9.iptsChanges.totalValue", value: totalValue });
 }],
  }})]
