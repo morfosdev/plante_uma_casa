@@ -21748,29 +21748,6 @@ bottom: 8,
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-  flexGrow: 1,
-  flexShrink: 1,
-  flexBasis: 80,
-	color: '#555555',
-	fontSize: 13,
-	fontWeight: '500',
-}`
-          ],
-
-          children: [
-            `Quantidade de Parcelas`
-          ],
-
-          args,
-
         }}/>, (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -21922,28 +21899,25 @@ shadowRadius: 4,
 
           args,
 
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
+        }}/>, 
 
-          arrStyles: [
-            `{
-  flexGrow: 1,
-  flexShrink: 1,
-  flexBasis: 80,
-	color: '#555555',
-	fontSize: 13,
-}`
-          ],
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
 
-          children: [
-            `$var_sc.A9.data.numberOfInstallments`
-          ],
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
 
-          args,
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
-        }}/>],
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
