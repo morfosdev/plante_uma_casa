@@ -30628,9 +30628,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a12.add`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.profile`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.add`],
           value: [false]
         }})]
  , trigger: 'on press'
