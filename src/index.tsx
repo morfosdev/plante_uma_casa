@@ -11246,11 +11246,11 @@ async (...args) =>
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, `$var_sc.a11b.editChanges.docId`],
+        `users`, `$var_sc.A11.forms.editChanges.docId`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges.docId`],
           value: [``]
         }}), 
         async (...args) =>
@@ -19718,11 +19718,11 @@ async (...args) =>
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, `$var_sc.a11b.editChanges.docId`],
+        `users`, `$var_sc.A11.forms.editChanges.docId`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges.docId`],
           value: [``]
         }}), 
         async (...args) =>
@@ -28127,11 +28127,11 @@ async (...args) =>
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, `$var_sc.a11b.editChanges.docId`],
+        `users`, `$var_sc.A11.forms.editChanges.docId`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges.docId`],
           value: [``]
         }}), 
         async (...args) =>
@@ -36528,11 +36528,11 @@ async (...args) =>
  arrFunctions: [(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, `$var_sc.a11b.editChanges.docId`],
+        `users`, `$var_sc.A11.forms.editChanges.docId`],
    arrFuncs: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges`],
+          keyPath: [`sc.A11.forms.editChanges.docId`],
           value: [``]
         }}), 
         async (...args) =>
