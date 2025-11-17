@@ -5403,6 +5403,11 @@ async (...args) =>
           keyPath: [`all.toggles.a1.add`],
           value: [false]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A11.forms.iptsChanges.condoData`],
+          value: [`$arg_item`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a11list");
