@@ -11532,7 +11532,11 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
+            styles:[`{ 
+padding: 5, 
+textAlign: "center", 
+alignItems: 'center', 
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -11569,7 +11573,11 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
+            styles:[`{ 
+padding: 5, 
+textAlign: "center", 
+alignItems: 'center', 
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -19892,7 +19900,11 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
+            styles:[`{ 
+padding: 5, 
+textAlign: "center", 
+alignItems: 'center', 
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -19929,7 +19941,11 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
+            styles:[`{ 
+padding: 5, 
+textAlign: "center", 
+alignItems: 'center', 
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -28199,7 +28215,11 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
+            styles:[`{ 
+padding: 5, 
+textAlign: "center", 
+alignItems: 'center', 
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -28236,7 +28256,11 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
+            styles:[`{ 
+padding: 5, 
+textAlign: "center", 
+alignItems: 'center', 
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -36483,7 +36507,11 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
+            styles:[`{ 
+padding: 5, 
+textAlign: "center", 
+alignItems: 'center', 
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -36520,7 +36548,11 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
+            styles:[`{ 
+padding: 5, 
+textAlign: "center", 
+alignItems: 'center', 
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
