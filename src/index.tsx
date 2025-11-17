@@ -2990,7 +2990,11 @@ paddingHorizontal: 16,
 
           arrStyles: [
             `{
-	color: "red"
+	color: "red",
+	position: 'absolute',
+	alignSelf: 'center',
+	width: 200,
+	textAlign: 'center',
 }`
           ],
 
