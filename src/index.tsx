@@ -42671,7 +42671,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
-        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
+        `{ justifyContent: "flex-start" }`, `{
+backgroundColor: "#f5f5f5", 
+}`],
 
           screenElements:[
         
@@ -42765,7 +42767,6 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
         `{ width: "100%", height: "100%" }`, `{ 
 	width: "100%",
 	flexDirection: "row",
-	alignItems: "center",
 	justifyContent: "flex-start"
  }`],
 
