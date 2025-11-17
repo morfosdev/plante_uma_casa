@@ -12697,8 +12697,7 @@ paddingVertical: 8,
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -21196,8 +21195,7 @@ paddingVertical: 8,
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -29632,8 +29630,7 @@ paddingVertical: 8,
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -38060,8 +38057,7 @@ paddingVertical: 8,
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
