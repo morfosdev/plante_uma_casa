@@ -5327,8 +5327,7 @@ height: 15,
 	borderRadius: 8,
 }`],
 
-            functions:[
-        async (...args) =>
+            functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
@@ -5345,15 +5344,12 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.add`],
           value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a11list");
