@@ -3401,12 +3401,15 @@ color: '#555555',
           ],
 
           arrStyles: [
-            `{
+            
+        `{
 	color: "red",
 	position: 'absolute',
 	alignSelf: 'center',
 	width: 200,
 	textAlign: 'center',
+}`, `{
+	top: -10,
 }`
           ],
 
