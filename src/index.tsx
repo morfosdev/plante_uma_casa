@@ -5058,7 +5058,7 @@ right: 2,
           ],
 
           children: [
-            `Condomínio`
+            `Condomínios`
           ],
 
           args,
