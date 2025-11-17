@@ -6149,6 +6149,8 @@ borderRadius: 10,
           arrStyles: [
             `{
 	color: 'red',
+	position: 'absolute',
+	top: 765,
 }`
           ],
 
@@ -14495,6 +14497,8 @@ borderRadius: 10,
           arrStyles: [
             `{
 	color: 'red',
+	position: 'absolute',
+	top: 765,
 }`
           ],
 
@@ -22788,6 +22792,8 @@ borderRadius: 10,
           arrStyles: [
             `{
 	color: 'red',
+	position: 'absolute',
+	top: 765,
 }`
           ],
 
@@ -31058,6 +31064,8 @@ borderRadius: 10,
           arrStyles: [
             `{
 	color: 'red',
+	position: 'absolute',
+	top: 765,
 }`
           ],
 
