@@ -30593,9 +30593,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A11.forms.editChanges`],
           value: [`$arg_item`]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a12.add`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.profile`],
           value: [false]
         }})]
  , trigger: 'on press'
