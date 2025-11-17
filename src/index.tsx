@@ -3582,6 +3582,11 @@ backgroundColor: 'transparent',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.msgs.msg1`],
+          value: [undefined]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
