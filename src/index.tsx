@@ -11532,7 +11532,7 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -11544,7 +11544,13 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{ color: "red" }`
+            `{ 
+	color: "red", 
+	position: 'absolute',
+	width: 200,
+	textAlign: 'center',
+	top: 0,
+}`
           ],
 
           children: [
@@ -11563,7 +11569,7 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -11575,7 +11581,13 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{ color: "green" }`
+            `{ 
+	color: "green", 
+	position: 'absolute',
+	width: 200,
+	textAlign: 'center',
+	top: 0,
+}`
           ],
 
           children: [
@@ -11743,7 +11755,7 @@ await sendPasswordResetEmail(auth, email, acs);
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
@@ -11813,7 +11825,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -19880,7 +19892,7 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -19892,7 +19904,13 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{ color: "red" }`
+            `{ 
+	color: "red", 
+	position: 'absolute',
+	width: 200,
+	textAlign: 'center',
+	top: 0,
+}`
           ],
 
           children: [
@@ -19911,7 +19929,7 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -19923,7 +19941,13 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{ color: "green" }`
+            `{ 
+	color: "green", 
+	position: 'absolute',
+	width: 200,
+	textAlign: 'center',
+	top: 0,
+}`
           ],
 
           children: [
@@ -20091,7 +20115,7 @@ await sendPasswordResetEmail(auth, email, acs);
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
@@ -20161,7 +20185,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -28175,7 +28199,7 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -28187,7 +28211,13 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{ color: "red" }`
+            `{ 
+	color: "red", 
+	position: 'absolute',
+	width: 200,
+	textAlign: 'center',
+	top: 0,
+}`
           ],
 
           children: [
@@ -28206,7 +28236,7 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -28218,7 +28248,13 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{ color: "green" }`
+            `{ 
+	color: "green", 
+	position: 'absolute',
+	width: 200,
+	textAlign: 'center',
+	top: 0,
+}`
           ],
 
           children: [
@@ -28386,7 +28422,7 @@ await sendPasswordResetEmail(auth, email, acs);
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
@@ -28456,7 +28492,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -36447,7 +36483,7 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -36459,7 +36495,13 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{ color: "red" }`
+            `{ 
+	color: "red", 
+	position: 'absolute',
+	width: 200,
+	textAlign: 'center',
+	top: 0,
+}`
           ],
 
           children: [
@@ -36478,7 +36520,7 @@ fontSize: 12,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center", alignItems: 'center', }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -36490,7 +36532,13 @@ fontSize: 12,
           ],
 
           arrStyles: [
-            `{ color: "green" }`
+            `{ 
+	color: "green", 
+	position: 'absolute',
+	width: 200,
+	textAlign: 'center',
+	top: 0,
+}`
           ],
 
           children: [
@@ -36658,7 +36706,7 @@ await sendPasswordResetEmail(auth, email, acs);
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
@@ -36728,7 +36776,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 14,
 color: '#315E2D',
 fontWeight: '700',
 }`
