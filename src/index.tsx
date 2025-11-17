@@ -48682,21 +48682,7 @@ async (...args) =>
 	paddingVertical: 20,
 }`],
 
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-height: 15,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Accordion pass={{
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	data: "$var_sc.B7.statics.steps",
 	defaultOpenIdx: 0,
