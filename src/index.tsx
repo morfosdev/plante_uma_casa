@@ -11533,8 +11533,6 @@ fontSize: 12,
             elementsProperties:['{}'],
 
             styles:[`{ 
-padding: 5, 
-textAlign: "center", 
 alignItems: 'center', 
 }`],
 
@@ -11553,7 +11551,7 @@ alignItems: 'center',
 	position: 'absolute',
 	width: 200,
 	textAlign: 'center',
-	top: 0,
+	top: 10,
 }`
           ],
 
@@ -11574,8 +11572,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-padding: 5, 
-textAlign: "center", 
 alignItems: 'center', 
 }`],
 
@@ -11594,7 +11590,7 @@ alignItems: 'center',
 	position: 'absolute',
 	width: 200,
 	textAlign: 'center',
-	top: 0,
+	top: 10,
 }`
           ],
 
@@ -19901,8 +19897,6 @@ fontSize: 12,
             elementsProperties:['{}'],
 
             styles:[`{ 
-padding: 5, 
-textAlign: "center", 
 alignItems: 'center', 
 }`],
 
@@ -19921,7 +19915,7 @@ alignItems: 'center',
 	position: 'absolute',
 	width: 200,
 	textAlign: 'center',
-	top: 0,
+	top: 10,
 }`
           ],
 
@@ -19942,8 +19936,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-padding: 5, 
-textAlign: "center", 
 alignItems: 'center', 
 }`],
 
@@ -19962,7 +19954,7 @@ alignItems: 'center',
 	position: 'absolute',
 	width: 200,
 	textAlign: 'center',
-	top: 0,
+	top: 10,
 }`
           ],
 
@@ -28216,8 +28208,6 @@ fontSize: 12,
             elementsProperties:['{}'],
 
             styles:[`{ 
-padding: 5, 
-textAlign: "center", 
 alignItems: 'center', 
 }`],
 
@@ -28236,7 +28226,7 @@ alignItems: 'center',
 	position: 'absolute',
 	width: 200,
 	textAlign: 'center',
-	top: 0,
+	top: 10,
 }`
           ],
 
@@ -28257,8 +28247,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-padding: 5, 
-textAlign: "center", 
 alignItems: 'center', 
 }`],
 
@@ -28277,7 +28265,7 @@ alignItems: 'center',
 	position: 'absolute',
 	width: 200,
 	textAlign: 'center',
-	top: 0,
+	top: 10,
 }`
           ],
 
@@ -36508,8 +36496,6 @@ fontSize: 12,
             elementsProperties:['{}'],
 
             styles:[`{ 
-padding: 5, 
-textAlign: "center", 
 alignItems: 'center', 
 }`],
 
@@ -36528,7 +36514,7 @@ alignItems: 'center',
 	position: 'absolute',
 	width: 200,
 	textAlign: 'center',
-	top: 0,
+	top: 10,
 }`
           ],
 
@@ -36549,8 +36535,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-padding: 5, 
-textAlign: "center", 
 alignItems: 'center', 
 }`],
 
@@ -36569,7 +36553,7 @@ alignItems: 'center',
 	position: 'absolute',
 	width: 200,
 	textAlign: 'center',
-	top: 0,
+	top: 10,
 }`
           ],
 
