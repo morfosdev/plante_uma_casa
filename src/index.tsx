@@ -48022,7 +48022,9 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
-        `{ backgroundColor: "$var_all.colors.smoke" }`, `{ justifyContent: "flex-start" }`],
+        `{ justifyContent: "flex-start" }`, `{
+backgroundColor: "#f5f5f5", 
+}`],
 
           screenElements:[
         
@@ -48116,7 +48118,6 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
         `{ width: "100%", height: "100%" }`, `{ 
 	width: "100%",
 	flexDirection: "row",
-	alignItems: "center",
 	justifyContent: "flex-start"
  }`],
 
@@ -48668,7 +48669,10 @@ async (...args) =>
 
             args,
           }}/>
-        , 
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -48692,12 +48696,7 @@ height: 15,
 
             args,
           }}/>
-        , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{
-borderRadius: 12,
-}`],
-            arrProps: [],
-            arrItems: [(...args:any) => <Elements.Accordion pass={{
+        , (...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	data: "$var_sc.B7.statics.steps",
 	defaultOpenIdx: 0,
@@ -52404,12 +52403,12 @@ top: 2,
           }}/>
         ], args 
  }}/>],
-            args,
-        }}/>],
 
             args,
           }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
