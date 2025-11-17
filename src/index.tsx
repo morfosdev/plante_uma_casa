@@ -43318,7 +43318,10 @@ async (...args) =>
 
             args,
           }}/>
-        , 
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -43471,12 +43474,7 @@ height: 15,
 
             args,
           }}/>
-        , (...args:any) => <Elements.ScrollBar pass={{
-            styles: [`{
-borderRadius: 12,
-}`],
-            arrProps: [],
-            arrItems: [(...args:any) => <Elements.FlatList2 pass={{
+        , (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
@@ -43700,12 +43698,12 @@ height: 25,
 width: '100%',
 }`],    args,
         }}/>],
-            args,
-        }}/>],
 
             args,
           }}/>
         ],
+            args,
+        }}/>],
 
             args,
           }}/>
