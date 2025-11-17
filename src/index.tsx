@@ -3402,7 +3402,11 @@ color: '#555555',
 
           arrStyles: [
             `{
-	color: "red"
+	color: "red",
+	position: 'absolute',
+	alignSelf: 'center',
+	width: 200,
+	textAlign: 'center',
 }`
           ],
 
@@ -3434,10 +3438,14 @@ color: '#555555',
           ],
 
           arrStyles: [
-            
-        `{
-	color: "green"
-}`, `{ paddingHorizontal: 0, textAlign: "center" }`
+            `{
+	color: "green",
+	position: 'absolute',
+	alignSelf: 'center',
+	width: 285,
+	top: -18,
+	textAlign: 'center',
+}`
           ],
 
           children: [
