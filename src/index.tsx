@@ -4895,6 +4895,11 @@ async (...args) =>
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
           value: [undefined]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.msgs.msg1`],
+          value: [undefined]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
@@ -13010,6 +13015,11 @@ async (...args) =>
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.msgs.msg1`],
           value: [undefined]
         }}), 
         (...args) => {
@@ -21360,6 +21370,11 @@ async (...args) =>
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
           value: [undefined]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.msgs.msg1`],
+          value: [undefined]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
@@ -29679,6 +29694,11 @@ async (...args) =>
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.msgs.msg1`],
           value: [undefined]
         }}), 
         (...args) => {
