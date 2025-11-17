@@ -6234,7 +6234,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   let message = "";
 
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
+    message = `✅ Todos os campos foram preenchidos corretamente.`;
 
     tools.functions.setVar({
       args: "",
@@ -14582,7 +14582,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   let message = "";
 
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
+    message = `✅ Todos os campos foram preenchidos corretamente.`;
 
     tools.functions.setVar({
       args: "",
@@ -22877,7 +22877,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   let message = "";
 
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
+    message = `✅ Todos os campos foram preenchidos corretamente.`;
 
     tools.functions.setVar({
       args: "",
@@ -31149,7 +31149,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   let message = "";
 
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
+    message = `✅ Todos os campos foram preenchidos corretamente.`;
 
     tools.functions.setVar({
       args: "",
