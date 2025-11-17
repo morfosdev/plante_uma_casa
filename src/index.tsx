@@ -10171,6 +10171,747 @@ fontWeight: '700',
             elementsProperties:['{}'],
 
             styles:[`{
+backgroundColor: '#f5f5f5',
+width: '100%',
+height: '100%',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a10.addFinance", "==", true ]
+
+]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "white",
+	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	console.log("Olá Amigos")
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a10.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
+    fill="red"
+    viewBox="0 0 18 16"
+    {...props}
+  >
+    <Path
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{ padding: 10 }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
+          ],
+
+          children: [
+            `Formulário de`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `Financeiro`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 14,
+	paddingHorizontal: 18,
+	width: '100%',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "1",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.installmentDescription`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Valor Pago`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "R$ 600,00",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.value`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.value`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "24/09/25",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.date`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.date`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red" }`
+          ],
+
+          children: [
+            `$var_sc.A12.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A12.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  try {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+
+    const lotId = tools.getCtData("sc.A10.currents.currId1");
+    const form = tools.getCtData("sc.A10.forms.editChanges");
+    const data = tools.getCtData("sc.A9.currents.currLoteData");
+
+    console.log("Dados do Lote", { lotId, form, data });
+
+    if (!lotId) {
+      console.warn("Nenhum lote selecionado (lotId ausente)");
+      return;
+    }
+
+    // -------------------------
+    // Normalização dos campos
+    // -------------------------
+    const rawValue = (form?.value || "").trim();
+    const date = (form?.date || "").trim();
+    const description = (form?.installmentDescription || "").trim();
+    console.log("Campos normalizados:", { rawValue, date, description });
+    const value = rawValue;
+
+    // -------------------------
+    // Histórico do lote
+    // -------------------------
+    const existingInstallments = data?.installments || {};
+
+    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
+    let nextIndex = 1;
+    while (existingInstallments["i" + nextIndex]) {
+      nextIndex++;
+    }
+    const newInstallmentId = "i" + nextIndex;
+
+    // -------------------------
+    // Nova parcela
+    // -------------------------
+    const newInstallment = {
+      installmentId: newInstallmentId,
+      date,
+      description,
+      value: value,
+    };
+    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
+
+    // -------------------------
+    // Atualiza histórico (mantém tudo + nova)
+    // -------------------------
+    const updatedInstallments = {
+      ...existingInstallments,
+      [newInstallmentId]: newInstallment,
+    };
+
+    console.log("Histórico atualizado:", { updatedInstallments });
+
+    // Reconta total de parcelas com base nas chaves iN
+    const allKeys = Object.keys(updatedInstallments).filter((k) =>
+      /^id+$/.test(k)
+    );
+
+    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
+
+    // Soma total
+    const totalValue = "Xxx"; // Refazer Cálculo
+
+    // -------------------------
+    // Salvar no Firestore
+    // -------------------------
+    const dataToUpdate = {
+      installments: updatedInstallments,
+      totalValue: "R$500.000,00", // Refazer Cálculo
+    };
+
+    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
+
+    const refDoc = doc(db, "lots", lotId);
+    await updateDoc(refDoc, dataToUpdate);
+
+    console.log("%c[OK] Parcela adicionada:", css1, {
+      newInstallment,
+      dataToUpdate,
+    });
+
+    // Opcional: atualizar o currLoteData local para já refletir na UI
+    tools.setData({
+      path: "sc.A9.currents.currLoteData",
+      value: {
+        ...(data || {}),
+        ...dataToUpdate,
+      },
+    });
+
+    // -------------------------
+    // Reset da UI
+    // -------------------------
+    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
+    tools.setData({ path: "all.toggles.sideRight", value: false });
+    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [
+          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
+            totalValue.toFixed(2),
+        ],
+      },
+    });
+  } catch (err) {
+    console.error("Erro ao salvar no Firebase:", err);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["⚠️ Erro ao salvar. Verifique o console."],
+      },
+    });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a10.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 flex: 1,
 width: '100%',
 backgroundColor: '#f5f5f5',
@@ -11242,7 +11983,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -11953,746 +12693,6 @@ async (...args) =>
           arrStyles: [
             `{
 fontSize: 14,
-color: '#315E2D',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#f5f5f5',
-width: '100%',
-height: '100%',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a10.addFinance", "==", true ]
-
-]
- , trigger: 'on listen'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "white",
-	alignItems: "center",
-	paddingVertical: 4,
-	paddingHorizontal: 10,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={18}
-    height={16}
-    fill="red"
-    viewBox="0 0 18 16"
-    {...props}
-  >
-    <Path
-      stroke="#315E2D"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2.25}
-      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: [`transparent`],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 10,
-fontWeight: '300',
-color: '#CCCCCC',
-}`
-          ],
-
-          children: [
-            `Formulário de`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 14,
-fontWeight: '700',
-color: '#555555',
-}`
-          ],
-
-          children: [
-            `Financeiro`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	paddingVertical: 14,
-	paddingHorizontal: 18,
-	width: '100%',
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: '100%',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "1",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.installmentDescription`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Valor Pago`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "R$ 600,00",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.value`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.value`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "24/09/25",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.date`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.date`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "red" }`
-          ],
-
-          children: [
-            `$var_sc.A12.msgs.msg1`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "green" }`
-          ],
-
-          children: [
-            `$var_sc.A12.forms.msgs.msg1`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-backgroundColor: "#315E2D", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  try {
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-    const fbInit = tools.getCtData("all.temp.fireInit");
-    const db = getFirestore(fbInit);
-
-    const lotId = tools.getCtData("sc.A10.currents.currId1");
-    const form = tools.getCtData("sc.A10.forms.editChanges");
-    const data = tools.getCtData("sc.A9.currents.currLoteData");
-
-    console.log("Dados do Lote", { lotId, form, data });
-
-    if (!lotId) {
-      console.warn("Nenhum lote selecionado (lotId ausente)");
-      return;
-    }
-
-    // -------------------------
-    // Normalização dos campos
-    // -------------------------
-    const rawValue = (form?.value || "").trim();
-    const date = (form?.date || "").trim();
-    const description = (form?.installmentDescription || "").trim();
-    console.log("Campos normalizados:", { rawValue, date, description });
-    const value = rawValue;
-
-    // -------------------------
-    // Histórico do lote
-    // -------------------------
-    const existingInstallments = data?.installments || {};
-
-    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
-    let nextIndex = 1;
-    while (existingInstallments["i" + nextIndex]) {
-      nextIndex++;
-    }
-    const newInstallmentId = "i" + nextIndex;
-
-    // -------------------------
-    // Nova parcela
-    // -------------------------
-    const newInstallment = {
-      installmentId: newInstallmentId,
-      date,
-      description,
-      value: value,
-    };
-    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
-
-    // -------------------------
-    // Atualiza histórico (mantém tudo + nova)
-    // -------------------------
-    const updatedInstallments = {
-      ...existingInstallments,
-      [newInstallmentId]: newInstallment,
-    };
-
-    console.log("Histórico atualizado:", { updatedInstallments });
-
-    // Reconta total de parcelas com base nas chaves iN
-    const allKeys = Object.keys(updatedInstallments).filter((k) =>
-      /^id+$/.test(k)
-    );
-
-    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
-
-    // Soma total
-    const totalValue = "Xxx"; // Refazer Cálculo
-
-    // -------------------------
-    // Salvar no Firestore
-    // -------------------------
-    const dataToUpdate = {
-      installments: updatedInstallments,
-      totalValue: "R$500.000,00", // Refazer Cálculo
-    };
-
-    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
-
-    const refDoc = doc(db, "lots", lotId);
-    await updateDoc(refDoc, dataToUpdate);
-
-    console.log("%c[OK] Parcela adicionada:", css1, {
-      newInstallment,
-      dataToUpdate,
-    });
-
-    // Opcional: atualizar o currLoteData local para já refletir na UI
-    tools.setData({
-      path: "sc.A9.currents.currLoteData",
-      value: {
-        ...(data || {}),
-        ...dataToUpdate,
-      },
-    });
-
-    // -------------------------
-    // Reset da UI
-    // -------------------------
-    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: [
-          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
-            totalValue.toFixed(2),
-        ],
-      },
-    });
-  } catch (err) {
-    console.error("Erro ao salvar no Firebase:", err);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
-      },
-    });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: "transparent", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-borderWidth: 2,
-borderColor: '#315E2D',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -18643,6 +18643,747 @@ fontWeight: '700',
             elementsProperties:['{}'],
 
             styles:[`{
+backgroundColor: '#f5f5f5',
+width: '100%',
+height: '100%',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a10.addFinance", "==", true ]
+
+]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "white",
+	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	console.log("Olá Amigos")
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a10.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
+    fill="red"
+    viewBox="0 0 18 16"
+    {...props}
+  >
+    <Path
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{ padding: 10 }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
+          ],
+
+          children: [
+            `Formulário de`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `Financeiro`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 14,
+	paddingHorizontal: 18,
+	width: '100%',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "1",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.installmentDescription`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Valor Pago`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "R$ 600,00",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.value`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.value`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "24/09/25",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.date`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.date`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red" }`
+          ],
+
+          children: [
+            `$var_sc.A12.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A12.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  try {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+
+    const lotId = tools.getCtData("sc.A10.currents.currId1");
+    const form = tools.getCtData("sc.A10.forms.editChanges");
+    const data = tools.getCtData("sc.A9.currents.currLoteData");
+
+    console.log("Dados do Lote", { lotId, form, data });
+
+    if (!lotId) {
+      console.warn("Nenhum lote selecionado (lotId ausente)");
+      return;
+    }
+
+    // -------------------------
+    // Normalização dos campos
+    // -------------------------
+    const rawValue = (form?.value || "").trim();
+    const date = (form?.date || "").trim();
+    const description = (form?.installmentDescription || "").trim();
+    console.log("Campos normalizados:", { rawValue, date, description });
+    const value = rawValue;
+
+    // -------------------------
+    // Histórico do lote
+    // -------------------------
+    const existingInstallments = data?.installments || {};
+
+    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
+    let nextIndex = 1;
+    while (existingInstallments["i" + nextIndex]) {
+      nextIndex++;
+    }
+    const newInstallmentId = "i" + nextIndex;
+
+    // -------------------------
+    // Nova parcela
+    // -------------------------
+    const newInstallment = {
+      installmentId: newInstallmentId,
+      date,
+      description,
+      value: value,
+    };
+    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
+
+    // -------------------------
+    // Atualiza histórico (mantém tudo + nova)
+    // -------------------------
+    const updatedInstallments = {
+      ...existingInstallments,
+      [newInstallmentId]: newInstallment,
+    };
+
+    console.log("Histórico atualizado:", { updatedInstallments });
+
+    // Reconta total de parcelas com base nas chaves iN
+    const allKeys = Object.keys(updatedInstallments).filter((k) =>
+      /^id+$/.test(k)
+    );
+
+    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
+
+    // Soma total
+    const totalValue = "Xxx"; // Refazer Cálculo
+
+    // -------------------------
+    // Salvar no Firestore
+    // -------------------------
+    const dataToUpdate = {
+      installments: updatedInstallments,
+      totalValue: "R$500.000,00", // Refazer Cálculo
+    };
+
+    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
+
+    const refDoc = doc(db, "lots", lotId);
+    await updateDoc(refDoc, dataToUpdate);
+
+    console.log("%c[OK] Parcela adicionada:", css1, {
+      newInstallment,
+      dataToUpdate,
+    });
+
+    // Opcional: atualizar o currLoteData local para já refletir na UI
+    tools.setData({
+      path: "sc.A9.currents.currLoteData",
+      value: {
+        ...(data || {}),
+        ...dataToUpdate,
+      },
+    });
+
+    // -------------------------
+    // Reset da UI
+    // -------------------------
+    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
+    tools.setData({ path: "all.toggles.sideRight", value: false });
+    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [
+          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
+            totalValue.toFixed(2),
+        ],
+      },
+    });
+  } catch (err) {
+    console.error("Erro ao salvar no Firebase:", err);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["⚠️ Erro ao salvar. Verifique o console."],
+      },
+    });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a10.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 flex: 1,
 width: '100%',
 backgroundColor: '#f5f5f5',
@@ -19714,7 +20455,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -20425,746 +21165,6 @@ async (...args) =>
           arrStyles: [
             `{
 fontSize: 14,
-color: '#315E2D',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#f5f5f5',
-width: '100%',
-height: '100%',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a10.addFinance", "==", true ]
-
-]
- , trigger: 'on listen'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "white",
-	alignItems: "center",
-	paddingVertical: 4,
-	paddingHorizontal: 10,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={18}
-    height={16}
-    fill="red"
-    viewBox="0 0 18 16"
-    {...props}
-  >
-    <Path
-      stroke="#315E2D"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2.25}
-      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: [`transparent`],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 10,
-fontWeight: '300',
-color: '#CCCCCC',
-}`
-          ],
-
-          children: [
-            `Formulário de`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 14,
-fontWeight: '700',
-color: '#555555',
-}`
-          ],
-
-          children: [
-            `Financeiro`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	paddingVertical: 14,
-	paddingHorizontal: 18,
-	width: '100%',
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: '100%',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "1",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.installmentDescription`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Valor Pago`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "R$ 600,00",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.value`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.value`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "24/09/25",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.date`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.date`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "red" }`
-          ],
-
-          children: [
-            `$var_sc.A12.msgs.msg1`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "green" }`
-          ],
-
-          children: [
-            `$var_sc.A12.forms.msgs.msg1`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-backgroundColor: "#315E2D", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  try {
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-    const fbInit = tools.getCtData("all.temp.fireInit");
-    const db = getFirestore(fbInit);
-
-    const lotId = tools.getCtData("sc.A10.currents.currId1");
-    const form = tools.getCtData("sc.A10.forms.editChanges");
-    const data = tools.getCtData("sc.A9.currents.currLoteData");
-
-    console.log("Dados do Lote", { lotId, form, data });
-
-    if (!lotId) {
-      console.warn("Nenhum lote selecionado (lotId ausente)");
-      return;
-    }
-
-    // -------------------------
-    // Normalização dos campos
-    // -------------------------
-    const rawValue = (form?.value || "").trim();
-    const date = (form?.date || "").trim();
-    const description = (form?.installmentDescription || "").trim();
-    console.log("Campos normalizados:", { rawValue, date, description });
-    const value = rawValue;
-
-    // -------------------------
-    // Histórico do lote
-    // -------------------------
-    const existingInstallments = data?.installments || {};
-
-    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
-    let nextIndex = 1;
-    while (existingInstallments["i" + nextIndex]) {
-      nextIndex++;
-    }
-    const newInstallmentId = "i" + nextIndex;
-
-    // -------------------------
-    // Nova parcela
-    // -------------------------
-    const newInstallment = {
-      installmentId: newInstallmentId,
-      date,
-      description,
-      value: value,
-    };
-    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
-
-    // -------------------------
-    // Atualiza histórico (mantém tudo + nova)
-    // -------------------------
-    const updatedInstallments = {
-      ...existingInstallments,
-      [newInstallmentId]: newInstallment,
-    };
-
-    console.log("Histórico atualizado:", { updatedInstallments });
-
-    // Reconta total de parcelas com base nas chaves iN
-    const allKeys = Object.keys(updatedInstallments).filter((k) =>
-      /^id+$/.test(k)
-    );
-
-    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
-
-    // Soma total
-    const totalValue = "Xxx"; // Refazer Cálculo
-
-    // -------------------------
-    // Salvar no Firestore
-    // -------------------------
-    const dataToUpdate = {
-      installments: updatedInstallments,
-      totalValue: "R$500.000,00", // Refazer Cálculo
-    };
-
-    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
-
-    const refDoc = doc(db, "lots", lotId);
-    await updateDoc(refDoc, dataToUpdate);
-
-    console.log("%c[OK] Parcela adicionada:", css1, {
-      newInstallment,
-      dataToUpdate,
-    });
-
-    // Opcional: atualizar o currLoteData local para já refletir na UI
-    tools.setData({
-      path: "sc.A9.currents.currLoteData",
-      value: {
-        ...(data || {}),
-        ...dataToUpdate,
-      },
-    });
-
-    // -------------------------
-    // Reset da UI
-    // -------------------------
-    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: [
-          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
-            totalValue.toFixed(2),
-        ],
-      },
-    });
-  } catch (err) {
-    console.error("Erro ao salvar no Firebase:", err);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
-      },
-    });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: "transparent", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-borderWidth: 2,
-borderColor: '#315E2D',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -27052,6 +27052,747 @@ fontWeight: '700',
             elementsProperties:['{}'],
 
             styles:[`{
+backgroundColor: '#f5f5f5',
+width: '100%',
+height: '100%',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a10.addFinance", "==", true ]
+
+]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "white",
+	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	console.log("Olá Amigos")
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a10.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
+    fill="red"
+    viewBox="0 0 18 16"
+    {...props}
+  >
+    <Path
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{ padding: 10 }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
+          ],
+
+          children: [
+            `Formulário de`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `Financeiro`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 14,
+	paddingHorizontal: 18,
+	width: '100%',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "1",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.installmentDescription`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Valor Pago`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "R$ 600,00",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.value`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.value`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "24/09/25",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.date`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.date`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red" }`
+          ],
+
+          children: [
+            `$var_sc.A12.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A12.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  try {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+
+    const lotId = tools.getCtData("sc.A10.currents.currId1");
+    const form = tools.getCtData("sc.A10.forms.editChanges");
+    const data = tools.getCtData("sc.A9.currents.currLoteData");
+
+    console.log("Dados do Lote", { lotId, form, data });
+
+    if (!lotId) {
+      console.warn("Nenhum lote selecionado (lotId ausente)");
+      return;
+    }
+
+    // -------------------------
+    // Normalização dos campos
+    // -------------------------
+    const rawValue = (form?.value || "").trim();
+    const date = (form?.date || "").trim();
+    const description = (form?.installmentDescription || "").trim();
+    console.log("Campos normalizados:", { rawValue, date, description });
+    const value = rawValue;
+
+    // -------------------------
+    // Histórico do lote
+    // -------------------------
+    const existingInstallments = data?.installments || {};
+
+    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
+    let nextIndex = 1;
+    while (existingInstallments["i" + nextIndex]) {
+      nextIndex++;
+    }
+    const newInstallmentId = "i" + nextIndex;
+
+    // -------------------------
+    // Nova parcela
+    // -------------------------
+    const newInstallment = {
+      installmentId: newInstallmentId,
+      date,
+      description,
+      value: value,
+    };
+    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
+
+    // -------------------------
+    // Atualiza histórico (mantém tudo + nova)
+    // -------------------------
+    const updatedInstallments = {
+      ...existingInstallments,
+      [newInstallmentId]: newInstallment,
+    };
+
+    console.log("Histórico atualizado:", { updatedInstallments });
+
+    // Reconta total de parcelas com base nas chaves iN
+    const allKeys = Object.keys(updatedInstallments).filter((k) =>
+      /^id+$/.test(k)
+    );
+
+    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
+
+    // Soma total
+    const totalValue = "Xxx"; // Refazer Cálculo
+
+    // -------------------------
+    // Salvar no Firestore
+    // -------------------------
+    const dataToUpdate = {
+      installments: updatedInstallments,
+      totalValue: "R$500.000,00", // Refazer Cálculo
+    };
+
+    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
+
+    const refDoc = doc(db, "lots", lotId);
+    await updateDoc(refDoc, dataToUpdate);
+
+    console.log("%c[OK] Parcela adicionada:", css1, {
+      newInstallment,
+      dataToUpdate,
+    });
+
+    // Opcional: atualizar o currLoteData local para já refletir na UI
+    tools.setData({
+      path: "sc.A9.currents.currLoteData",
+      value: {
+        ...(data || {}),
+        ...dataToUpdate,
+      },
+    });
+
+    // -------------------------
+    // Reset da UI
+    // -------------------------
+    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
+    tools.setData({ path: "all.toggles.sideRight", value: false });
+    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [
+          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
+            totalValue.toFixed(2),
+        ],
+      },
+    });
+  } catch (err) {
+    console.error("Erro ao salvar no Firebase:", err);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["⚠️ Erro ao salvar. Verifique o console."],
+      },
+    });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a10.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 flex: 1,
 width: '100%',
 backgroundColor: '#f5f5f5',
@@ -28123,7 +28864,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -28834,746 +29574,6 @@ async (...args) =>
           arrStyles: [
             `{
 fontSize: 14,
-color: '#315E2D',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#f5f5f5',
-width: '100%',
-height: '100%',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a10.addFinance", "==", true ]
-
-]
- , trigger: 'on listen'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "white",
-	alignItems: "center",
-	paddingVertical: 4,
-	paddingHorizontal: 10,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={18}
-    height={16}
-    fill="red"
-    viewBox="0 0 18 16"
-    {...props}
-  >
-    <Path
-      stroke="#315E2D"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2.25}
-      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: [`transparent`],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 10,
-fontWeight: '300',
-color: '#CCCCCC',
-}`
-          ],
-
-          children: [
-            `Formulário de`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 14,
-fontWeight: '700',
-color: '#555555',
-}`
-          ],
-
-          children: [
-            `Financeiro`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	paddingVertical: 14,
-	paddingHorizontal: 18,
-	width: '100%',
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: '100%',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "1",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.installmentDescription`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Valor Pago`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "R$ 600,00",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.value`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.value`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "24/09/25",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.date`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.date`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "red" }`
-          ],
-
-          children: [
-            `$var_sc.A12.msgs.msg1`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "green" }`
-          ],
-
-          children: [
-            `$var_sc.A12.forms.msgs.msg1`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-backgroundColor: "#315E2D", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  try {
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-    const fbInit = tools.getCtData("all.temp.fireInit");
-    const db = getFirestore(fbInit);
-
-    const lotId = tools.getCtData("sc.A10.currents.currId1");
-    const form = tools.getCtData("sc.A10.forms.editChanges");
-    const data = tools.getCtData("sc.A9.currents.currLoteData");
-
-    console.log("Dados do Lote", { lotId, form, data });
-
-    if (!lotId) {
-      console.warn("Nenhum lote selecionado (lotId ausente)");
-      return;
-    }
-
-    // -------------------------
-    // Normalização dos campos
-    // -------------------------
-    const rawValue = (form?.value || "").trim();
-    const date = (form?.date || "").trim();
-    const description = (form?.installmentDescription || "").trim();
-    console.log("Campos normalizados:", { rawValue, date, description });
-    const value = rawValue;
-
-    // -------------------------
-    // Histórico do lote
-    // -------------------------
-    const existingInstallments = data?.installments || {};
-
-    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
-    let nextIndex = 1;
-    while (existingInstallments["i" + nextIndex]) {
-      nextIndex++;
-    }
-    const newInstallmentId = "i" + nextIndex;
-
-    // -------------------------
-    // Nova parcela
-    // -------------------------
-    const newInstallment = {
-      installmentId: newInstallmentId,
-      date,
-      description,
-      value: value,
-    };
-    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
-
-    // -------------------------
-    // Atualiza histórico (mantém tudo + nova)
-    // -------------------------
-    const updatedInstallments = {
-      ...existingInstallments,
-      [newInstallmentId]: newInstallment,
-    };
-
-    console.log("Histórico atualizado:", { updatedInstallments });
-
-    // Reconta total de parcelas com base nas chaves iN
-    const allKeys = Object.keys(updatedInstallments).filter((k) =>
-      /^id+$/.test(k)
-    );
-
-    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
-
-    // Soma total
-    const totalValue = "Xxx"; // Refazer Cálculo
-
-    // -------------------------
-    // Salvar no Firestore
-    // -------------------------
-    const dataToUpdate = {
-      installments: updatedInstallments,
-      totalValue: "R$500.000,00", // Refazer Cálculo
-    };
-
-    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
-
-    const refDoc = doc(db, "lots", lotId);
-    await updateDoc(refDoc, dataToUpdate);
-
-    console.log("%c[OK] Parcela adicionada:", css1, {
-      newInstallment,
-      dataToUpdate,
-    });
-
-    // Opcional: atualizar o currLoteData local para já refletir na UI
-    tools.setData({
-      path: "sc.A9.currents.currLoteData",
-      value: {
-        ...(data || {}),
-        ...dataToUpdate,
-      },
-    });
-
-    // -------------------------
-    // Reset da UI
-    // -------------------------
-    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: [
-          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
-            totalValue.toFixed(2),
-        ],
-      },
-    });
-  } catch (err) {
-    console.error("Erro ao salvar no Firebase:", err);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
-      },
-    });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: "transparent", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-borderWidth: 2,
-borderColor: '#315E2D',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
 color: '#315E2D',
 fontWeight: '700',
 }`
@@ -35453,6 +35453,747 @@ fontWeight: '700',
             elementsProperties:['{}'],
 
             styles:[`{
+backgroundColor: '#f5f5f5',
+width: '100%',
+height: '100%',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.a10.addFinance", "==", true ]
+
+]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "white",
+	alignItems: "center",
+	paddingVertical: 4,
+	paddingHorizontal: 10,
+	shadowColor: '#000',
+	shadowOffset: { width: 0, height: 4 },
+	shadowOpacity: 0.1,
+	shadowRadius: 4,
+}`, `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	console.log("Olá Amigos")
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a10.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={16}
+    fill="red"
+    viewBox="0 0 18 16"
+    {...props}
+  >
+    <Path
+      stroke="#315E2D"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.25}
+      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ flex: 1 }`, 
+        `{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "flex-start"
+ }`, `{ padding: 10 }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 10,
+fontWeight: '300',
+color: '#CCCCCC',
+}`
+          ],
+
+          children: [
+            `Formulário de`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 14,
+fontWeight: '700',
+color: '#555555',
+}`
+          ],
+
+          children: [
+            `Financeiro`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 40,
+	height: 40,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: '#f5f5f5',
+padding: 12,
+alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+        `{ 
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	paddingVertical: 14,
+	paddingHorizontal: 18,
+	width: '100%',
+}`, `{ alignItems: "center", justifyContent: "center" }`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: '100%',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "1",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.installmentDescription`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Valor Pago`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "R$ 600,00",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.value`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.value`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: "24/09/25",
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A10.forms.editChanges.date`],
+
+          funcsArray: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.forms.editChanges.date`],
+          value: [`$arg_callback`]
+        }})],
+
+          args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red" }`
+          ],
+
+          children: [
+            `$var_sc.A12.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "green" }`
+          ],
+
+          children: [
+            `$var_sc.A12.forms.msgs.msg1`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  try {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+
+    const lotId = tools.getCtData("sc.A10.currents.currId1");
+    const form = tools.getCtData("sc.A10.forms.editChanges");
+    const data = tools.getCtData("sc.A9.currents.currLoteData");
+
+    console.log("Dados do Lote", { lotId, form, data });
+
+    if (!lotId) {
+      console.warn("Nenhum lote selecionado (lotId ausente)");
+      return;
+    }
+
+    // -------------------------
+    // Normalização dos campos
+    // -------------------------
+    const rawValue = (form?.value || "").trim();
+    const date = (form?.date || "").trim();
+    const description = (form?.installmentDescription || "").trim();
+    console.log("Campos normalizados:", { rawValue, date, description });
+    const value = rawValue;
+
+    // -------------------------
+    // Histórico do lote
+    // -------------------------
+    const existingInstallments = data?.installments || {};
+
+    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
+    let nextIndex = 1;
+    while (existingInstallments["i" + nextIndex]) {
+      nextIndex++;
+    }
+    const newInstallmentId = "i" + nextIndex;
+
+    // -------------------------
+    // Nova parcela
+    // -------------------------
+    const newInstallment = {
+      installmentId: newInstallmentId,
+      date,
+      description,
+      value: value,
+    };
+    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
+
+    // -------------------------
+    // Atualiza histórico (mantém tudo + nova)
+    // -------------------------
+    const updatedInstallments = {
+      ...existingInstallments,
+      [newInstallmentId]: newInstallment,
+    };
+
+    console.log("Histórico atualizado:", { updatedInstallments });
+
+    // Reconta total de parcelas com base nas chaves iN
+    const allKeys = Object.keys(updatedInstallments).filter((k) =>
+      /^id+$/.test(k)
+    );
+
+    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
+
+    // Soma total
+    const totalValue = "Xxx"; // Refazer Cálculo
+
+    // -------------------------
+    // Salvar no Firestore
+    // -------------------------
+    const dataToUpdate = {
+      installments: updatedInstallments,
+      totalValue: "R$500.000,00", // Refazer Cálculo
+    };
+
+    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
+
+    const refDoc = doc(db, "lots", lotId);
+    await updateDoc(refDoc, dataToUpdate);
+
+    console.log("%c[OK] Parcela adicionada:", css1, {
+      newInstallment,
+      dataToUpdate,
+    });
+
+    // Opcional: atualizar o currLoteData local para já refletir na UI
+    tools.setData({
+      path: "sc.A9.currents.currLoteData",
+      value: {
+        ...(data || {}),
+        ...dataToUpdate,
+      },
+    });
+
+    // -------------------------
+    // Reset da UI
+    // -------------------------
+    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
+    tools.setData({ path: "all.toggles.sideRight", value: false });
+    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [
+          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
+            totalValue.toFixed(2),
+        ],
+      },
+    });
+  } catch (err) {
+    console.error("Erro ao salvar no Firebase:", err);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: ["⚠️ Erro ao salvar. Verifique o console."],
+      },
+    });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+backgroundColor: "transparent", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+borderWidth: 2,
+borderColor: '#315E2D',
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a10.iptChanges`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a10.addFinance`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#315E2D',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Cancelar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
 flex: 1,
 width: '100%',
 backgroundColor: '#f5f5f5',
@@ -36524,7 +37265,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -37235,746 +37975,6 @@ async (...args) =>
           arrStyles: [
             `{
 fontSize: 14,
-color: '#315E2D',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Cancelar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#f5f5f5',
-width: '100%',
-height: '100%',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a10.addFinance", "==", true ]
-
-]
- , trigger: 'on listen'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "white",
-	alignItems: "center",
-	paddingVertical: 4,
-	paddingHorizontal: 10,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`, `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-	console.log("Olá Amigos")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={18}
-    height={16}
-    fill="red"
-    viewBox="0 0 18 16"
-    {...props}
-  >
-    <Path
-      stroke="#315E2D"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2.25}
-      d="M8.438 14.75 1.688 8l6.75-6.75M2.625 8h13.688"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.4375 14.75L1.6875 8L8.4375 1.25M2.625 8H16.3125" stroke="#315E2D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-      `,
-
-      altura: "16px",
-
-      largura: "16px",
-
-      preenchimento: [`transparent`],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ flex: 1 }`, 
-        `{ 
-	width: "100%",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 10,
-fontWeight: '300',
-color: '#CCCCCC',
-}`
-          ],
-
-          children: [
-            `Formulário de`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 14,
-fontWeight: '700',
-color: '#555555',
-}`
-          ],
-
-          children: [
-            `Financeiro`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 40,
-	height: 40,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-        `{ 
-	backgroundColor: "#FFF",
-	borderRadius: 20,
-	paddingVertical: 14,
-	paddingHorizontal: 18,
-	width: '100%',
-}`, `{ alignItems: "center", justifyContent: "center" }`],
-
-            functions:[()=>{}],            childrenItems:[
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: '100%',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "1",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.installmentDescription`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.installmentDescription`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Valor Pago`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "R$ 600,00",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.value`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.value`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "24/09/25",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.A10.forms.editChanges.date`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A10.forms.editChanges.date`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showErr", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "red" }`
-          ],
-
-          children: [
-            `$var_sc.A12.msgs.msg1`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ padding: 5, marginTop: 10, textAlign: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A12.forms.showSuccess", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "green" }`
-          ],
-
-          children: [
-            `$var_sc.A12.forms.msgs.msg1`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-backgroundColor: "#315E2D", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  try {
-    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-    const fbInit = tools.getCtData("all.temp.fireInit");
-    const db = getFirestore(fbInit);
-
-    const lotId = tools.getCtData("sc.A10.currents.currId1");
-    const form = tools.getCtData("sc.A10.forms.editChanges");
-    const data = tools.getCtData("sc.A9.currents.currLoteData");
-
-    console.log("Dados do Lote", { lotId, form, data });
-
-    if (!lotId) {
-      console.warn("Nenhum lote selecionado (lotId ausente)");
-      return;
-    }
-
-    // -------------------------
-    // Normalização dos campos
-    // -------------------------
-    const rawValue = (form?.value || "").trim();
-    const date = (form?.date || "").trim();
-    const description = (form?.installmentDescription || "").trim();
-    console.log("Campos normalizados:", { rawValue, date, description });
-    const value = rawValue;
-
-    // -------------------------
-    // Histórico do lote
-    // -------------------------
-    const existingInstallments = data?.installments || {};
-
-    // 🔹 Encontra o PRÓXIMO ID LIVRE: i1, i2, i3, i4...
-    let nextIndex = 1;
-    while (existingInstallments["i" + nextIndex]) {
-      nextIndex++;
-    }
-    const newInstallmentId = "i" + nextIndex;
-
-    // -------------------------
-    // Nova parcela
-    // -------------------------
-    const newInstallment = {
-      installmentId: newInstallmentId,
-      date,
-      description,
-      value: value,
-    };
-    console.log("Nova parcela criada:", { newInstallmentId, newInstallment });
-
-    // -------------------------
-    // Atualiza histórico (mantém tudo + nova)
-    // -------------------------
-    const updatedInstallments = {
-      ...existingInstallments,
-      [newInstallmentId]: newInstallment,
-    };
-
-    console.log("Histórico atualizado:", { updatedInstallments });
-
-    // Reconta total de parcelas com base nas chaves iN
-    const allKeys = Object.keys(updatedInstallments).filter((k) =>
-      /^id+$/.test(k)
-    );
-
-    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
-
-    // Soma total
-    const totalValue = "Xxx"; // Refazer Cálculo
-
-    // -------------------------
-    // Salvar no Firestore
-    // -------------------------
-    const dataToUpdate = {
-      installments: updatedInstallments,
-      totalValue: "R$500.000,00", // Refazer Cálculo
-    };
-
-    console.log("Dados a atualizar no Firestore:", { dataToUpdate });
-
-    const refDoc = doc(db, "lots", lotId);
-    await updateDoc(refDoc, dataToUpdate);
-
-    console.log("%c[OK] Parcela adicionada:", css1, {
-      newInstallment,
-      dataToUpdate,
-    });
-
-    // Opcional: atualizar o currLoteData local para já refletir na UI
-    tools.setData({
-      path: "sc.A9.currents.currLoteData",
-      value: {
-        ...(data || {}),
-        ...dataToUpdate,
-      },
-    });
-
-    // -------------------------
-    // Reset da UI
-    // -------------------------
-    tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
-    tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: [
-          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
-            totalValue.toFixed(2),
-        ],
-      },
-    });
-  } catch (err) {
-    console.error("Erro ao salvar no Firebase:", err);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
-      },
-    });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-backgroundColor: "transparent", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-borderWidth: 2,
-borderColor: '#315E2D',
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
 color: '#315E2D',
 fontWeight: '700',
 }`
