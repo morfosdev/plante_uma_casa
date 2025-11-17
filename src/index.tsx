@@ -6113,7 +6113,7 @@ borderRadius: 10,
 
           arrStyles: [
             `{
-		color: 'red',
+	color: 'green',
 }`
           ],
 
@@ -14454,7 +14454,7 @@ borderRadius: 10,
 
           arrStyles: [
             `{
-		color: 'red',
+	color: 'green',
 }`
           ],
 
@@ -22742,7 +22742,7 @@ borderRadius: 10,
 
           arrStyles: [
             `{
-		color: 'red',
+	color: 'green',
 }`
           ],
 
@@ -31007,7 +31007,7 @@ borderRadius: 10,
 
           arrStyles: [
             `{
-		color: 'red',
+	color: 'green',
 }`
           ],
 
