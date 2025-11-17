@@ -38083,11 +38083,17 @@ fontWeight: '700',
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`users`],
- arrWhere: [(...args) =>
+ arrWhere: [
+ (...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `typeAccount`, 
         `==`, `partner`],
+        }}), (...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `condoId`, 
+        `==`, `$var_sc.A11.forms.iptsChanges.condoData.docId`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
