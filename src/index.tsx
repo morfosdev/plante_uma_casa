@@ -6024,11 +6024,10 @@ fontSize: 12,
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges.startDate"],
-        value: masked,
+        value: String(masked),
       },
     });
 
-    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -14495,11 +14494,10 @@ fontSize: 12,
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges.startDate"],
-        value: masked,
+        value: String(masked),
       },
     });
 
-    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -22903,11 +22901,10 @@ fontSize: 12,
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges.startDate"],
-        value: masked,
+        value: String(masked),
       },
     });
 
-    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -31303,11 +31300,10 @@ fontSize: 12,
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges.startDate"],
-        value: masked,
+        value: String(masked),
       },
     });
 
-    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
