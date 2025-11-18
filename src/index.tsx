@@ -6020,6 +6020,14 @@ fontSize: 12,
     if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
     if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
 
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: masked,
+      },
+    });
+
     return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
@@ -14483,6 +14491,14 @@ fontSize: 12,
     if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
     if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
 
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: masked,
+      },
+    });
+
     return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
@@ -22883,6 +22899,14 @@ fontSize: 12,
     if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
     if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
 
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: masked,
+      },
+    });
+
     return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
@@ -31274,6 +31298,14 @@ fontSize: 12,
     if (clean.length > 0) masked = clean.slice(0, 2);
     if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
     if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: masked,
+      },
+    });
 
     return masked;
   } catch (e) {
