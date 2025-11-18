@@ -111,7 +111,6 @@ export const DynView = (props: Tprops) => {
   };
 
   // ---------- set Render
-  console.log("args do dynview",{ args });
   if (!sttTypeFunc)
     return <View {...allProps}>{mapElements(childrenItems, args)}</View>;
 
