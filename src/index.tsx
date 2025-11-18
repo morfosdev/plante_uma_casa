@@ -6005,32 +6005,24 @@ fontSize: 12,
 
           funcsArray: [(txt) => {
   try {
-    // Garante string
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
-
-    // 1. Mantém apenas números
+    // Mantém apenas números
     let clean = txt.replace(/D/g, "");
 
-    // 2. Limita ao tamanho máximo da máscara
+    // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
 
-    // 3. Aplica máscara dd/mm/aaaa
-    let masked = clean;
+    let masked = "";
 
-    if (clean.length > 2) {
-      masked = clean.slice(0, 2) + "/" + clean.slice(2);
-    }
-    if (clean.length > 4) {
-      masked = masked.slice(0, 5) + "/" + masked.slice(5);
-    }
+    // Aplica máscara SEM USAR slice sobre texto já mascarado
+    if (clean.length > 0) masked = clean.slice(0, 2);
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
 
-    // Retorna a máscara para o chamador (opcional, mas recomendado)
     return masked;
-
-  } catch (error) {
-    console.error("Erro ao processar o texto:", error);
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
     return txt;
   }
 }],
@@ -14476,32 +14468,24 @@ fontSize: 12,
 
           funcsArray: [(txt) => {
   try {
-    // Garante string
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
-
-    // 1. Mantém apenas números
+    // Mantém apenas números
     let clean = txt.replace(/D/g, "");
 
-    // 2. Limita ao tamanho máximo da máscara
+    // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
 
-    // 3. Aplica máscara dd/mm/aaaa
-    let masked = clean;
+    let masked = "";
 
-    if (clean.length > 2) {
-      masked = clean.slice(0, 2) + "/" + clean.slice(2);
-    }
-    if (clean.length > 4) {
-      masked = masked.slice(0, 5) + "/" + masked.slice(5);
-    }
+    // Aplica máscara SEM USAR slice sobre texto já mascarado
+    if (clean.length > 0) masked = clean.slice(0, 2);
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
 
-    // Retorna a máscara para o chamador (opcional, mas recomendado)
     return masked;
-
-  } catch (error) {
-    console.error("Erro ao processar o texto:", error);
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
     return txt;
   }
 }],
@@ -22884,32 +22868,24 @@ fontSize: 12,
 
           funcsArray: [(txt) => {
   try {
-    // Garante string
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
-
-    // 1. Mantém apenas números
+    // Mantém apenas números
     let clean = txt.replace(/D/g, "");
 
-    // 2. Limita ao tamanho máximo da máscara
+    // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
 
-    // 3. Aplica máscara dd/mm/aaaa
-    let masked = clean;
+    let masked = "";
 
-    if (clean.length > 2) {
-      masked = clean.slice(0, 2) + "/" + clean.slice(2);
-    }
-    if (clean.length > 4) {
-      masked = masked.slice(0, 5) + "/" + masked.slice(5);
-    }
+    // Aplica máscara SEM USAR slice sobre texto já mascarado
+    if (clean.length > 0) masked = clean.slice(0, 2);
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
 
-    // Retorna a máscara para o chamador (opcional, mas recomendado)
     return masked;
-
-  } catch (error) {
-    console.error("Erro ao processar o texto:", error);
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
     return txt;
   }
 }],
@@ -31284,32 +31260,24 @@ fontSize: 12,
 
           funcsArray: [(txt) => {
   try {
-    // Garante string
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
-
-    // 1. Mantém apenas números
+    // Mantém apenas números
     let clean = txt.replace(/D/g, "");
 
-    // 2. Limita ao tamanho máximo da máscara
+    // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
 
-    // 3. Aplica máscara dd/mm/aaaa
-    let masked = clean;
+    let masked = "";
 
-    if (clean.length > 2) {
-      masked = clean.slice(0, 2) + "/" + clean.slice(2);
-    }
-    if (clean.length > 4) {
-      masked = masked.slice(0, 5) + "/" + masked.slice(5);
-    }
+    // Aplica máscara SEM USAR slice sobre texto já mascarado
+    if (clean.length > 0) masked = clean.slice(0, 2);
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
 
-    // Retorna a máscara para o chamador (opcional, mas recomendado)
     return masked;
-
-  } catch (error) {
-    console.error("Erro ao processar o texto:", error);
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
     return txt;
   }
 }],
