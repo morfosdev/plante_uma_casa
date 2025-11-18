@@ -6014,24 +6014,16 @@ fontSize: 12,
     if (clean.length > 8) clean = clean.slice(0, 8);
     console.log({ clean });
 
-    // Aplica a máscara de data
-    const masked = clean
-      ?.replace(/D+/g, "")
-      .replace(/(d{2})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!/!#!")
-      .replace(/(d{4})(d)/, "!#!-!#!")
-      .replace(/(-d{2})d+?$/, "!#!");
-    console.log({ masked });
+    // 1) insere "/" depois do dia -> dd/... 
+    let masked = clean.replace(/^(d{2})(d)/, "!#!/!#!");
 
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
-    
+    // 2) insere "/" depois do mês -> dd/mm/... 
+    masked = masked.replace(/^(d{2}/d{2})(d)/, "!#!/!#!");
+
+    // 3) garante tamanho máximo "dd/mm/aaaa"
+    if (masked.length > 10) masked = masked.slice(0, 10);
+
+    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -14488,24 +14480,16 @@ fontSize: 12,
     if (clean.length > 8) clean = clean.slice(0, 8);
     console.log({ clean });
 
-    // Aplica a máscara de data
-    const masked = clean
-      ?.replace(/D+/g, "")
-      .replace(/(d{2})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!/!#!")
-      .replace(/(d{4})(d)/, "!#!-!#!")
-      .replace(/(-d{2})d+?$/, "!#!");
-    console.log({ masked });
+    // 1) insere "/" depois do dia -> dd/... 
+    let masked = clean.replace(/^(d{2})(d)/, "!#!/!#!");
 
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
-    
+    // 2) insere "/" depois do mês -> dd/mm/... 
+    masked = masked.replace(/^(d{2}/d{2})(d)/, "!#!/!#!");
+
+    // 3) garante tamanho máximo "dd/mm/aaaa"
+    if (masked.length > 10) masked = masked.slice(0, 10);
+
+    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -22899,24 +22883,16 @@ fontSize: 12,
     if (clean.length > 8) clean = clean.slice(0, 8);
     console.log({ clean });
 
-    // Aplica a máscara de data
-    const masked = clean
-      ?.replace(/D+/g, "")
-      .replace(/(d{2})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!/!#!")
-      .replace(/(d{4})(d)/, "!#!-!#!")
-      .replace(/(-d{2})d+?$/, "!#!");
-    console.log({ masked });
+    // 1) insere "/" depois do dia -> dd/... 
+    let masked = clean.replace(/^(d{2})(d)/, "!#!/!#!");
 
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
-    
+    // 2) insere "/" depois do mês -> dd/mm/... 
+    masked = masked.replace(/^(d{2}/d{2})(d)/, "!#!/!#!");
+
+    // 3) garante tamanho máximo "dd/mm/aaaa"
+    if (masked.length > 10) masked = masked.slice(0, 10);
+
+    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -31302,24 +31278,16 @@ fontSize: 12,
     if (clean.length > 8) clean = clean.slice(0, 8);
     console.log({ clean });
 
-    // Aplica a máscara de data
-    const masked = clean
-      ?.replace(/D+/g, "")
-      .replace(/(d{2})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!/!#!")
-      .replace(/(d{4})(d)/, "!#!-!#!")
-      .replace(/(-d{2})d+?$/, "!#!");
-    console.log({ masked });
+    // 1) insere "/" depois do dia -> dd/... 
+    let masked = clean.replace(/^(d{2})(d)/, "!#!/!#!");
 
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
-    
+    // 2) insere "/" depois do mês -> dd/mm/... 
+    masked = masked.replace(/^(d{2}/d{2})(d)/, "!#!/!#!");
+
+    // 3) garante tamanho máximo "dd/mm/aaaa"
+    if (masked.length > 10) masked = masked.slice(0, 10);
+
+    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
