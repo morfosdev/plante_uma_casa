@@ -22490,7 +22490,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.A9.iptsChanges.totalValue`
+            `$var_sc.A9.currents.currLoteData.totalValue`
           ],
 
           args,
