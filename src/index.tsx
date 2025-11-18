@@ -10577,7 +10577,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
+        keyPath: ["sc.A10.forms.editChanges.value"],
         value: [String(masked)],
       },
     });
@@ -19093,7 +19093,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
+        keyPath: ["sc.A10.forms.editChanges.value"],
         value: [String(masked)],
       },
     });
@@ -27546,7 +27546,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
+        keyPath: ["sc.A10.forms.editChanges.value"],
         value: [String(masked)],
       },
     });
@@ -35991,7 +35991,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
+        keyPath: ["sc.A10.forms.editChanges.value"],
         value: [String(masked)],
       },
     });
