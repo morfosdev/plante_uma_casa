@@ -59,7 +59,6 @@ export const IptTxtEdit = (props: Tprops) => {
 
     // modo externo: mantém input responsivo e sincroniza store
     setText(val); // feedback imediato
-    setData({ path: joinedPath, value: val });
     for (const fn of funcsArray) {
       await fn(val, args);
     }
