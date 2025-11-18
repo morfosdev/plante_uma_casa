@@ -6013,12 +6013,13 @@ fontSize: 12,
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
 
-    let masked = "";
-
-    // Aplica máscara SEM USAR slice sobre texto já mascarado
-    if (clean.length > 0) masked = clean.slice(0, 2);
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
+    const masked = clean
+      ?.replace(/D+/g, "")
+      .replace(/(d{2})(d)/, "!#!.!#!")
+      .replace(/(d{3})(d)/, "!#!.!#!")
+      .replace(/(d{3})(d)/, "!#!/!#!")
+      .replace(/(d{4})(d)/, "!#!-!#!")
+      .replace(/(-d{2})d+?$/, "!#!");
 
     tools.functions.setVar({
       args: "",
@@ -6027,7 +6028,6 @@ fontSize: 12,
         value: [String(masked)],
       },
     });
-
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -14483,12 +14483,13 @@ fontSize: 12,
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
 
-    let masked = "";
-
-    // Aplica máscara SEM USAR slice sobre texto já mascarado
-    if (clean.length > 0) masked = clean.slice(0, 2);
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
+    const masked = clean
+      ?.replace(/D+/g, "")
+      .replace(/(d{2})(d)/, "!#!.!#!")
+      .replace(/(d{3})(d)/, "!#!.!#!")
+      .replace(/(d{3})(d)/, "!#!/!#!")
+      .replace(/(d{4})(d)/, "!#!-!#!")
+      .replace(/(-d{2})d+?$/, "!#!");
 
     tools.functions.setVar({
       args: "",
@@ -14497,7 +14498,6 @@ fontSize: 12,
         value: [String(masked)],
       },
     });
-
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -22890,12 +22890,13 @@ fontSize: 12,
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
 
-    let masked = "";
-
-    // Aplica máscara SEM USAR slice sobre texto já mascarado
-    if (clean.length > 0) masked = clean.slice(0, 2);
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
+    const masked = clean
+      ?.replace(/D+/g, "")
+      .replace(/(d{2})(d)/, "!#!.!#!")
+      .replace(/(d{3})(d)/, "!#!.!#!")
+      .replace(/(d{3})(d)/, "!#!/!#!")
+      .replace(/(d{4})(d)/, "!#!-!#!")
+      .replace(/(-d{2})d+?$/, "!#!");
 
     tools.functions.setVar({
       args: "",
@@ -22904,7 +22905,6 @@ fontSize: 12,
         value: [String(masked)],
       },
     });
-
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -31289,12 +31289,13 @@ fontSize: 12,
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
 
-    let masked = "";
-
-    // Aplica máscara SEM USAR slice sobre texto já mascarado
-    if (clean.length > 0) masked = clean.slice(0, 2);
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4);
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8);
+    const masked = clean
+      ?.replace(/D+/g, "")
+      .replace(/(d{2})(d)/, "!#!.!#!")
+      .replace(/(d{3})(d)/, "!#!.!#!")
+      .replace(/(d{3})(d)/, "!#!/!#!")
+      .replace(/(d{4})(d)/, "!#!-!#!")
+      .replace(/(-d{2})d+?$/, "!#!");
 
     tools.functions.setVar({
       args: "",
@@ -31303,7 +31304,6 @@ fontSize: 12,
         value: [String(masked)],
       },
     });
-
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
