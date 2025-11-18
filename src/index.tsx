@@ -10856,17 +10856,11 @@ paddingVertical: 8,
       /^id+$/.test(k)
     );
 
-    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
-
-    // Soma total
-    const totalValue = "Xxx"; // Refazer Cálculo
-
     // -------------------------
     // Salvar no Firestore
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      totalValue: "R$500.000,00", // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -10899,10 +10893,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
-        value: [
-          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
-            totalValue.toFixed(2),
-        ],
+        value: ["Parcela adicionada com sucesso!"],
       },
     });
   } catch (err) {
@@ -10911,7 +10902,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
+        value: ["Erro ao salvar. Verifique o console."],
       },
     });
   }
@@ -19420,17 +19411,11 @@ paddingVertical: 8,
       /^id+$/.test(k)
     );
 
-    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
-
-    // Soma total
-    const totalValue = "Xxx"; // Refazer Cálculo
-
     // -------------------------
     // Salvar no Firestore
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      totalValue: "R$500.000,00", // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -19463,10 +19448,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
-        value: [
-          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
-            totalValue.toFixed(2),
-        ],
+        value: ["Parcela adicionada com sucesso!"],
       },
     });
   } catch (err) {
@@ -19475,7 +19457,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
+        value: ["Erro ao salvar. Verifique o console."],
       },
     });
   }
@@ -27921,17 +27903,11 @@ paddingVertical: 8,
       /^id+$/.test(k)
     );
 
-    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
-
-    // Soma total
-    const totalValue = "Xxx"; // Refazer Cálculo
-
     // -------------------------
     // Salvar no Firestore
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      totalValue: "R$500.000,00", // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -27964,10 +27940,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
-        value: [
-          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
-            totalValue.toFixed(2),
-        ],
+        value: ["Parcela adicionada com sucesso!"],
       },
     });
   } catch (err) {
@@ -27976,7 +27949,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
+        value: ["Erro ao salvar. Verifique o console."],
       },
     });
   }
@@ -36414,17 +36387,11 @@ paddingVertical: 8,
       /^id+$/.test(k)
     );
 
-    // const numberOfInstallments = allKeys.length; // Definir Onde Informar numero total de parcelas
-
-    // Soma total
-    const totalValue = "Xxx"; // Refazer Cálculo
-
     // -------------------------
     // Salvar no Firestore
     // -------------------------
     const dataToUpdate = {
       installments: updatedInstallments,
-      totalValue: "R$500.000,00", // Refazer Cálculo
     };
 
     console.log("Dados a atualizar no Firestore:", { dataToUpdate });
@@ -36457,10 +36424,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
-        value: [
-          "💾 Parcela adicionada com sucesso! Total atualizado: R$ " +
-            totalValue.toFixed(2),
-        ],
+        value: ["Parcela adicionada com sucesso!"],
       },
     });
   } catch (err) {
@@ -36469,7 +36433,7 @@ paddingVertical: 8,
       args: "",
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
-        value: ["⚠️ Erro ao salvar. Verifique o console."],
+        value: ["Erro ao salvar. Verifique o console."],
       },
     });
   }
