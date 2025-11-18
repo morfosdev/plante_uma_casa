@@ -22754,6 +22754,7 @@ shadowRadius: 4,
           args,
 
         }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -22768,7 +22769,16 @@ shadowRadius: 4,
 
             args,
           }}/>
-        ],
+        , 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [(args) => {
+console.log("Botão Recibo");
+
+	return <RN.Text>Element Default</RN.Text>
+}] 
+}}/>
+],
 
             args,
           }}/>
