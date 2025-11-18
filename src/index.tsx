@@ -6007,18 +6007,30 @@ fontSize: 12,
   try {
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    // Mantém apenas números
-    let xxx = txt.replace("/", "");
-    console.log({ xxx });
-    
-    let clean = txt.replace(/D/g, "");
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
 
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
+
     console.log({ clean });
-    
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
+    return txt;
   }
 }],
 
@@ -14465,18 +14477,30 @@ fontSize: 12,
   try {
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    // Mantém apenas números
-    let xxx = txt.replace("/", "");
-    console.log({ xxx });
-    
-    let clean = txt.replace(/D/g, "");
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
 
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
+
     console.log({ clean });
-    
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
+    return txt;
   }
 }],
 
@@ -22860,18 +22884,30 @@ fontSize: 12,
   try {
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    // Mantém apenas números
-    let xxx = txt.replace("/", "");
-    console.log({ xxx });
-    
-    let clean = txt.replace(/D/g, "");
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
 
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
+
     console.log({ clean });
-    
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
+    return txt;
   }
 }],
 
@@ -31247,18 +31283,30 @@ fontSize: 12,
   try {
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    // Mantém apenas números
-    let xxx = txt.replace("/", "");
-    console.log({ xxx });
-    
-    let clean = txt.replace(/D/g, "");
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
 
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
+
     console.log({ clean });
-    
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    return masked;
   } catch (e) {
     console.error("Erro na máscara de data:", e);
+    return txt;
   }
 }],
 
