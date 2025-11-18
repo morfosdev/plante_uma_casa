@@ -22774,6 +22774,8 @@ shadowRadius: 4,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
 console.log("Botão Recibo", args);
+const item = tools.findFlatItem(args);
+console.log("Botão Recibo 2", item);
 
 	return <RN.Text>Element Default</RN.Text>
 }] 
