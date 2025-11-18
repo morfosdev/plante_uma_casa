@@ -22496,40 +22496,47 @@ left: 4,
           args,
 
         }}/>, 
-        
 
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const data = useData((ct) => ct?.sc?.A9?.currents?.currLoteData);
 
-            styles:[`{
-backgroundColor: '#F0F1FF',
-borderRadius: 100,
-height: 8,
-width: 272,
-}`],
+  // --- Progress
+  const total = data?.numberOfInstallments || 0;
+  const receipts = data?.receipts || {};
+  const count = Object.keys(receipts).length;
+  const progress = total > 0 ? count / total : 0;
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+  const [grayWidthPx, setGrayWidthPx] = React.useState(0);
 
-            args,
-          }}/>
-        , 
+  const stlGrayBar: RN.ViewStyle = {
+    width: "100%",
+    height: 6,
+    backgroundColor: "#ededed",
+    borderRadius: 10,
+    overflow: "hidden",
+  };
 
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
+  const stlGreenBar: RN.ViewStyle = {
+    width: grayWidthPx * progress,   // <-- número, sem literal
+    height: 6,
+    backgroundColor: "#315e2d",
+    borderRadius: 10,
+  };
 
-            styles:[`{
-backgroundColor: '#315E2D',
-borderRadius: 100,
-height: 8,
-width: 221,
-bottom: 8,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
+  return (
+    <RN.View
+      style={stlGrayBar}
+      onLayout={(ev) => {
+        setGrayWidthPx(ev.nativeEvent.layout.width);
+      }}
+    >
+      <RN.View style={stlGreenBar} />
+    </RN.View>
+  );
+}] 
+}}/>
+],
 
             args,
           }}/>
