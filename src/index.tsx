@@ -22782,11 +22782,15 @@ shadowRadius: 4,
   console.log("Botão Recibo 4", receipts);
   const currReceipt = receipts[installmentId];
   console.log("Botão Recibo 5", currReceipt);
-  const receiptUrl = currReceipt ? currReceipt.url : null;
+  const receiptUrl = currReceipt ? currReceipt.receiptUrl : null;
   console.log("Botão Recibo 6", receiptUrl);
-  if (receiptUrl) {}
 
-  return <RN.Text>Element Default</RN.Text>;
+  let condStyle = { color: "#CCCCCC", fontSize: 14, fontWeight: "bold" };
+  if (receiptUrl) {
+    condStyle = { color: "#315e2d", fontSize: 14, fontWeight: "bold" };
+  }
+
+  return <RN.Text style={condStyle}>↪</RN.Text>;
 }] 
 }}/>
 ],
