@@ -22773,15 +22773,20 @@ shadowRadius: 4,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-	console.log("Botão Recibo", args);
-	const item = tools.findFlatItem(args);
-	console.log("Botão Recibo 2", item);
-	const installmentId = item.installmentId;
-	console.log("Botão Recibo 3", installmentId);
-	const receipts = tools.getCtData('sc.A9.currents.currLoteData.receipts');
-	console.log("Botão Recibo 4", receipts);
+  console.log("Botão Recibo", args);
+  const item = tools.findFlatItem(args);
+  console.log("Botão Recibo 2", item);
+  const installmentId = item.installmentId;
+  console.log("Botão Recibo 3", installmentId);
+  const receipts = tools.getCtData("sc.A9.currents.currLoteData.receipts");
+  console.log("Botão Recibo 4", receipts);
+  const currReceipt = receipts[installmentId];
+  console.log("Botão Recibo 5", currReceipt);
+  const receiptUrl = currReceipt ? currReceipt.url : null;
+  console.log("Botão Recibo 6", receiptUrl);
+  if (receiptUrl) {}
 
-	return <RN.Text>Element Default</RN.Text>
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 ],
