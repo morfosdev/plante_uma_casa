@@ -1,12 +1,12 @@
 
 // ---------- import Packs
 import JSON5 from 'json5';
-import React, { useEffect, useState } from 'react';
-import { Pressable, ScrollView, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { Pressable, View } from 'react-native';
 
 // ---------- import Local Tools
-import { getStlValues, mapElements, getVarValue, pathSel } from '../project';
 import { useData } from '../../..';
+import { getStlValues, getVarValue, mapElements, pathSel } from '../project';
 
 export const css =
   'color: lightblue; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
@@ -111,6 +111,7 @@ export const DynView = (props: Tprops) => {
   };
 
   // ---------- set Render
+  console.log('args do dynview', args);
   if (!sttTypeFunc)
     return <View {...allProps}>{mapElements(childrenItems, args)}</View>;
 
@@ -144,4 +145,3 @@ export const DynView = (props: Tprops) => {
     );
   }
 };
-
