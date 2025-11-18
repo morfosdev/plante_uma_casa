@@ -50,7 +50,7 @@ export const IptTxtEdit = (props: Tprops) => {
   }, [editData, hasExternal, sttText]);
 
   // onChange: decide o “modo”
-  const getTxt = async (val: string) => {
+  const getTxt = (val: string) => {
     if (!hasExternal) {
       // modo interno: só estado local
       setText(val);
@@ -58,14 +58,26 @@ export const IptTxtEdit = (props: Tprops) => {
     }
 
     // modo externo: mantém input responsivo e sincroniza store
-    let masked;
+    let masked: string | undefined;
 
     for (const fn of funcsArray) {
-      const result = await fn(val, args);
+      try {
+        const result = fn(val, args);
 
-      // Use somente valores string como máscara, ignorando undefined/null
-      if (typeof result === "string" && result.length > 0) {
-        masked = result;
+        // Se for Promise, trata como efeito colateral assíncrono
+        if (result && typeof (result as any).then === "function") {
+          (result as Promise<any>).catch((err) => {
+            console.error("Erro em função externa async:", err);
+          });
+          continue;
+        }
+
+        // Se retornar string, usamos como máscara
+        if (typeof result === "string" && result.length > 0) {
+          masked = result;
+        }
+      } catch (err) {
+        console.error("Erro em função externa:", err);
       }
     }
 
