@@ -6008,6 +6008,9 @@ fontSize: 12,
     if (typeof txt !== "string") txt = String(txt ?? "");
 
     // Mantém apenas números
+    let xxx = txt.replace("/", "");
+    console.log({ xxx });
+    
     let clean = txt.replace(/D/g, "");
 
     // Limita a 8 dígitos (ddmmyyyy)
@@ -6016,7 +6019,6 @@ fontSize: 12,
     
   } catch (e) {
     console.error("Erro na máscara de data:", e);
-    return txt;
   }
 }],
 
@@ -14464,6 +14466,9 @@ fontSize: 12,
     if (typeof txt !== "string") txt = String(txt ?? "");
 
     // Mantém apenas números
+    let xxx = txt.replace("/", "");
+    console.log({ xxx });
+    
     let clean = txt.replace(/D/g, "");
 
     // Limita a 8 dígitos (ddmmyyyy)
@@ -14472,7 +14477,6 @@ fontSize: 12,
     
   } catch (e) {
     console.error("Erro na máscara de data:", e);
-    return txt;
   }
 }],
 
@@ -22857,6 +22861,9 @@ fontSize: 12,
     if (typeof txt !== "string") txt = String(txt ?? "");
 
     // Mantém apenas números
+    let xxx = txt.replace("/", "");
+    console.log({ xxx });
+    
     let clean = txt.replace(/D/g, "");
 
     // Limita a 8 dígitos (ddmmyyyy)
@@ -22865,7 +22872,6 @@ fontSize: 12,
     
   } catch (e) {
     console.error("Erro na máscara de data:", e);
-    return txt;
   }
 }],
 
@@ -31242,6 +31248,9 @@ fontSize: 12,
     if (typeof txt !== "string") txt = String(txt ?? "");
 
     // Mantém apenas números
+    let xxx = txt.replace("/", "");
+    console.log({ xxx });
+    
     let clean = txt.replace(/D/g, "");
 
     // Limita a 8 dígitos (ddmmyyyy)
@@ -31250,7 +31259,6 @@ fontSize: 12,
     
   } catch (e) {
     console.error("Erro na máscara de data:", e);
-    return txt;
   }
 }],
 
