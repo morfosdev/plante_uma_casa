@@ -22774,23 +22774,46 @@ shadowRadius: 4,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   console.log("Botão Recibo", args);
+
   const item = tools.findFlatItem(args);
   console.log("Botão Recibo 2", item);
+
   const installmentId = item.installmentId;
   console.log("Botão Recibo 3", installmentId);
+
   const receipts = tools.getCtData("sc.A9.currents.currLoteData.receipts");
   console.log("Botão Recibo 4", receipts);
+
   const currReceipt = receipts[installmentId];
   console.log("Botão Recibo 5", currReceipt);
+
   const receiptUrl = currReceipt ? currReceipt.receiptUrl : null;
   console.log("Botão Recibo 6", receiptUrl);
 
-  let condStyle = { color: "#CCCCCC", fontSize: 14, fontWeight: "bold" };
-  if (receiptUrl) {
-    condStyle = { color: "#315e2d", fontSize: 14, fontWeight: "bold" };
-  }
+  // ===== estilo condicionado =====
+  const condStyle = {
+    color: receiptUrl ? "#315e2d" : "#CCCCCC",
+    fontSize: 14,
+    fontWeight: "bold",
+  };
 
-  return <RN.Text style={condStyle}>↪</RN.Text>;
+  // ===== função de download (web) =====
+  const baixarRecibo = (url) => {
+    if (!url) return;
+    window.open(url, "_blank");
+  };
+
+  // ===== retorno =====
+  return (
+    <RN.Pressable
+      onPress={() => {
+        console.log("Clicou no botão de recibo");
+        if (receiptUrl) baixarRecibo(receiptUrl);
+      }}
+    >
+      <RN.Text style={condStyle}>↪</RN.Text>
+    </RN.Pressable>
+  );
 }] 
 }}/>
 ],
