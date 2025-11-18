@@ -6024,7 +6024,7 @@ fontSize: 12,
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges.startDate"],
-        value: String(masked),
+        value: [String(masked)],
       },
     });
 
@@ -14494,7 +14494,7 @@ fontSize: 12,
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges.startDate"],
-        value: String(masked),
+        value: [String(masked)],
       },
     });
 
@@ -22901,7 +22901,7 @@ fontSize: 12,
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges.startDate"],
-        value: String(masked),
+        value: [String(masked)],
       },
     });
 
@@ -31300,7 +31300,7 @@ fontSize: 12,
       args: "",
       pass: {
         keyPath: ["sc.a1.iptChanges.startDate"],
-        value: String(masked),
+        value: [String(masked)],
       },
     });
 
