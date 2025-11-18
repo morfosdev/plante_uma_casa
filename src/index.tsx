@@ -6027,7 +6027,15 @@ fontSize: 12,
     if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
     if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
 
-    return masked;
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -14497,7 +14505,15 @@ fontSize: 12,
     if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
     if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
 
-    return masked;
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -22904,7 +22920,15 @@ fontSize: 12,
     if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
     if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
 
-    return masked;
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
@@ -31303,7 +31327,15 @@ fontSize: 12,
     if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
     if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
 
-    return masked;
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
