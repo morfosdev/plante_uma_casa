@@ -10543,11 +10543,49 @@ fontSize: 12,
 
           path: [`sc.A10.forms.editChanges.value`],
 
-          funcsArray: [async (...args) =>
+          funcsArray: [
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A10.forms.editChanges.value`],
           value: [`$arg_callback`]
-        }})],
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
 
           args,
         }}/>, 
@@ -19021,11 +19059,49 @@ fontSize: 12,
 
           path: [`sc.A10.forms.editChanges.value`],
 
-          funcsArray: [async (...args) =>
+          funcsArray: [
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A10.forms.editChanges.value`],
           value: [`$arg_callback`]
-        }})],
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
 
           args,
         }}/>, 
@@ -27436,11 +27512,49 @@ fontSize: 12,
 
           path: [`sc.A10.forms.editChanges.value`],
 
-          funcsArray: [async (...args) =>
+          funcsArray: [
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A10.forms.editChanges.value`],
           value: [`$arg_callback`]
-        }})],
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
 
           args,
         }}/>, 
@@ -35843,11 +35957,49 @@ fontSize: 12,
 
           path: [`sc.A10.forms.editChanges.value`],
 
-          funcsArray: [async (...args) =>
+          funcsArray: [
+        async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A10.forms.editChanges.value`],
           value: [`$arg_callback`]
-        }})],
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.iptChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
 
           args,
         }}/>, 
