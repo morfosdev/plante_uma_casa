@@ -6015,13 +6015,8 @@ fontSize: 12,
     console.log({ clean });
 
     // Aplica a máscara de data
-    const masked = clean
-      ?.replace(/D+/g, "")
-      .replace(/(d{2})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!/!#!")
-      .replace(/(d{4})(d)/, "!#!-!#!")
-      .replace(/(-d{2})d+?$/, "!#!");
+    const masked = clean.replace(/(d{2})(d)/, "!#!.!#!");
+
     console.log({ masked });
 
     tools.functions.setVar({
@@ -6031,12 +6026,12 @@ fontSize: 12,
         value: [String(masked)],
       },
     });
-    
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
   }
-}],
+}
+],
 
           args,
         }}/>, 
@@ -14489,13 +14484,8 @@ fontSize: 12,
     console.log({ clean });
 
     // Aplica a máscara de data
-    const masked = clean
-      ?.replace(/D+/g, "")
-      .replace(/(d{2})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!/!#!")
-      .replace(/(d{4})(d)/, "!#!-!#!")
-      .replace(/(-d{2})d+?$/, "!#!");
+    const masked = clean.replace(/(d{2})(d)/, "!#!.!#!");
+
     console.log({ masked });
 
     tools.functions.setVar({
@@ -14505,12 +14495,12 @@ fontSize: 12,
         value: [String(masked)],
       },
     });
-    
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
   }
-}],
+}
+],
 
           args,
         }}/>, 
@@ -22900,13 +22890,8 @@ fontSize: 12,
     console.log({ clean });
 
     // Aplica a máscara de data
-    const masked = clean
-      ?.replace(/D+/g, "")
-      .replace(/(d{2})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!/!#!")
-      .replace(/(d{4})(d)/, "!#!-!#!")
-      .replace(/(-d{2})d+?$/, "!#!");
+    const masked = clean.replace(/(d{2})(d)/, "!#!.!#!");
+
     console.log({ masked });
 
     tools.functions.setVar({
@@ -22916,12 +22901,12 @@ fontSize: 12,
         value: [String(masked)],
       },
     });
-    
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
   }
-}],
+}
+],
 
           args,
         }}/>, 
@@ -31303,13 +31288,8 @@ fontSize: 12,
     console.log({ clean });
 
     // Aplica a máscara de data
-    const masked = clean
-      ?.replace(/D+/g, "")
-      .replace(/(d{2})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!.!#!")
-      .replace(/(d{3})(d)/, "!#!/!#!")
-      .replace(/(d{4})(d)/, "!#!-!#!")
-      .replace(/(-d{2})d+?$/, "!#!");
+    const masked = clean.replace(/(d{2})(d)/, "!#!.!#!");
+
     console.log({ masked });
 
     tools.functions.setVar({
@@ -31319,12 +31299,12 @@ fontSize: 12,
         value: [String(masked)],
       },
     });
-    
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
   }
-}],
+}
+],
 
           args,
         }}/>, 
