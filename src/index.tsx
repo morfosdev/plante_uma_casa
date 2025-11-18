@@ -6013,25 +6013,12 @@ fontSize: 12,
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
     console.log({ clean });
-
-    // Aplica a máscara de data
-    const masked = clean.replace(/(d{2})(d)/, "!#!.!#!");
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
+    
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
   }
-}
-],
+}],
 
           args,
         }}/>, 
@@ -14482,25 +14469,12 @@ fontSize: 12,
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
     console.log({ clean });
-
-    // Aplica a máscara de data
-    const masked = clean.replace(/(d{2})(d)/, "!#!.!#!");
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
+    
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
   }
-}
-],
+}],
 
           args,
         }}/>, 
@@ -22888,25 +22862,12 @@ fontSize: 12,
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
     console.log({ clean });
-
-    // Aplica a máscara de data
-    const masked = clean.replace(/(d{2})(d)/, "!#!.!#!");
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
+    
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
   }
-}
-],
+}],
 
           args,
         }}/>, 
@@ -31286,25 +31247,12 @@ fontSize: 12,
     // Limita a 8 dígitos (ddmmyyyy)
     if (clean.length > 8) clean = clean.slice(0, 8);
     console.log({ clean });
-
-    // Aplica a máscara de data
-    const masked = clean.replace(/(d{2})(d)/, "!#!.!#!");
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
+    
   } catch (e) {
     console.error("Erro na máscara de data:", e);
     return txt;
   }
-}
-],
+}],
 
           args,
         }}/>, 
