@@ -6009,8 +6009,29 @@ fontSize: 12,
     if (typeof txt !== "string") txt = String(txt ?? "");
 
     console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
+
+    // 1. Mantém apenas números
+    let clean = txt.replace(/D/g, "");
+
+    // 2. Limita ao tamanho máximo da máscara
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    // 3. Aplica máscara dd/mm/aaaa
+    let masked = clean;
+
+    if (clean.length > 2) {
+      masked = clean.slice(0, 2) + "/" + clean.slice(2);
+    }
+    if (clean.length > 4) {
+      masked = masked.slice(0, 5) + "/" + masked.slice(5);
+    }
+
+    // Retorna a máscara para o chamador (opcional, mas recomendado)
+    return masked;
+
   } catch (error) {
     console.error("Erro ao processar o texto:", error);
+    return txt;
   }
 }],
 
@@ -14459,8 +14480,29 @@ fontSize: 12,
     if (typeof txt !== "string") txt = String(txt ?? "");
 
     console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
+
+    // 1. Mantém apenas números
+    let clean = txt.replace(/D/g, "");
+
+    // 2. Limita ao tamanho máximo da máscara
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    // 3. Aplica máscara dd/mm/aaaa
+    let masked = clean;
+
+    if (clean.length > 2) {
+      masked = clean.slice(0, 2) + "/" + clean.slice(2);
+    }
+    if (clean.length > 4) {
+      masked = masked.slice(0, 5) + "/" + masked.slice(5);
+    }
+
+    // Retorna a máscara para o chamador (opcional, mas recomendado)
+    return masked;
+
   } catch (error) {
     console.error("Erro ao processar o texto:", error);
+    return txt;
   }
 }],
 
@@ -22846,8 +22888,29 @@ fontSize: 12,
     if (typeof txt !== "string") txt = String(txt ?? "");
 
     console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
+
+    // 1. Mantém apenas números
+    let clean = txt.replace(/D/g, "");
+
+    // 2. Limita ao tamanho máximo da máscara
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    // 3. Aplica máscara dd/mm/aaaa
+    let masked = clean;
+
+    if (clean.length > 2) {
+      masked = clean.slice(0, 2) + "/" + clean.slice(2);
+    }
+    if (clean.length > 4) {
+      masked = masked.slice(0, 5) + "/" + masked.slice(5);
+    }
+
+    // Retorna a máscara para o chamador (opcional, mas recomendado)
+    return masked;
+
   } catch (error) {
     console.error("Erro ao processar o texto:", error);
+    return txt;
   }
 }],
 
@@ -31225,8 +31288,29 @@ fontSize: 12,
     if (typeof txt !== "string") txt = String(txt ?? "");
 
     console.log("Raw recebido:", txt, " (type:", typeof txt + ")");
+
+    // 1. Mantém apenas números
+    let clean = txt.replace(/D/g, "");
+
+    // 2. Limita ao tamanho máximo da máscara
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    // 3. Aplica máscara dd/mm/aaaa
+    let masked = clean;
+
+    if (clean.length > 2) {
+      masked = clean.slice(0, 2) + "/" + clean.slice(2);
+    }
+    if (clean.length > 4) {
+      masked = masked.slice(0, 5) + "/" + masked.slice(5);
+    }
+
+    // Retorna a máscara para o chamador (opcional, mas recomendado)
+    return masked;
+
   } catch (error) {
     console.error("Erro ao processar o texto:", error);
+    return txt;
   }
 }],
 

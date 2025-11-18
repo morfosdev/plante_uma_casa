@@ -1,12 +1,12 @@
 
 // ---------- import Packs
-import React from 'react';
-import JSON5 from 'json5';
-import { TextInput } from 'react-native';
+import JSON5 from "json5";
+import React from "react";
+import { TextInput } from "react-native";
 
 // ---------- import Local Tools
-import { getVarValue, getStlValues, pathSel, setData } from '../project';
-import { useData } from '../../..';
+import { useData } from "../../..";
+import { getStlValues, getVarValue, pathSel, setData } from "../project";
 
 type TFunc = (val: string, args?: any) => any | Promise<any>;
 
@@ -33,10 +33,10 @@ export const IptTxtEdit = (props: Tprops) => {
   const joinedPath = path.join();
 
   // Estado local
-  const [sttText, setText] = React.useState('');
+  const [sttText, setText] = React.useState("");
 
   // Leitura do store (sempre segura; só vamos usar quando for o caso)
-  const editData = useData(ct => pathSel(ct, joinedPath));
+  const editData = useData((ct) => pathSel(ct, joinedPath));
 
   // Tem handlers externos?
   const hasExternal = Array.isArray(funcsArray) && funcsArray.length > 0;
@@ -58,11 +58,21 @@ export const IptTxtEdit = (props: Tprops) => {
     }
 
     // modo externo: mantém input responsivo e sincroniza store
-    setText(val); // feedback imediato
-    setData({ path: joinedPath, value: val });
+    let masked;
+
     for (const fn of funcsArray) {
-      await fn(val, args);
+      const result = await fn(val, args);
+
+      // Use somente valores string como máscara, ignorando undefined/null
+      if (typeof result === "string" && result.length > 0) {
+        masked = result;
+      }
     }
+
+    const finalValue = masked ?? val;
+
+    setText(finalValue);
+    setData({ path: joinedPath, value: finalValue });
   };
 
   // ---------- Styles
@@ -71,7 +81,7 @@ export const IptTxtEdit = (props: Tprops) => {
   // ---------- Extra props do usuário
   const userElProps: Record<string, any> = {};
   for (const strObj of propsArray) {
-    if (!strObj || typeof strObj !== 'string') continue;
+    if (!strObj || typeof strObj !== "string") continue;
     const parsed = JSON5.parse(strObj);
     for (const key in parsed) {
       const value = parsed[key];
@@ -84,8 +94,8 @@ export const IptTxtEdit = (props: Tprops) => {
     style: stlsUser,
     value: sttText,
     onChangeText: getTxt,
-    placeholder: 'Escreva...',
-    placeholderTextColor: '#ccc',
+    placeholder: "Escreva...",
+    placeholderTextColor: "#ccc",
     ...userElProps,
   };
 
