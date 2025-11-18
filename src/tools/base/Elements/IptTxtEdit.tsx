@@ -1,12 +1,12 @@
 
 // ---------- import Packs
-import JSON5 from "json5";
-import React from "react";
-import { TextInput } from "react-native";
+import JSON5 from 'json5';
+import React from 'react';
+import { TextInput } from 'react-native';
 
 // ---------- import Local Tools
-import { useData } from "../../..";
-import { getStlValues, getVarValue, pathSel, setData } from "../project";
+import { useData } from '../../..';
+import { getStlValues, getVarValue, pathSel, setData } from '../project';
 
 type TFunc = (val: string, args?: any) => any | Promise<any>;
 
@@ -33,10 +33,10 @@ export const IptTxtEdit = (props: Tprops) => {
   const joinedPath = path.join();
 
   // Estado local
-  const [sttText, setText] = React.useState("");
+  const [sttText, setText] = React.useState('');
 
   // Leitura do store (sempre segura; só vamos usar quando for o caso)
-  const editData = useData((ct) => pathSel(ct, joinedPath));
+  const editData = useData(ct => pathSel(ct, joinedPath));
 
   // Tem handlers externos?
   const hasExternal = Array.isArray(funcsArray) && funcsArray.length > 0;
@@ -50,7 +50,7 @@ export const IptTxtEdit = (props: Tprops) => {
   }, [editData, hasExternal, sttText]);
 
   // onChange: decide o “modo”
-  const getTxt = (val: string) => {
+  const getTxt = async (val: string) => {
     if (!hasExternal) {
       // modo interno: só estado local
       setText(val);
@@ -58,33 +58,11 @@ export const IptTxtEdit = (props: Tprops) => {
     }
 
     // modo externo: mantém input responsivo e sincroniza store
-    let masked: string | undefined;
-
+    setText(val); // feedback imediato
+    setData({ path: joinedPath, value: val });
     for (const fn of funcsArray) {
-      try {
-        const result = fn(val, args);
-
-        // Se for Promise, trata como efeito colateral assíncrono
-        if (result && typeof (result as any).then === "function") {
-          (result as Promise<any>).catch((err) => {
-            console.error("Erro em função externa async:", err);
-          });
-          continue;
-        }
-
-        // Se retornar string, usamos como máscara
-        if (typeof result === "string" && result.length > 0) {
-          masked = result;
-        }
-      } catch (err) {
-        console.error("Erro em função externa:", err);
-      }
+      await fn(val, args);
     }
-
-    const finalValue = masked ?? val;
-
-    setText(finalValue);
-    setData({ path: joinedPath, value: finalValue });
   };
 
   // ---------- Styles
@@ -93,7 +71,7 @@ export const IptTxtEdit = (props: Tprops) => {
   // ---------- Extra props do usuário
   const userElProps: Record<string, any> = {};
   for (const strObj of propsArray) {
-    if (!strObj || typeof strObj !== "string") continue;
+    if (!strObj || typeof strObj !== 'string') continue;
     const parsed = JSON5.parse(strObj);
     for (const key in parsed) {
       const value = parsed[key];
@@ -106,8 +84,8 @@ export const IptTxtEdit = (props: Tprops) => {
     style: stlsUser,
     value: sttText,
     onChangeText: getTxt,
-    placeholder: "Escreva...",
-    placeholderTextColor: "#ccc",
+    placeholder: 'Escreva...',
+    placeholderTextColor: '#ccc',
     ...userElProps,
   };
 
