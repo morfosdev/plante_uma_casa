@@ -6229,8 +6229,19 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
         value: [message],
       },
     });
+    // estado = erro (COR VERMELHA)
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationStatus"],
+        value: ["error"],
+      },
+    });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return; // ⚠️ Interrompe o processo se houver campos vazios
   }
 
@@ -6243,6 +6254,14 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
       value: [message],
     },
   });
+  // estado = sucesso (COR VERDE)
+tools.functions.setVar({
+  args: "",
+  pass: {
+    keyPath: ["sc.a1.validationStatus"],
+    value: ["success"],
+  },
+});
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
@@ -6256,7 +6275,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -6266,8 +6286,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
-		images: getVal("sc.a1.iptChanges.arrImages"),
-		files: getVal("sc.a1.iptChanges.arrDocuments"),
+    images: getVal("sc.a1.iptChanges.arrImages"),
+    files: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -6275,14 +6295,14 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     const docRef = await addDoc(collection(db, "condos"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-// Atualiza o documento para incluir o próprio ID
+    // Atualiza o documento para incluir o próprio ID
     await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["Condomínio salvo com sucesso!"],
       },
     });
   } catch (error) {
@@ -6296,42 +6316,42 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     });
   }
 
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges"],
-        value: [""],
-      },
-    });
+  //clean iptsChanges
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.iptChanges"],
+      value: [""],
+    },
+  });
 
-//close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+  //close Form
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.forms"],
+      value: [" "],
+    },
+  });
 
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
+  //close sideRight
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.sideRight"],
+      value: [false],
+    },
+  });
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
-}
+  //clean text message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [""],
+    },
+  });
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -14891,8 +14911,19 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
         value: [message],
       },
     });
+    // estado = erro (COR VERMELHA)
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationStatus"],
+        value: ["error"],
+      },
+    });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return; // ⚠️ Interrompe o processo se houver campos vazios
   }
 
@@ -14905,6 +14936,14 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
       value: [message],
     },
   });
+  // estado = sucesso (COR VERDE)
+tools.functions.setVar({
+  args: "",
+  pass: {
+    keyPath: ["sc.a1.validationStatus"],
+    value: ["success"],
+  },
+});
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
@@ -14918,7 +14957,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -14928,8 +14968,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
-		images: getVal("sc.a1.iptChanges.arrImages"),
-		files: getVal("sc.a1.iptChanges.arrDocuments"),
+    images: getVal("sc.a1.iptChanges.arrImages"),
+    files: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -14937,14 +14977,14 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     const docRef = await addDoc(collection(db, "condos"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-// Atualiza o documento para incluir o próprio ID
+    // Atualiza o documento para incluir o próprio ID
     await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["Condomínio salvo com sucesso!"],
       },
     });
   } catch (error) {
@@ -14958,42 +14998,42 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     });
   }
 
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges"],
-        value: [""],
-      },
-    });
+  //clean iptsChanges
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.iptChanges"],
+      value: [""],
+    },
+  });
 
-//close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+  //close Form
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.forms"],
+      value: [" "],
+    },
+  });
 
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
+  //close sideRight
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.sideRight"],
+      value: [false],
+    },
+  });
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
-}
+  //clean text message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [""],
+    },
+  });
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -23550,8 +23590,19 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
         value: [message],
       },
     });
+    // estado = erro (COR VERMELHA)
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationStatus"],
+        value: ["error"],
+      },
+    });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return; // ⚠️ Interrompe o processo se houver campos vazios
   }
 
@@ -23564,6 +23615,14 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
       value: [message],
     },
   });
+  // estado = sucesso (COR VERDE)
+tools.functions.setVar({
+  args: "",
+  pass: {
+    keyPath: ["sc.a1.validationStatus"],
+    value: ["success"],
+  },
+});
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
@@ -23577,7 +23636,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -23587,8 +23647,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
-		images: getVal("sc.a1.iptChanges.arrImages"),
-		files: getVal("sc.a1.iptChanges.arrDocuments"),
+    images: getVal("sc.a1.iptChanges.arrImages"),
+    files: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -23596,14 +23656,14 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     const docRef = await addDoc(collection(db, "condos"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-// Atualiza o documento para incluir o próprio ID
+    // Atualiza o documento para incluir o próprio ID
     await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["Condomínio salvo com sucesso!"],
       },
     });
   } catch (error) {
@@ -23617,42 +23677,42 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     });
   }
 
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges"],
-        value: [""],
-      },
-    });
+  //clean iptsChanges
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.iptChanges"],
+      value: [""],
+    },
+  });
 
-//close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+  //close Form
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.forms"],
+      value: [" "],
+    },
+  });
 
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
+  //close sideRight
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.sideRight"],
+      value: [false],
+    },
+  });
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
-}
+  //clean text message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [""],
+    },
+  });
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -32136,8 +32196,19 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
         value: [message],
       },
     });
+    // estado = erro (COR VERMELHA)
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.a1.validationStatus"],
+        value: ["error"],
+      },
+    });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return; // ⚠️ Interrompe o processo se houver campos vazios
   }
 
@@ -32150,6 +32221,14 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
       value: [message],
     },
   });
+  // estado = sucesso (COR VERDE)
+tools.functions.setVar({
+  args: "",
+  pass: {
+    keyPath: ["sc.a1.validationStatus"],
+    value: ["success"],
+  },
+});
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
@@ -32163,7 +32242,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
@@ -32173,8 +32253,8 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
-		images: getVal("sc.a1.iptChanges.arrImages"),
-		files: getVal("sc.a1.iptChanges.arrDocuments"),
+    images: getVal("sc.a1.iptChanges.arrImages"),
+    files: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -32182,14 +32262,14 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     const docRef = await addDoc(collection(db, "condos"), newDoc);
     console.log("✅ Documento salvo com ID:", docRef.id);
 
-// Atualiza o documento para incluir o próprio ID
+    // Atualiza o documento para incluir o próprio ID
     await updateDoc(docRef, { docId: docRef.id });
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.a1.validationMessage"],
-        value: ["🏢 Condomínio salvo com sucesso!"],
+        value: ["Condomínio salvo com sucesso!"],
       },
     });
   } catch (error) {
@@ -32203,42 +32283,42 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     });
   }
 
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges"],
-        value: [""],
-      },
-    });
+  //clean iptsChanges
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.iptChanges"],
+      value: [""],
+    },
+  });
 
-//close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+  //close Form
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.forms"],
+      value: [" "],
+    },
+  });
 
-//close sideRight
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.sideRight"],
-        value: [false],
-      },
-    });
+  //close sideRight
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.sideRight"],
+      value: [false],
+    },
+  });
 
-//clean text message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationMessage"],
-        value: [""],
-      },
-    });
-}
+  //clean text message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a1.validationMessage"],
+      value: [""],
+    },
+  });
+};
 ]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
