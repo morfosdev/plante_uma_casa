@@ -9693,11 +9693,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.editChanges.email`],
+          path: [`sc.A7.forms.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.editChanges.email`],
+          keyPath: [`sc.A7.forms.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -18408,11 +18408,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.editChanges.email`],
+          path: [`sc.A7.forms.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.editChanges.email`],
+          keyPath: [`sc.A7.forms.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -27120,11 +27120,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.editChanges.email`],
+          path: [`sc.A7.forms.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.editChanges.email`],
+          keyPath: [`sc.A7.forms.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
@@ -35759,11 +35759,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.editChanges.email`],
+          path: [`sc.A7.forms.editChanges.userEmail`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.editChanges.email`],
+          keyPath: [`sc.A7.forms.editChanges.userEmail`],
           value: [`$arg_callback`]
         }})],
 
