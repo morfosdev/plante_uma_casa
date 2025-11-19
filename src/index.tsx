@@ -65328,16 +65328,21 @@ fontWeight: '700',
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [
-        `locations`, 
-        `$var_sc.B1.currId`, `localBikes`],
-            arrFuncs: [async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`users`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `all.authUser.docId`],
+        }})],
+ arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.lists.lst3`],
+          keyPath: [`sc.C6.forms.iptsChanges`],
           value: [`$arg_callback`]
         }})],
-        }})]
+ }})]
  , trigger: 'on init'
 }})],
 
