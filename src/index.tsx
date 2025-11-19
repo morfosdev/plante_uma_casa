@@ -5124,7 +5124,7 @@ right: 2,
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
-          value: [a1Add]
+          value: [`a1Add`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
