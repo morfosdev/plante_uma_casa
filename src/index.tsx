@@ -30944,8 +30944,8 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [true]
+          keyPath: [`all.toggles.forms`],
+          value: [`a12Add`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -31153,32 +31153,17 @@ shadowRadius: 4,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
           keyPath: [`sc.A11.forms.editChanges`],
           value: [`$arg_item`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`a11Edit`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
