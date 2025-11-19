@@ -5499,7 +5499,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.forms", "==", "a1Add" ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -5669,7 +5669,7 @@ color: '#555555',
           ],
 
           children: [
-            `a1ADD`
+            `Condomínio`
           ],
 
           args,
@@ -14145,7 +14145,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.forms", "==", "a1Add" ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -14315,7 +14315,7 @@ color: '#555555',
           ],
 
           children: [
-            `a1ADD`
+            `Condomínio`
           ],
 
           args,
@@ -22778,7 +22778,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.forms", "==", "a1Add" ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -22948,7 +22948,7 @@ color: '#555555',
           ],
 
           children: [
-            `a1ADD`
+            `Condomínio`
           ],
 
           args,
@@ -31353,7 +31353,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.forms", "==", "a1Add" ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -31523,7 +31523,7 @@ color: '#555555',
           ],
 
           children: [
-            `a1ADD`
+            `Condomínio`
           ],
 
           args,
@@ -65828,7 +65828,8 @@ tools.setData({
 ] } 
 , 
 'toggles': { 
-'box1': true, 'checkbox1': false } 
+'box1': true, 
+'checkbox1': false, 'forms': false } 
 , 
 'texts': { 
 'sizes': { 
