@@ -6136,27 +6136,12 @@ borderRadius: 10,
             `{
 	position: 'absolute',
 	top: 776,
+	color: $var_sc.a1.validationColor,
 }`
           ],
 
           children: [
             `$var_sc.a1.validationMessage`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_sc.a1.validationStatus`
           ],
 
           args,
@@ -6245,13 +6230,10 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
       },
     });
     // estado = erro (COR VERMELHA)
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationStatus"],
-        value: ["error"],
-      },
-    });
+    tools.setData({
+  path: "sc.a1.validationColor",
+  value: "red",
+});
 
     console.warn(
       "⚠️ Campos vazios detectados:",
@@ -6270,13 +6252,11 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     },
   });
   // estado = sucesso (COR VERDE)
-tools.functions.setVar({
-  args: "",
-  pass: {
-    keyPath: ["sc.a1.validationStatus"],
-    value: ["success"],
-  },
+tools.setData({
+  path: "sc.a1.validationColor",
+  value: "green",
 });
+
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
@@ -14832,27 +14812,12 @@ borderRadius: 10,
             `{
 	position: 'absolute',
 	top: 776,
+	color: $var_sc.a1.validationColor,
 }`
           ],
 
           children: [
             `$var_sc.a1.validationMessage`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_sc.a1.validationStatus`
           ],
 
           args,
@@ -14941,13 +14906,10 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
       },
     });
     // estado = erro (COR VERMELHA)
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationStatus"],
-        value: ["error"],
-      },
-    });
+    tools.setData({
+  path: "sc.a1.validationColor",
+  value: "red",
+});
 
     console.warn(
       "⚠️ Campos vazios detectados:",
@@ -14966,13 +14928,11 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     },
   });
   // estado = sucesso (COR VERDE)
-tools.functions.setVar({
-  args: "",
-  pass: {
-    keyPath: ["sc.a1.validationStatus"],
-    value: ["success"],
-  },
+tools.setData({
+  path: "sc.a1.validationColor",
+  value: "green",
 });
+
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
@@ -23525,27 +23485,12 @@ borderRadius: 10,
             `{
 	position: 'absolute',
 	top: 776,
+	color: $var_sc.a1.validationColor,
 }`
           ],
 
           children: [
             `$var_sc.a1.validationMessage`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_sc.a1.validationStatus`
           ],
 
           args,
@@ -23634,13 +23579,10 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
       },
     });
     // estado = erro (COR VERMELHA)
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationStatus"],
-        value: ["error"],
-      },
-    });
+    tools.setData({
+  path: "sc.a1.validationColor",
+  value: "red",
+});
 
     console.warn(
       "⚠️ Campos vazios detectados:",
@@ -23659,13 +23601,11 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     },
   });
   // estado = sucesso (COR VERDE)
-tools.functions.setVar({
-  args: "",
-  pass: {
-    keyPath: ["sc.a1.validationStatus"],
-    value: ["success"],
-  },
+tools.setData({
+  path: "sc.a1.validationColor",
+  value: "green",
 });
+
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
@@ -32145,27 +32085,12 @@ borderRadius: 10,
             `{
 	position: 'absolute',
 	top: 776,
+	color: $var_sc.a1.validationColor,
 }`
           ],
 
           children: [
             `$var_sc.a1.validationMessage`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_sc.a1.validationStatus`
           ],
 
           args,
@@ -32254,13 +32179,10 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
       },
     });
     // estado = erro (COR VERMELHA)
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.validationStatus"],
-        value: ["error"],
-      },
-    });
+    tools.setData({
+  path: "sc.a1.validationColor",
+  value: "red",
+});
 
     console.warn(
       "⚠️ Campos vazios detectados:",
@@ -32279,13 +32201,11 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
     },
   });
   // estado = sucesso (COR VERDE)
-tools.functions.setVar({
-  args: "",
-  pass: {
-    keyPath: ["sc.a1.validationStatus"],
-    value: ["success"],
-  },
+tools.setData({
+  path: "sc.a1.validationColor",
+  value: "green",
 });
+
 
   console.log("💾 Validação OK — salvando no Firebase...");
 
