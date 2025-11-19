@@ -8873,7 +8873,7 @@ paddingVertical: 8,
       createdAt: serverTimestamp(),
     });
 
-    console.log("✅ Novo usuário criado com docId:", ownerId);
+    console.log("Novo usuário criado com docId:", ownerId);
   }
 
   // Cria o lote vinculado ao proprietário
@@ -8894,7 +8894,7 @@ paddingVertical: 8,
     const docRef = await addDoc(lotsRef, newLot);
     await updateDoc(docRef, { docId: docRef.id });
 
-    console.log("✅ Lote salvo com ID:", docRef.id);
+    console.log("Lote salvo com ID:", docRef.id);
 
     tools.functions.setVar({
       args: "",
@@ -8902,8 +8902,8 @@ paddingVertical: 8,
         keyPath: ["sc.a7.validationMessage"],
         value: [
           userExists
-            ? "🏠 Lote vinculado ao proprietário existente!"
-            : "🆕 Proprietário e lote cadastrados com sucesso!",
+            ? "Lote vinculado ao proprietário existente!"
+            : "Proprietário e lote cadastrados com sucesso!",
         ],
       },
     });
@@ -17588,7 +17588,7 @@ paddingVertical: 8,
       createdAt: serverTimestamp(),
     });
 
-    console.log("✅ Novo usuário criado com docId:", ownerId);
+    console.log("Novo usuário criado com docId:", ownerId);
   }
 
   // Cria o lote vinculado ao proprietário
@@ -17609,7 +17609,7 @@ paddingVertical: 8,
     const docRef = await addDoc(lotsRef, newLot);
     await updateDoc(docRef, { docId: docRef.id });
 
-    console.log("✅ Lote salvo com ID:", docRef.id);
+    console.log("Lote salvo com ID:", docRef.id);
 
     tools.functions.setVar({
       args: "",
@@ -17617,8 +17617,8 @@ paddingVertical: 8,
         keyPath: ["sc.a7.validationMessage"],
         value: [
           userExists
-            ? "🏠 Lote vinculado ao proprietário existente!"
-            : "🆕 Proprietário e lote cadastrados com sucesso!",
+            ? "Lote vinculado ao proprietário existente!"
+            : "Proprietário e lote cadastrados com sucesso!",
         ],
       },
     });
@@ -26300,7 +26300,7 @@ paddingVertical: 8,
       createdAt: serverTimestamp(),
     });
 
-    console.log("✅ Novo usuário criado com docId:", ownerId);
+    console.log("Novo usuário criado com docId:", ownerId);
   }
 
   // Cria o lote vinculado ao proprietário
@@ -26321,7 +26321,7 @@ paddingVertical: 8,
     const docRef = await addDoc(lotsRef, newLot);
     await updateDoc(docRef, { docId: docRef.id });
 
-    console.log("✅ Lote salvo com ID:", docRef.id);
+    console.log("Lote salvo com ID:", docRef.id);
 
     tools.functions.setVar({
       args: "",
@@ -26329,8 +26329,8 @@ paddingVertical: 8,
         keyPath: ["sc.a7.validationMessage"],
         value: [
           userExists
-            ? "🏠 Lote vinculado ao proprietário existente!"
-            : "🆕 Proprietário e lote cadastrados com sucesso!",
+            ? "Lote vinculado ao proprietário existente!"
+            : "Proprietário e lote cadastrados com sucesso!",
         ],
       },
     });
@@ -34939,7 +34939,7 @@ paddingVertical: 8,
       createdAt: serverTimestamp(),
     });
 
-    console.log("✅ Novo usuário criado com docId:", ownerId);
+    console.log("Novo usuário criado com docId:", ownerId);
   }
 
   // Cria o lote vinculado ao proprietário
@@ -34960,7 +34960,7 @@ paddingVertical: 8,
     const docRef = await addDoc(lotsRef, newLot);
     await updateDoc(docRef, { docId: docRef.id });
 
-    console.log("✅ Lote salvo com ID:", docRef.id);
+    console.log("Lote salvo com ID:", docRef.id);
 
     tools.functions.setVar({
       args: "",
@@ -34968,8 +34968,8 @@ paddingVertical: 8,
         keyPath: ["sc.a7.validationMessage"],
         value: [
           userExists
-            ? "🏠 Lote vinculado ao proprietário existente!"
-            : "🆕 Proprietário e lote cadastrados com sucesso!",
+            ? "Lote vinculado ao proprietário existente!"
+            : "Proprietário e lote cadastrados com sucesso!",
         ],
       },
     });
