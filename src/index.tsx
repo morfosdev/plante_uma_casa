@@ -5039,13 +5039,11 @@ async (...args) =>
       elementsProperties:[{}],
 
       styles:[{
-height: 100,
 width: '100%',
-position: 'absolute',
-right: 2,
+height: 100, 
 }],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/image_44.png?alt=media&token=1fc7f67c-b200-4145-b3e6-403b080e4f37`],
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2Fimage_44.png?alt=media&token=e7415ce8-af35-476d-97bc-293919f99949`],
 
       args,
     }}/>, 
@@ -13494,13 +13492,11 @@ async (...args) =>
       elementsProperties:[{}],
 
       styles:[{
-height: 100,
 width: '100%',
-position: 'absolute',
-right: 2,
+height: 100, 
 }],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/image_44.png?alt=media&token=1fc7f67c-b200-4145-b3e6-403b080e4f37`],
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2Fimage_44.png?alt=media&token=e7415ce8-af35-476d-97bc-293919f99949`],
 
       args,
     }}/>, 
@@ -22159,13 +22155,11 @@ async (...args) =>
       elementsProperties:[{}],
 
       styles:[{
-height: 100,
 width: '100%',
-position: 'absolute',
-right: 2,
+height: 100, 
 }],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/image_44.png?alt=media&token=1fc7f67c-b200-4145-b3e6-403b080e4f37`],
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2Fimage_44.png?alt=media&token=e7415ce8-af35-476d-97bc-293919f99949`],
 
       args,
     }}/>, 
@@ -30849,13 +30843,11 @@ async (...args) =>
       elementsProperties:[{}],
 
       styles:[{
-height: 100,
 width: '100%',
-position: 'absolute',
-right: 2,
+height: 100, 
 }],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/image_44.png?alt=media&token=1fc7f67c-b200-4145-b3e6-403b080e4f37`],
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2Fimage_44.png?alt=media&token=e7415ce8-af35-476d-97bc-293919f99949`],
 
       args,
     }}/>, 
