@@ -10313,8 +10313,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -10923,7 +10923,14 @@ paddingVertical: 8,
     // -------------------------
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+   //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
 
     tools.functions.setVar({
       args: "",
@@ -11010,8 +11017,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -18957,8 +18964,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -19567,7 +19574,14 @@ paddingVertical: 8,
     // -------------------------
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+   //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
 
     tools.functions.setVar({
       args: "",
@@ -19654,8 +19668,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -27598,8 +27612,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -28208,7 +28222,14 @@ paddingVertical: 8,
     // -------------------------
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+   //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
 
     tools.functions.setVar({
       args: "",
@@ -28295,8 +28316,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -36166,8 +36187,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -36776,7 +36797,14 @@ paddingVertical: 8,
     // -------------------------
     tools.setData({ path: "sc.A10.forms.editChanges", value: {} });
     tools.setData({ path: "all.toggles.sideRight", value: false });
-    tools.setData({ path: "all.toggles.a10.addFinance", value: false });
+   //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
 
     tools.functions.setVar({
       args: "",
@@ -36863,8 +36891,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
