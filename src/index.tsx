@@ -5145,11 +5145,10 @@ async (...args) =>
       elementsProperties:[{}],
 
       styles:[{
-	width: 150,
-	height: 100,
-	borderRadius: '6px',
-	borderWidth: '1px',
-	borderColor: '#e6e7e8',
+height: 100,
+width: '100%',
+position: 'absolute',
+right: 2,
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2Fimage_44.png?alt=media&token=e7415ce8-af35-476d-97bc-293919f99949`],
