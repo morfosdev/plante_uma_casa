@@ -65330,11 +65330,11 @@ fontWeight: '700',
  arrFunctions: [async (...args) =>
  functions.firebase.where({ args, pass:{
 
-  arrRefStrings: [`users`],
+  arrRefStrings: [`lots`],
  arrWhere: [(...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
-        `docId`, 
+        `ownerId`, 
         `==`, `$var_.all.authUser.docId`],
         }})],
  arrFuncs: [async (...args) =>
