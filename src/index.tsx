@@ -6350,8 +6350,7 @@ tools.functions.setVar({
       value: [""],
     },
   });
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -15031,8 +15030,7 @@ tools.functions.setVar({
       value: [""],
     },
   });
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -23709,8 +23707,7 @@ tools.functions.setVar({
       value: [""],
     },
   });
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -32314,8 +32311,7 @@ tools.functions.setVar({
       value: [""],
     },
   });
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
