@@ -5147,8 +5147,8 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [true]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -5524,7 +5524,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.add", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -14185,7 +14185,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.add", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -22838,7 +22838,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.add", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -31428,7 +31428,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.add", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
