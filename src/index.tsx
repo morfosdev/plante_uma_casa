@@ -22272,8 +22272,8 @@ async (...args) =>
           value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [true]
+          keyPath: [`all.toggles.forms`],
+          value: [`a10Add`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
