@@ -5152,7 +5152,7 @@ async (...args) =>
 	borderColor: '#e6e7e8',
 }],
 
-      URIvariablePath:[`$arg_images`],
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2Fimage_44.png?alt=media&token=e7415ce8-af35-476d-97bc-293919f99949`],
 
       args,
     }}/>],
