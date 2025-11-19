@@ -65334,8 +65334,8 @@ fontWeight: '700',
  arrWhere: [(...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
-        `$var_.all.authUser.docId`, 
-        `==`, `docId`],
+        `docId`, 
+        `==`, `$var_.all.authUser.docId`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
