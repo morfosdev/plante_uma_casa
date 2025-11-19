@@ -6133,11 +6133,10 @@ borderRadius: 10,
           ],
 
           arrStyles: [
-            
-        `{
+            `{
 	position: 'absolute',
 	top: 776,
-}`, `() => tools.getCtData("sc.a1.validationStatus") === "success" ? "green" : "red"`
+}`
           ],
 
           children: [
@@ -14815,11 +14814,10 @@ borderRadius: 10,
           ],
 
           arrStyles: [
-            
-        `{
+            `{
 	position: 'absolute',
 	top: 776,
-}`, `() => tools.getCtData("sc.a1.validationStatus") === "success" ? "green" : "red"`
+}`
           ],
 
           children: [
@@ -23494,11 +23492,10 @@ borderRadius: 10,
           ],
 
           arrStyles: [
-            
-        `{
+            `{
 	position: 'absolute',
 	top: 776,
-}`, `() => tools.getCtData("sc.a1.validationStatus") === "success" ? "green" : "red"`
+}`
           ],
 
           children: [
@@ -32100,11 +32097,10 @@ borderRadius: 10,
           ],
 
           arrStyles: [
-            
-        `{
+            `{
 	position: 'absolute',
 	top: 776,
-}`, `() => tools.getCtData("sc.a1.validationStatus") === "success" ? "green" : "red"`
+}`
           ],
 
           children: [
