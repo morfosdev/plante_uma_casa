@@ -5390,7 +5390,7 @@ width: 15,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.condoData`],
+          keyPath: [`sc.A7.forms.currData.condoData`],
           value: [`$arg_item`]
         }}), 
         (...args) => {
@@ -8834,7 +8834,7 @@ paddingVertical: 8,
   // Pega dados do formulário
   const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
   const name = getVal("sc.A7.forms.iptsChanges.partnerName");
-  const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
+  const condoId = getVal("sc.A7.forms.currData.condoData.docId");
 
   if (!condoId) {
     tools.functions.setVar({
@@ -17549,7 +17549,7 @@ paddingVertical: 8,
   // Pega dados do formulário
   const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
   const name = getVal("sc.A7.forms.iptsChanges.partnerName");
-  const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
+  const condoId = getVal("sc.A7.forms.currData.condoData.docId");
 
   if (!condoId) {
     tools.functions.setVar({
@@ -26261,7 +26261,7 @@ paddingVertical: 8,
   // Pega dados do formulário
   const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
   const name = getVal("sc.A7.forms.iptsChanges.partnerName");
-  const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
+  const condoId = getVal("sc.A7.forms.currData.condoData.docId");
 
   if (!condoId) {
     tools.functions.setVar({
@@ -34900,7 +34900,7 @@ paddingVertical: 8,
   // Pega dados do formulário
   const email = getVal("sc.A7.forms.iptsChanges.partnerMail");
   const name = getVal("sc.A7.forms.iptsChanges.partnerName");
-  const condoId = getVal("sc.A7.forms.iptsChanges.condoData.docId");
+  const condoId = getVal("sc.A7.forms.currData.condoData.docId");
 
   if (!condoId) {
     tools.functions.setVar({
