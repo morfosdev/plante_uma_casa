@@ -6304,12 +6304,12 @@ tools.functions.setVar({
       },
     });
 
-//close Add
+//close Form
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
-        value: [false],
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
       },
     });
 
@@ -14940,12 +14940,12 @@ tools.functions.setVar({
       },
     });
 
-//close Add
+//close Form
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
-        value: [false],
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
       },
     });
 
@@ -23573,12 +23573,12 @@ tools.functions.setVar({
       },
     });
 
-//close Add
+//close Form
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
-        value: [false],
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
       },
     });
 
@@ -32133,12 +32133,12 @@ tools.functions.setVar({
       },
     });
 
-//close Add
+//close Form
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.add"],
-        value: [false],
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
       },
     });
 
