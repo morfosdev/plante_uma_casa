@@ -6146,6 +6146,25 @@ borderRadius: 10,
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	position: 'absolute',
+	top: 776,
+}`
+          ],
+
+          children: [
+            `$var_sc.a1.validationStatus`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -14821,6 +14840,25 @@ borderRadius: 10,
 
           children: [
             `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	position: 'absolute',
+	top: 776,
+}`
+          ],
+
+          children: [
+            `$var_sc.a1.validationStatus`
           ],
 
           args,
@@ -23503,6 +23541,25 @@ borderRadius: 10,
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	position: 'absolute',
+	top: 776,
+}`
+          ],
+
+          children: [
+            `$var_sc.a1.validationStatus`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -32102,6 +32159,25 @@ borderRadius: 10,
 
           children: [
             `$var_sc.a1.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	position: 'absolute',
+	top: 776,
+}`
+          ],
+
+          children: [
+            `$var_sc.a1.validationStatus`
           ],
 
           args,
