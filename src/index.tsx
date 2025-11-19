@@ -65829,7 +65829,7 @@ tools.setData({
 , 
 'toggles': { 
 'box1': true, 
-'checkbox1': false, 'forms': false } 
+'checkbox1': false, 'forms': "nenhum" } 
 , 
 'texts': { 
 'sizes': { 
