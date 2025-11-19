@@ -5499,7 +5499,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", "a1Add" ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -14145,7 +14145,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", "a1Add" ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -22778,7 +22778,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", "a1Add" ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -31353,7 +31353,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.forms", "==", a1Add ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", "a1Add" ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
