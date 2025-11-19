@@ -13876,18 +13876,13 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges`],
-          value: [undefined]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [true]
+          keyPath: [`sc.a1.iptChanges`],
+          value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -13898,15 +13893,10 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`a7Edit`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
