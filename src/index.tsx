@@ -4656,8 +4656,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -5231,8 +5231,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.a1.profile`],
@@ -5347,8 +5347,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -5588,8 +5588,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -6429,8 +6429,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -13113,8 +13113,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -13921,8 +13921,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -14249,8 +14249,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -15090,8 +15090,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -21781,8 +21781,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -22902,8 +22902,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -23743,8 +23743,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -30467,8 +30467,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -31492,8 +31492,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -32333,8 +32333,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.add`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [a1Add]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
