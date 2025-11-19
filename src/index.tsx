@@ -5148,6 +5148,7 @@ async (...args) =>
 height: 100,
 width: '100%',
 position: 'absolute',
+zIndex: -1,
 right: 2,
 }],
 
