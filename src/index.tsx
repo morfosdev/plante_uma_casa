@@ -4656,8 +4656,7 @@ async (...args) =>
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
-          value: [
-        profile, `a3Profile`]
+          value: [`a3Profile`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -13089,8 +13088,7 @@ async (...args) =>
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
-          value: [
-        profile, `a3Profile`]
+          value: [`a3Profile`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -21743,8 +21741,7 @@ async (...args) =>
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
-          value: [
-        profile, `a3Profile`]
+          value: [`a3Profile`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -30410,8 +30407,7 @@ async (...args) =>
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
-          value: [
-        profile, `a3Profile`]
+          value: [`a3Profile`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
