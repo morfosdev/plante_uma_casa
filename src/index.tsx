@@ -6136,7 +6136,7 @@ borderRadius: 10,
             `{
 	position: 'absolute',
 	top: 776,
-	color: $var_sc.a1.validationColor,
+	color: '$var_sc.a1.validationColor',
 }`
           ],
 
@@ -14812,7 +14812,7 @@ borderRadius: 10,
             `{
 	position: 'absolute',
 	top: 776,
-	color: $var_sc.a1.validationColor,
+	color: '$var_sc.a1.validationColor',
 }`
           ],
 
@@ -23485,7 +23485,7 @@ borderRadius: 10,
             `{
 	position: 'absolute',
 	top: 776,
-	color: $var_sc.a1.validationColor,
+	color: '$var_sc.a1.validationColor',
 }`
           ],
 
@@ -32085,7 +32085,7 @@ borderRadius: 10,
             `{
 	position: 'absolute',
 	top: 776,
-	color: $var_sc.a1.validationColor,
+	color: '$var_sc.a1.validationColor',
 }`
           ],
 
