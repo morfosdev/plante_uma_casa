@@ -10319,7 +10319,7 @@ height: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
+          keyPath: [`sc.A10.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -11062,7 +11062,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
+          keyPath: [`sc.A10.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -19034,7 +19034,7 @@ height: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
+          keyPath: [`sc.A10.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -19777,7 +19777,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
+          keyPath: [`sc.A10.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -27746,7 +27746,7 @@ height: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
+          keyPath: [`sc.A10.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -28489,7 +28489,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
+          keyPath: [`sc.A10.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -36385,7 +36385,7 @@ height: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
+          keyPath: [`sc.A10.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
@@ -37128,7 +37128,7 @@ borderColor: '#315E2D',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a10.iptChanges`],
+          keyPath: [`sc.A10.forms.editChanges`],
           value: [undefined]
         }}), 
 async (...args) =>
