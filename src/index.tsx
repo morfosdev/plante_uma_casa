@@ -7813,8 +7813,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -8090,8 +8090,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -8909,10 +8909,16 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
   });
-  tools.functions.setVar({
-    args: "",
-    pass: { keyPath: ["all.toggles.a7.addOwner"], value: [false] },
-  });
+
+  //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
+
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["all.toggles.sideRight"], value: [false] },
@@ -8995,8 +9001,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -16450,8 +16456,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -16727,8 +16733,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -17546,10 +17552,16 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
   });
-  tools.functions.setVar({
-    args: "",
-    pass: { keyPath: ["all.toggles.a7.addOwner"], value: [false] },
-  });
+
+  //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
+
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["all.toggles.sideRight"], value: [false] },
@@ -17632,8 +17644,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -25084,8 +25096,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -25361,8 +25373,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -26180,10 +26192,16 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
   });
-  tools.functions.setVar({
-    args: "",
-    pass: { keyPath: ["all.toggles.a7.addOwner"], value: [false] },
-  });
+
+  //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
+
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["all.toggles.sideRight"], value: [false] },
@@ -26266,8 +26284,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -33645,8 +33663,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -33922,8 +33940,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -34741,10 +34759,16 @@ paddingVertical: 8,
     args: "",
     pass: { keyPath: ["sc.A7.forms.iptsChanges"], value: [""] },
   });
-  tools.functions.setVar({
-    args: "",
-    pass: { keyPath: ["all.toggles.a7.addOwner"], value: [false] },
-  });
+
+  //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
+
   tools.functions.setVar({
     args: "",
     pass: { keyPath: ["all.toggles.sideRight"], value: [false] },
@@ -34827,8 +34851,8 @@ async (...args) =>
           value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
