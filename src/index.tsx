@@ -6235,7 +6235,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   }
 
   // Se todos os campos estiverem preenchidos
-  message = "Campos preenchidos com sucesso.";
+  message = "Salvo com sucesso!";
   tools.functions.setVar({
     args: "",
     pass: {
@@ -14897,7 +14897,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   }
 
   // Se todos os campos estiverem preenchidos
-  message = "Campos preenchidos com sucesso.";
+  message = "Salvo com sucesso!";
   tools.functions.setVar({
     args: "",
     pass: {
@@ -23556,7 +23556,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   }
 
   // Se todos os campos estiverem preenchidos
-  message = "Campos preenchidos com sucesso.";
+  message = "Salvo com sucesso!";
   tools.functions.setVar({
     args: "",
     pass: {
@@ -32142,7 +32142,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   }
 
   // Se todos os campos estiverem preenchidos
-  message = "Campos preenchidos com sucesso.";
+  message = "Salvo com sucesso!";
   tools.functions.setVar({
     args: "",
     pass: {
