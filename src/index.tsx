@@ -6152,10 +6152,7 @@ borderRadius: 10,
           ],
 
           arrStyles: [
-            `{
-	position: 'absolute',
-	top: 776,
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -14851,10 +14848,7 @@ borderRadius: 10,
           ],
 
           arrStyles: [
-            `{
-	position: 'absolute',
-	top: 776,
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -23547,10 +23541,7 @@ borderRadius: 10,
           ],
 
           arrStyles: [
-            `{
-	position: 'absolute',
-	top: 776,
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
@@ -32170,10 +32161,7 @@ borderRadius: 10,
           ],
 
           arrStyles: [
-            `{
-	position: 'absolute',
-	top: 776,
-}`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
