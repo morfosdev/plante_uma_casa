@@ -11137,8 +11137,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -11413,8 +11413,8 @@ async (...args) =>
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
@@ -11971,11 +11971,12 @@ paddingVertical: 8,
       },
     });
 
-    tools.functions.setVar({
+    //close Form
+tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a11b.editPartner"],
-        value: [false],
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
       },
     });
 
@@ -12075,8 +12076,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -19788,8 +19789,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -20064,8 +20065,8 @@ async (...args) =>
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
@@ -20622,11 +20623,12 @@ paddingVertical: 8,
       },
     });
 
-    tools.functions.setVar({
+    //close Form
+tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a11b.editPartner"],
-        value: [false],
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
       },
     });
 
@@ -20726,8 +20728,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -28436,8 +28438,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -28712,8 +28714,8 @@ async (...args) =>
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
@@ -29270,11 +29272,12 @@ paddingVertical: 8,
       },
     });
 
-    tools.functions.setVar({
+    //close Form
+tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a11b.editPartner"],
-        value: [false],
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
       },
     });
 
@@ -29374,8 +29377,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -37011,8 +37014,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -37287,8 +37290,8 @@ async (...args) =>
         }}), 
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
@@ -37845,11 +37848,12 @@ paddingVertical: 8,
       },
     });
 
-    tools.functions.setVar({
+    //close Form
+tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a11b.editPartner"],
-        value: [false],
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
       },
     });
 
@@ -37949,8 +37953,8 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
