@@ -4646,47 +4646,17 @@ width: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [profile]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -7519,7 +7489,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
+        keyPath: ["all.toggles.forms"],
         value: [false],
       },
     });
@@ -7778,7 +7748,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.profile", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", profile ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -13103,47 +13073,17 @@ width: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [profile]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -16180,7 +16120,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
+        keyPath: ["all.toggles.forms"],
         value: [false],
       },
     });
@@ -16439,7 +16379,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.profile", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", profile ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -21771,47 +21711,17 @@ width: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [profile]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -24833,7 +24743,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
+        keyPath: ["all.toggles.forms"],
         value: [false],
       },
     });
@@ -25092,7 +25002,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.profile", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", profile ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -30457,47 +30367,17 @@ width: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.profile`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7.addOwner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a7b.editOwner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a11b.editPartner`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
-          value: [false]
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a10.addFinance`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [profile]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -33423,7 +33303,7 @@ paddingVertical: 8,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["all.toggles.a1.editCondo"],
+        keyPath: ["all.toggles.forms"],
         value: [false],
       },
     });
@@ -33682,7 +33562,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.profile", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", profile ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
