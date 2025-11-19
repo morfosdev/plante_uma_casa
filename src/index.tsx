@@ -21708,7 +21708,7 @@ fontWeight: '700',
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `condoId`, 
-        `==`, `$var_sc.A7.forms.iptsChanges.condoData.docId`],
+        `==`, `$var_sc.A7.forms.currData.condoData.docId`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
