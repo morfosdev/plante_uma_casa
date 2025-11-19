@@ -5086,6 +5086,7 @@ async (...args) =>
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -5138,7 +5139,23 @@ async (...args) =>
 
             args,
           }}/>
-        ],
+        , 
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 150,
+	height: 100,
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+}],
+
+      URIvariablePath:[`$arg_images`],
+
+      args,
+    }}/>],
 
             args,
           }}/>
