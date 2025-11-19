@@ -4765,6 +4765,11 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
@@ -4885,6 +4890,11 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
@@ -13192,6 +13202,11 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
@@ -13312,6 +13327,11 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
@@ -13488,6 +13508,11 @@ right: 2,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
@@ -21830,6 +21855,11 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
@@ -21950,6 +21980,11 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
@@ -30486,6 +30521,11 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
@@ -30606,6 +30646,11 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
@@ -30782,6 +30827,11 @@ right: 2,
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
