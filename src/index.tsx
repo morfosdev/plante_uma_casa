@@ -6491,7 +6491,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondo", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1bEdit ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -6556,7 +6556,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -7625,7 +7625,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -15152,7 +15152,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondo", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1bEdit ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -15217,7 +15217,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -16286,7 +16286,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -23805,7 +23805,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondo", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1bEdit ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -23870,7 +23870,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -24939,7 +24939,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -32395,7 +32395,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a1.editCondo", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.forms", "==", a1bEdit ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -32460,7 +32460,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -33529,7 +33529,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -41614,7 +41614,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -46973,7 +46973,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
@@ -55679,7 +55679,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a1.editCondo`],
+          keyPath: [`all.toggles.forms`],
           value: [false]
         }}), 
 async (...args) =>
