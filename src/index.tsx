@@ -10861,13 +10861,36 @@ paddingVertical: 8,
     }
 
     // -------------------------
-    // Normalização dos campos
-    // -------------------------
-    const rawValue = (form?.value || "").trim();
-    const date = (form?.date || "").trim();
-    const description = (form?.installmentDescription || "").trim();
-    console.log("Campos normalizados:", { rawValue, date, description });
-    const value = rawValue;
+		// Normalização dos campos
+		// -------------------------
+const rawValue = (form?.value || "").trim();
+const date = (form?.date || "").trim();
+const description = (form?.installmentDescription || "").trim();
+const value = rawValue;
+
+console.log("Campos normalizados:", { rawValue, date, description });
+
+		// -------------------------
+		// Validação de campos obrigatórios
+		// -------------------------
+if (!value || !date || !description) {
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.A10.feedbackMessage"],
+      value: ["Preencha todos os campos obrigatórios."],
+    },
+  });
+
+  console.warn("⚠️ Campos vazios detectados:", {
+    value,
+    date,
+    description,
+  });
+
+  return; // Interrompe o fluxo
+}
+
 
     // -------------------------
     // Histórico do lote
@@ -19537,13 +19560,36 @@ paddingVertical: 8,
     }
 
     // -------------------------
-    // Normalização dos campos
-    // -------------------------
-    const rawValue = (form?.value || "").trim();
-    const date = (form?.date || "").trim();
-    const description = (form?.installmentDescription || "").trim();
-    console.log("Campos normalizados:", { rawValue, date, description });
-    const value = rawValue;
+		// Normalização dos campos
+		// -------------------------
+const rawValue = (form?.value || "").trim();
+const date = (form?.date || "").trim();
+const description = (form?.installmentDescription || "").trim();
+const value = rawValue;
+
+console.log("Campos normalizados:", { rawValue, date, description });
+
+		// -------------------------
+		// Validação de campos obrigatórios
+		// -------------------------
+if (!value || !date || !description) {
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.A10.feedbackMessage"],
+      value: ["Preencha todos os campos obrigatórios."],
+    },
+  });
+
+  console.warn("⚠️ Campos vazios detectados:", {
+    value,
+    date,
+    description,
+  });
+
+  return; // Interrompe o fluxo
+}
+
 
     // -------------------------
     // Histórico do lote
@@ -28210,13 +28256,36 @@ paddingVertical: 8,
     }
 
     // -------------------------
-    // Normalização dos campos
-    // -------------------------
-    const rawValue = (form?.value || "").trim();
-    const date = (form?.date || "").trim();
-    const description = (form?.installmentDescription || "").trim();
-    console.log("Campos normalizados:", { rawValue, date, description });
-    const value = rawValue;
+		// Normalização dos campos
+		// -------------------------
+const rawValue = (form?.value || "").trim();
+const date = (form?.date || "").trim();
+const description = (form?.installmentDescription || "").trim();
+const value = rawValue;
+
+console.log("Campos normalizados:", { rawValue, date, description });
+
+		// -------------------------
+		// Validação de campos obrigatórios
+		// -------------------------
+if (!value || !date || !description) {
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.A10.feedbackMessage"],
+      value: ["Preencha todos os campos obrigatórios."],
+    },
+  });
+
+  console.warn("⚠️ Campos vazios detectados:", {
+    value,
+    date,
+    description,
+  });
+
+  return; // Interrompe o fluxo
+}
+
 
     // -------------------------
     // Histórico do lote
@@ -36810,13 +36879,36 @@ paddingVertical: 8,
     }
 
     // -------------------------
-    // Normalização dos campos
-    // -------------------------
-    const rawValue = (form?.value || "").trim();
-    const date = (form?.date || "").trim();
-    const description = (form?.installmentDescription || "").trim();
-    console.log("Campos normalizados:", { rawValue, date, description });
-    const value = rawValue;
+		// Normalização dos campos
+		// -------------------------
+const rawValue = (form?.value || "").trim();
+const date = (form?.date || "").trim();
+const description = (form?.installmentDescription || "").trim();
+const value = rawValue;
+
+console.log("Campos normalizados:", { rawValue, date, description });
+
+		// -------------------------
+		// Validação de campos obrigatórios
+		// -------------------------
+if (!value || !date || !description) {
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.A10.feedbackMessage"],
+      value: ["Preencha todos os campos obrigatórios."],
+    },
+  });
+
+  console.warn("⚠️ Campos vazios detectados:", {
+    value,
+    date,
+    description,
+  });
+
+  return; // Interrompe o fluxo
+}
+
 
     // -------------------------
     // Histórico do lote
