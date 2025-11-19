@@ -63811,7 +63811,7 @@ paddingHorizontal: 16,
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("b0login");
+          return tools.goTo("c6stepProfile");
         }
         ]
  , trigger: 'on press'
