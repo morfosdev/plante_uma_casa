@@ -12209,11 +12209,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -12771,7 +12771,14 @@ paddingVertical: 8,
     // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
-      tools.setData({ path: "all.toggles.a12.add", value: false });
+      //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -12862,11 +12869,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -20861,11 +20868,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -21423,7 +21430,14 @@ paddingVertical: 8,
     // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
-      tools.setData({ path: "all.toggles.a12.add", value: false });
+      //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -21514,11 +21528,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -29510,11 +29524,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -30072,7 +30086,14 @@ paddingVertical: 8,
     // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
-      tools.setData({ path: "all.toggles.a12.add", value: false });
+      //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -30163,11 +30184,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -38086,11 +38107,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -38648,7 +38669,14 @@ paddingVertical: 8,
     // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
-      tools.setData({ path: "all.toggles.a12.add", value: false });
+      //close Form
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["all.toggles.forms"],
+        value: [" "],
+      },
+    });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -38739,11 +38767,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.a12.add`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})]
  , trigger: 'on press'
