@@ -10961,6 +10961,12 @@ if (!value || !date || !description) {
     },
   });
 
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a10.feedbackMessage",
+  value: "red",
+});
+
   console.warn("⚠️ Campos vazios detectados:", {
     value,
     date,
@@ -10970,6 +10976,11 @@ if (!value || !date || !description) {
   return; // Interrompe o fluxo
 }
 
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a10.feedbackMessage",
+  value: "green",
+});
 
     // -------------------------
     // Histórico do lote
@@ -19747,6 +19758,12 @@ if (!value || !date || !description) {
     },
   });
 
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a10.feedbackMessage",
+  value: "red",
+});
+
   console.warn("⚠️ Campos vazios detectados:", {
     value,
     date,
@@ -19756,6 +19773,11 @@ if (!value || !date || !description) {
   return; // Interrompe o fluxo
 }
 
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a10.feedbackMessage",
+  value: "green",
+});
 
     // -------------------------
     // Histórico do lote
@@ -28570,6 +28592,12 @@ if (!value || !date || !description) {
     },
   });
 
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a10.feedbackMessage",
+  value: "red",
+});
+
   console.warn("⚠️ Campos vazios detectados:", {
     value,
     date,
@@ -28579,6 +28607,11 @@ if (!value || !date || !description) {
   return; // Interrompe o fluxo
 }
 
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a10.feedbackMessage",
+  value: "green",
+});
 
     // -------------------------
     // Histórico do lote
@@ -37280,6 +37313,12 @@ if (!value || !date || !description) {
     },
   });
 
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a10.feedbackMessage",
+  value: "red",
+});
+
   console.warn("⚠️ Campos vazios detectados:", {
     value,
     date,
@@ -37289,6 +37328,11 @@ if (!value || !date || !description) {
   return; // Interrompe o fluxo
 }
 
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a10.feedbackMessage",
+  value: "green",
+});
 
     // -------------------------
     // Histórico do lote
