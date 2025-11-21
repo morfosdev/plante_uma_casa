@@ -10879,8 +10879,8 @@ fontSize: 12,
           arrStyles: [
             `{
 	position: 'absolute',
-	top: 776,
-	color: '$var_sc.a1.validationColor',
+	top: 200,
+	color: '$var_sc.a10.validationColor',
 }`
           ],
 
@@ -19676,8 +19676,8 @@ fontSize: 12,
           arrStyles: [
             `{
 	position: 'absolute',
-	top: 776,
-	color: '$var_sc.a1.validationColor',
+	top: 200,
+	color: '$var_sc.a10.validationColor',
 }`
           ],
 
@@ -28510,8 +28510,8 @@ fontSize: 12,
           arrStyles: [
             `{
 	position: 'absolute',
-	top: 776,
-	color: '$var_sc.a1.validationColor',
+	top: 200,
+	color: '$var_sc.a10.validationColor',
 }`
           ],
 
@@ -37231,8 +37231,8 @@ fontSize: 12,
           arrStyles: [
             `{
 	position: 'absolute',
-	top: 776,
-	color: '$var_sc.a1.validationColor',
+	top: 200,
+	color: '$var_sc.a10.validationColor',
 }`
           ],
 
