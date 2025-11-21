@@ -8731,7 +8731,7 @@ fontSize: 12,
 
           arrStyles: [
             `{ 
-	color: "red", 
+	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
 }`
@@ -8801,9 +8801,22 @@ paddingVertical: 8,
         value: ["Preencha os campos obrigatórios."],
       },
     });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a7.validationColor",
+  value: "red",
+});
+
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
     return;
   }
+
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a7.validationColor",
+  value: "green",
+});
 
   console.log("💾 Iniciando salvamento no Firebase...");
 
@@ -9949,7 +9962,7 @@ fontSize: 12,
 
           arrStyles: [
             `{ 
-	color: "red", 
+	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
 }`
@@ -17444,7 +17457,7 @@ fontSize: 12,
 
           arrStyles: [
             `{ 
-	color: "red", 
+	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
 }`
@@ -17514,9 +17527,22 @@ paddingVertical: 8,
         value: ["Preencha os campos obrigatórios."],
       },
     });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a7.validationColor",
+  value: "red",
+});
+
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
     return;
   }
+
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a7.validationColor",
+  value: "green",
+});
 
   console.log("💾 Iniciando salvamento no Firebase...");
 
@@ -18662,7 +18688,7 @@ fontSize: 12,
 
           arrStyles: [
             `{ 
-	color: "red", 
+	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
 }`
@@ -26154,7 +26180,7 @@ fontSize: 12,
 
           arrStyles: [
             `{ 
-	color: "red", 
+	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
 }`
@@ -26224,9 +26250,22 @@ paddingVertical: 8,
         value: ["Preencha os campos obrigatórios."],
       },
     });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a7.validationColor",
+  value: "red",
+});
+
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
     return;
   }
+
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a7.validationColor",
+  value: "green",
+});
 
   console.log("💾 Iniciando salvamento no Firebase...");
 
@@ -27372,7 +27411,7 @@ fontSize: 12,
 
           arrStyles: [
             `{ 
-	color: "red", 
+	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
 }`
@@ -34791,7 +34830,7 @@ fontSize: 12,
 
           arrStyles: [
             `{ 
-	color: "red", 
+	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
 }`
@@ -34861,9 +34900,22 @@ paddingVertical: 8,
         value: ["Preencha os campos obrigatórios."],
       },
     });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a7.validationColor",
+  value: "red",
+});
+
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
     return;
   }
+
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a7.validationColor",
+  value: "green",
+});
 
   console.log("💾 Iniciando salvamento no Firebase...");
 
@@ -36009,7 +36061,7 @@ fontSize: 12,
 
           arrStyles: [
             `{ 
-	color: "red", 
+	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
 }`
