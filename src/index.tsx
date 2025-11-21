@@ -10903,22 +10903,6 @@ fontSize: 12,
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_sc.A10.feedbackMessage`
-          ],
-
-          args,
-
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -19853,22 +19837,6 @@ fontSize: 12,
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_sc.A10.feedbackMessage`
-          ],
-
-          args,
-
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -28840,22 +28808,6 @@ fontSize: 12,
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_sc.A10.feedbackMessage`
-          ],
-
-          args,
-
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -37714,22 +37666,6 @@ fontSize: 12,
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `$var_sc.A10.feedbackMessage`
-          ],
-
-          args,
-
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
