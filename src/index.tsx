@@ -10880,7 +10880,7 @@ fontSize: 12,
             `{
 	position: 'absolute',
 	top: 200,
-	color: '$var_sc.a10.validationColor',
+	color: '$var_sc.A10.validationColor',
 }`
           ],
 
@@ -10963,7 +10963,7 @@ if (!value || !date || !description) {
 
 // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.A10.feedbackMessage",
+  path: "sc.A10.validationColor",
   value: "red",
 });
 
@@ -10978,7 +10978,7 @@ if (!value || !date || !description) {
 
 // estado = sucesso (COR VERDE)
 tools.setData({
-  path: "sc.A10.feedbackMessage",
+  path: "sc.A10.validationColor",
   value: "green",
 });
 
@@ -19677,7 +19677,7 @@ fontSize: 12,
             `{
 	position: 'absolute',
 	top: 200,
-	color: '$var_sc.a10.validationColor',
+	color: '$var_sc.A10.validationColor',
 }`
           ],
 
@@ -19760,7 +19760,7 @@ if (!value || !date || !description) {
 
 // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.A10.feedbackMessage",
+  path: "sc.A10.validationColor",
   value: "red",
 });
 
@@ -19775,7 +19775,7 @@ if (!value || !date || !description) {
 
 // estado = sucesso (COR VERDE)
 tools.setData({
-  path: "sc.A10.feedbackMessage",
+  path: "sc.A10.validationColor",
   value: "green",
 });
 
@@ -28511,7 +28511,7 @@ fontSize: 12,
             `{
 	position: 'absolute',
 	top: 200,
-	color: '$var_sc.a10.validationColor',
+	color: '$var_sc.A10.validationColor',
 }`
           ],
 
@@ -28594,7 +28594,7 @@ if (!value || !date || !description) {
 
 // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.A10.feedbackMessage",
+  path: "sc.A10.validationColor",
   value: "red",
 });
 
@@ -28609,7 +28609,7 @@ if (!value || !date || !description) {
 
 // estado = sucesso (COR VERDE)
 tools.setData({
-  path: "sc.A10.feedbackMessage",
+  path: "sc.A10.validationColor",
   value: "green",
 });
 
@@ -37232,7 +37232,7 @@ fontSize: 12,
             `{
 	position: 'absolute',
 	top: 200,
-	color: '$var_sc.a10.validationColor',
+	color: '$var_sc.A10.validationColor',
 }`
           ],
 
@@ -37315,7 +37315,7 @@ if (!value || !date || !description) {
 
 // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.A10.feedbackMessage",
+  path: "sc.A10.validationColor",
   value: "red",
 });
 
@@ -37330,7 +37330,7 @@ if (!value || !date || !description) {
 
 // estado = sucesso (COR VERDE)
 tools.setData({
-  path: "sc.A10.feedbackMessage",
+  path: "sc.A10.validationColor",
   value: "green",
 });
 
