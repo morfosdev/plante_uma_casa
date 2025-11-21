@@ -10020,9 +10020,22 @@ paddingVertical: 8,
         value: ["Preencha os campos obrigatórios."],
       },
     });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a7.validationColor",
+  value: "red",
+});
+
     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
     return;
   }
+
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a7.validationColor",
+  value: "green",
+});
 
   tools.functions.setVar({
     args: "",
@@ -18746,9 +18759,22 @@ paddingVertical: 8,
         value: ["Preencha os campos obrigatórios."],
       },
     });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a7.validationColor",
+  value: "red",
+});
+
     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
     return;
   }
+
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a7.validationColor",
+  value: "green",
+});
 
   tools.functions.setVar({
     args: "",
@@ -27469,9 +27495,22 @@ paddingVertical: 8,
         value: ["Preencha os campos obrigatórios."],
       },
     });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a7.validationColor",
+  value: "red",
+});
+
     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
     return;
   }
+
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a7.validationColor",
+  value: "green",
+});
 
   tools.functions.setVar({
     args: "",
@@ -36119,9 +36158,22 @@ paddingVertical: 8,
         value: ["Preencha os campos obrigatórios."],
       },
     });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.a7.validationColor",
+  value: "red",
+});
+
     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
     return;
   }
+
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.a7.validationColor",
+  value: "green",
+});
 
   tools.functions.setVar({
     args: "",
