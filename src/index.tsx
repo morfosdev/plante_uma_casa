@@ -12625,7 +12625,7 @@ alignItems: 'center',
             `{ 
 	color: "red", 
 	position: 'absolute',
-	width: 200,
+	width: 260,
 	textAlign: 'center',
 	top: 10,
 }`
@@ -21338,7 +21338,7 @@ alignItems: 'center',
             `{ 
 	color: "red", 
 	position: 'absolute',
-	width: 200,
+	width: 260,
 	textAlign: 'center',
 	top: 10,
 }`
@@ -30048,7 +30048,7 @@ alignItems: 'center',
             `{ 
 	color: "red", 
 	position: 'absolute',
-	width: 200,
+	width: 260,
 	textAlign: 'center',
 	top: 10,
 }`
@@ -38685,7 +38685,7 @@ alignItems: 'center',
             `{ 
 	color: "red", 
 	position: 'absolute',
-	width: 200,
+	width: 260,
 	textAlign: 'center',
 	top: 10,
 }`
