@@ -10859,6 +10859,26 @@ fontSize: 12,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	position: 'absolute',
+	top: 776,
+	color: '$var_sc.a1.validationColor',
+}`
+          ],
+
+          children: [
+            `$var_sc.a10.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -10880,7 +10900,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.A12.msgs.msg1`
+            `$var_sc.A10.msgs.msg1`
           ],
 
           args,
@@ -19839,6 +19859,26 @@ fontSize: 12,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	position: 'absolute',
+	top: 776,
+	color: '$var_sc.a1.validationColor',
+}`
+          ],
+
+          children: [
+            `$var_sc.a10.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -19860,7 +19900,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.A12.msgs.msg1`
+            `$var_sc.A10.msgs.msg1`
           ],
 
           args,
@@ -28856,6 +28896,26 @@ fontSize: 12,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	position: 'absolute',
+	top: 776,
+	color: '$var_sc.a1.validationColor',
+}`
+          ],
+
+          children: [
+            `$var_sc.a10.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -28877,7 +28937,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.A12.msgs.msg1`
+            `$var_sc.A10.msgs.msg1`
           ],
 
           args,
@@ -37760,6 +37820,26 @@ fontSize: 12,
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	position: 'absolute',
+	top: 776,
+	color: '$var_sc.a1.validationColor',
+}`
+          ],
+
+          children: [
+            `$var_sc.a10.validationMessage`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -37781,7 +37861,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.A12.msgs.msg1`
+            `$var_sc.A10.msgs.msg1`
           ],
 
           args,
