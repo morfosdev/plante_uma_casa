@@ -10885,7 +10885,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.a10.validationMessage`
+            `$var_sc.a10.feedbackMessage`
           ],
 
           args,
@@ -10919,8 +10919,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async () => {
+ arrFunctions: [async () => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
@@ -10957,7 +10956,7 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.A10.feedbackMessage"],
+      keyPath: ["sc.a10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
@@ -11053,7 +11052,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
+        keyPath: ["sc.a10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -11062,158 +11061,11 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
+        keyPath: ["sc.a10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
   }
-}, async () => {
-  // Lista de campos obrigatórios
-  const requiredFields = [
-    { path: "sc.A10.forms.editChanges.installmentDescription", name: "Descrição" },
-    { path: "sc.A10.forms.editChanges.value", name: "Valor Pago" },
-    { path: "sc.A10.forms.editChanges.date", name: "Data" },
-  ];
-
-  // Função auxiliar para obter valor seguro
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
-  };
-
-  // Checa campos vazios
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
-
-  // Define mensagem e estado final
-  let message = "";
-
-  if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: [message],
-			},
-    });
-    // estado = erro (COR VERMELHA)
-    tools.setData({
-  path: "sc.a10.validationColor",
-  value: "red",
-});
-
-    console.warn(
-      "⚠️ Campos vazios detectados:",
-      emptyFields.map((f) => f.name).join(", ")
-    );
-    return; // ⚠️ Interrompe o processo se houver campos vazios
-  }
-
-  // Se todos os campos estiverem preenchidos
-  message = "Salvo com sucesso!";
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.validationMessage"],
-      value: [message],
-    },
-  });
-  // estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a10.validationColor",
-  value: "green",
-});
-
-
-  console.log("💾 Validação OK — salvando no Firebase...");
-
-  // inicializar firebase
-  let fbInit = tools.getCtData("all.temp.fireInit");
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig");
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: "all.temp.fireInit", value: fbInit });
-  }
-
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } =
-    await import("firebase/firestore");
-  const db = getFirestore(fbInit);
-
-  // Monta os dados a salvar
-  const newDoc = {
-    desc: getVal("sc.A10.forms.editChanges.installmentDescription"),
-    value: getVal("sc.A10.forms.editChanges.value"),
-    date: getVal("sc.A10.forms.editChanges.date"),
-    createdAt: serverTimestamp(),
-  };
-
-  try {
-    const docRef = await addDoc(collection(db, "condos"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
-
-    // Atualiza o documento para incluir o próprio ID
-    await updateDoc(docRef, { docId: docRef.id });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: ["Salvo com sucesso!"],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
-      },
-    });
-  }
-
-  //clean iptsChanges
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.iptChanges"],
-      value: [""],
-    },
-  });
-
-  //close Form
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["all.toggles.forms"],
-      value: [" "],
-    },
-  });
-
-  //close sideRight
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["all.toggles.sideRight"],
-      value: [false],
-    },
-  });
-
-  //clean text message
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.validationMessage"],
-      value: [""],
-    },
-  });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -19819,7 +19671,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.a10.validationMessage`
+            `$var_sc.a10.feedbackMessage`
           ],
 
           args,
@@ -19853,8 +19705,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async () => {
+ arrFunctions: [async () => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
@@ -19891,7 +19742,7 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.A10.feedbackMessage"],
+      keyPath: ["sc.a10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
@@ -19987,7 +19838,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
+        keyPath: ["sc.a10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -19996,158 +19847,11 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
+        keyPath: ["sc.a10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
   }
-}, async () => {
-  // Lista de campos obrigatórios
-  const requiredFields = [
-    { path: "sc.A10.forms.editChanges.installmentDescription", name: "Descrição" },
-    { path: "sc.A10.forms.editChanges.value", name: "Valor Pago" },
-    { path: "sc.A10.forms.editChanges.date", name: "Data" },
-  ];
-
-  // Função auxiliar para obter valor seguro
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
-  };
-
-  // Checa campos vazios
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
-
-  // Define mensagem e estado final
-  let message = "";
-
-  if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: [message],
-			},
-    });
-    // estado = erro (COR VERMELHA)
-    tools.setData({
-  path: "sc.a10.validationColor",
-  value: "red",
-});
-
-    console.warn(
-      "⚠️ Campos vazios detectados:",
-      emptyFields.map((f) => f.name).join(", ")
-    );
-    return; // ⚠️ Interrompe o processo se houver campos vazios
-  }
-
-  // Se todos os campos estiverem preenchidos
-  message = "Salvo com sucesso!";
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.validationMessage"],
-      value: [message],
-    },
-  });
-  // estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a10.validationColor",
-  value: "green",
-});
-
-
-  console.log("💾 Validação OK — salvando no Firebase...");
-
-  // inicializar firebase
-  let fbInit = tools.getCtData("all.temp.fireInit");
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig");
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: "all.temp.fireInit", value: fbInit });
-  }
-
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } =
-    await import("firebase/firestore");
-  const db = getFirestore(fbInit);
-
-  // Monta os dados a salvar
-  const newDoc = {
-    desc: getVal("sc.A10.forms.editChanges.installmentDescription"),
-    value: getVal("sc.A10.forms.editChanges.value"),
-    date: getVal("sc.A10.forms.editChanges.date"),
-    createdAt: serverTimestamp(),
-  };
-
-  try {
-    const docRef = await addDoc(collection(db, "condos"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
-
-    // Atualiza o documento para incluir o próprio ID
-    await updateDoc(docRef, { docId: docRef.id });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: ["Salvo com sucesso!"],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
-      },
-    });
-  }
-
-  //clean iptsChanges
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.iptChanges"],
-      value: [""],
-    },
-  });
-
-  //close Form
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["all.toggles.forms"],
-      value: [" "],
-    },
-  });
-
-  //close sideRight
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["all.toggles.sideRight"],
-      value: [false],
-    },
-  });
-
-  //clean text message
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.validationMessage"],
-      value: [""],
-    },
-  });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -28790,7 +28494,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.a10.validationMessage`
+            `$var_sc.a10.feedbackMessage`
           ],
 
           args,
@@ -28824,8 +28528,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async () => {
+ arrFunctions: [async () => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
@@ -28862,7 +28565,7 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.A10.feedbackMessage"],
+      keyPath: ["sc.a10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
@@ -28958,7 +28661,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
+        keyPath: ["sc.a10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -28967,158 +28670,11 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
+        keyPath: ["sc.a10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
   }
-}, async () => {
-  // Lista de campos obrigatórios
-  const requiredFields = [
-    { path: "sc.A10.forms.editChanges.installmentDescription", name: "Descrição" },
-    { path: "sc.A10.forms.editChanges.value", name: "Valor Pago" },
-    { path: "sc.A10.forms.editChanges.date", name: "Data" },
-  ];
-
-  // Função auxiliar para obter valor seguro
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
-  };
-
-  // Checa campos vazios
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
-
-  // Define mensagem e estado final
-  let message = "";
-
-  if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: [message],
-			},
-    });
-    // estado = erro (COR VERMELHA)
-    tools.setData({
-  path: "sc.a10.validationColor",
-  value: "red",
-});
-
-    console.warn(
-      "⚠️ Campos vazios detectados:",
-      emptyFields.map((f) => f.name).join(", ")
-    );
-    return; // ⚠️ Interrompe o processo se houver campos vazios
-  }
-
-  // Se todos os campos estiverem preenchidos
-  message = "Salvo com sucesso!";
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.validationMessage"],
-      value: [message],
-    },
-  });
-  // estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a10.validationColor",
-  value: "green",
-});
-
-
-  console.log("💾 Validação OK — salvando no Firebase...");
-
-  // inicializar firebase
-  let fbInit = tools.getCtData("all.temp.fireInit");
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig");
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: "all.temp.fireInit", value: fbInit });
-  }
-
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } =
-    await import("firebase/firestore");
-  const db = getFirestore(fbInit);
-
-  // Monta os dados a salvar
-  const newDoc = {
-    desc: getVal("sc.A10.forms.editChanges.installmentDescription"),
-    value: getVal("sc.A10.forms.editChanges.value"),
-    date: getVal("sc.A10.forms.editChanges.date"),
-    createdAt: serverTimestamp(),
-  };
-
-  try {
-    const docRef = await addDoc(collection(db, "condos"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
-
-    // Atualiza o documento para incluir o próprio ID
-    await updateDoc(docRef, { docId: docRef.id });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: ["Salvo com sucesso!"],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
-      },
-    });
-  }
-
-  //clean iptsChanges
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.iptChanges"],
-      value: [""],
-    },
-  });
-
-  //close Form
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["all.toggles.forms"],
-      value: [" "],
-    },
-  });
-
-  //close sideRight
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["all.toggles.sideRight"],
-      value: [false],
-    },
-  });
-
-  //clean text message
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.validationMessage"],
-      value: [""],
-    },
-  });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -37648,7 +37204,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.a10.validationMessage`
+            `$var_sc.a10.feedbackMessage`
           ],
 
           args,
@@ -37682,8 +37238,7 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async () => {
+ arrFunctions: [async () => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
@@ -37720,7 +37275,7 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.A10.feedbackMessage"],
+      keyPath: ["sc.a10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
@@ -37816,7 +37371,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
+        keyPath: ["sc.a10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -37825,158 +37380,11 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
+        keyPath: ["sc.a10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
   }
-}, async () => {
-  // Lista de campos obrigatórios
-  const requiredFields = [
-    { path: "sc.A10.forms.editChanges.installmentDescription", name: "Descrição" },
-    { path: "sc.A10.forms.editChanges.value", name: "Valor Pago" },
-    { path: "sc.A10.forms.editChanges.date", name: "Data" },
-  ];
-
-  // Função auxiliar para obter valor seguro
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
-  };
-
-  // Checa campos vazios
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
-
-  // Define mensagem e estado final
-  let message = "";
-
-  if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: [message],
-			},
-    });
-    // estado = erro (COR VERMELHA)
-    tools.setData({
-  path: "sc.a10.validationColor",
-  value: "red",
-});
-
-    console.warn(
-      "⚠️ Campos vazios detectados:",
-      emptyFields.map((f) => f.name).join(", ")
-    );
-    return; // ⚠️ Interrompe o processo se houver campos vazios
-  }
-
-  // Se todos os campos estiverem preenchidos
-  message = "Salvo com sucesso!";
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.validationMessage"],
-      value: [message],
-    },
-  });
-  // estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a10.validationColor",
-  value: "green",
-});
-
-
-  console.log("💾 Validação OK — salvando no Firebase...");
-
-  // inicializar firebase
-  let fbInit = tools.getCtData("all.temp.fireInit");
-  if (!fbInit) {
-    const { initializeApp, getApps } = await import("firebase/app");
-    const cfg = tools.getCtData("all.temp.fireConfig");
-    fbInit = getApps().length ? getApps()[0] : initializeApp(cfg);
-    tools.setData({ path: "all.temp.fireInit", value: fbInit });
-  }
-
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } =
-    await import("firebase/firestore");
-  const db = getFirestore(fbInit);
-
-  // Monta os dados a salvar
-  const newDoc = {
-    desc: getVal("sc.A10.forms.editChanges.installmentDescription"),
-    value: getVal("sc.A10.forms.editChanges.value"),
-    date: getVal("sc.A10.forms.editChanges.date"),
-    createdAt: serverTimestamp(),
-  };
-
-  try {
-    const docRef = await addDoc(collection(db, "condos"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
-
-    // Atualiza o documento para incluir o próprio ID
-    await updateDoc(docRef, { docId: docRef.id });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: ["Salvo com sucesso!"],
-      },
-    });
-  } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a10.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
-      },
-    });
-  }
-
-  //clean iptsChanges
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.iptChanges"],
-      value: [""],
-    },
-  });
-
-  //close Form
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["all.toggles.forms"],
-      value: [" "],
-    },
-  });
-
-  //close sideRight
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["all.toggles.sideRight"],
-      value: [false],
-    },
-  });
-
-  //clean text message
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.a10.validationMessage"],
-      value: [""],
-    },
-  });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
