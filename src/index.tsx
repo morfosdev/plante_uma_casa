@@ -11549,7 +11549,8 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(...args) =>
+ arrFunctions: [
+(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
         `users`, `$var_sc.A11.forms.editChanges.docId`],
@@ -11568,6 +11569,20 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }}), async (...args) =>
@@ -20351,7 +20366,8 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(...args) =>
+ arrFunctions: [
+(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
         `users`, `$var_sc.A11.forms.editChanges.docId`],
@@ -20370,6 +20386,20 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }}), async (...args) =>
@@ -29145,7 +29175,8 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(...args) =>
+ arrFunctions: [
+(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
         `users`, `$var_sc.A11.forms.editChanges.docId`],
@@ -29164,6 +29195,20 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }}), async (...args) =>
@@ -37871,7 +37916,8 @@ async (...args) =>
             functions:[
         async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(...args) =>
+ arrFunctions: [
+(...args) =>
         functions.firebase.deleteDocTool({ args, pass:{
    arrRefStrings: [
         `users`, `$var_sc.A11.forms.editChanges.docId`],
@@ -37890,6 +37936,20 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }})],
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.btnDelete`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoDelete`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.a1.editCondoThreeDots`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }}), async (...args) =>
