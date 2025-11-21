@@ -4770,6 +4770,11 @@ async (...args) =>
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
@@ -13305,6 +13310,11 @@ async (...args) =>
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
@@ -13594,6 +13604,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
@@ -22050,6 +22065,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
@@ -30820,6 +30840,11 @@ async (...args) =>
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
@@ -31109,6 +31134,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
