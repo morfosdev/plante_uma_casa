@@ -23070,16 +23070,11 @@ shadowRadius: 4,
   console.log("Botão Recibo 2", item);
 
   // ===== installmentId =====
-  const installmentId = item?.installmentId ?? null;
+  const installmentId = item?.installmentId;
   console.log("Botão Recibo 3", installmentId);
 
-  // Se o installmentId for inválido, já retornamos um botão desativado
-  if (
-    installmentId === null ||
-    installmentId === undefined ||
-    installmentId === "" ||
-    Number.isNaN(Number(installmentId))
-  ) {
+  // Só considera inválido se for null/undefined/string vazia
+  if (installmentId === null || installmentId === undefined || installmentId === "") {
     console.log("Botão Recibo ERRO: installmentId inválido");
     return (
       <RN.Pressable>
