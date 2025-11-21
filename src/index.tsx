@@ -10885,7 +10885,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.a10.feedbackMessage`
+            `$var_sc.A10.feedbackMessage`
           ],
 
           args,
@@ -10956,14 +10956,14 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a10.feedbackMessage"],
+      keyPath: ["sc.A10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
 
 // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a10.feedbackMessage",
+  path: "sc.A10.feedbackMessage",
   value: "red",
 });
 
@@ -10978,7 +10978,7 @@ if (!value || !date || !description) {
 
 // estado = sucesso (COR VERDE)
 tools.setData({
-  path: "sc.a10.feedbackMessage",
+  path: "sc.A10.feedbackMessage",
   value: "green",
 });
 
@@ -11063,7 +11063,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -11072,7 +11072,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
@@ -19682,7 +19682,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.a10.feedbackMessage`
+            `$var_sc.A10.feedbackMessage`
           ],
 
           args,
@@ -19753,14 +19753,14 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a10.feedbackMessage"],
+      keyPath: ["sc.A10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
 
 // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a10.feedbackMessage",
+  path: "sc.A10.feedbackMessage",
   value: "red",
 });
 
@@ -19775,7 +19775,7 @@ if (!value || !date || !description) {
 
 // estado = sucesso (COR VERDE)
 tools.setData({
-  path: "sc.a10.feedbackMessage",
+  path: "sc.A10.feedbackMessage",
   value: "green",
 });
 
@@ -19860,7 +19860,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -19869,7 +19869,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
@@ -28516,7 +28516,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.a10.feedbackMessage`
+            `$var_sc.A10.feedbackMessage`
           ],
 
           args,
@@ -28587,14 +28587,14 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a10.feedbackMessage"],
+      keyPath: ["sc.A10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
 
 // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a10.feedbackMessage",
+  path: "sc.A10.feedbackMessage",
   value: "red",
 });
 
@@ -28609,7 +28609,7 @@ if (!value || !date || !description) {
 
 // estado = sucesso (COR VERDE)
 tools.setData({
-  path: "sc.a10.feedbackMessage",
+  path: "sc.A10.feedbackMessage",
   value: "green",
 });
 
@@ -28694,7 +28694,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -28703,7 +28703,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
@@ -37237,7 +37237,7 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.a10.feedbackMessage`
+            `$var_sc.A10.feedbackMessage`
           ],
 
           args,
@@ -37308,14 +37308,14 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a10.feedbackMessage"],
+      keyPath: ["sc.A10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
 
 // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a10.feedbackMessage",
+  path: "sc.A10.feedbackMessage",
   value: "red",
 });
 
@@ -37330,7 +37330,7 @@ if (!value || !date || !description) {
 
 // estado = sucesso (COR VERDE)
 tools.setData({
-  path: "sc.a10.feedbackMessage",
+  path: "sc.A10.feedbackMessage",
   value: "green",
 });
 
@@ -37415,7 +37415,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -37424,7 +37424,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
