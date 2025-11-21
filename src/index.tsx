@@ -23055,19 +23055,65 @@ shadowRadius: 4,
   arrItems: [() => {
   console.log("Botão Recibo", args);
 
-  const item = tools.findFlatItem(args);
+  // ===== item =====
+  const item = tools?.findFlatItem ? tools.findFlatItem(args) : null;
+  if (!item || typeof item !== "object") {
+    console.log("Botão Recibo ERRO: item inválido", item);
+    return (
+      <RN.Pressable>
+        <RN.Text style={{ color: "#CCCCCC", fontSize: 14, fontWeight: "bold" }}>
+          ↪
+        </RN.Text>
+      </RN.Pressable>
+    );
+  }
   console.log("Botão Recibo 2", item);
 
-  const installmentId = item.installmentId;
+  // ===== installmentId =====
+  const installmentId = item?.installmentId ?? null;
   console.log("Botão Recibo 3", installmentId);
 
-  const receipts = tools.getCtData("sc.A9.currents.currLoteData.receipts");
-  console.log("Botão Recibo 4", receipts);
+  // Se o installmentId for inválido, já retornamos um botão desativado
+  if (
+    installmentId === null ||
+    installmentId === undefined ||
+    installmentId === "" ||
+    Number.isNaN(Number(installmentId))
+  ) {
+    console.log("Botão Recibo ERRO: installmentId inválido");
+    return (
+      <RN.Pressable>
+        <RN.Text style={{ color: "#CCCCCC", fontSize: 14, fontWeight: "bold" }}>
+          ↪
+        </RN.Text>
+      </RN.Pressable>
+    );
+  }
 
-  const currReceipt = receipts[installmentId];
+  // ===== receipts =====
+  const receipts = tools?.getCtData
+    ? tools.getCtData("sc.A9.currents.currLoteData.receipts")
+    : null;
+
+  const safeReceipts =
+    receipts && typeof receipts === "object" ? receipts : {};
+
+  console.log("Botão Recibo 4", safeReceipts);
+
+  // ===== currReceipt =====
+  const currReceipt =
+    safeReceipts && Object.prototype.hasOwnProperty.call(safeReceipts, installmentId)
+      ? safeReceipts[installmentId]
+      : null;
+
   console.log("Botão Recibo 5", currReceipt);
 
-  const receiptUrl = currReceipt ? currReceipt.receiptUrl : null;
+  // ===== receiptUrl =====
+  const receiptUrl =
+    currReceipt && typeof currReceipt === "object"
+      ? currReceipt.receiptUrl || null
+      : null;
+
   console.log("Botão Recibo 6", receiptUrl);
 
   // ===== estilo condicionado =====
@@ -23079,8 +23125,12 @@ shadowRadius: 4,
 
   // ===== função de download (web) =====
   const baixarRecibo = (url) => {
-    if (!url) return;
-    window.open(url, "_blank");
+    if (!url || typeof url !== "string") return;
+    try {
+      window.open(url, "_blank");
+    } catch (err) {
+      console.log("Erro ao abrir URL do recibo:", err);
+    }
   };
 
   // ===== retorno =====
