@@ -5184,7 +5184,9 @@ right: 0,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [console.log("TESTE PARTNER RODOU")]
+ arrFunctions: [()=> {
+console.log("TESTE PARTNER RODOU")
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
