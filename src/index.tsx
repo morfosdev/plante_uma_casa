@@ -43338,7 +43338,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -44138,7 +44138,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -48721,7 +48721,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -49521,7 +49521,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -57444,7 +57444,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -58244,7 +58244,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -66760,7 +66760,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -66905,7 +66905,7 @@ fontWeight: '700',
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `ownerId`, 
-        `==`, `$var_.all.authUser.docId`],
+        `==`, `$var_all.authUser.docId`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
