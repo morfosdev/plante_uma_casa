@@ -5167,47 +5167,7 @@ right: 0,
         , (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{ flex:1, width: '100%',}`],
             arrProps: [],
-            arrItems: [
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=> {
-console.log("TESTE PARTNER RODOU")
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `TESTE`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.FlatList2 pass={{
+            arrItems: [(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
@@ -13037,90 +12997,15 @@ fontWeight: '700',
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
-  try {
-    const { 
-      getFirestore, 
-      collection, 
-      getDocs, 
-      query, 
-      where 
-    } = await import("firebase/firestore");
-
-    const fbInit = tools.getCtData("all.temp.fireInit");
-    const db = getFirestore(fbInit);
-
-    // Dados do usuário autenticado
-    const typeAccount = tools.getCtData("all.authUser.typeAccount");
-    const condoId = tools.getCtData("all.authUser.condoId");
-    const userDocId = tools.getCtData("all.authUser.docId");
-
-    // 🔥 Log copiável
-    console.log(
-      "DEBUG USER DATA => " +
-        JSON.stringify(
-          { typeAccount, condoId, userDocId },
-          null,
-          2
-        )
-    );
-
-    const refCondos = collection(db, "condos");
-    let snapshot;
-
-    // ---------------------------------------------------------
-    // 1️⃣ Se for ADMIN → traz todos os condomínios
-    // ---------------------------------------------------------
-    if (typeAccount === "adm") {
-      console.log("Conta ADM → buscando TODOS os condomínios...");
-      snapshot = await getDocs(refCondos);
-    }
-
-    // ---------------------------------------------------------
-    // 2️⃣ Se for PARTNER → filtra pelo condoId desse usuário
-    // ---------------------------------------------------------
-    else if (typeAccount === "partner") {
-      if (!condoId) {
-        console.warn("Usuário parceiro sem condoId definido!");
-        return;
-      }
-
-      console.log("Conta PARTNER → buscando SÓ o condomínio permitido...");
-
-      const q = query(refCondos, where("__name__", "==", condoId));
-      snapshot = await getDocs(q);
-    }
-
-    // ---------------------------------------------------------
-    // 3️⃣ Se tipo de conta for outro → evita crash
-    // ---------------------------------------------------------
-    else {
-      console.warn("Tipo de conta não reconhecido:", typeAccount);
-      return;
-    }
-
-    // ---------------------------------------------------------
-    // Converte os documentos para array utilizável na UI
-    // ---------------------------------------------------------
-    const condosList = [];
-    snapshot.forEach((doc) => {
-      condosList.push({
-        id: doc.id,
-        ...doc.data()
-      });
-    });
-
-    console.log("Lista final de condomínios:", condosList);
-
-    // Salva na tela (ex.: sc.condos.list)
-    tools.setData({
-      path: "sc.a7.list",
-      value: condosList,
-    });
-  } catch (err) {
-    console.error("Erro ao carregar lista de condomínios:", err);
-  }
-}]
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocsTool({ args, pass:{
+   arrRefStrings: [`condos`],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a7.list`],
+          value: [`$arg_callback`]
+        }})],
+        }})]
  , trigger: 'on init'
 }})],
 
