@@ -12275,7 +12275,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.msgs.msg1`],
+          keyPath: [`sc.A12.msgs.msg1`],
           value: [` `]
         }}), 
 async (...args) =>
@@ -12940,7 +12940,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.msgs.msg1`],
+          keyPath: [`sc.A12.msgs.msg1`],
           value: [` `]
         }}), 
 async (...args) =>
@@ -21005,7 +21005,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.msgs.msg1`],
+          keyPath: [`sc.A12.msgs.msg1`],
           value: [` `]
         }}), 
 async (...args) =>
@@ -21670,7 +21670,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.msgs.msg1`],
+          keyPath: [`sc.A12.msgs.msg1`],
           value: [` `]
         }}), 
 async (...args) =>
@@ -29772,7 +29772,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.msgs.msg1`],
+          keyPath: [`sc.A12.msgs.msg1`],
           value: [` `]
         }}), 
 async (...args) =>
@@ -30437,7 +30437,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.msgs.msg1`],
+          keyPath: [`sc.A12.msgs.msg1`],
           value: [` `]
         }}), 
 async (...args) =>
@@ -38426,7 +38426,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.msgs.msg1`],
+          keyPath: [`sc.A12.msgs.msg1`],
           value: [` `]
         }}), 
 async (...args) =>
@@ -39091,7 +39091,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A12.forms.msgs.msg1`],
+          keyPath: [`sc.A12.msgs.msg1`],
           value: [` `]
         }}), 
 async (...args) =>
