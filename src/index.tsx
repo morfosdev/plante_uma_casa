@@ -39770,7 +39770,6 @@ right: 0,
 
           itemElements: [
             
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -40014,23 +40013,10 @@ fontWeight: '500',
 	borderColor: '#e6e7e8',
 }],
 
-      URIvariablePath:[`https://www.condominioterranovabauru.com.br/cdn/fotos/portaria_terra_nova_bauru.jpg`],
+      URIvariablePath:[`$arg_images`],
 
       args,
     }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-height: 15,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
