@@ -62824,15 +62824,7 @@ paddingHorizontal: 16,
 	justifyContent: "space-between"
 }`],
 
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: ['example.A1.lists.iptsChanges.name'],
-          value: [`$arg_stepId`]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[
+            functions:[()=>{}],            childrenItems:[
         
 
  (...args:any) => <Elements.Custom pass={{
@@ -62875,6 +62867,7 @@ paddingHorizontal: 16,
 }] 
 }}/>
 , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -62919,6 +62912,87 @@ paddingHorizontal: 16,
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+top: 2,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`c6.forms.editChanges.stepId`],
+          value: [`$arg_stepId`]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={68}
+    height={37}
+    fill="red"
+    viewBox="0 0 68 37"
+    {...props}
+  >
+    <G filter="url(#a)">
+      <Rect
+        width={49}
+        height={18.374}
+        x={9.142}
+        y={7.314}
+        fill="#000"
+        rx={9.187}
+      />
+      <Path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.089}
+        d="M33.121 12.53H29.31a1.089 1.089 0 0 0-1.09 1.09v7.624a1.09 1.09 0 0 0 1.09 1.09h7.625a1.09 1.09 0 0 0 1.089-1.09v-3.812m-.817-5.719a1.155 1.155 0 1 1 1.634 1.634l-5.174 5.174-2.178.545.544-2.179 5.174-5.174Z"
+      />
+    </G>
+    <Defs></Defs>
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="68" height="37" viewBox="0 0 68 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_187_2101)">
+<rect x="9.14209" y="7.31372" width="49" height="18.3739" rx="9.18694" fill="black"/>
+<path d="M33.1213 12.5303H29.309C29.0201 12.5303 28.743 12.6451 28.5388 12.8494C28.3345 13.0536 28.2197 13.3307 28.2197 13.6196V21.2443C28.2197 21.5332 28.3345 21.8102 28.5388 22.0145C28.743 22.2188 29.0201 22.3335 29.309 22.3335H36.9337C37.2226 22.3335 37.4996 22.2188 37.7039 22.0145C37.9082 21.8102 38.0229 21.5332 38.0229 21.2443V17.4319M37.206 11.7134C37.4227 11.4967 37.7165 11.375 38.0229 11.375C38.3293 11.375 38.6232 11.4967 38.8399 11.7134C39.0565 11.93 39.1783 12.2239 39.1783 12.5303C39.1783 12.8367 39.0565 13.1306 38.8399 13.3473L33.666 18.5212L31.4875 19.0658L32.0321 16.8873L37.206 11.7134Z" stroke="white" stroke-width="1.08925" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_d_187_2101" x="-3.62396e-05" y="1.96695e-05" width="67.2843" height="36.658" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.82843"/>
+<feGaussianBlur stdDeviation="4.57106"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_187_2101"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_187_2101" result="shape"/>
+</filter>
+</defs>
+</svg>
+
+      `,
+
+      altura: "50px",
+
+      largura: "60px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
