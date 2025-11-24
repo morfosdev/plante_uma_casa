@@ -5167,7 +5167,45 @@ right: 0,
         , (...args:any) => <Elements.ScrollBar pass={{
             styles: [`{ flex:1, width: '100%',}`],
             arrProps: [],
-            arrItems: [(...args:any) => <Elements.FlatList2 pass={{
+            arrItems: [
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [console.log("TESTE PARTNER RODOU")]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `TESTE`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
