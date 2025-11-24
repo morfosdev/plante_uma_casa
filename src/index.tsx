@@ -50910,10 +50910,6 @@ top: 2,
   tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
   tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
 
-console.log("docId:", tools.getData("sc.B9.forms.editChanges.docId"));
-console.log("stepId:", tools.getData("sc.B9.forms.editChanges.stepId"));
-
-
   // (Opcional) limpar possíveis resíduos do form de novo
   tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
 }
