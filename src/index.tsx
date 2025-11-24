@@ -39831,12 +39831,46 @@ borderRadius: 10,
 alignItems: 'center',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b5.viewCondo`],
           value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B5.editChanges`],
+          value: [`$arg_item`]
+        }})]
+ , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [`$arg_item`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [`a1bEdit`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
