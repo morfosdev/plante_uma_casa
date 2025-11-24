@@ -62824,7 +62824,15 @@ paddingHorizontal: 16,
 	justifyContent: "space-between"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: ['example.A1.lists.iptsChanges.name'],
+          value: [`$arg_stepId`]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
  (...args:any) => <Elements.Custom pass={{
