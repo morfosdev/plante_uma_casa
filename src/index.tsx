@@ -44350,14 +44350,21 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`condos`],
-            arrFuncs: [async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`condos`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_all.authUser.condoId`],
+        }})],
+ arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b4.list`],
           value: [`$arg_callback`]
         }})],
-        }})]
+ }})]
  , trigger: 'on init'
 }})],
 
