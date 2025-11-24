@@ -13072,8 +13072,7 @@ fontWeight: '700',
   } catch (err) {
     console.error("Erro ao carregar lista de condomínios:", err);
   }
-};
-]
+}]
  , trigger: 'on init'
 }})],
 
