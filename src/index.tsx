@@ -12275,6 +12275,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.msgs.msg1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), async (...args) =>
@@ -12932,6 +12937,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A12.forms.iptsChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.msgs.msg1`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -20995,6 +21005,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.msgs.msg1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), async (...args) =>
@@ -21652,6 +21667,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A12.forms.iptsChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.msgs.msg1`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -29752,6 +29772,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.msgs.msg1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), async (...args) =>
@@ -30409,6 +30434,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A12.forms.iptsChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.msgs.msg1`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -38396,6 +38426,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.msgs.msg1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), async (...args) =>
@@ -39053,6 +39088,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A12.forms.iptsChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.forms.msgs.msg1`],
+          value: [``]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
