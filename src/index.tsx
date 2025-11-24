@@ -64151,6 +64151,7 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+ 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -64405,6 +64406,803 @@ paddingHorizontal: 16,
           ],
 
           pData: `sc.B7.statics.steps.4.subs`,
+
+          itemElements: [
+            
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const data = useData((ct) => ct.sc?.B7?.lists?.list1);
+  let condMatch = false;
+  console.log({ args, data });
+  
+  const item = tools.findFlatItem(args);
+  console.log({ item });
+
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+        console.log({d: d?.stepId , item: item.stepId});
+      condMatch = true;
+    }
+  });
+
+  const stlRadio = {
+    borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 16,
+    height: 16,
+  };
+
+  const iconActive = () => (
+    <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const iconInactive = () => (
+    <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const condReturn = condMatch ? iconActive() : iconInactive();
+
+  return condReturn;
+}] 
+}}/>
+, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+	flex: 1
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 15,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `$arg_label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        
+          ],
+
+      styles:[
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+ 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={35}
+    height={20}
+    fill="red"
+    viewBox="0 0 35 20"
+    {...props}
+  >
+    <Path
+      fill="#555"
+      d="M22.807 7.205a.634.634 0 0 0-.934 0L18 11.315l-3.873-4.11a.634.634 0 0 0-.934 0 .731.731 0 0 0 0 .991l4.333 4.599c.18.191.44.249.667.172a.65.65 0 0 0 .287-.179l4.327-4.592a.731.731 0 0 0 0-.99Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.8066 7.20526C22.5488 6.93158 22.1307 6.93158 21.8729 7.20526L18 11.3159L14.1271 7.20533C13.8693 6.93165 13.4512 6.93165 13.1934 7.20533C12.9355 7.479 12.9355 7.92273 13.1934 8.19641L17.5258 12.7947C17.7064 12.9865 17.9657 13.0439 18.1934 12.967C18.2985 12.9355 18.3977 12.8759 18.4804 12.7881L22.8066 8.19634C23.0645 7.92266 23.0645 7.47894 22.8066 7.20526Z" fill="#555555"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 10,
+	fontSize: 13,
+	fontWeight: '700',
+	color: '#121417',
+}`
+          ],
+
+          children: [
+            `$var_sc.B7.statics.steps.5.label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+padding: 5, 
+backgroundColor: "#FFF", 
+flexDirection: "row", 
+alignItems: "center",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkbox1";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#CCC"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#CCCCCC"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#315E2D"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#315E2D"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `sc.B7.statics.steps.5.subs`,
+
+          itemElements: [
+            
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const data = useData((ct) => ct.sc?.B7?.lists?.list1);
+  let condMatch = false;
+  console.log({ args, data });
+  
+  const item = tools.findFlatItem(args);
+  console.log({ item });
+
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+        console.log({d: d?.stepId , item: item.stepId});
+      condMatch = true;
+    }
+  });
+
+  const stlRadio = {
+    borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 16,
+    height: 16,
+  };
+
+  const iconActive = () => (
+    <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const iconInactive = () => (
+    <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const condReturn = condMatch ? iconActive() : iconInactive();
+
+  return condReturn;
+}] 
+}}/>
+, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+	flex: 1
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 15,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `$arg_label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        
+          ],
+
+      styles:[
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={35}
+    height={20}
+    fill="red"
+    viewBox="0 0 35 20"
+    {...props}
+  >
+    <Path
+      fill="#555"
+      d="M22.807 7.205a.634.634 0 0 0-.934 0L18 11.315l-3.873-4.11a.634.634 0 0 0-.934 0 .731.731 0 0 0 0 .991l4.333 4.599c.18.191.44.249.667.172a.65.65 0 0 0 .287-.179l4.327-4.592a.731.731 0 0 0 0-.99Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.8066 7.20526C22.5488 6.93158 22.1307 6.93158 21.8729 7.20526L18 11.3159L14.1271 7.20533C13.8693 6.93165 13.4512 6.93165 13.1934 7.20533C12.9355 7.479 12.9355 7.92273 13.1934 8.19641L17.5258 12.7947C17.7064 12.9865 17.9657 13.0439 18.1934 12.967C18.2985 12.9355 18.3977 12.8759 18.4804 12.7881L22.8066 8.19634C23.0645 7.92266 23.0645 7.47894 22.8066 7.20526Z" fill="#555555"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 10,
+	fontSize: 13,
+	fontWeight: '700',
+	color: '#121417',
+}`
+          ],
+
+          children: [
+            `$var_sc.B7.statics.steps.6.label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+padding: 5, 
+backgroundColor: "#FFF", 
+flexDirection: "row", 
+alignItems: "center",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkbox1";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#CCC"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#CCCCCC"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#315E2D"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#315E2D"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `sc.B7.statics.steps.6.subs`,
 
           itemElements: [
             
