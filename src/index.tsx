@@ -12997,15 +12997,83 @@ fontWeight: '700',
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`condos`],
-            arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.list`],
-          value: [`$arg_callback`]
-        }})],
-        }})]
+ arrFunctions: [async () => {
+  try {
+    const { 
+      getFirestore, 
+      collection, 
+      getDocs, 
+      query, 
+      where 
+    } = await import("firebase/firestore");
+
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+
+    // Dados do usuário autenticado
+    const typeAccount = tools.getCtData("all.authUser.typeAccount");
+    const condoId = tools.getCtData("all.authUser.condoId");
+    const userDocId = tools.getCtData("all.authUser.docId");
+
+    console.log("Usuário logado:", { typeAccount, condoId, userDocId });
+
+    const refCondos = collection(db, "condos");
+    let snapshot;
+
+    // ---------------------------------------------------------
+    // 1️⃣ Se for ADMIN → traz todos os condomínios
+    // ---------------------------------------------------------
+    if (typeAccount === "adm") {
+      console.log("Conta ADM → buscando TODOS os condomínios...");
+      snapshot = await getDocs(refCondos);
+    }
+
+    // ---------------------------------------------------------
+    // 2️⃣ Se for PARTNER → filtra pelo condoId desse usuário
+    // ---------------------------------------------------------
+    else if (typeAccount === "partner") {
+      if (!condoId) {
+        console.warn("Usuário parceiro sem condoId definido!");
+        return;
+      }
+
+      console.log("Conta PARTNER → buscando SÓ o condomínio permitido...");
+
+      const q = query(refCondos, where("__name__", "==", condoId));
+      snapshot = await getDocs(q);
+    }
+
+    // ---------------------------------------------------------
+    // 3️⃣ Se tipo de conta for outro → evita crash
+    // ---------------------------------------------------------
+    else {
+      console.warn("Tipo de conta não reconhecido:", typeAccount);
+      return;
+    }
+
+    // ---------------------------------------------------------
+    // Converte os documentos para array utilizável na UI
+    // ---------------------------------------------------------
+    const condosList = [];
+    snapshot.forEach((doc) => {
+      condosList.push({
+        id: doc.id,
+        ...doc.data()
+      });
+    });
+
+    console.log("Lista final de condomínios:", condosList);
+
+    // Salva na tela (ex.: sc.condos.list)
+    tools.setData({
+      path: "sc.a7.list",
+      value: condosList,
+    });
+  } catch (err) {
+    console.error("Erro ao carregar lista de condomínios:", err);
+  }
+};
+]
  , trigger: 'on init'
 }})],
 
