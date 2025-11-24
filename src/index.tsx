@@ -13015,7 +13015,15 @@ fontWeight: '700',
     const condoId = tools.getCtData("all.authUser.condoId");
     const userDocId = tools.getCtData("all.authUser.docId");
 
-    console.log("Usuário logado:", { typeAccount, condoId, userDocId });
+    // 🔥 Log copiável
+    console.log(
+      "DEBUG USER DATA => " +
+        JSON.stringify(
+          { typeAccount, condoId, userDocId },
+          null,
+          2
+        )
+    );
 
     const refCondos = collection(db, "condos");
     let snapshot;
