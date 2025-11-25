@@ -66488,7 +66488,7 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "blue" }`
+            `{ color: "black" }`
           ],
 
           children: [
