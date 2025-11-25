@@ -62839,11 +62839,9 @@ async (...args) =>
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
         }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C6.forms.editChanges.date`],
-          value: [`$arg_date`]
-        }}), 
+() => {
+	console.log({arg});
+}, 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c6stepProfile");
