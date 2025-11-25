@@ -66482,6 +66482,22 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "blue" }`
+          ],
+
+          children: [
+            `Ocultar`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -66621,30 +66637,14 @@ borderRadius: 10,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.BtnDocumentPicker pass={{
+        , (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [(value) => {
 	console.log("Set Documents B9",{value});
 
 	const path = "all.temp.documents";
 	tools.setData({path, value});
 }], args,
- }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "blue" }`
-          ],
-
-          children: [
-            `Ocultar`
-          ],
-
-          args,
-
-        }}/>],
+ }}/>],
 
             args,
           }}/>
