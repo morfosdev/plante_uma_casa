@@ -58460,12 +58460,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
         `docId`, 
         `==`, `$var_sc.B9.currents.currId1`],
         }})],
- arrFuncs: [
- async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B7.lists.list1`],
-          value: [`$arg_callback`]
-        }}), (args) => {
+ arrFuncs: [(args) => {
   console.log("custom do where get user by ownerId", { args });
   const objSteps = args[0].steps;
   const arrSteps = typeof objSteps === 'object' ? Object.values(objSteps) : [];
