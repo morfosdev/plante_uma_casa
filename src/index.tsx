@@ -7726,7 +7726,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -7734,82 +7733,6 @@ fontWeight: '700',
             styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-backgroundColor: "transparent", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const getVal = (path) => tools.getCtData(path);
-
-  const paths = [
-    "sc.a1.editChanges.images",
-    "sc.a1.editChanges.documents",
-  ];
-
-  console.log("🔍 --- DEBUG UPLOADERS ---");
-
-  for (let i = 0; i < paths.length; i++) {
-    // Pega o caminho direto do array
-    const val = getVal(paths[i]);
-
-    console.log(paths[i], ":", val);
-
-    if (Array.isArray(val)) {
-      console.log("➡️ Tipo: array", val.length, val);
-    } else if (val && typeof val === "object") {
-      console.log("➡️ Tipo: objeto", val);
-    } else if (typeof val === "string") {
-      console.log("➡️ Tipo: string", val.length, val);
-      try {
-        const parsed = JSON.parse(val);
-        console.log("✅ JSON.parse() OK:", parsed);
-      } catch {
-        console.warn("⚠️ Não é JSON válido");
-      }
-    } else {
-      console.log("❌ Valor vazio ou indefinido:", val);
-    }
-  }
-
-  console.log("🔍 --- FIM DEBUG ---");
-}
-]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `TEMP`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
@@ -10879,13 +10802,13 @@ fontSize: 12,
           arrStyles: [
             `{
 	position: 'absolute',
-	top: 776,
-	color: '$var_sc.a1.validationColor',
+	top: 200,
+	color: '$var_sc.A10.validationColor',
 }`
           ],
 
           children: [
-            `$var_sc.a10.feedbackMessage`
+            `$var_sc.A10.feedbackMessage`
           ],
 
           args,
@@ -10956,10 +10879,16 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a10.feedbackMessage"],
+      keyPath: ["sc.A10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.A10.validationColor",
+  value: "red",
+});
 
   console.warn("⚠️ Campos vazios detectados:", {
     value,
@@ -10970,6 +10899,11 @@ if (!value || !date || !description) {
   return; // Interrompe o fluxo
 }
 
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.A10.validationColor",
+  value: "green",
+});
 
     // -------------------------
     // Histórico do lote
@@ -11052,7 +10986,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -11061,7 +10995,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
@@ -12341,6 +12275,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.msgs.msg1`],
+          value: [` `]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), async (...args) =>
@@ -12998,6 +12937,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A12.forms.iptsChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.msgs.msg1`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -16512,7 +16456,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -16520,82 +16463,6 @@ fontWeight: '700',
             styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-backgroundColor: "transparent", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const getVal = (path) => tools.getCtData(path);
-
-  const paths = [
-    "sc.a1.editChanges.images",
-    "sc.a1.editChanges.documents",
-  ];
-
-  console.log("🔍 --- DEBUG UPLOADERS ---");
-
-  for (let i = 0; i < paths.length; i++) {
-    // Pega o caminho direto do array
-    const val = getVal(paths[i]);
-
-    console.log(paths[i], ":", val);
-
-    if (Array.isArray(val)) {
-      console.log("➡️ Tipo: array", val.length, val);
-    } else if (val && typeof val === "object") {
-      console.log("➡️ Tipo: objeto", val);
-    } else if (typeof val === "string") {
-      console.log("➡️ Tipo: string", val.length, val);
-      try {
-        const parsed = JSON.parse(val);
-        console.log("✅ JSON.parse() OK:", parsed);
-      } catch {
-        console.warn("⚠️ Não é JSON válido");
-      }
-    } else {
-      console.log("❌ Valor vazio ou indefinido:", val);
-    }
-  }
-
-  console.log("🔍 --- FIM DEBUG ---");
-}
-]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `TEMP`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
@@ -19665,13 +19532,13 @@ fontSize: 12,
           arrStyles: [
             `{
 	position: 'absolute',
-	top: 776,
-	color: '$var_sc.a1.validationColor',
+	top: 200,
+	color: '$var_sc.A10.validationColor',
 }`
           ],
 
           children: [
-            `$var_sc.a10.feedbackMessage`
+            `$var_sc.A10.feedbackMessage`
           ],
 
           args,
@@ -19742,10 +19609,16 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a10.feedbackMessage"],
+      keyPath: ["sc.A10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.A10.validationColor",
+  value: "red",
+});
 
   console.warn("⚠️ Campos vazios detectados:", {
     value,
@@ -19756,6 +19629,11 @@ if (!value || !date || !description) {
   return; // Interrompe o fluxo
 }
 
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.A10.validationColor",
+  value: "green",
+});
 
     // -------------------------
     // Histórico do lote
@@ -19838,7 +19716,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -19847,7 +19725,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
@@ -21127,6 +21005,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.msgs.msg1`],
+          value: [` `]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), async (...args) =>
@@ -21784,6 +21667,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A12.forms.iptsChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.msgs.msg1`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -25335,7 +25223,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -25343,82 +25230,6 @@ fontWeight: '700',
             styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-backgroundColor: "transparent", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const getVal = (path) => tools.getCtData(path);
-
-  const paths = [
-    "sc.a1.editChanges.images",
-    "sc.a1.editChanges.documents",
-  ];
-
-  console.log("🔍 --- DEBUG UPLOADERS ---");
-
-  for (let i = 0; i < paths.length; i++) {
-    // Pega o caminho direto do array
-    const val = getVal(paths[i]);
-
-    console.log(paths[i], ":", val);
-
-    if (Array.isArray(val)) {
-      console.log("➡️ Tipo: array", val.length, val);
-    } else if (val && typeof val === "object") {
-      console.log("➡️ Tipo: objeto", val);
-    } else if (typeof val === "string") {
-      console.log("➡️ Tipo: string", val.length, val);
-      try {
-        const parsed = JSON.parse(val);
-        console.log("✅ JSON.parse() OK:", parsed);
-      } catch {
-        console.warn("⚠️ Não é JSON válido");
-      }
-    } else {
-      console.log("❌ Valor vazio ou indefinido:", val);
-    }
-  }
-
-  console.log("🔍 --- FIM DEBUG ---");
-}
-]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `TEMP`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
@@ -28488,13 +28299,13 @@ fontSize: 12,
           arrStyles: [
             `{
 	position: 'absolute',
-	top: 776,
-	color: '$var_sc.a1.validationColor',
+	top: 200,
+	color: '$var_sc.A10.validationColor',
 }`
           ],
 
           children: [
-            `$var_sc.a10.feedbackMessage`
+            `$var_sc.A10.feedbackMessage`
           ],
 
           args,
@@ -28565,10 +28376,16 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a10.feedbackMessage"],
+      keyPath: ["sc.A10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.A10.validationColor",
+  value: "red",
+});
 
   console.warn("⚠️ Campos vazios detectados:", {
     value,
@@ -28579,6 +28396,11 @@ if (!value || !date || !description) {
   return; // Interrompe o fluxo
 }
 
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.A10.validationColor",
+  value: "green",
+});
 
     // -------------------------
     // Histórico do lote
@@ -28661,7 +28483,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -28670,7 +28492,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
@@ -29950,6 +29772,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.msgs.msg1`],
+          value: [` `]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), async (...args) =>
@@ -30607,6 +30434,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A12.forms.iptsChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.msgs.msg1`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -34045,7 +33877,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -34053,82 +33884,6 @@ fontWeight: '700',
             styles:[`{ width: 40, height: 40, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-backgroundColor: "transparent", 
-borderRadius: 20, 
-alignItems: "center", 
-justifyContent: "center",
-paddingHorizontal: 30,
-paddingVertical: 8,
-}`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => {
-  const getVal = (path) => tools.getCtData(path);
-
-  const paths = [
-    "sc.a1.editChanges.images",
-    "sc.a1.editChanges.documents",
-  ];
-
-  console.log("🔍 --- DEBUG UPLOADERS ---");
-
-  for (let i = 0; i < paths.length; i++) {
-    // Pega o caminho direto do array
-    const val = getVal(paths[i]);
-
-    console.log(paths[i], ":", val);
-
-    if (Array.isArray(val)) {
-      console.log("➡️ Tipo: array", val.length, val);
-    } else if (val && typeof val === "object") {
-      console.log("➡️ Tipo: objeto", val);
-    } else if (typeof val === "string") {
-      console.log("➡️ Tipo: string", val.length, val);
-      try {
-        const parsed = JSON.parse(val);
-        console.log("✅ JSON.parse() OK:", parsed);
-      } catch {
-        console.warn("⚠️ Não é JSON válido");
-      }
-    } else {
-      console.log("❌ Valor vazio ou indefinido:", val);
-    }
-  }
-
-  console.log("🔍 --- FIM DEBUG ---");
-}
-]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 15,
-color: '#FFFFFF',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `TEMP`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
@@ -37198,13 +36953,13 @@ fontSize: 12,
           arrStyles: [
             `{
 	position: 'absolute',
-	top: 776,
-	color: '$var_sc.a1.validationColor',
+	top: 200,
+	color: '$var_sc.A10.validationColor',
 }`
           ],
 
           children: [
-            `$var_sc.a10.feedbackMessage`
+            `$var_sc.A10.feedbackMessage`
           ],
 
           args,
@@ -37275,10 +37030,16 @@ if (!value || !date || !description) {
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.a10.feedbackMessage"],
+      keyPath: ["sc.A10.feedbackMessage"],
       value: ["Preencha todos os campos obrigatórios."],
     },
   });
+
+// estado = erro (COR VERMELHA)
+    tools.setData({
+  path: "sc.A10.validationColor",
+  value: "red",
+});
 
   console.warn("⚠️ Campos vazios detectados:", {
     value,
@@ -37289,6 +37050,11 @@ if (!value || !date || !description) {
   return; // Interrompe o fluxo
 }
 
+// estado = sucesso (COR VERDE)
+tools.setData({
+  path: "sc.A10.validationColor",
+  value: "green",
+});
 
     // -------------------------
     // Histórico do lote
@@ -37371,7 +37137,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Parcela adicionada com sucesso!"],
       },
     });
@@ -37380,7 +37146,7 @@ tools.functions.setVar({
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a10.feedbackMessage"],
+        keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
@@ -38660,6 +38426,11 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.msgs.msg1`],
+          value: [` `]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), async (...args) =>
@@ -39317,6 +39088,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A12.forms.iptsChanges`],
           value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A12.msgs.msg1`],
+          value: [` `]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
@@ -40034,7 +39810,6 @@ right: 0,
 
           itemElements: [
             
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -40056,78 +39831,47 @@ borderRadius: 10,
 alignItems: 'center',
 }`],
 
-            functions:[async (...args) =>
+            functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(args) => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
-  const stepIdRaw = item?.stepId;
-
-  // ---- Guards
-  if (!item || stepIdRaw == null) {
-    console.warn("Step handler: item ou stepId ausente.", { item });
-    return;
-  }
-
-  const stepId = String(stepIdRaw);
-  const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
-
-  // Abre painel lateral (comum)
-  tools.setData({ path: pathSideRight, value: true });
-
-  // Procura match por stepId
-  const matched = Array.isArray(stepsList)
-    ? stepsList.find((d: any) => String(d?.stepId) === stepId)
-    : undefined;
-
-  const condMatch = Boolean(matched);
-  const currId = matched?.docId;
-
-  console.log({ item, stepsList, matched, condMatch });
-
-  // if (!condMatch) {
-  //     // ---- Modo Adicionar
-  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
-
-  //     tools.setData({ path: pathNew, value: true });
-  //     tools.setData({ path: pathEdit, value: false });
-
-  //     // stepId sempre preenchido
-  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
-
-  //     // Evita undefined: use vazio ou herde do item
-
-  //     // (Opcional) limpar possíveis resíduos do form de edição
-  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
-  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-  //     return;
-  // }
-
-  // ---- Modo Editar
-  console.log("%cEdit Step Mode - " + pathEdit, css1);
-
-  tools.setData({ path: pathEdit, value: true });
-  tools.setData({ path: pathNew, value: false });
-
-  // Define os valores base no formulário de edição
-  tools.setData({
-    path: "sc.B9.forms.editChanges",
-    value: matched, // ✅ Passa todos os dados do documento
-  });
-
-  // Campos específicos importantes
-  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
-  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-
-  // (Opcional) limpar possíveis resíduos do form de novo
-  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
-}
-]
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b5.viewCondo`],
+          value: [true]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B5.forms.editChanges`],
+          value: [`$arg_item`]
+        }})]
+ , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.a1.editChanges`],
+          value: [`$arg_item`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [`a1bEdit`]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -40278,23 +40022,10 @@ fontWeight: '500',
 	borderColor: '#e6e7e8',
 }],
 
-      URIvariablePath:[`https://www.condominioterranovabauru.com.br/cdn/fotos/portaria_terra_nova_bauru.jpg`],
+      URIvariablePath:[`$arg_images`],
 
       args,
     }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-height: 15,
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -41658,11 +41389,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.condo`],
+          path: [`sc.B5.forms.editChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.condo`],
+          keyPath: [`sc.B5.forms.editChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
@@ -41713,11 +41444,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.address`],
+          path: [`sc.B5.forms.editChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.address`],
+          keyPath: [`sc.B5.forms.editChanges.address`],
           value: [`$arg_callback`]
         }})],
 
@@ -41768,11 +41499,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.startDate`],
+          path: [`sc.B5.forms.editChanges.startDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.startDate`],
+          keyPath: [`sc.B5.forms.editChanges.startDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -41823,11 +41554,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.endDate`],
+          path: [`sc.B5.forms.editChanges.endDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.endDate`],
+          keyPath: [`sc.B5.forms.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -41878,11 +41609,11 @@ height: 80,
 borderRadius: 10,
 }`],
 
-          path: [`sc.b5.editChanges.description`],
+          path: [`sc.B5.forms.editChanges.description`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.description`],
+          keyPath: [`sc.B5.forms.editChanges.description`],
           value: [`$arg_callback`]
         }})],
 
@@ -43576,7 +43307,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -44376,7 +44107,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -44614,14 +44345,21 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [`condos`],
-            arrFuncs: [async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`condos`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_all.authUser.condoId`],
+        }})],
+ arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b4.list`],
           value: [`$arg_callback`]
         }})],
-        }})]
+ }})]
  , trigger: 'on init'
 }})],
 
@@ -47034,11 +46772,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.condo`],
+          path: [`sc.B5.forms.editChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.condo`],
+          keyPath: [`sc.B5.forms.editChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
@@ -47089,11 +46827,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.address`],
+          path: [`sc.B5.forms.editChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.address`],
+          keyPath: [`sc.B5.forms.editChanges.address`],
           value: [`$arg_callback`]
         }})],
 
@@ -47144,11 +46882,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.startDate`],
+          path: [`sc.B5.forms.editChanges.startDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.startDate`],
+          keyPath: [`sc.B5.forms.editChanges.startDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -47199,11 +46937,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.endDate`],
+          path: [`sc.B5.forms.editChanges.endDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.endDate`],
+          keyPath: [`sc.B5.forms.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -47254,11 +46992,11 @@ height: 80,
 borderRadius: 10,
 }`],
 
-          path: [`sc.b5.editChanges.description`],
+          path: [`sc.B5.forms.editChanges.description`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.description`],
+          keyPath: [`sc.B5.forms.editChanges.description`],
           value: [`$arg_callback`]
         }})],
 
@@ -48952,7 +48690,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -49752,7 +49490,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -55757,11 +55495,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.condo`],
+          path: [`sc.B5.forms.editChanges.condo`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.condo`],
+          keyPath: [`sc.B5.forms.editChanges.condo`],
           value: [`$arg_callback`]
         }})],
 
@@ -55812,11 +55550,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.address`],
+          path: [`sc.B5.forms.editChanges.address`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.address`],
+          keyPath: [`sc.B5.forms.editChanges.address`],
           value: [`$arg_callback`]
         }})],
 
@@ -55867,11 +55605,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.startDate`],
+          path: [`sc.B5.forms.editChanges.startDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.startDate`],
+          keyPath: [`sc.B5.forms.editChanges.startDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -55922,11 +55660,11 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.b5.editChanges.endDate`],
+          path: [`sc.B5.forms.editChanges.endDate`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.endDate`],
+          keyPath: [`sc.B5.forms.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -55977,11 +55715,11 @@ height: 80,
 borderRadius: 10,
 }`],
 
-          path: [`sc.b5.editChanges.description`],
+          path: [`sc.B5.forms.editChanges.description`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.b5.editChanges.description`],
+          keyPath: [`sc.B5.forms.editChanges.description`],
           value: [`$arg_callback`]
         }})],
 
@@ -57675,7 +57413,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -58475,7 +58213,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -63098,6 +62836,7 @@ paddingHorizontal: 16,
 }] 
 }}/>
 , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -63142,6 +62881,87 @@ paddingHorizontal: 16,
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+top: 2,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`c6.forms.editChanges.stepId`],
+          value: [`$arg_stepId`]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={68}
+    height={37}
+    fill="red"
+    viewBox="0 0 68 37"
+    {...props}
+  >
+    <G filter="url(#a)">
+      <Rect
+        width={49}
+        height={18.374}
+        x={9.142}
+        y={7.314}
+        fill="#000"
+        rx={9.187}
+      />
+      <Path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.089}
+        d="M33.121 12.53H29.31a1.089 1.089 0 0 0-1.09 1.09v7.624a1.09 1.09 0 0 0 1.09 1.09h7.625a1.09 1.09 0 0 0 1.089-1.09v-3.812m-.817-5.719a1.155 1.155 0 1 1 1.634 1.634l-5.174 5.174-2.178.545.544-2.179 5.174-5.174Z"
+      />
+    </G>
+    <Defs></Defs>
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="68" height="37" viewBox="0 0 68 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_187_2101)">
+<rect x="9.14209" y="7.31372" width="49" height="18.3739" rx="9.18694" fill="black"/>
+<path d="M33.1213 12.5303H29.309C29.0201 12.5303 28.743 12.6451 28.5388 12.8494C28.3345 13.0536 28.2197 13.3307 28.2197 13.6196V21.2443C28.2197 21.5332 28.3345 21.8102 28.5388 22.0145C28.743 22.2188 29.0201 22.3335 29.309 22.3335H36.9337C37.2226 22.3335 37.4996 22.2188 37.7039 22.0145C37.9082 21.8102 38.0229 21.5332 38.0229 21.2443V17.4319M37.206 11.7134C37.4227 11.4967 37.7165 11.375 38.0229 11.375C38.3293 11.375 38.6232 11.4967 38.8399 11.7134C39.0565 11.93 39.1783 12.2239 39.1783 12.5303C39.1783 12.8367 39.0565 13.1306 38.8399 13.3473L33.666 18.5212L31.4875 19.0658L32.0321 16.8873L37.206 11.7134Z" stroke="white" stroke-width="1.08925" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_d_187_2101" x="-3.62396e-05" y="1.96695e-05" width="67.2843" height="36.658" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.82843"/>
+<feGaussianBlur stdDeviation="4.57106"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_187_2101"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_187_2101" result="shape"/>
+</filter>
+</defs>
+</svg>
+
+      `,
+
+      altura: "50px",
+
+      largura: "60px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
 
             args,
           }}/>
@@ -63983,6 +63803,7 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+ 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -64237,6 +64058,1202 @@ paddingHorizontal: 16,
           ],
 
           pData: `sc.B7.statics.steps.3.subs`,
+
+          itemElements: [
+            
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const data = useData((ct) => ct.sc?.B7?.lists?.list1);
+  let condMatch = false;
+  console.log({ args, data });
+  
+  const item = tools.findFlatItem(args);
+  console.log({ item });
+
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+        console.log({d: d?.stepId , item: item.stepId});
+      condMatch = true;
+    }
+  });
+
+  const stlRadio = {
+    borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 16,
+    height: 16,
+  };
+
+  const iconActive = () => (
+    <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const iconInactive = () => (
+    <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const condReturn = condMatch ? iconActive() : iconInactive();
+
+  return condReturn;
+}] 
+}}/>
+, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+	flex: 1
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 15,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `$arg_label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        
+          ],
+
+      styles:[
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+ 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={35}
+    height={20}
+    fill="red"
+    viewBox="0 0 35 20"
+    {...props}
+  >
+    <Path
+      fill="#555"
+      d="M22.807 7.205a.634.634 0 0 0-.934 0L18 11.315l-3.873-4.11a.634.634 0 0 0-.934 0 .731.731 0 0 0 0 .991l4.333 4.599c.18.191.44.249.667.172a.65.65 0 0 0 .287-.179l4.327-4.592a.731.731 0 0 0 0-.99Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.8066 7.20526C22.5488 6.93158 22.1307 6.93158 21.8729 7.20526L18 11.3159L14.1271 7.20533C13.8693 6.93165 13.4512 6.93165 13.1934 7.20533C12.9355 7.479 12.9355 7.92273 13.1934 8.19641L17.5258 12.7947C17.7064 12.9865 17.9657 13.0439 18.1934 12.967C18.2985 12.9355 18.3977 12.8759 18.4804 12.7881L22.8066 8.19634C23.0645 7.92266 23.0645 7.47894 22.8066 7.20526Z" fill="#555555"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 10,
+	fontSize: 13,
+	fontWeight: '700',
+	color: '#121417',
+}`
+          ],
+
+          children: [
+            `$var_sc.B7.statics.steps.4.label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+padding: 5, 
+backgroundColor: "#FFF", 
+flexDirection: "row", 
+alignItems: "center",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkbox1";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#CCC"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#CCCCCC"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#315E2D"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#315E2D"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `sc.B7.statics.steps.4.subs`,
+
+          itemElements: [
+            
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const data = useData((ct) => ct.sc?.B7?.lists?.list1);
+  let condMatch = false;
+  console.log({ args, data });
+  
+  const item = tools.findFlatItem(args);
+  console.log({ item });
+
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+        console.log({d: d?.stepId , item: item.stepId});
+      condMatch = true;
+    }
+  });
+
+  const stlRadio = {
+    borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 16,
+    height: 16,
+  };
+
+  const iconActive = () => (
+    <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const iconInactive = () => (
+    <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const condReturn = condMatch ? iconActive() : iconInactive();
+
+  return condReturn;
+}] 
+}}/>
+, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+	flex: 1
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 15,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `$arg_label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        
+          ],
+
+      styles:[
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+ 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={35}
+    height={20}
+    fill="red"
+    viewBox="0 0 35 20"
+    {...props}
+  >
+    <Path
+      fill="#555"
+      d="M22.807 7.205a.634.634 0 0 0-.934 0L18 11.315l-3.873-4.11a.634.634 0 0 0-.934 0 .731.731 0 0 0 0 .991l4.333 4.599c.18.191.44.249.667.172a.65.65 0 0 0 .287-.179l4.327-4.592a.731.731 0 0 0 0-.99Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.8066 7.20526C22.5488 6.93158 22.1307 6.93158 21.8729 7.20526L18 11.3159L14.1271 7.20533C13.8693 6.93165 13.4512 6.93165 13.1934 7.20533C12.9355 7.479 12.9355 7.92273 13.1934 8.19641L17.5258 12.7947C17.7064 12.9865 17.9657 13.0439 18.1934 12.967C18.2985 12.9355 18.3977 12.8759 18.4804 12.7881L22.8066 8.19634C23.0645 7.92266 23.0645 7.47894 22.8066 7.20526Z" fill="#555555"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 10,
+	fontSize: 13,
+	fontWeight: '700',
+	color: '#121417',
+}`
+          ],
+
+          children: [
+            `$var_sc.B7.statics.steps.5.label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+padding: 5, 
+backgroundColor: "#FFF", 
+flexDirection: "row", 
+alignItems: "center",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkbox1";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#CCC"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#CCCCCC"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#315E2D"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#315E2D"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `sc.B7.statics.steps.5.subs`,
+
+          itemElements: [
+            
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const data = useData((ct) => ct.sc?.B7?.lists?.list1);
+  let condMatch = false;
+  console.log({ args, data });
+  
+  const item = tools.findFlatItem(args);
+  console.log({ item });
+
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+        console.log({d: d?.stepId , item: item.stepId});
+      condMatch = true;
+    }
+  });
+
+  const stlRadio = {
+    borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 16,
+    height: 16,
+  };
+
+  const iconActive = () => (
+    <RN.View style={[{ backgroundColor: "green" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const iconInactive = () => (
+    <RN.View style={[{ backgroundColor: "#ccc" }, stlRadio]}>
+      <RN.Text style={{ color: "white", fontSize: 10, }}>✓</RN.Text>
+    </RN.View>
+  );
+  const condReturn = condMatch ? iconActive() : iconInactive();
+
+  return condReturn;
+}] 
+}}/>
+, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+	flex: 1
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	width: 15,
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}`
+          ],
+
+          children: [
+            `$arg_label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        
+          ],
+
+      styles:[
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
+        }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: 'space-between',
+	paddingVertical: 3,
+	paddingHorizontal: 4,
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+	flexDirection: 'row',
+	alignItems: 'center',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={35}
+    height={20}
+    fill="red"
+    viewBox="0 0 35 20"
+    {...props}
+  >
+    <Path
+      fill="#555"
+      d="M22.807 7.205a.634.634 0 0 0-.934 0L18 11.315l-3.873-4.11a.634.634 0 0 0-.934 0 .731.731 0 0 0 0 .991l4.333 4.599c.18.191.44.249.667.172a.65.65 0 0 0 .287-.179l4.327-4.592a.731.731 0 0 0 0-.99Z"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.8066 7.20526C22.5488 6.93158 22.1307 6.93158 21.8729 7.20526L18 11.3159L14.1271 7.20533C13.8693 6.93165 13.4512 6.93165 13.1934 7.20533C12.9355 7.479 12.9355 7.92273 13.1934 8.19641L17.5258 12.7947C17.7064 12.9865 17.9657 13.0439 18.1934 12.967C18.2985 12.9355 18.3977 12.8759 18.4804 12.7881L22.8066 8.19634C23.0645 7.92266 23.0645 7.47894 22.8066 7.20526Z" fill="#555555"/>
+</svg>
+
+      `,
+
+      altura: "15px",
+
+      largura: "30px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	paddingVertical: 10,
+	fontSize: 13,
+	fontWeight: '700',
+	color: '#121417',
+}`
+          ],
+
+          children: [
+            `$var_sc.B7.statics.steps.6.label`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+padding: 5, 
+backgroundColor: "#FFF", 
+flexDirection: "row", 
+alignItems: "center",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+  const path = "all.toggles.checkbox1";
+  const currState = tools.getCtData(path);
+  tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [!currState] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#CCC"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#CCCCCC"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.checkbox1", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="red"
+    viewBox="0 0 18 18"
+    {...props}
+  >
+    <Path
+      fill="#315E2D"
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18Zm-.232-5.36 5-6-1.536-1.28-4.3 5.159-2.225-2.226-1.414 1.414 3 3 .774.774.701-.841Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C10.1819 18 11.3522 17.7672 12.4442 17.3149C13.5361 16.8626 14.5282 16.1997 15.364 15.364C16.1997 14.5282 16.8626 13.5361 17.3149 12.4442C17.7672 11.3522 18 10.1819 18 9C18 7.8181 17.7672 6.64778 17.3149 5.55585C16.8626 4.46392 16.1997 3.47177 15.364 2.63604C14.5282 1.80031 13.5361 1.13738 12.4442 0.685084C11.3522 0.232792 10.1819 -1.76116e-08 9 0C6.61305 3.55683e-08 4.32387 0.948211 2.63604 2.63604C0.948212 4.32387 0 6.61305 0 9C0 11.3869 0.948212 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18ZM8.768 12.64L13.768 6.64L12.232 5.36L7.932 10.519L5.707 8.293L4.293 9.707L7.293 12.707L8.067 13.481L8.768 12.64Z" fill="#315E2D"/>
+</svg>
+
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [`transparent`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+paddingHorizontal: 16, 
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `sc.B7.statics.steps.6.subs`,
 
           itemElements: [
             
@@ -65794,7 +66811,7 @@ async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
         `users`, 
-        `$var_.all.authUser.docId`, `steps`],
+        `$var_all.authUser.docId`, `steps`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -65939,7 +66956,7 @@ fontWeight: '700',
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `ownerId`, 
-        `==`, `$var_.all.authUser.docId`],
+        `==`, `$var_all.authUser.docId`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
