@@ -43308,27 +43308,51 @@ console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
- }}), async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.B9.currents.currId1`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ }}), async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
+    const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + newId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -44087,27 +44111,51 @@ console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
- }}), async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.B9.currents.currId1`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ }}), async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
+    const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + newId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -48649,27 +48697,51 @@ console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
- }}), async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.B9.currents.currId1`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ }}), async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
+    const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + newId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -49428,27 +49500,51 @@ console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
- }}), async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.B9.currents.currId1`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ }}), async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
+    const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + newId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -57330,27 +57426,51 @@ console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
- }}), async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.B9.currents.currId1`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ }}), async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
+    const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + newId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -58109,27 +58229,51 @@ console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
- }}), async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.B9.currents.currId1`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ }}), async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
+    const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + newId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -66681,27 +66825,51 @@ console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
 
 tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
 }],
- }}), async (...args) =>
-        functions.firebase.updateDocTool({ args, pass:{
-   arrRefStrings: [
-        `users`, `$var_sc.B9.currents.currId1`],
-            arrPathData: [`sc.B9.forms.editChanges`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges`],
-          value: [undefined]
-        }}), 
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }})],
-        }})]
+ }}), async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
+    const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + newId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
