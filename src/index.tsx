@@ -62897,14 +62897,6 @@ async (...args) =>
     arrStepsStatic,
   });
 
-  if (!selectStep) {
-    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
-      stepId,
-      arrStepsDB,
-    });
-    return;
-  }
-
   // Set CtData
   tools.setData({
     path: "sc.C6.forms.editChanges.stepLabel",
@@ -63401,14 +63393,6 @@ async (...args) =>
     selectStepStatic,
     arrStepsStatic,
   });
-
-  if (!selectStep) {
-    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
-      stepId,
-      arrStepsDB,
-    });
-    return;
-  }
 
   // Set CtData
   tools.setData({
@@ -63907,14 +63891,6 @@ async (...args) =>
     arrStepsStatic,
   });
 
-  if (!selectStep) {
-    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
-      stepId,
-      arrStepsDB,
-    });
-    return;
-  }
-
   // Set CtData
   tools.setData({
     path: "sc.C6.forms.editChanges.stepLabel",
@@ -64411,14 +64387,6 @@ async (...args) =>
     selectStepStatic,
     arrStepsStatic,
   });
-
-  if (!selectStep) {
-    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
-      stepId,
-      arrStepsDB,
-    });
-    return;
-  }
 
   // Set CtData
   tools.setData({
@@ -64917,14 +64885,6 @@ async (...args) =>
     arrStepsStatic,
   });
 
-  if (!selectStep) {
-    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
-      stepId,
-      arrStepsDB,
-    });
-    return;
-  }
-
   // Set CtData
   tools.setData({
     path: "sc.C6.forms.editChanges.stepLabel",
@@ -65422,14 +65382,6 @@ async (...args) =>
     arrStepsStatic,
   });
 
-  if (!selectStep) {
-    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
-      stepId,
-      arrStepsDB,
-    });
-    return;
-  }
-
   // Set CtData
   tools.setData({
     path: "sc.C6.forms.editChanges.stepLabel",
@@ -65925,14 +65877,6 @@ async (...args) =>
     selectStepStatic,
     arrStepsStatic,
   });
-
-  if (!selectStep) {
-    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
-      stepId,
-      arrStepsDB,
-    });
-    return;
-  }
 
   // Set CtData
   tools.setData({
