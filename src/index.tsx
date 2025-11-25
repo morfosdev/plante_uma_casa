@@ -58706,7 +58706,7 @@ async (...args) =>
 		userEmail: "joão@gmail.com",
 		userImage: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
 		lotId: "rbMdP1OHaUxVVdMbNeoG",
-		fullRegister: false
+		fullRegister: true
 	};
 
 	console.log("cond fullreg",{path, value});
