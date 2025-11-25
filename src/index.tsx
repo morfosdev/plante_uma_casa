@@ -62839,6 +62839,11 @@ async (...args) =>
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C6.forms.editChanges.date`],
+          value: [`$arg_date`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c6stepProfile");
@@ -66477,27 +66482,6 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.B9.forms.editChanges.date`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges.date`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -66637,14 +66621,30 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnDocumentPicker pass={{
+        , 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [(value) => {
 	console.log("Set Documents B9",{value});
 
 	const path = "all.temp.documents";
 	tools.setData({path, value});
 }], args,
- }}/>],
+ }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "blue" }`
+          ],
+
+          children: [
+            `Ocultar`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
