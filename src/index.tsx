@@ -62839,7 +62839,7 @@ async (...args) =>
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
         }}), 
-() => {
+(arg) => {
 	console.log({arg});
 }, 
         (...args) => {
