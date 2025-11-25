@@ -62841,6 +62841,11 @@ async (...args) =>
         }}), 
 (arg) => {
 	console.log({arg});
+	const item =  tools.findFlatItem(arg);
+	const stepId = item.stepId;
+console.log({stepId});
+	const arrSteps = tools.getCtData('sc.C5.lists.list1');
+console.log({arrSteps});
 }, 
         (...args) => {
           // ---------- get Function from A_Project Scope
