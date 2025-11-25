@@ -62840,12 +62840,74 @@ async (...args) =>
           value: [`$arg_stepId`]
         }}), 
 (arg) => {
-	console.log({arg});
-	const item =  tools.findFlatItem(arg);
-	const stepId = item.stepId;
-console.log({stepId});
-	const arrSteps = tools.getCtData('sc.C5.lists.list1');
-console.log({arrSteps});
+  console.log("onSelectStep", { arg });
+
+  // --- valida arg ---
+  if (!arg) {
+    console.warn("onSelectStep: arg inválido", arg);
+    return;
+  }
+
+  // --- encontra item clicado ---
+  const item = typeof tools.findFlatItem === "function"
+    ? tools.findFlatItem(arg)
+    : null;
+  console.log("onSelectStep item", { item });
+
+  if (!item || typeof item !== "object") {
+    console.warn("onSelectStep: item não encontrado ou inválido", item);
+    return;
+  }
+
+  const stepId = item.stepId;
+  console.log("onSelectStep stepId", { stepId });
+
+  if (stepId == null) {
+    console.warn("onSelectStep: stepId ausente no item", item);
+    return;
+  }
+
+  // --- pega lista de steps do estado ---
+  let arrSteps = tools.getCtData("sc.C5.lists.list1");
+  console.log("onSelectStep arrSteps cru", { arrSteps });
+
+  if (!arrSteps) {
+    console.warn("onSelectStep: arrSteps indefinido/vazio");
+    return;
+  }
+
+  // garante array (caso venha como objeto)
+  if (!Array.isArray(arrSteps)) {
+    arrSteps = Object.values(arrSteps);
+  }
+
+  // --- encontra o step selecionado ---
+  const selectStep = arrSteps.find((i) => i && i.stepId === stepId);
+  console.log("onSelectStep selectStep", { selectStep });
+
+  if (!selectStep) {
+    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
+      stepId,
+      arrSteps,
+    });
+    return;
+  }
+
+  // opcional: guardar step atual em currents
+  tools.setData({
+    path: "sc.C6.forms.editChanges.date",
+    value: selectStep?.date ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.responsible",
+    value: selectStep?.responsible ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.description",
+    value: selectStep?.description ?? "",
+  });
 }, 
         (...args) => {
           // ---------- get Function from A_Project Scope
