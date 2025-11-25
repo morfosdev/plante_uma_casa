@@ -63336,7 +63336,113 @@ paddingHorizontal: 16,
 	justifyContent: "space-between"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`c6.forms.editChanges.stepId`],
+          value: [`$arg_stepId`]
+        }}), 
+(arg) => {
+  // --- valida arg ---
+  if (!arg) {
+    console.warn("onSelectStep: arg inválido", arg);
+    return;
+  }
+
+  // --- encontra item clicado ---
+  const item =
+    typeof tools.findFlatItem === "function" ? tools.findFlatItem(arg) : null;
+
+  if (!item || typeof item !== "object") {
+    console.warn("onSelectStep: item não encontrado ou inválido", item);
+    return;
+  }
+
+  const stepId = item.stepId;
+
+  if (stepId == null) {
+    console.warn("onSelectStep: stepId ausente no item", item);
+    return;
+  }
+
+  // --- pega lista de steps do estado ---
+  let arrStepsDB = tools.getCtData("sc.C5.lists.list1");
+  let arrStepsStatic = tools.getCtData("sc.B7.statics.steps");
+  console.log("onSelectStep arrStepsDB cru", { arrStepsDB });
+
+  if (!arrStepsDB) {
+    console.warn("onSelectStep: arrStepsDB indefinido/vazio");
+    return;
+  }
+
+  // garante array (caso venha como objeto)
+  if (!Array.isArray(arrStepsDB)) {
+    arrStepsDB = Object.values(arrStepsDB);
+  }
+
+  // --- encontra o step selecionado ---
+  const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+  function findStepById(arr, stepId) {
+    if (!Array.isArray(arr) || !stepId) return null;
+
+    for (const group of arr) {
+      if (!group?.subs) continue;
+
+      const found = group.subs.find((s) => s.stepId === stepId);
+      if (found) return { stepLabel: group.label, subStepLabel: found.label };
+    }
+
+    return null;
+  }
+  const selectStepStatic = findStepById(arrStepsStatic, stepId);
+  console.log("onSelectStep selectStepStatic", {
+    selectStepStatic,
+    arrStepsStatic,
+  });
+
+  if (!selectStep) {
+    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
+      stepId,
+      arrStepsDB,
+    });
+    return;
+  }
+
+  // Set CtData
+  tools.setData({
+    path: "sc.C6.forms.editChanges.stepLabel",
+    value: selectStepStatic?.stepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.subStepLabel",
+    value: selectStepStatic?.subStepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.date",
+    value: selectStep?.date ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.responsible",
+    value: selectStep?.responsible ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.description",
+    value: selectStep?.description ?? "",
+  });
+}, 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c6stepProfile");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
  (...args:any) => <Elements.Custom pass={{
@@ -63735,7 +63841,113 @@ paddingHorizontal: 16,
 	justifyContent: "space-between"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`c6.forms.editChanges.stepId`],
+          value: [`$arg_stepId`]
+        }}), 
+(arg) => {
+  // --- valida arg ---
+  if (!arg) {
+    console.warn("onSelectStep: arg inválido", arg);
+    return;
+  }
+
+  // --- encontra item clicado ---
+  const item =
+    typeof tools.findFlatItem === "function" ? tools.findFlatItem(arg) : null;
+
+  if (!item || typeof item !== "object") {
+    console.warn("onSelectStep: item não encontrado ou inválido", item);
+    return;
+  }
+
+  const stepId = item.stepId;
+
+  if (stepId == null) {
+    console.warn("onSelectStep: stepId ausente no item", item);
+    return;
+  }
+
+  // --- pega lista de steps do estado ---
+  let arrStepsDB = tools.getCtData("sc.C5.lists.list1");
+  let arrStepsStatic = tools.getCtData("sc.B7.statics.steps");
+  console.log("onSelectStep arrStepsDB cru", { arrStepsDB });
+
+  if (!arrStepsDB) {
+    console.warn("onSelectStep: arrStepsDB indefinido/vazio");
+    return;
+  }
+
+  // garante array (caso venha como objeto)
+  if (!Array.isArray(arrStepsDB)) {
+    arrStepsDB = Object.values(arrStepsDB);
+  }
+
+  // --- encontra o step selecionado ---
+  const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+  function findStepById(arr, stepId) {
+    if (!Array.isArray(arr) || !stepId) return null;
+
+    for (const group of arr) {
+      if (!group?.subs) continue;
+
+      const found = group.subs.find((s) => s.stepId === stepId);
+      if (found) return { stepLabel: group.label, subStepLabel: found.label };
+    }
+
+    return null;
+  }
+  const selectStepStatic = findStepById(arrStepsStatic, stepId);
+  console.log("onSelectStep selectStepStatic", {
+    selectStepStatic,
+    arrStepsStatic,
+  });
+
+  if (!selectStep) {
+    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
+      stepId,
+      arrStepsDB,
+    });
+    return;
+  }
+
+  // Set CtData
+  tools.setData({
+    path: "sc.C6.forms.editChanges.stepLabel",
+    value: selectStepStatic?.stepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.subStepLabel",
+    value: selectStepStatic?.subStepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.date",
+    value: selectStep?.date ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.responsible",
+    value: selectStep?.responsible ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.description",
+    value: selectStep?.description ?? "",
+  });
+}, 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c6stepProfile");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
  (...args:any) => <Elements.Custom pass={{
@@ -64134,7 +64346,113 @@ paddingHorizontal: 16,
 	justifyContent: "space-between"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`c6.forms.editChanges.stepId`],
+          value: [`$arg_stepId`]
+        }}), 
+(arg) => {
+  // --- valida arg ---
+  if (!arg) {
+    console.warn("onSelectStep: arg inválido", arg);
+    return;
+  }
+
+  // --- encontra item clicado ---
+  const item =
+    typeof tools.findFlatItem === "function" ? tools.findFlatItem(arg) : null;
+
+  if (!item || typeof item !== "object") {
+    console.warn("onSelectStep: item não encontrado ou inválido", item);
+    return;
+  }
+
+  const stepId = item.stepId;
+
+  if (stepId == null) {
+    console.warn("onSelectStep: stepId ausente no item", item);
+    return;
+  }
+
+  // --- pega lista de steps do estado ---
+  let arrStepsDB = tools.getCtData("sc.C5.lists.list1");
+  let arrStepsStatic = tools.getCtData("sc.B7.statics.steps");
+  console.log("onSelectStep arrStepsDB cru", { arrStepsDB });
+
+  if (!arrStepsDB) {
+    console.warn("onSelectStep: arrStepsDB indefinido/vazio");
+    return;
+  }
+
+  // garante array (caso venha como objeto)
+  if (!Array.isArray(arrStepsDB)) {
+    arrStepsDB = Object.values(arrStepsDB);
+  }
+
+  // --- encontra o step selecionado ---
+  const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+  function findStepById(arr, stepId) {
+    if (!Array.isArray(arr) || !stepId) return null;
+
+    for (const group of arr) {
+      if (!group?.subs) continue;
+
+      const found = group.subs.find((s) => s.stepId === stepId);
+      if (found) return { stepLabel: group.label, subStepLabel: found.label };
+    }
+
+    return null;
+  }
+  const selectStepStatic = findStepById(arrStepsStatic, stepId);
+  console.log("onSelectStep selectStepStatic", {
+    selectStepStatic,
+    arrStepsStatic,
+  });
+
+  if (!selectStep) {
+    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
+      stepId,
+      arrStepsDB,
+    });
+    return;
+  }
+
+  // Set CtData
+  tools.setData({
+    path: "sc.C6.forms.editChanges.stepLabel",
+    value: selectStepStatic?.stepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.subStepLabel",
+    value: selectStepStatic?.subStepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.date",
+    value: selectStep?.date ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.responsible",
+    value: selectStep?.responsible ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.description",
+    value: selectStep?.description ?? "",
+  });
+}, 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c6stepProfile");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
  (...args:any) => <Elements.Custom pass={{
@@ -64533,7 +64851,113 @@ paddingHorizontal: 16,
 	justifyContent: "space-between"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`c6.forms.editChanges.stepId`],
+          value: [`$arg_stepId`]
+        }}), 
+(arg) => {
+  // --- valida arg ---
+  if (!arg) {
+    console.warn("onSelectStep: arg inválido", arg);
+    return;
+  }
+
+  // --- encontra item clicado ---
+  const item =
+    typeof tools.findFlatItem === "function" ? tools.findFlatItem(arg) : null;
+
+  if (!item || typeof item !== "object") {
+    console.warn("onSelectStep: item não encontrado ou inválido", item);
+    return;
+  }
+
+  const stepId = item.stepId;
+
+  if (stepId == null) {
+    console.warn("onSelectStep: stepId ausente no item", item);
+    return;
+  }
+
+  // --- pega lista de steps do estado ---
+  let arrStepsDB = tools.getCtData("sc.C5.lists.list1");
+  let arrStepsStatic = tools.getCtData("sc.B7.statics.steps");
+  console.log("onSelectStep arrStepsDB cru", { arrStepsDB });
+
+  if (!arrStepsDB) {
+    console.warn("onSelectStep: arrStepsDB indefinido/vazio");
+    return;
+  }
+
+  // garante array (caso venha como objeto)
+  if (!Array.isArray(arrStepsDB)) {
+    arrStepsDB = Object.values(arrStepsDB);
+  }
+
+  // --- encontra o step selecionado ---
+  const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+  function findStepById(arr, stepId) {
+    if (!Array.isArray(arr) || !stepId) return null;
+
+    for (const group of arr) {
+      if (!group?.subs) continue;
+
+      const found = group.subs.find((s) => s.stepId === stepId);
+      if (found) return { stepLabel: group.label, subStepLabel: found.label };
+    }
+
+    return null;
+  }
+  const selectStepStatic = findStepById(arrStepsStatic, stepId);
+  console.log("onSelectStep selectStepStatic", {
+    selectStepStatic,
+    arrStepsStatic,
+  });
+
+  if (!selectStep) {
+    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
+      stepId,
+      arrStepsDB,
+    });
+    return;
+  }
+
+  // Set CtData
+  tools.setData({
+    path: "sc.C6.forms.editChanges.stepLabel",
+    value: selectStepStatic?.stepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.subStepLabel",
+    value: selectStepStatic?.subStepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.date",
+    value: selectStep?.date ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.responsible",
+    value: selectStep?.responsible ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.description",
+    value: selectStep?.description ?? "",
+  });
+}, 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c6stepProfile");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
  (...args:any) => <Elements.Custom pass={{
@@ -64932,7 +65356,113 @@ paddingHorizontal: 16,
 	justifyContent: "space-between"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`c6.forms.editChanges.stepId`],
+          value: [`$arg_stepId`]
+        }}), 
+(arg) => {
+  // --- valida arg ---
+  if (!arg) {
+    console.warn("onSelectStep: arg inválido", arg);
+    return;
+  }
+
+  // --- encontra item clicado ---
+  const item =
+    typeof tools.findFlatItem === "function" ? tools.findFlatItem(arg) : null;
+
+  if (!item || typeof item !== "object") {
+    console.warn("onSelectStep: item não encontrado ou inválido", item);
+    return;
+  }
+
+  const stepId = item.stepId;
+
+  if (stepId == null) {
+    console.warn("onSelectStep: stepId ausente no item", item);
+    return;
+  }
+
+  // --- pega lista de steps do estado ---
+  let arrStepsDB = tools.getCtData("sc.C5.lists.list1");
+  let arrStepsStatic = tools.getCtData("sc.B7.statics.steps");
+  console.log("onSelectStep arrStepsDB cru", { arrStepsDB });
+
+  if (!arrStepsDB) {
+    console.warn("onSelectStep: arrStepsDB indefinido/vazio");
+    return;
+  }
+
+  // garante array (caso venha como objeto)
+  if (!Array.isArray(arrStepsDB)) {
+    arrStepsDB = Object.values(arrStepsDB);
+  }
+
+  // --- encontra o step selecionado ---
+  const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+  function findStepById(arr, stepId) {
+    if (!Array.isArray(arr) || !stepId) return null;
+
+    for (const group of arr) {
+      if (!group?.subs) continue;
+
+      const found = group.subs.find((s) => s.stepId === stepId);
+      if (found) return { stepLabel: group.label, subStepLabel: found.label };
+    }
+
+    return null;
+  }
+  const selectStepStatic = findStepById(arrStepsStatic, stepId);
+  console.log("onSelectStep selectStepStatic", {
+    selectStepStatic,
+    arrStepsStatic,
+  });
+
+  if (!selectStep) {
+    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
+      stepId,
+      arrStepsDB,
+    });
+    return;
+  }
+
+  // Set CtData
+  tools.setData({
+    path: "sc.C6.forms.editChanges.stepLabel",
+    value: selectStepStatic?.stepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.subStepLabel",
+    value: selectStepStatic?.subStepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.date",
+    value: selectStep?.date ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.responsible",
+    value: selectStep?.responsible ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.description",
+    value: selectStep?.description ?? "",
+  });
+}, 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c6stepProfile");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
  (...args:any) => <Elements.Custom pass={{
@@ -65330,7 +65860,113 @@ paddingHorizontal: 16,
 	justifyContent: "space-between"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`c6.forms.editChanges.stepId`],
+          value: [`$arg_stepId`]
+        }}), 
+(arg) => {
+  // --- valida arg ---
+  if (!arg) {
+    console.warn("onSelectStep: arg inválido", arg);
+    return;
+  }
+
+  // --- encontra item clicado ---
+  const item =
+    typeof tools.findFlatItem === "function" ? tools.findFlatItem(arg) : null;
+
+  if (!item || typeof item !== "object") {
+    console.warn("onSelectStep: item não encontrado ou inválido", item);
+    return;
+  }
+
+  const stepId = item.stepId;
+
+  if (stepId == null) {
+    console.warn("onSelectStep: stepId ausente no item", item);
+    return;
+  }
+
+  // --- pega lista de steps do estado ---
+  let arrStepsDB = tools.getCtData("sc.C5.lists.list1");
+  let arrStepsStatic = tools.getCtData("sc.B7.statics.steps");
+  console.log("onSelectStep arrStepsDB cru", { arrStepsDB });
+
+  if (!arrStepsDB) {
+    console.warn("onSelectStep: arrStepsDB indefinido/vazio");
+    return;
+  }
+
+  // garante array (caso venha como objeto)
+  if (!Array.isArray(arrStepsDB)) {
+    arrStepsDB = Object.values(arrStepsDB);
+  }
+
+  // --- encontra o step selecionado ---
+  const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+  function findStepById(arr, stepId) {
+    if (!Array.isArray(arr) || !stepId) return null;
+
+    for (const group of arr) {
+      if (!group?.subs) continue;
+
+      const found = group.subs.find((s) => s.stepId === stepId);
+      if (found) return { stepLabel: group.label, subStepLabel: found.label };
+    }
+
+    return null;
+  }
+  const selectStepStatic = findStepById(arrStepsStatic, stepId);
+  console.log("onSelectStep selectStepStatic", {
+    selectStepStatic,
+    arrStepsStatic,
+  });
+
+  if (!selectStep) {
+    console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
+      stepId,
+      arrStepsDB,
+    });
+    return;
+  }
+
+  // Set CtData
+  tools.setData({
+    path: "sc.C6.forms.editChanges.stepLabel",
+    value: selectStepStatic?.stepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.subStepLabel",
+    value: selectStepStatic?.subStepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.date",
+    value: selectStep?.date ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.responsible",
+    value: selectStep?.responsible ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.description",
+    value: selectStep?.description ?? "",
+  });
+}, 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("c6stepProfile");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[
         
 
  (...args:any) => <Elements.Custom pass={{
