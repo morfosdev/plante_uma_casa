@@ -62849,9 +62849,8 @@ async (...args) =>
   }
 
   // --- encontra item clicado ---
-  const item = typeof tools.findFlatItem === "function"
-    ? tools.findFlatItem(arg)
-    : null;
+  const item =
+    typeof tools.findFlatItem === "function" ? tools.findFlatItem(arg) : null;
   console.log("onSelectStep item", { item });
 
   if (!item || typeof item !== "object") {
@@ -62884,9 +62883,28 @@ async (...args) =>
 
   // --- encontra o step selecionado ---
   const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
-  const selectSteaaaaap = arrStepsDB.find((i) => i && i.stepId === stepId);
+  function findStepById(arr, stepId) {
+    if (!Array.isArray(arr) || !stepId) return null;
 
-  console.log("onSelectStep selectStep", { selectStep, arrStepsStatic });
+    for (const group of arr) {
+      if (!group?.subs) continue;
+
+      const found = group.subs.find((s) => s.stepId === stepId);
+      if (found) return group;
+    }
+
+    return null;
+  }
+  const selectStepStatic = findStepById(arrStepsStatic, stepId);
+  console.log("onSelectStep selectStepStatic", {
+    selectStepStatic,
+    arrStepsStatic,
+  });
+
+  console.log("onSelectStep selectStep", {
+    selectStep,
+    arrStepsStatic,
+  });
 
   if (!selectStep) {
     console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
