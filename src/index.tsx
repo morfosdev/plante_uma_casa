@@ -66478,7 +66478,7 @@ left: 4,
           ],
 
           children: [
-            `1. Planejamento e Projeto`
+            `$var_sc.C6.forms.editChanges.stepLabel`
           ],
 
           args,
@@ -66531,7 +66531,7 @@ left: 4,
           ],
 
           children: [
-            `Definição do orçamento.`
+            `$var_sc.C6.forms.editChanges.subStepLabel`
           ],
 
           args,
