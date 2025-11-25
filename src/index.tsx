@@ -65435,7 +65435,12 @@ paddingHorizontal: 16,
         `users`, `$var_all.authUser.docId`],
             arrFuncs: [(args, doc) => {
   console.log("custom do getDoc da C5", { args, doc });
-  const objSteps = args[0].steps;
+  const objSteps = doc?.steps ?? {};
+
+if(Object.value(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Objeto vazio.", objSteps);
+		return;
+}
+
   const arrSteps = typeof objSteps === 'object' ? Object.values(objSteps) : [];
   console.log("custom do getDoc da C5", { arrSteps });
 
