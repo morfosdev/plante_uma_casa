@@ -66492,7 +66492,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Ocultar`
+            `$var_sc.C6.forms.editChanges.date`
           ],
 
           args,
