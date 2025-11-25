@@ -65437,7 +65437,7 @@ paddingHorizontal: 16,
   console.log("custom do getDoc da C5", { args, doc });
   const objSteps = doc?.steps ?? {};
 
-if(Object.value(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Objeto vazio.", objSteps);
+if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Objeto vazio.", objSteps);
 		return;
 }
 
