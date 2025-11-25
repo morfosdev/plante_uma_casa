@@ -43311,8 +43311,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, `steps`],
+        `users`, `$var_sc.B9.currents.currId1`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -44091,8 +44090,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, `steps`],
+        `users`, `$var_sc.B9.currents.currId1`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -48654,8 +48652,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, `steps`],
+        `users`, `$var_sc.B9.currents.currId1`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -49434,8 +49431,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, `steps`],
+        `users`, `$var_sc.B9.currents.currId1`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -57337,8 +57333,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, `steps`],
+        `users`, `$var_sc.B9.currents.currId1`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -58117,8 +58112,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, `steps`],
+        `users`, `$var_sc.B9.currents.currId1`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
@@ -66690,8 +66684,7 @@ tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
  }}), async (...args) =>
         functions.firebase.updateDocTool({ args, pass:{
    arrRefStrings: [
-        `users`, 
-        `$var_sc.B9.currents.currId1`, `steps`],
+        `users`, `$var_sc.B9.currents.currId1`],
             arrPathData: [`sc.B9.forms.editChanges`],
             arrFuncs: [
         async (...args) =>
