@@ -62913,7 +62913,7 @@ async (...args) =>
 
   tools.setData({
     path: "sc.C6.forms.editChanges.subStepLabel",
-    value: selectStep?.subStepLabel ?? "",
+    value: selectStepStatic?.subStepLabel ?? "",
   });
 
   tools.setData({
