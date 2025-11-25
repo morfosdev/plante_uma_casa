@@ -62868,32 +62868,45 @@ async (...args) =>
   }
 
   // --- pega lista de steps do estado ---
-  let arrSteps = tools.getCtData("sc.C5.lists.list1");
-  console.log("onSelectStep arrSteps cru", { arrSteps });
+  let arrStepsDB = tools.getCtData("sc.C5.lists.list1");
+  let arrStepsStatic = tools.getCtData("sc.B7.statics.steps");
+  console.log("onSelectStep arrStepsDB cru", { arrStepsDB });
 
-  if (!arrSteps) {
-    console.warn("onSelectStep: arrSteps indefinido/vazio");
+  if (!arrStepsDB) {
+    console.warn("onSelectStep: arrStepsDB indefinido/vazio");
     return;
   }
 
   // garante array (caso venha como objeto)
-  if (!Array.isArray(arrSteps)) {
-    arrSteps = Object.values(arrSteps);
+  if (!Array.isArray(arrStepsDB)) {
+    arrStepsDB = Object.values(arrStepsDB);
   }
 
   // --- encontra o step selecionado ---
-  const selectStep = arrSteps.find((i) => i && i.stepId === stepId);
-  console.log("onSelectStep selectStep", { selectStep });
+  const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+  const selectSteaaaaap = arrStepsDB.find((i) => i && i.stepId === stepId);
+
+  console.log("onSelectStep selectStep", { selectStep, arrStepsStatic });
 
   if (!selectStep) {
     console.warn("onSelectStep: nenhum step encontrado com esse stepId", {
       stepId,
-      arrSteps,
+      arrStepsDB,
     });
     return;
   }
 
-  // opcional: guardar step atual em currents
+  // Set CtData
+  tools.setData({
+    path: "sc.C6.forms.editChanges.stepLabel",
+    value: selectStep?.date ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.subStepLabel",
+    value: selectStep?.date ?? "",
+  });
+
   tools.setData({
     path: "sc.C6.forms.editChanges.date",
     value: selectStep?.date ?? "",
