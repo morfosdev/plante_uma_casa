@@ -65430,13 +65430,12 @@ paddingHorizontal: 16,
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocsTool({ args, pass:{
-   arrRefStrings: [
-        `locations`, 
-        `$var_sc.B1.currId`, `localBikes`],
+        functions.firebase.getDocTool({ args, pass:{
+  arrRefStrings: [
+        `users`, `$var_all.authUser.docId`],
             arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.lists.lst3`],
+          keyPath: [`sc.C5.lists.list1`],
           value: [`$arg_callback`]
         }})],
         }})]
