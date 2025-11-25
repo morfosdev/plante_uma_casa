@@ -62840,8 +62840,6 @@ async (...args) =>
           value: [`$arg_stepId`]
         }}), 
 (arg) => {
-  console.log("onSelectStep", { arg });
-
   // --- valida arg ---
   if (!arg) {
     console.warn("onSelectStep: arg inválido", arg);
@@ -62851,7 +62849,6 @@ async (...args) =>
   // --- encontra item clicado ---
   const item =
     typeof tools.findFlatItem === "function" ? tools.findFlatItem(arg) : null;
-  console.log("onSelectStep item", { item });
 
   if (!item || typeof item !== "object") {
     console.warn("onSelectStep: item não encontrado ou inválido", item);
@@ -62859,7 +62856,6 @@ async (...args) =>
   }
 
   const stepId = item.stepId;
-  console.log("onSelectStep stepId", { stepId });
 
   if (stepId == null) {
     console.warn("onSelectStep: stepId ausente no item", item);
@@ -62890,7 +62886,7 @@ async (...args) =>
       if (!group?.subs) continue;
 
       const found = group.subs.find((s) => s.stepId === stepId);
-      if (found) return group;
+      if (found) return { stepLabel: group.label, subStepLabel: found.label };
     }
 
     return null;
@@ -62898,11 +62894,6 @@ async (...args) =>
   const selectStepStatic = findStepById(arrStepsStatic, stepId);
   console.log("onSelectStep selectStepStatic", {
     selectStepStatic,
-    arrStepsStatic,
-  });
-
-  console.log("onSelectStep selectStep", {
-    selectStep,
     arrStepsStatic,
   });
 
@@ -62917,12 +62908,12 @@ async (...args) =>
   // Set CtData
   tools.setData({
     path: "sc.C6.forms.editChanges.stepLabel",
-    value: selectStep?.date ?? "",
+    value: selectStepStatic?.stepLabel ?? "",
   });
 
   tools.setData({
     path: "sc.C6.forms.editChanges.subStepLabel",
-    value: selectStep?.date ?? "",
+    value: selectStep?.subStepLabel ?? "",
   });
 
   tools.setData({
