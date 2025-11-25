@@ -65433,12 +65433,7 @@ paddingHorizontal: 16,
         functions.firebase.getDocTool({ args, pass:{
   arrRefStrings: [
         `users`, `$var_all.authUser.docId`],
-            arrFuncs: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C5.lists.list1`],
-          value: [`$arg_callback`]
-        }}), (args) => {
+            arrFuncs: [(args) => {
   console.log("custom do getDoc da C5", { args });
   const objSteps = args[0].steps;
   const arrSteps = typeof objSteps === 'object' ? Object.values(objSteps) : [];
