@@ -67245,28 +67245,21 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-multiline: 'true',
-}`],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [`{
-borderWidth: 1,
-borderColor: '#ccc',
-padding: 5,
-height: 80,
-borderRadius: 10,
-}`],
+          arrStyles: [
+            `{ color: "black" }`
+          ],
 
-          path: [`sc.B9.forms.editChanges.description`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.forms.editChanges.description`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.C6.forms.editChanges.responsible`
+          ],
 
           args,
+
         }}/>, 
         
 
