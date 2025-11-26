@@ -43677,7 +43677,7 @@ left: 4,
           ],
 
           children: [
-            `1. Planejamento e Projeto`
+            `$var_sc.B9.forms.viewChanges.stepLabel`
           ],
 
           args,
@@ -43730,7 +43730,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.stepLabel`
+            `$var_sc.B9.forms.viewChanges.subStepLabel`
           ],
 
           args,
@@ -48974,7 +48974,7 @@ left: 4,
           ],
 
           children: [
-            `1. Planejamento e Projeto`
+            `$var_sc.B9.forms.viewChanges.stepLabel`
           ],
 
           args,
@@ -49027,7 +49027,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.stepLabel`
+            `$var_sc.B9.forms.viewChanges.subStepLabel`
           ],
 
           args,
@@ -57636,7 +57636,7 @@ left: 4,
           ],
 
           children: [
-            `1. Planejamento e Projeto`
+            `$var_sc.B9.forms.viewChanges.stepLabel`
           ],
 
           args,
@@ -57689,7 +57689,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.stepLabel`
+            `$var_sc.B9.forms.viewChanges.subStepLabel`
           ],
 
           args,
