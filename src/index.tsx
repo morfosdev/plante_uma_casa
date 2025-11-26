@@ -41279,52 +41279,6 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	padding: 18,
-	borderWidth: 1,
-	borderColor: '#f5f5f5',
-	borderRadius: 20,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -41606,7 +41560,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -41617,14 +41570,7 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
+        ],
 
             args,
           }}/>
@@ -46630,52 +46576,6 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	padding: 18,
-	borderWidth: 1,
-	borderColor: '#f5f5f5',
-	borderRadius: 20,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -46957,7 +46857,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -46968,14 +46867,7 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
+        ],
 
             args,
           }}/>
@@ -55321,52 +55213,6 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-	padding: 18,
-	borderWidth: 1,
-	borderColor: '#f5f5f5',
-	borderRadius: 20,
-	shadowColor: '#000',
-	shadowOffset: { width: 0, height: 4 },
-	shadowOpacity: 0.1,
-	shadowRadius: 4,
-}`],
-
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
             styles:[`{ width: 20, height: 20, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
@@ -55648,7 +55494,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -55659,14 +55504,7 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnImagePicker pass={{
- arrFuncs: [(value) => {
-	console.log("Set Images B9",{value});
-
-	const path = "all.temp.images";
-	tools.setData({path, value});
-}], args,
- }}/>],
+        ],
 
             args,
           }}/>
