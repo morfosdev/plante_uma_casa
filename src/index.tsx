@@ -67730,24 +67730,7 @@ fontWeight: 'bold',
             args,
           }}/>
         , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.FlatList2 pass={{
+        (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
           ],
@@ -68014,7 +67997,24 @@ fontWeight: '400',
           ],
 
       styles:[`{ padding: 8 }`],    args,
-        }}/>],
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
