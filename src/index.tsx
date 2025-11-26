@@ -65876,24 +65876,20 @@ async (...args) =>
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={20}
-    height={10}
+xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 320 512"
     fill="red"
-    viewBox="0 0 20 10"
     {...props}
   >
-    <Rect width={20} height={3} fill="#fff" rx={1.5} />
-    <Rect width={15} height={3} y={7} fill="#fff" rx={1.5} />
+    <Path
+      fill="#fff"
+      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+    />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="4.37114e-07" y="8.74228e-07" width="20" height="3" rx="1.5" fill="white"/>
-<rect x="4.37114e-07" y="7" width="15" height="3" rx="1.5" fill="white"/>
-</svg>
-
+        <svg></svg>
       `,
 
       altura: "16px",
