@@ -50672,6 +50672,7 @@ top: 2,
 
   const item = tools.findFlatItem(args);
   const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const staticList = tools.getCtData("sc.B7.statics.steps");
   const stepIdRaw = item?.stepId;
 
   // ---- Guards
@@ -50696,7 +50697,21 @@ top: 2,
   const condMatch = Boolean(matched);
   const currId = matched?.docId;
 
-  console.log({ item, stepsList, matched, condMatch });
+  console.log({ item, stepsList, matched, condMatch, staticList });
+
+  function findStepById(arr, stepId) {
+    if (!Array.isArray(arr) || !stepId) return null;
+
+    for (const group of arr) {
+      if (!group?.subs) continue;
+
+      const found = group.subs.find((s) => s.stepId === stepId);
+      if (found) return { stepLabel: group.label, subStepLabel: found.label };
+    }
+
+    return null;
+  }
+  const selectStepStatic = findStepById(staticList, stepId);
 
   // if (!condMatch) {
   //     // ---- Modo Adicionar
@@ -50731,13 +50746,21 @@ top: 2,
   // Campos específicos importantes
   tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
   tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-  tools.setData({ path: "sc.B9.forms.stepLabel", value: item.label });
-
 
   // (Opcional) limpar possíveis resíduos do form de novo
   tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
-}
-]
+
+  // Set CtData
+  tools.setData({
+    path: "sc.B9.forms.viewChanges.stepLabel",
+    value: selectStepStatic?.stepLabel ?? "",
+  });
+
+  tools.setData({
+    path: "sc.B9.forms.viewChanges.subStepLabel",
+    value: selectStepStatic?.subStepLabel ?? "",
+  });
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
