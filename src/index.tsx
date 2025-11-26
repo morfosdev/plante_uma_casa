@@ -66260,6 +66260,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -66270,7 +66271,23 @@ fontWeight: '700',
 
             args,
           }}/>
-        ],
+        , 
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: 150,
+	height: 100,
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+}],
+
+      URIvariablePath:[`$var_sc.C6.forms.editChanges.description`],
+
+      args,
+    }}/>],
 
             args,
           }}/>
