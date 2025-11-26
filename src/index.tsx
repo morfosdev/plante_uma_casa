@@ -66284,7 +66284,7 @@ fontWeight: '700',
 	borderColor: '#e6e7e8',
 }],
 
-      URIvariablePath:[`$var_sc.C6.forms.editChanges.description`],
+      URIvariablePath:[`$var_sc.C6.forms.editChanges.arrImages`],
 
       args,
     }}/>],
