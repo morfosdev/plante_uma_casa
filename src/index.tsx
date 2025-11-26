@@ -43677,7 +43677,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.editChanges.label`
+            `$var_sc.B9.forms.stepLabel`
           ],
 
           args,
@@ -48974,7 +48974,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.editChanges.label`
+            `$var_sc.B9.forms.stepLabel`
           ],
 
           args,
@@ -50731,6 +50731,8 @@ top: 2,
   // Campos específicos importantes
   tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
   tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
+  tools.setData({ path: "sc.B9.forms.stepLabel", value: item.label });
+
 
   // (Opcional) limpar possíveis resíduos do form de novo
   tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
@@ -57611,7 +57613,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.editChanges.label`
+            `$var_sc.B9.forms.stepLabel`
           ],
 
           args,
