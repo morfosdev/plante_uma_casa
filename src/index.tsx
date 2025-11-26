@@ -62558,6 +62558,12 @@ paddingHorizontal: 10,
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => <RN.Text>Element Default</RN.Text>] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
