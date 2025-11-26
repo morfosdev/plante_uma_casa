@@ -66187,20 +66187,22 @@ flex: 1,
 alignItems: 'center',
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
 
-      styles:[{
-	width: 83,
-	height: 50,
-}],
+          children: [
+            `Definição do Orçamento`
+          ],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
+          args,
 
-      args,
-    }}/>],
+        }}/>],
 
             args,
           }}/>
