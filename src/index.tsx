@@ -43677,7 +43677,7 @@ left: 4,
           ],
 
           children: [
-            `1. Planejamento e Projeto`
+            `$var_sc.B9.forms.editChanges.stepLabel`
           ],
 
           args,
@@ -48974,7 +48974,7 @@ left: 4,
           ],
 
           children: [
-            `1. Planejamento e Projeto`
+            `$var_sc.B9.forms.editChanges.stepLabel`
           ],
 
           args,
@@ -57611,7 +57611,7 @@ left: 4,
           ],
 
           children: [
-            `1. Planejamento e Projeto`
+            `$var_sc.B9.forms.editChanges.stepLabel`
           ],
 
           args,
