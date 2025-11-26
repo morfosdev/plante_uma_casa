@@ -66136,11 +66136,7 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.c3Menu`],
-          value: [true]
-        }})]
+ arrFunctions: [()=>{}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
