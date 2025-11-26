@@ -43677,7 +43677,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.stepLabel`
+            `1. Planejamento e Projeto`
           ],
 
           args,
@@ -43730,7 +43730,7 @@ left: 4,
           ],
 
           children: [
-            `Definição do orçamento.`
+            `$var_sc.B9.forms.stepLabel`
           ],
 
           args,
@@ -48974,7 +48974,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.stepLabel`
+            `1. Planejamento e Projeto`
           ],
 
           args,
@@ -49027,7 +49027,7 @@ left: 4,
           ],
 
           children: [
-            `Definição do orçamento.`
+            `$var_sc.B9.forms.stepLabel`
           ],
 
           args,
@@ -57613,7 +57613,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.B9.forms.stepLabel`
+            `1. Planejamento e Projeto`
           ],
 
           args,
@@ -57666,7 +57666,7 @@ left: 4,
           ],
 
           children: [
-            `Definição do orçamento.`
+            `$var_sc.B9.forms.stepLabel`
           ],
 
           args,
