@@ -62737,8 +62737,7 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }}), 
-(arg) => {
+        }}), (arg) => {
   // --- valida arg ---
   if (!arg) {
     console.warn("onSelectStep: arg inválido", arg);
@@ -62778,6 +62777,17 @@ async (...args) =>
 
   // --- encontra o step selecionado ---
   const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+
+  // NOVA VERIFICAÇÃO: impede navegação se qualquer campo estiver faltando
+  const requiredFields = ["date", "responsible", "description"];
+  const missing = requiredFields.filter((f) => !selectStep?.[f]);
+
+  if (missing.length > 0) {
+    console.warn("Step incompleto, falta:", missing);
+    return;
+  }
+
+  // --- busca labels estáticos ---
   function findStepById(arr, stepId) {
     if (!Array.isArray(arr) || !stepId) return null;
 
@@ -62821,12 +62831,10 @@ async (...args) =>
     path: "sc.C6.forms.editChanges.description",
     value: selectStep?.description ?? "",
   });
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c6stepProfile");
-        }
-        ]
+
+  tools.goTo("c6stepProfile");
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -63234,8 +63242,7 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }}), 
-(arg) => {
+        }}), (arg) => {
   // --- valida arg ---
   if (!arg) {
     console.warn("onSelectStep: arg inválido", arg);
@@ -63275,6 +63282,17 @@ async (...args) =>
 
   // --- encontra o step selecionado ---
   const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+
+  // NOVA VERIFICAÇÃO: impede navegação se qualquer campo estiver faltando
+  const requiredFields = ["date", "responsible", "description"];
+  const missing = requiredFields.filter((f) => !selectStep?.[f]);
+
+  if (missing.length > 0) {
+    console.warn("Step incompleto, falta:", missing);
+    return;
+  }
+
+  // --- busca labels estáticos ---
   function findStepById(arr, stepId) {
     if (!Array.isArray(arr) || !stepId) return null;
 
@@ -63318,12 +63336,10 @@ async (...args) =>
     path: "sc.C6.forms.editChanges.description",
     value: selectStep?.description ?? "",
   });
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c6stepProfile");
-        }
-        ]
+
+  tools.goTo("c6stepProfile");
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -63731,8 +63747,7 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }}), 
-(arg) => {
+        }}), (arg) => {
   // --- valida arg ---
   if (!arg) {
     console.warn("onSelectStep: arg inválido", arg);
@@ -63772,6 +63787,17 @@ async (...args) =>
 
   // --- encontra o step selecionado ---
   const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+
+  // NOVA VERIFICAÇÃO: impede navegação se qualquer campo estiver faltando
+  const requiredFields = ["date", "responsible", "description"];
+  const missing = requiredFields.filter((f) => !selectStep?.[f]);
+
+  if (missing.length > 0) {
+    console.warn("Step incompleto, falta:", missing);
+    return;
+  }
+
+  // --- busca labels estáticos ---
   function findStepById(arr, stepId) {
     if (!Array.isArray(arr) || !stepId) return null;
 
@@ -63815,12 +63841,10 @@ async (...args) =>
     path: "sc.C6.forms.editChanges.description",
     value: selectStep?.description ?? "",
   });
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c6stepProfile");
-        }
-        ]
+
+  tools.goTo("c6stepProfile");
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -64228,8 +64252,7 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }}), 
-(arg) => {
+        }}), (arg) => {
   // --- valida arg ---
   if (!arg) {
     console.warn("onSelectStep: arg inválido", arg);
@@ -64269,6 +64292,17 @@ async (...args) =>
 
   // --- encontra o step selecionado ---
   const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+
+  // NOVA VERIFICAÇÃO: impede navegação se qualquer campo estiver faltando
+  const requiredFields = ["date", "responsible", "description"];
+  const missing = requiredFields.filter((f) => !selectStep?.[f]);
+
+  if (missing.length > 0) {
+    console.warn("Step incompleto, falta:", missing);
+    return;
+  }
+
+  // --- busca labels estáticos ---
   function findStepById(arr, stepId) {
     if (!Array.isArray(arr) || !stepId) return null;
 
@@ -64312,12 +64346,10 @@ async (...args) =>
     path: "sc.C6.forms.editChanges.description",
     value: selectStep?.description ?? "",
   });
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c6stepProfile");
-        }
-        ]
+
+  tools.goTo("c6stepProfile");
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -64725,8 +64757,7 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }}), 
-(arg) => {
+        }}), (arg) => {
   // --- valida arg ---
   if (!arg) {
     console.warn("onSelectStep: arg inválido", arg);
@@ -64766,6 +64797,17 @@ async (...args) =>
 
   // --- encontra o step selecionado ---
   const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+
+  // NOVA VERIFICAÇÃO: impede navegação se qualquer campo estiver faltando
+  const requiredFields = ["date", "responsible", "description"];
+  const missing = requiredFields.filter((f) => !selectStep?.[f]);
+
+  if (missing.length > 0) {
+    console.warn("Step incompleto, falta:", missing);
+    return;
+  }
+
+  // --- busca labels estáticos ---
   function findStepById(arr, stepId) {
     if (!Array.isArray(arr) || !stepId) return null;
 
@@ -64809,12 +64851,10 @@ async (...args) =>
     path: "sc.C6.forms.editChanges.description",
     value: selectStep?.description ?? "",
   });
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c6stepProfile");
-        }
-        ]
+
+  tools.goTo("c6stepProfile");
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -65222,8 +65262,7 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }}), 
-(arg) => {
+        }}), (arg) => {
   // --- valida arg ---
   if (!arg) {
     console.warn("onSelectStep: arg inválido", arg);
@@ -65263,6 +65302,17 @@ async (...args) =>
 
   // --- encontra o step selecionado ---
   const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+
+  // NOVA VERIFICAÇÃO: impede navegação se qualquer campo estiver faltando
+  const requiredFields = ["date", "responsible", "description"];
+  const missing = requiredFields.filter((f) => !selectStep?.[f]);
+
+  if (missing.length > 0) {
+    console.warn("Step incompleto, falta:", missing);
+    return;
+  }
+
+  // --- busca labels estáticos ---
   function findStepById(arr, stepId) {
     if (!Array.isArray(arr) || !stepId) return null;
 
@@ -65306,12 +65356,10 @@ async (...args) =>
     path: "sc.C6.forms.editChanges.description",
     value: selectStep?.description ?? "",
   });
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c6stepProfile");
-        }
-        ]
+
+  tools.goTo("c6stepProfile");
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -65718,8 +65766,7 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`c6.forms.editChanges.stepId`],
           value: [`$arg_stepId`]
-        }}), 
-(arg) => {
+        }}), (arg) => {
   // --- valida arg ---
   if (!arg) {
     console.warn("onSelectStep: arg inválido", arg);
@@ -65759,6 +65806,17 @@ async (...args) =>
 
   // --- encontra o step selecionado ---
   const selectStep = arrStepsDB.find((i) => i && i.stepId === stepId);
+
+  // NOVA VERIFICAÇÃO: impede navegação se qualquer campo estiver faltando
+  const requiredFields = ["date", "responsible", "description"];
+  const missing = requiredFields.filter((f) => !selectStep?.[f]);
+
+  if (missing.length > 0) {
+    console.warn("Step incompleto, falta:", missing);
+    return;
+  }
+
+  // --- busca labels estáticos ---
   function findStepById(arr, stepId) {
     if (!Array.isArray(arr) || !stepId) return null;
 
@@ -65802,12 +65860,10 @@ async (...args) =>
     path: "sc.C6.forms.editChanges.description",
     value: selectStep?.description ?? "",
   });
-}, 
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c6stepProfile");
-        }
-        ]
+
+  tools.goTo("c6stepProfile");
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[
         
