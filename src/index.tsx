@@ -68310,7 +68310,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Etapa`
+            `Valor:`
           ],
 
           args,
@@ -68331,7 +68331,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.C6.forms.editChanges.stepLabel`
+            `$var_sc.C7.profiles.profileData1.value`
           ],
 
           args,
@@ -68546,6 +68546,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -68556,7 +68557,9 @@ fontWeight: '700',
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.BtnDocumentPicker pass={{
+ arrFuncs: [() => console.log({args})], args,
+ }}/>],
 
             args,
           }}/>
