@@ -68557,9 +68557,113 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.BtnDocumentPicker pass={{
+        , 
+        (...args:any) => <Elements.BtnDocumentPicker pass={{
  arrFuncs: [() => console.log({args})], args,
- }}/>],
+ }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 20, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 30,
+paddingVertical: 8,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
+  const css1 =
+    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+
+  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  console.log("%cstepId a atualizar:", css1, { stepId });
+  const userId = tools.getCtData("sc.B9.currents.currId1");
+  const data = tools.getCtData("sc.B9.forms.editChanges");
+
+  try {
+    // ------ set Check Fields
+    // -----
+    // -----
+    // if(check1) return;
+
+    const refDoc = doc(db, "users", userId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
+    await updateDoc(refDoc, dataToUpdate);
+
+    // ------ set ctData
+    const pathSideRight = "all.toggles.sideRight";
+    const pathEdit = "all.toggles.b9.editSteps";
+    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
+    tools.setData({ path: pathSideRight, value: false });
+    tools.setData({ path: pathEdit, value: false });
+
+    console.log("%cupdateDoc ok", css1);
+    console.log("%cReferência do Documento", css1, {
+      path: "users." + newId,
+      dataToUpdate,
+    });
+  } catch (err) {
+    console.error("Erro do updateDoc", { err });
+  }
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 15,
+color: '#FFFFFF',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Salvar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
