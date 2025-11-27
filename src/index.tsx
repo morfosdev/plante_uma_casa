@@ -7591,8 +7591,8 @@ tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
-    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
+    arrImages: getArrayVal("sc.a1.editChanges.arrImages"), // 🔹 Trata como array garantido
+    arrDocuments: getArrayVal("sc.a1.editChanges.arrDocuments"), // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
@@ -16339,8 +16339,8 @@ tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
-    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
+    arrImages: getArrayVal("sc.a1.editChanges.arrImages"), // 🔹 Trata como array garantido
+    arrDocuments: getArrayVal("sc.a1.editChanges.arrDocuments"), // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
@@ -25124,8 +25124,8 @@ tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
-    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
+    arrImages: getArrayVal("sc.a1.editChanges.arrImages"), // 🔹 Trata como array garantido
+    arrDocuments: getArrayVal("sc.a1.editChanges.arrDocuments"), // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
@@ -33796,8 +33796,8 @@ tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    images: getArrayVal("sc.a1.editChanges.images"), // 🔹 Trata como array garantido
-    files: getArrayVal("sc.a1.editChanges.documents"), // 🔹 Trata como array garantido
+    arrImages: getArrayVal("sc.a1.editChanges.arrImages"), // 🔹 Trata como array garantido
+    arrDocuments: getArrayVal("sc.a1.editChanges.arrDocuments"), // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
