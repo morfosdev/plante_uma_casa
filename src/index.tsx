@@ -68599,40 +68599,41 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
 
-  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
-  console.log("%cstepId a atualizar:", css1, { stepId });
-  const userId = tools.getCtData("sc.B9.currents.currId1");
-  const data = tools.getCtData("sc.B9.forms.editChanges");
+  const c8Data = tools.getCtData("sc.C8.profiles.profileData1");
+
+  const lotId = tools.getCtData("sc.C7.currents.currLoteData") || "";
+  const installmentId = c8Data.installmentId || "";
+
+  const documents = tools.getCtData("sc.C8.forms.editChanges.arrDocuments");
+  const data = {
+    installmentId,
+    date: c8Data.date || "",
+    receiptUrl: documents[0] || "",
+  };
 
   try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
-
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+    const refDoc = doc(db, "lots", lotId);
 
     const dataToUpdate = {
-      ["steps." + newId]: { ...data },
+      ["receipts." + installmentId]: { ...data },
     };
 
     await updateDoc(refDoc, dataToUpdate);
 
     // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.b9.editSteps";
-    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
-
+    tools.setData({ path: "sc.C8.forms.editChanges", value: {} });
+    tools.setData({ path: "sc.C8.profiles.profileData1", value: {} });
+    
+    
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
-      path: "users." + newId,
-      dataToUpdate,
+        path: "lots." + installmentId,
+        dataToUpdate,
     });
+
+    tools.goTo("c7financial");
   } catch (err) {
-    console.error("Erro do updateDoc", { err });
+    console.error("Erro do updateDoc C8", { err });
   }
 }]
  , trigger: 'on press'
