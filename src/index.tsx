@@ -67963,6 +67963,11 @@ async (...args) =>
           keyPath: [`sc.C7.profiles.profileData1`],
           value: [`$arg_item`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C7.profiles.profileData1`],
+          value: [`$arg_item`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c8SetComp");
