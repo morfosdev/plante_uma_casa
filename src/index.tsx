@@ -67945,8 +67945,24 @@ fontWeight: '700',
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-    console.log("Render Element Default", args);
-  return <RN.Text>Element Default</RN.Text>
+  console.log("Render Element Default", args);
+  const item = tools.findFlatItem(args);
+  const installmentId = item.installmentId;
+  const currLoteData = tools.getData("sc.C7.currents.currLoteData");
+  const rawReceipts = currLoteData?.receipts;
+  const arrReceipts = Array.isArray(rawReceipts) ? rawReceipts : [];
+  const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
+  const fileName = receipt?.fileName;
+
+  if (fileName) {
+    return (
+      <RN.View style={{ padding: 4, borderWidth: 1, borderColor: "#ddd", borderRadius: 6 }}>
+        <RN.Text>{fileName}</RN.Text>;
+      </RN.View>
+    );
+  }
+
+  return <RN.Text>Sem Documento</RN.Text>;
 }] 
 }}/>
 , 
