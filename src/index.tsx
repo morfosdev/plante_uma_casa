@@ -68264,6 +68264,7 @@ alignItems: 'center',
 	borderRadius: 20,
 	paddingVertical: 6,
 	paddingHorizontal: 18,
+	width: "100%"
 }`, `{ alignItems: "center", justifyContent: "center" }`],
 
             functions:[()=>{}],            childrenItems:[
