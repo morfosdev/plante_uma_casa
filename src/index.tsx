@@ -67960,7 +67960,7 @@ borderRadius: 5,
  arrFunctions: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.C7.currents.currId1`],
-          value: [`$arg_installmentId`]
+          value: [`$arg_item`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{

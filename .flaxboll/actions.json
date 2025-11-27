@@ -1,1 +1,1 @@
-{"1764253319417":{"actionType":"saveAll","createdAt":"1764253319417","actionID":"1764253319417","userID":"#TEMP","path":"system.capsules.540ffa87-56c9-4922-96c3-b6af9008b87f.capsUseCodeInfo.capsUseInputs.ccc_stringValue-0.capsIptTxtValue","oldValue":"$arg_docId","newValue":"$arg_installmentId"}}
+{"1764253630821":{"actionType":"saveAll","createdAt":"1764253630821","actionID":"1764253630821","userID":"#TEMP","path":"system.capsules.540ffa87-56c9-4922-96c3-b6af9008b87f.capsUseCodeInfo.capsUseLabel.en","oldValue":"$arg_installmentId","newValue":"$arg_item"}}
