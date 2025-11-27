@@ -7501,7 +7501,7 @@ paddingVertical: 8,
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (val === null || val === undefined) return "";
-    if (Array.isArray(val)) return val[0] ?? "";
+    if (Array.isArray(val)) return val ?? "";
     return val;
   };
 
@@ -16231,7 +16231,7 @@ paddingVertical: 8,
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (val === null || val === undefined) return "";
-    if (Array.isArray(val)) return val[0] ?? "";
+    if (Array.isArray(val)) return val ?? "";
     return val;
   };
 
@@ -24998,7 +24998,7 @@ paddingVertical: 8,
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (val === null || val === undefined) return "";
-    if (Array.isArray(val)) return val[0] ?? "";
+    if (Array.isArray(val)) return val ?? "";
     return val;
   };
 
@@ -33652,7 +33652,7 @@ paddingVertical: 8,
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (val === null || val === undefined) return "";
-    if (Array.isArray(val)) return val[0] ?? "";
+    if (Array.isArray(val)) return val ?? "";
     return val;
   };
 
