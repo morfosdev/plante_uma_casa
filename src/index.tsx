@@ -68601,8 +68601,9 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
 
   const c8Data = tools.getCtData("sc.C8.profiles.profileData1");
 
-  const lotId = tools.getCtData("sc.C7.currents.currLoteData") || "";
+  const lotData = tools.getCtData("sc.C7.currents.currLoteData");
   const installmentId = c8Data.installmentId || "";
+  const lotId = lotData.lotId || "";
 
   const documents = tools.getCtData("sc.C8.forms.editChanges.arrDocuments");
   console.log("%cdocuments", css1, { documents });
