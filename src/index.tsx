@@ -68605,11 +68605,15 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
   const installmentId = c8Data.installmentId || "";
 
   const documents = tools.getCtData("sc.C8.forms.editChanges.arrDocuments");
+  console.log("%cdocuments", css1, { documents });
+
   const data = {
     installmentId,
     date: c8Data.date || "",
     receiptUrl: documents[0] || "",
   };
+
+  console.log("%cdata", css1, { data });
 
   try {
     const refDoc = doc(db, "lots", lotId);
@@ -68618,17 +68622,19 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
       ["receipts." + installmentId]: { ...data },
     };
 
+    console.log("%cdataToUpdate", css1, { dataToUpdate });
+
     await updateDoc(refDoc, dataToUpdate);
 
     // ------ set ctData
+    console.log("%cUpdateOk", css1);
     tools.setData({ path: "sc.C8.forms.editChanges", value: {} });
     tools.setData({ path: "sc.C8.profiles.profileData1", value: {} });
-    
-    
+
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
-        path: "lots." + installmentId,
-        dataToUpdate,
+      path: "lots." + installmentId,
+      dataToUpdate,
     });
 
     tools.goTo("c7financial");
