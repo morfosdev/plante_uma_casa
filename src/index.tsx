@@ -6284,7 +6284,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
+    if (Array.isArray(val)) return val ?? "";
     return val ?? "";
   };
 
@@ -15014,7 +15014,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
+    if (Array.isArray(val)) return val ?? "";
     return val ?? "";
   };
 
@@ -23781,7 +23781,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
+    if (Array.isArray(val)) return val ?? "";
     return val ?? "";
   };
 
@@ -32435,7 +32435,7 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   // Função auxiliar para obter valor seguro
   const getVal = (path) => {
     const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
+    if (Array.isArray(val)) return val ?? "";
     return val ?? "";
   };
 
