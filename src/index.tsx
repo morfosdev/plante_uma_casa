@@ -68606,6 +68606,7 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
 
   const documents = tools.getCtData("sc.C8.forms.editChanges.arrDocuments");
   console.log("%cdocuments", css1, { documents });
+  console.log("%clotId", css1, { lotId });
 
   const data = {
     installmentId,
