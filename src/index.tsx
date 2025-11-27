@@ -68547,7 +68547,12 @@ fontWeight: '700',
           }}/>
         , 
         (...args:any) => <Elements.BtnDocumentPicker pass={{
- arrFuncs: [() => console.log({args})], args,
+ arrFuncs: [(value) => {
+	console.log("Set Comps C8",{value});
+
+	const path = "all.temp.documents";
+	tools.setData({path, value});
+}], args,
  }}/>, 
         
 
