@@ -67963,7 +67963,7 @@ fontWeight: '700',
   console.log("Render Element Default", { arrReceipts });
 
   if (arrReceipts.length === 0) {
-    return <RN.Text>Sem Documento</RN.Text>;
+    return <RN.Text style={{color: "#315e2d", fontSize: 12, fontWeight: 600}}>Sem Documento</RN.Text>;
   }
 
   const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
@@ -67976,18 +67976,19 @@ fontWeight: '700',
     return (
       <RN.View
         style={{
-          padding: 4,
+          padding: 6,
           borderWidth: 1,
           borderColor: "#ddd",
           borderRadius: 6,
+          margin: 8
         }}
       >
-        <RN.Text>{fileName}</RN.Text>;
+        <RN.Text style={{color: "#315e2d", fontSize: 12, fontWeight: 600}}>{fileName}</RN.Text>
       </RN.View>
     );
   }
 
-  return <RN.Text>Sem Documento</RN.Text>;
+  return <RN.Text style={{color: "#315e2d", fontSize: 12, fontWeight: 600}}>Sem Documento</RN.Text>;
 }] 
 }}/>
 , 
