@@ -67959,8 +67959,12 @@ fontWeight: '700',
   const rawReceipts = currLoteData?.receipts;
   console.log("Render Element Default", { rawReceipts });
 
-  const arrReceipts = Array.isArray(rawReceipts) ? rawReceipts : [];
+  const arrReceipts = Object.values(rawReceipts) ?? [];
   console.log("Render Element Default", { arrReceipts });
+
+  if (arrReceipts.length === 0) {
+    return <RN.Text>Sem Documento</RN.Text>;
+  }
 
   const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
   console.log("Render Element Default", { receipt });
