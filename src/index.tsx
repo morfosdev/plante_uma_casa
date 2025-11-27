@@ -67960,7 +67960,7 @@ borderRadius: 5,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C7.currents.currId1`],
+          keyPath: [`sc.C7.profiles.profileData1`],
           value: [`$arg_item`]
         }}), 
         (...args) => {
