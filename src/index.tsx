@@ -7503,9 +7503,9 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.forms.editChanges.arrDocuments",{args, urls});
+console.log("sc.a1.editChanges.arrDocuments",{args, urls});
 
-tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
+tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
 }],
  }}), async () => {
   const requiredFields = [
@@ -16250,9 +16250,9 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.forms.editChanges.arrDocuments",{args, urls});
+console.log("sc.a1.editChanges.arrDocuments",{args, urls});
 
-tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
+tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
 }],
  }}), async () => {
   const requiredFields = [
@@ -25034,9 +25034,9 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.forms.editChanges.arrDocuments",{args, urls});
+console.log("sc.a1.editChanges.arrDocuments",{args, urls});
 
-tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
+tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
 }],
  }}), async () => {
   const requiredFields = [
@@ -33705,9 +33705,9 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.forms.editChanges.arrDocuments",{args, urls});
+console.log("sc.a1.editChanges.arrDocuments",{args, urls});
 
-tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
+tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
 }],
  }}), async () => {
   const requiredFields = [
