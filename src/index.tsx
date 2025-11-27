@@ -68663,7 +68663,8 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
   const data = {
     installmentId,
     date: c8Data.date || "",
-    receiptUrl: documents[0] || "",
+    fileName: documents[0]?.fileName || "",
+    receiptUrl: documents[0]?.receiptUrl || "",
   };
 
   console.log("%cdata", css1, { data });

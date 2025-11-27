@@ -2,11 +2,34 @@
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { getCtData, testVarType } from "../../project";
 
+// --- tipos auxiliares
+type TUrlInfo = {
+  receiptUrl: string;
+  fileName: string;
+};
+
+type TUploadSuccess = {
+  ok: true;
+  idx: number;
+  url: string;
+  path: string;
+  name: string;
+};
+
+type TUploadError = {
+  ok: false;
+  idx: number;
+  error: string;
+};
+
+type TUploadResult = TUploadSuccess | TUploadError;
+
 type Tprops = {
   args: any;
   pass: {
     arrFiles: any[];
-    arrFuncs?: Array<(a: any, urls: string[], idx?: number) => any>;
+    // agora arrFuncs recebe um array de TUrlInfo (e não string[])
+    arrFuncs?: Array<(a: any, urls: TUrlInfo[], idx?: number) => any>;
   };
 };
 
@@ -75,10 +98,13 @@ export const uploadFileTool = async (props: Tprops) => {
   const storage = getStorage(fbInit);
 
   // --- faz upload de cada imagem e guarda as URLs
-  const condDirectory = arrFiles.some((item) => item.includes("documents"));
+  const condDirectory = arrFiles.some(
+    (item) => typeof item === "string" && item.includes("documents")
+  );
   const condPath = condDirectory ? "documents/" : "images/";
-  const results = await Promise.all(
-    inputs.map(async (currData: any, idx: number) => {
+
+  const results: TUploadResult[] = await Promise.all(
+    inputs.map(async (currData: any, idx: number): Promise<TUploadResult> => {
       try {
         const data = await toBlobAndName(currData, idx);
         const blob = data.blob;
@@ -89,17 +115,23 @@ export const uploadFileTool = async (props: Tprops) => {
         await uploadBytes(fileRef, blob);
         const url = await getDownloadURL(fileRef);
 
-        console.log("upload ok:", { idx, path, url });
-        return { ok: true, idx: idx, url: url, path: path };
+        console.log("upload ok:", { idx, path, url, name });
+        return { ok: true, idx, url, path, name };
       } catch (err) {
         console.error("falha no upload:", idx, err);
-        return { ok: false, idx: idx, error: String(err) };
+        return { ok: false, idx, error: String(err) };
       }
     })
   );
 
   // --- coleta somente as URLs válidas
-  const urls = results.filter((r) => r.ok).map((r) => r.url);
+  const urls: TUrlInfo[] = results
+    .filter((r): r is TUploadSuccess => r.ok === true)
+    .map((r) => ({
+      receiptUrl: r.url,
+      fileName: r.name,
+    }));
+
   console.log("URLs finais:", urls);
 
   // --- chama funções externas APÓS todos os uploads
@@ -112,4 +144,3 @@ export const uploadFileTool = async (props: Tprops) => {
   console.log("Resultados:", results);
   return results;
 };
-
