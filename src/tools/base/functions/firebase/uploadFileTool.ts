@@ -107,6 +107,7 @@ export const uploadFileTool = async (props: Tprops) => {
     inputs.map(async (currData: any, idx: number): Promise<TUploadResult> => {
       try {
         const data = await toBlobAndName(currData, idx);
+        console.log("blob pronto:", { idx, data });
         const blob = data.blob;
         const name = data.name;
         const path = condPath + Date.now() + "_" + idx + "_" + name;
