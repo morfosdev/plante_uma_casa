@@ -67946,13 +67946,28 @@ fontWeight: '700',
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   console.log("Render Element Default", args);
+  
   const item = tools.findFlatItem(args);
+  console.log("Render Element Default", item);
+  
   const installmentId = item.installmentId;
+  console.log("Render Element Default", installmentId);
+  
   const currLoteData = tools.getData("sc.C7.currents.currLoteData");
+  console.log("Render Element Default", currLoteData);
+  
   const rawReceipts = currLoteData?.receipts;
+  console.log("Render Element Default", rawReceipts);
+  
   const arrReceipts = Array.isArray(rawReceipts) ? rawReceipts : [];
+  console.log("Render Element Default", arrReceipts);
+  
   const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
+  console.log("Render Element Default", receipt);
+  
   const fileName = receipt?.fileName;
+  console.log("Render Element Default", fileName);
+  
 
   if (fileName) {
     return (
