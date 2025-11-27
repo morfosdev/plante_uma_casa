@@ -68617,6 +68617,7 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
 
   try {
     const refDoc = doc(db, "lots", lotId);
+    console.log("%crefDoc", css1, { refDoc });
 
     const dataToUpdate = {
       ["receipts." + installmentId]: { ...data },
