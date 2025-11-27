@@ -7523,20 +7523,12 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     return val;
   };
 
-  const getArrayVal = (path) => {
-    let val = tools.getCtData(path);
-    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
-    if (Array.isArray(val)) return val;
-    if (typeof val === "string") {
-      try {
-        const parsed = JSON.parse(val);
-        return Array.isArray(parsed) ? parsed : [parsed];
-      } catch {
-        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
-      }
-    }
-    return [val];
-  };
+  const arrImages = tools.getCtData("sc.a1.editChanges.arrImages");
+  const arrDocuments = tools.getCtData("sc.a1.editChanges.arrDocuments");
+  console.log("CHECAR DADOS", {
+    arrImages,
+    arrDocuments,
+  });
 
   // 🔹 Verifica campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
@@ -7552,7 +7544,10 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
         value: ["Preencha os campos obrigatórios."],
       },
     });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return;
   }
 
@@ -7567,7 +7562,9 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import(
+    "firebase/firestore"
+  );
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.a1.editChanges.docId");
@@ -7591,8 +7588,8 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    arrImages: tools.getCtData("sc.a1.editChanges.arrImages"), // 🔹 Trata como array garantido
-    arrDocuments: tools.getCtData("sc.a1.editChanges.arrDocuments"), // 🔹 Trata como array garantido
+    arrImages, // 🔹 Trata como array garantido
+    arrDocuments, // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
@@ -7618,7 +7615,7 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -16270,20 +16267,12 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     return val;
   };
 
-  const getArrayVal = (path) => {
-    let val = tools.getCtData(path);
-    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
-    if (Array.isArray(val)) return val;
-    if (typeof val === "string") {
-      try {
-        const parsed = JSON.parse(val);
-        return Array.isArray(parsed) ? parsed : [parsed];
-      } catch {
-        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
-      }
-    }
-    return [val];
-  };
+  const arrImages = tools.getCtData("sc.a1.editChanges.arrImages");
+  const arrDocuments = tools.getCtData("sc.a1.editChanges.arrDocuments");
+  console.log("CHECAR DADOS", {
+    arrImages,
+    arrDocuments,
+  });
 
   // 🔹 Verifica campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
@@ -16299,7 +16288,10 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
         value: ["Preencha os campos obrigatórios."],
       },
     });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return;
   }
 
@@ -16314,7 +16306,9 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import(
+    "firebase/firestore"
+  );
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.a1.editChanges.docId");
@@ -16338,8 +16332,8 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    arrImages: tools.getCtData("sc.a1.editChanges.arrImages"), // 🔹 Trata como array garantido
-    arrDocuments: tools.getCtData("sc.a1.editChanges.arrDocuments"), // 🔹 Trata como array garantido
+    arrImages, // 🔹 Trata como array garantido
+    arrDocuments, // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
@@ -16365,7 +16359,7 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -25054,20 +25048,12 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     return val;
   };
 
-  const getArrayVal = (path) => {
-    let val = tools.getCtData(path);
-    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
-    if (Array.isArray(val)) return val;
-    if (typeof val === "string") {
-      try {
-        const parsed = JSON.parse(val);
-        return Array.isArray(parsed) ? parsed : [parsed];
-      } catch {
-        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
-      }
-    }
-    return [val];
-  };
+  const arrImages = tools.getCtData("sc.a1.editChanges.arrImages");
+  const arrDocuments = tools.getCtData("sc.a1.editChanges.arrDocuments");
+  console.log("CHECAR DADOS", {
+    arrImages,
+    arrDocuments,
+  });
 
   // 🔹 Verifica campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
@@ -25083,7 +25069,10 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
         value: ["Preencha os campos obrigatórios."],
       },
     });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return;
   }
 
@@ -25098,7 +25087,9 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import(
+    "firebase/firestore"
+  );
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.a1.editChanges.docId");
@@ -25122,8 +25113,8 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    arrImages: tools.getCtData("sc.a1.editChanges.arrImages"), // 🔹 Trata como array garantido
-    arrDocuments: tools.getCtData("sc.a1.editChanges.arrDocuments"), // 🔹 Trata como array garantido
+    arrImages, // 🔹 Trata como array garantido
+    arrDocuments, // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
@@ -25149,7 +25140,7 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -33725,20 +33716,12 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     return val;
   };
 
-  const getArrayVal = (path) => {
-    let val = tools.getCtData(path);
-    if (!val) return []; // 🔹 Retorna array vazio se não houver nada
-    if (Array.isArray(val)) return val;
-    if (typeof val === "string") {
-      try {
-        const parsed = JSON.parse(val);
-        return Array.isArray(parsed) ? parsed : [parsed];
-      } catch {
-        return [val]; // 🔹 Se não for JSON válido, transforma em array simples
-      }
-    }
-    return [val];
-  };
+  const arrImages = tools.getCtData("sc.a1.editChanges.arrImages");
+  const arrDocuments = tools.getCtData("sc.a1.editChanges.arrDocuments");
+  console.log("CHECAR DADOS", {
+    arrImages,
+    arrDocuments,
+  });
 
   // 🔹 Verifica campos obrigatórios
   const emptyFields = requiredFields.filter((f) => {
@@ -33754,7 +33737,10 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
         value: ["Preencha os campos obrigatórios."],
       },
     });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return;
   }
 
@@ -33769,7 +33755,9 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import(
+    "firebase/firestore"
+  );
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.a1.editChanges.docId");
@@ -33793,8 +33781,8 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     startDate: getVal("sc.a1.editChanges.startDate"),
     endDate: getVal("sc.a1.editChanges.endDate"),
     description: getVal("sc.a1.editChanges.description"),
-    arrImages: tools.getCtData("sc.a1.editChanges.arrImages"), // 🔹 Trata como array garantido
-    arrDocuments: tools.getCtData("sc.a1.editChanges.arrDocuments"), // 🔹 Trata como array garantido
+    arrImages, // 🔹 Trata como array garantido
+    arrDocuments, // 🔹 Trata como array garantido
     updatedAt: serverTimestamp(),
   };
 
@@ -33820,7 +33808,7 @@ tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
