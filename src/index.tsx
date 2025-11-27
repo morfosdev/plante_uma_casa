@@ -68603,11 +68603,11 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
 
   const lotData = tools.getCtData("sc.C7.currents.currLoteData");
   const installmentId = c8Data.installmentId || "";
-  const lotId = lotData.lotId || "";
+  const lotId = lotData.docId || "";
 
   const documents = tools.getCtData("sc.C8.forms.editChanges.arrDocuments");
   console.log("%cdocuments", css1, { documents });
-  console.log("%clotId", css1, { lotId });
+  console.log("%clotId", css1, { lotData, lotId });
 
   const data = {
     installmentId,
