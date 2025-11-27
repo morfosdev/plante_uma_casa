@@ -67941,6 +67941,15 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+    console.log("Render Element Default", args);
+  return <RN.Text>Element Default</RN.Text>
+}] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
