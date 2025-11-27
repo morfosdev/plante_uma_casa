@@ -67948,34 +67948,43 @@ fontWeight: '700',
   console.log("Render Element Default", args);
 
   const item = tools.findFlatItem(args);
-  console.log("Render Element Default", {item});
+  console.log("Render Element Default", { item });
 
   const installmentId = item.installmentId;
-  console.log("Render Element Default", {installmentId});
+  console.log("Render Element Default", { installmentId });
 
   const currLoteData = tools.getCtData("sc.C7.currents.currLoteData");
-  console.log("Render Element Default", {currLoteData});
+  console.log("Render Element Default", { currLoteData });
 
   const rawReceipts = currLoteData?.receipts;
-  console.log("Render Element Default", {rawReceipts});
+  console.log("Render Element Default", { rawReceipts });
 
   const arrReceipts = Array.isArray(rawReceipts) ? rawReceipts : [];
-  console.log("Render Element Default", {arrReceipts});
+  console.log("Render Element Default", { arrReceipts });
 
   const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
-  console.log("Render Element Default", {receipt});
+  console.log("Render Element Default", { receipt });
 
   const fileName = receipt?.fileName;
-  console.log("Render Element Default", {fileName});
-
+  console.log("Render Element Default", { fileName });
 
   if (fileName) {
     return (
-      <RN.View style={{ padding: 4, borderWidth: 1, borderColor: "#ddd", borderRadius: 6 }}>
+      <RN.View
+        style={{
+          padding: 4,
+          borderWidth: 1,
+          borderColor: "#ddd",
+          borderRadius: 6,
+        }}
+      >
         <RN.Text>{fileName}</RN.Text>;
       </RN.View>
     );
-  }] 
+  }
+
+  return <RN.Text>Sem Documento</RN.Text>;
+}] 
 }}/>
 , 
 
