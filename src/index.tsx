@@ -7489,7 +7489,25 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
@@ -16219,7 +16237,25 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
@@ -24986,7 +25022,25 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
@@ -33640,7 +33694,25 @@ paddingVertical: 8,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async () => {
+ arrFunctions: [
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.images`],
+ arrFuncs: [(args, urls) => {
+console.log({args, urls});
+
+tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+}],
+ }}), 
+async (...args) =>
+ functions.firebase.uploadFileTool({ args, pass:{
+ arrFiles: [`$var_all.temp.documents`],
+ arrFuncs: [(args, urls) => {
+console.log("sc.a1.forms.editChanges.arrDocuments",{args, urls});
+
+tools.setData({path: "sc.a1.forms.editChanges.arrDocuments", value: urls});
+}],
+ }}), async () => {
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
