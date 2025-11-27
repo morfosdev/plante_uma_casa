@@ -7494,9 +7494,9 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.iptChanges.arrImages",{args, urls});
+console.log("sc.a1.editChanges.arrImages",{args, urls});
 
-tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
 }],
  }}), 
 async (...args) =>
@@ -16238,9 +16238,9 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.iptChanges.arrImages",{args, urls});
+console.log("sc.a1.editChanges.arrImages",{args, urls});
 
-tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
 }],
  }}), 
 async (...args) =>
@@ -25019,9 +25019,9 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.iptChanges.arrImages",{args, urls});
+console.log("sc.a1.editChanges.arrImages",{args, urls});
 
-tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
 }],
  }}), 
 async (...args) =>
@@ -33687,9 +33687,9 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.iptChanges.arrImages",{args, urls});
+console.log("sc.a1.editChanges.arrImages",{args, urls});
 
-tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
+tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
 }],
  }}), 
 async (...args) =>
