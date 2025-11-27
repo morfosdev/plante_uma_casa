@@ -67960,7 +67960,7 @@ borderRadius: 5,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C7.profiles.profileData1`],
+          keyPath: [`sc.C8.profiles.profileData1`],
           value: [`$arg_item`]
         }}), 
         (...args) => {
@@ -68331,7 +68331,7 @@ left: 4,
           ],
 
           children: [
-            `$var_sc.C7.profiles.profileData1.value`
+            `$var_sc.C8.profiles.profileData1.value`
           ],
 
           args,
@@ -68745,22 +68745,7 @@ fontWeight: '700',
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
- functions.firebase.where({ args, pass:{
-
-  arrRefStrings: [`lots`],
- arrWhere: [(...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        `ownerId`, 
-        `==`, `$var_all.authUser.docId`],
-        }})],
- arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C6.forms.iptsChanges`],
-          value: [`$arg_callback`]
-        }})],
- }})]
+ arrFunctions: [()=>{}]
  , trigger: 'on init'
 }})],
 
