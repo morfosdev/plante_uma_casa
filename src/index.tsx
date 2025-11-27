@@ -7494,7 +7494,7 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+console.log("sc.a1.iptChanges.arrImages",{args, urls});
 
 tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
 }],
@@ -16241,7 +16241,7 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+console.log("sc.a1.iptChanges.arrImages",{args, urls});
 
 tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
 }],
@@ -25025,7 +25025,7 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+console.log("sc.a1.iptChanges.arrImages",{args, urls});
 
 tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
 }],
@@ -33696,7 +33696,7 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+console.log("sc.a1.iptChanges.arrImages",{args, urls});
 
 tools.setData({path: "sc.a1.iptChanges.arrImages", value: urls});
 }],
