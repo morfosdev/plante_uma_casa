@@ -66431,7 +66431,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{ 
-	color: "#919191",
+	color: "#121417",
 	padding: 4,
 }`
           ],
@@ -66482,7 +66482,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{ 
-	color: "#919191",
+	color: "#121417",
 	padding: 4,
 }`
           ],
@@ -66533,7 +66533,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{ 
-	color: "#919191",
+	color: "#121417",
 	borderWidth: 1,
 	borderRadius: 6,
 	borderColor: "#55555591",
