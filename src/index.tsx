@@ -66252,8 +66252,7 @@ color: 'white',
 
             styles:[`{
 backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
+padding: 15,
 }`],
 
             functions:[()=>{}],            childrenItems:[
