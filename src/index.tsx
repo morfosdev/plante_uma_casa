@@ -493,7 +493,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -593,7 +593,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -692,7 +692,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2043,7 +2043,7 @@ justifyContent: 'center',
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2162,7 +2162,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2262,7 +2262,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2361,7 +2361,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -50432,7 +50432,7 @@ right: 0,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -50985,7 +50985,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -51538,7 +51538,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -52091,7 +52091,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -52644,7 +52644,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -53197,7 +53197,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -53749,7 +53749,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -62597,7 +62597,7 @@ paddingHorizontal: 10,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -63108,7 +63108,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -63613,7 +63613,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -64118,7 +64118,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -64623,7 +64623,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -65128,7 +65128,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -65632,7 +65632,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 13,
+	fontSize: 12,
 	fontWeight: '700',
 	color: '#121417',
 }`
