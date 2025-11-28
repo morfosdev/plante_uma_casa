@@ -41610,6 +41610,7 @@ borderRadius: 10,
 
           args,
         }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -41620,7 +41621,22 @@ borderRadius: 10,
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -46728,6 +46744,7 @@ borderRadius: 10,
 
           args,
         }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -46738,7 +46755,22 @@ borderRadius: 10,
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -55361,6 +55393,7 @@ borderRadius: 10,
 
           args,
         }}/>, 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -55371,7 +55404,22 @@ borderRadius: 10,
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
