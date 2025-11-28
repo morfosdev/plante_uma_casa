@@ -66203,7 +66203,7 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[`{
 flex: 1,
-alignItems: 'center',
+paddingVertical: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -66433,6 +66433,7 @@ fontWeight: '700',
             `{ 
 	color: "#121417",
 	padding: 4,
+	fontSize: 12,
 }`
           ],
 
@@ -66484,6 +66485,7 @@ fontWeight: '700',
             `{ 
 	color: "#121417",
 	padding: 4,
+	fontSize: 12,
 }`
           ],
 
@@ -66539,6 +66541,7 @@ fontWeight: '700',
 	borderColor: "#55555591",
 	height: 70,
 	padding: 4,
+	fontSize: 12,
 }`
           ],
 
