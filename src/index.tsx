@@ -66117,8 +66117,8 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
           pathScreen:"c6stepProfile",
 
           styles:[
-        `{ backgroundColor: "$var_all.colors.smoke" }`, 
-        `{ width: "100%", height: "100%" }`, `{ justifyContent: "flex-start" }`],
+        `{ width: "100%", height: "100%" }`, 
+        `{ justifyContent: "flex-start" }`, `{ backgroundColor: "#f5f5f5" }`],
 
           screenElements:[
         
