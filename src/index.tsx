@@ -39941,6 +39941,11 @@ async (...args) =>
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b3.profile`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
         }}), 
@@ -39953,15 +39958,10 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges`],
           value: [`$arg_item`]
-        }}), 
-async (...args) =>
+        }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`a1bEdit`]
-        }}), async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b3.profile`],
-          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
