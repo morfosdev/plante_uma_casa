@@ -66185,9 +66185,9 @@ xmlns="http://www.w3.org/2000/svg"
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "14px",
 
-      largura: "16px",
+      largura: "14px",
 
       preenchimento: ['black'],
 
