@@ -68348,9 +68348,9 @@ xmlns="http://www.w3.org/2000/svg"
         <svg></svg>
       `,
 
-      altura: "16px",
+      altura: "14px",
 
-      largura: "16px",
+      largura: "14px",
 
       preenchimento: ['black'],
 
@@ -68365,8 +68365,8 @@ xmlns="http://www.w3.org/2000/svg"
             elementsProperties:['{}'],
 
             styles:[`{
-flex: 1,
-alignItems: 'center',
+	flex: 1,
+	paddingHorizontal: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
