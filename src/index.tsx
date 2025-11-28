@@ -68130,9 +68130,9 @@ backgroundColor: '#315E2D',
 alignItems: 'center',
 justifyContent: 'center',
 alignSelf: 'center',
-paddingVertical: 4,
-paddingHorizontal: 10,
-borderRadius: 5,
+paddingVertical: 5,
+paddingHorizontal: 40,
+borderRadius: 8,
 }`],
 
             functions:[async (...args) =>
