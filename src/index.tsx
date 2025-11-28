@@ -42924,7 +42924,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -42977,7 +42977,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -43728,7 +43728,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -43781,7 +43781,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -48221,7 +48221,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -48274,7 +48274,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -49025,7 +49025,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -49078,7 +49078,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -57033,7 +57033,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -57086,7 +57086,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -57837,7 +57837,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -57890,7 +57890,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -66328,7 +66328,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -66381,7 +66381,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -66430,7 +66430,10 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "black" }`
+            `{ 
+	color: "black",
+	paddingHorizontal: 4,
+}`
           ],
 
           children: [
@@ -66478,7 +66481,10 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "black" }`
+            `{ 
+	color: "black",
+	paddingHorizontal: 4,
+}`
           ],
 
           children: [
@@ -68439,7 +68445,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
@@ -68492,7 +68498,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-left: 4,
+paddingHorizontal: 4,
 }`
           ],
 
