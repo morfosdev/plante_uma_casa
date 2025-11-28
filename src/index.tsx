@@ -42924,7 +42924,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -42977,7 +42977,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -43728,7 +43728,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -43781,7 +43781,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -48221,7 +48221,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -48274,7 +48274,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -49025,7 +49025,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -49078,7 +49078,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -57033,7 +57033,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -57086,7 +57086,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -57837,7 +57837,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -57890,7 +57890,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -66328,7 +66328,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -66381,7 +66381,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -66431,8 +66431,8 @@ fontWeight: '700',
 
           arrStyles: [
             `{ 
-	color: "black",
-	paddingHorizontal: 4,
+	color: "#919191",
+	padding: 4,
 }`
           ],
 
@@ -66482,8 +66482,8 @@ fontWeight: '700',
 
           arrStyles: [
             `{ 
-	color: "black",
-	paddingHorizontal: 4,
+	color: "#919191",
+	padding: 4,
 }`
           ],
 
@@ -66533,7 +66533,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{ 
-	color: "black",
+	color: "#919191",
 	borderWidth: 1,
 	borderRadius: 6,
 	borderColor: "#55555591",
@@ -68445,7 +68445,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
@@ -68498,7 +68498,7 @@ fontWeight: '700',
 color: '#121417',
 fontSize: 12,
 fontWeight: '700',
-paddingHorizontal: 4,
+padding: 4,
 }`
           ],
 
