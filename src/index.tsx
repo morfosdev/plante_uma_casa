@@ -41422,28 +41422,24 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'Rua das Flores, 123',
-}`],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
+          arrStyles: [
+            `{
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`
+          ],
 
-          path: [`sc.B5.forms.editChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.B5.forms.editChanges.address`
+          ],
 
           args,
+
         }}/>, 
         
 
@@ -41622,41 +41618,6 @@ borderRadius: 10,
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -46613,28 +46574,24 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'Rua das Flores, 123',
-}`],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
+          arrStyles: [
+            `{
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`
+          ],
 
-          path: [`sc.B5.forms.editChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.B5.forms.editChanges.address`
+          ],
 
           args,
+
         }}/>, 
         
 
@@ -46813,41 +46770,6 @@ borderRadius: 10,
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -55319,28 +55241,24 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'Rua das Flores, 123',
-}`],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
+          arrStyles: [
+            `{
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`
+          ],
 
-          path: [`sc.B5.forms.editChanges.address`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.B5.forms.editChanges.address`
+          ],
 
           args,
+
         }}/>, 
         
 
@@ -55519,41 +55437,6 @@ borderRadius: 10,
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
