@@ -41537,34 +41537,11 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.B5.forms.editChanges.condo`
+            `$var_sc.B5.forms.editChanges.endDate`
           ],
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.B5.forms.editChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.endDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -41593,6 +41570,25 @@ fontWeight: '700',
 
           children: [
             `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.endDate`
           ],
 
           args,
@@ -46666,34 +46662,11 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.B5.forms.editChanges.condo`
+            `$var_sc.B5.forms.editChanges.endDate`
           ],
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.B5.forms.editChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.endDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -46722,6 +46695,25 @@ fontWeight: '700',
 
           children: [
             `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.endDate`
           ],
 
           args,
@@ -55310,34 +55302,11 @@ fontSize: 12,
           ],
 
           children: [
-            `$var_sc.B5.forms.editChanges.condo`
+            `$var_sc.B5.forms.editChanges.endDate`
           ],
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.B5.forms.editChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.endDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -55366,6 +55335,25 @@ fontWeight: '700',
 
           children: [
             `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.endDate`
           ],
 
           args,
