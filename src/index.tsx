@@ -39938,22 +39938,22 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b5.viewCondo`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges`],
-          value: [`$arg_item`]
+          keyPath: [`all.toggles.b8.addSteps`],
+          value: [false]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b3.profile`],
           value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b5.viewCondo`],
+          value: [true]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [false]
+          keyPath: [`sc.B5.forms.editChanges`],
+          value: [`$arg_item`]
         }})]
  , trigger: 'on press'
 }}), async (...args) =>
