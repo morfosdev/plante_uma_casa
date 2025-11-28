@@ -67850,43 +67850,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 11,
-fontWeight: 'bold',
-}`
-          ],
-
-          children: [
-            `Parcelas`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
         (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             {}
