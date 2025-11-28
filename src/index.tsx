@@ -68595,7 +68595,11 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "black" }`
+            `{ 
+	color: "#121417",
+	padding: 4,
+	fontSize: 12,
+}`
           ],
 
           children: [
@@ -68643,7 +68647,11 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "black" }`
+            `{ 
+	color: "#121417",
+	padding: 4,
+	fontSize: 12,
+}`
           ],
 
           children: [
@@ -68691,7 +68699,15 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "black" }`
+            `{ 
+	color: "#121417",
+	borderWidth: 1,
+	borderRadius: 6,
+	borderColor: "#55555591",
+	height: 70,
+	padding: 4,
+	fontSize: 12,
+}`
           ],
 
           children: [
