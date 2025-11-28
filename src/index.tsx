@@ -66581,12 +66581,17 @@ fontWeight: '700',
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
 
-      styles:[{
-height: 33,
-width: 33,
-}],
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
+              }
+              ],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
     }}/>, 
@@ -66595,12 +66600,17 @@ width: 33,
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
 
-      styles:[{
-width: '116px',
-height: '40px',
-}],
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
+              }
+              ],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/images%2FAdmin.png?alt=media&token=94ebd672-5bdd-4e25-81b7-a1b36e29e6e0`],
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
     }}/>, 
@@ -66627,15 +66637,17 @@ height: '40px',
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
 
-      styles:[{
-	width: 150,
-	height: 100,
-	borderRadius: '6px',
-	borderWidth: '1px',
-	borderColor: '#e6e7e8',
-}],
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
+              }
+              ],
 
-      URIvariablePath:[`$arg_images`],
+      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 
       args,
     }}/>],
