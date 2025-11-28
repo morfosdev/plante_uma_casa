@@ -66526,7 +66526,14 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            `{ color: "black" }`
+            `{ 
+	color: "black",
+	borderWidth: 1,
+	borderRadius: 6,
+	borderColor: "#55555591",
+	height: 70,
+	padding: 4,
+}`
           ],
 
           children: [
