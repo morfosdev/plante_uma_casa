@@ -41377,7 +41377,10 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
           ],
 
           children: [
@@ -41386,29 +41389,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.B5.forms.editChanges.condo`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.condo`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -46515,7 +46495,10 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
           ],
 
           children: [
@@ -46524,29 +46507,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.B5.forms.editChanges.condo`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.condo`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
@@ -55168,7 +55128,10 @@ fontWeight: '700',
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
           ],
 
           children: [
@@ -55177,29 +55140,6 @@ fontWeight: '700',
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: "Ex: Residência dos Silvas",
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.B5.forms.editChanges.condo`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.condo`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
         
 
