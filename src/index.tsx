@@ -41347,7 +41347,6 @@ padding: 12,
             elementsProperties:['{}'],
 
             styles:[`{
-paddingHorizontal: 20,
 width: '100%',
 }`],
 
@@ -46470,7 +46469,6 @@ padding: 12,
             elementsProperties:['{}'],
 
             styles:[`{
-paddingHorizontal: 20,
 width: '100%',
 }`],
 
@@ -55108,7 +55106,6 @@ padding: 12,
             elementsProperties:['{}'],
 
             styles:[`{
-paddingHorizontal: 20,
 width: '100%',
 }`],
 
