@@ -67894,7 +67894,7 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{
-backgroundColor: '#559f4e3d',
+backgroundColor: '#CFECCD',
 alignItems: 'center',
 justifyContent: 'center',
 width: 30,
@@ -67914,7 +67914,7 @@ borderRadius: 15,
     {...props}
   >
     <Path
-      stroke="#000"
+      stroke="#61AC5F"
       strokeLinejoin="round"
       d="M6.5.5h-5a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-7m-5-5 5 5m-5-5v5h5M3 8.5h6m-6 2h6"
     />
@@ -67923,7 +67923,7 @@ borderRadius: 15,
 
       svgOriginal: `
         <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.5 0.5H1.5C1.23478 0.5 0.98043 0.605357 0.792893 0.792893C0.605357 0.98043 0.5 1.23478 0.5 1.5V12.5C0.5 12.7652 0.605357 13.0196 0.792893 13.2071C0.98043 13.3946 1.23478 13.5 1.5 13.5H10.5C10.7652 13.5 11.0196 13.3946 11.2071 13.2071C11.3946 13.0196 11.5 12.7652 11.5 12.5V5.5M6.5 0.5L11.5 5.5M6.5 0.5V5.5H11.5M3 8.5H9M3 10.5H9" stroke="black" stroke-linejoin="round"/>
+<path d="M6.5 0.5H1.5C1.23478 0.5 0.98043 0.605357 0.792893 0.792893C0.605357 0.98043 0.5 1.23478 0.5 1.5V12.5C0.5 12.7652 0.605357 13.0196 0.792893 13.2071C0.98043 13.3946 1.23478 13.5 1.5 13.5H10.5C10.7652 13.5 11.0196 13.3946 11.2071 13.2071C11.3946 13.0196 11.5 12.7652 11.5 12.5V5.5M6.5 0.5L11.5 5.5M6.5 0.5V5.5H11.5M3 8.5H9M3 10.5H9" stroke="#61AC5F" stroke-linejoin="round"/>
 </svg>
 
       `,
@@ -67932,7 +67932,7 @@ borderRadius: 15,
 
       largura: "15px",
 
-      preenchimento: [`#559f4e3d`],
+      preenchimento: [`#CFECCD`],
 
       args,
     }}/>],
