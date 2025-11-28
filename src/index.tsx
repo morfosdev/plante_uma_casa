@@ -39546,16 +39546,21 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b8.addSteps`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b4list");
         }
-        , async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [false]
-        }})]
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -44464,16 +44469,21 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b8.addSteps`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b4list");
         }
-        , async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [false]
-        }})]
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -49580,16 +49590,21 @@ width: '100%',
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b8.addSteps`],
+          value: [false]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b4list");
         }
-        , async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
-          value: [false]
-        }})]
+        ]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
