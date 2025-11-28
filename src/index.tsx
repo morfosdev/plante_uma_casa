@@ -41381,7 +41381,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `sc.B5.forms.editChanges.condo`
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
@@ -46519,7 +46519,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `sc.B5.forms.editChanges.condo`
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
@@ -55172,7 +55172,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `sc.B5.forms.editChanges.condo`
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
