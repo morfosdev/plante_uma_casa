@@ -22905,7 +22905,7 @@ shadowRadius: 4,
   if (!item || typeof item !== "object") {
     console.log("Botão Recibo ERRO: item inválido", item);
     return (
-      <RN.Pressable style={{  flexGrow: 1, flexShrink: 1, flexBasis: 80, position: "absolute", marginLeft: 32 }}>
+      <RN.Pressable>
         <RN.Text style={{ color: "#CCCCCC", fontSize: 14, fontWeight: "bold" }}>
           ↪
         </RN.Text>
@@ -22922,7 +22922,7 @@ shadowRadius: 4,
   if (installmentId === null || installmentId === undefined || installmentId === "") {
     console.log("Botão Recibo ERRO: installmentId inválido");
     return (
-      <RN.Pressable style={{  flexGrow: 1, flexShrink: 1, flexBasis: 80, position: "absolute", marginLeft: 32 }}>
+      <RN.Pressable>
         <RN.Text style={{ color: "#CCCCCC", fontSize: 14, fontWeight: "bold" }}>
           ↪
         </RN.Text>
