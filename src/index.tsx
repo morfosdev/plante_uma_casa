@@ -68133,6 +68133,7 @@ alignSelf: 'center',
 paddingVertical: 5,
 paddingHorizontal: 40,
 borderRadius: 8,
+width: '100%',
 }`],
 
             functions:[async (...args) =>
