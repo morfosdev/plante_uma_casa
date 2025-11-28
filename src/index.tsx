@@ -66569,6 +66569,7 @@ fontWeight: '700',
             styles:[`{ 
 	flexDirection: 'row',
 	flexWrap: 'wrap',
+	justifyContent: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
