@@ -41473,28 +41473,24 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
+          arrStyles: [
+            `{
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`
+          ],
 
-          path: [`sc.B5.forms.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.B5.forms.editChanges.startDate`
+          ],
 
           args,
+
         }}/>, 
         
 
@@ -41523,6 +41519,25 @@ fontWeight: '700',
 
           children: [
             `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
@@ -41606,7 +41621,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -41617,44 +41631,7 @@ borderRadius: 10,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>],
+        ],
 
             args,
           }}/>
@@ -46625,28 +46602,24 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
+          arrStyles: [
+            `{
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`
+          ],
 
-          path: [`sc.B5.forms.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.B5.forms.editChanges.startDate`
+          ],
 
           args,
+
         }}/>, 
         
 
@@ -46675,6 +46648,25 @@ fontWeight: '700',
 
           children: [
             `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
@@ -46758,7 +46750,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -46769,44 +46760,7 @@ borderRadius: 10,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>],
+        ],
 
             args,
           }}/>
@@ -55292,28 +55246,24 @@ fontWeight: '700',
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
 
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
+          arrStyles: [
+            `{
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`
+          ],
 
-          path: [`sc.B5.forms.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
+          children: [
+            `$var_sc.B5.forms.editChanges.startDate`
+          ],
 
           args,
+
         }}/>, 
         
 
@@ -55342,6 +55292,25 @@ fontWeight: '700',
 
           children: [
             `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
@@ -55425,7 +55394,6 @@ borderRadius: 10,
 
           args,
         }}/>, 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -55436,44 +55404,7 @@ borderRadius: 10,
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-paddingHorizontal: 4,
-fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.B5.forms.editChanges.condo`
-          ],
-
-          args,
-
-        }}/>],
+        ],
 
             args,
           }}/>
