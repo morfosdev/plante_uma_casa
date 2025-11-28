@@ -68755,7 +68755,7 @@ fontWeight: '700',
 
             styles:[`{ 
 backgroundColor: "#315E2D", 
-borderRadius: 20, 
+borderRadius: 10, 
 alignItems: "center", 
 justifyContent: "center",
 paddingHorizontal: 30,
@@ -68837,7 +68837,7 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 13,
 color: '#FFFFFF',
 fontWeight: '700',
 }`
