@@ -68099,7 +68099,7 @@ fontWeight: '700',
     );
   }
 
-  return <RN.Text style={{color: "#ddd", fontSize: 12, fontWeight: 600, padding: 12}}>Sem Documento</RN.Text>;
+  return <RN.Text style={{color: "#ddd", fontSize: 12, fontWeight: 600}}>Sem Documento</RN.Text>;
 }] 
 }}/>
 , 
