@@ -41371,6 +41371,22 @@ fontWeight: '700',
           args,
 
         }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `sc.B5.forms.editChanges.condo`
+          ],
+
+          args,
+
+        }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Ex: Residência dos Silvas",
@@ -46488,6 +46504,22 @@ fontWeight: '700',
 
           children: [
             `Nome do Condomínio`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `sc.B5.forms.editChanges.condo`
           ],
 
           args,
@@ -55125,6 +55157,22 @@ fontWeight: '700',
 
           children: [
             `Nome do Condomínio`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `sc.B5.forms.editChanges.condo`
           ],
 
           args,
