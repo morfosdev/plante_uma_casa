@@ -41621,7 +41621,8 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -41632,6 +41633,62 @@ borderRadius: 10,
 
           children: [
             "Escreva..."
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
@@ -46755,7 +46812,8 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -46766,6 +46824,62 @@ borderRadius: 10,
 
           children: [
             "Escreva..."
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
@@ -55404,7 +55518,8 @@ borderRadius: 10,
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
+        , 
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -55415,6 +55530,62 @@ borderRadius: 10,
 
           children: [
             "Escreva..."
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+paddingHorizontal: 4,
+fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.B5.forms.editChanges.condo`
           ],
 
           args,
