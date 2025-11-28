@@ -66203,7 +66203,7 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[`{
 flex: 1,
-paddingVertical: 10,
+paddingHorizontal: 10,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
