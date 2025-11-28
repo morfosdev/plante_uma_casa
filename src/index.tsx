@@ -68092,11 +68092,6 @@ fontWeight: '700',
     return (
       <RN.View
         style={{
-          padding: 6,
-          borderWidth: 1,
-          borderColor: "#ddd",
-          borderRadius: 6,
-          margin: 12
         }}
       >
         <RN.Text style={{color: "#315e2d", fontSize: 12, fontWeight: 600}}>{fileName}</RN.Text>
@@ -68108,6 +68103,24 @@ fontWeight: '700',
 }] 
 }}/>
 , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
