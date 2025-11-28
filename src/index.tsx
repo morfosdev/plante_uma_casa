@@ -68079,7 +68079,7 @@ fontWeight: '700',
   console.log("Render Element Default", { arrReceipts });
 
   if (arrReceipts.length === 0) {
-    return <RN.Text style={{color: "#ccc", fontSize: 12, fontWeight: 600, padding: 12}}>Sem Documento</RN.Text>;
+    return <RN.Text style={{color: "#ccc", fontSize: 12, fontWeight: 600}}>Sem Documento</RN.Text>;
   }
 
   const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
