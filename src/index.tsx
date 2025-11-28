@@ -62464,7 +62464,7 @@ fontWeight: '400',
 
           arrStyles: [
             `{
-fontSize: 10,
+fontSize: 12,
 fontWeight: 'bold',
 color: '#121417',
 paddingHorizontal: 15,
@@ -62472,7 +62472,7 @@ paddingHorizontal: 15,
           ],
 
           children: [
-            `Etapas principais da obra de uma casa na planta`
+            `Etapas principais da obra`
           ],
 
           args,
