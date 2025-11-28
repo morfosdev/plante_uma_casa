@@ -41582,13 +41582,17 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-paddingHorizontal: 4,
 fontSize: 12,
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
 }`
           ],
 
           children: [
-            `$var_sc.B5.forms.editChanges.endDate`
+            `$var_sc.B5.forms.editChanges.description`
           ],
 
           args,
@@ -46707,13 +46711,17 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-paddingHorizontal: 4,
 fontSize: 12,
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
 }`
           ],
 
           children: [
-            `$var_sc.B5.forms.editChanges.endDate`
+            `$var_sc.B5.forms.editChanges.description`
           ],
 
           args,
@@ -55347,13 +55355,17 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-paddingHorizontal: 4,
 fontSize: 12,
+borderWidth: 1,
+borderColor: '#ccc',
+padding: 5,
+height: 80,
+borderRadius: 10,
 }`
           ],
 
           children: [
-            `$var_sc.B5.forms.editChanges.endDate`
+            `$var_sc.B5.forms.editChanges.description`
           ],
 
           args,
