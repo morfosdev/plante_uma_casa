@@ -39933,11 +39933,6 @@ alignItems: 'center',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b8.addSteps`],
           value: [false]
         }}), 
@@ -39945,6 +39940,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b3.profile`],
           value: [false]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [true]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
