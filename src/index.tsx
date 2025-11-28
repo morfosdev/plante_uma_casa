@@ -39945,9 +39945,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B5.forms.editChanges`],
           value: [`$arg_item`]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b3.profile`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.b8.addSteps`],
           value: [false]
         }})]
  , trigger: 'on press'
