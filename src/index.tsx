@@ -41598,29 +41598,6 @@ borderRadius: 10,
           args,
 
         }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-multiline: 'true',
-}`],
-
-          stylesArray: [`{
-borderWidth: 1,
-borderColor: '#ccc',
-padding: 5,
-height: 80,
-borderRadius: 10,
-}`],
-
-          path: [`sc.B5.forms.editChanges.description`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.description`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -46726,29 +46703,6 @@ borderRadius: 10,
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-multiline: 'true',
-}`],
-
-          stylesArray: [`{
-borderWidth: 1,
-borderColor: '#ccc',
-padding: 5,
-height: 80,
-borderRadius: 10,
-}`],
-
-          path: [`sc.B5.forms.editChanges.description`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.description`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
@@ -55370,29 +55324,6 @@ borderRadius: 10,
 
           args,
 
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-multiline: 'true',
-}`],
-
-          stylesArray: [`{
-borderWidth: 1,
-borderColor: '#ccc',
-padding: 5,
-height: 80,
-borderRadius: 10,
-}`],
-
-          path: [`sc.B5.forms.editChanges.description`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.B5.forms.editChanges.description`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
         }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
