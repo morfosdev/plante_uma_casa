@@ -1,8 +1,9 @@
 
 // ---------- import Packs
+import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
 import * as RN from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
+import { useRoutes } from '../../..';
 
 type Tprops = {
   pass: {
@@ -171,10 +172,15 @@ const ThumbGrid = ({
   onRemove: (idx: number) => void;
 }) => {
   if (!images.length) return null;
+
+  const condNumThumbs: RN.ViewStyle = images.length === 1 ? { width: '100%' } : {};
+  const currRoute = useRoutes.getState().currRoute;
+  console.log('%cThumbGrid', 'color: orange; font-weight: 700;', 'on', currRoute, images);
+
   return (
     <RN.View style={thumb.grid}>
       {images.map((uri, idx) => (
-        <RN.View key={uri + idx} style={thumb.item}>
+        <RN.View key={uri + idx} style={{...thumb.item, ...condNumThumbs}}>
           <RN.Image source={{ uri }} style={thumb.img} />
           <RN.Pressable hitSlop={8} style={thumb.x} onPress={() => onRemove(idx)}>
             <RN.Text style={thumb.xTxt}>×</RN.Text>
@@ -243,4 +249,3 @@ const thumb = RN.StyleSheet.create({
   },
   xTxt: { color: '#fff', fontSize: 16, lineHeight: 16, fontWeight: '700' },
 });
-
