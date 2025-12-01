@@ -13051,16 +13051,38 @@ fontWeight: '700',
    arrRefStrings: [`condos`],
             arrFuncs: [
         (arg) => {
-	console.log("A4 GET CONDOS", arg);
+  console.log("A4 GET CONDOS", arg);
 
-	const value = arg.map(i => {
-		i.image = i.images[0];
-		return i;
-	});
-	tools.setData({
-		path: "sc.a7.list",
-		value
-	})
+  // Se arg for null/undefined ou não for array → interrompe
+  if (!Array.isArray(arg)) {
+    console.warn("A4 GET CONDOS: arg não é array", arg);
+    return;
+  }
+
+  const value = arg.map((i) => {
+    // garante que i seja um objeto
+    if (i && typeof i === "object") {
+      const firstImg =
+        Array.isArray(i.images) && i.images.length > 0
+          ? i.images[0]
+          : "";
+
+      return {
+        ...i,
+        image: firstImg,
+      };
+    }
+
+    // fallback caso i seja inválido
+    return {
+      image: "",
+    };
+  });
+
+  tools.setData({
+    path: "sc.a7.list",
+    value,
+  });
 }, async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.list`],
