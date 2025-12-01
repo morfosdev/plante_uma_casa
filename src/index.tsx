@@ -13050,7 +13050,7 @@ fontWeight: '700',
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [`condos`],
             arrFuncs: [
-        () => {
+        (arg) => {
 	console.log("A4 GET CONDOS", arg);
 }, async (...args) =>
         functions.setVar({ args, pass:{
