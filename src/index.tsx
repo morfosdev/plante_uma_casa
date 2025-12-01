@@ -44218,11 +44218,51 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
         `docId`, 
         `==`, `$var_all.authUser.condoId`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b4.list`],
           value: [`$arg_callback`]
-        }})],
+        }}), (arg) => {
+  console.log("B4 GET CONDOS", arg);
+
+  // Se arg não for arrayinterrompe o processo
+  if (!Array.isArray(arg)) {
+    console.warn("B4 GET CONDOS: arg não é array", arg);
+    return;
+  }
+
+  const value = arg.map((i) => {
+    if (!i || typeof i !== "object") {
+      // item inválido, devolve algo mínimo
+      return { image: "" };
+    }
+
+    let image = "";
+
+    // garante que images seja um array e tenha pelo menos 1 item
+    if (Array.isArray(i.arrImages) && i.arrImages.length > 0) {
+      const first = i.arrImages[0];
+
+      if (first && typeof first === "object") {
+        // tenta pegar o receiptUrl com fallback
+        image = first.receiptUrl ?? "";
+      }
+    }
+
+    return {
+      ...i,
+      // se já existir i.image e você NÃO quiser sobrescrever, use:
+      // image: i.image ?? image,
+      image,
+    };
+  });
+
+  tools.setData({
+    path: "sc.b4.list", // confira se aqui é "b4" mesmo e não "B4"
+    value,
+  });
+}],
  }})]
  , trigger: 'on init'
 }})],
