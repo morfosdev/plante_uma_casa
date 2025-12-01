@@ -10039,7 +10039,7 @@ paddingVertical: 8,
  arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.userEmail", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -10123,7 +10123,7 @@ tools.setData({
 // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
-    email: getVal("sc.A7.forms.editChanges.email"),
+    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -10189,8 +10189,7 @@ tools.functions.setVar({
         value: [""],
       },
     });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -18818,7 +18817,7 @@ paddingVertical: 8,
  arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.userEmail", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -18902,7 +18901,7 @@ tools.setData({
 // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
-    email: getVal("sc.A7.forms.editChanges.email"),
+    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -18968,8 +18967,7 @@ tools.functions.setVar({
         value: [""],
       },
     });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -27599,7 +27597,7 @@ paddingVertical: 8,
  arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.userEmail", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -27683,7 +27681,7 @@ tools.setData({
 // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
-    email: getVal("sc.A7.forms.editChanges.email"),
+    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -27749,8 +27747,7 @@ tools.functions.setVar({
         value: [""],
       },
     });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -36267,7 +36264,7 @@ paddingVertical: 8,
  arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.userEmail", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -36351,7 +36348,7 @@ tools.setData({
 // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
-    email: getVal("sc.A7.forms.editChanges.email"),
+    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -36417,8 +36414,7 @@ tools.functions.setVar({
         value: [""],
       },
     });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
