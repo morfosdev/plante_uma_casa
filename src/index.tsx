@@ -13053,7 +13053,7 @@ fontWeight: '700',
         (arg) => {
 	console.log("A4 GET CONDOS", arg);
 
-	const value = arg.ma(i => {
+	const value = arg.map(i => {
 		i.image = i.images[0];
 		return i;
 	});
