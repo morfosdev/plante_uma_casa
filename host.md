@@ -4,4 +4,7 @@
 <!-- comands -->
 npx expo export --platform web
 
+a0login
+c1login
+
 
