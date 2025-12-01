@@ -68047,47 +68047,6 @@ padding: 4,
             args,
           }}/>
         , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Sub. Etapa`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: '#121417',
-fontSize: 12,
-fontWeight: '700',
-padding: 4,
-}`
-          ],
-
-          children: [
-            `$var_sc.C6.forms.editChanges.subStepLabel`
-          ],
-
-          args,
-
-        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -68134,7 +68093,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_sc.C6.forms.editChanges.date`
+            `$var_sc.C8.profiles.profileData1.date`
           ],
 
           args,
