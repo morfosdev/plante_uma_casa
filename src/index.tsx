@@ -13053,35 +13053,40 @@ fontWeight: '700',
         (arg) => {
   console.log("A4 GET CONDOS", arg);
 
-  // Se arg for null/undefined ou não for array → interrompe
+  // Se arg não for array, sai fora
   if (!Array.isArray(arg)) {
     console.warn("A4 GET CONDOS: arg não é array", arg);
     return;
   }
 
   const value = arg.map((i) => {
-    // garante que i seja um objeto
-console.log({i: i?.images?.[0]});
-    if (i && typeof i === "object") {
-      const firstImg =
-        Array.isArray(i.images) && i.images.length > 0
-          ? i.images[0].receiptUrl
-          : "";
-
-      return {
-        ...i,
-        image: firstImg,
-      };
+    if (!i || typeof i !== "object") {
+      // item inválido, devolve algo mínimo
+      return { image: "" };
     }
 
-    // fallback caso i seja inválido
+    let image = "";
+
+    // garante que images seja um array e tenha pelo menos 1 item
+    if (Array.isArray(i.images) && i.images.length > 0) {
+      const first = i.images[0];
+
+      if (first && typeof first === "object") {
+        // tenta pegar o receiptUrl com fallback
+        image = first.receiptUrl ?? "";
+      }
+    }
+
     return {
-      image: "",
+      ...i,
+      // se já existir i.image e você NÃO quiser sobrescrever, use:
+      // image: i.image ?? image,
+      image,
     };
   });
 
   tools.setData({
-    path: "sc.a7.list",
+    path: "sc.a7.list", // confira se aqui é "a7" mesmo e não "A7"
     value,
   });
 }, async (...args) =>
