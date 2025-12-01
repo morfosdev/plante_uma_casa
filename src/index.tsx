@@ -13064,7 +13064,7 @@ fontWeight: '700',
     if (i && typeof i === "object") {
       const firstImg =
         Array.isArray(i.images) && i.images.length > 0
-          ? i.images[0]
+          ? i.images[0].receiptUrl
           : "";
 
       return {
