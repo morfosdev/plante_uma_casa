@@ -3,7 +3,7 @@
 import * as ImagePicker from "expo-image-picker";
 import React from "react";
 import * as RN from "react-native";
-import { useRoutes } from '../../..';
+import { useRoutes } from "../../..";
 
 type Tprops = {
   pass: {
@@ -31,6 +31,9 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
   // Upload: Files reais
   const [files, setFiles] = React.useState<File[]>([]);
 
+  const currRoute = useRoutes.getState().currRoute;
+  const condRoute = currRoute === "a4list";
+
   // Dispara callbacks sempre que os FILES mudam
   React.useEffect(() => {
     if (arrFuncs) for (const fn of arrFuncs) fn(files, args);
@@ -56,7 +59,9 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
       ? [...files, ...newFiles].slice(0, max)
       : [...files, ...newFiles];
 
-    setImages(nextPreviews);
+    if (condRoute) setImages(newPreviews);
+    if (!condRoute) setImages(nextPreviews);
+
     setFiles(nextFiles);
     onChange?.(nextPreviews);
 
@@ -76,9 +81,6 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     setFiles(fls);
     onChange?.(imgs);
   };
-
-  const currRoute = useRoutes.getState().currRoute;
-  const condRoute = currRoute === "a4list";
 
   console.log(
     "%cThumbGrid",
