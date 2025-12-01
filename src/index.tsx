@@ -65623,7 +65623,8 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 
   tools.setData({ path: "sc.C5.lists.list1", value: arrSteps });
 }],
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`lots`],
@@ -65636,6 +65637,21 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.C5.currents.lotData`],
+          value: [`$arg_callback`]
+        }})],
+ }}), async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`condos`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_sc.C5.currents.lotData.condoId`],
+        }})],
+ arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C5.currents.condoData`],
           value: [`$arg_callback`]
         }})],
  }})]
