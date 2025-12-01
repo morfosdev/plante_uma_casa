@@ -65639,7 +65639,18 @@ async (...args) =>
           keyPath: [`sc.C5.currents.lotData`],
           value: [`$arg_callback`]
         }})],
- }}), async (...args) =>
+ }}), 
+()=> {
+const lot = tools.getData("sc.C5.currents.lotData");
+
+if (Array.isArray(lot)) {
+  tools.setData({
+    path: "sc.C5.currents.lotData",
+    value: lot[0]
+  });
+}
+}
+, async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`condos`],
