@@ -13052,6 +13052,15 @@ fontWeight: '700',
             arrFuncs: [
         (arg) => {
 	console.log("A4 GET CONDOS", arg);
+
+	const value = arg.ma(i => {
+		i.image = i.images[0];
+		return i;
+	});
+	tools.setData({
+		path: "sc.a7.list",
+		value
+	})
 }, async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.list`],
