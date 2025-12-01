@@ -65624,6 +65624,73 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
   tools.setData({ path: "sc.C5.lists.list1", value: arrSteps });
 }],
         }}), 
+async () => {
+  const lotId = tools.getCtData("all.authUser.lotId");
+
+  if (!lotId) {
+    console.log("ERRO: Usuário não tem lotId");
+    return;
+  }
+
+  console.log("1️⃣ Buscando Lote:", lotId);
+
+  // 1. WHERE para buscar o Lote
+  const lotResult = await tools.callWf({
+    wf: "where",
+    args: [
+      {
+        collection: "lots",
+        field: "docId",
+        operator: "==",
+        value: lotId
+      }
+    ]
+  });
+
+  console.log("Resultado do lote:", lotResult);
+
+  if (!lotResult || !lotResult.docs || lotResult.docs.length === 0) {
+    console.log("Nenhum lote encontrado.");
+    return;
+  }
+
+  const lotData = lotResult.docs;
+  tools.setData({
+    path: "sc.C5.currents.lotData",
+    value: lotData
+  });
+
+  const condoId = lotData[0].condoId;
+  console.log("CondoId do lote:", condoId);
+
+  if (!condoId) {
+    console.log("ERRO: lote não tem condoId");
+    return;
+  }
+
+  console.log("2️⃣ Buscando Condomínio:", condoId);
+
+  // 2. WHERE para buscar o Condomínio
+  const condoResult = await tools.callWf({
+    wf: "where",
+    args: [
+      {
+        collection: "condos",
+        field: "docId",
+        operator: "==",
+        value: condoId
+      }
+    ]
+  });
+
+  console.log("Resultado do condomínio:", condoResult);
+
+  tools.setData({
+    path: "sc.C5.currents.condoData",
+    value: condoResult.docs ?? []
+  });
+};
+, 
 async (...args) =>
  functions.firebase.where({ args, pass:{
 
