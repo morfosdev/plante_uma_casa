@@ -11043,6 +11043,14 @@ tools.functions.setVar({
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
+
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   }
 }]
  , trigger: 'on press'
@@ -19830,6 +19838,14 @@ tools.functions.setVar({
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
+      },
+    });
+
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
       },
     });
   }
@@ -28623,6 +28639,14 @@ tools.functions.setVar({
         value: ["Erro ao salvar. Verifique o console."],
       },
     });
+
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   }
 }]
  , trigger: 'on press'
@@ -37299,6 +37323,14 @@ tools.functions.setVar({
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
+      },
+    });
+
+tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
       },
     });
   }
