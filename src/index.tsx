@@ -67574,7 +67574,7 @@ fontWeight: '700',
 
           children: [
             
-        `Parcela `, `$arg_formatedInstallments`
+        `Descrição `, `$arg_description`
           ],
 
           args,
