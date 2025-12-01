@@ -65625,72 +65625,69 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 }],
         }}), 
 async () => {
+  console.log("🔍 Iniciando busca de lote e condomínio...");
+
+  // importa Firestore
+  const { getFirestore, doc, getDoc } = await import("firebase/firestore");
+  const db = getFirestore();
+
+  // pega o lotId do usuário
   const lotId = tools.getCtData("all.authUser.lotId");
 
   if (!lotId) {
-    console.log("ERRO: Usuário não tem lotId");
+    console.log("❌ Usuário não tem lotId");
     return;
   }
 
-  console.log("1️⃣ Buscando Lote:", lotId);
+  console.log("📌 Buscando lote:", lotId);
 
-  // 1. WHERE para buscar o Lote
-  const lotResult = await tools.callWf({
-    wf: "where",
-    args: [
-      {
-        collection: "lots",
-        field: "docId",
-        operator: "==",
-        value: lotId
-      }
-    ]
-  });
+  // 1️⃣ Buscar Lote
+  const lotRef = doc(db, "lots", lotId);
+  const lotSnap = await getDoc(lotRef);
 
-  console.log("Resultado do lote:", lotResult);
-
-  if (!lotResult || !lotResult.docs || lotResult.docs.length === 0) {
-    console.log("Nenhum lote encontrado.");
+  if (!lotSnap.exists()) {
+    console.log("❌ Lote não encontrado.");
     return;
   }
 
-  const lotData = lotResult.docs;
+  const lotData = { docId: lotSnap.id, ...lotSnap.data() };
+  console.log("📦 Lote encontrado:", lotData);
+
+  // salvar no estado
   tools.setData({
     path: "sc.C5.currents.lotData",
-    value: lotData
+    value: [lotData],
   });
 
-  const condoId = lotData[0].condoId;
-  console.log("CondoId do lote:", condoId);
+  // pegar condoId
+  const condoId = lotData.condoId;
 
   if (!condoId) {
-    console.log("ERRO: lote não tem condoId");
+    console.log("❌ Lote não tem condoId");
     return;
   }
 
-  console.log("2️⃣ Buscando Condomínio:", condoId);
+  console.log("📌 Buscando condomínio:", condoId);
 
-  // 2. WHERE para buscar o Condomínio
-  const condoResult = await tools.callWf({
-    wf: "where",
-    args: [
-      {
-        collection: "condos",
-        field: "docId",
-        operator: "==",
-        value: condoId
-      }
-    ]
-  });
+  // 2️⃣ Buscar Condomínio
+  const condoRef = doc(db, "condos", condoId);
+  const condoSnap = await getDoc(condoRef);
 
-  console.log("Resultado do condomínio:", condoResult);
+  if (!condoSnap.exists()) {
+    console.log("❌ Condomínio não encontrado.");
+    return;
+  }
+
+  const condoData = { docId: condoSnap.id, ...condoSnap.data() };
+  console.log("🏢 Condomínio encontrado:", condoData);
 
   tools.setData({
     path: "sc.C5.currents.condoData",
-    value: condoResult.docs ?? []
+    value: [condoData],
   });
-}
-, 
+
+  console.log("✅ Finalizado com sucesso!");
+}, 
 async (...args) =>
  functions.firebase.where({ args, pass:{
 
