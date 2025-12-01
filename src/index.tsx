@@ -65647,7 +65647,7 @@ async (...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `docId`, 
-        `==`, `$var_sc.C5.currents.lotData.0.condoId`],
+        `==`, `$var_sc.C5.currents.lotData.condoId`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
