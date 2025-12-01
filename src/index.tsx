@@ -13049,8 +13049,7 @@ fontWeight: '700',
  arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [`condos`],
-            arrFuncs: [
-        (arg) => {
+            arrFuncs: [(arg) => {
   console.log("A4 GET CONDOS", arg);
 
   // Se arg não for array, sai fora
@@ -13089,11 +13088,7 @@ fontWeight: '700',
     path: "sc.a7.list", // confira se aqui é "a7" mesmo e não "A7"
     value,
   });
-}, async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a7.list`],
-          value: [`$arg_callback`]
-        }})],
+}],
         }})]
  , trigger: 'on init'
 }})],
