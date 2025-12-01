@@ -6359,8 +6359,8 @@ tools.setData({
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
-    images: getVal("sc.a1.iptChanges.arrImages"),
-    files: getVal("sc.a1.iptChanges.arrDocuments"),
+    arrImages: getVal("sc.a1.iptChanges.arrImages"),
+    arrDocuments: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -13067,8 +13067,8 @@ fontWeight: '700',
     let image = "";
 
     // garante que images seja um array e tenha pelo menos 1 item
-    if (Array.isArray(i.images) && i.images.length > 0) {
-      const first = i.images[0];
+    if (Array.isArray(i.arrImages) && i.arrImages.length > 0) {
+      const first = i.arrImages[0];
 
       if (first && typeof first === "object") {
         // tenta pegar o receiptUrl com fallback
@@ -15138,8 +15138,8 @@ tools.setData({
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
-    images: getVal("sc.a1.iptChanges.arrImages"),
-    files: getVal("sc.a1.iptChanges.arrDocuments"),
+    arrImages: getVal("sc.a1.iptChanges.arrImages"),
+    arrDocuments: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -23919,8 +23919,8 @@ tools.setData({
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
-    images: getVal("sc.a1.iptChanges.arrImages"),
-    files: getVal("sc.a1.iptChanges.arrDocuments"),
+    arrImages: getVal("sc.a1.iptChanges.arrImages"),
+    arrDocuments: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
@@ -32587,8 +32587,8 @@ tools.setData({
     startDate: getVal("sc.a1.iptChanges.startDate"),
     endDate: getVal("sc.a1.iptChanges.endDate"),
     description: getVal("sc.a1.iptChanges.description"),
-    images: getVal("sc.a1.iptChanges.arrImages"),
-    files: getVal("sc.a1.iptChanges.arrDocuments"),
+    arrImages: getVal("sc.a1.iptChanges.arrImages"),
+    arrDocuments: getVal("sc.a1.iptChanges.arrDocuments"),
     createdAt: serverTimestamp(),
   };
 
