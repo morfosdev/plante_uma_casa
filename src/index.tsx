@@ -65605,7 +65605,8 @@ async (...args) =>
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.getDocTool({ args, pass:{
   arrRefStrings: [
         `users`, `$var_all.authUser.docId`],
@@ -65622,7 +65623,22 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 
   tools.setData({ path: "sc.C5.lists.list1", value: arrSteps });
 }],
-        }})]
+        }}), async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`lots`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_all.authUser.lotId`],
+        }})],
+ arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C5.currents.lotData`],
+          value: [`$arg_callback`]
+        }})],
+ }})]
  , trigger: 'on init'
 }})],
 
