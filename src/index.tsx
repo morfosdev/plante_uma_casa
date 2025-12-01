@@ -65627,11 +65627,27 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 async () => {
   console.log("🔍 Iniciando busca de lote e condomínio...");
 
-  // importa Firestore
+  // --- inicializar firebase ----
+  const { initializeApp, getApps } = await import("firebase/app");
   const { getFirestore, doc, getDoc } = await import("firebase/firestore");
+
+  if (getApps().length === 0) {
+    console.log("⚙️ Inicializando Firebase...");
+    initializeApp({
+      apiKey: tools.getEnv("apiKey"),
+      authDomain: tools.getEnv("authDomain"),
+      projectId: tools.getEnv("projectId"),
+      storageBucket: tools.getEnv("storageBucket"),
+      messagingSenderId: tools.getEnv("messagingSenderId"),
+      appId: tools.getEnv("appId"),
+    });
+  } else {
+    console.log("✔ Firebase já estava inicializado.");
+  }
+
   const db = getFirestore();
 
-  // pega o lotId do usuário
+  // --- 1. BUSCA O LOTE ---
   const lotId = tools.getCtData("all.authUser.lotId");
 
   if (!lotId) {
@@ -65641,7 +65657,6 @@ async () => {
 
   console.log("📌 Buscando lote:", lotId);
 
-  // 1️⃣ Buscar Lote
   const lotRef = doc(db, "lots", lotId);
   const lotSnap = await getDoc(lotRef);
 
@@ -65653,13 +65668,12 @@ async () => {
   const lotData = { docId: lotSnap.id, ...lotSnap.data() };
   console.log("📦 Lote encontrado:", lotData);
 
-  // salvar no estado
   tools.setData({
     path: "sc.C5.currents.lotData",
     value: [lotData],
   });
 
-  // pegar condoId
+  // --- 2. BUSCA O CONDOMÍNIO ---
   const condoId = lotData.condoId;
 
   if (!condoId) {
@@ -65669,7 +65683,6 @@ async () => {
 
   console.log("📌 Buscando condomínio:", condoId);
 
-  // 2️⃣ Buscar Condomínio
   const condoRef = doc(db, "condos", condoId);
   const condoSnap = await getDoc(condoRef);
 
