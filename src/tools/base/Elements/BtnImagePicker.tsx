@@ -82,14 +82,6 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     onChange?.(imgs);
   };
 
-  console.log(
-    "%cThumbGrid",
-    "color: orange; font-weight: 700;",
-    "on",
-    currRoute,
-    images
-  );
-
   return (
     <>
       <RN.View style={styles.container}>

@@ -13049,7 +13049,10 @@ fontWeight: '700',
  arrFunctions: [async (...args) =>
         functions.firebase.getDocsTool({ args, pass:{
    arrRefStrings: [`condos`],
-            arrFuncs: [async (...args) =>
+            arrFuncs: [
+        () => {
+	console.log("A4 GET CONDOS", arg);
+}, async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
