@@ -13061,6 +13061,7 @@ fontWeight: '700',
 
   const value = arg.map((i) => {
     // garante que i seja um objeto
+console.log({i});
     if (i && typeof i === "object") {
       const firstImg =
         Array.isArray(i.images) && i.images.length > 0
