@@ -5482,7 +5482,7 @@ fontWeight: '500',
 	borderColor: '#e6e7e8',
 }],
 
-      URIvariablePath:[`$arg_images`],
+      URIvariablePath:[`$arg_image`],
 
       args,
     }}/>],
