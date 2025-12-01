@@ -65641,7 +65641,7 @@ async (...args) =>
         }})],
  }}), 
 ()=> {
-const lot = tools.getData("sc.C5.currents.lotData");
+const lot = tools.getCtData("sc.C5.currents.lotData");
 
 if (Array.isArray(lot)) {
   tools.setData({
