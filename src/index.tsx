@@ -10847,6 +10847,7 @@ fontSize: 12,
 	position: 'absolute',
 	top: 200,
 	color: '$var_sc.A10.validationColor',
+	alignSelf: 'center',
 }`
           ],
 
@@ -19635,6 +19636,7 @@ fontSize: 12,
 	position: 'absolute',
 	top: 200,
 	color: '$var_sc.A10.validationColor',
+	alignSelf: 'center',
 }`
           ],
 
@@ -28425,6 +28427,7 @@ fontSize: 12,
 	position: 'absolute',
 	top: 200,
 	color: '$var_sc.A10.validationColor',
+	alignSelf: 'center',
 }`
           ],
 
@@ -37102,6 +37105,7 @@ fontSize: 12,
 	position: 'absolute',
 	top: 200,
 	color: '$var_sc.A10.validationColor',
+	alignSelf: 'center',
 }`
           ],
 
