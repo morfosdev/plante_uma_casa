@@ -65689,7 +65689,7 @@ async () => {
     path: "sc.C5.currents.condoData",
     value: condoResult.docs ?? []
   });
-};
+}
 , 
 async (...args) =>
  functions.firebase.where({ args, pass:{
