@@ -68080,7 +68080,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Parcela`
+            `Descrição`
           ],
 
           args,
@@ -68100,7 +68100,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_sc.C8.profiles.profileData1.formatedInstallments`
+            `$var_sc.C8.profiles.profileData1.description`
           ],
 
           args,
@@ -68206,62 +68206,6 @@ fontWeight: '700',
 
           children: [
             `$var_sc.C8.profiles.profileData1.date`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ 
-	color: "#121417",
-	borderWidth: 1,
-	borderRadius: 6,
-	borderColor: "#55555591",
-	height: 70,
-	padding: 4,
-	fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.C8.profiles.profileData1.description`
           ],
 
           args,
