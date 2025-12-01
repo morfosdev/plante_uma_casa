@@ -68008,6 +68008,58 @@ fontWeight: '700',
           ],
 
           children: [
+            `Parcela`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	color: "#121417",
+	padding: 4,
+	fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.C8.profiles.profileData1.formatedInstallments`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
             `Valor:`
           ],
 
@@ -68035,18 +68087,6 @@ padding: 4,
           args,
 
         }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -68125,59 +68165,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Responsável`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ 
-	color: "#121417",
-	padding: 4,
-	fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.C6.forms.editChanges.responsible`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição Detalhada`
+            `Descrição`
           ],
 
           args,
@@ -68201,7 +68189,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_sc.C6.forms.editChanges.description`
+            `$var_sc.C8.profiles.profileData1.description`
           ],
 
           args,
