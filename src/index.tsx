@@ -11034,6 +11034,13 @@ tools.functions.setVar({
         value: ["Parcela adicionada com sucesso!"],
       },
     });
+		tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   } catch (err) {
     console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
@@ -11041,14 +11048,6 @@ tools.functions.setVar({
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
-      },
-    });
-
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: [" "],
       },
     });
   }
@@ -19831,6 +19830,13 @@ tools.functions.setVar({
         value: ["Parcela adicionada com sucesso!"],
       },
     });
+		tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   } catch (err) {
     console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
@@ -19838,14 +19844,6 @@ tools.functions.setVar({
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
-      },
-    });
-
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: [" "],
       },
     });
   }
@@ -28630,6 +28628,13 @@ tools.functions.setVar({
         value: ["Parcela adicionada com sucesso!"],
       },
     });
+		tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   } catch (err) {
     console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
@@ -28637,14 +28642,6 @@ tools.functions.setVar({
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
-      },
-    });
-
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: [" "],
       },
     });
   }
@@ -37316,6 +37313,13 @@ tools.functions.setVar({
         value: ["Parcela adicionada com sucesso!"],
       },
     });
+		tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   } catch (err) {
     console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
@@ -37323,14 +37327,6 @@ tools.functions.setVar({
       pass: {
         keyPath: ["sc.A10.feedbackMessage"],
         value: ["Erro ao salvar. Verifique o console."],
-      },
-    });
-
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A10.feedbackMessage"],
-        value: [" "],
       },
     });
   }
