@@ -7494,18 +7494,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrImages",{args, urls});
+	const path = "sc.a1.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
+	tools.setData({ path, value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.a1.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const requiredFields = [
@@ -10039,7 +10046,7 @@ paddingVertical: 8,
  arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.userEmail", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -10123,7 +10130,7 @@ tools.setData({
 // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
-    email: getVal("sc.A7.forms.editChanges.email"),
+    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -10189,8 +10196,7 @@ tools.functions.setVar({
         value: [""],
       },
     });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -10397,10 +10403,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.feedbackMessage`],
+          value: [undefined]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -10843,6 +10854,7 @@ fontSize: 12,
 	position: 'absolute',
 	top: 200,
 	color: '$var_sc.A10.validationColor',
+	alignSelf: 'center',
 }`
           ],
 
@@ -11029,6 +11041,13 @@ tools.functions.setVar({
         value: ["Parcela adicionada com sucesso!"],
       },
     });
+		tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   } catch (err) {
     console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
@@ -11105,10 +11124,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.feedbackMessage`],
+          value: [undefined]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -16273,18 +16297,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrImages",{args, urls});
+	const path = "sc.a1.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
+	tools.setData({ path, value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.a1.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const requiredFields = [
@@ -18818,7 +18849,7 @@ paddingVertical: 8,
  arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.userEmail", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -18902,7 +18933,7 @@ tools.setData({
 // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
-    email: getVal("sc.A7.forms.editChanges.email"),
+    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -18968,8 +18999,7 @@ tools.functions.setVar({
         value: [""],
       },
     });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -19176,10 +19206,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.feedbackMessage`],
+          value: [undefined]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -19622,6 +19657,7 @@ fontSize: 12,
 	position: 'absolute',
 	top: 200,
 	color: '$var_sc.A10.validationColor',
+	alignSelf: 'center',
 }`
           ],
 
@@ -19808,6 +19844,13 @@ tools.functions.setVar({
         value: ["Parcela adicionada com sucesso!"],
       },
     });
+		tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   } catch (err) {
     console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
@@ -19884,10 +19927,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.feedbackMessage`],
+          value: [undefined]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -25054,18 +25102,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrImages",{args, urls});
+	const path = "sc.a1.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
+	tools.setData({ path, value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.a1.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const requiredFields = [
@@ -27599,7 +27654,7 @@ paddingVertical: 8,
  arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.userEmail", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -27683,7 +27738,7 @@ tools.setData({
 // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
-    email: getVal("sc.A7.forms.editChanges.email"),
+    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -27749,8 +27804,7 @@ tools.functions.setVar({
         value: [""],
       },
     });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -27957,10 +28011,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.feedbackMessage`],
+          value: [undefined]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -28403,6 +28462,7 @@ fontSize: 12,
 	position: 'absolute',
 	top: 200,
 	color: '$var_sc.A10.validationColor',
+	alignSelf: 'center',
 }`
           ],
 
@@ -28589,6 +28649,13 @@ tools.functions.setVar({
         value: ["Parcela adicionada com sucesso!"],
       },
     });
+		tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   } catch (err) {
     console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
@@ -28665,10 +28732,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.feedbackMessage`],
+          value: [undefined]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -33722,18 +33794,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrImages",{args, urls});
+	const path = "sc.a1.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
+	tools.setData({ path, value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.a1.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const requiredFields = [
@@ -36267,7 +36346,7 @@ paddingVertical: 8,
  arrFunctions: [async () => {
   const requiredFields = [
     { path: "sc.A7.forms.editChanges.owner", name: "Nome do Proprietário" },
-    { path: "sc.A7.forms.editChanges.email", name: "E-mail" },
+    { path: "sc.A7.forms.editChanges.userEmail", name: "E-mail" },
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
@@ -36351,7 +36430,7 @@ tools.setData({
 // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
-    email: getVal("sc.A7.forms.editChanges.email"),
+    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
 		area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
@@ -36417,8 +36496,7 @@ tools.functions.setVar({
         value: [""],
       },
     });
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -36625,10 +36703,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.feedbackMessage`],
+          value: [undefined]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -37071,6 +37154,7 @@ fontSize: 12,
 	position: 'absolute',
 	top: 200,
 	color: '$var_sc.A10.validationColor',
+	alignSelf: 'center',
 }`
           ],
 
@@ -37257,6 +37341,13 @@ tools.functions.setVar({
         value: ["Parcela adicionada com sucesso!"],
       },
     });
+		tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A10.feedbackMessage"],
+        value: [" "],
+      },
+    });
   } catch (err) {
     console.error("Erro ao salvar no Firebase:", err);
     tools.functions.setVar({
@@ -37333,10 +37424,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.feedbackMessage`],
+          value: [undefined]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -40163,7 +40259,7 @@ fontWeight: '500',
 	borderColor: '#e6e7e8',
 }],
 
-      URIvariablePath:[`$arg_images`],
+      URIvariablePath:[`$arg_image`],
 
       args,
     }}/>],
@@ -43128,18 +43224,26 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -43931,18 +44035,26 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -44112,18 +44224,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	const path = "sc.C8.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -44218,11 +44337,51 @@ tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
         `docId`, 
         `==`, `$var_all.authUser.condoId`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b4.list`],
           value: [`$arg_callback`]
-        }})],
+        }}), (arg) => {
+  console.log("B4 GET CONDOS", arg);
+
+  // Se arg não for arrayinterrompe o processo
+  if (!Array.isArray(arg)) {
+    console.warn("B4 GET CONDOS: arg não é array", arg);
+    return;
+  }
+
+  const value = arg.map((i) => {
+    if (!i || typeof i !== "object") {
+      // item inválido, devolve algo mínimo
+      return { image: "" };
+    }
+
+    let image = "";
+
+    // garante que images seja um array e tenha pelo menos 1 item
+    if (Array.isArray(i.arrImages) && i.arrImages.length > 0) {
+      const first = i.arrImages[0];
+
+      if (first && typeof first === "object") {
+        // tenta pegar o receiptUrl com fallback
+        image = first.receiptUrl ?? "";
+      }
+    }
+
+    return {
+      ...i,
+      // se já existir i.image e você NÃO quiser sobrescrever, use:
+      // image: i.image ?? image,
+      image,
+    };
+  });
+
+  tools.setData({
+    path: "sc.b4.list", // confira se aqui é "b4" mesmo e não "B4"
+    value,
+  });
+}],
  }})]
  , trigger: 'on init'
 }})],
@@ -45150,7 +45309,7 @@ shadowRadius: 4,
           ],
 
           children: [
-            `$arg_email`
+            `$arg_userEmail`
           ],
 
           args,
@@ -48249,18 +48408,26 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -49052,18 +49219,26 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -49233,18 +49408,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	const path = "sc.C8.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -56885,18 +57067,26 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -57688,18 +57878,26 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -57869,18 +58067,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log({args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrImages", value: urls});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	const path = "sc.C8.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -65603,9 +65808,11 @@ async (...args) =>
             args,
         }}/>],
 
-          functions:[async (...args) =>
+          functions:[
+        async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
         functions.firebase.getDocTool({ args, pass:{
   arrRefStrings: [
         `users`, `$var_all.authUser.docId`],
@@ -65622,7 +65829,41 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 
   tools.setData({ path: "sc.C5.lists.list1", value: arrSteps });
 }],
-        }})]
+        }}), async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`lots`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_all.authUser.lotId`],
+        }})],
+ arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C5.currents.lotData`],
+          value: [`$arg_callback`]
+        }})],
+ }})]
+ , trigger: 'on init'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`condos`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_sc.C5.currents.lotData[0].condoId`],
+        }})],
+ arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C5.currents.condoData`],
+          value: [`$arg_callback`]
+        }})],
+ }})]
  , trigger: 'on init'
 }})],
 
@@ -67502,7 +67743,7 @@ fontWeight: '700',
 
           children: [
             
-        `Parcela `, `$arg_formatedInstallments`
+        `Descrição `, `$arg_description`
           ],
 
           args,
@@ -67661,6 +67902,29 @@ async (...args) =>
           keyPath: [`sc.C8.profiles.profileData1`],
           value: [`$arg_item`]
         }}), 
+(arg) => {
+  const item = tools.findFlatItem(arg);
+console.log({arg, item});
+  const installmentId = item.installmentId;
+  const currLoteData = tools.getCtData("sc.C7.currents.currLoteData");
+console.log({currLoteData});
+  const rawReceipts = currLoteData?.receipts;
+  const arrReceipts = Object.values(rawReceipts) ?? [];
+console.log({ arrReceipts });
+  const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
+  const fileName = receipt?.fileName;
+  const receiptUrl = receipt?.receiptUrl;
+
+  const path = "sc.C8.forms.editChanges.arrDocuments";
+console.log({ path });
+  const value = [{
+    fileName,
+    receiptUrl,
+	}];
+console.log({ value });
+
+  tools.setData({ path, value });
+}, 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c8SetComp");
@@ -68008,6 +68272,58 @@ fontWeight: '700',
           ],
 
           children: [
+            `Descrição`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ 
+	color: "#121417",
+	padding: 4,
+	fontSize: 12,
+}`
+          ],
+
+          children: [
+            `$var_sc.C8.profiles.profileData1.description`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
             `Valor:`
           ],
 
@@ -68061,59 +68377,6 @@ fontWeight: '700',
           ],
 
           children: [
-            `Sub. Etapa`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: '#121417',
-fontSize: 12,
-fontWeight: '700',
-padding: 4,
-}`
-          ],
-
-          children: [
-            `$var_sc.C6.forms.editChanges.subStepLabel`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
             `Data`
           ],
 
@@ -68134,115 +68397,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_sc.C6.forms.editChanges.date`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Responsável`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ 
-	color: "#121417",
-	padding: 4,
-	fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.C6.forms.editChanges.responsible`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Descrição Detalhada`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ 
-	color: "#121417",
-	borderWidth: 1,
-	borderRadius: 6,
-	borderColor: "#55555591",
-	height: 70,
-	padding: 4,
-	fontSize: 12,
-}`
-          ],
-
-          children: [
-            `$var_sc.C6.forms.editChanges.description`
+            `$var_sc.C8.profiles.profileData1.date`
           ],
 
           args,
@@ -68300,9 +68455,12 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.C8.forms.editChanges.arrDocuments",{args, urls});
+	const path = "sc.C8.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.C8.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =

@@ -3,7 +3,8 @@
 import * as ImagePicker from "expo-image-picker";
 import React from "react";
 import * as RN from "react-native";
-import { useRoutes } from "../../..";
+import { useData, useRoutes } from "../../..";
+import { pathSel, setData } from "../project";
 
 type Tprops = {
   pass: {
@@ -26,13 +27,53 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
+  const currForm = useData((ct: any) => pathSel(ct, "all.toggles.forms"));
+  const currRoute = useRoutes.getState().currRoute;
+  const condScA4 = currRoute === "a4list";
+
+  const objPaths: Record<string, string> = {
+    a4list: "sc.a1.editChanges.arrImages",
+    b7list: "sc.B9.forms.editChanges.arrImages",
+  };
+
+  let imagesPath = currRoute && objPaths[currRoute];
+  if (currForm === "a1Add") imagesPath = "sc.a1.iptChanges.arrImages";
+  console.log({ objPaths, imagesPath, currRoute });
+
+  const editData = useData((ct: any) => {
+    if (!imagesPath) return undefined;
+    return pathSel(ct, imagesPath);
+  });
+
   // UI: previews
   const [images, setImages] = React.useState<string[]>(variable);
   // Upload: Files reais
   const [files, setFiles] = React.useState<File[]>([]);
 
-  const currRoute = useRoutes.getState().currRoute;
-  const condRoute = currRoute === "a4list";
+  // Ao iniciar componente, se existir editData, inicializa `images`
+  React.useEffect(() => {
+    if (!Array.isArray(editData) || !editData.length) return;
+
+    // Normaliza editData -> array de URLs
+    const urls = editData
+      .map((item: any) => {
+        if (!item) return "";
+        if (typeof item === "string") return item;
+
+        if (typeof item === "object") {
+          // ajuste aqui se seu campo tiver outro nome
+          return item.receiptUrl || item.url || item.uri || "";
+        }
+
+        return "";
+      })
+      .filter((u: string) => !!u);
+
+    if (!urls.length) return;
+
+    setImages(urls);
+    onChange?.(urls);
+  }, [editData, max, onChange]);
 
   // Dispara callbacks sempre que os FILES mudam
   React.useEffect(() => {
@@ -59,8 +100,16 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
       ? [...files, ...newFiles].slice(0, max)
       : [...files, ...newFiles];
 
-    if (condRoute) setImages(newPreviews);
-    if (!condRoute) setImages(nextPreviews);
+    if (condScA4) {
+      setImages(newPreviews);
+      // Aqui não precisa guardar no editChanges (feito no upload)
+      // setData({ path: imagesPath, value: newPreviews });
+    }
+    if (!condScA4) {
+      setImages(nextPreviews);
+      // Aqui não precisa guardar no editChanges (feito no upload)
+      // setData({ path: imagesPath, value: nextPreviews });
+    }
 
     setFiles(nextFiles);
     onChange?.(nextPreviews);
@@ -76,7 +125,10 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     fls.splice(idx, 1);
 
     if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
-
+    if (imagesPath && Array.isArray(editData)) {
+      const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
+      setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
+    }
     setImages(imgs);
     setFiles(fls);
     onChange?.(imgs);
@@ -99,7 +151,7 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
         ref={inputRef}
         type="file"
         accept="image/*"
-        multiple={condRoute ? false : true}
+        multiple={condScA4 ? false : true}
         style={{ display: "none" }}
         onChange={handleWebFile}
       />
@@ -276,3 +328,4 @@ const thumb = RN.StyleSheet.create({
   },
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
 });
+

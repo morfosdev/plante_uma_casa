@@ -3,6 +3,8 @@
 import * as DocumentPicker from "expo-document-picker";
 import React from "react";
 import * as RN from "react-native";
+import { useData, useRoutes } from "../../..";
+import { pathSel, setData } from "../project";
 
 type Tprops = {
   pass: {
@@ -25,11 +27,68 @@ const BtnWeb = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
+  const currForm = useData((ct: any) => pathSel(ct, "all.toggles.forms"));
+  const currRoute = useRoutes.getState().currRoute;
+
+  const objPaths: Record<string, string> = {
+    a4list: "sc.a1.editChanges.arrDocuments",
+    b7list: "sc.B9.forms.editChanges.arrDocuments",
+    c8SetComp: "sc.C8.forms.editChanges.arrDocuments",
+  };
+
+  let imagesPath = currRoute && objPaths[currRoute];
+  if (currForm === "a1Add") imagesPath = "sc.a1.iptChanges.arrDocuments";
+  console.log({ objPaths, imagesPath, currRoute });
+
+  const editData = useData((ct: any) => {
+    if (!imagesPath) return undefined;
+    return pathSel(ct, imagesPath);
+  });
+
   // UI
   const [docUris, setDocUris] = React.useState<string[]>(variable);
   const [docNames, setDocNames] = React.useState<string[]>([]);
   // Upload: Files reais
   const [files, setFiles] = React.useState<File[]>([]);
+
+  // Ao iniciar componente, se existir editData, inicializa `images`
+  // Ao iniciar componente, se existir editData, inicializa URIs + nomes
+  React.useEffect(() => {
+    if (!Array.isArray(editData) || !editData.length) return;
+
+    type DocInfo = { url: string; name: string };
+
+    const docs: DocInfo[] = editData
+      .map((item: any): DocInfo | null => {
+        if (!item) return null;
+
+        // caso seja string simples => só URL
+        if (typeof item === "string") {
+          return { url: item, name: "" };
+        }
+
+        if (typeof item === "object") {
+          const url = item.receiptUrl || item.url || item.uri || ""; // ajuste se tiver outro campo
+
+          const name = item.fileName || item.name || ""; // ajuste se o nome vier em outra key
+
+          if (!url) return null;
+          return { url, name };
+        }
+
+        return null;
+      })
+      .filter((d): d is DocInfo => !!d && !!d.url);
+
+    if (!docs.length) return;
+
+    const uris = docs.map((d) => d.url);
+    const names = docs.map((d) => d.name);
+
+    setDocUris(uris);
+    setDocNames(names);
+    onChange?.(uris);
+  }, [editData, onChange]);
 
   // Dispara callbacks sempre que os FILES mudam
   React.useEffect(() => {
@@ -82,6 +141,11 @@ const BtnWeb = ({ pass }: Tprops) => {
 
     if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
 
+    console.log({ uris });
+    if (imagesPath && Array.isArray(editData)) {
+      const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
+      setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
+    }
     setDocUris(uris);
     setFiles(fls);
     setDocNames(nms);
@@ -123,6 +187,21 @@ const BtnWeb = ({ pass }: Tprops) => {
 /* --------------- NATIVO --------------- */
 const BtnNat = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
+  const currRoute = useRoutes.getState().currRoute;
+
+  const objPaths: Record<string, string> = {
+    a4list: "sc.a1.editChanges.arrDocuments",
+    b7list: "sc.B9.forms.editChanges.arrDocuments",
+    c8SetComp: "sc.C8.forms.editChanges.arrDocuments",
+  };
+
+  let imagesPath = currRoute && objPaths[currRoute];
+  console.log({ objPaths, imagesPath, currRoute });
+
+  const editData = useData((ct: any) => {
+    if (!imagesPath) return undefined;
+    return pathSel(ct, imagesPath);
+  });
 
   // UI: URIs e nomes
   const [docUris, setDocUris] = React.useState<string[]>(variable);
@@ -131,6 +210,44 @@ const BtnNat = ({ pass }: Tprops) => {
   const [assets, setAssets] = React.useState<
     Array<{ uri: string; name?: string; mimeType?: string; size?: number }>
   >([]);
+
+  // Ao iniciar componente, se existir editData, inicializa URIs + nomes
+  React.useEffect(() => {
+    if (!Array.isArray(editData) || !editData.length) return;
+
+    type DocInfo = { url: string; name: string };
+
+    const docs: DocInfo[] = editData
+      .map((item: any): DocInfo | null => {
+        if (!item) return null;
+
+        // caso seja string simples => só URL
+        if (typeof item === "string") {
+          return { url: item, name: "" };
+        }
+
+        if (typeof item === "object") {
+          const url = item.receiptUrl || item.url || item.uri || ""; // ajuste se tiver outro campo
+
+          const name = item.fileName || item.name || ""; // ajuste se o nome vier em outra key
+
+          if (!url) return null;
+          return { url, name };
+        }
+
+        return null;
+      })
+      .filter((d): d is DocInfo => !!d && !!d.url);
+
+    if (!docs.length) return;
+
+    const uris = docs.map((d) => d.url);
+    const names = docs.map((d) => d.name);
+
+    setDocUris(uris);
+    setDocNames(names);
+    onChange?.(uris);
+  }, [editData, onChange]);
 
   // Dispara callbacks sempre que os ASSETS mudam
   React.useEffect(() => {
@@ -189,6 +306,11 @@ const BtnNat = ({ pass }: Tprops) => {
     uris.splice(idx, 1);
     ats.splice(idx, 1);
     nms.splice(idx, 1);
+
+    if (imagesPath && Array.isArray(editData)) {
+      const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
+      setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
+    }
 
     setDocUris(uris);
     setAssets(ats);
