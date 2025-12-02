@@ -67902,6 +67902,24 @@ async (...args) =>
           keyPath: [`sc.C8.profiles.profileData1`],
           value: [`$arg_item`]
         }}), 
+() => {
+  const item = tools.findFlatItem(args);
+  const installmentId = item.installmentId;
+  const currLoteData = tools.getCtData("sc.C7.currents.currLoteData");
+  const rawReceipts = currLoteData?.receipts;
+  const arrReceipts = Object.values(rawReceipts) ?? [];
+  const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
+  const fileName = receipt?.fileName;
+  const receiptUrl = receipt?.receiptUrl;
+
+  const path = "sc.C8.forms.editChanges.arrDocuments";
+  const value = {
+    fileName,
+    receiptUrl,
+  };
+
+  tools.setData({ path, value });
+}, 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("c8SetComp");
