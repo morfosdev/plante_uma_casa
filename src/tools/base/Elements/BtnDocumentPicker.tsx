@@ -122,17 +122,18 @@ const BtnWeb = ({ pass }: Tprops) => {
     if (condSc) {
       console.log("condSc true", {newUris, newFiles, newNames, nextUris, fl});
       setFiles(newUris);
+      setDocUris(newUris);
       // Aqui não precisa guardar no editChanges (feito no upload)
       // setData({ path: imagesPath, value: newPreviews });
     }
     if (!condSc) {
       console.log("condSc false");
       setFiles(nextFiles);
+      setDocUris(nextUris);
       // Aqui não precisa guardar no editChanges (feito no upload)
       // setData({ path: imagesPath, value: nextPreviews });
     }
 
-    setDocUris(nextUris);
     setFiles(nextFiles);
     setDocNames(nextNames);
     onChange?.(nextUris);
@@ -452,4 +453,3 @@ const thumb = RN.StyleSheet.create({
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
   xTxt2: { fontSize: 14, lineHeight: 16 },
 });
-
