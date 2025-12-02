@@ -67904,6 +67904,7 @@ async (...args) =>
         }}), 
 () => {
   const item = tools.findFlatItem(args);
+console.log({item});
   const installmentId = item.installmentId;
   const currLoteData = tools.getCtData("sc.C7.currents.currLoteData");
   const rawReceipts = currLoteData?.receipts;
