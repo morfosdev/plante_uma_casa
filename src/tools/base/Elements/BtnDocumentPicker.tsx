@@ -63,17 +63,14 @@ const BtnWeb = ({ pass }: Tprops) => {
       .map((item: any): DocInfo | null => {
         if (!item) return null;
 
-        // caso seja string simples => só URL
-        if (typeof item === "string") {
-          return { url: item, name: "" };
-        }
-
         if (typeof item === "object") {
-          const url = item.receiptUrl || item.url || item.uri || ""; // ajuste se tiver outro campo
+          const url = item.receiptUrl || ""; // ajuste se tiver outro campo
 
-          const name = item.fileName || item.name || ""; // ajuste se o nome vier em outra key
+          const name = item.fileName || ""; // ajuste se o nome vier em outra key
 
           if (!url) return null;
+          if (!name) return null;
+
           return { url, name };
         }
 
@@ -123,7 +120,7 @@ const BtnWeb = ({ pass }: Tprops) => {
       : [...docNames, ...newNames];
 
     if (condSc) {
-      setFiles(newFiles);
+      setFiles(newUris);
       // Aqui não precisa guardar no editChanges (feito no upload)
       // setData({ path: imagesPath, value: newPreviews });
     }
@@ -453,3 +450,4 @@ const thumb = RN.StyleSheet.create({
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
   xTxt2: { fontSize: 14, lineHeight: 16 },
 });
+
