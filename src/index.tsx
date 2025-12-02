@@ -7494,18 +7494,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrImages",{args, urls});
+	const path = "sc.a1.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
+	tools.setData({ path, value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.a1.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const requiredFields = [
@@ -16290,18 +16297,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrImages",{args, urls});
+	const path = "sc.a1.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
+	tools.setData({ path, value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.a1.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const requiredFields = [
@@ -25088,18 +25102,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrImages",{args, urls});
+	const path = "sc.a1.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
+	tools.setData({ path, value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.a1.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const requiredFields = [
@@ -33773,18 +33794,25 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrImages",{args, urls});
+	const path = "sc.a1.editChanges.arrImages";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrImages", value: urls});
+	tools.setData({ path, value });
 }],
  }}), 
 async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.a1.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.a1.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.a1.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const requiredFields = [
