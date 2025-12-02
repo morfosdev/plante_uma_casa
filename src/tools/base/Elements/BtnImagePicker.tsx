@@ -37,9 +37,9 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
   };
 
   let imagesPath = currRoute && objPaths[currRoute];
-  if(currForm === 'a1Add') imagesPath = "sc.a1.iptChanges.arrImages";
+  if (currForm === "a1Add") imagesPath = "sc.a1.iptChanges.arrImages";
   console.log({ objPaths, imagesPath, currRoute });
-  
+
   const editData = useData((ct: any) => {
     if (!imagesPath) return undefined;
     return pathSel(ct, imagesPath);
@@ -103,7 +103,7 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     if (condScA4) {
       setImages(newPreviews);
       // Aqui não precisa guardar no editChanges (feito no upload)
-      // setData({ path: imagesPath, value: newPreviews }); 
+      // setData({ path: imagesPath, value: newPreviews });
     }
     if (!condScA4) {
       setImages(nextPreviews);
@@ -125,9 +125,10 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     fls.splice(idx, 1);
 
     if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
-
-    const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
-    setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
+    if (imagesPath && Array.isArray(editData)) {
+      const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
+      setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
+    }
     setImages(imgs);
     setFiles(fls);
     onChange?.(imgs);
@@ -327,3 +328,4 @@ const thumb = RN.StyleSheet.create({
   },
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
 });
+
