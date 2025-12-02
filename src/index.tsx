@@ -44239,7 +44239,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	const path = "sc.C8.forms.editChanges.arrDocuments";
 	const oldUrls = tools.getCtData(path) ?? [];
-    const value = [...urls];
+    const value = urls;
     console.log({args, urls, oldUrls, value});
 
 	tools.setData({ path, value });
@@ -49423,7 +49423,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	const path = "sc.C8.forms.editChanges.arrDocuments";
 	const oldUrls = tools.getCtData(path) ?? [];
-    const value = [...urls];
+    const value = urls;
     console.log({args, urls, oldUrls, value});
 
 	tools.setData({ path, value });
@@ -58082,7 +58082,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	const path = "sc.C8.forms.editChanges.arrDocuments";
 	const oldUrls = tools.getCtData(path) ?? [];
-    const value = [...urls];
+    const value = urls;
     console.log({args, urls, oldUrls, value});
 
 	tools.setData({ path, value });
@@ -68457,7 +68457,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	const path = "sc.C8.forms.editChanges.arrDocuments";
 	const oldUrls = tools.getCtData(path) ?? [];
-    const value = [...urls];
+    const value = urls;
     console.log({args, urls, oldUrls, value});
 
 	tools.setData({ path, value });
