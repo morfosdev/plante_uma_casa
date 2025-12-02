@@ -3,7 +3,8 @@
 import * as ImagePicker from "expo-image-picker";
 import React from "react";
 import * as RN from "react-native";
-import { useRoutes } from "../../..";
+import { useData, useRoutes } from "../../..";
+import { pathSel } from "../project";
 
 type Tprops = {
   pass: {
@@ -24,16 +25,53 @@ export const BtnImagePicker = (props: Tprops) => {
 /* ---------------- WEB ---------------- */
 const BtnImgPicWeb = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
-console.log({variable});
   const inputRef = React.useRef<HTMLInputElement | null>(null);
+
+  const currRoute = useRoutes.getState().currRoute;
+  const condScA4 = currRoute === "a4list";
+
+  const objPaths: Record<string, string> = {
+    a4list: "sc.a1.editChanges.arrImages",
+    b7list: "sc.B9.forms.editChanges.arrImages",
+  };
+
+  const imagesPath = currRoute && objPaths[currRoute];
+  const editData = useData((ct: any) => {
+    if (!imagesPath) return [];
+    return pathSel(ct, imagesPath);
+  });
 
   // UI: previews
   const [images, setImages] = React.useState<string[]>(variable);
   // Upload: Files reais
   const [files, setFiles] = React.useState<File[]>([]);
 
-  const currRoute = useRoutes.getState().currRoute;
-  const condRoute = currRoute === "a4list";
+  // Ao iniciar componente, se existir editData, inicializa `images`
+  React.useEffect(() => {
+    if (!Array.isArray(editData) || !editData.length) return;
+
+    // Normaliza editData -> array de URLs
+    const urls = editData
+      .map((item: any) => {
+        if (!item) return "";
+        if (typeof item === "string") return item;
+
+        if (typeof item === "object") {
+          // ajuste aqui se seu campo tiver outro nome
+          return (
+            item.receiptUrl || item.url || item.uri || ""
+          );
+        }
+
+        return "";
+      })
+      .filter((u: string) => !!u);
+
+    if (!urls.length) return;
+
+    setImages(urls);
+    onChange?.(urls);
+  }, [editData, max, onChange]);
 
   // Dispara callbacks sempre que os FILES mudam
   React.useEffect(() => {
@@ -60,8 +98,8 @@ console.log({variable});
       ? [...files, ...newFiles].slice(0, max)
       : [...files, ...newFiles];
 
-    if (condRoute) setImages(newPreviews);
-    if (!condRoute) setImages(nextPreviews);
+    if (condScA4) setImages(newPreviews);
+    if (!condScA4) setImages(nextPreviews);
 
     setFiles(nextFiles);
     onChange?.(nextPreviews);
@@ -100,7 +138,7 @@ console.log({variable});
         ref={inputRef}
         type="file"
         accept="image/*"
-        multiple={condRoute ? false : true}
+        multiple={condScA4 ? false : true}
         style={{ display: "none" }}
         onChange={handleWebFile}
       />
