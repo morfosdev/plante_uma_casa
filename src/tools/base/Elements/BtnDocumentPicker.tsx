@@ -120,7 +120,7 @@ const BtnWeb = ({ pass }: Tprops) => {
       : [...docNames, ...newNames];
 
     if (condSc) {
-      console.log("condSc true");
+      console.log("condSc true", {newUris, newFiles, newNames, nextUris, fl});
       setFiles(newUris);
       // Aqui não precisa guardar no editChanges (feito no upload)
       // setData({ path: imagesPath, value: newPreviews });
