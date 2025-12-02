@@ -99,11 +99,13 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
 
     if (condScA4) {
       setImages(newPreviews);
-      setData({ path: imagesPath, value: newPreviews });
+      // Aqui não precisa guardar no editChanges (feito no upload)
+      // setData({ path: imagesPath, value: newPreviews }); 
     }
     if (!condScA4) {
       setImages(nextPreviews);
-      setData({ path: imagesPath, value: nextPreviews });
+      // Aqui não precisa guardar no editChanges (feito no upload)
+      // setData({ path: imagesPath, value: nextPreviews });
     }
 
     setFiles(nextFiles);
@@ -121,6 +123,7 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
 
     if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
 
+    setData({ path: imagesPath, value: imgs }); // remove também do editChanges
     setImages(imgs);
     setFiles(fls);
     onChange?.(imgs);
