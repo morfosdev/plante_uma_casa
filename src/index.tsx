@@ -43209,9 +43209,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -44016,9 +44020,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -48382,9 +48390,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -49189,9 +49201,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -57030,9 +57046,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
@@ -57837,9 +57857,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.documents`],
  arrFuncs: [(args, urls) => {
-console.log("sc.B9.forms.editChanges.arrDocuments",{args, urls});
+	
+	const path = "sc.B9.forms.editChanges.arrDocuments";
+	const oldUrls = tools.getCtData(path) ?? [];
+    const value = [...oldUrls, ...urls];
+    console.log({args, urls, oldUrls, value});
 
-tools.setData({path: "sc.B9.forms.editChanges.arrDocuments", value: urls});
+	tools.setData({ path, value });
 }],
  }}), async () => {
   const css1 =
