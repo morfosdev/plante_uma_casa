@@ -67903,7 +67903,7 @@ async (...args) =>
           value: [`$arg_item`]
         }}), 
 (arg) => {
-  const item = tools.findFlatItem(args);
+  const item = tools.findFlatItem(arg);
 console.log({arg, item});
   const installmentId = item.installmentId;
   const currLoteData = tools.getCtData("sc.C7.currents.currLoteData");
