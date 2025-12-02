@@ -67907,17 +67907,21 @@ async (...args) =>
 console.log({arg, item});
   const installmentId = item.installmentId;
   const currLoteData = tools.getCtData("sc.C7.currents.currLoteData");
+console.log({currLoteData});
   const rawReceipts = currLoteData?.receipts;
   const arrReceipts = Object.values(rawReceipts) ?? [];
+console.log({ arrReceipts });
   const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
   const fileName = receipt?.fileName;
   const receiptUrl = receipt?.receiptUrl;
 
   const path = "sc.C8.forms.editChanges.arrDocuments";
+console.log({ path });
   const value = {
     fileName,
     receiptUrl,
   };
+console.log({ value });
 
   tools.setData({ path, value });
 }, 
