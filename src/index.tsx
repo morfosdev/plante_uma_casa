@@ -43196,14 +43196,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
@@ -44004,14 +44003,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
@@ -44190,14 +44188,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
@@ -48372,14 +48369,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
@@ -49180,14 +49176,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
@@ -49366,14 +49361,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
@@ -57023,14 +57017,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
@@ -57831,14 +57824,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
@@ -58017,14 +58009,13 @@ async (...args) =>
  functions.firebase.uploadFileTool({ args, pass:{
  arrFiles: [`$var_all.temp.images`],
  arrFuncs: [(args, urls) => {
-	console.log({args, urls});
+	
 	const path = "sc.B9.forms.editChanges.arrImages";
 	const oldUrls = tools.getCtData(path) ?? [];
+const value = [...oldUrls, ...urls];
+console.log({args, urls, oldUrls, value});
 
-	tools.setData({
-		path,
-		value: [...oldUrls, ...urls]
-	});
+	tools.setData({ path,value });
 }],
  }}), 
 async (...args) =>
