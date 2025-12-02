@@ -4,7 +4,7 @@ import * as ImagePicker from "expo-image-picker";
 import React from "react";
 import * as RN from "react-native";
 import { useData, useRoutes } from "../../..";
-import { pathSel } from "../project";
+import { pathSel, setData } from "../project";
 
 type Tprops = {
   pass: {
@@ -97,8 +97,14 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
       ? [...files, ...newFiles].slice(0, max)
       : [...files, ...newFiles];
 
-    if (condScA4) setImages(newPreviews);
-    if (!condScA4) setImages(nextPreviews);
+    if (condScA4) {
+      setImages(newPreviews);
+      setData({ path: imagesPath, value: newPreviews });
+    }
+    if (!condScA4) {
+      setImages(nextPreviews);
+      setData({ path: imagesPath, value: nextPreviews });
+    }
 
     setFiles(nextFiles);
     onChange?.(nextPreviews);
