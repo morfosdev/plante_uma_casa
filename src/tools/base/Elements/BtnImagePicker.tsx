@@ -38,7 +38,7 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
   const imagesPath = currRoute && objPaths[currRoute];
   console.log({ objPaths, imagesPath, currRoute });
   const editData = useData((ct: any) => {
-    if (!imagesPath) return [];
+    if (!imagesPath) return undefined;
     return pathSel(ct, imagesPath);
   });
 
