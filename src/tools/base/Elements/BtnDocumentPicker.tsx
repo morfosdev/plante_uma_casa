@@ -134,7 +134,6 @@ const BtnWeb = ({ pass }: Tprops) => {
       // setData({ path: imagesPath, value: nextPreviews });
     }
 
-    setFiles(nextFiles);
     setDocNames(nextNames);
     onChange?.(nextUris);
 
