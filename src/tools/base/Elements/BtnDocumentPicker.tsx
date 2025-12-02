@@ -137,7 +137,7 @@ const BtnWeb = ({ pass }: Tprops) => {
     nms.splice(idx, 1);
 
     if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
-
+    console.log({ uris });
     setData({ path: imagesPath, value: uris }); // remove também do editChanges
     setDocUris(uris);
     setFiles(fls);
