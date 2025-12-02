@@ -67917,10 +67917,10 @@ console.log({ arrReceipts });
 
   const path = "sc.C8.forms.editChanges.arrDocuments";
 console.log({ path });
-  const value = {
+  const value = [{
     fileName,
     receiptUrl,
-  };
+	}];
 console.log({ value });
 
   tools.setData({ path, value });
