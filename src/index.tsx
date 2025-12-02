@@ -67902,9 +67902,9 @@ async (...args) =>
           keyPath: [`sc.C8.profiles.profileData1`],
           value: [`$arg_item`]
         }}), 
-() => {
+(arg) => {
   const item = tools.findFlatItem(args);
-console.log({item});
+console.log({arg, item});
   const installmentId = item.installmentId;
   const currLoteData = tools.getCtData("sc.C7.currents.currLoteData");
   const rawReceipts = currLoteData?.receipts;
