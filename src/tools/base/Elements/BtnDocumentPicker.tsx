@@ -27,8 +27,8 @@ const BtnWeb = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
+  const currForm = useData((ct: any) => pathSel(ct, "all.toggles.forms"));
   const currRoute = useRoutes.getState().currRoute;
-  const currForm = useData((ct) => pathSel(ct, "all.toggles.forms"));
 
   const objPaths: Record<string, string> = {
     a4list: "sc.a1.editChanges.arrDocuments",
@@ -36,7 +36,7 @@ const BtnWeb = ({ pass }: Tprops) => {
   };
 
   let imagesPath = currRoute && objPaths[currRoute];
-  if(currForm === 'a1Add') imagesPath = "sc.a1.iptChanges.arrDocuments";
+  if (currForm === "a1Add") imagesPath = "sc.a1.iptChanges.arrDocuments";
   console.log({ objPaths, imagesPath, currRoute });
 
   const editData = useData((ct: any) => {
@@ -141,9 +141,10 @@ const BtnWeb = ({ pass }: Tprops) => {
     if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
 
     console.log({ uris });
-    const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
-    setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
-
+    if (imagesPath && Array.isArray(editData)) {
+      const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
+      setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
+    }
     setDocUris(uris);
     setFiles(fls);
     setDocNames(nms);
