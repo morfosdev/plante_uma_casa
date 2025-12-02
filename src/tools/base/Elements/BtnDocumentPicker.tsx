@@ -143,8 +143,16 @@ const BtnWeb = ({ pass }: Tprops) => {
 
     console.log({ uris });
     if (imagesPath && Array.isArray(editData)) {
-      const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
-      setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
+      const nextEdit = editData.filter((_item: any, i: number) => {
+        console.log({ _item, i, idx });
+
+        return i !== idx;
+      });
+      const objEdit = { path: imagesPath, value: nextEdit };
+
+      console.log({ objEdit });
+
+      setData(objEdit); // remove também do editChanges
     }
     setDocUris(uris);
     setFiles(fls);
@@ -433,3 +441,4 @@ const thumb = RN.StyleSheet.create({
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
   xTxt2: { fontSize: 14, lineHeight: 16 },
 });
+
