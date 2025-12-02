@@ -24,6 +24,7 @@ export const BtnImagePicker = (props: Tprops) => {
 /* ---------------- WEB ---------------- */
 const BtnImgPicWeb = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
+console.log({variable});
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
   // UI: previews
