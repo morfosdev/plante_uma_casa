@@ -120,7 +120,7 @@ const BtnWeb = ({ pass }: Tprops) => {
       : [...docNames, ...newNames];
 
     if (condSc) {
-      console.log("condSc true", {newUris, newFiles, newNames, nextUris, fl});
+      console.log("condSc true", {newUris, newFiles, newNames, nextUris, fl, nextNames});
       setFiles(newUris);
       setDocUris(newUris);
       // Aqui não precisa guardar no editChanges (feito no upload)
@@ -453,3 +453,4 @@ const thumb = RN.StyleSheet.create({
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
   xTxt2: { fontSize: 14, lineHeight: 16 },
 });
+
