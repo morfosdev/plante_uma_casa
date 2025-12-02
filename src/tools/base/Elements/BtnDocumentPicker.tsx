@@ -29,6 +29,7 @@ const BtnWeb = ({ pass }: Tprops) => {
 
   const currForm = useData((ct: any) => pathSel(ct, "all.toggles.forms"));
   const currRoute = useRoutes.getState().currRoute;
+  const condSc = currRoute === "c8SetComp";
 
   const objPaths: Record<string, string> = {
     a4list: "sc.a1.editChanges.arrDocuments",
@@ -121,6 +122,17 @@ const BtnWeb = ({ pass }: Tprops) => {
       ? [...docNames, ...newNames].slice(0, max)
       : [...docNames, ...newNames];
 
+    if (condSc) {
+      setFiles(newFiles);
+      // Aqui não precisa guardar no editChanges (feito no upload)
+      // setData({ path: imagesPath, value: newPreviews });
+    }
+    if (!condSc) {
+      setFiles(nextFiles);
+      // Aqui não precisa guardar no editChanges (feito no upload)
+      // setData({ path: imagesPath, value: nextPreviews });
+    }
+
     setDocUris(nextUris);
     setFiles(nextFiles);
     setDocNames(nextNames);
@@ -184,7 +196,7 @@ const BtnWeb = ({ pass }: Tprops) => {
         type="file"
         // Somente documentos
         accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain"
-        multiple
+        multiple={condSc ? false : true}
         style={{ display: "none" }}
         onChange={handleWebFile}
       />
@@ -441,4 +453,3 @@ const thumb = RN.StyleSheet.create({
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
   xTxt2: { fontSize: 14, lineHeight: 16 },
 });
-
