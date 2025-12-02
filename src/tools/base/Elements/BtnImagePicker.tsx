@@ -123,7 +123,8 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
 
     if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
 
-    setData({ path: imagesPath, value: imgs }); // remove também do editChanges
+    const nextEdit = editData.filter((_item: any, i: number) => i !== idx);
+    setData({ path: imagesPath, value: nextEdit }); // remove também do editChanges
     setImages(imgs);
     setFiles(fls);
     onChange?.(imgs);
@@ -323,3 +324,4 @@ const thumb = RN.StyleSheet.create({
   },
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
 });
+
