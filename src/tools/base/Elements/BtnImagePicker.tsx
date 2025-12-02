@@ -36,6 +36,7 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
   };
 
   const imagesPath = currRoute && objPaths[currRoute];
+  console.log({ objPaths, imagesPath, currRoute });
   const editData = useData((ct: any) => {
     if (!imagesPath) return [];
     return pathSel(ct, imagesPath);
@@ -58,9 +59,7 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
 
         if (typeof item === "object") {
           // ajuste aqui se seu campo tiver outro nome
-          return (
-            item.receiptUrl || item.url || item.uri || ""
-          );
+          return item.receiptUrl || item.url || item.uri || "";
         }
 
         return "";
