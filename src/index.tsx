@@ -43198,7 +43198,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
@@ -44006,7 +44006,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
@@ -44192,7 +44192,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
@@ -48374,7 +48374,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
@@ -49182,7 +49182,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
@@ -49368,7 +49368,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
@@ -57025,7 +57025,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
@@ -57833,7 +57833,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
@@ -58019,7 +58019,7 @@ async (...args) =>
  arrFuncs: [(args, urls) => {
 	console.log({args, urls});
 	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = getCtData(path) ?? [];
+	const oldUrls = tools.getCtData(path) ?? [];
 
 	tools.setData({
 		path,
