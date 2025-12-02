@@ -27,6 +27,7 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
   const { variable = [], onChange, max, arrFuncs, args } = pass || {};
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
+  const currForm = useData((ct: any) => pathSel(ct, "all.toggles.forms"));
   const currRoute = useRoutes.getState().currRoute;
   const condScA4 = currRoute === "a4list";
 
@@ -35,8 +36,10 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     b7list: "sc.B9.forms.editChanges.arrImages",
   };
 
-  const imagesPath = currRoute && objPaths[currRoute];
+  let imagesPath = currRoute && objPaths[currRoute];
+  if(currForm === 'a1Add') imagesPath = "sc.a1.iptChanges.arrImages";
   console.log({ objPaths, imagesPath, currRoute });
+  
   const editData = useData((ct: any) => {
     if (!imagesPath) return undefined;
     return pathSel(ct, imagesPath);
@@ -324,4 +327,3 @@ const thumb = RN.StyleSheet.create({
   },
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
 });
-
