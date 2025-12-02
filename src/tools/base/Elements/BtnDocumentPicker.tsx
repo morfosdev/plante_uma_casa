@@ -4,7 +4,7 @@ import * as DocumentPicker from "expo-document-picker";
 import React from "react";
 import * as RN from "react-native";
 import { useData, useRoutes } from "../../..";
-import { pathSel } from "../project";
+import { pathSel, setData } from "../project";
 
 type Tprops = {
   pass: {
@@ -138,6 +138,7 @@ const BtnWeb = ({ pass }: Tprops) => {
 
     if (rm?.startsWith("blob:")) URL.revokeObjectURL(rm);
 
+    setData({ path: imagesPath, value: uris }); // remove também do editChanges
     setDocUris(uris);
     setFiles(fls);
     setDocNames(nms);
