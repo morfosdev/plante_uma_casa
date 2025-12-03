@@ -66413,11 +66413,7 @@ fontWeight: '700',
         (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             `{
- numColumns: 2,
-	columnWrapperStyle: {
-		    justifyContent: "space-between",
-    marginBottom: 16
-	}
+ numColumns: 2
 }`
           ],
 
