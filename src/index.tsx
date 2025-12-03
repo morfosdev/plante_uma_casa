@@ -66423,15 +66423,13 @@ fontWeight: '700',
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
 
-      styles:[
-              {
-                height: "50px",
-                width: "80px",
-                backgroundColor: "#FDFDFD",
-                borderWidth: 2,
-                borderColor: "#EEE"
-              }
-              ],
+      styles:[{ 
+	height: 65,
+	width: 95,
+	borderRadius: 8,
+	borderWidth: 2,
+	borderColor: '#fff',
+}],
 
       URIvariablePath:[`$arg_receiptUrl`],
 
@@ -66439,13 +66437,11 @@ fontWeight: '700',
     }}/>
           ],
 
-      styles:[
- {
- backgroundColor: 'white', 
-  minHeight: 22,
- width: "100%",
- }
-],    args,
+      styles:[`{
+	flexWrap: "wrap",
+	flexDirection: "row",
+	gap: 10
+}`],    args,
         }}/>, 
         
 
