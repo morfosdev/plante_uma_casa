@@ -62128,7 +62128,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_sc.C5.currents.lotData[0].lot`
+            `$var_sc.C5.currents.lotData.lot`
           ],
 
           args,
@@ -62147,7 +62147,7 @@ fontWeight: '400',
           ],
 
           children: [
-            `$var_sc.C5.currents.lotData[0].area`
+            `$var_sc.C5.currents.lotData.area`
           ],
 
           args,
@@ -65845,7 +65845,15 @@ async (...args) =>
         `docId`, 
         `==`, `$var_all.authUser.lotId`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ (args) => {
+	console.log("WHERE 99",{args});
+	
+	const path = "sc.C5.currents.lotData";
+	const value = args[0];
+
+	tools.setData({path, value});
+}, async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.C5.currents.lotData`],
           value: [`$arg_callback`]
