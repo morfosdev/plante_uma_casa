@@ -62128,7 +62128,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `$var_sc.C5.currents.lotData.lot`
+            `$var_sc.C5.currents.lotData[0].lot`
           ],
 
           args,
@@ -62147,7 +62147,7 @@ fontWeight: '400',
           ],
 
           children: [
-            `$var_sc.C5.currents.lotData.area`
+            `$var_sc.C5.currents.lotData[0].area`
           ],
 
           args,
