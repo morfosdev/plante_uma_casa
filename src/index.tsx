@@ -62341,7 +62341,7 @@ paddingHorizontal: 10,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const css3 =
-    "color: limegreen; background-color: purple; font-size: 10px; padding: 2px 6px; border-radius: 3px";
+    "color: yellow; background-color: purple; font-size: 10px; padding: 2px 6px; border-radius: 3px";
 
 	const data = useData(ct => ct?.sc?.C5?.currents?.condoData);
 
@@ -65852,6 +65852,8 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
     "color: green; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px";
   const css2 =
     "color: yellow; background-color: green; font-size: 10px; padding: 2px 6px; border-radius: 3px";
+  const css3 =
+    "color: limegreen; background-color: purple; font-size: 10px; padding: 2px 6px; border-radius: 3px";
 
   // set Lot CtData
   const path = "sc.C5.currents.lotData";
@@ -65879,11 +65881,10 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 
     const firstDoc = arrDocs[0] || null;
 
-    tools.setData({ path: "sc.C5.currents.condoData", value: firstDoc });
     console.log("%cWhere Cond", css1, { arrConds: "docId == " + docId });
     console.log("%cWhere Cond", css1, { newArrStringRefs: "lots" });
     console.log("%cWhere Docs Found (Real-Time)", css2, { arrDocs });
-
+    
     let currImage = null;
     if (firstDoc) {
       const arrImages = firstDoc.arrImages || [];
@@ -65893,11 +65894,13 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
     // set Condo CtData
     const path2 = "sc.C5.currents.condoData";
     const value2 = {
-      ...firstDoc,
-      currImage,
+        ...firstDoc,
+        currImage,
     };
-
+    
     tools.setData({ path: path2, value: value2 });
+
+    console.log("%csetData sc.C5.currents.condoData", css3, tools.getCtData(path2));
   });
 }],
  }})]
