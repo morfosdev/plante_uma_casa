@@ -66431,7 +66431,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: 95,
+	width: "50%",
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
@@ -66443,10 +66443,7 @@ fontWeight: '700',
     }}/>
           ],
 
-      styles:[`{
-	flexWrap: "wrap",
-	gap: 10
-}`],    args,
+      styles:[``],    args,
         }}/>, 
         
 
@@ -66467,7 +66464,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: 95,
+	width: "50%",
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
@@ -66484,7 +66481,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: 95,
+	width: "50%",
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
@@ -66501,7 +66498,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: 95,
+	width: "50%",
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
@@ -66517,7 +66514,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: 95,
+	width: "50%",
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
