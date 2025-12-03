@@ -66415,7 +66415,7 @@ fontWeight: '700',
             {}
           ],
 
-          pData: `$var_sc.C6.forms.editChanges.arrImages`,
+          pData: `sc.C6.forms.editChanges.arrImages`,
 
           itemElements: [
             
