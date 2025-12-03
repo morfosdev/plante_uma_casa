@@ -8442,7 +8442,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Obra`
+            `Lote`
           ],
 
           args,
@@ -17245,7 +17245,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Obra`
+            `Lote`
           ],
 
           args,
@@ -26050,7 +26050,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Obra`
+            `Lote`
           ],
 
           args,
@@ -34742,7 +34742,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Obra`
+            `Lote`
           ],
 
           args,
