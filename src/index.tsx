@@ -66509,18 +66509,28 @@ fontWeight: '700',
             {}
           ],
 
-          pData: `$var_sc.C6.forms.editChanges.description`,
+          pData: `$var_sc.C6.forms.editChanges.arrImages`,
 
           itemElements: [
             
-              (...args) => {
-                return (
-                  <RN.Text>
-                    Adicione os campos que quer mostrar aqui.
-                  </RN.Text>
-                );
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
               }
-              
+              ],
+
+      URIvariablePath:[`$arg_receiptUrl`],
+
+      args,
+    }}/>
           ],
 
       styles:[
