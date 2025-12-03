@@ -62610,9 +62610,18 @@ async (...args) =>
     value: selectStep?.description ?? "",
   });
 
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrImages",
+    value: selectStep?.arrImages ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrDocuments",
+    value: selectStep?.arrDocuments ?? "",
+  });
+
   tools.goTo("c6stepProfile");
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -63115,9 +63124,18 @@ async (...args) =>
     value: selectStep?.description ?? "",
   });
 
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrImages",
+    value: selectStep?.arrImages ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrDocuments",
+    value: selectStep?.arrDocuments ?? "",
+  });
+
   tools.goTo("c6stepProfile");
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -63620,9 +63638,18 @@ async (...args) =>
     value: selectStep?.description ?? "",
   });
 
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrImages",
+    value: selectStep?.arrImages ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrDocuments",
+    value: selectStep?.arrDocuments ?? "",
+  });
+
   tools.goTo("c6stepProfile");
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -64125,9 +64152,18 @@ async (...args) =>
     value: selectStep?.description ?? "",
   });
 
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrImages",
+    value: selectStep?.arrImages ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrDocuments",
+    value: selectStep?.arrDocuments ?? "",
+  });
+
   tools.goTo("c6stepProfile");
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -64630,9 +64666,18 @@ async (...args) =>
     value: selectStep?.description ?? "",
   });
 
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrImages",
+    value: selectStep?.arrImages ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrDocuments",
+    value: selectStep?.arrDocuments ?? "",
+  });
+
   tools.goTo("c6stepProfile");
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -65135,9 +65180,18 @@ async (...args) =>
     value: selectStep?.description ?? "",
   });
 
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrImages",
+    value: selectStep?.arrImages ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrDocuments",
+    value: selectStep?.arrDocuments ?? "",
+  });
+
   tools.goTo("c6stepProfile");
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -65639,9 +65693,18 @@ async (...args) =>
     value: selectStep?.description ?? "",
   });
 
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrImages",
+    value: selectStep?.arrImages ?? "",
+  });
+
+  tools.setData({
+    path: "sc.C6.forms.editChanges.arrDocuments",
+    value: selectStep?.arrDocuments ?? "",
+  });
+
   tools.goTo("c6stepProfile");
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         
@@ -66430,6 +66493,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -66440,7 +66504,33 @@ fontWeight: '700',
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `$var_sc.C6.forms.editChanges.description`,
+
+          itemElements: [
+            
+              (...args) => {
+                return (
+                  <RN.Text>
+                    Adicione os campos que quer mostrar aqui.
+                  </RN.Text>
+                );
+              }
+              
+          ],
+
+      styles:[
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
+        }}/>],
 
             args,
           }}/>
