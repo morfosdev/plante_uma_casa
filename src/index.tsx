@@ -66416,15 +66416,9 @@ fontWeight: '700',
   arrItems: [() => {
   const arrImages =
     useData((ct) => ct.sc?.C6?.forms?.editChanges?.arrImages) ?? [];
-  console.log("arrImages:", arrImages);
 
   const { width } = RN.useWindowDimensions();
-  console.log("width:", width);
   const isSmall = width < 700;
-  const itemWidth = isSmall
-    ? "100%" // 1 coluna
-    : "50%"; // 2 colunas
-  console.log("width:", width, "itemWidth:", itemWidth);
 
   const styles = RN.StyleSheet.create({
     container: {
@@ -66432,16 +66426,16 @@ fontWeight: '700',
       flexWrap: "wrap",
       justifyContent: "space-between",
       padding: 16,
-      rowGap: 16,
+      // rowGap: 16, // <- RN ignora isso
     },
     img: {
-      width: itemWidth,
+      width: isSmall ? "100%" : "48%", // deixa 4% livre pro espaço
       height: 120,
       borderRadius: 16,
+      marginBottom: 16, // <- gap vertical
     },
   });
 
-  console.log("width:", width, "itemWidth:", itemWidth, "styles:", styles);
   return (
     <RN.ScrollView contentContainerStyle={styles.container}>
       {arrImages.map((item, idx) => (
