@@ -66450,6 +66450,7 @@ fontWeight: '700',
 }] 
 }}/>
 , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -66460,7 +66461,47 @@ fontWeight: '700',
 
             args,
           }}/>
-        ],
+        , 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const arrDocuments =
+    useData((ct) => ct.sc?.C6?.forms?.editChanges?.arrDocuments) ?? [];
+
+  // const { width } = RN.useWindowDimensions();
+  // const isSmall = width < 200;
+
+  const styles = RN.StyleSheet.create({
+    container: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+      padding: 16,
+      // rowGap: 16, // <- RN ignora isso
+    },
+    doc: {
+      width: "100%",
+      height: 35,
+      borderRadius: 8,
+      marginBottom: 10
+    },
+  });
+
+  return (
+    <RN.ScrollView contentContainerStyle={styles.container}>
+      {arrDocuments.map((item, idx) => (
+        <RN.View
+          key={idx}
+          style={styles.doc}
+        >
+          <RN.Text>{item.fileName}</RN.Text>
+        </RN.View>
+      ))}
+    </RN.ScrollView>
+  );
+}] 
+}}/>
+],
 
             args,
           }}/>
