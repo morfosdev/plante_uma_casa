@@ -66410,6 +66410,59 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        (...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: `$var_sc.C6.forms.editChanges.arrImages`,
+
+          itemElements: [
+            
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>, 
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
+              }
+              ],
+
+      URIvariablePath:[`$arg_receiptUrl`],
+
+      args,
+    }}/>
+          ],
+
+      styles:[
+ {
+ backgroundColor: 'white', 
+  minHeight: 22,
+ width: "100%",
+ }
+],    args,
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -66493,7 +66546,6 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -66504,59 +66556,7 @@ fontWeight: '700',
 
             args,
           }}/>
-        , (...args:any) => <Elements.FlatList2 pass={{
-          elementProperties: [
-            {}
-          ],
-
-          pData: `$var_sc.C6.forms.editChanges.arrImages`,
-
-          itemElements: [
-            
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, 
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[
-              {
-                height: "50px",
-                width: "80px",
-                backgroundColor: "#FDFDFD",
-                borderWidth: 2,
-                borderColor: "#EEE"
-              }
-              ],
-
-      URIvariablePath:[`$arg_receiptUrl`],
-
-      args,
-    }}/>
-          ],
-
-      styles:[
- {
- backgroundColor: 'white', 
-  minHeight: 22,
- width: "100%",
- }
-],    args,
-        }}/>],
+        ],
 
             args,
           }}/>
