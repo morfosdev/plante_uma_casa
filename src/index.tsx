@@ -66422,8 +66422,8 @@ fontWeight: '700',
   console.log("width:", width);
   const isSmall = width < 700;
   const itemWidth = isSmall
-    ? width - 48 // 1 coluna
-    : (width - 48) / 2; // 2 colunas
+    ? "100%" // 1 coluna
+    : "50%"; // 2 colunas
   console.log("width:", width, "itemWidth:", itemWidth);
 
   const styles = RN.StyleSheet.create({
