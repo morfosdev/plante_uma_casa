@@ -66483,7 +66483,9 @@ fontWeight: '700',
       width: "100%",
       height: 35,
       borderRadius: 8,
-      marginBottom: 10
+      marginBottom: 10,
+      borderWidth: 1,
+      borderColor: "#ccc"
     },
   });
 
