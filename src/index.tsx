@@ -65834,8 +65834,7 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 
   tools.setData({ path: "sc.C5.lists.list1", value: arrSteps });
 }],
-        }}), 
-async (...args) =>
+        }}), async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`lots`],
@@ -65845,29 +65844,59 @@ async (...args) =>
         `docId`, 
         `==`, `$var_all.authUser.lotId`],
         }})],
- arrFuncs: [(args) => {
-	console.log("WHERE 99",{args});
-	
-	const path = "sc.C5.currents.lotData";
-	const value = args[0];
+ arrFuncs: [async (args) => {
+  const css1 =
+    "color: green; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+  const css2 =
+    "color: yellow; background-color: green; font-size: 10px; padding: 2px 6px; border-radius: 3px";
 
-	tools.setData({path, value});
+  // set Lot CtData
+  const path = "sc.C5.currents.lotData";
+  const value = args[0];
+  tools.setData({ path, value });
+
+  // Init Firebase
+  const { getFirestore, query, where, collection, onSnapshot } = await import(
+    "firebase/firestore"
+  );
+  const fbInit = tools.getCtData("all.temp.fireInit");
+  const db = getFirestore(fbInit);
+
+  // GET Condo Coll Firestore
+  const docId = value?.docId;
+  const usersRef = collection(db, "condos");
+  const q = query(usersRef, where("docId", "==", docId));
+
+  // ---------- onSnapshot
+  onSnapshot(q, (snapshot) => {
+    const arrDocs: any[] = [];
+    snapshot.forEach((doc) => {
+      arrDocs.push(doc.data());
+    });
+
+    const firstDoc = arrDocs[0] || null;
+
+    tools.setData({ path: "sc.C5.currents.condoData", value: firstDoc });
+    console.log("%cWhere Cond", css1, { arrConds });
+    console.log("%cWhere Cond", css1, { newArrStringRefs });
+    console.log("%cWhere Docs Found (Real-Time)", css2, { arrDocs });
+
+    let currImage = null;
+    if (firstDoc) {
+      const arrImages = firstDoc.arrImages || [];
+      currImage = arrImages[0] || null;
+    }
+
+    // set Condo CtData
+    const path2 = "sc.C5.currents.condoData";
+    const value2 = {
+      ...firstDoc,
+      currImage,
+    };
+
+    tools.setData({ path: path2, value: value2 });
+  });
 }],
- }}), async (...args) =>
- functions.firebase.where({ args, pass:{
-
-  arrRefStrings: [`condos`],
- arrWhere: [(...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        `docId`, 
-        `==`, `$var_sc.C5.currents.lotData.condoId`],
-        }})],
- arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C5.currents.condoData`],
-          value: [`$arg_callback`]
-        }})],
  }})]
  , trigger: 'on init'
 }})],
