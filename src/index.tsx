@@ -65868,27 +65868,23 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
   const db = getFirestore(fbInit);
 
   // GET Condo Coll Firestore
-  const docId = value?.docId;
+  const condoId = value?.condoId;
   const usersRef = collection(db, "condos");
-  const q = query(usersRef, where("docId", "==", docId));
+  const q = query(usersRef, where("condoId", "==", condoId));
 
   // ---------- onSnapshot
   onSnapshot(q, (snapshot) => {
     const arrDocs: any[] = [];
-    console.log("%cSnapshot recebido", css2, { snapshot, dd: snapshot.docs });
     snapshot.forEach((doc) => {
-      console.log("%cDoc recebido", css2, { doc });
       arrDocs.push(doc.data());
     });
-    
-    console.log("%cDocs recebido", css2, { arrDocs });
 
     const firstDoc = arrDocs[0] || null;
 
-    console.log("%cWhere Cond", css1, { arrConds: "docId == " + docId });
+    console.log("%cWhere Cond", css1, { arrConds: "condoId == " + condoId });
     console.log("%cWhere Cond", css1, { newArrStringRefs: "condos" });
     console.log("%cWhere Docs Found (Real-Time)", css2, { arrDocs });
-
+    
     let currImage = null;
     if (firstDoc) {
       const arrImages = firstDoc.arrImages || [];
@@ -65898,17 +65894,13 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
     // set Condo CtData
     const path2 = "sc.C5.currents.condoData";
     const value2 = {
-      ...firstDoc,
-      currImage,
+        ...firstDoc,
+        currImage,
     };
-
+    
     tools.setData({ path: path2, value: value2 });
 
-    console.log(
-      "%csetData sc.C5.currents.condoData",
-      css3,
-      tools.getCtData(path2)
-    );
+    console.log("%csetData sc.C5.currents.condoData", css3, tools.getCtData(path2));
   });
 }],
  }})]
