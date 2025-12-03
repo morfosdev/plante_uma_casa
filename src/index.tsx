@@ -65875,7 +65875,7 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
   // ---------- onSnapshot
   onSnapshot(q, (snapshot) => {
     const arrDocs: any[] = [];
-    console.log("%cSnapshot recebido", css2, { snapshot, dd: snapshot.docs, ss: snapshot.data() });
+    console.log("%cSnapshot recebido", css2, { snapshot, dd: snapshot.docs });
     snapshot.forEach((doc) => {
       console.log("%cDoc recebido", css2, { doc });
       arrDocs.push(doc.data());
@@ -65910,8 +65910,7 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
       tools.getCtData(path2)
     );
   });
-}
-],
+}],
  }})]
  , trigger: 'on init'
 }})],
