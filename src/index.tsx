@@ -66485,18 +66485,21 @@ fontWeight: '700',
       borderRadius: 8,
       marginBottom: 10,
       borderWidth: 1,
-      borderColor: "#ccc"
+      borderColor: "#ccc",
+      alignItems: "center",
+      padding: 8,
+    },
+    txt: {
+      fontSize: 14,
+      color: "#ccc",
     },
   });
 
   return (
     <RN.ScrollView contentContainerStyle={styles.container}>
       {arrDocuments.map((item, idx) => (
-        <RN.View
-          key={idx}
-          style={styles.doc}
-        >
-          <RN.Text>{item.fileName}</RN.Text>
+        <RN.View key={idx} style={styles.doc}>
+          <RN.Text style={styles.txt}>{item.fileName}</RN.Text>
         </RN.View>
       ))}
     </RN.ScrollView>
