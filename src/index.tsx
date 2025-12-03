@@ -65870,7 +65870,7 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
   // GET Condo Coll Firestore
   const condoId = value?.condoId;
   const usersRef = collection(db, "condos");
-  const q = query(usersRef, where("condoId", "==", condoId));
+  const q = query(usersRef, where("docId", "==", condoId));
 
   // ---------- onSnapshot
   onSnapshot(q, (snapshot) => {
@@ -65881,7 +65881,7 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 
     const firstDoc = arrDocs[0] || null;
 
-    console.log("%cWhere Cond", css1, { arrConds: "condoId == " + condoId });
+    console.log("%cWhere Cond", css1, { arrConds: "docId == " + condoId });
     console.log("%cWhere Cond", css1, { newArrStringRefs: "condos" });
     console.log("%cWhere Docs Found (Real-Time)", css2, { arrDocs });
     
