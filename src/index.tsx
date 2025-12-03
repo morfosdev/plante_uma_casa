@@ -62128,7 +62128,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Alphaville PE1`
+            `$var_sc.C5.currents.lotData.lot`
           ],
 
           args,
@@ -62147,7 +62147,7 @@ fontWeight: '400',
           ],
 
           children: [
-            `Lote AC 19, Área 450m²`
+            `$var_sc.C5.currents.lotData.area`
           ],
 
           args,
