@@ -66439,13 +66439,10 @@ fontWeight: '700',
     }}/>
           ],
 
-      styles:[
- {
- backgroundColor: 'white', 
-  minHeight: 22,
- width: "100%",
- }
-],    args,
+      styles:[`{
+	flexWrap: "wrap",
+	gap: 20
+}`],    args,
         }}/>, 
         
 
