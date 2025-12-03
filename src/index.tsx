@@ -62340,13 +62340,6 @@ paddingHorizontal: 10,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  const css3 =
-    "color: yellow; background-color: purple; font-size: 10px; padding: 2px 6px; border-radius: 3px";
-
-	const data = useData(ct => ct?.sc?.C5?.currents?.condoData);
-
-console.log("%csetData sc.C5.currents.condoData", css3, data);
-
 	return <RN.Text>Element Default</RN.Text>
 }] 
 }}/>
