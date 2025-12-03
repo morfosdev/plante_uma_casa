@@ -65845,19 +65845,14 @@ async (...args) =>
         `docId`, 
         `==`, `$var_all.authUser.lotId`],
         }})],
- arrFuncs: [
- (args) => {
+ arrFuncs: [(args) => {
 	console.log("WHERE 99",{args});
 	
 	const path = "sc.C5.currents.lotData";
 	const value = args[0];
 
 	tools.setData({path, value});
-}, async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.C5.currents.lotData`],
-          value: [`$arg_callback`]
-        }})],
+}],
  }}), async (...args) =>
  functions.firebase.where({ args, pass:{
 
@@ -65866,7 +65861,7 @@ async (...args) =>
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `docId`, 
-        `==`, `$var_sc.C5.currents.lotData[0].condoId`],
+        `==`, `$var_sc.C5.currents.lotData.condoId`],
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
