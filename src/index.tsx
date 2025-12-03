@@ -65808,8 +65808,7 @@ async (...args) =>
             args,
         }}/>],
 
-          functions:[
-        async (...args) =>
+          functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 async (...args) =>
@@ -65829,7 +65828,8 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
 
   tools.setData({ path: "sc.C5.lists.list1", value: arrSteps });
 }],
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`lots`],
@@ -65844,11 +65844,7 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
           keyPath: [`sc.C5.currents.lotData`],
           value: [`$arg_callback`]
         }})],
- }})]
- , trigger: 'on init'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ }}), async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`condos`],
