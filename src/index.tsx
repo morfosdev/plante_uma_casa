@@ -66431,7 +66431,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: "50%",
+	width: 95,
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
@@ -66464,7 +66464,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: "50%",
+	width: 95,
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
@@ -66481,7 +66481,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: "50%",
+	width: 95,
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
@@ -66498,7 +66498,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: "50%",
+	width: 95,
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
@@ -66514,7 +66514,7 @@ fontWeight: '700',
 
       styles:[{ 
 	height: 65,
-	width: "50%",
+	width: 95,
 	borderRadius: 8,
 	borderWidth: 2,
 	borderColor: '#fff',
