@@ -66452,17 +66452,6 @@ fontWeight: '700',
 , 
         
 
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const arrDocuments =
@@ -66477,7 +66466,6 @@ fontWeight: '700',
       flexWrap: "wrap",
       justifyContent: "space-between",
       padding: 16,
-      // rowGap: 16, // <- RN ignora isso
     },
     doc: {
       width: "100%",
@@ -66490,8 +66478,8 @@ fontWeight: '700',
       padding: 8,
     },
     txt: {
-      fontSize: 14,
-      color: "#ccc",
+      fontSize: 12,
+      color: "#666",
     },
   });
 
@@ -66506,7 +66494,18 @@ fontWeight: '700',
   );
 }] 
 }}/>
-],
+, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
