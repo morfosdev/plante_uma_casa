@@ -66430,9 +66430,9 @@ fontWeight: '700',
     },
     img: {
       width: isSmall ? "100%" : "48%", // deixa 4% livre pro espaço
-      height: 120,
-      borderRadius: 16,
-      marginBottom: 16, // <- gap vertical
+      height: 55,
+      borderRadius: 8,
+      marginBottom: 10, // <- gap vertical
     },
   });
 
