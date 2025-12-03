@@ -62336,14 +62336,6 @@ paddingHorizontal: 10,
             args,
           }}/>
         , 
-        
-
- (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
-	return <RN.Text>Element Default</RN.Text>
-}] 
-}}/>
-, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
