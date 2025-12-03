@@ -66527,6 +66527,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -66537,7 +66538,49 @@ fontWeight: '700',
 
             args,
           }}/>
-        ],
+        , 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const arrImages =
+    useData((ct) => ct.sc?.C6?.forms?.editChanges?.arrImages) ?? [];
+  console.log("arrImages:", arrImages);
+
+  const { width } = RN.useWindowDimensions();
+  console.log("width:", width);
+  const itemWidth = (width - 48) / 2;
+  console.log("width:", width, "itemWidth:", itemWidth);
+
+  const styles = RN.StyleSheet.create({
+    container: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+      padding: 16,
+      rowGap: 16,
+    },
+    img: {
+      width: itemWidth,
+      height: 120,
+      borderRadius: 16,
+    },
+  });
+
+  console.log("width:", width, "itemWidth:", itemWidth, "styles:", styles);
+  return (
+    <RN.ScrollView contentContainerStyle={styles.container}>
+      {arrImages.map((item, idx) => (
+        <RN.Image
+          key={idx}
+          source={{ uri: item.receiptUrl }}
+          style={styles.img}
+        />
+      ))}
+    </RN.ScrollView>
+  );
+}] 
+}}/>
+],
 
             args,
           }}/>
