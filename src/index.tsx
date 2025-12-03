@@ -62340,7 +62340,10 @@ paddingHorizontal: 10,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-console.log("$var_sc.C5.currents", tools.getCtData("sc.C5.currents"));
+	const data = useData(ct => ct.sc.C5.currents);
+
+console.log("$var_sc.C5.currents", data);
+
 	return <RN.Text>Element Default</RN.Text>
 }] 
 }}/>
