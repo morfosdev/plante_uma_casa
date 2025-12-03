@@ -62340,7 +62340,7 @@ paddingHorizontal: 10,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-	const data = useData(ct => ct.sc.C5.currents);
+	const data = useData(ct => ct?.sc?.C5?.currents);
 
 console.log("$var_sc.C5.currents", data);
 
