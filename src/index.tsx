@@ -66410,135 +66410,7 @@ fontWeight: '700',
             args,
           }}/>
         , 
-        (...args:any) => <Elements.FlatList2 pass={{
-          elementProperties: [
-            `{
- numColumns: 2
-}`
-          ],
-
-          pData: `sc.C6.forms.editChanges.arrImages`,
-
-          itemElements: [
-            
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{ 
-	height: 65,
-	width: 95,
-	borderRadius: 8,
-	borderWidth: 2,
-	borderColor: '#fff'
-}],
-
-      URIvariablePath:[`$arg_receiptUrl`],
-
-      args,
-    }}/>
-          ],
-
-      styles:[`{
-	flexWrap: "wrap",
-	gap: 20
-}`],    args,
-        }}/>, 
         
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	flexDirection: 'row',
-	flexWrap: 'wrap',
-	justifyContent: 'center',
-}`],
-
-            functions:[()=>{}],            childrenItems:[
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{ 
-	height: 65,
-	width: 95,
-	borderRadius: 8,
-	borderWidth: 2,
-	borderColor: '#fff'
-}],
-
-      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-
-      args,
-    }}/>, 
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{ 
-	height: 65,
-	width: 95,
-	borderRadius: 8,
-	borderWidth: 2,
-	borderColor: '#fff'
-}],
-
-      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-
-      args,
-    }}/>, 
-        
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{ 
-	height: 65,
-	width: 95,
-	borderRadius: 8,
-	borderWidth: 2,
-	borderColor: '#fff'
-}],
-
-      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-
-      args,
-    }}/>, 
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[{ 
-	height: 65,
-	width: 95,
-	borderRadius: 8,
-	borderWidth: 2,
-	borderColor: '#fff'
-}],
-
-      URIvariablePath:["https://images.unsplash.com/photo-1488831861984-179da3647265?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
@@ -66580,7 +66452,18 @@ fontWeight: '700',
   );
 }] 
 }}/>
-],
+, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
