@@ -66418,7 +66418,7 @@ fontWeight: '700',
     useData((ct) => ct.sc?.C6?.forms?.editChanges?.arrImages) ?? [];
 
   const { width } = RN.useWindowDimensions();
-  const isSmall = width < 700;
+  const isSmall = width < 400;
 
   const styles = RN.StyleSheet.create({
     container: {
