@@ -65877,8 +65877,8 @@ if(Object.values(objSteps) === 0){ 		console.warn("Erro ao carregar objSteps. Ob
     const firstDoc = arrDocs[0] || null;
 
     tools.setData({ path: "sc.C5.currents.condoData", value: firstDoc });
-    console.log("%cWhere Cond", css1, { arrConds });
-    console.log("%cWhere Cond", css1, { newArrStringRefs });
+    console.log("%cWhere Cond", css1, { arrConds: "docId == " + docId });
+    console.log("%cWhere Cond", css1, { newArrStringRefs: "lots" });
     console.log("%cWhere Docs Found (Real-Time)", css2, { arrDocs });
 
     let currImage = null;
