@@ -66412,7 +66412,13 @@ fontWeight: '700',
         , 
         (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{
+ numColumns: 2,
+	columnWrapperStyle: {
+		    justifyContent: "space-between",
+    marginBottom: 16
+	}
+}`
           ],
 
           pData: `sc.C6.forms.editChanges.arrImages`,
@@ -66439,7 +66445,6 @@ fontWeight: '700',
 
       styles:[`{
 	flexWrap: "wrap",
-	flexDirection: "row",
 	gap: 10
 }`],    args,
         }}/>, 
