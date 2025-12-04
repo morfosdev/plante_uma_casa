@@ -58947,7 +58947,9 @@ placeholder: 'Ex: (00) 00000-0000',
   try {
     if (typeof txt !== "string") txt = String(txt ?? "");
 
+    // ───────────────────────────────
     // Mantém apenas números (sem regex)
+    // ───────────────────────────────
     let clean = "";
     for (let i = 0; i < txt.length; i++) {
       const ch = txt[i];
@@ -58956,18 +58958,31 @@ placeholder: 'Ex: (00) 00000-0000',
       }
     }
 
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
+    // Limita a 11 dígitos (telefone BR)
+    if (clean.length > 11) clean = clean.slice(0, 11);
 
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
+    // ───────────────────────────────
+    // Montagem da máscara de telefone
+    // ───────────────────────────────
     let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+    const len = clean.length;
 
-    console.log({ masked });
+    if (len > 0) masked = "(" + clean.slice(0, 2);   // "(" + D1 D2
+    if (len >= 3) masked += ") " + clean.slice(2, 7); // ) + espaço + até 5 dígitos seguintes
+    if (len >= 8) {
+      // separa parte inicial + hífen
+      const firstPart = clean.length === 11
+        ? clean.slice(2, 7)     // 5 dígitos (celular)
+        : clean.slice(2, 6);    // 4 dígitos (fixo)
+
+      const lastPart = clean.slice(firstPart.length + 2);
+
+      masked = "(" + clean.slice(0, 2) + ") " + firstPart;
+
+      if (lastPart.length > 0) masked += "-" + lastPart;
+    }
+
+    console.log({ clean, masked });
 
     tools.functions.setVar({
       args: "",
@@ -58976,8 +58991,9 @@ placeholder: 'Ex: (00) 00000-0000',
         value: [String(masked)],
       },
     });
+
   } catch (e) {
-    console.error("Erro na máscara de data:", e);
+    console.error("Erro na máscara de telefone:", e);
     return txt;
   }
 }],
