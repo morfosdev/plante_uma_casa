@@ -59411,13 +59411,7 @@ color: '#555555',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c5steps");
-        }
-        , async () => {
+ arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
     { path: "sc.C2.forms.iptsChanges.userName", name: "Nome Completo" },
