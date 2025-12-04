@@ -58443,6 +58443,7 @@ color: '#fff',
           }}/>
         , (...args:any) => <Elements.Login pass={{
  configs: [`{
+	txtLabel: "Google",
 	btnStyle: {
 		backgroundColor: "#315E2D", 
 		borderRadius: 9, 
