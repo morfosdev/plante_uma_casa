@@ -58454,6 +58454,7 @@ color: '#fff',
 	},
 	txtStyle: {
 		color: "white",
+		fontWeight: "bold",
 		fontSize: 12
 	}
 }`], arrFuncs: [(user, args) => {
