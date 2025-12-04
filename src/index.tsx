@@ -58469,6 +58469,10 @@ color: '#555555',
 console.log("cond fullreg",{path, value});
 	tools.setData({path,value});
 
+	const path2 = "all.toggles.checkboxGender";
+
+	tools.setData({path: path2, value: true});
+
 	// ---- set Cond Redirect
 	const fullRegister = value.fullRegister;
 
