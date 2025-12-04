@@ -58745,11 +58745,11 @@ color: '#555555',
 	fontSize: 11,
 }`],
 
-          path: [`all.authUser.userName`],
+          path: [`sc.C2.forms.iptsChanges.userName`],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.authUser.userName`],
+          keyPath: [`sc.C2.forms.iptsChanges.userName`],
           value: [`$arg_callback`]
         }})],
 
