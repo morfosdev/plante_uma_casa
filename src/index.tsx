@@ -9836,15 +9836,20 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+	placeholder: "Escreva...",
+	editable: false
 }`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
+}`, `{
+	backgroundColor: "#efefef",
+	color: "#aaa"
 }`],
 
           path: [`sc.A7.forms.editChanges.userEmail`],
@@ -18639,15 +18644,20 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+	placeholder: "Escreva...",
+	editable: false
 }`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
+}`, `{
+	backgroundColor: "#efefef",
+	color: "#aaa"
 }`],
 
           path: [`sc.A7.forms.editChanges.userEmail`],
@@ -27444,15 +27454,20 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+	placeholder: "Escreva...",
+	editable: false
 }`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
+}`, `{
+	backgroundColor: "#efefef",
+	color: "#aaa"
 }`],
 
           path: [`sc.A7.forms.editChanges.userEmail`],
@@ -36136,15 +36151,20 @@ fontWeight: '700',
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: "Escreva...",
+	placeholder: "Escreva...",
+	editable: false
 }`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
+}`, `{
+	backgroundColor: "#efefef",
+	color: "#aaa"
 }`],
 
           path: [`sc.A7.forms.editChanges.userEmail`],
