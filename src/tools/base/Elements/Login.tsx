@@ -135,7 +135,7 @@ const LoginWeb = (props: any) => {
       const provider = new GoogleAuthProvider();
       provider.setCustomParameters({ prompt: "select_account" });
 
-      // Pop-up (recomendado). Se o navegador bloquear, cai para redirect.
+      // Pop-up (recomendado). Se o navegador bloquear, cai para redirect. 1
       let result;
       try {
         result = await signInWithPopup(auth, provider);
