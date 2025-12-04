@@ -68379,7 +68379,7 @@ fontWeight: '400',
   finalArray = finalArray.sort((a, b) => {
     const da = parseBRDate(a?.date);
     const db = parseBRDate(b?.date);
-    return da - db;
+    return db - da;
   });
 
   console.log("Array Final (ordenado):", finalArray);
