@@ -58460,34 +58460,33 @@ color: '#555555',
 		fontSize: 12
 	}
 }`], arrFuncs: [(user, args) => {
-	console.log("Flax Custom Auth",{user, args});
+  console.log("Flax Custom Auth", { user, args });
 
-	const path = "all.authUser";
-	const value = {...user};
-	delete value.updateAt;
+  const path = "all.authUser";
+  const value = { ...user };
+  delete value.updateAt;
 
+  console.log("cond fullreg", { path, value });
+  tools.setData({ path, value });
 
-console.log("cond fullreg",{path, value});
-	tools.setData({path,value});
+  const path2 = "all.toggles.checkboxGender";
 
-	const path2 = "all.toggles.checkboxGender";
+  tools.setData({ path: path2, value: true });
 
-	tools.setData({path: path2, value: true});
+  const path3 = "sc.C2.forms.iptsChanges.userName";
+  tools.setData({ path: path3, value: value?.userName ?? "" });
 
-	const path3 = "sc.C2.forms.iptsChanges.userName";
-	tools.setData({path: path3, value: value?.userName ?? ""});
+  // ---- set Cond Redirect
+  const fullRegister = value.fullRegister;
 
-	// ---- set Cond Redirect
-	const fullRegister = value.fullRegister;
+  console.log({ fullRegister });
 
-console.log({fillRegister});
-
-	if(fullRegister){
-		tools.goTo('c5steps');
-	}
-	if(!fullRegister){
-		tools.goTo('c2register');
-	}
+  if (fullRegister) {
+    tools.goTo("c5steps");
+  }
+  if (!fullRegister) {
+    tools.goTo("c2register");
+  }
 }], args 
  }}/>, 
 
