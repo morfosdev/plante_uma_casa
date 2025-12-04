@@ -58480,6 +58480,8 @@ console.log("cond fullreg",{path, value});
 	// ---- set Cond Redirect
 	const fullRegister = value.fullRegister;
 
+console.log({fillRegister});
+
 	if(fullRegister){
 		tools.goTo('c5steps');
 	}
