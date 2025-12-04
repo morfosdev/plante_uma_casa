@@ -58474,6 +58474,9 @@ console.log("cond fullreg",{path, value});
 
 	tools.setData({path: path2, value: true});
 
+	const path3 = "sc.C2.forms.iptsChanges.userName";
+	tools.setData({path: path3, value: value?.userName ?? ""});
+
 	// ---- set Cond Redirect
 	const fullRegister = value.fullRegister;
 
