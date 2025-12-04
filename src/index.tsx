@@ -59752,7 +59752,7 @@ async (...args) =>
 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("c2edit");
+          return tools.goTo("c2register");
         }
         , async (...args) =>
         functions.setVar({ args, pass:{
@@ -61499,7 +61499,7 @@ async (...args) =>
 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("c2edit");
+          return tools.goTo("c2register");
         }
         , async (...args) =>
         functions.setVar({ args, pass:{
@@ -66952,7 +66952,7 @@ async (...args) =>
 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("c2edit");
+          return tools.goTo("c2register");
         }
         , async (...args) =>
         functions.setVar({ args, pass:{
