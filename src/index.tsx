@@ -58442,7 +58442,20 @@ color: '#fff',
             args,
           }}/>
         , (...args:any) => <Elements.Login pass={{
- configs: [''], arrFuncs: [() => {console.log('function default')}], args 
+ configs: [`{
+	btnStyle: {
+		backgroundColor: "#315E2D", 
+		borderRadius: 9, 
+		alignItems: "center", 
+		justifyContent: "center",
+		paddingHorizontal: 27,
+		paddingVertical: 7
+	},
+	txtStyle: {
+		color: "white",
+		fontSize: 12
+	}
+}`], arrFuncs: [() => {console.log('function default')}], args 
  }}/>],
 
             args,
