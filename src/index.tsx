@@ -68339,50 +68339,52 @@ fontWeight: '400',
         `==`, `$var_all.authUser.lotId`],
         }})],
  arrFuncs: [(args) => {
+  const parseBRDate = (str: string) => {
+    if (typeof str !== "string") return 0;
+    const [d, m, y] = str.split("/").map(Number);
+    if (!d || !m || !y) return 0;
+    return new Date(y, m - 1, d).getTime();
+  };
+
   console.log("Dados do Lote", { args });
 
   const objLote = args[0];
 
-  // ✅ Garante que é um objeto válido
   if (typeof objLote !== "object" || objLote === null) {
     console.log("❌ lote inválido:", objLote);
     return;
   }
 
-  // ✅ Extrai todos os valores do objeto
   const installments = objLote?.installments ?? {};
   const newArray: any[] = Object.values(installments) ?? [];
 
-  console.log("objLote", objLote); 
-  
-  // ✅ Extrai e guarda numberOfInstallments, owner e totalValue (se existirem)
   const numberOfInstallments = objLote.numberOfInstallments;
-  const owner = objLote.owner || null;
-  const totalValue = objLote.totalValue || null;
 
-  // ✅ Exibe log detalhado
-  console.log("📦 numberOfInstallments:", numberOfInstallments);
-  console.log("owner:", owner);
-  console.log("💰 totalValue:", totalValue);
-  console.log("Dados:", newArray);
+  let finalArray =
+    newArray.length > 0
+      ? newArray.map((item, index) => {
+          const count = index + 1;
+          return {
+            ...item,
+            formatedInstallments: count + "/" + numberOfInstallments,
+          };
+        })
+      : [];
 
-  const condArray = newArray && newArray.length > 0;
-  const finalArray = condArray
-    ? newArray.map((item, index) => {
-        const count = index + 1;
-        return {
-          ...item,
-          formatedInstallments: count + "/" + numberOfInstallments,
-        };
-      })
-    : [];
+  console.log("Array Final (antes ordenar):", finalArray);
 
-  console.log("Array Final:", finalArray);
+  // ================================
+  // 🔥 ORDENAR POR DATA (dd/mm/aaaa)
+  // ================================
+  finalArray = finalArray.sort((a, b) => {
+    const da = parseBRDate(a?.date);
+    const db = parseBRDate(b?.date);
+    return da - db;
+  });
 
-  // ✅ Define os dados para uso na tela
+  console.log("Array Final (ordenado):", finalArray);
+
   tools.setData({ path: "sc.C7.lists.list1", value: finalArray });
-
-  // ✅ Armazena Todos os dados do lote
   tools.setData({ path: "sc.C7.currents.currLoteData", value: objLote });
 }],
  }})]
