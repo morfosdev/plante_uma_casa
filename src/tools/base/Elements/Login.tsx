@@ -155,45 +155,63 @@ const LoginWeb = (props: { pass?: TLoginPass }) => {
 
   const [loading, setLoading] = React.useState(false);
 
-  const handleLogin = async () => {
+const handleLogin = async () => {
+  try {
+    setLoading(true);
+
+    const fbApp = getFirebaseApp();
+    if (!fbApp)
+      throw new Error("Firebase config nao encontrado para inicializar.");
+
+    const auth = getAuth(fbApp);
+    const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+
+    let result;
+
     try {
-      setLoading(true);
+      // 1) Tenta popup
+      result = await signInWithPopup(auth, provider);
+    } catch (popupErr: any) {
+      console.warn("[LoginWeb] erro no popup:", popupErr?.code, popupErr);
 
-      const fbApp = getFirebaseApp();
-      if (!fbApp)
-        throw new Error("Firebase config nao encontrado para inicializar.");
+      // Só cai para redirect se for erro tipico de popup
+      const code = popupErr?.code as string | undefined;
+      const popupIssues = [
+        "auth/popup-blocked",
+        "auth/popup-closed-by-user",
+        "auth/cancelled-popup-request",
+      ];
 
-      const auth = getAuth(fbApp);
-      const provider = new GoogleAuthProvider();
-      provider.setCustomParameters({ prompt: "select_account" });
-
-      // Pop-up (recomendado). Se o navegador bloquear, cai para redirect.
-      let result;
-      try {
-        result = await signInWithPopup(auth, provider);
-
-        const dbResult = await setUserDB(result.user, auth);
-        if (dbResult.status !== "success") {
-          throw new Error(
-            dbResult.message ?? "Falha ao salvar usuario no banco."
-          );
-        }
-
-        setLoading(false);
-        for (const currFunc of arrFuncs) await currFunc(dbResult.data, args);
-
-        return;
-      } catch (popupErr) {
-        // fallback para redirect (util em bloqueio de pop-up)
+      if (code && popupIssues.includes(code)) {
+        console.log("[LoginWeb] tentando fluxo de redirect...");
         await signInWithRedirect(auth, provider);
-        return;
+        return; // o resto sera tratado no useEffect (getRedirectResult)
       }
-    } catch (err) {
-      console.error("Erro no login Google (web):", err);
-    } finally {
-      setLoading(false);
+
+      // Se for outro erro → propaga
+      throw popupErr;
     }
-  };
+
+    // Se chegou aqui, popup funcionou
+    if (!result?.user) {
+      throw new Error("Resultado do login (popup) sem user.");
+    }
+
+    const dbResult = await setUserDB(result.user, auth);
+    if (dbResult.status !== "success") {
+      throw new Error(
+        dbResult.message ?? "Falha ao salvar usuario no banco."
+      );
+    }
+
+    for (const currFunc of arrFuncs) await currFunc(dbResult.data, args);
+  } catch (err) {
+    console.error("Erro no login Google (web):", err);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const defaultBtnStyle = {
     paddingVertical: 12,
@@ -312,12 +330,15 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
   const userDocSnap = await getDoc(userDocRef);
 
   const userExists = userDocSnap.exists();
-
+  
   if (userExists) {
+    const fullRegister = userDocSnap.data().fullRegister;
+
     userToSet = {
       updatedAt: serverTimestamp(),
       ...userData,
 
+      fullRegister,
       condoId: condoId ?? null,
       lotId: lotId ?? null,
     };
