@@ -58456,8 +58456,25 @@ color: '#fff',
 		fontSize: 12
 	}
 }`], arrFuncs: [(user, args) => {
-
 	console.log("Flax Custom Auth",{user, args});
+
+	const path = "all.authUser";
+	const value = {...user};
+	delete value.updateAt;
+
+
+console.log("cond fullreg",{path, value});
+	tools.setData({path,value});
+
+	// ---- set Cond Redirect
+	const fullRegister = value.fullRegister;
+
+	if(fullRegister){
+		tools.goTo('c5steps');
+	}
+	if(!fullRegister){
+		tools.goTo('c2register');
+	}
 }], args 
  }}/>],
 
