@@ -68076,40 +68076,90 @@ fontWeight: '700',
   const item = tools.findFlatItem(args);
   console.log("Render Element Default", { item });
 
+  // Se não encontrar item, já retorna fallback
+  if (!item || typeof item !== "object") {
+    console.warn("Render Element Default: item inválido", item);
+    return (
+      <RN.Text style={{ color: "#ccc", fontSize: 12, fontWeight: 600 }}>
+        Sem Documento
+      </RN.Text>
+    );
+  }
+
   const installmentId = item.installmentId;
   console.log("Render Element Default", { installmentId });
+
+  if (!installmentId) {
+    console.warn(
+      "Render Element Default: installmentId não encontrado no item",
+      item
+    );
+    return (
+      <RN.Text style={{ color: "#ccc", fontSize: 12, fontWeight: 600 }}>
+        Sem Documento
+      </RN.Text>
+    );
+  }
 
   const currLoteData = tools.getCtData("sc.C7.currents.currLoteData");
   console.log("Render Element Default", { currLoteData });
 
-  const rawReceipts = currLoteData?.receipts;
+  // Garante objeto antes de acessar receipts
+  const rawReceipts =
+    currLoteData && typeof currLoteData === "object"
+      ? currLoteData.receipts
+      : null;
   console.log("Render Element Default", { rawReceipts });
 
-  const arrReceipts = Object.values(rawReceipts) ?? [];
-  console.log("Render Element Default", { arrReceipts });
+  // Normaliza para array com segurança
+  let arrReceipts = [];
 
-  if (arrReceipts.length === 0) {
-    return <RN.Text style={{color: "#ccc", fontSize: 12, fontWeight: 600}}>Sem Documento</RN.Text>;
+  if (Array.isArray(rawReceipts)) {
+    arrReceipts = rawReceipts;
+  } else if (rawReceipts && typeof rawReceipts === "object") {
+    arrReceipts = Object.values(rawReceipts);
   }
 
-  const receipt = arrReceipts.find((r) => r.installmentId === installmentId);
+  console.log("Render Element Default", { arrReceipts });
+
+  if (!Array.isArray(arrReceipts) || arrReceipts.length === 0) {
+    return (
+      <RN.Text style={{ color: "#ccc", fontSize: 12, fontWeight: 600 }}>
+        Sem Documento
+      </RN.Text>
+    );
+  }
+
+  const receipt = arrReceipts.find(
+    (r) =>
+      r &&
+      typeof r === "object" &&
+      r.installmentId &&
+      r.installmentId === installmentId
+  );
   console.log("Render Element Default", { receipt });
 
-  const fileName = receipt?.fileName;
+  const fileName =
+    receipt && typeof receipt === "object" ? receipt.fileName : undefined;
   console.log("Render Element Default", { fileName });
 
   if (fileName) {
     return (
-      <RN.View
-        style={{
-        }}
-      >
-        <RN.Text style={{color: "#315e2d", fontSize: 12, fontWeight: 600}}>{fileName}</RN.Text>
+      <RN.View style={{}}>
+        <RN.Text
+          style={{ color: "#315e2d", fontSize: 12, fontWeight: 600 }}
+        >
+          {fileName}
+        </RN.Text>
       </RN.View>
     );
   }
 
-  return <RN.Text style={{color: "#ddd", fontSize: 12, fontWeight: 600}}>Sem Documento</RN.Text>;
+  return (
+    <RN.Text style={{ color: "#ddd", fontSize: 12, fontWeight: 600 }}>
+      Sem Documento
+    </RN.Text>
+  );
 }] 
 }}/>
 , 
