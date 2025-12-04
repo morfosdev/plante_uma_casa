@@ -18,13 +18,21 @@ import { useData } from "../../..";
 // Finaliza sessoes pendentes (necessario para Web/Expo)
 WebBrowser.maybeCompleteAuthSession();
 
+type TLoginFunc = (data: any, args?: any) => any;
+
+type TLoginConfigs = {
+  btnStyle?: RN.StyleProp<RN.ViewStyle>;
+  txtStyle?: RN.StyleProp<RN.TextStyle>;
+  txtLabel?: string;
+};
+
 type TLoginPass = {
-  arrFuncs?: Array<(data: any, args?: any) => any>;
-  configs?: { btnStyle?: RN.StyleProp<RN.ViewStyle> };
+  arrFuncs?: TLoginFunc[];
+  configs?: TLoginConfigs | string | any[];
   args?: any;
 };
 
-type Tprops = {
+type TProps = {
   pass?: TLoginPass;
 };
 
@@ -48,10 +56,38 @@ const getFirebaseApp = (): FirebaseApp | null => {
   return initializeApp(rawConfig);
 };
 
+const normalizeConfigs = (
+  rawConfigs: TLoginPass["configs"]
+): TLoginConfigs => {
+  let parsed: any = rawConfigs;
+
+  if (Array.isArray(parsed)) parsed = parsed[0];
+
+  if (typeof parsed === "string") {
+    const trimmed = parsed.trim();
+    try {
+      parsed = JSON.parse(trimmed);
+    } catch (jsonErr) {
+      try {
+        // Fallback for JS-like object strings without quotes
+        // eslint-disable-next-line no-new-func
+     
+      } catch (evalErr) {
+        console.warn("[LoginWeb] configs parse error:", { jsonErr, evalErr });
+        parsed = {};
+      }
+    }
+  }
+
+  return parsed && typeof parsed === "object" && !Array.isArray(parsed)
+    ? parsed
+    : {};
+};
+
 // =========================================
 // Componente: Login para Nativo (Android/iOS)
 // =========================================
-export const LoginNative = (props: any) => {
+export const LoginNative = (_props: { pass?: TLoginPass }) => {
   const [loading, setLoading] = React.useState(false);
 
   // Somente Android nativo
@@ -112,11 +148,13 @@ export const LoginNative = (props: any) => {
 // =========================================
 // Componente: Login para Web
 // =========================================
-const LoginWeb = (props: any) => {
+const LoginWeb = (props: { pass?: TLoginPass }) => {
+  console.log("Comp Login WEB", { props });
   const pass = props?.pass ?? {};
   const args = pass.args;
   const arrFuncs = Array.isArray(pass.arrFuncs) ? pass.arrFuncs : [];
-  const configs = pass.configs ?? {};
+  const configs = normalizeConfigs(pass.configs);
+  console.log("Comp Login WEB", { configs });
 
   // Renderiza apenas no Web
   if (RN.Platform.OS !== "web") return null;
@@ -135,14 +173,16 @@ const LoginWeb = (props: any) => {
       const provider = new GoogleAuthProvider();
       provider.setCustomParameters({ prompt: "select_account" });
 
-      // Pop-up (recomendado). Se o navegador bloquear, cai para redirect. 1
+      // Pop-up (recomendado). Se o navegador bloquear, cai para redirect.
       let result;
       try {
         result = await signInWithPopup(auth, provider);
 
         const dbResult = await setUserDB(result.user, auth);
         if (dbResult.status !== "success") {
-          throw new Error(dbResult.message ?? "Falha ao salvar usuario no banco.");
+          throw new Error(
+            dbResult.message ?? "Falha ao salvar usuario no banco."
+          );
         }
 
         setLoading(false);
@@ -161,7 +201,7 @@ const LoginWeb = (props: any) => {
     }
   };
 
-  const defaultBtnStyle = {
+  const defaultBtnStyle: RN.ViewStyle = {
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 8,
@@ -172,28 +212,39 @@ const LoginWeb = (props: any) => {
     backgroundColor: "#fff",
   };
 
+  const defaultTxtStyle: RN.TextStyle = {
+    fontWeight: "bold",
+  };
+
   const customBtnStyles =
-    configs &&
-    !Array.isArray(configs) &&
-    typeof configs === "object" &&
-    configs?.btnStyle &&
-    Object.keys(configs.btnStyle).length > 0
-      ? configs.btnStyle
+    configs?.btnStyle && Object.keys(configs.btnStyle).length > 0
+      ? (configs.btnStyle as RN.StyleProp<RN.ViewStyle>)
       : null;
 
+  const customTxtStyles =
+    configs?.txtStyle && Object.keys(configs.txtStyle).length > 0
+      ? configs.txtStyle
+      : undefined;
+
+  console.log("Comp Login WEB", { customBtnStyles });
+
+  const btnStyle = customBtnStyles || defaultBtnStyle;
+
+  const defaultTxt = "Entrar com Google";
+  const condText = configs?.txtLabel ?? defaultTxt;
   return (
     <RN.Pressable
       onPress={handleLogin}
       disabled={loading}
-      style={({ pressed }) => [
-        customBtnStyles ?? defaultBtnStyle,
+      style={({ pressed }): RN.StyleProp<RN.ViewStyle> => [
+        btnStyle,
         { opacity: pressed || loading ? 0.6 : 1 },
       ]}
       accessibilityRole="button"
       accessibilityLabel="Entrar com conta Google (Web)"
     >
-      <RN.Text style={{ fontWeight: "600" }}>
-        {loading ? "Conectando...": "Entrar com Google"}
+      <RN.Text style={[customTxtStyles || defaultTxtStyle]}>
+        {loading ? "Conectando..." : condText}
       </RN.Text>
     </RN.Pressable>
   );
@@ -202,14 +253,18 @@ const LoginWeb = (props: any) => {
 // =========================================
 // Wrapper: decide por plataforma
 // =========================================
-export const Login = (props: Tprops) => {
+export const Login = (props: TProps) => {
   if (RN.Platform.OS === "web") {
     return <LoginWeb pass={props?.pass} />;
   }
   return <LoginNative pass={props?.pass} />;
 };
 
-const setUserDB = async (user: any, authFromLogin?: Auth) => {
+type TSetUserDBResult =
+  | { status: "success"; data: Record<string, any> }
+  | { status: "error"; message: string };
+
+const setUserDB = async (user: any, authFromLogin?: Auth): Promise<TSetUserDBResult> => {
   // Fictitious function to persist user data in the database
   console.log("Salvando usuario no banco de dados:", user);
 
@@ -295,7 +350,6 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
     };
     console.log("Novo usuario adicionado ao banco de dados.");
     await setDoc(userDocRef, userToSet);
-
   }
 
   // Fallback
