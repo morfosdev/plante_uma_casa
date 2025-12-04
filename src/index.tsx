@@ -58830,25 +58830,29 @@ placeholder: 'Ex: 00.000.000-00',
   try {
     if (typeof txt !== "string") txt = String(txt ?? "");
 
-    // Mantém apenas números (sem regex)
+    // ───────────────────────────────
+    // Mantém apenas números
+    // ───────────────────────────────
     let clean = "";
     for (let i = 0; i < txt.length; i++) {
       const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
+      if (ch >= "0" && ch <= "9") clean += ch;
     }
 
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
+    // Limita a 9 dígitos do RG
+    if (clean.length > 9) clean = clean.slice(0, 9);
 
     console.log({ clean });
 
-    // Monta máscara dd/mm/aaaa
+    // ───────────────────────────────
+    // Montagem da máscara RG: XX.XXX.XXX-X
+    // ───────────────────────────────
     let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    if (clean.length > 0) masked = clean.slice(0, 2); // XX
+    if (clean.length >= 3) masked += "." + clean.slice(2, 5); // XX.XXX
+    if (clean.length >= 6) masked += "." + clean.slice(5, 8); // XX.XXX.XXX
+    if (clean.length === 9) masked += "-" + clean.slice(8, 9); // XX.XXX.XXX-X
 
     console.log({ masked });
 
@@ -58860,7 +58864,7 @@ placeholder: 'Ex: 00.000.000-00',
       },
     });
   } catch (e) {
-    console.error("Erro na máscara de data:", e);
+    console.error("Erro na máscara de RG:", e);
     return txt;
   }
 }],
