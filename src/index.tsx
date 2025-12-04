@@ -58455,7 +58455,10 @@ color: '#fff',
 		color: "white",
 		fontSize: 12
 	}
-}`], arrFuncs: [() => {console.log('function default')}], args 
+}`], arrFuncs: [(user, args) => {
+
+	console.log("Flax Custom Auth",{user, args});
+}], args 
  }}/>],
 
             args,
