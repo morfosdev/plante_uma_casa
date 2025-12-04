@@ -59427,10 +59427,9 @@ color: '#555555',
     return val ?? "";
   };
 
-requiredFields.forEach(f => {
-  console.log(f.name, "→", getVal(f.path));
-});
-
+  requiredFields.forEach((f) => {
+    console.log(f.name, "→", getVal(f.path));
+  });
 
   // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
@@ -59452,7 +59451,10 @@ requiredFields.forEach(f => {
       },
     });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return; // ⚠️ Interrompe o processo se houver campos vazios
   }
 
@@ -59478,25 +59480,32 @@ requiredFields.forEach(f => {
   }
 
   // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  const { getFirestore, collection, doc, updateDoc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   // Monta os dados a salvar
-  const newDoc = {
+  const dataToUpdate = {
     userName: getVal("sc.C2.forms.iptsChanges.userName"),
-		userRg: getVal("sc.C2.forms.iptsChanges.userRg"),
-		userPhone: getVal("sc.C2.forms.iptsChanges.userPhone"),
+    userRg: getVal("sc.C2.forms.iptsChanges.userRg"),
+    userPhone: getVal("sc.C2.forms.iptsChanges.userPhone"),
     userAddress: getVal("sc.C2.forms.iptsChanges.userAddress"),
-		typeAccount: "app",
-    createdAt: serverTimestamp(),
+
+    fullRegister: true,
+    updatedAt: serverTimestamp(),
   };
 
   try {
-    const docRef = await addDoc(collection(db, "users"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
+    const authUser = tools.getCtData("all.authUser");
+    const uid = authUser.docId;
+    console.log({ authUser });
+    const refColl = collection(db, "users");
+    const docRef = await doc(refColl, uid);
 
-// Atualiza o documento para incluir o próprio ID
-    await updateDoc(docRef, { docId: docRef.id });
+    console.log("✅ Documento atualizado:", { dataToUpdate });
+
+    // Atualiza o documento
+    await updateDoc(docRef, dataToUpdate);
 
     tools.functions.setVar({
       args: "",
@@ -59516,19 +59525,18 @@ requiredFields.forEach(f => {
     });
   }
 
-//clean iptsChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.C2.forms.iptsChanges"],
-        value: [""],
-      },
-    });
+  //clean iptsChanges
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.C2.forms.iptsChanges"],
+      value: [""],
+    },
+  });
 
-// Redireciona para tela "c5steps"
-    tools.goTo("c5steps");
-}
-]
+  // Redireciona para tela "c5steps"
+  tools.goTo("c5steps");
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
