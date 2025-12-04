@@ -1494,13 +1494,14 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[
+        `{ 
 	width: 40,
 	height: 40,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
-}`],
+}`, `{ borderRadius: 50 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -60307,13 +60308,14 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[
+        `{ 
 	width: 40,
 	height: 40,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
-}`],
+}`, `{ borderRadius: 50 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -62053,13 +62055,14 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[
+        `{ 
 	width: 40,
 	height: 40,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
-}`],
+}`, `{ borderRadius: 50 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -67505,13 +67508,14 @@ alignItems: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[
+        `{ 
 	width: 40,
 	height: 40,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
-}`],
+}`, `{ borderRadius: 50 }`],
 
             functions:[()=>{}],            childrenItems:[
 
