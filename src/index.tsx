@@ -58424,6 +58424,7 @@ color: '#fff',
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -58440,7 +58441,9 @@ color: '#fff',
 
             args,
           }}/>
-        ],
+        , (...args:any) => <Elements.Login pass={{
+ configs: [''], arrFuncs: [() => {console.log('function default')}], args 
+ }}/>],
 
             args,
           }}/>
