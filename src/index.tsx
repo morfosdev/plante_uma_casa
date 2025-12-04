@@ -2640,6 +2640,7 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -2666,6 +2667,93 @@ paddingHorizontal: 16,
 
           children: [
             `Design System`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+backgroundColor: "#315E2D", 
+borderRadius: 9, 
+alignItems: "center", 
+justifyContent: "center",
+paddingHorizontal: 27,
+paddingVertical: 7,
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.checkboxGender`],
+          value: [true]
+        }}), () => {
+	const path = "all.authUser";
+	const value = {
+		docId: "xqhhNW5lJJqx5mvX9wRK",
+		userName: "João Pedro",
+		userEmail: "joão@gmail.com",
+		userImage: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+		lotId: "rbMdP1OHaUxVVdMbNeoG",
+		fullRegister: true
+	};
+
+	console.log("cond fullreg",{path, value});
+	tools.setData({path,value});
+
+	// ---- set Cond Redirect
+	const fullRegister = value.fullRegister;
+
+	if(fullRegister){
+		tools.goTo('c5steps');
+	}
+	if(!fullRegister){
+		tools.goTo('c2register');
+	}
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+fontWeight: '700',
+color: '#fff',
+}`
+          ],
+
+          children: [
+            `Google`
           ],
 
           args,
@@ -58424,24 +58512,7 @@ color: '#fff',
             args,
           }}/>
         , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Login pass={{
+        (...args:any) => <Elements.Login pass={{
  configs: [`{
 	txtLabel: "Google",
 	btnStyle: {
@@ -58478,7 +58549,24 @@ console.log("cond fullreg",{path, value});
 		tools.goTo('c2register');
 	}
 }], args 
- }}/>],
+ }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
