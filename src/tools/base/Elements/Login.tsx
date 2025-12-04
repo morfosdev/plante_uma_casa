@@ -1,4 +1,5 @@
 
+import JSON5 from 'json5';
 import React from "react";
 import * as RN from "react-native";
 
@@ -64,24 +65,11 @@ const normalizeConfigs = (
   if (Array.isArray(parsed)) parsed = parsed[0];
 
   if (typeof parsed === "string") {
-    const trimmed = parsed.trim();
     try {
-      parsed = JSON.parse(trimmed);
-    } catch (jsonErr) {
-      try {
-        // Fallback: tenta transformar chaves não-aspadas em JSON válido
-        const withQuotedKeys = trimmed.replace(
-          /([,{]s*)([A-Za-z0-9_]+)s*:/g,
-          '!#!"!#!":'
-        );
-        parsed = JSON.parse(withQuotedKeys);
-      } catch (fallbackErr) {
-        console.warn("[LoginWeb] configs parse error:", {
-          jsonErr,
-          fallbackErr,
-        });
-        parsed = {};
-      }
+      parsed = JSON5.parse(parsed.trim());
+    } catch (err) {
+      console.warn("[LoginWeb] configs parse error:", err);
+      parsed = {};
     }
   }
 
@@ -355,3 +343,4 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
   // Fallback
   return { status: "success", data: userToSet };
 };
+
