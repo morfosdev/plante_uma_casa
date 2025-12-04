@@ -69,11 +69,17 @@ const normalizeConfigs = (
       parsed = JSON.parse(trimmed);
     } catch (jsonErr) {
       try {
-        // Fallback for JS-like object strings without quotes
-        // eslint-disable-next-line no-new-func
-     
-      } catch (evalErr) {
-        console.warn("[LoginWeb] configs parse error:", { jsonErr, evalErr });
+        // Fallback: tenta transformar chaves não-aspadas em JSON válido
+        const withQuotedKeys = trimmed.replace(
+          /([,{]s*)([A-Za-z0-9_]+)s*:/g,
+          '!#!"!#!":'
+        );
+        parsed = JSON.parse(withQuotedKeys);
+      } catch (fallbackErr) {
+        console.warn("[LoginWeb] configs parse error:", {
+          jsonErr,
+          fallbackErr,
+        });
         parsed = {};
       }
     }
@@ -201,7 +207,7 @@ const LoginWeb = (props: { pass?: TLoginPass }) => {
     }
   };
 
-  const defaultBtnStyle: RN.ViewStyle = {
+  const defaultBtnStyle = {
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 8,
@@ -212,23 +218,21 @@ const LoginWeb = (props: { pass?: TLoginPass }) => {
     backgroundColor: "#fff",
   };
 
-  const defaultTxtStyle: RN.TextStyle = {
+  const defaultTxtStyle = {
     fontWeight: "bold",
   };
 
   const customBtnStyles =
     configs?.btnStyle && Object.keys(configs.btnStyle).length > 0
-      ? (configs.btnStyle as RN.StyleProp<RN.ViewStyle>)
+      ? configs.btnStyle
       : null;
 
   const customTxtStyles =
     configs?.txtStyle && Object.keys(configs.txtStyle).length > 0
       ? configs.txtStyle
-      : undefined;
+      : null;
 
   console.log("Comp Login WEB", { customBtnStyles });
-
-  const btnStyle = customBtnStyles || defaultBtnStyle;
 
   const defaultTxt = "Entrar com Google";
   const condText = configs?.txtLabel ?? defaultTxt;
@@ -236,14 +240,14 @@ const LoginWeb = (props: { pass?: TLoginPass }) => {
     <RN.Pressable
       onPress={handleLogin}
       disabled={loading}
-      style={({ pressed }): RN.StyleProp<RN.ViewStyle> => [
-        btnStyle,
+      style={({ pressed }) => [
+        customBtnStyles ?? defaultBtnStyle,
         { opacity: pressed || loading ? 0.6 : 1 },
       ]}
       accessibilityRole="button"
       accessibilityLabel="Entrar com conta Google (Web)"
     >
-      <RN.Text style={[customTxtStyles || defaultTxtStyle]}>
+      <RN.Text style={[customTxtStyles ?? defaultTxtStyle]}>
         {loading ? "Conectando..." : condText}
       </RN.Text>
     </RN.Pressable>
@@ -260,11 +264,7 @@ export const Login = (props: TProps) => {
   return <LoginNative pass={props?.pass} />;
 };
 
-type TSetUserDBResult =
-  | { status: "success"; data: Record<string, any> }
-  | { status: "error"; message: string };
-
-const setUserDB = async (user: any, authFromLogin?: Auth): Promise<TSetUserDBResult> => {
+const setUserDB = async (user: any, authFromLogin?: Auth) => {
   // Fictitious function to persist user data in the database
   console.log("Salvando usuario no banco de dados:", user);
 
