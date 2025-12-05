@@ -58447,14 +58447,19 @@ async (...args) =>
         `docId`, 
         `==`, `$var_sc.B9.currents.currId1`],
         }})],
- arrFuncs: [(args) => {
+ arrFuncs: [
+ (args) => {
   console.log("custom do where get user by ownerId", { args });
   const objSteps = args[0].steps;
   const arrSteps = typeof objSteps === 'object' ? Object.values(objSteps) : [];
   console.log("custom do where get user by ownerId", { arrSteps });
 
   tools.setData({ path: "sc.B7.lists.list1", value: arrSteps });
-}],
+}, async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B7.iptsChanges`],
+          value: [`$arg_callback`]
+        }})],
  }})]
  , trigger: 'on init'
 }})],
