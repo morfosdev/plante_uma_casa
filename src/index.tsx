@@ -50433,7 +50433,7 @@ async (...args) =>
           ],
 
           children: [
-            `$var_sc.B7.forms.iptsChanges`
+            `$var_sc.B7.forms.iptsChanges.userName`
           ],
 
           args,
