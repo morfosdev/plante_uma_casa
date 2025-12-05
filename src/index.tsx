@@ -59700,14 +59700,16 @@ color: '#555555',
         functions.setVar({ args, pass:{
           keyPath: [`sc.C2.forms.iptsChanges`],
           value: [`$arg_callback`]
-        }}), ()=> {
+        }}), () => {
   const arr = tools.getCtData("sc.C2.forms.iptsChanges");
 
   if (Array.isArray(arr) && arr.length > 0) {
-    tools.setData("sc.C2.forms.iptsChanges", arr[0]);
+    tools.setData({
+      path: "sc.C2.forms.iptsChanges",
+      value: arr[0]
+    });
   }
-}
-],
+}],
  }})]
  , trigger: 'on init'
 }})],
