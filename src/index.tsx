@@ -59707,14 +59707,14 @@ color: '#555555',
     });
   }
 
-  //clean iptsChanges
-  // tools.functions.setVar({
-  //   args: "",
-  //   pass: {
-  //     keyPath: ["sc.C2.forms.iptsChanges"],
-  //     value: [""],
-  //   },
-  // });
+  clean iptsChanges
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.C2.forms.iptsChanges"],
+      value: [""],
+    },
+  });
 
   //clean validationMessage
   tools.functions.setVar({
@@ -59727,7 +59727,8 @@ color: '#555555',
 
   // Redireciona para tela "c5steps"
   tools.goTo("c5steps");
-}]
+};
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
