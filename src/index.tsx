@@ -61537,11 +61537,11 @@ tools.functions.setVar({
           keyPath: [`sc.C2.form.editChanges`],
           value: [`$arg_callback`]
         }}), () => {
-  const arr = tools.getCtData("sc.C2.forms.iptsChanges");
+  const arr = tools.getCtData("sc.C2.form.editChanges");
 
   if (Array.isArray(arr) && arr.length > 0) {
     tools.setData({
-      path: "sc.C2.forms.iptsChanges",
+      path: "sc.C2.form.editChanges",
       value: arr[0]
     });
   }
