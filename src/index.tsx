@@ -68566,7 +68566,7 @@ async (...args) =>
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("c5steps");
+          return tools.goTo("c7financial");
         }
         ]
  , trigger: 'on press'
