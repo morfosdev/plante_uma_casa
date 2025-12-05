@@ -14066,6 +14066,7 @@ right: 0,
             styles: [],
             arrProps: [],
             arrItems: [
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -14076,7 +14077,11 @@ right: 0,
 }
 `],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A7.loader", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -14482,6 +14487,32 @@ height: 25,
 width: '100%',
 }`],    args,
         }}/>],
+            args,
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A7.loader", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
+            size: "small",
+            color: ' ',
             args,
         }}/>],
 
@@ -22076,10 +22107,15 @@ fontWeight: '700',
         `condoId`, 
         `==`, `$var_sc.A7.forms.currData.condoData.docId`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.loader`],
+          value: [`false`]
         }})],
  }})]
  , trigger: 'on init'
@@ -69710,6 +69746,8 @@ userImage: "https://cdn-icons-png.flaticon.com/512/219/219983.png",
 'A1': { 'forms': { 'iptsChanges': {   } 
  } 
  } 
+, 
+'A7': { 'loader': true } 
 , 
 'A12': { 'forms': { 'iptsChanges': {
 	partnerName: "",
