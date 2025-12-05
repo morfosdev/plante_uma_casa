@@ -59683,7 +59683,19 @@ color: '#555555',
             args,
         }}/>],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.firebase.getDocTool({ args, pass:{
+  arrRefStrings: [`users`],
+            arrFuncs: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.C2.forms.editChanges`],
+          value: [`$arg_callback`]
+        }})],
+        }})]
+ , trigger: 'on init'
+}})],
 
           args,
         }}/>, 
