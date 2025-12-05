@@ -50433,7 +50433,7 @@ async (...args) =>
           ],
 
           children: [
-            `$var_sc.B7.forms.iptsChanges.userName`
+            `$var_sc.B7.forms.singleIptsChanges.userName`
           ],
 
           args,
@@ -58465,12 +58465,11 @@ async (...args) =>
 
   if (Array.isArray(arr) && arr.length > 0) {
     tools.setData({
-      path: "sc.B7.forms.iptsChanges",
+      path: "sc.B7.forms.singleIptsChanges",
       value: arr[0]
     });
   }
-}
-],
+}],
  }})]
  , trigger: 'on init'
 }})],
