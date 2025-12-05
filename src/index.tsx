@@ -59704,7 +59704,7 @@ color: '#555555',
   const arr = tools.getCtData("sc.C2.forms.iptsChanges");
 
   if (Array.isArray(arr) && arr.length > 0) {
-    tools.setVar("sc.C2.forms.iptsChanges", arr[0]);
+    tools.setData("sc.C2.forms.iptsChanges", arr[0]);
   }
 }
 ],
