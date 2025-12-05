@@ -61534,7 +61534,7 @@ tools.functions.setVar({
  arrFuncs: [
  async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.form.editChanges`],
+          keyPath: [`sc.C2.forms.editChanges`],
           value: [`$arg_callback`]
         }}), () => {
   const arr = tools.getCtData("sc.C2.form.editChanges");
