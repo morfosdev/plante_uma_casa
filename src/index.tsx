@@ -59727,8 +59727,7 @@ color: '#555555',
 
   // Redireciona para tela "c5steps"
   tools.goTo("c5steps");
-};
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
