@@ -59697,7 +59697,7 @@ color: '#555555',
         }})],
  arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.C2.forms.editChanges`],
+          keyPath: [`sc.C2.forms.iptsChanges`],
           value: [`$arg_callback`]
         }})],
  }})]
