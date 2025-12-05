@@ -14071,6 +14071,32 @@ right: 0,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.A7.loader", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
+            size: "small",
+            color: `#fc2c03`,
+            args,
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{
 	paddingHorizontal: 60,
 	paddingVertical: 20,
@@ -14487,32 +14513,6 @@ height: 25,
 width: '100%',
 }`],    args,
         }}/>],
-            args,
-        }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A7.loader", "==", true ]]
- , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
-            size: "small",
-            color: ' ',
             args,
         }}/>],
 
