@@ -59686,14 +59686,21 @@ color: '#555555',
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocTool({ args, pass:{
+ functions.firebase.where({ args, pass:{
+
   arrRefStrings: [`users`],
-            arrFuncs: [async (...args) =>
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_all.authUser.docId`],
+        }})],
+ arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.C2.forms.editChanges`],
           value: [`$arg_callback`]
         }})],
-        }})]
+ }})]
  , trigger: 'on init'
 }})],
 

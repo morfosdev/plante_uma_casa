@@ -1,1 +1,1 @@
-{"1764952269500":{"actionType":"saveAll","createdAt":"1764952269500","actionID":"1764952269500","userID":"#TEMP","path":"system.capsules.c19f829f-37de-4943-9529-0dc5a6597c80.capsUseCodeInfo.capsUseLabel.en","oldValue":"set ","newValue":"set sc.C2.forms.editChanges"}}
+{"1764952653048":{"actionType":"saveAll","createdAt":"1764952653048","actionID":"1764952653048","userID":"#TEMP","path":"system.capsules.8e6fc797-7773-447f-85e3-cf3046c76a4f.capsUseCodeInfo.capsUseInputs.ccc_stringValue-0.capsIptTxtValue","oldValue":"","newValue":"$var_all.authUser.docId"}}
