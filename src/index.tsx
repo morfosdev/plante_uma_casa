@@ -2726,8 +2726,10 @@ async (...args) =>
 		fullRegister: false
 	};
 
+const path2 = "sc.C2.forms.iptsChanges.userName"
 	console.log("cond fullreg",{path, value});
 	tools.setData({path,value});
+	tools.setData({path: path2,value: value.userName});
 
 	// ---- set Cond Redirect
 	const fullRegister = value.fullRegister;
