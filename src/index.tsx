@@ -50433,7 +50433,7 @@ async (...args) =>
           ],
 
           children: [
-            `Lotes - Proprietário`
+            `$var_sc.B7.iptsChanges.userName`
           ],
 
           args,
