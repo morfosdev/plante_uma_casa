@@ -2814,7 +2814,7 @@ async (...args) =>
 		userImage: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
 		lotId: "2UR6aCJVk0aCeOx2pdBc",
 		condoId: "QtPemhEEWpge7Yq7i17U",
-		fullRegister: false,
+		fullRegister: true,
 		typeAccount: "app"
 	};
 
