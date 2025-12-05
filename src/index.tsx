@@ -60697,7 +60697,7 @@ alignItems: 'center',
 	borderRadius: 250
 }],
 
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/images%2FEllipse_1.png?alt=media&token=9098c20c-ee9c-4b60-845c-e97eca696d55`],
+      URIvariablePath:[`$var_all.authUser.userImage`],
 
       args,
     }}/>, 
@@ -61376,10 +61376,10 @@ color: '#555555',
  arrFunctions: [async () => {
   // Lista de campos obrigatórios
   const requiredFields = [
-    { path: "sc.C2.forms.iptsChanges.userName", name: "Nome Completo" },
-    { path: "sc.C2.forms.iptsChanges.userRg", name: "RG" },
-    { path: "sc.C2.forms.iptsChanges.userPhone", name: "Telefone" },
-    { path: "sc.C2.forms.iptsChanges.userAddress", name: "Endereço" },
+    { path: "sc.C2.forms.editChanges.userName", name: "Nome Completo" },
+    { path: "sc.C2.forms.editChanges.userRg", name: "RG" },
+    { path: "sc.C2.forms.editChanges.userPhone", name: "Telefone" },
+    { path: "sc.C2.forms.editChanges.userAddress", name: "Endereço" },
   ];
 
   // Função auxiliar para obter valor seguro
@@ -61445,10 +61445,10 @@ requiredFields.forEach(f => {
 
   // Monta os dados a salvar
   const newDoc = {
-    userName: getVal("sc.C2.forms.iptsChanges.userName"),
-		userRg: getVal("sc.C2.forms.iptsChanges.userRg"),
-		userPhone: getVal("sc.C2.forms.iptsChanges.userPhone"),
-    userAddress: getVal("sc.C2.forms.iptsChanges.userAddress"),
+    userName: getVal("sc.C2.forms.editChanges.userName"),
+		userRg: getVal("sc.C2.forms.editChanges.userRg"),
+		userPhone: getVal("sc.C2.forms.editChanges.userPhone"),
+    userAddress: getVal("sc.C2.forms.editChanges.userAddress"),
 		typeAccount: "app",
     createdAt: serverTimestamp(),
   };
@@ -61464,7 +61464,7 @@ requiredFields.forEach(f => {
       args: "",
       pass: {
         keyPath: ["sc.C2.validationMessage"],
-        value: ["🏢 Documento salvo com sucesso!"],
+        value: ["Documento salvo com sucesso!"],
       },
     });
   } catch (error) {
@@ -61478,19 +61478,18 @@ requiredFields.forEach(f => {
     });
   }
 
-//clean iptsChanges
+//clean editChanges
 tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.C2.forms.iptsChanges"],
+        keyPath: ["sc.C2.forms.editChanges"],
         value: [""],
       },
     });
 
 // Redireciona para tela "c5steps"
     tools.goTo("c5steps");
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -61506,7 +61505,7 @@ tools.functions.setVar({
           ],
 
           children: [
-            `Avançar`
+            `Atualizar`
           ],
 
           args,
