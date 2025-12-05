@@ -59701,7 +59701,7 @@ color: '#555555',
           keyPath: [`sc.C2.forms.iptsChanges`],
           value: [`$arg_callback`]
         }}), ()=> {
-  const arr = tools.getVar("sc.C2.forms.iptsChanges");
+  const arr = tools.getCtData("sc.C2.forms.iptsChanges");
 
   if (Array.isArray(arr) && arr.length > 0) {
     tools.setVar("sc.C2.forms.iptsChanges", arr[0]);
