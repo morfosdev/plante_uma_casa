@@ -61382,17 +61382,17 @@ color: '#555555',
     { path: "sc.C2.forms.editChanges.userAddress", name: "Endereço" },
   ];
 
-  // Função auxiliar para obter valor seguro
+  // Função auxiliar de leitura
   const getVal = (path) => {
     const val = tools.getCtData(path);
     if (Array.isArray(val)) return val[0] ?? "";
     return val ?? "";
   };
 
-requiredFields.forEach(f => {
-  console.log(f.name, "→", getVal(f.path));
-});
-
+  // Validação — log
+  requiredFields.forEach(f => {
+    console.log(f.name, "→", getVal(f.path));
+  });
 
   // Checa campos vazios
   const emptyFields = requiredFields.filter((f) => {
@@ -61400,37 +61400,25 @@ requiredFields.forEach(f => {
     return v === "" || v === null || v === undefined;
   });
 
-  // Define mensagem e estado final
-  let message = "";
-
   if (emptyFields.length > 0) {
-    message = `Preencha os campos obrigatórios.`;
-
+    const msg = "Preencha os campos obrigatórios.";
     tools.functions.setVar({
       args: "",
-      pass: {
-        keyPath: ["sc.C2.validationMessage"],
-        value: [message],
-      },
+      pass: { keyPath: ["sc.C2.validationMessage"], value: [msg] },
     });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return; // ⚠️ Interrompe o processo se houver campos vazios
+    console.warn("⚠️ Campos vazios:", emptyFields.map(f => f.name).join(", "));
+    return;
   }
 
-  // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
   tools.functions.setVar({
     args: "",
-    pass: {
-      keyPath: ["sc.C2.validationMessage"],
-      value: [message],
-    },
+    pass: { keyPath: ["sc.C2.validationMessage"], value: ["Validação OK..."] },
   });
 
-  console.log("💾 Validação OK — salvando no Firebase...");
+  console.log("💾 Validação OK — atualizando no Firebase...");
 
-  // inicializar firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -61439,56 +61427,73 @@ requiredFields.forEach(f => {
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-  // Importa Firestore e salva o documento
-  const { getFirestore, collection, addDoc, updateDoc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, doc, updateDoc, serverTimestamp } = await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
-  // Monta os dados a salvar
-  const newDoc = {
+  // ID do documento a atualizar
+  const docId = getVal("sc.C2.forms.editChanges.docId");
+
+  if (!docId || typeof docId !== "string") {
+    console.error("❌ docId inválido:", docId);
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.C2.validationMessage"],
+        value: ["Erro: documento sem ID para atualizar."],
+      },
+    });
+    return;
+  }
+
+  console.log("📝 Atualizando doc ID:", docId);
+
+  // Monta dados atualizados
+  const updatedData = {
     userName: getVal("sc.C2.forms.editChanges.userName"),
-		userRg: getVal("sc.C2.forms.editChanges.userRg"),
-		userPhone: getVal("sc.C2.forms.editChanges.userPhone"),
+    userRg: getVal("sc.C2.forms.editChanges.userRg"),
+    userPhone: getVal("sc.C2.forms.editChanges.userPhone"),
     userAddress: getVal("sc.C2.forms.editChanges.userAddress"),
-		typeAccount: "app",
-    createdAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-    const docRef = await addDoc(collection(db, "users"), newDoc);
-    console.log("✅ Documento salvo com ID:", docRef.id);
+    const ref = doc(db, "users", docId);
 
-// Atualiza o documento para incluir o próprio ID
-    await updateDoc(docRef, { docId: docRef.id });
+    await updateDoc(ref, updatedData);
+    console.log("✅ Documento atualizado!");
 
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.C2.validationMessage"],
-        value: ["Documento salvo com sucesso!"],
+        value: ["Dados atualizados com sucesso!"],
       },
     });
+
   } catch (error) {
-    console.error("❌ Erro ao salvar documento:", error);
+    console.error("❌ Erro ao atualizar:", error);
     tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["sc.C2.validationMessage"],
-        value: ["Erro ao salvar dados. Verifique o console."],
+        value: ["Erro ao atualizar. Veja o console."],
       },
     });
+    return;
   }
 
-//clean editChanges
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.C2.forms.editChanges"],
-        value: [""],
-      },
-    });
+  // Limpa formulário
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.C2.forms.editChanges"],
+      value: [""],
+    },
+  });
 
-// Redireciona para tela "c5steps"
-    tools.goTo("c5steps");
+  // Vai para tela
+  tools.goTo("c5steps");
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
