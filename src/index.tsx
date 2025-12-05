@@ -59707,7 +59707,7 @@ color: '#555555',
     });
   }
 
-  clean iptsChanges
+  //clean iptsChanges
   tools.functions.setVar({
     args: "",
     pass: {
