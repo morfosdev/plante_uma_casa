@@ -61522,15 +61522,31 @@ tools.functions.setVar({
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
-        functions.firebase.getDocTool({ args, pass:{
-  arrRefStrings: [
-        `users`, `lUImxGWmkrVkZzIkoWVm`],
-            arrFuncs: [async (...args) =>
+ functions.firebase.where({ args, pass:{
+
+  arrRefStrings: [`users`],
+ arrWhere: [(...args) =>
+        functions.firebase.whereConds({ args, pass:{
+          arrStrings: [
+        `docId`, 
+        `==`, `$var_all.authUser.docId`],
+        }})],
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.C2.form.editChanges`],
           value: [`$arg_callback`]
-        }})],
-        }})]
+        }}), () => {
+  const arr = tools.getCtData("sc.C2.forms.iptsChanges");
+
+  if (Array.isArray(arr) && arr.length > 0) {
+    tools.setData({
+      path: "sc.C2.forms.iptsChanges",
+      value: arr[0]
+    });
+  }
+}],
+ }})]
  , trigger: 'on init'
 }})],
 
