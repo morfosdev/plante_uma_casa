@@ -9193,7 +9193,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Salvar1`
+            `Salvar`
           ],
 
           args,
@@ -10240,7 +10240,10 @@ paddingVertical: 8,
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
-		{ path: "sc.A7.forms.editChanges.firstInstallment", name: "Valor total da entrada" },
+    {
+      path: "sc.A7.forms.editChanges.firstInstallment",
+      name: "Valor total da entrada",
+    },
   ];
 
   const getVal = (path) => {
@@ -10263,34 +10266,36 @@ paddingVertical: 8,
       },
     });
 
-// estado = erro (COR VERMELHA)
+    // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a7.validationColor",
-  value: "red",
-});
+      path: "sc.a7.validationColor",
+      value: "red",
+    });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return;
   }
 
-// estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a7.validationColor",
-  value: "green",
-});
+  // estado = sucesso (COR VERDE)
+  tools.setData({
+    path: "sc.a7.validationColor",
+    value: "green",
+  });
 
   tools.functions.setVar({
     args: "",
     pass: {
       keyPath: ["sc.a7.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
+      value: ["Campos preenchidos corretamente."],
     },
   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-
-// Inicializar Firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -10299,8 +10304,9 @@ tools.setData({
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-// Importa Firestore
-  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
@@ -10317,22 +10323,21 @@ tools.setData({
     return;
   }
 
-// Monta os dados a salvar
+  // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
     userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
-		area: getVal("sc.A7.forms.editChanges.area"),
+    area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
-	updatedAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-// Salva o doc
+    // Salva o doc
     await updateDoc(doc(db, "lots", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
-
 
     tools.functions.setVar({
       args: "",
@@ -10352,7 +10357,7 @@ tools.setData({
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -10378,14 +10383,14 @@ tools.functions.setVar({
     });
   }
 
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: [""],
-      },
-    });
+  //clean validation message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: [""],
+    },
+  });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -18034,7 +18039,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Salvar1`
+            `Salvar`
           ],
 
           args,
@@ -19081,7 +19086,10 @@ paddingVertical: 8,
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
-		{ path: "sc.A7.forms.editChanges.firstInstallment", name: "Valor total da entrada" },
+    {
+      path: "sc.A7.forms.editChanges.firstInstallment",
+      name: "Valor total da entrada",
+    },
   ];
 
   const getVal = (path) => {
@@ -19104,34 +19112,36 @@ paddingVertical: 8,
       },
     });
 
-// estado = erro (COR VERMELHA)
+    // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a7.validationColor",
-  value: "red",
-});
+      path: "sc.a7.validationColor",
+      value: "red",
+    });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return;
   }
 
-// estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a7.validationColor",
-  value: "green",
-});
+  // estado = sucesso (COR VERDE)
+  tools.setData({
+    path: "sc.a7.validationColor",
+    value: "green",
+  });
 
   tools.functions.setVar({
     args: "",
     pass: {
       keyPath: ["sc.a7.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
+      value: ["Campos preenchidos corretamente."],
     },
   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-
-// Inicializar Firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -19140,8 +19150,9 @@ tools.setData({
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-// Importa Firestore
-  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
@@ -19158,22 +19169,21 @@ tools.setData({
     return;
   }
 
-// Monta os dados a salvar
+  // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
     userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
-		area: getVal("sc.A7.forms.editChanges.area"),
+    area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
-	updatedAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-// Salva o doc
+    // Salva o doc
     await updateDoc(doc(db, "lots", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
-
 
     tools.functions.setVar({
       args: "",
@@ -19193,7 +19203,7 @@ tools.setData({
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -19219,14 +19229,14 @@ tools.functions.setVar({
     });
   }
 
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: [""],
-      },
-    });
+  //clean validation message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: [""],
+    },
+  });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -26851,7 +26861,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Salvar1`
+            `Salvar`
           ],
 
           args,
@@ -27898,7 +27908,10 @@ paddingVertical: 8,
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
-		{ path: "sc.A7.forms.editChanges.firstInstallment", name: "Valor total da entrada" },
+    {
+      path: "sc.A7.forms.editChanges.firstInstallment",
+      name: "Valor total da entrada",
+    },
   ];
 
   const getVal = (path) => {
@@ -27921,34 +27934,36 @@ paddingVertical: 8,
       },
     });
 
-// estado = erro (COR VERMELHA)
+    // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a7.validationColor",
-  value: "red",
-});
+      path: "sc.a7.validationColor",
+      value: "red",
+    });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return;
   }
 
-// estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a7.validationColor",
-  value: "green",
-});
+  // estado = sucesso (COR VERDE)
+  tools.setData({
+    path: "sc.a7.validationColor",
+    value: "green",
+  });
 
   tools.functions.setVar({
     args: "",
     pass: {
       keyPath: ["sc.a7.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
+      value: ["Campos preenchidos corretamente."],
     },
   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-
-// Inicializar Firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -27957,8 +27972,9 @@ tools.setData({
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-// Importa Firestore
-  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
@@ -27975,22 +27991,21 @@ tools.setData({
     return;
   }
 
-// Monta os dados a salvar
+  // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
     userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
-		area: getVal("sc.A7.forms.editChanges.area"),
+    area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
-	updatedAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-// Salva o doc
+    // Salva o doc
     await updateDoc(doc(db, "lots", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
-
 
     tools.functions.setVar({
       args: "",
@@ -28010,7 +28025,7 @@ tools.setData({
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -28036,14 +28051,14 @@ tools.functions.setVar({
     });
   }
 
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: [""],
-      },
-    });
+  //clean validation message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: [""],
+    },
+  });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -35550,7 +35565,7 @@ fontWeight: '700',
           ],
 
           children: [
-            `Salvar1`
+            `Salvar`
           ],
 
           args,
@@ -36597,7 +36612,10 @@ paddingVertical: 8,
     { path: "sc.A7.forms.editChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.editChanges.area", name: "Área" },
     { path: "sc.A7.forms.editChanges.totalValue", name: "Valor total da obra" },
-		{ path: "sc.A7.forms.editChanges.firstInstallment", name: "Valor total da entrada" },
+    {
+      path: "sc.A7.forms.editChanges.firstInstallment",
+      name: "Valor total da entrada",
+    },
   ];
 
   const getVal = (path) => {
@@ -36620,34 +36638,36 @@ paddingVertical: 8,
       },
     });
 
-// estado = erro (COR VERMELHA)
+    // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a7.validationColor",
-  value: "red",
-});
+      path: "sc.a7.validationColor",
+      value: "red",
+    });
 
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+    console.warn(
+      "⚠️ Campos vazios detectados:",
+      emptyFields.map((f) => f.name).join(", ")
+    );
     return;
   }
 
-// estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a7.validationColor",
-  value: "green",
-});
+  // estado = sucesso (COR VERDE)
+  tools.setData({
+    path: "sc.a7.validationColor",
+    value: "green",
+  });
 
   tools.functions.setVar({
     args: "",
     pass: {
       keyPath: ["sc.a7.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
+      value: ["Campos preenchidos corretamente."],
     },
   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-
-// Inicializar Firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -36656,8 +36676,9 @@ tools.setData({
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-// Importa Firestore
-  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.A7.forms.editChanges.docId");
@@ -36674,22 +36695,21 @@ tools.setData({
     return;
   }
 
-// Monta os dados a salvar
+  // Monta os dados a salvar
   const updatedDoc = {
     owner: getVal("sc.A7.forms.editChanges.owner"),
     userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
     lot: getVal("sc.A7.forms.editChanges.lot"),
-		area: getVal("sc.A7.forms.editChanges.area"),
+    area: getVal("sc.A7.forms.editChanges.area"),
     totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
     firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
-	updatedAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
   };
 
   try {
-// Salva o doc
+    // Salva o doc
     await updateDoc(doc(db, "lots", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
-
 
     tools.functions.setVar({
       args: "",
@@ -36709,7 +36729,7 @@ tools.setData({
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -36735,14 +36755,14 @@ tools.functions.setVar({
     });
   }
 
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a7.validationMessage"],
-        value: [""],
-      },
-    });
+  //clean validation message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.a7.validationMessage"],
+      value: [""],
+    },
+  });
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
