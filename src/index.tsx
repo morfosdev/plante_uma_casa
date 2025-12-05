@@ -59695,11 +59695,19 @@ color: '#555555',
         `docId`, 
         `==`, `$var_all.authUser.docId`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.C2.forms.iptsChanges`],
           value: [`$arg_callback`]
-        }})],
+        }}), ()=> {
+  const arr = tools.getVar("sc.C2.forms.iptsChanges");
+
+  if (Array.isArray(arr) && arr.length > 0) {
+    tools.setVar("sc.C2.forms.iptsChanges", arr[0]);
+  }
+}
+],
  }})]
  , trigger: 'on init'
 }})],
