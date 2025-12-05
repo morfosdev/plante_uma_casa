@@ -22115,7 +22115,7 @@ fontWeight: '700',
         }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A7.loader`],
-          value: [`false`]
+          value: [false]
         }})],
  }})]
  , trigger: 'on init'
