@@ -61487,6 +61487,15 @@ color: '#555555',
   tools.functions.setVar({
     args: "",
     pass: {
+      keyPath: ["sc.C2.forms.editChanges"],
+      value: [""],
+    },
+  });
+
+//clean validationMessage
+  tools.functions.setVar({
+    args: "",
+    pass: {
       keyPath: ["sc.C2.validationMessage"],
       value: [" "],
     },
