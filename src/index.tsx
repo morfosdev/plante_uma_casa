@@ -59634,14 +59634,14 @@ color: '#555555',
     });
 
     console.warn(
-      "⚠️ Campos vazios detectados:",
+      "Campos vazios detectados:",
       emptyFields.map((f) => f.name).join(", ")
     );
     return; // ⚠️ Interrompe o processo se houver campos vazios
   }
 
   // Se todos os campos estiverem preenchidos
-  message = "✅ Todos os campos foram preenchidos corretamente.";
+  message = "Campos preenchidos corretamente.";
   tools.functions.setVar({
     args: "",
     pass: {
@@ -59693,7 +59693,7 @@ color: '#555555',
       args: "",
       pass: {
         keyPath: ["sc.C2.validationMessage"],
-        value: ["🏢 Documento salvo com sucesso!"],
+        value: ["Documento salvo com sucesso!"],
       },
     });
   } catch (error) {
@@ -59708,11 +59708,20 @@ color: '#555555',
   }
 
   //clean iptsChanges
+  // tools.functions.setVar({
+  //   args: "",
+  //   pass: {
+  //     keyPath: ["sc.C2.forms.iptsChanges"],
+  //     value: [""],
+  //   },
+  // });
+
+  //clean validationMessage
   tools.functions.setVar({
     args: "",
     pass: {
-      keyPath: ["sc.C2.forms.iptsChanges"],
-      value: [""],
+      keyPath: ["sc.C2.validationMessage"],
+      value: [" "],
     },
   });
 
