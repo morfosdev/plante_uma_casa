@@ -58826,7 +58826,7 @@ alignItems: 'center',
 	borderRadius: 250
 }],
 
-      URIvariablePath:[`$var_all.authUser.userImage`],
+      URIvariablePath:[`$var_sc.C2.forms.editChanges.userImage`],
 
       args,
     }}/>, 
