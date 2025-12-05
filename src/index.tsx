@@ -8954,6 +8954,7 @@ fontSize: 12,
 	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
+	textAlign: 'center',
 }`
           ],
 
@@ -10205,6 +10206,7 @@ fontSize: 12,
 	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
+	textAlign: 'center',
 }`
           ],
 
@@ -17793,6 +17795,7 @@ fontSize: 12,
 	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
+	textAlign: 'center',
 }`
           ],
 
@@ -19044,6 +19047,7 @@ fontSize: 12,
 	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
+	textAlign: 'center',
 }`
           ],
 
@@ -26608,6 +26612,7 @@ fontSize: 12,
 	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
+	textAlign: 'center',
 }`
           ],
 
@@ -27859,6 +27864,7 @@ fontSize: 12,
 	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
+	textAlign: 'center',
 }`
           ],
 
@@ -35305,6 +35311,7 @@ fontSize: 12,
 	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
+	textAlign: 'center',
 }`
           ],
 
@@ -36556,6 +36563,7 @@ fontSize: 12,
 	color: '$var_sc.a7.validationColor', 
 	position: 'absolute',
 	top: 346,
+	textAlign: 'center',
 }`
           ],
 
