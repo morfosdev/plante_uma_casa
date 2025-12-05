@@ -5606,21 +5606,21 @@ async (...args) =>
           keyPath: [`sc.A7.forms.currData.condoData`],
           value: [`$arg_item`]
         }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.forms`],
-          value: [`" "`]
-        }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a7list");
         }
-        ]
+        , 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.sideRight`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
