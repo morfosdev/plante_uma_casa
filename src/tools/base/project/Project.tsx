@@ -7,6 +7,9 @@ import { SafeAreaView, Platform, View } from 'react-native';
 import { StatusBar } from 'react-native';
 
 // ---------- import Variables Pack
+import * as FileSystem from "expo-file-system/legacy";
+import * as MediaLibrary from "expo-media-library";
+import * as Sharing from "expo-sharing";
 
 // ---------- import Local Tools
 import { mapElements } from './mapElements';
