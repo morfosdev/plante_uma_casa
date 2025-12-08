@@ -66837,6 +66837,50 @@ fontWeight: '700',
   const arrImages =
     useData((ct) => ct.sc?.C6?.forms?.editChanges?.arrImages) ?? [];
 
+  const getFileNameFromUrl = (url?: string, fallback = "arquivo") => {
+    if (!url) return fallback;
+    try {
+      const lastChunk = url.split("/").pop() || fallback;
+      return lastChunk.split("?")[0] || fallback;
+    } catch {
+      return fallback;
+    }
+  };
+
+  const resolveFileName = (url?: string, fileName?: string) => {
+    // base inicial: usa fileName se veio do Firestore, senão extrai da URL
+    let base =
+      (fileName && fileName.trim()) || getFileNameFromUrl(url, "arquivo");
+
+    // tenta achar extensão já presente no nome
+    let ext = "";
+    const nameExtMatch = base.match(/.(jpg|jpeg|png|pdf)$/i);
+    if (nameExtMatch) {
+      ext = nameExtMatch[0].toLowerCase();
+    }
+
+    // se não tiver extensão no nome, tenta pela URL
+    if (!ext && url) {
+      const urlExtMatch = url.match(/.(jpg|jpeg|png|pdf)/i);
+      if (urlExtMatch) ext = urlExtMatch[0].toLowerCase();
+    }
+
+    // normaliza nome (remove subpastas e caracteres ruins)
+    base = base
+      .replace(/%2F/gi, "_")
+      .replace(///g, "_")
+      .replace(/[^w.-]/g, "_");
+
+    // fallback de extensão
+    if (!ext) ext = ".jpg";
+
+    if (!base.toLowerCase().endsWith(ext)) {
+      base += ext;
+    }
+
+    return { name: base, ext }; // ex: { name: "images_1764_0___.jpg", ext: ".jpg" }
+  };
+
   const { width } = RN.useWindowDimensions();
   const isSmall = width < 200;
 
@@ -66846,24 +66890,132 @@ fontWeight: '700',
       flexWrap: "wrap",
       justifyContent: "space-between",
       padding: 16,
-      // rowGap: 16, // <- RN ignora isso
     },
     img: {
-      width: isSmall ? "100%" : "48%", // deixa 4% livre pro espaço
+      width: isSmall ? "100%" : "48%",
       height: 55,
       borderRadius: 8,
-      marginBottom: 10, // <- gap vertical
+      marginBottom: 10,
     },
   });
 
+  // --------- Native (Android / iOS) ----------
+  const handleDownloadNative = async (url: string, fileName?: string) => {
+    try {
+      if (!url) {
+        RN.Alert.alert("Arquivo inválido", "URL não encontrada.");
+        return;
+      }
+
+      const { name, ext } = resolveFileName(url, fileName);
+      const baseDir = FileSystem.documentDirectory + "downloads/";
+
+      // garante diretório
+      const dirInfo = await FileSystem.getInfoAsync(baseDir);
+      if (!dirInfo.exists) {
+        await FileSystem.makeDirectoryAsync(baseDir, { intermediates: true });
+      }
+
+      const fileUri = baseDir + name;
+      console.log("Baixando para:", fileUri);
+
+      const result = await FileSystem.downloadAsync(url, fileUri);
+      console.log("Download concluído:", result.uri);
+
+      // IMAGENS -> tenta salvar na GALERIA
+      if (ext === ".jpg" || ext === ".jpeg" || ext === ".png") {
+        try {
+          await MediaLibrary.saveToLibraryAsync(result.uri);
+          RN.Alert.alert("Sucesso", `Imagem salva na galeria como `);
+          return;
+        } catch (e) {
+          console.log("Erro ao salvar na galeria, fazendo fallback para share:", e);
+          // se não conseguir salvar na galeria, cai no share sheet
+          if (await Sharing.isAvailableAsync()) {
+            await Sharing.shareAsync(result.uri);
+            return;
+          }
+        }
+      }
+
+      // OUTROS ARQUIVOS (PDF, etc) -> SHARE SHEET
+      if (await Sharing.isAvailableAsync()) {
+        await Sharing.shareAsync(result.uri);
+      } else {
+        RN.Alert.alert(
+          "Download concluído",
+          "Arquivo salvo em: " + result.uri
+        );
+      }
+    } catch (err) {
+      console.log("Erro no download:", err);
+      RN.Alert.alert("Erro", "Não foi possível baixar o arquivo.");
+    }
+  };
+
+  // --------- Web ----------
+  const handleDownloadWeb = async (url: string, fileName?: string) => {
+    if (!url) return;
+
+    const { name } = resolveFileName(url, fileName);
+
+    try {
+      // baixa o arquivo como blob
+      const response = await fetch(url);
+      const blob = await response.blob();
+
+      // cria uma URL temporária para o blob
+      const blobUrl = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = name; // força o nome do arquivo no download
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // libera a URL temporária
+      URL.revokeObjectURL(blobUrl);
+    } catch (err) {
+      console.log("Erro no download web:", err);
+
+      // fallback: abre em nova aba se der algum problema
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
+
+  // --------- Handler unificado ----------
+  const handlePress = (item: any) => {
+    const url = item?.receiptUrl;
+    const name = item?.fileName;
+
+    if (!url) return;
+
+    if (RN.Platform.OS === "web") {
+      handleDownloadWeb(url, name);
+    } else {
+      handleDownloadNative(url, name);
+    }
+  };
+
+  // --------- Render ----------
   return (
     <RN.ScrollView contentContainerStyle={styles.container}>
-      {arrImages.map((item, idx) => (
-        <RN.Image
+      {arrImages.map((item: any, idx: number) => (
+        <RN.Pressable
           key={idx}
-          source={{ uri: item.receiptUrl }}
-          style={styles.img}
-        />
+          onPress={() => handlePress(item)}
+          style={{ width: 100, height: 100 }}
+        >
+          <RN.Image source={{ uri: item?.receiptUrl }} style={styles.img} />
+        </RN.Pressable>
       ))}
     </RN.ScrollView>
   );
