@@ -66865,11 +66865,46 @@ fontWeight: '700',
       if (urlExtMatch) ext = urlExtMatch[0].toLowerCase();
     }
 
+    const cleanFileName = (txt = "") => {
+      let out = "";
+
+      for (let i = 0; i < txt.length; i++) {
+        const ch = txt[i];
+
+        // 1. Trocar "%2F" por "_"
+        if (
+          ch === "%" &&
+          txt[i + 1] === "2" &&
+          (txt[i + 2] === "F" || txt[i + 2] === "f")
+        ) {
+          out += "_"; // substitui por _
+          i += 2; // pula "2F"
+          continue;
+        }
+
+        // 2. Trocar "/" por "_"
+        if (ch === "/") {
+          out += "_";
+          continue;
+        }
+
+        // 3. Permitir somente letras, números, "_", "-", "."
+        const isLetter = (ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z");
+        const isNumber = ch >= "0" && ch <= "9";
+        const isAllowed = ch === "_" || ch === "-" || ch === ".";
+
+        if (isLetter || isNumber || isAllowed) {
+          out += ch;
+        } else {
+          out += "_"; // substitui caracteres inválidos
+        }
+      }
+
+      return out;
+    };
+
     // normaliza nome (remove subpastas e caracteres ruins)
-    base = base
-      .replace(/%2F/gi, "_")
-      .replace(///g, "_")
-      .replace(/[^w.-]/g, "_");
+    base = cleanFileName(base);
 
     // fallback de extensão
     if (!ext) ext = ".jpg";
@@ -66929,7 +66964,10 @@ fontWeight: '700',
           RN.Alert.alert("Sucesso", `Imagem salva na galeria como `);
           return;
         } catch (e) {
-          console.log("Erro ao salvar na galeria, fazendo fallback para share:", e);
+          console.log(
+            "Erro ao salvar na galeria, fazendo fallback para share:",
+            e
+          );
           // se não conseguir salvar na galeria, cai no share sheet
           if (await Sharing.isAvailableAsync()) {
             await Sharing.shareAsync(result.uri);
@@ -66942,10 +66980,7 @@ fontWeight: '700',
       if (await Sharing.isAvailableAsync()) {
         await Sharing.shareAsync(result.uri);
       } else {
-        RN.Alert.alert(
-          "Download concluído",
-          "Arquivo salvo em: " + result.uri
-        );
+        RN.Alert.alert("Download concluído", "Arquivo salvo em: " + result.uri);
       }
     } catch (err) {
       console.log("Erro no download:", err);
@@ -66989,7 +67024,6 @@ fontWeight: '700',
       document.body.removeChild(link);
     }
   };
-
 
   // --------- Handler unificado ----------
   const handlePress = (item: any) => {
