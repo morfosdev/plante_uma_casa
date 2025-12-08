@@ -67116,7 +67116,8 @@ fontWeight: '700',
       }
 
       // Permite apenas letras, números, "_", "-", "."
-      const isLetter = (ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z");
+      const isLetter =
+        (ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z");
       const isNumber = ch >= "0" && ch <= "9";
       const isAllowed = ch === "_" || ch === "-" || ch === ".";
 
@@ -67127,6 +67128,53 @@ fontWeight: '700',
       }
     }
     return out;
+  };
+
+  const resolveDocFileName = (url?: string, fileName?: string) => {
+    let base = (fileName && fileName.trim()) || "arquivo";
+
+    // tenta pegar extensão pelo nome
+    let ext = "";
+    const lower = base.toLowerCase();
+
+    const allowedExt = [
+      ".pdf",
+      ".doc",
+      ".docx",
+      ".xls",
+      ".xlsx",
+      ".zip",
+      ".txt",
+      ".csv",
+    ];
+
+    for (const e of allowedExt) {
+      if (lower.endsWith(e)) {
+        ext = e;
+        break;
+      }
+    }
+
+    // tenta pegar extensão pela URL
+    if (!ext && url) {
+      const urlLower = url.toLowerCase();
+      for (const e of allowedExt) {
+        if (urlLower.includes(e)) {
+          ext = e;
+          break;
+        }
+      }
+    }
+
+    // fallback
+    if (!ext) ext = ".pdf";
+
+    // limpeza sem regex
+    base = cleanFileName(base);
+
+    if (!base.toLowerCase().endsWith(ext)) base += ext;
+
+    return { name: base, ext };
   };
 
   // ---------------------------------------------------------
@@ -67165,44 +67213,6 @@ fontWeight: '700',
     }
   };
 
-  const resolveDocFileName = (url?: string, fileName?: string) => {
-    let base = (fileName && fileName.trim()) || "arquivo";
-
-    // tenta pegar extensão pelo nome
-    let ext = "";
-    const lower = base.toLowerCase();
-
-    const allowedExt = [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".zip"];
-
-    for (const e of allowedExt) {
-      if (lower.endsWith(e)) {
-        ext = e;
-        break;
-      }
-    }
-
-    // tenta pegar extensão pela URL
-    if (!ext && url) {
-      const urlLower = url.toLowerCase();
-      for (const e of allowedExt) {
-        if (urlLower.includes(e)) {
-          ext = e;
-          break;
-        }
-      }
-    }
-
-    // fallback
-    if (!ext) ext = ".pdf";
-
-    // limpeza sem regex
-    base = cleanFileName(base);
-
-    if (!base.toLowerCase().endsWith(ext)) base += ext;
-
-    return { name: base, ext };
-  };
-
   // ---------------------------------------------------------
   // -------------------- DOWNLOAD WEB -----------------------
   // ---------------------------------------------------------
@@ -67213,6 +67223,10 @@ fontWeight: '700',
 
     try {
       const resp = await fetch(url);
+      if (!resp.ok) {
+        throw new Error("HTTP " + resp.status);
+      }
+
       const blob = await resp.blob();
       const blobUrl = URL.createObjectURL(blob);
 
@@ -67226,7 +67240,16 @@ fontWeight: '700',
 
       URL.revokeObjectURL(blobUrl);
     } catch (e) {
-      console.log("Erro web:", e);
+      console.log("Erro web (fetch falhou, usando fallback <a>):", e);
+
+      // Fallback: ainda tenta abrir/baixar usando um <a> simples
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = name;
+      link.target = "_blank"; // se não respeitar o download, pelo menos abre a aba
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   };
 
@@ -67258,7 +67281,8 @@ fontWeight: '700',
       ))}
     </RN.ScrollView>
   );
-}] 
+}
+] 
 }}/>
 , 
 
