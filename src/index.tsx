@@ -67064,7 +67064,201 @@ fontWeight: '700',
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {}] 
+  arrItems: [() => {
+  const arrDocuments =
+    useData((ct) => ct.sc?.C6?.forms?.editChanges?.arrDocuments) ?? [];
+
+  const styles = RN.StyleSheet.create({
+    container: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+      paddingLeft: 16,
+      paddingRight: 16,
+    },
+    doc: {
+      width: "100%",
+      height: 35,
+      borderRadius: 8,
+      marginBottom: 10,
+      borderWidth: 1,
+      borderColor: "#ccc",
+      alignItems: "center",
+      padding: 8,
+    },
+    txt: {
+      fontSize: 12,
+      color: "#666",
+    },
+  });
+
+  const cleanFileName = (txt = "") => {
+    let out = "";
+
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+
+      // Detecta "%2F"
+      if (
+        ch === "%" &&
+        txt[i + 1] === "2" &&
+        (txt[i + 2] === "F" || txt[i + 2] === "f")
+      ) {
+        out += "_";
+        i += 2;
+        continue;
+      }
+
+      // Barra vira "_"
+      if (ch === "/") {
+        out += "_";
+        continue;
+      }
+
+      // Permite apenas letras, números, "_", "-", "."
+      const isLetter = (ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z");
+      const isNumber = ch >= "0" && ch <= "9";
+      const isAllowed = ch === "_" || ch === "-" || ch === ".";
+
+      if (isLetter || isNumber || isAllowed) {
+        out += ch;
+      } else {
+        out += "_";
+      }
+    }
+    return out;
+  };
+
+  // ---------------------------------------------------------
+  // --------- DOWNLOAD NATIVO (PDF, DOC, ZIP etc.) ----------
+  // ---------------------------------------------------------
+  const handleDownloadNative = async (url: string, fileName?: string) => {
+    try {
+      if (!url) {
+        RN.Alert.alert("Arquivo inválido", "URL não encontrada.");
+        return;
+      }
+
+      const { name } = resolveDocFileName(url, fileName);
+      const baseDir = FileSystem.documentDirectory + "downloads_docs/";
+
+      // cria pasta se não existir
+      const dirInfo = await FileSystem.getInfoAsync(baseDir);
+      if (!dirInfo.exists) {
+        await FileSystem.makeDirectoryAsync(baseDir, { intermediates: true });
+      }
+
+      const fileUri = baseDir + name;
+
+      const result = await FileSystem.downloadAsync(url, fileUri);
+      console.log("Download concluído:", result.uri);
+
+      // abre share sheet (PDF, DOC, XLS etc.)
+      if (await Sharing.isAvailableAsync()) {
+        await Sharing.shareAsync(result.uri);
+      } else {
+        RN.Alert.alert("Download concluído", result.uri);
+      }
+    } catch (err) {
+      console.log("Erro download:", err);
+      RN.Alert.alert("Erro", "Não foi possível baixar o documento.");
+    }
+  };
+
+  const resolveDocFileName = (url?: string, fileName?: string) => {
+    let base = (fileName && fileName.trim()) || "arquivo";
+
+    // tenta pegar extensão pelo nome
+    let ext = "";
+    const lower = base.toLowerCase();
+
+    const allowedExt = [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".zip"];
+
+    for (const e of allowedExt) {
+      if (lower.endsWith(e)) {
+        ext = e;
+        break;
+      }
+    }
+
+    // tenta pegar extensão pela URL
+    if (!ext && url) {
+      const urlLower = url.toLowerCase();
+      for (const e of allowedExt) {
+        if (urlLower.includes(e)) {
+          ext = e;
+          break;
+        }
+      }
+    }
+
+    // fallback
+    if (!ext) ext = ".pdf";
+
+    // limpeza sem regex
+    base = cleanFileName(base);
+
+    if (!base.toLowerCase().endsWith(ext)) base += ext;
+
+    return { name: base, ext };
+  };
+
+  // ---------------------------------------------------------
+  // -------------------- DOWNLOAD WEB -----------------------
+  // ---------------------------------------------------------
+  const handleDownloadWeb = async (url: string, fileName?: string) => {
+    if (!url) return;
+
+    const { name } = resolveDocFileName(url, fileName);
+
+    try {
+      const resp = await fetch(url);
+      const blob = await resp.blob();
+      const blobUrl = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = name;
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      URL.revokeObjectURL(blobUrl);
+    } catch (e) {
+      console.log("Erro web:", e);
+    }
+  };
+
+  // ------------------- Handler único -----------------------
+  const handlePress = (item: any) => {
+    const url = item?.fileUrl || item?.receiptUrl;
+    const name = item?.fileName;
+
+    if (!url) return;
+
+    if (RN.Platform.OS === "web") {
+      handleDownloadWeb(url, name);
+    } else {
+      handleDownloadNative(url, name);
+    }
+  };
+
+  // ---------------------- Render ---------------------------
+  return (
+    <RN.ScrollView contentContainerStyle={styles.container}>
+      {arrDocuments.map((item: any, idx: number) => (
+        <RN.Pressable
+          key={idx}
+          style={styles.doc}
+          onPress={() => handlePress(item)}
+        >
+          <RN.Text style={styles.txt}>{item.fileName}</RN.Text>
+        </RN.Pressable>
+      ))}
+    </RN.ScrollView>
+  );
+}] 
 }}/>
 , 
 
