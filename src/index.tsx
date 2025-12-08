@@ -67116,8 +67116,7 @@ fontWeight: '700',
       }
 
       // Permite apenas letras, números, "_", "-", "."
-      const isLetter =
-        (ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z");
+      const isLetter = (ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z");
       const isNumber = ch >= "0" && ch <= "9";
       const isAllowed = ch === "_" || ch === "-" || ch === ".";
 
@@ -67222,7 +67221,9 @@ fontWeight: '700',
     const { name } = resolveDocFileName(url, fileName);
 
     try {
-      const resp = await fetch(url);
+      const proxy =
+        "https://us-central1-flaxboll.cloudfunctions.net/proxyCall?url=";
+      const resp = await fetch(proxy + url);
       if (!resp.ok) {
         throw new Error("HTTP " + resp.status);
       }
@@ -67281,8 +67282,7 @@ fontWeight: '700',
       ))}
     </RN.ScrollView>
   );
-}
-] 
+}] 
 }}/>
 , 
 
