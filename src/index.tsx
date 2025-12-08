@@ -1,8 +1,13 @@
 
 
-          // ---------- import React Packs
-          import React from 'react';
-          import * as RN from 'react-native';
+ // ---------- import React Packs
+ import React from 'react';
+ import * as RN from 'react-native'; 
+
+ import * as FileSystem from 'expo-file-system/legacy'; 
+ import * as MediaLibrary from 'expo-media-library'; 
+ import * as Sharing from 'expo-sharing'; 
+ 
 
           // ---------- import Variables Pack
           import { create } from 'zustand';
@@ -67063,9 +67068,6 @@ fontWeight: '700',
   const arrDocuments =
     useData((ct) => ct.sc?.C6?.forms?.editChanges?.arrDocuments) ?? [];
 
-  // const { width } = RN.useWindowDimensions();
-  // const isSmall = width < 200;
-
   const styles = RN.StyleSheet.create({
     container: {
       flexDirection: "row",
@@ -67090,12 +67092,91 @@ fontWeight: '700',
     },
   });
 
+  // ---------------------------------------------------------
+  // --------- DOWNLOAD NATIVO (PDF, DOC, ZIP etc.) ----------
+  // ---------------------------------------------------------
+  const handleDownloadNative = async (url: string, fileName?: string) => {
+    try {
+      if (!url) {
+        RN.Alert.alert("Arquivo inválido", "URL não encontrada.");
+        return;
+      }
+
+      const { name } = resolveDocFileName(url, fileName);
+      const baseDir = FileSystem.documentDirectory + "downloads_docs/";
+
+      // cria pasta se não existir
+      const dirInfo = await FileSystem.getInfoAsync(baseDir);
+      if (!dirInfo.exists) {
+        await FileSystem.makeDirectoryAsync(baseDir, { intermediates: true });
+      }
+
+      const fileUri = baseDir + name;
+
+      const result = await FileSystem.downloadAsync(url, fileUri);
+      console.log("Download concluído:", result.uri);
+
+      // abre share sheet (PDF, DOC, XLS etc.)
+      if (await Sharing.isAvailableAsync()) {
+        await Sharing.shareAsync(result.uri);
+      } else {
+        RN.Alert.alert("Download concluído", result.uri);
+      }
+
+    } catch (err) {
+      console.log("Erro download:", err);
+      RN.Alert.alert("Erro", "Não foi possível baixar o documento.");
+    }
+  };
+
+  // ---------------------------------------------------------
+  // -------------------- DOWNLOAD WEB -----------------------
+  // ---------------------------------------------------------
+  const handleDownloadWeb = async (url: string, fileName?: string) => {
+    if (!url) return;
+
+    const { name } = resolveDocFileName(url, fileName);
+
+    try {
+      const resp = await fetch(url);
+      const blob = await resp.blob();
+      const blobUrl = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = name;
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      URL.revokeObjectURL(blobUrl);
+    } catch (e) {
+      console.log("Erro web:", e);
+    }
+  };
+
+  // ------------------- Handler único -----------------------
+  const handlePress = (item: any) => {
+    const url = item?.fileUrl || item?.receiptUrl;
+    const name = item?.fileName;
+
+    if (!url) return;
+
+    if (RN.Platform.OS === "web") {
+      handleDownloadWeb(url, name);
+    } else {
+      handleDownloadNative(url, name);
+    }
+  };
+
+  // ---------------------- Render ---------------------------
   return (
     <RN.ScrollView contentContainerStyle={styles.container}>
-      {arrDocuments.map((item, idx) => (
-        <RN.View key={idx} style={styles.doc}>
+      {arrDocuments.map((item: any, idx: number) => (
+        <RN.Pressable key={idx} style={styles.doc} onPress={() => handlePress(item)}>
           <RN.Text style={styles.txt}>{item.fileName}</RN.Text>
-        </RN.View>
+        </RN.Pressable>
       ))}
     </RN.ScrollView>
   );
