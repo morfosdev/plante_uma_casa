@@ -17,6 +17,7 @@ import { Platform, SafeAreaView, StatusBar } from "react-native";
 
 // ---------- import Local Tools
 import { usePushNotifications } from "../../customs/usePushNotifications";
+import { getCtData } from "./getCtData";
 import { goTo } from "./goTo";
 import { mapElements } from "./mapElements";
 import { setData } from "./setData";
@@ -36,15 +37,16 @@ export const Project = ({ configData }: Tprops) => {
   const { screens, arrInitFuncs } = configData;
   const condWeb = Platform.OS === "web";
   const fallbackData = { expoPushToken: null, notification: null };
+  console.log({ fallbackData });
   const { expoPushToken } = usePushNotifications() ?? fallbackData;
 
   // ---------- call Redirects (If Exists)
   // ---------- quando o token mudar, salva no Firestore
   React.useEffect(() => {
     if (!expoPushToken) return;
-    console.log({ expoPushToken });
-    
+
     const run = async () => {
+      console.log({ expoPushToken });
       await saveExpoPushTokenToUser(expoPushToken);
     };
 
@@ -112,7 +114,13 @@ export async function saveExpoPushTokenToUser(expoPushToken: string | null) {
       return;
     }
 
-    const auth = getAuth();
+    const fbInit = getCtData("all.temp.fireInit");
+    if (!fbInit) {
+      console.log("saveExpoPushTokenToUser: fireInit não encontrado, abortando");
+      return;
+    }
+
+    const auth = getAuth(fbInit);
     const user = auth.currentUser;
 
     if (!user) {
@@ -120,10 +128,9 @@ export async function saveExpoPushTokenToUser(expoPushToken: string | null) {
       return;
     }
 
-    const db = getFirestore();
+    const db = getFirestore(fbInit); // usa mesma app
     const userRef = doc(db, "users", user.uid);
 
-    // Modelo com vários devices por usuário
     await setDoc(
       userRef,
       {
