@@ -1,2 +1,2 @@
 
-undefined
+export const usePushNotifications = () => {};
