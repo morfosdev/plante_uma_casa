@@ -1,5 +1,5 @@
 
-import JSON5 from 'json5';
+import JSON5 from "json5";
 import React from "react";
 import * as RN from "react-native";
 
@@ -10,6 +10,7 @@ import { getApps, initializeApp, type FirebaseApp } from "firebase/app";
 import {
   getAuth,
   GoogleAuthProvider,
+  signInWithCredential,
   signInWithPopup,
   signInWithRedirect,
   type Auth,
@@ -57,9 +58,7 @@ const getFirebaseApp = (): FirebaseApp | null => {
   return initializeApp(rawConfig);
 };
 
-const normalizeConfigs = (
-  rawConfigs: TLoginPass["configs"]
-): TLoginConfigs => {
+const normalizeConfigs = (rawConfigs: TLoginPass["configs"]): TLoginConfigs => {
   let parsed: any = rawConfigs;
 
   if (Array.isArray(parsed)) parsed = parsed[0];
@@ -83,6 +82,7 @@ const normalizeConfigs = (
 // =========================================
 export const LoginNative = (_props: { pass?: TLoginPass }) => {
   const [loading, setLoading] = React.useState(false);
+  const pass = _props?.pass ?? {};
 
   // Somente Android nativo
   const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
@@ -91,16 +91,49 @@ export const LoginNative = (_props: { pass?: TLoginPass }) => {
   });
 
   React.useEffect(() => {
-    if (!response) return;
-    setLoading(false);
+    const run = async () => {
+      if (!response) return;
 
-    if (response.type === "success") {
-      const idToken = response.params?.id_token as string | undefined;
-      console.log("[LoginAndroid] id_token:", idToken);
-      // -> autentique no backend/Firebase se desejar
-    } else if (response.type === "error") {
-      console.error("[LoginAndroid] error:", (response as any)?.error);
-    }
+      setLoading(false);
+
+      if (response.type === "success") {
+        try {
+          const idToken = response.params?.id_token;
+          console.log("[LoginAndroid] id_token:", idToken);
+
+          const fbApp = getFirebaseApp();
+          if (!fbApp) {
+            console.error("[LoginAndroid] Firebase app não encontrado.");
+            return;
+          }
+
+          const auth = getAuth(fbApp);
+
+          const credential = GoogleAuthProvider.credential(idToken);
+
+          const result = await signInWithCredential(auth, credential);
+          console.log("[LoginAndroid] Firebase user:", result.user);
+
+          // salva no banco
+          const dbResult = await setUserDB(result.user, auth);
+          if (dbResult.status !== "success") {
+            throw new Error(dbResult.message);
+          }
+
+          // executa callbacks
+          const arrFuncs = Array.isArray(pass.arrFuncs) ? pass.arrFuncs : [];
+          for (const currFunc of arrFuncs) await currFunc(dbResult.data);
+        } catch (err) {
+          console.error("[LoginAndroid] login error:", err);
+        }
+      }
+
+      if (response.type === "error") {
+        console.error("[LoginAndroid] error:", (response as any).error);
+      }
+    };
+
+    run();
   }, [response]);
 
   const handlePress = async () => {
@@ -155,63 +188,63 @@ const LoginWeb = (props: { pass?: TLoginPass }) => {
 
   const [loading, setLoading] = React.useState(false);
 
-const handleLogin = async () => {
-  try {
-    setLoading(true);
-
-    const fbApp = getFirebaseApp();
-    if (!fbApp)
-      throw new Error("Firebase config nao encontrado para inicializar.");
-
-    const auth = getAuth(fbApp);
-    const provider = new GoogleAuthProvider();
-    provider.setCustomParameters({ prompt: "select_account" });
-
-    let result;
-
+  const handleLogin = async () => {
     try {
-      // 1) Tenta popup
-      result = await signInWithPopup(auth, provider);
-    } catch (popupErr: any) {
-      console.warn("[LoginWeb] erro no popup:", popupErr?.code, popupErr);
+      setLoading(true);
 
-      // Só cai para redirect se for erro tipico de popup
-      const code = popupErr?.code as string | undefined;
-      const popupIssues = [
-        "auth/popup-blocked",
-        "auth/popup-closed-by-user",
-        "auth/cancelled-popup-request",
-      ];
+      const fbApp = getFirebaseApp();
+      if (!fbApp)
+        throw new Error("Firebase config nao encontrado para inicializar.");
 
-      if (code && popupIssues.includes(code)) {
-        console.log("[LoginWeb] tentando fluxo de redirect...");
-        await signInWithRedirect(auth, provider);
-        return; // o resto sera tratado no useEffect (getRedirectResult)
+      const auth = getAuth(fbApp);
+      const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: "select_account" });
+
+      let result;
+
+      try {
+        // 1) Tenta popup
+        result = await signInWithPopup(auth, provider);
+      } catch (popupErr: any) {
+        console.warn("[LoginWeb] erro no popup:", popupErr?.code, popupErr);
+
+        // Só cai para redirect se for erro tipico de popup
+        const code = popupErr?.code as string | undefined;
+        const popupIssues = [
+          "auth/popup-blocked",
+          "auth/popup-closed-by-user",
+          "auth/cancelled-popup-request",
+        ];
+
+        if (code && popupIssues.includes(code)) {
+          console.log("[LoginWeb] tentando fluxo de redirect...");
+          await signInWithRedirect(auth, provider);
+          return; // o resto sera tratado no useEffect (getRedirectResult)
+        }
+
+        // Se for outro erro → propaga
+        throw popupErr;
       }
 
-      // Se for outro erro → propaga
-      throw popupErr;
-    }
+      // Se chegou aqui, popup funcionou
+      if (!result?.user) {
+        throw new Error("Resultado do login (popup) sem user.");
+      }
 
-    // Se chegou aqui, popup funcionou
-    if (!result?.user) {
-      throw new Error("Resultado do login (popup) sem user.");
-    }
+      const dbResult = await setUserDB(result.user, auth);
+      if (dbResult.status !== "success") {
+        throw new Error(
+          dbResult.message ?? "Falha ao salvar usuario no banco."
+        );
+      }
 
-    const dbResult = await setUserDB(result.user, auth);
-    if (dbResult.status !== "success") {
-      throw new Error(
-        dbResult.message ?? "Falha ao salvar usuario no banco."
-      );
+      for (const currFunc of arrFuncs) await currFunc(dbResult.data, args);
+    } catch (err) {
+      console.error("Erro no login Google (web):", err);
+    } finally {
+      setLoading(false);
     }
-
-    for (const currFunc of arrFuncs) await currFunc(dbResult.data, args);
-  } catch (err) {
-    console.error("Erro no login Google (web):", err);
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   const defaultBtnStyle = {
     paddingVertical: 12,
@@ -330,7 +363,7 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
   const userDocSnap = await getDoc(userDocRef);
 
   const userExists = userDocSnap.exists();
-  
+
   if (userExists) {
     const fullRegister = userDocSnap.data().fullRegister;
 
@@ -364,4 +397,3 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
   // Fallback
   return { status: "success", data: userToSet };
 };
-
