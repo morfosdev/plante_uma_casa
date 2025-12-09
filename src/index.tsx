@@ -25,9 +25,12 @@
  import * as stls from './tools/base/stls';
  import { tools } from './tools';
 
-  // import { usePushNotifications } from './src/tools/customs/usePushNotifications';       
+  // import { usePushNotifications } from './tools/customs/usePushNotifications';       
  // ---------- set Caps Inputs
  const currRoute = 'ab0login';
+
+ // const { expoPushToken, notification } = usePushNotifications();
+ // console.log({ expoPushToken, notification });
 
           let args: any = [];
 
