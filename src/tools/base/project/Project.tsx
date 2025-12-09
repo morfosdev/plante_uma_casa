@@ -35,14 +35,15 @@ export const Project = ({ configData }: Tprops) => {
   // ---------- set Data
   const { screens, arrInitFuncs } = configData;
   const condWeb = Platform.OS === "web";
-  const { expoPushToken } = usePushNotifications();
-  // console.log({ expoPushToken, notification });
+  const fallbackData = { expoPushToken: null, notification: null };
+  const { expoPushToken } = usePushNotifications() ?? fallbackData;
 
   // ---------- call Redirects (If Exists)
   // ---------- quando o token mudar, salva no Firestore
   React.useEffect(() => {
     if (!expoPushToken) return;
-
+    console.log({ expoPushToken });
+    
     const run = async () => {
       await saveExpoPushTokenToUser(expoPushToken);
     };
