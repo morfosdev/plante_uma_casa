@@ -1,5 +1,6 @@
 
-// // src/hooks/usePushNotifications.ts
+export const usePushNotifications = () => {};
+// src/hooks/usePushNotifications.ts
 // import * as Device from "expo-device";
 // import * as Notifications from "expo-notifications";
 // import { useEffect, useRef, useState } from "react";
