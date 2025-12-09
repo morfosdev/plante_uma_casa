@@ -2,22 +2,25 @@
 // ---------- import Local Tools
 
 // ----------- JS Functions
-export { usePushNotifications } from './usePushNotifications';
-// export { checkCurrSecondsValue } from './checkCurrSecondsValue';
-// export { checkInitData } from './checkInitData';
-// export { currencyString } from './currencyString';
-// export { processCheckout } from './processCheckout';
+import { usePushNotifications } from "./usePushNotifications";
+// import { checkCurrSecondsValue } from './checkCurrSecondsValue';
+// import { checkInitData } from './checkInitData';
+// import { currencyString } from './currencyString';
+// import { processCheckout } from './processCheckout';
 
 // ----- generic names
 
 // ----------- JSX
-// export { BtnUpdateAmount } from './BtnUpdateAmount';
+// import { BtnUpdateAmount } from './BtnUpdateAmount';
 
-// export { CountTimer } from './CountTimer';
-// export { IptPicker } from './IptPicker';
-// export { MapPlaces } from './MapPlaces';
-// export { Shadows } from './Shadows';
-// export { Watcher } from './Watcher';
+// import { CountTimer } from './CountTimer';
+// import { IptPicker } from './IptPicker';
+// import { MapPlaces } from './MapPlaces';
+// import { Shadows } from './Shadows';
+// import { Watcher } from './Watcher';
 
 // ----- generic names
-// export { FilePicker } from './FilePicker';
+// import { FilePicker } from './FilePicker';
+export const customs = {
+  usePushNotifications,
+};
