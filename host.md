@@ -3,6 +3,7 @@
 
 <!-- comands (Host) -->
 npx expo export --platform web
+npx firebase-tools deploy --only hosting
 
 a0login
 c1login
