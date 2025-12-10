@@ -1,4 +1,5 @@
 
+
 import JSON5 from "json5";
 import React from "react";
 import * as RN from "react-native";
@@ -304,8 +305,7 @@ export const Login = (props: TProps) => {
 };
 
 const setUserDB = async (user: any, authFromLogin?: Auth) => {
-  // Fictitious function to persist user data in the database
-  console.log("Salvando usuario no banco de dados:", user);
+  console.log("Início SetUserDB - Parametro recebido", user);
 
   // Importa Firestore e salva o documento
   const { displayName, email, photoURL, uid } = user;
@@ -415,7 +415,6 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
     // Fallback
     return { status: "success", data: userToSet };
   } 
-  // ERRO de pre-registramento
   else {
     console.log("Nenhum pre-registrado encontrado para o usuario.");
 
