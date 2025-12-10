@@ -9006,12 +9006,18 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
   const requiredFields = [
-    { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
+    {
+      path: "sc.A7.forms.iptsChanges.partnerName",
+      name: "Nome do Proprietário",
+    },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
-    { path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+    {
+      path: "sc.A7.forms.iptsChanges.firstInstallment",
+      name: "Valor total da entrada",
+    },
   ];
 
   const getVal = (path) => {
@@ -9034,21 +9040,21 @@ paddingVertical: 8,
       },
     });
 
-// estado = erro (COR VERMELHA)
+    // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a7.validationColor",
-  value: "red",
-});
+      path: "sc.a7.validationColor",
+      value: "red",
+    });
 
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
     return;
   }
 
-// estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a7.validationColor",
-  value: "green",
-});
+  // estado = sucesso (COR VERDE)
+  tools.setData({
+    path: "sc.a7.validationColor",
+    value: "green",
+  });
 
   console.log("💾 Iniciando salvamento no Firebase...");
 
@@ -9108,14 +9114,14 @@ tools.setData({
     console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
     console.log("🆕 Criando novo usuário...");
-    const newUserRef = doc(collection(db, "users"));
+    const newUserRef = doc(collection(db, "preRegisteredUsers"));
     ownerId = newUserRef.id;
 
     await setDoc(newUserRef, {
-      docId: ownerId,
+      createdAt: serverTimestamp(),
+      typeAccount: "app",
       userEmail: email,
       userName: name,
-      createdAt: serverTimestamp(),
     });
 
     console.log("Novo usuário criado com docId:", ownerId);
@@ -9171,13 +9177,13 @@ tools.setData({
   });
 
   //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.forms"],
+      value: [" "],
+    },
+  });
 
   tools.functions.setVar({
     args: "",
@@ -9187,8 +9193,7 @@ tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-}
-]
+};]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -17852,12 +17857,18 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
   const requiredFields = [
-    { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
+    {
+      path: "sc.A7.forms.iptsChanges.partnerName",
+      name: "Nome do Proprietário",
+    },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
-    { path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+    {
+      path: "sc.A7.forms.iptsChanges.firstInstallment",
+      name: "Valor total da entrada",
+    },
   ];
 
   const getVal = (path) => {
@@ -17880,21 +17891,21 @@ paddingVertical: 8,
       },
     });
 
-// estado = erro (COR VERMELHA)
+    // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a7.validationColor",
-  value: "red",
-});
+      path: "sc.a7.validationColor",
+      value: "red",
+    });
 
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
     return;
   }
 
-// estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a7.validationColor",
-  value: "green",
-});
+  // estado = sucesso (COR VERDE)
+  tools.setData({
+    path: "sc.a7.validationColor",
+    value: "green",
+  });
 
   console.log("💾 Iniciando salvamento no Firebase...");
 
@@ -17954,14 +17965,14 @@ tools.setData({
     console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
     console.log("🆕 Criando novo usuário...");
-    const newUserRef = doc(collection(db, "users"));
+    const newUserRef = doc(collection(db, "preRegisteredUsers"));
     ownerId = newUserRef.id;
 
     await setDoc(newUserRef, {
-      docId: ownerId,
+      createdAt: serverTimestamp(),
+      typeAccount: "app",
       userEmail: email,
       userName: name,
-      createdAt: serverTimestamp(),
     });
 
     console.log("Novo usuário criado com docId:", ownerId);
@@ -18017,13 +18028,13 @@ tools.setData({
   });
 
   //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.forms"],
+      value: [" "],
+    },
+  });
 
   tools.functions.setVar({
     args: "",
@@ -18033,8 +18044,7 @@ tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-}
-]
+};]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -26674,12 +26684,18 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
   const requiredFields = [
-    { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
+    {
+      path: "sc.A7.forms.iptsChanges.partnerName",
+      name: "Nome do Proprietário",
+    },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
-    { path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+    {
+      path: "sc.A7.forms.iptsChanges.firstInstallment",
+      name: "Valor total da entrada",
+    },
   ];
 
   const getVal = (path) => {
@@ -26702,21 +26718,21 @@ paddingVertical: 8,
       },
     });
 
-// estado = erro (COR VERMELHA)
+    // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a7.validationColor",
-  value: "red",
-});
+      path: "sc.a7.validationColor",
+      value: "red",
+    });
 
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
     return;
   }
 
-// estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a7.validationColor",
-  value: "green",
-});
+  // estado = sucesso (COR VERDE)
+  tools.setData({
+    path: "sc.a7.validationColor",
+    value: "green",
+  });
 
   console.log("💾 Iniciando salvamento no Firebase...");
 
@@ -26776,14 +26792,14 @@ tools.setData({
     console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
     console.log("🆕 Criando novo usuário...");
-    const newUserRef = doc(collection(db, "users"));
+    const newUserRef = doc(collection(db, "preRegisteredUsers"));
     ownerId = newUserRef.id;
 
     await setDoc(newUserRef, {
-      docId: ownerId,
+      createdAt: serverTimestamp(),
+      typeAccount: "app",
       userEmail: email,
       userName: name,
-      createdAt: serverTimestamp(),
     });
 
     console.log("Novo usuário criado com docId:", ownerId);
@@ -26839,13 +26855,13 @@ tools.setData({
   });
 
   //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.forms"],
+      value: [" "],
+    },
+  });
 
   tools.functions.setVar({
     args: "",
@@ -26855,8 +26871,7 @@ tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-}
-]
+};]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -35378,12 +35393,18 @@ paddingVertical: 8,
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
   const requiredFields = [
-    { path: "sc.A7.forms.iptsChanges.partnerName", name: "Nome do Proprietário" },
+    {
+      path: "sc.A7.forms.iptsChanges.partnerName",
+      name: "Nome do Proprietário",
+    },
     { path: "sc.A7.forms.iptsChanges.partnerMail", name: "E-mail" },
     { path: "sc.A7.forms.iptsChanges.lot", name: "Obra" },
     { path: "sc.A7.forms.iptsChanges.area", name: "Área" },
     { path: "sc.A7.forms.iptsChanges.totalValue", name: "Valor total da obra" },
-    { path: "sc.A7.forms.iptsChanges.firstInstallment", name: "Valor total da entrada" },
+    {
+      path: "sc.A7.forms.iptsChanges.firstInstallment",
+      name: "Valor total da entrada",
+    },
   ];
 
   const getVal = (path) => {
@@ -35406,21 +35427,21 @@ paddingVertical: 8,
       },
     });
 
-// estado = erro (COR VERMELHA)
+    // estado = erro (COR VERMELHA)
     tools.setData({
-  path: "sc.a7.validationColor",
-  value: "red",
-});
+      path: "sc.a7.validationColor",
+      value: "red",
+    });
 
     console.warn("Campos vazios:", emptyFields.map((f) => f.name).join(", "));
     return;
   }
 
-// estado = sucesso (COR VERDE)
-tools.setData({
-  path: "sc.a7.validationColor",
-  value: "green",
-});
+  // estado = sucesso (COR VERDE)
+  tools.setData({
+    path: "sc.a7.validationColor",
+    value: "green",
+  });
 
   console.log("💾 Iniciando salvamento no Firebase...");
 
@@ -35480,14 +35501,14 @@ tools.setData({
     console.log("✅ Usuário existente encontrado:", ownerId);
   } else {
     console.log("🆕 Criando novo usuário...");
-    const newUserRef = doc(collection(db, "users"));
+    const newUserRef = doc(collection(db, "preRegisteredUsers"));
     ownerId = newUserRef.id;
 
     await setDoc(newUserRef, {
-      docId: ownerId,
+      createdAt: serverTimestamp(),
+      typeAccount: "app",
       userEmail: email,
       userName: name,
-      createdAt: serverTimestamp(),
     });
 
     console.log("Novo usuário criado com docId:", ownerId);
@@ -35543,13 +35564,13 @@ tools.setData({
   });
 
   //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["all.toggles.forms"],
+      value: [" "],
+    },
+  });
 
   tools.functions.setVar({
     args: "",
@@ -35559,8 +35580,7 @@ tools.functions.setVar({
     args: "",
     pass: { keyPath: ["sc.a7.validationMessage"], value: [""] },
   });
-}
-]
+};]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
