@@ -68530,12 +68530,15 @@ fontWeight: '700',
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const data = useData((ct) => ct?.sc?.C7?.currents?.currLoteData);
+  console.log("progressbar", { data });
 
   // --- Progress
   const total = data?.numberOfInstallments || 0;
   const receipts = data?.receipts || {};
+  console.log("progressbar", { receipts });
   const count = Object.keys(receipts).length;
   const progress = total > 0 ? count / total : 0;
+  console.log("progressbar", { progress });
 
   const [grayWidthPx, setGrayWidthPx] = React.useState(0);
 
