@@ -68533,7 +68533,7 @@ fontWeight: '700',
   console.log("progressbar", { data });
 
   // --- Progress
-  const total = data?.numberOfInstallments || 0;
+  const total = Object.values(data?.installments).length || 0;
   const receipts = data?.receipts || {};
   console.log("progressbar", { receipts });
   const count = Object.keys(receipts).length;
