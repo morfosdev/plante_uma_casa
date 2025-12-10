@@ -43579,7 +43579,9 @@ async (...args) =>
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
+  console.log("%cuserId a atualizar:", css1, { userId });
   const data = tools.getCtData("sc.B9.forms.editChanges");
+  console.log("%cuserId a atualizar:", css1, { data });
 
   try {
     // ------ set Check Fields
@@ -44390,7 +44392,9 @@ async (...args) =>
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
+  console.log("%cuserId a atualizar:", css1, { userId });
   const data = tools.getCtData("sc.B9.forms.editChanges");
+  console.log("%cuserId a atualizar:", css1, { data });
 
   try {
     // ------ set Check Fields
@@ -48763,7 +48767,9 @@ async (...args) =>
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
+  console.log("%cuserId a atualizar:", css1, { userId });
   const data = tools.getCtData("sc.B9.forms.editChanges");
+  console.log("%cuserId a atualizar:", css1, { data });
 
   try {
     // ------ set Check Fields
@@ -49574,7 +49580,9 @@ async (...args) =>
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
+  console.log("%cuserId a atualizar:", css1, { userId });
   const data = tools.getCtData("sc.B9.forms.editChanges");
+  console.log("%cuserId a atualizar:", css1, { data });
 
   try {
     // ------ set Check Fields
@@ -57422,7 +57430,9 @@ async (...args) =>
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
+  console.log("%cuserId a atualizar:", css1, { userId });
   const data = tools.getCtData("sc.B9.forms.editChanges");
+  console.log("%cuserId a atualizar:", css1, { data });
 
   try {
     // ------ set Check Fields
@@ -58233,7 +58243,9 @@ async (...args) =>
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
+  console.log("%cuserId a atualizar:", css1, { userId });
   const data = tools.getCtData("sc.B9.forms.editChanges");
+  console.log("%cuserId a atualizar:", css1, { data });
 
   try {
     // ------ set Check Fields
