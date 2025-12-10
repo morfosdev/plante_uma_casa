@@ -9115,7 +9115,7 @@ paddingVertical: 8,
   } else {
     console.log("🆕 Criando novo usuário...");
     const newUserRef = doc(collection(db, "preRegisteredUsers"));
-    ownerId = newUserRef.id;
+    // ownerId = newUserRef.id;
 
     await setDoc(newUserRef, {
       createdAt: serverTimestamp(),
@@ -17968,7 +17968,7 @@ paddingVertical: 8,
   } else {
     console.log("🆕 Criando novo usuário...");
     const newUserRef = doc(collection(db, "preRegisteredUsers"));
-    ownerId = newUserRef.id;
+    // ownerId = newUserRef.id;
 
     await setDoc(newUserRef, {
       createdAt: serverTimestamp(),
@@ -26813,7 +26813,7 @@ paddingVertical: 8,
   } else {
     console.log("🆕 Criando novo usuário...");
     const newUserRef = doc(collection(db, "preRegisteredUsers"));
-    ownerId = newUserRef.id;
+    // ownerId = newUserRef.id;
 
     await setDoc(newUserRef, {
       createdAt: serverTimestamp(),
@@ -35524,7 +35524,7 @@ paddingVertical: 8,
   } else {
     console.log("🆕 Criando novo usuário...");
     const newUserRef = doc(collection(db, "preRegisteredUsers"));
-    ownerId = newUserRef.id;
+    // ownerId = newUserRef.id;
 
     await setDoc(newUserRef, {
       createdAt: serverTimestamp(),
