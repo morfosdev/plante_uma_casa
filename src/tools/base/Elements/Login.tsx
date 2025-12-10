@@ -363,7 +363,7 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
   const q2 = query(preRegCol, where("userEmail", "==", email));
   const searchPreReg = await getDocs(q2);
   const preRegExists = searchPreReg.docs.length > 0;
-  
+
   // SE pre-registrado existe, cria/atualiza user
   if (preRegExists) {
     const preRegDoc = searchPreReg.docs[0];
@@ -412,10 +412,15 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
       await setDoc(userDocRef, userToSet);
     }
 
+    // Atualiza lote com ownerId
+    if (lotId) {
+      const lotDocRef = doc(lotsCol, lotId);
+      await updateDoc(lotDocRef, { ownerId: uid });
+    }
+
     // Fallback
     return { status: "success", data: userToSet };
-  } 
-  else {
+  } else {
     console.log("Nenhum pre-registrado encontrado para o usuario.");
 
     return {
