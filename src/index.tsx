@@ -22978,7 +22978,10 @@ left: 4,
   const data = useData((ct) => ct?.sc?.A9?.currents?.currLoteData);
 
   // --- Progress
-  const total = data?.numberOfInstallments || 0;
+  const total = data?.installments
+    ? Object.values(data?.installments).length
+    : 0;
+
   const receipts = data?.receipts || {};
   const count = Object.keys(receipts).length;
   const progress = total > 0 ? count / total : 0;
@@ -22994,7 +22997,7 @@ left: 4,
   };
 
   const stlGreenBar: RN.ViewStyle = {
-    width: grayWidthPx * progress,   // <-- número, sem literal
+    width: grayWidthPx * progress, // <-- número, sem literal
     height: 6,
     backgroundColor: "#315e2d",
     borderRadius: 10,
