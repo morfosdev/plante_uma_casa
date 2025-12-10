@@ -1,6 +1,4 @@
 
-
-
 import JSON5 from "json5";
 import React from "react";
 import * as RN from "react-native";
@@ -370,7 +368,7 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
   if (preRegExists) {
     const preRegDoc = searchPreReg.docs[0];
     const preRegData = preRegDoc.data();
-    console.log("Pre-registrado encontrado para o usuario:", preRegData);
+    console.log("Pre-registro encontrado para o usuario:", preRegData);
 
     // ---- USERS
     const usersCol = collection(db, "users");
@@ -423,7 +421,7 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
     return {
       status: "error",
       data: null,
-      message: "Usuario nao pre-registrado.",
+      message: "Usuario não cadastrado. Contate o administrador.",
     };
   }
 };
