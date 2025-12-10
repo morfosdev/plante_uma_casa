@@ -58712,6 +58712,9 @@ tools.setData({path: "sc.C1.forms.message", value: user.message});
 
   console.log({ fullRegister });
 
+	tools.setData({path: "sc.C1.forms.error", value: false});	
+tools.setData({path: "sc.C1.forms.message",value: ""});
+
   if (fullRegister) {
     tools.goTo("c5steps");
   }
@@ -58720,6 +58723,62 @@ tools.setData({path: "sc.C1.forms.message", value: user.message});
   }
 }], args 
  }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.C1.forms.error", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{ color: "red", textAlign: "center" }`
+          ],
+
+          children: [
+            `$var_sc.C1.forms.message`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
