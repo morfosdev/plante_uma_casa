@@ -357,43 +357,72 @@ const setUserDB = async (user: any, authFromLogin?: Auth) => {
     console.log("Nenhum lote encontrado para o usuario.");
   }
 
-  // ---- USERS
-  const usersCol = collection(db, "users");
-  const userDocRef = doc(usersCol, uid);
-  const userDocSnap = await getDoc(userDocRef);
+  // ---- PREREGISTERED USERS
+  // ---- BARRAR SE ADM NÃO ADICIONOU O USUÁRIO ANTES
+  const preRegCol = collection(db, "preRegisteredUsers");
+  const q2 = query(preRegCol, where("userEmail", "==", email));
+  const searchPreReg = await getDocs(q2);
+  const preRegExists = searchPreReg.docs.length > 0;
+  
+  // SE pre-registrado existe, cria/atualiza user
+  if (preRegExists) {
+    const preRegDoc = searchPreReg.docs[0];
+    const preRegData = preRegDoc.data();
+    console.log("Pre-registrado encontrado para o usuario:", preRegData);
 
-  const userExists = userDocSnap.exists();
+    // ---- USERS
+    const usersCol = collection(db, "users");
+    const userDocRef = doc(usersCol, uid);
+    const userDocSnap = await getDoc(userDocRef);
+    console.log("Xx userDocSnap:", "users", uid);
 
-  if (userExists) {
-    const fullRegister = userDocSnap.data().fullRegister;
+    const userExists = userDocSnap.exists();
 
-    userToSet = {
-      updatedAt: serverTimestamp(),
-      ...userData,
+    console.log("Xx userDocSnap:", userExists);
 
-      fullRegister,
-      condoId: condoId ?? null,
-      lotId: lotId ?? null,
+    if (userExists) {
+      const fullRegister = userDocSnap.data().fullRegister;
+
+      userToSet = {
+        updatedAt: serverTimestamp(),
+        ...userData,
+
+        fullRegister,
+        condoId: condoId ?? null,
+        lotId: lotId ?? null,
+      };
+
+      // Atualiza documento existente
+      await updateDoc(userDocRef, userToSet);
+      console.log("Usuario atualizado no banco de dados.");
+    }
+
+    if (!userExists) {
+      userToSet = {
+        createdAt: serverTimestamp(),
+        ...userData,
+
+        typeAccount: "app",
+        fullRegister: false,
+        condoId: condoId ?? null,
+        lotId: lotId ?? null,
+        steps: {},
+      };
+      console.log("Novo usuario adicionado ao banco de dados.");
+      await setDoc(userDocRef, userToSet);
+    }
+
+    // Fallback
+    return { status: "success", data: userToSet };
+  } 
+  // ERRO de pre-registramento
+  else {
+    console.log("Nenhum pre-registrado encontrado para o usuario.");
+
+    return {
+      status: "error",
+      data: null,
+      message: "Usuario nao pre-registrado.",
     };
-
-    // Atualiza documento existente
-    await updateDoc(userDocRef, userToSet);
-    console.log("Usuario atualizado no banco de dados.");
-  } else {
-    userToSet = {
-      createdAt: serverTimestamp(),
-      ...userData,
-
-      fullRegister: false,
-      typeAccount: "partner",
-      condoId: condoId ?? null,
-      lotId: lotId ?? null,
-      steps: {},
-    };
-    console.log("Novo usuario adicionado ao banco de dados.");
-    await setDoc(userDocRef, userToSet);
   }
-
-  // Fallback
-  return { status: "success", data: userToSet };
 };
