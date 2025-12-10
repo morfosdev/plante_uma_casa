@@ -67015,6 +67015,7 @@ fontWeight: '700',
 
   const { width } = RN.useWindowDimensions();
   const isSmall = width < 200;
+  const itemWidth = isSmall ? "100%" : "48%";
 
   const styles = RN.StyleSheet.create({
     container: {
@@ -67028,6 +67029,10 @@ fontWeight: '700',
       height: 55,
       borderRadius: 8,
       marginBottom: 10,
+    },
+    pressable: {
+      width: itemWidth,
+      marginBottom: 16,
     },
   });
 
@@ -67143,7 +67148,7 @@ fontWeight: '700',
         <RN.Pressable
           key={idx}
           onPress={() => handlePress(item)}
-          style={{ width: 100, height: 100 }}
+          style={styles.pressable}
         >
           <RN.Image source={{ uri: item?.receiptUrl }} style={styles.img} />
         </RN.Pressable>
