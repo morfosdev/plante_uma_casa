@@ -58686,6 +58686,13 @@ color: '#555555',
 }`], arrFuncs: [(user, args) => {
   console.log("Flax Custom Auth", { user, args });
 
+if(user?.status === "error"){ 
+	tools.setData({path: "sc.C1.forms.error", value: true});	
+tools.setData({path: "sc.C1.forms.message", value: user.message});
+
+	return;
+}
+
   const path = "all.authUser";
   const value = { ...user };
   delete value.updateAt;
