@@ -22975,15 +22975,27 @@ left: 4,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  const data = useData((ct) => ct?.sc?.A9?.currents?.currLoteData);
+  const data = useData((ct) => ct?.sc?.A9?.currents?.currLoteData) || {};
 
-  // --- Progress
-  const total = data?.installments
-    ? Object.values(data?.installments).length
+  // --- Total de parcelas (installments)
+  const installmentsObj = data?.installments;
+  const total = installmentsObj && typeof installmentsObj === "object"
+    ? Object.values(installmentsObj).length
     : 0;
 
-  const receipts = data?.receipts || {};
-  const count = Object.keys(receipts).length;
+  // --- Receipts válidos (somente os que têm receiptUrl string não vazia)
+  const receiptsObj = data?.receipts;
+  const validReceipts =
+    receiptsObj && typeof receiptsObj === "object"
+      ? Object.values(receiptsObj).filter((rc: any) => {
+          const url = rc?.receiptUrl;
+          return typeof url === "string" && url.trim().length > 0;
+        })
+      : [];
+
+  const count = validReceipts.length;
+
+  // --- Progress
   const progress = total > 0 ? count / total : 0;
 
   const [grayWidthPx, setGrayWidthPx] = React.useState(0);
@@ -22997,7 +23009,7 @@ left: 4,
   };
 
   const stlGreenBar: RN.ViewStyle = {
-    width: grayWidthPx * progress, // <-- número, sem literal
+    width: grayWidthPx * progress,
     height: 6,
     backgroundColor: "#315e2d",
     borderRadius: 10,
@@ -23007,7 +23019,8 @@ left: 4,
     <RN.View
       style={stlGrayBar}
       onLayout={(ev) => {
-        setGrayWidthPx(ev.nativeEvent.layout.width);
+        const w = ev?.nativeEvent?.layout?.width;
+        if (typeof w === "number") setGrayWidthPx(w);
       }}
     >
       <RN.View style={stlGreenBar} />
