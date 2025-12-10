@@ -67025,7 +67025,7 @@ fontWeight: '700',
       padding: 16,
     },
     img: {
-      width: isSmall ? "100%" : "48%",
+      width: "100%",
       height: 55,
       borderRadius: 8,
       marginBottom: 10,
