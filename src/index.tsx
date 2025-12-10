@@ -9139,6 +9139,8 @@ paddingVertical: 8,
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     condoId: condoId,
     createdAt: serverTimestamp(),
+    installments: {},
+    receipts: {},
   };
 
   try {
@@ -17990,6 +17992,8 @@ paddingVertical: 8,
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     condoId: condoId,
     createdAt: serverTimestamp(),
+    installments: {},
+    receipts: {},
   };
 
   try {
@@ -26833,6 +26837,8 @@ paddingVertical: 8,
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     condoId: condoId,
     createdAt: serverTimestamp(),
+    installments: {},
+    receipts: {},
   };
 
   try {
@@ -35542,6 +35548,8 @@ paddingVertical: 8,
     firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
     condoId: condoId,
     createdAt: serverTimestamp(),
+    installments: {},
+    receipts: {},
   };
 
   try {
