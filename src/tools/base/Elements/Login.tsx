@@ -1,5 +1,6 @@
 
 
+
 import JSON5 from "json5";
 import React from "react";
 import * as RN from "react-native";
@@ -234,6 +235,7 @@ const LoginWeb = (props: { pass?: TLoginPass }) => {
 
       const dbResult = await setUserDB(result.user, auth);
       if (dbResult.status !== "success") {
+        for (const currFunc of arrFuncs) await currFunc(dbResult, args);
         throw new Error(
           dbResult.message ?? "Falha ao salvar usuario no banco."
         );
