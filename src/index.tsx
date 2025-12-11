@@ -23361,9 +23361,14 @@ shadowRadius: 4,
     if (RN.Platform.OS === "web" && typeof document !== "undefined") {
       const link = document.createElement("a");
       link.href = uri;
-
+      link.download = filename || "imagem" + '.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
       return;
     }
+
+    RN.Linking.openURL(uri);
   };
 
   // ===== retorno =====
