@@ -44390,6 +44390,64 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.B9.forms.error", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+		color: 'red',
+}`
+          ],
+
+          children: [
+            `$var_sc.B9.forms.errMsg`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ 
 backgroundColor: "#315E2D", 
 borderRadius: 20, 
@@ -44397,6 +44455,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -49518,6 +49577,64 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.B9.forms.error", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+		color: 'red',
+}`
+          ],
+
+          children: [
+            `$var_sc.B9.forms.errMsg`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ 
 backgroundColor: "#315E2D", 
 borderRadius: 20, 
@@ -49525,6 +49642,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -58121,6 +58239,64 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.B9.forms.error", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+		color: 'red',
+}`
+          ],
+
+          children: [
+            `$var_sc.B9.forms.errMsg`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ 
 backgroundColor: "#315E2D", 
 borderRadius: 20, 
@@ -58128,6 +58304,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
