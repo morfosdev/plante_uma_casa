@@ -6443,6 +6443,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -7679,6 +7680,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -9000,6 +9002,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -10247,6 +10250,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -11102,6 +11106,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -12210,6 +12215,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -12998,11 +13004,106 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
+  // ---------------- função auxiliar: vincular condomínio a parceiro já existente
+  const vincularCondoEmUserExistente = async (params: {
+    email: string;
+    condoId: string;
+    fbInit: any;
+  }) => {
+    const { email, condoId, fbInit } = params;
+    console.log("Vinculando condomínio a usuário já existente:", {
+      email,
+      condoId,
+    });
+
+    const {
+      getFirestore,
+      collection,
+      query,
+      where,
+      getDocs,
+      doc,
+      updateDoc,
+      arrayUnion,
+    } = await import("firebase/firestore");
+
+    const db = fbInit ? getFirestore(fbInit) : getFirestore();
+
+    if (!condoId) {
+      console.warn("Nenhum condoId selecionado para vincular.");
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Nenhum condomínio selecionado para vincular.",
+      });
+      return;
+    }
+
+    const q = query(
+      collection(db, "users"),
+      where("userEmail", "==", email)
+    );
+
+    const snap = await getDocs(q);
+
+    if (snap.empty) {
+      console.warn("Usuário existe no Auth, mas não está em 'users'.");
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value:
+          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
+      });
+      return;
+    }
+
+    const userDoc = snap.docs[0];
+    const uid = userDoc.id;
+    const userRef = doc(db, "users", uid);
+
+    await updateDoc(userRef, {
+      condoIds: arrayUnion(condoId),
+    });
+
+    console.log("Condomínio vinculado ao user existente:", {
+      uid,
+      condoId,
+    });
+
+    // feedback de sucesso
+    tools.setData({ path: "sc.A12.forms.showErr", value: false });
+    tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
+    tools.setData({
+      path: "sc.A12.forms.msgs.msg1",
+      value: "Condomínio vinculado ao parceiro existente!",
+    });
+
+    const delay = () => {
+      tools.setData({ path: "all.toggles.sideRight", value: false });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
+      tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
+      tools.setData({
+        path: "sc.A12.forms.iptsChanges",
+        value: { partnerName: "", partnerMail: "", partnerActivity: "" },
+      });
+    };
+
+    setTimeout(delay, 2500);
+  };
+  // ---------------- fim função auxiliar
+
   try {
     const pathName = "sc.A12.forms.iptsChanges.partnerName";
     const pathEmail = "sc.A12.forms.iptsChanges.partnerMail";
@@ -13033,34 +13134,33 @@ paddingVertical: 8,
       return;
     }
 
+    const condoId =
+      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+    if (!condoId) {
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Selecione um condomínio antes de salvar.",
+      });
+      return;
+    }
+
     // Auth
     const {
       getAuth,
       createUserWithEmailAndPassword,
       updateProfile,
-      sendEmailVerification,
       sendPasswordResetEmail,
-      fetchSignInMethodsForEmail,
     } = await import("firebase/auth");
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
-    // ---- Pré-checagem opcional: já existe?
-    const methods = await fetchSignInMethodsForEmail(auth, email);
-    console.log({ methods });
-    if (methods.length > 0) {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
-      });
-      return; // quebra o fluxo
-    }
-
-    const tempPass = "123456"; // ou gere uma senha aleatória
+    const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
+
+    // ====== TENTA CRIAR USUÁRIO NO AUTH ======
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
 
@@ -13068,18 +13168,17 @@ paddingVertical: 8,
       await updateProfile(cred.user, { displayName: name });
     }
 
-    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    // ====== CRIAR DOC EM 'users' PARA NOVO USUÁRIO ======
     {
-      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
+      const {
+        getFirestore,
+        doc,
+        setDoc,
+        serverTimestamp,
+      } = await import("firebase/firestore");
       const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
       const uid = cred.user.uid;
-
-      // >>> PEGAR O VALOR DO CONDO
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
       const dataToSet = {
         docId: uid,
@@ -13089,15 +13188,18 @@ paddingVertical: 8,
         userImage: cred.user.photoURL || "",
         partnerActivity,
         typeAccount: "partner",
-        condoId: condoId,
+        condoId: condoId,      // se ainda precisar manter legado
+        condoIds: [condoId],   // novo array
       };
 
       await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado:", { uid, dataToSet });
+      console.log("users doc criado/atualizado (novo parceiro):", {
+        uid,
+        dataToSet,
+      });
     }
-    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    // (opcional) enviar verificação
+    // enviar e-mail para definir senha
     const host = "http://localhost:5173";
     // const host = "http://projeto-plante-uma-casa.web.app";
 
@@ -13105,7 +13207,6 @@ paddingVertical: 8,
       url: host + "/auth/complete-signup",
       handleCodeInApp: false,
     };
-    // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: "sc.A12.forms.showErr", value: false });
@@ -13115,17 +13216,15 @@ paddingVertical: 8,
       value: "Usuário criado com sucesso!",
     });
 
-    // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
-      //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -13134,15 +13233,17 @@ tools.functions.setVar({
     };
 
     setTimeout(delay, 2500);
-
-    // sucesso...
   } catch (e: any) {
+    console.log("Erro ao criar usuário:", e?.code, e?.message);
+
     if (e?.code === "auth/email-already-in-use") {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
-      });
+      const email =
+        (tools.getCtData("sc.A12.forms.iptsChanges.partnerMail") ?? "").trim();
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+      const fbInit = tools.getCtData("all.temp.fireInit");
+
+      await vincularCondoEmUserExistente({ email, condoId, fbInit });
       return;
     }
 
@@ -14455,6 +14556,8 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	maxWidth: 125,
+	minWidth: 110
 }`],
 
             functions:[async (...args) =>
@@ -15296,6 +15399,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -16532,6 +16636,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -17853,6 +17958,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -19100,6 +19206,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -19955,6 +20062,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -21063,6 +21171,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -21851,11 +21960,106 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
+  // ---------------- função auxiliar: vincular condomínio a parceiro já existente
+  const vincularCondoEmUserExistente = async (params: {
+    email: string;
+    condoId: string;
+    fbInit: any;
+  }) => {
+    const { email, condoId, fbInit } = params;
+    console.log("Vinculando condomínio a usuário já existente:", {
+      email,
+      condoId,
+    });
+
+    const {
+      getFirestore,
+      collection,
+      query,
+      where,
+      getDocs,
+      doc,
+      updateDoc,
+      arrayUnion,
+    } = await import("firebase/firestore");
+
+    const db = fbInit ? getFirestore(fbInit) : getFirestore();
+
+    if (!condoId) {
+      console.warn("Nenhum condoId selecionado para vincular.");
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Nenhum condomínio selecionado para vincular.",
+      });
+      return;
+    }
+
+    const q = query(
+      collection(db, "users"),
+      where("userEmail", "==", email)
+    );
+
+    const snap = await getDocs(q);
+
+    if (snap.empty) {
+      console.warn("Usuário existe no Auth, mas não está em 'users'.");
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value:
+          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
+      });
+      return;
+    }
+
+    const userDoc = snap.docs[0];
+    const uid = userDoc.id;
+    const userRef = doc(db, "users", uid);
+
+    await updateDoc(userRef, {
+      condoIds: arrayUnion(condoId),
+    });
+
+    console.log("Condomínio vinculado ao user existente:", {
+      uid,
+      condoId,
+    });
+
+    // feedback de sucesso
+    tools.setData({ path: "sc.A12.forms.showErr", value: false });
+    tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
+    tools.setData({
+      path: "sc.A12.forms.msgs.msg1",
+      value: "Condomínio vinculado ao parceiro existente!",
+    });
+
+    const delay = () => {
+      tools.setData({ path: "all.toggles.sideRight", value: false });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
+      tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
+      tools.setData({
+        path: "sc.A12.forms.iptsChanges",
+        value: { partnerName: "", partnerMail: "", partnerActivity: "" },
+      });
+    };
+
+    setTimeout(delay, 2500);
+  };
+  // ---------------- fim função auxiliar
+
   try {
     const pathName = "sc.A12.forms.iptsChanges.partnerName";
     const pathEmail = "sc.A12.forms.iptsChanges.partnerMail";
@@ -21886,34 +22090,33 @@ paddingVertical: 8,
       return;
     }
 
+    const condoId =
+      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+    if (!condoId) {
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Selecione um condomínio antes de salvar.",
+      });
+      return;
+    }
+
     // Auth
     const {
       getAuth,
       createUserWithEmailAndPassword,
       updateProfile,
-      sendEmailVerification,
       sendPasswordResetEmail,
-      fetchSignInMethodsForEmail,
     } = await import("firebase/auth");
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
-    // ---- Pré-checagem opcional: já existe?
-    const methods = await fetchSignInMethodsForEmail(auth, email);
-    console.log({ methods });
-    if (methods.length > 0) {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
-      });
-      return; // quebra o fluxo
-    }
-
-    const tempPass = "123456"; // ou gere uma senha aleatória
+    const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
+
+    // ====== TENTA CRIAR USUÁRIO NO AUTH ======
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
 
@@ -21921,18 +22124,17 @@ paddingVertical: 8,
       await updateProfile(cred.user, { displayName: name });
     }
 
-    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    // ====== CRIAR DOC EM 'users' PARA NOVO USUÁRIO ======
     {
-      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
+      const {
+        getFirestore,
+        doc,
+        setDoc,
+        serverTimestamp,
+      } = await import("firebase/firestore");
       const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
       const uid = cred.user.uid;
-
-      // >>> PEGAR O VALOR DO CONDO
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
       const dataToSet = {
         docId: uid,
@@ -21942,15 +22144,18 @@ paddingVertical: 8,
         userImage: cred.user.photoURL || "",
         partnerActivity,
         typeAccount: "partner",
-        condoId: condoId,
+        condoId: condoId,      // se ainda precisar manter legado
+        condoIds: [condoId],   // novo array
       };
 
       await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado:", { uid, dataToSet });
+      console.log("users doc criado/atualizado (novo parceiro):", {
+        uid,
+        dataToSet,
+      });
     }
-    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    // (opcional) enviar verificação
+    // enviar e-mail para definir senha
     const host = "http://localhost:5173";
     // const host = "http://projeto-plante-uma-casa.web.app";
 
@@ -21958,7 +22163,6 @@ paddingVertical: 8,
       url: host + "/auth/complete-signup",
       handleCodeInApp: false,
     };
-    // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: "sc.A12.forms.showErr", value: false });
@@ -21968,17 +22172,15 @@ paddingVertical: 8,
       value: "Usuário criado com sucesso!",
     });
 
-    // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
-      //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -21987,15 +22189,17 @@ tools.functions.setVar({
     };
 
     setTimeout(delay, 2500);
-
-    // sucesso...
   } catch (e: any) {
+    console.log("Erro ao criar usuário:", e?.code, e?.message);
+
     if (e?.code === "auth/email-already-in-use") {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
-      });
+      const email =
+        (tools.getCtData("sc.A12.forms.iptsChanges.partnerMail") ?? "").trim();
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+      const fbInit = tools.getCtData("all.temp.fireInit");
+
+      await vincularCondoEmUserExistente({ email, condoId, fbInit });
       return;
     }
 
@@ -23286,7 +23490,11 @@ shadowRadius: 4,
   console.log("Botão Recibo 3", installmentId);
 
   // Só considera inválido se for null/undefined/string vazia
-  if (installmentId === null || installmentId === undefined || installmentId === "") {
+  if (
+    installmentId === null ||
+    installmentId === undefined ||
+    installmentId === ""
+  ) {
     console.log("Botão Recibo ERRO: installmentId inválido");
     return (
       <RN.Pressable>
@@ -23302,14 +23510,14 @@ shadowRadius: 4,
     ? tools.getCtData("sc.A9.currents.currLoteData.receipts")
     : null;
 
-  const safeReceipts =
-    receipts && typeof receipts === "object" ? receipts : {};
+  const safeReceipts = receipts && typeof receipts === "object" ? receipts : {};
 
   console.log("Botão Recibo 4", safeReceipts);
 
   // ===== currReceipt =====
   const currReceipt =
-    safeReceipts && Object.prototype.hasOwnProperty.call(safeReceipts, installmentId)
+    safeReceipts &&
+    Object.prototype.hasOwnProperty.call(safeReceipts, installmentId)
       ? safeReceipts[installmentId]
       : null;
 
@@ -23320,6 +23528,10 @@ shadowRadius: 4,
     currReceipt && typeof currReceipt === "object"
       ? currReceipt.receiptUrl || null
       : null;
+  const fileName =
+    currReceipt && typeof currReceipt === "object"
+      ? currReceipt.fileName || "recibo"
+      : "recibo";
 
   console.log("Botão Recibo 6", receiptUrl);
 
@@ -23331,13 +23543,28 @@ shadowRadius: 4,
   };
 
   // ===== função de download (web) =====
-  const baixarRecibo = (url) => {
-    if (!url || typeof url !== "string") return;
-    try {
-      window.open(url, "_blank");
-    } catch (err) {
-      console.log("Erro ao abrir URL do recibo:", err);
+//   const baixarRecibo = (url) => {
+//     if (!url || typeof url !== "string") return;
+//     try {
+//       window.open(url, "_blank");
+//     } catch (err) {
+//       console.log("Erro ao abrir URL do recibo:", err);
+//     }
+//   };
+  const handleDownload = (uri: string, filename: string) => {
+    if (!uri) return;
+
+    if (RN.Platform.OS === "web" && typeof document !== "undefined") {
+      const link = document.createElement("a");
+      link.href = uri;
+      link.download = filename || "imagem" + '.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      return;
     }
+
+    RN.Linking.openURL(uri);
   };
 
   // ===== retorno =====
@@ -23345,7 +23572,7 @@ shadowRadius: 4,
     <RN.Pressable
       onPress={() => {
         console.log("Clicou no botão de recibo");
-        if (receiptUrl) baixarRecibo(receiptUrl);
+        if (receiptUrl) handleDownload(receiptUrl, fileName);
       }}
     >
       <RN.Text style={condStyle}>↪</RN.Text>
@@ -24141,6 +24368,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -25377,6 +25605,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -26698,6 +26927,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -27945,6 +28175,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -28800,6 +29031,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -29908,6 +30140,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -30696,11 +30929,106 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
+  // ---------------- função auxiliar: vincular condomínio a parceiro já existente
+  const vincularCondoEmUserExistente = async (params: {
+    email: string;
+    condoId: string;
+    fbInit: any;
+  }) => {
+    const { email, condoId, fbInit } = params;
+    console.log("Vinculando condomínio a usuário já existente:", {
+      email,
+      condoId,
+    });
+
+    const {
+      getFirestore,
+      collection,
+      query,
+      where,
+      getDocs,
+      doc,
+      updateDoc,
+      arrayUnion,
+    } = await import("firebase/firestore");
+
+    const db = fbInit ? getFirestore(fbInit) : getFirestore();
+
+    if (!condoId) {
+      console.warn("Nenhum condoId selecionado para vincular.");
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Nenhum condomínio selecionado para vincular.",
+      });
+      return;
+    }
+
+    const q = query(
+      collection(db, "users"),
+      where("userEmail", "==", email)
+    );
+
+    const snap = await getDocs(q);
+
+    if (snap.empty) {
+      console.warn("Usuário existe no Auth, mas não está em 'users'.");
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value:
+          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
+      });
+      return;
+    }
+
+    const userDoc = snap.docs[0];
+    const uid = userDoc.id;
+    const userRef = doc(db, "users", uid);
+
+    await updateDoc(userRef, {
+      condoIds: arrayUnion(condoId),
+    });
+
+    console.log("Condomínio vinculado ao user existente:", {
+      uid,
+      condoId,
+    });
+
+    // feedback de sucesso
+    tools.setData({ path: "sc.A12.forms.showErr", value: false });
+    tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
+    tools.setData({
+      path: "sc.A12.forms.msgs.msg1",
+      value: "Condomínio vinculado ao parceiro existente!",
+    });
+
+    const delay = () => {
+      tools.setData({ path: "all.toggles.sideRight", value: false });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
+      tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
+      tools.setData({
+        path: "sc.A12.forms.iptsChanges",
+        value: { partnerName: "", partnerMail: "", partnerActivity: "" },
+      });
+    };
+
+    setTimeout(delay, 2500);
+  };
+  // ---------------- fim função auxiliar
+
   try {
     const pathName = "sc.A12.forms.iptsChanges.partnerName";
     const pathEmail = "sc.A12.forms.iptsChanges.partnerMail";
@@ -30731,34 +31059,33 @@ paddingVertical: 8,
       return;
     }
 
+    const condoId =
+      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+    if (!condoId) {
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Selecione um condomínio antes de salvar.",
+      });
+      return;
+    }
+
     // Auth
     const {
       getAuth,
       createUserWithEmailAndPassword,
       updateProfile,
-      sendEmailVerification,
       sendPasswordResetEmail,
-      fetchSignInMethodsForEmail,
     } = await import("firebase/auth");
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
-    // ---- Pré-checagem opcional: já existe?
-    const methods = await fetchSignInMethodsForEmail(auth, email);
-    console.log({ methods });
-    if (methods.length > 0) {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
-      });
-      return; // quebra o fluxo
-    }
-
-    const tempPass = "123456"; // ou gere uma senha aleatória
+    const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
+
+    // ====== TENTA CRIAR USUÁRIO NO AUTH ======
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
 
@@ -30766,18 +31093,17 @@ paddingVertical: 8,
       await updateProfile(cred.user, { displayName: name });
     }
 
-    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    // ====== CRIAR DOC EM 'users' PARA NOVO USUÁRIO ======
     {
-      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
+      const {
+        getFirestore,
+        doc,
+        setDoc,
+        serverTimestamp,
+      } = await import("firebase/firestore");
       const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
       const uid = cred.user.uid;
-
-      // >>> PEGAR O VALOR DO CONDO
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
       const dataToSet = {
         docId: uid,
@@ -30787,15 +31113,18 @@ paddingVertical: 8,
         userImage: cred.user.photoURL || "",
         partnerActivity,
         typeAccount: "partner",
-        condoId: condoId,
+        condoId: condoId,      // se ainda precisar manter legado
+        condoIds: [condoId],   // novo array
       };
 
       await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado:", { uid, dataToSet });
+      console.log("users doc criado/atualizado (novo parceiro):", {
+        uid,
+        dataToSet,
+      });
     }
-    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    // (opcional) enviar verificação
+    // enviar e-mail para definir senha
     const host = "http://localhost:5173";
     // const host = "http://projeto-plante-uma-casa.web.app";
 
@@ -30803,7 +31132,6 @@ paddingVertical: 8,
       url: host + "/auth/complete-signup",
       handleCodeInApp: false,
     };
-    // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: "sc.A12.forms.showErr", value: false });
@@ -30813,17 +31141,15 @@ paddingVertical: 8,
       value: "Usuário criado com sucesso!",
     });
 
-    // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
-      //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -30832,15 +31158,17 @@ tools.functions.setVar({
     };
 
     setTimeout(delay, 2500);
-
-    // sucesso...
   } catch (e: any) {
+    console.log("Erro ao criar usuário:", e?.code, e?.message);
+
     if (e?.code === "auth/email-already-in-use") {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
-      });
+      const email =
+        (tools.getCtData("sc.A12.forms.iptsChanges.partnerMail") ?? "").trim();
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+      const fbInit = tools.getCtData("all.temp.fireInit");
+
+      await vincularCondoEmUserExistente({ email, condoId, fbInit });
       return;
     }
 
@@ -32852,6 +33180,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -34088,6 +34417,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -35409,6 +35739,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -36656,6 +36987,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -37511,6 +37843,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -38619,6 +38952,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -39407,11 +39741,106 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
+  // ---------------- função auxiliar: vincular condomínio a parceiro já existente
+  const vincularCondoEmUserExistente = async (params: {
+    email: string;
+    condoId: string;
+    fbInit: any;
+  }) => {
+    const { email, condoId, fbInit } = params;
+    console.log("Vinculando condomínio a usuário já existente:", {
+      email,
+      condoId,
+    });
+
+    const {
+      getFirestore,
+      collection,
+      query,
+      where,
+      getDocs,
+      doc,
+      updateDoc,
+      arrayUnion,
+    } = await import("firebase/firestore");
+
+    const db = fbInit ? getFirestore(fbInit) : getFirestore();
+
+    if (!condoId) {
+      console.warn("Nenhum condoId selecionado para vincular.");
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Nenhum condomínio selecionado para vincular.",
+      });
+      return;
+    }
+
+    const q = query(
+      collection(db, "users"),
+      where("userEmail", "==", email)
+    );
+
+    const snap = await getDocs(q);
+
+    if (snap.empty) {
+      console.warn("Usuário existe no Auth, mas não está em 'users'.");
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value:
+          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
+      });
+      return;
+    }
+
+    const userDoc = snap.docs[0];
+    const uid = userDoc.id;
+    const userRef = doc(db, "users", uid);
+
+    await updateDoc(userRef, {
+      condoIds: arrayUnion(condoId),
+    });
+
+    console.log("Condomínio vinculado ao user existente:", {
+      uid,
+      condoId,
+    });
+
+    // feedback de sucesso
+    tools.setData({ path: "sc.A12.forms.showErr", value: false });
+    tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
+    tools.setData({
+      path: "sc.A12.forms.msgs.msg1",
+      value: "Condomínio vinculado ao parceiro existente!",
+    });
+
+    const delay = () => {
+      tools.setData({ path: "all.toggles.sideRight", value: false });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
+      tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
+      tools.setData({
+        path: "sc.A12.forms.iptsChanges",
+        value: { partnerName: "", partnerMail: "", partnerActivity: "" },
+      });
+    };
+
+    setTimeout(delay, 2500);
+  };
+  // ---------------- fim função auxiliar
+
   try {
     const pathName = "sc.A12.forms.iptsChanges.partnerName";
     const pathEmail = "sc.A12.forms.iptsChanges.partnerMail";
@@ -39442,34 +39871,33 @@ paddingVertical: 8,
       return;
     }
 
+    const condoId =
+      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+    if (!condoId) {
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Selecione um condomínio antes de salvar.",
+      });
+      return;
+    }
+
     // Auth
     const {
       getAuth,
       createUserWithEmailAndPassword,
       updateProfile,
-      sendEmailVerification,
       sendPasswordResetEmail,
-      fetchSignInMethodsForEmail,
     } = await import("firebase/auth");
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
-    // ---- Pré-checagem opcional: já existe?
-    const methods = await fetchSignInMethodsForEmail(auth, email);
-    console.log({ methods });
-    if (methods.length > 0) {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
-      });
-      return; // quebra o fluxo
-    }
-
-    const tempPass = "123456"; // ou gere uma senha aleatória
+    const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
+
+    // ====== TENTA CRIAR USUÁRIO NO AUTH ======
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
 
@@ -39477,18 +39905,17 @@ paddingVertical: 8,
       await updateProfile(cred.user, { displayName: name });
     }
 
-    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
+    // ====== CRIAR DOC EM 'users' PARA NOVO USUÁRIO ======
     {
-      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
+      const {
+        getFirestore,
+        doc,
+        setDoc,
+        serverTimestamp,
+      } = await import("firebase/firestore");
       const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
       const uid = cred.user.uid;
-
-      // >>> PEGAR O VALOR DO CONDO
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
       const dataToSet = {
         docId: uid,
@@ -39498,15 +39925,18 @@ paddingVertical: 8,
         userImage: cred.user.photoURL || "",
         partnerActivity,
         typeAccount: "partner",
-        condoId: condoId,
+        condoId: condoId,      // se ainda precisar manter legado
+        condoIds: [condoId],   // novo array
       };
 
       await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado:", { uid, dataToSet });
+      console.log("users doc criado/atualizado (novo parceiro):", {
+        uid,
+        dataToSet,
+      });
     }
-    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    // (opcional) enviar verificação
+    // enviar e-mail para definir senha
     const host = "http://localhost:5173";
     // const host = "http://projeto-plante-uma-casa.web.app";
 
@@ -39514,7 +39944,6 @@ paddingVertical: 8,
       url: host + "/auth/complete-signup",
       handleCodeInApp: false,
     };
-    // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: "sc.A12.forms.showErr", value: false });
@@ -39524,17 +39953,15 @@ paddingVertical: 8,
       value: "Usuário criado com sucesso!",
     });
 
-    // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
-      //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -39543,15 +39970,17 @@ tools.functions.setVar({
     };
 
     setTimeout(delay, 2500);
-
-    // sucesso...
   } catch (e: any) {
+    console.log("Erro ao criar usuário:", e?.code, e?.message);
+
     if (e?.code === "auth/email-already-in-use") {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
-      });
+      const email =
+        (tools.getCtData("sc.A12.forms.iptsChanges.partnerMail") ?? "").trim();
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+      const fbInit = tools.getCtData("all.temp.fireInit");
+
+      await vincularCondoEmUserExistente({ email, condoId, fbInit });
       return;
     }
 
@@ -43583,6 +44012,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -43604,6 +44050,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -43941,7 +44390,6 @@ color: '#555555',
             styles: [],
             arrProps: [],
             arrItems: [
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -44343,6 +44791,57 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.B9.forms.error", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+		color: 'red',
+}`
+          ],
+
+          children: [
+            `$var_sc.B9.forms.errMsg`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ 
 backgroundColor: "#315E2D", 
 borderRadius: 20, 
@@ -44350,6 +44849,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -44396,6 +44896,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -44417,6 +44934,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -44533,105 +45053,6 @@ fontWeight: '700',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "transparent", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, urls) => {
-	
-	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = tools.getCtData(path) ?? [];
-const value = [...oldUrls, ...urls];
-console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path,value });
-}],
- }}), 
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [(args, urls) => {
-	const path = "sc.C8.forms.editChanges.arrDocuments";
-	const oldUrls = tools.getCtData(path) ?? [];
-    const value = urls;
-    console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path, value });
-}],
- }}), async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
-  console.log("%cstepId a atualizar:", css1, { stepId });
-  const userId = tools.getCtData("sc.B9.currents.currId1");
-  const data = tools.getCtData("sc.B9.forms.editChanges");
-
-  try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
-
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
-
-    await updateDoc(refDoc, dataToUpdate);
-
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.b9.editSteps";
-    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
-
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "users." + newId,
-      dataToUpdate,
-    });
-  } catch (err) {
-    console.error("Erro do updateDoc", { err });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
@@ -45702,6 +46123,8 @@ shadowRadius: 4,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	maxWidth: 125,
+	minWidth: 110
 }`],
 
             functions:[async (...args) =>
@@ -48771,6 +49194,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -48792,6 +49232,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -49129,7 +49572,6 @@ color: '#555555',
             styles: [],
             arrProps: [],
             arrItems: [
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -49531,6 +49973,57 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.B9.forms.error", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+		color: 'red',
+}`
+          ],
+
+          children: [
+            `$var_sc.B9.forms.errMsg`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ 
 backgroundColor: "#315E2D", 
 borderRadius: 20, 
@@ -49538,6 +50031,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -49584,6 +50078,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -49605,6 +50116,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -49721,105 +50235,6 @@ fontWeight: '700',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "transparent", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, urls) => {
-	
-	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = tools.getCtData(path) ?? [];
-const value = [...oldUrls, ...urls];
-console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path,value });
-}],
- }}), 
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [(args, urls) => {
-	const path = "sc.C8.forms.editChanges.arrDocuments";
-	const oldUrls = tools.getCtData(path) ?? [];
-    const value = urls;
-    console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path, value });
-}],
- }}), async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
-  console.log("%cstepId a atualizar:", css1, { stepId });
-  const userId = tools.getCtData("sc.B9.currents.currId1");
-  const data = tools.getCtData("sc.B9.forms.editChanges");
-
-  try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
-
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
-
-    await updateDoc(refDoc, dataToUpdate);
-
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.b9.editSteps";
-    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
-
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "users." + newId,
-      dataToUpdate,
-    });
-  } catch (err) {
-    console.error("Erro do updateDoc", { err });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
@@ -57434,6 +57849,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -57455,6 +57887,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -57792,7 +58227,6 @@ color: '#555555',
             styles: [],
             arrProps: [],
             arrItems: [
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -58194,6 +58628,57 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "sc.B9.forms.error", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+		color: 'red',
+}`
+          ],
+
+          children: [
+            `$var_sc.B9.forms.errMsg`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[`{ 
 backgroundColor: "#315E2D", 
 borderRadius: 20, 
@@ -58201,6 +58686,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -58247,6 +58733,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -58268,6 +58771,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -58384,105 +58890,6 @@ fontWeight: '700',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "transparent", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, urls) => {
-	
-	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = tools.getCtData(path) ?? [];
-const value = [...oldUrls, ...urls];
-console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path,value });
-}],
- }}), 
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [(args, urls) => {
-	const path = "sc.C8.forms.editChanges.arrDocuments";
-	const oldUrls = tools.getCtData(path) ?? [];
-    const value = urls;
-    console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path, value });
-}],
- }}), async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
-  console.log("%cstepId a atualizar:", css1, { stepId });
-  const userId = tools.getCtData("sc.B9.currents.currId1");
-  const data = tools.getCtData("sc.B9.forms.editChanges");
-
-  try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
-
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
-
-    await updateDoc(refDoc, dataToUpdate);
-
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.b9.editSteps";
-    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
-
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "users." + newId,
-      dataToUpdate,
-    });
-  } catch (err) {
-    console.error("Erro do updateDoc", { err });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
