@@ -13058,15 +13058,92 @@ width: 120
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length > 0) {
+      console.log("Usuário já existe — atualizando condoIds");
+
+      const {
+        getFirestore,
+        doc,
+        updateDoc,
+        arrayUnion,
+        collection,
+        query,
+        where,
+        getDocs,
+      } = await import("firebase/firestore");
+
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+
+      if (!condoId) {
+        console.warn("Nenhum condoId selecionado para vincular.");
+        tools.setData({ path: "sc.A12.forms.showErr", value: true });
+        tools.setData({
+          path: "sc.A12.msgs.msg1",
+          value: "Nenhum condomínio selecionado para vincular.",
+        });
+        return;
+      }
+
+      // Buscar user pelo email na coleção users
+      const q = query(collection(db, "users"), where("userEmail", "==", email));
+
+      const snap = await getDocs(q);
+
+      if (!snap.empty) {
+        const userDoc = snap.docs[0]; // deve existir apenas 1
+        const uid = userDoc.id;
+        console.log("Encontrado user existente:", uid);
+
+        const userRef = doc(db, "users", uid);
+
+        // Atualizar array condoIds (sem duplicar)
+        await updateDoc(userRef, {
+          condoIds: arrayUnion(condoId),
+        });
+
+        console.log("Condo adicionado ao user existente:", condoId);
+
+        // Feedback de sucesso
+        tools.setData({ path: "sc.A12.forms.showErr", value: false });
+        tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
+        tools.setData({
+          path: "sc.A12.forms.msgs.msg1",
+          value: "Condomínio vinculado ao parceiro existente!",
+        });
+
+        const delay = () => {
+          tools.setData({ path: "all.toggles.sideRight", value: false });
+          tools.functions.setVar({
+            args: "",
+            pass: {
+              keyPath: ["all.toggles.forms"],
+              value: [" "],
+            },
+          });
+          tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
+          tools.setData({
+            path: "sc.A12.forms.iptsChanges",
+            value: { partnerName: "", partnerMail: "", partnerActivity: "" },
+          });
+        };
+
+        setTimeout(delay, 2500);
+        return; // encerra o fluxo aqui
+      }
+
+      // Se chegou aqui, email existe no Auth mas não na coleção users
       tools.setData({ path: "sc.A12.forms.showErr", value: true });
       tools.setData({
         path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
+        value:
+          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
       });
-      return; // quebra o fluxo
+
+      return;
     }
 
-    const tempPass = "123456"; // ou gere uma senha aleatória
+    const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
@@ -13126,13 +13203,13 @@ width: 120
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
       //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -13148,7 +13225,7 @@ tools.functions.setVar({
       tools.setData({ path: "sc.A12.forms.showErr", value: true });
       tools.setData({
         path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
+        value: "Erro ao criar usuário.",
       });
       return;
     }
@@ -21920,15 +21997,92 @@ width: 120
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length > 0) {
+      console.log("Usuário já existe — atualizando condoIds");
+
+      const {
+        getFirestore,
+        doc,
+        updateDoc,
+        arrayUnion,
+        collection,
+        query,
+        where,
+        getDocs,
+      } = await import("firebase/firestore");
+
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+
+      if (!condoId) {
+        console.warn("Nenhum condoId selecionado para vincular.");
+        tools.setData({ path: "sc.A12.forms.showErr", value: true });
+        tools.setData({
+          path: "sc.A12.msgs.msg1",
+          value: "Nenhum condomínio selecionado para vincular.",
+        });
+        return;
+      }
+
+      // Buscar user pelo email na coleção users
+      const q = query(collection(db, "users"), where("userEmail", "==", email));
+
+      const snap = await getDocs(q);
+
+      if (!snap.empty) {
+        const userDoc = snap.docs[0]; // deve existir apenas 1
+        const uid = userDoc.id;
+        console.log("Encontrado user existente:", uid);
+
+        const userRef = doc(db, "users", uid);
+
+        // Atualizar array condoIds (sem duplicar)
+        await updateDoc(userRef, {
+          condoIds: arrayUnion(condoId),
+        });
+
+        console.log("Condo adicionado ao user existente:", condoId);
+
+        // Feedback de sucesso
+        tools.setData({ path: "sc.A12.forms.showErr", value: false });
+        tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
+        tools.setData({
+          path: "sc.A12.forms.msgs.msg1",
+          value: "Condomínio vinculado ao parceiro existente!",
+        });
+
+        const delay = () => {
+          tools.setData({ path: "all.toggles.sideRight", value: false });
+          tools.functions.setVar({
+            args: "",
+            pass: {
+              keyPath: ["all.toggles.forms"],
+              value: [" "],
+            },
+          });
+          tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
+          tools.setData({
+            path: "sc.A12.forms.iptsChanges",
+            value: { partnerName: "", partnerMail: "", partnerActivity: "" },
+          });
+        };
+
+        setTimeout(delay, 2500);
+        return; // encerra o fluxo aqui
+      }
+
+      // Se chegou aqui, email existe no Auth mas não na coleção users
       tools.setData({ path: "sc.A12.forms.showErr", value: true });
       tools.setData({
         path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
+        value:
+          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
       });
-      return; // quebra o fluxo
+
+      return;
     }
 
-    const tempPass = "123456"; // ou gere uma senha aleatória
+    const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
@@ -21988,13 +22142,13 @@ width: 120
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
       //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -22010,7 +22164,7 @@ tools.functions.setVar({
       tools.setData({ path: "sc.A12.forms.showErr", value: true });
       tools.setData({
         path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
+        value: "Erro ao criar usuário.",
       });
       return;
     }
@@ -30795,15 +30949,92 @@ width: 120
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length > 0) {
+      console.log("Usuário já existe — atualizando condoIds");
+
+      const {
+        getFirestore,
+        doc,
+        updateDoc,
+        arrayUnion,
+        collection,
+        query,
+        where,
+        getDocs,
+      } = await import("firebase/firestore");
+
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+
+      if (!condoId) {
+        console.warn("Nenhum condoId selecionado para vincular.");
+        tools.setData({ path: "sc.A12.forms.showErr", value: true });
+        tools.setData({
+          path: "sc.A12.msgs.msg1",
+          value: "Nenhum condomínio selecionado para vincular.",
+        });
+        return;
+      }
+
+      // Buscar user pelo email na coleção users
+      const q = query(collection(db, "users"), where("userEmail", "==", email));
+
+      const snap = await getDocs(q);
+
+      if (!snap.empty) {
+        const userDoc = snap.docs[0]; // deve existir apenas 1
+        const uid = userDoc.id;
+        console.log("Encontrado user existente:", uid);
+
+        const userRef = doc(db, "users", uid);
+
+        // Atualizar array condoIds (sem duplicar)
+        await updateDoc(userRef, {
+          condoIds: arrayUnion(condoId),
+        });
+
+        console.log("Condo adicionado ao user existente:", condoId);
+
+        // Feedback de sucesso
+        tools.setData({ path: "sc.A12.forms.showErr", value: false });
+        tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
+        tools.setData({
+          path: "sc.A12.forms.msgs.msg1",
+          value: "Condomínio vinculado ao parceiro existente!",
+        });
+
+        const delay = () => {
+          tools.setData({ path: "all.toggles.sideRight", value: false });
+          tools.functions.setVar({
+            args: "",
+            pass: {
+              keyPath: ["all.toggles.forms"],
+              value: [" "],
+            },
+          });
+          tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
+          tools.setData({
+            path: "sc.A12.forms.iptsChanges",
+            value: { partnerName: "", partnerMail: "", partnerActivity: "" },
+          });
+        };
+
+        setTimeout(delay, 2500);
+        return; // encerra o fluxo aqui
+      }
+
+      // Se chegou aqui, email existe no Auth mas não na coleção users
       tools.setData({ path: "sc.A12.forms.showErr", value: true });
       tools.setData({
         path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
+        value:
+          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
       });
-      return; // quebra o fluxo
+
+      return;
     }
 
-    const tempPass = "123456"; // ou gere uma senha aleatória
+    const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
@@ -30863,13 +31094,13 @@ width: 120
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
       //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -30885,7 +31116,7 @@ tools.functions.setVar({
       tools.setData({ path: "sc.A12.forms.showErr", value: true });
       tools.setData({
         path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
+        value: "Erro ao criar usuário.",
       });
       return;
     }
@@ -39513,15 +39744,92 @@ width: 120
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length > 0) {
+      console.log("Usuário já existe — atualizando condoIds");
+
+      const {
+        getFirestore,
+        doc,
+        updateDoc,
+        arrayUnion,
+        collection,
+        query,
+        where,
+        getDocs,
+      } = await import("firebase/firestore");
+
+      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+
+      if (!condoId) {
+        console.warn("Nenhum condoId selecionado para vincular.");
+        tools.setData({ path: "sc.A12.forms.showErr", value: true });
+        tools.setData({
+          path: "sc.A12.msgs.msg1",
+          value: "Nenhum condomínio selecionado para vincular.",
+        });
+        return;
+      }
+
+      // Buscar user pelo email na coleção users
+      const q = query(collection(db, "users"), where("userEmail", "==", email));
+
+      const snap = await getDocs(q);
+
+      if (!snap.empty) {
+        const userDoc = snap.docs[0]; // deve existir apenas 1
+        const uid = userDoc.id;
+        console.log("Encontrado user existente:", uid);
+
+        const userRef = doc(db, "users", uid);
+
+        // Atualizar array condoIds (sem duplicar)
+        await updateDoc(userRef, {
+          condoIds: arrayUnion(condoId),
+        });
+
+        console.log("Condo adicionado ao user existente:", condoId);
+
+        // Feedback de sucesso
+        tools.setData({ path: "sc.A12.forms.showErr", value: false });
+        tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
+        tools.setData({
+          path: "sc.A12.forms.msgs.msg1",
+          value: "Condomínio vinculado ao parceiro existente!",
+        });
+
+        const delay = () => {
+          tools.setData({ path: "all.toggles.sideRight", value: false });
+          tools.functions.setVar({
+            args: "",
+            pass: {
+              keyPath: ["all.toggles.forms"],
+              value: [" "],
+            },
+          });
+          tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
+          tools.setData({
+            path: "sc.A12.forms.iptsChanges",
+            value: { partnerName: "", partnerMail: "", partnerActivity: "" },
+          });
+        };
+
+        setTimeout(delay, 2500);
+        return; // encerra o fluxo aqui
+      }
+
+      // Se chegou aqui, email existe no Auth mas não na coleção users
       tools.setData({ path: "sc.A12.forms.showErr", value: true });
       tools.setData({
         path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
+        value:
+          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
       });
-      return; // quebra o fluxo
+
+      return;
     }
 
-    const tempPass = "123456"; // ou gere uma senha aleatória
+    const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
@@ -39581,13 +39889,13 @@ width: 120
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
       //close Form
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["all.toggles.forms"],
-        value: [" "],
-      },
-    });
+      tools.functions.setVar({
+        args: "",
+        pass: {
+          keyPath: ["all.toggles.forms"],
+          value: [" "],
+        },
+      });
       tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
       tools.setData({
         path: "sc.A12.forms.iptsChanges",
@@ -39603,7 +39911,7 @@ tools.functions.setVar({
       tools.setData({ path: "sc.A12.forms.showErr", value: true });
       tools.setData({
         path: "sc.A12.msgs.msg1",
-        value: "Esse usuário já foi criado anteriormente",
+        value: "Erro ao criar usuário.",
       });
       return;
     }
