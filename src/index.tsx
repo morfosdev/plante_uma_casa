@@ -23302,7 +23302,11 @@ shadowRadius: 4,
   console.log("Botão Recibo 3", installmentId);
 
   // Só considera inválido se for null/undefined/string vazia
-  if (installmentId === null || installmentId === undefined || installmentId === "") {
+  if (
+    installmentId === null ||
+    installmentId === undefined ||
+    installmentId === ""
+  ) {
     console.log("Botão Recibo ERRO: installmentId inválido");
     return (
       <RN.Pressable>
@@ -23318,14 +23322,14 @@ shadowRadius: 4,
     ? tools.getCtData("sc.A9.currents.currLoteData.receipts")
     : null;
 
-  const safeReceipts =
-    receipts && typeof receipts === "object" ? receipts : {};
+  const safeReceipts = receipts && typeof receipts === "object" ? receipts : {};
 
   console.log("Botão Recibo 4", safeReceipts);
 
   // ===== currReceipt =====
   const currReceipt =
-    safeReceipts && Object.prototype.hasOwnProperty.call(safeReceipts, installmentId)
+    safeReceipts &&
+    Object.prototype.hasOwnProperty.call(safeReceipts, installmentId)
       ? safeReceipts[installmentId]
       : null;
 
@@ -23336,6 +23340,10 @@ shadowRadius: 4,
     currReceipt && typeof currReceipt === "object"
       ? currReceipt.receiptUrl || null
       : null;
+  const fileName =
+    currReceipt && typeof currReceipt === "object"
+      ? currReceipt.fileName || "recibo"
+      : "recibo";
 
   console.log("Botão Recibo 6", receiptUrl);
 
@@ -23347,13 +23355,8 @@ shadowRadius: 4,
   };
 
   // ===== função de download (web) =====
-  const baixarRecibo = (url) => {
-    if (!url || typeof url !== "string") return;
-    try {
-      window.open(url, "_blank");
-    } catch (err) {
-      console.log("Erro ao abrir URL do recibo:", err);
-    }
+  const handleDownload = (uri: string, filename: string) => {
+    if (!uri) return;
   };
 
   // ===== retorno =====
@@ -23361,7 +23364,7 @@ shadowRadius: 4,
     <RN.Pressable
       onPress={() => {
         console.log("Clicou no botão de recibo");
-        if (receiptUrl) baixarRecibo(receiptUrl);
+        if (receiptUrl) handleDownload(receiptUrl, fileName);
       }}
     >
       <RN.Text style={condStyle}>↪</RN.Text>
