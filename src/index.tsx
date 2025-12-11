@@ -9000,6 +9000,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -17853,6 +17854,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -26698,6 +26700,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
@@ -35409,6 +35412,7 @@ alignItems: "center",
 justifyContent: "center",
 paddingHorizontal: 30,
 paddingVertical: 8,
+width: 120
 }`],
 
             functions:[async (...args) =>
