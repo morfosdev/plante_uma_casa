@@ -45724,6 +45724,8 @@ shadowRadius: 4,
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	maxWidth: 125,
+	minWidth: 110
 }`],
 
             functions:[async (...args) =>
