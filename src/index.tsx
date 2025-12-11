@@ -13052,7 +13052,7 @@ width: 120
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
-    const auth = fbInit ? getAuth(fbInit) : getAuth();
+    const auth = getAuth(fbInit)
 
     // ---- Pré-checagem opcional: já existe?
     console.log({ auth, email });
@@ -13236,8 +13236,7 @@ width: 120
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -21992,7 +21991,7 @@ width: 120
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
-    const auth = fbInit ? getAuth(fbInit) : getAuth();
+    const auth = getAuth(fbInit)
 
     // ---- Pré-checagem opcional: já existe?
     console.log({ auth, email });
@@ -22176,8 +22175,7 @@ width: 120
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -30945,7 +30943,7 @@ width: 120
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
-    const auth = fbInit ? getAuth(fbInit) : getAuth();
+    const auth = getAuth(fbInit)
 
     // ---- Pré-checagem opcional: já existe?
     console.log({ auth, email });
@@ -31129,8 +31127,7 @@ width: 120
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -39741,7 +39738,7 @@ width: 120
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
-    const auth = fbInit ? getAuth(fbInit) : getAuth();
+    const auth = getAuth(fbInit)
 
     // ---- Pré-checagem opcional: já existe?
     console.log({ auth, email });
@@ -39925,8 +39922,7 @@ width: 120
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-}
-]
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
