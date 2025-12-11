@@ -13010,100 +13010,6 @@ width: 120
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // ---------------- função auxiliar: vincular condomínio a parceiro já existente
-  const vincularCondoEmUserExistente = async (params: {
-    email: string;
-    condoId: string;
-    fbInit: any;
-  }) => {
-    const { email, condoId, fbInit } = params;
-    console.log("Vinculando condomínio a usuário já existente:", {
-      email,
-      condoId,
-    });
-
-    const {
-      getFirestore,
-      collection,
-      query,
-      where,
-      getDocs,
-      doc,
-      updateDoc,
-      arrayUnion,
-    } = await import("firebase/firestore");
-
-    const db = fbInit ? getFirestore(fbInit) : getFirestore();
-
-    if (!condoId) {
-      console.warn("Nenhum condoId selecionado para vincular.");
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Nenhum condomínio selecionado para vincular.",
-      });
-      return;
-    }
-
-    const q = query(
-      collection(db, "users"),
-      where("userEmail", "==", email)
-    );
-
-    const snap = await getDocs(q);
-
-    if (snap.empty) {
-      console.warn("Usuário existe no Auth, mas não está em 'users'.");
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value:
-          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
-      });
-      return;
-    }
-
-    const userDoc = snap.docs[0];
-    const uid = userDoc.id;
-    const userRef = doc(db, "users", uid);
-
-    await updateDoc(userRef, {
-      condoIds: arrayUnion(condoId),
-    });
-
-    console.log("Condomínio vinculado ao user existente:", {
-      uid,
-      condoId,
-    });
-
-    // feedback de sucesso
-    tools.setData({ path: "sc.A12.forms.showErr", value: false });
-    tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
-    tools.setData({
-      path: "sc.A12.forms.msgs.msg1",
-      value: "Condomínio vinculado ao parceiro existente!",
-    });
-
-    const delay = () => {
-      tools.setData({ path: "all.toggles.sideRight", value: false });
-      tools.functions.setVar({
-        args: "",
-        pass: {
-          keyPath: ["all.toggles.forms"],
-          value: [" "],
-        },
-      });
-      tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
-      tools.setData({
-        path: "sc.A12.forms.iptsChanges",
-        value: { partnerName: "", partnerMail: "", partnerActivity: "" },
-      });
-    };
-
-    setTimeout(delay, 2500);
-  };
-  // ---------------- fim função auxiliar
-
   try {
     const pathName = "sc.A12.forms.iptsChanges.partnerName";
     const pathEmail = "sc.A12.forms.iptsChanges.partnerMail";
@@ -13134,33 +13040,35 @@ width: 120
       return;
     }
 
-    const condoId =
-      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
-    if (!condoId) {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Selecione um condomínio antes de salvar.",
-      });
-      return;
-    }
-
     // Auth
     const {
       getAuth,
       createUserWithEmailAndPassword,
       updateProfile,
+      sendEmailVerification,
       sendPasswordResetEmail,
+      fetchSignInMethodsForEmail,
     } = await import("firebase/auth");
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length > 0) {
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Esse usuário já foi criado anteriormente.",
+      });
+      
+      return; // quebra o fluxo
+    }
+
     const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
-
-    // ====== TENTA CRIAR USUÁRIO NO AUTH ======
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
 
@@ -13168,17 +13076,18 @@ width: 120
       await updateProfile(cred.user, { displayName: name });
     }
 
-    // ====== CRIAR DOC EM 'users' PARA NOVO USUÁRIO ======
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
     {
-      const {
-        getFirestore,
-        doc,
-        setDoc,
-        serverTimestamp,
-      } = await import("firebase/firestore");
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
+        "firebase/firestore"
+      );
       const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
       const uid = cred.user.uid;
+
+      // >>> PEGAR O VALOR DO CONDO
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
       const dataToSet = {
         docId: uid,
@@ -13188,18 +13097,15 @@ width: 120
         userImage: cred.user.photoURL || "",
         partnerActivity,
         typeAccount: "partner",
-        condoId: condoId,      // se ainda precisar manter legado
-        condoIds: [condoId],   // novo array
+        condoId: condoId,
       };
 
       await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado (novo parceiro):", {
-        uid,
-        dataToSet,
-      });
+      console.log("users doc criado/atualizado:", { uid, dataToSet });
     }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    // enviar e-mail para definir senha
+    // (opcional) enviar verificação
     const host = "http://localhost:5173";
     // const host = "http://projeto-plante-uma-casa.web.app";
 
@@ -13207,6 +13113,7 @@ width: 120
       url: host + "/auth/complete-signup",
       handleCodeInApp: false,
     };
+    // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: "sc.A12.forms.showErr", value: false });
@@ -13216,8 +13123,10 @@ width: 120
       value: "Usuário criado com sucesso!",
     });
 
+    // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
+      //close Form
       tools.functions.setVar({
         args: "",
         pass: {
@@ -13233,17 +13142,15 @@ width: 120
     };
 
     setTimeout(delay, 2500);
+
+    // sucesso...
   } catch (e: any) {
-    console.log("Erro ao criar usuário:", e?.code, e?.message);
-
     if (e?.code === "auth/email-already-in-use") {
-      const email =
-        (tools.getCtData("sc.A12.forms.iptsChanges.partnerMail") ?? "").trim();
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
-      const fbInit = tools.getCtData("all.temp.fireInit");
-
-      await vincularCondoEmUserExistente({ email, condoId, fbInit });
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Erro ao criar usuário.",
+      });
       return;
     }
 
@@ -21966,100 +21873,6 @@ width: 120
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // ---------------- função auxiliar: vincular condomínio a parceiro já existente
-  const vincularCondoEmUserExistente = async (params: {
-    email: string;
-    condoId: string;
-    fbInit: any;
-  }) => {
-    const { email, condoId, fbInit } = params;
-    console.log("Vinculando condomínio a usuário já existente:", {
-      email,
-      condoId,
-    });
-
-    const {
-      getFirestore,
-      collection,
-      query,
-      where,
-      getDocs,
-      doc,
-      updateDoc,
-      arrayUnion,
-    } = await import("firebase/firestore");
-
-    const db = fbInit ? getFirestore(fbInit) : getFirestore();
-
-    if (!condoId) {
-      console.warn("Nenhum condoId selecionado para vincular.");
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Nenhum condomínio selecionado para vincular.",
-      });
-      return;
-    }
-
-    const q = query(
-      collection(db, "users"),
-      where("userEmail", "==", email)
-    );
-
-    const snap = await getDocs(q);
-
-    if (snap.empty) {
-      console.warn("Usuário existe no Auth, mas não está em 'users'.");
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value:
-          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
-      });
-      return;
-    }
-
-    const userDoc = snap.docs[0];
-    const uid = userDoc.id;
-    const userRef = doc(db, "users", uid);
-
-    await updateDoc(userRef, {
-      condoIds: arrayUnion(condoId),
-    });
-
-    console.log("Condomínio vinculado ao user existente:", {
-      uid,
-      condoId,
-    });
-
-    // feedback de sucesso
-    tools.setData({ path: "sc.A12.forms.showErr", value: false });
-    tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
-    tools.setData({
-      path: "sc.A12.forms.msgs.msg1",
-      value: "Condomínio vinculado ao parceiro existente!",
-    });
-
-    const delay = () => {
-      tools.setData({ path: "all.toggles.sideRight", value: false });
-      tools.functions.setVar({
-        args: "",
-        pass: {
-          keyPath: ["all.toggles.forms"],
-          value: [" "],
-        },
-      });
-      tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
-      tools.setData({
-        path: "sc.A12.forms.iptsChanges",
-        value: { partnerName: "", partnerMail: "", partnerActivity: "" },
-      });
-    };
-
-    setTimeout(delay, 2500);
-  };
-  // ---------------- fim função auxiliar
-
   try {
     const pathName = "sc.A12.forms.iptsChanges.partnerName";
     const pathEmail = "sc.A12.forms.iptsChanges.partnerMail";
@@ -22090,33 +21903,35 @@ width: 120
       return;
     }
 
-    const condoId =
-      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
-    if (!condoId) {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Selecione um condomínio antes de salvar.",
-      });
-      return;
-    }
-
     // Auth
     const {
       getAuth,
       createUserWithEmailAndPassword,
       updateProfile,
+      sendEmailVerification,
       sendPasswordResetEmail,
+      fetchSignInMethodsForEmail,
     } = await import("firebase/auth");
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length > 0) {
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Esse usuário já foi criado anteriormente.",
+      });
+      
+      return; // quebra o fluxo
+    }
+
     const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
-
-    // ====== TENTA CRIAR USUÁRIO NO AUTH ======
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
 
@@ -22124,17 +21939,18 @@ width: 120
       await updateProfile(cred.user, { displayName: name });
     }
 
-    // ====== CRIAR DOC EM 'users' PARA NOVO USUÁRIO ======
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
     {
-      const {
-        getFirestore,
-        doc,
-        setDoc,
-        serverTimestamp,
-      } = await import("firebase/firestore");
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
+        "firebase/firestore"
+      );
       const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
       const uid = cred.user.uid;
+
+      // >>> PEGAR O VALOR DO CONDO
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
       const dataToSet = {
         docId: uid,
@@ -22144,18 +21960,15 @@ width: 120
         userImage: cred.user.photoURL || "",
         partnerActivity,
         typeAccount: "partner",
-        condoId: condoId,      // se ainda precisar manter legado
-        condoIds: [condoId],   // novo array
+        condoId: condoId,
       };
 
       await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado (novo parceiro):", {
-        uid,
-        dataToSet,
-      });
+      console.log("users doc criado/atualizado:", { uid, dataToSet });
     }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    // enviar e-mail para definir senha
+    // (opcional) enviar verificação
     const host = "http://localhost:5173";
     // const host = "http://projeto-plante-uma-casa.web.app";
 
@@ -22163,6 +21976,7 @@ width: 120
       url: host + "/auth/complete-signup",
       handleCodeInApp: false,
     };
+    // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: "sc.A12.forms.showErr", value: false });
@@ -22172,8 +21986,10 @@ width: 120
       value: "Usuário criado com sucesso!",
     });
 
+    // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
+      //close Form
       tools.functions.setVar({
         args: "",
         pass: {
@@ -22189,17 +22005,15 @@ width: 120
     };
 
     setTimeout(delay, 2500);
+
+    // sucesso...
   } catch (e: any) {
-    console.log("Erro ao criar usuário:", e?.code, e?.message);
-
     if (e?.code === "auth/email-already-in-use") {
-      const email =
-        (tools.getCtData("sc.A12.forms.iptsChanges.partnerMail") ?? "").trim();
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
-      const fbInit = tools.getCtData("all.temp.fireInit");
-
-      await vincularCondoEmUserExistente({ email, condoId, fbInit });
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Erro ao criar usuário.",
+      });
       return;
     }
 
@@ -30935,100 +30749,6 @@ width: 120
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // ---------------- função auxiliar: vincular condomínio a parceiro já existente
-  const vincularCondoEmUserExistente = async (params: {
-    email: string;
-    condoId: string;
-    fbInit: any;
-  }) => {
-    const { email, condoId, fbInit } = params;
-    console.log("Vinculando condomínio a usuário já existente:", {
-      email,
-      condoId,
-    });
-
-    const {
-      getFirestore,
-      collection,
-      query,
-      where,
-      getDocs,
-      doc,
-      updateDoc,
-      arrayUnion,
-    } = await import("firebase/firestore");
-
-    const db = fbInit ? getFirestore(fbInit) : getFirestore();
-
-    if (!condoId) {
-      console.warn("Nenhum condoId selecionado para vincular.");
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Nenhum condomínio selecionado para vincular.",
-      });
-      return;
-    }
-
-    const q = query(
-      collection(db, "users"),
-      where("userEmail", "==", email)
-    );
-
-    const snap = await getDocs(q);
-
-    if (snap.empty) {
-      console.warn("Usuário existe no Auth, mas não está em 'users'.");
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value:
-          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
-      });
-      return;
-    }
-
-    const userDoc = snap.docs[0];
-    const uid = userDoc.id;
-    const userRef = doc(db, "users", uid);
-
-    await updateDoc(userRef, {
-      condoIds: arrayUnion(condoId),
-    });
-
-    console.log("Condomínio vinculado ao user existente:", {
-      uid,
-      condoId,
-    });
-
-    // feedback de sucesso
-    tools.setData({ path: "sc.A12.forms.showErr", value: false });
-    tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
-    tools.setData({
-      path: "sc.A12.forms.msgs.msg1",
-      value: "Condomínio vinculado ao parceiro existente!",
-    });
-
-    const delay = () => {
-      tools.setData({ path: "all.toggles.sideRight", value: false });
-      tools.functions.setVar({
-        args: "",
-        pass: {
-          keyPath: ["all.toggles.forms"],
-          value: [" "],
-        },
-      });
-      tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
-      tools.setData({
-        path: "sc.A12.forms.iptsChanges",
-        value: { partnerName: "", partnerMail: "", partnerActivity: "" },
-      });
-    };
-
-    setTimeout(delay, 2500);
-  };
-  // ---------------- fim função auxiliar
-
   try {
     const pathName = "sc.A12.forms.iptsChanges.partnerName";
     const pathEmail = "sc.A12.forms.iptsChanges.partnerMail";
@@ -31059,33 +30779,35 @@ width: 120
       return;
     }
 
-    const condoId =
-      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
-    if (!condoId) {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Selecione um condomínio antes de salvar.",
-      });
-      return;
-    }
-
     // Auth
     const {
       getAuth,
       createUserWithEmailAndPassword,
       updateProfile,
+      sendEmailVerification,
       sendPasswordResetEmail,
+      fetchSignInMethodsForEmail,
     } = await import("firebase/auth");
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length > 0) {
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Esse usuário já foi criado anteriormente.",
+      });
+      
+      return; // quebra o fluxo
+    }
+
     const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
-
-    // ====== TENTA CRIAR USUÁRIO NO AUTH ======
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
 
@@ -31093,17 +30815,18 @@ width: 120
       await updateProfile(cred.user, { displayName: name });
     }
 
-    // ====== CRIAR DOC EM 'users' PARA NOVO USUÁRIO ======
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
     {
-      const {
-        getFirestore,
-        doc,
-        setDoc,
-        serverTimestamp,
-      } = await import("firebase/firestore");
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
+        "firebase/firestore"
+      );
       const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
       const uid = cred.user.uid;
+
+      // >>> PEGAR O VALOR DO CONDO
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
       const dataToSet = {
         docId: uid,
@@ -31113,18 +30836,15 @@ width: 120
         userImage: cred.user.photoURL || "",
         partnerActivity,
         typeAccount: "partner",
-        condoId: condoId,      // se ainda precisar manter legado
-        condoIds: [condoId],   // novo array
+        condoId: condoId,
       };
 
       await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado (novo parceiro):", {
-        uid,
-        dataToSet,
-      });
+      console.log("users doc criado/atualizado:", { uid, dataToSet });
     }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    // enviar e-mail para definir senha
+    // (opcional) enviar verificação
     const host = "http://localhost:5173";
     // const host = "http://projeto-plante-uma-casa.web.app";
 
@@ -31132,6 +30852,7 @@ width: 120
       url: host + "/auth/complete-signup",
       handleCodeInApp: false,
     };
+    // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: "sc.A12.forms.showErr", value: false });
@@ -31141,8 +30862,10 @@ width: 120
       value: "Usuário criado com sucesso!",
     });
 
+    // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
+      //close Form
       tools.functions.setVar({
         args: "",
         pass: {
@@ -31158,17 +30881,15 @@ width: 120
     };
 
     setTimeout(delay, 2500);
+
+    // sucesso...
   } catch (e: any) {
-    console.log("Erro ao criar usuário:", e?.code, e?.message);
-
     if (e?.code === "auth/email-already-in-use") {
-      const email =
-        (tools.getCtData("sc.A12.forms.iptsChanges.partnerMail") ?? "").trim();
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
-      const fbInit = tools.getCtData("all.temp.fireInit");
-
-      await vincularCondoEmUserExistente({ email, condoId, fbInit });
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Erro ao criar usuário.",
+      });
       return;
     }
 
@@ -39747,100 +39468,6 @@ width: 120
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  // ---------------- função auxiliar: vincular condomínio a parceiro já existente
-  const vincularCondoEmUserExistente = async (params: {
-    email: string;
-    condoId: string;
-    fbInit: any;
-  }) => {
-    const { email, condoId, fbInit } = params;
-    console.log("Vinculando condomínio a usuário já existente:", {
-      email,
-      condoId,
-    });
-
-    const {
-      getFirestore,
-      collection,
-      query,
-      where,
-      getDocs,
-      doc,
-      updateDoc,
-      arrayUnion,
-    } = await import("firebase/firestore");
-
-    const db = fbInit ? getFirestore(fbInit) : getFirestore();
-
-    if (!condoId) {
-      console.warn("Nenhum condoId selecionado para vincular.");
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Nenhum condomínio selecionado para vincular.",
-      });
-      return;
-    }
-
-    const q = query(
-      collection(db, "users"),
-      where("userEmail", "==", email)
-    );
-
-    const snap = await getDocs(q);
-
-    if (snap.empty) {
-      console.warn("Usuário existe no Auth, mas não está em 'users'.");
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value:
-          "Usuário existe no Auth, mas não foi encontrado na base de usuários.",
-      });
-      return;
-    }
-
-    const userDoc = snap.docs[0];
-    const uid = userDoc.id;
-    const userRef = doc(db, "users", uid);
-
-    await updateDoc(userRef, {
-      condoIds: arrayUnion(condoId),
-    });
-
-    console.log("Condomínio vinculado ao user existente:", {
-      uid,
-      condoId,
-    });
-
-    // feedback de sucesso
-    tools.setData({ path: "sc.A12.forms.showErr", value: false });
-    tools.setData({ path: "sc.A12.forms.showSuccess", value: true });
-    tools.setData({
-      path: "sc.A12.forms.msgs.msg1",
-      value: "Condomínio vinculado ao parceiro existente!",
-    });
-
-    const delay = () => {
-      tools.setData({ path: "all.toggles.sideRight", value: false });
-      tools.functions.setVar({
-        args: "",
-        pass: {
-          keyPath: ["all.toggles.forms"],
-          value: [" "],
-        },
-      });
-      tools.setData({ path: "sc.A12.forms.msgs.msg1", value: "" });
-      tools.setData({
-        path: "sc.A12.forms.iptsChanges",
-        value: { partnerName: "", partnerMail: "", partnerActivity: "" },
-      });
-    };
-
-    setTimeout(delay, 2500);
-  };
-  // ---------------- fim função auxiliar
-
   try {
     const pathName = "sc.A12.forms.iptsChanges.partnerName";
     const pathEmail = "sc.A12.forms.iptsChanges.partnerMail";
@@ -39871,33 +39498,35 @@ width: 120
       return;
     }
 
-    const condoId =
-      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
-    if (!condoId) {
-      tools.setData({ path: "sc.A12.forms.showErr", value: true });
-      tools.setData({
-        path: "sc.A12.msgs.msg1",
-        value: "Selecione um condomínio antes de salvar.",
-      });
-      return;
-    }
-
     // Auth
     const {
       getAuth,
       createUserWithEmailAndPassword,
       updateProfile,
+      sendEmailVerification,
       sendPasswordResetEmail,
+      fetchSignInMethodsForEmail,
     } = await import("firebase/auth");
 
     const fbInit = tools.getCtData("all.temp.fireInit");
     console.log({ fbInit });
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
+    // ---- Pré-checagem opcional: já existe?
+    const methods = await fetchSignInMethodsForEmail(auth, email);
+    console.log({ methods });
+    if (methods.length > 0) {
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Esse usuário já foi criado anteriormente.",
+      });
+      
+      return; // quebra o fluxo
+    }
+
     const tempPass = "123456"; // senha padrão temporária
     console.log({ tempPass });
-
-    // ====== TENTA CRIAR USUÁRIO NO AUTH ======
     const cred = await createUserWithEmailAndPassword(auth, email, tempPass);
     console.log({ cred });
 
@@ -39905,17 +39534,18 @@ width: 120
       await updateProfile(cred.user, { displayName: name });
     }
 
-    // ====== CRIAR DOC EM 'users' PARA NOVO USUÁRIO ======
+    // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
     {
-      const {
-        getFirestore,
-        doc,
-        setDoc,
-        serverTimestamp,
-      } = await import("firebase/firestore");
+      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
+        "firebase/firestore"
+      );
       const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
       const uid = cred.user.uid;
+
+      // >>> PEGAR O VALOR DO CONDO
+      const condoId =
+        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
       const dataToSet = {
         docId: uid,
@@ -39925,18 +39555,15 @@ width: 120
         userImage: cred.user.photoURL || "",
         partnerActivity,
         typeAccount: "partner",
-        condoId: condoId,      // se ainda precisar manter legado
-        condoIds: [condoId],   // novo array
+        condoId: condoId,
       };
 
       await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado (novo parceiro):", {
-        uid,
-        dataToSet,
-      });
+      console.log("users doc criado/atualizado:", { uid, dataToSet });
     }
+    // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
-    // enviar e-mail para definir senha
+    // (opcional) enviar verificação
     const host = "http://localhost:5173";
     // const host = "http://projeto-plante-uma-casa.web.app";
 
@@ -39944,6 +39571,7 @@ width: 120
       url: host + "/auth/complete-signup",
       handleCodeInApp: false,
     };
+    // await sendEmailVerification(cred.user);
     await sendPasswordResetEmail(auth, email, acs);
 
     tools.setData({ path: "sc.A12.forms.showErr", value: false });
@@ -39953,8 +39581,10 @@ width: 120
       value: "Usuário criado com sucesso!",
     });
 
+    // Limpar mensagens após 2 segundos
     const delay = () => {
       tools.setData({ path: "all.toggles.sideRight", value: false });
+      //close Form
       tools.functions.setVar({
         args: "",
         pass: {
@@ -39970,17 +39600,15 @@ width: 120
     };
 
     setTimeout(delay, 2500);
+
+    // sucesso...
   } catch (e: any) {
-    console.log("Erro ao criar usuário:", e?.code, e?.message);
-
     if (e?.code === "auth/email-already-in-use") {
-      const email =
-        (tools.getCtData("sc.A12.forms.iptsChanges.partnerMail") ?? "").trim();
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
-      const fbInit = tools.getCtData("all.temp.fireInit");
-
-      await vincularCondoEmUserExistente({ email, condoId, fbInit });
+      tools.setData({ path: "sc.A12.forms.showErr", value: true });
+      tools.setData({
+        path: "sc.A12.msgs.msg1",
+        value: "Erro ao criar usuário.",
+      });
       return;
     }
 
