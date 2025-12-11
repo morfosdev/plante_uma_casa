@@ -44390,7 +44390,7 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[``],
+            styles:[`{}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -49570,7 +49570,7 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[``],
+            styles:[`{}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -58225,7 +58225,7 @@ borderRadius: 10,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[``],
+            styles:[`{}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
