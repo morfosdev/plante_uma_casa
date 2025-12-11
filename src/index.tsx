@@ -23357,6 +23357,13 @@ shadowRadius: 4,
   // ===== função de download (web) =====
   const handleDownload = (uri: string, filename: string) => {
     if (!uri) return;
+
+    if (RN.Platform.OS === "web" && typeof document !== "undefined") {
+      const link = document.createElement("a");
+      link.href = uri;
+
+      return;
+    }
   };
 
   // ===== retorno =====
