@@ -43611,6 +43611,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -43632,6 +43649,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -43969,7 +43989,6 @@ color: '#555555',
             styles: [],
             arrProps: [],
             arrItems: [
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -44424,6 +44443,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -44445,6 +44481,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -44561,105 +44600,6 @@ fontWeight: '700',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "transparent", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, urls) => {
-	
-	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = tools.getCtData(path) ?? [];
-const value = [...oldUrls, ...urls];
-console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path,value });
-}],
- }}), 
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [(args, urls) => {
-	const path = "sc.C8.forms.editChanges.arrDocuments";
-	const oldUrls = tools.getCtData(path) ?? [];
-    const value = urls;
-    console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path, value });
-}],
- }}), async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
-  console.log("%cstepId a atualizar:", css1, { stepId });
-  const userId = tools.getCtData("sc.B9.currents.currId1");
-  const data = tools.getCtData("sc.B9.forms.editChanges");
-
-  try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
-
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
-
-    await updateDoc(refDoc, dataToUpdate);
-
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.b9.editSteps";
-    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
-
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "users." + newId,
-      dataToUpdate,
-    });
-  } catch (err) {
-    console.error("Erro do updateDoc", { err });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
@@ -48799,6 +48739,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -48820,6 +48777,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -49157,7 +49117,6 @@ color: '#555555',
             styles: [],
             arrProps: [],
             arrItems: [
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -49612,6 +49571,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -49633,6 +49609,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -49749,105 +49728,6 @@ fontWeight: '700',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "transparent", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, urls) => {
-	
-	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = tools.getCtData(path) ?? [];
-const value = [...oldUrls, ...urls];
-console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path,value });
-}],
- }}), 
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [(args, urls) => {
-	const path = "sc.C8.forms.editChanges.arrDocuments";
-	const oldUrls = tools.getCtData(path) ?? [];
-    const value = urls;
-    console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path, value });
-}],
- }}), async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
-  console.log("%cstepId a atualizar:", css1, { stepId });
-  const userId = tools.getCtData("sc.B9.currents.currId1");
-  const data = tools.getCtData("sc.B9.forms.editChanges");
-
-  try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
-
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
-
-    await updateDoc(refDoc, dataToUpdate);
-
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.b9.editSteps";
-    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
-
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "users." + newId,
-      dataToUpdate,
-    });
-  } catch (err) {
-    console.error("Erro do updateDoc", { err });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
@@ -57462,6 +57342,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -57483,6 +57380,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -57820,7 +57720,6 @@ color: '#555555',
             styles: [],
             arrProps: [],
             arrItems: [
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -58275,6 +58174,23 @@ async (...args) =>
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
+  const condIdError = userId === "" || userId === undefined;
+  const pathErr = "sc.B9.forms.error";
+  const pathErrMsg = "sc.B9.forms.errMsg";
+
+  if (condIdError) {
+    console.error("userId inválido:", { userId });
+
+    tools.setData({ path: pathErr, value: true });
+    tools.setData({
+      path: pathErrMsg,
+      value:
+        "O proprietário do imóvel ainda não entrou no APP. Contate o Administrador.",
+    });
+
+    return;
+  }
+
   try {
     // ------ set Check Fields
     // -----
@@ -58296,6 +58212,9 @@ async (...args) =>
     tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
     tools.setData({ path: pathSideRight, value: false });
     tools.setData({ path: pathEdit, value: false });
+
+    tools.setData({ path: pathErr, value: false });
+    tools.setData({ path: pathErrMsg, value: "" });
 
     console.log("%cupdateDoc ok", css1);
     console.log("%cReferência do Documento", css1, {
@@ -58412,105 +58331,6 @@ fontWeight: '700',
             args,
           }}/>
         ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: "fit-content", minWidth: 120, height: 30, backgroundColor: "transparent", borderRadius: 20, alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.images`],
- arrFuncs: [(args, urls) => {
-	
-	const path = "sc.B9.forms.editChanges.arrImages";
-	const oldUrls = tools.getCtData(path) ?? [];
-const value = [...oldUrls, ...urls];
-console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path,value });
-}],
- }}), 
-async (...args) =>
- functions.firebase.uploadFileTool({ args, pass:{
- arrFiles: [`$var_all.temp.documents`],
- arrFuncs: [(args, urls) => {
-	const path = "sc.C8.forms.editChanges.arrDocuments";
-	const oldUrls = tools.getCtData(path) ?? [];
-    const value = urls;
-    console.log({args, urls, oldUrls, value});
-
-	tools.setData({ path, value });
-}],
- }}), async () => {
-  const css1 =
-    "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
-
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
-
-  const fbInit = tools.getCtData("all.temp.fireInit");
-  const db = getFirestore(fbInit);
-
-  const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
-  console.log("%cstepId a atualizar:", css1, { stepId });
-  const userId = tools.getCtData("sc.B9.currents.currId1");
-  const data = tools.getCtData("sc.B9.forms.editChanges");
-
-  try {
-    // ------ set Check Fields
-    // -----
-    // -----
-    // if(check1) return;
-
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
-
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
-
-    await updateDoc(refDoc, dataToUpdate);
-
-    // ------ set ctData
-    const pathSideRight = "all.toggles.sideRight";
-    const pathEdit = "all.toggles.b9.editSteps";
-    tools.setData({ path: "sc.B9.forms.editChanges", value: {} });
-    tools.setData({ path: pathSideRight, value: false });
-    tools.setData({ path: pathEdit, value: false });
-
-    console.log("%cupdateDoc ok", css1);
-    console.log("%cReferência do Documento", css1, {
-      path: "users." + newId,
-      dataToUpdate,
-    });
-  } catch (err) {
-    console.error("Erro do updateDoc", { err });
-  }
-}]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "#FFF" }`
-          ],
-
-          children: [
-            `Salvar`
-          ],
-
-          args,
-
-        }}/>],
 
             args,
           }}/>
