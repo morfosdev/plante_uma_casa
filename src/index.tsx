@@ -23355,6 +23355,14 @@ shadowRadius: 4,
   };
 
   // ===== função de download (web) =====
+//   const baixarRecibo = (url) => {
+//     if (!url || typeof url !== "string") return;
+//     try {
+//       window.open(url, "_blank");
+//     } catch (err) {
+//       console.log("Erro ao abrir URL do recibo:", err);
+//     }
+//   };
   const handleDownload = (uri: string, filename: string) => {
     if (!uri) return;
 
