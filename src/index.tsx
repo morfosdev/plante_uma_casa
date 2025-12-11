@@ -14462,6 +14462,7 @@ async (...args) =>
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
+	maxWidth: 125
 }`],
 
             functions:[async (...args) =>
