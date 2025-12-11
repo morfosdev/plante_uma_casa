@@ -13055,6 +13055,7 @@ width: 120
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
     // ---- Pré-checagem opcional: já existe?
+    console.log({ auth, email });
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length > 0) {
@@ -13153,32 +13154,31 @@ width: 120
     }
 
     // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
-    {
-      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
-      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+    const { getFirestore, doc, setDoc, serverTimestamp } = await import(
+      "firebase/firestore"
+    );
+    const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
-      const uid = cred.user.uid;
+    const uid = cred.user.uid;
 
-      // >>> PEGAR O VALOR DO CONDO
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+    // >>> PEGAR O VALOR DO CONDO
+    const condoId =
+      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
-      const dataToSet = {
-        docId: uid,
-        createdAt: serverTimestamp(),
-        userName: name,
-        userEmail: email,
-        userImage: cred.user.photoURL || "",
-        partnerActivity,
-        typeAccount: "partner",
-        condoId: condoId,
-      };
+    const dataToSet = {
+      docId: uid,
+      createdAt: serverTimestamp(),
+      userName: name,
+      userEmail: email,
+      userImage: cred.user.photoURL || "",
+      partnerActivity,
+      typeAccount: "partner",
+      condoId: condoId,
+    };
 
-      await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado:", { uid, dataToSet });
-    }
+    await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
+    console.log("users doc criado/atualizado:", { uid, dataToSet });
+
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
@@ -13236,7 +13236,8 @@ width: 120
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-}]
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -21994,6 +21995,7 @@ width: 120
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
     // ---- Pré-checagem opcional: já existe?
+    console.log({ auth, email });
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length > 0) {
@@ -22092,32 +22094,31 @@ width: 120
     }
 
     // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
-    {
-      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
-      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+    const { getFirestore, doc, setDoc, serverTimestamp } = await import(
+      "firebase/firestore"
+    );
+    const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
-      const uid = cred.user.uid;
+    const uid = cred.user.uid;
 
-      // >>> PEGAR O VALOR DO CONDO
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+    // >>> PEGAR O VALOR DO CONDO
+    const condoId =
+      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
-      const dataToSet = {
-        docId: uid,
-        createdAt: serverTimestamp(),
-        userName: name,
-        userEmail: email,
-        userImage: cred.user.photoURL || "",
-        partnerActivity,
-        typeAccount: "partner",
-        condoId: condoId,
-      };
+    const dataToSet = {
+      docId: uid,
+      createdAt: serverTimestamp(),
+      userName: name,
+      userEmail: email,
+      userImage: cred.user.photoURL || "",
+      partnerActivity,
+      typeAccount: "partner",
+      condoId: condoId,
+    };
 
-      await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado:", { uid, dataToSet });
-    }
+    await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
+    console.log("users doc criado/atualizado:", { uid, dataToSet });
+
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
@@ -22175,7 +22176,8 @@ width: 120
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-}]
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -30946,6 +30948,7 @@ width: 120
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
     // ---- Pré-checagem opcional: já existe?
+    console.log({ auth, email });
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length > 0) {
@@ -31044,32 +31047,31 @@ width: 120
     }
 
     // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
-    {
-      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
-      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+    const { getFirestore, doc, setDoc, serverTimestamp } = await import(
+      "firebase/firestore"
+    );
+    const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
-      const uid = cred.user.uid;
+    const uid = cred.user.uid;
 
-      // >>> PEGAR O VALOR DO CONDO
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+    // >>> PEGAR O VALOR DO CONDO
+    const condoId =
+      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
-      const dataToSet = {
-        docId: uid,
-        createdAt: serverTimestamp(),
-        userName: name,
-        userEmail: email,
-        userImage: cred.user.photoURL || "",
-        partnerActivity,
-        typeAccount: "partner",
-        condoId: condoId,
-      };
+    const dataToSet = {
+      docId: uid,
+      createdAt: serverTimestamp(),
+      userName: name,
+      userEmail: email,
+      userImage: cred.user.photoURL || "",
+      partnerActivity,
+      typeAccount: "partner",
+      condoId: condoId,
+    };
 
-      await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado:", { uid, dataToSet });
-    }
+    await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
+    console.log("users doc criado/atualizado:", { uid, dataToSet });
+
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
@@ -31127,7 +31129,8 @@ width: 120
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-}]
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -39741,6 +39744,7 @@ width: 120
     const auth = fbInit ? getAuth(fbInit) : getAuth();
 
     // ---- Pré-checagem opcional: já existe?
+    console.log({ auth, email });
     const methods = await fetchSignInMethodsForEmail(auth, email);
     console.log({ methods });
     if (methods.length > 0) {
@@ -39839,32 +39843,31 @@ width: 120
     }
 
     // >>>>>>>>>>>>>>> ADIÇÃO: criar/atualizar doc em 'users'
-    {
-      const { getFirestore, doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
-      const db = fbInit ? getFirestore(fbInit) : getFirestore();
+    const { getFirestore, doc, setDoc, serverTimestamp } = await import(
+      "firebase/firestore"
+    );
+    const db = fbInit ? getFirestore(fbInit) : getFirestore();
 
-      const uid = cred.user.uid;
+    const uid = cred.user.uid;
 
-      // >>> PEGAR O VALOR DO CONDO
-      const condoId =
-        tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
+    // >>> PEGAR O VALOR DO CONDO
+    const condoId =
+      tools.getCtData("sc.A11.forms.iptsChanges.condoData.docId") ?? "";
 
-      const dataToSet = {
-        docId: uid,
-        createdAt: serverTimestamp(),
-        userName: name,
-        userEmail: email,
-        userImage: cred.user.photoURL || "",
-        partnerActivity,
-        typeAccount: "partner",
-        condoId: condoId,
-      };
+    const dataToSet = {
+      docId: uid,
+      createdAt: serverTimestamp(),
+      userName: name,
+      userEmail: email,
+      userImage: cred.user.photoURL || "",
+      partnerActivity,
+      typeAccount: "partner",
+      condoId: condoId,
+    };
 
-      await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
-      console.log("users doc criado/atualizado:", { uid, dataToSet });
-    }
+    await setDoc(doc(db, "users", uid), dataToSet, { merge: true });
+    console.log("users doc criado/atualizado:", { uid, dataToSet });
+
     // <<<<<<<<<<<<<<< FIM DA ADIÇÃO
 
     // (opcional) enviar verificação
@@ -39922,7 +39925,8 @@ width: 120
       value: "Erro ao Criar Parceiro. " + (e?.message ?? ""),
     });
   }
-}]
+}
+]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
