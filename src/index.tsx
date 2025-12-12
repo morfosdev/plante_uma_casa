@@ -2,11 +2,11 @@
 
  // ---------- import React Packs
  import React from 'react';
-import * as RN from 'react-native';
+ import * as RN from 'react-native'; 
 
- import * as FileSystem from 'expo-file-system/legacy';
-import * as MediaLibrary from 'expo-media-library';
-import * as Sharing from 'expo-sharing';
+ import * as FileSystem from 'expo-file-system/legacy'; 
+ import * as MediaLibrary from 'expo-media-library'; 
+ import * as Sharing from 'expo-sharing'; 
  
  // import * as Notifications from 'expo-notifications'; 
  // import * as Device from 'expo-device'; 
@@ -15,14 +15,19 @@ import * as Sharing from 'expo-sharing';
  import { create } from 'zustand';
 
  // ---------- import Local Tools
+ import { mapElements } from './tools/base/project/mapElements';
+ import * as functions from './tools/base/functions';
+ import * as Elements from './tools/base/Elements';
+ import { Project } from './tools/base/project';
+ import * as jsvals from './tools/base/jsvals';
+ import { props } from './tools/base/props';
+ import * as customs from './tools/customs';
+ import * as stls from './tools/base/stls';
  import { tools } from './tools';
-import * as Elements from './tools/base/Elements';
-import * as functions from './tools/base/functions';
-import { Project } from './tools/base/project';
 
   // import { usePushNotifications } from './tools/customs/usePushNotifications';       
  // ---------- set Caps Inputs
- const currRoute = 'c1login';
+ const currRoute = 'ab0login';
 
  // const { expoPushToken, notification } = usePushNotifications();
  // console.log({ expoPushToken, notification });
@@ -23352,36 +23357,37 @@ shadowRadius: 4,
   };
 
   // ===== função de download (web) =====
-//   const baixarRecibo = (url) => {
-//     if (!url || typeof url !== "string") return;
-//     try {
-//       window.open(url, "_blank");
-//     } catch (err) {
-//       console.log("Erro ao abrir URL do recibo:", err);
-//     }
-//   };
-  const handleDownload = (uri: string, filename: string) => {
-    if (!uri) return;
-
-    if (RN.Platform.OS === "web" && typeof document !== "undefined") {
-      const link = document.createElement("a");
-      link.href = uri;
-      link.download = filename || "imagem" + '.png';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      return;
+  const baixarRecibo = (url) => {
+    if (!url || typeof url !== "string") return;
+    try {
+      window.open(url, "_blank");
+    } catch (err) {
+      console.log("Erro ao abrir URL do recibo:", err);
     }
-
-    RN.Linking.openURL(uri);
   };
+//   const handleDownload = (uri: string, filename: string) => {
+//     if (!uri) return;
+
+//     if (RN.Platform.OS === "web" && typeof document !== "undefined") {
+//       const link = document.createElement("a");
+//       link.href = uri;
+//       link.download = filename || "imagem" + '.png';
+//       document.body.appendChild(link);
+//       link.click();
+//       document.body.removeChild(link);
+//       return;
+//     }
+
+//     RN.Linking.openURL(uri);
+//   };
 
   // ===== retorno =====
   return (
     <RN.Pressable
       onPress={() => {
         console.log("Clicou no botão de recibo");
-        if (receiptUrl) handleDownload(receiptUrl, fileName);
+        // if (receiptUrl) handleDownload(receiptUrl, fileName);
+        if (receiptUrl) baixarRecibo(receiptUrl);
       }}
     >
       <RN.Text style={condStyle}>↪</RN.Text>
