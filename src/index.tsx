@@ -2,11 +2,11 @@
 
  // ---------- import React Packs
  import React from 'react';
- import * as RN from 'react-native'; 
+import * as RN from 'react-native';
 
- import * as FileSystem from 'expo-file-system/legacy'; 
- import * as MediaLibrary from 'expo-media-library'; 
- import * as Sharing from 'expo-sharing'; 
+ import * as FileSystem from 'expo-file-system/legacy';
+import * as MediaLibrary from 'expo-media-library';
+import * as Sharing from 'expo-sharing';
  
  // import * as Notifications from 'expo-notifications'; 
  // import * as Device from 'expo-device'; 
@@ -15,19 +15,14 @@
  import { create } from 'zustand';
 
  // ---------- import Local Tools
- import { mapElements } from './tools/base/project/mapElements';
- import * as functions from './tools/base/functions';
- import * as Elements from './tools/base/Elements';
- import { Project } from './tools/base/project';
- import * as jsvals from './tools/base/jsvals';
- import { props } from './tools/base/props';
- import * as customs from './tools/customs';
- import * as stls from './tools/base/stls';
  import { tools } from './tools';
+import * as Elements from './tools/base/Elements';
+import * as functions from './tools/base/functions';
+import { Project } from './tools/base/project';
 
   // import { usePushNotifications } from './tools/customs/usePushNotifications';       
  // ---------- set Caps Inputs
- const currRoute = 'ab0login';
+ const currRoute = 'c1login';
 
  // const { expoPushToken, notification } = usePushNotifications();
  // console.log({ expoPushToken, notification });
