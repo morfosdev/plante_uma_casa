@@ -48992,13 +48992,14 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.date`],
 
@@ -49043,15 +49044,16 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.responsible`],
 
@@ -49096,17 +49098,19 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
+          propsArray: [
+        `{
 multiline: 'true',
-}`],
+}`, `{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderWidth: 1,
 borderColor: '#ccc',
 padding: 5,
 height: 80,
 borderRadius: 10,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.description`],
 
@@ -54649,13 +54653,14 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.date`],
 
@@ -54700,15 +54705,16 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.responsible`],
 
@@ -54753,17 +54759,19 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
+          propsArray: [
+        `{
 multiline: 'true',
-}`],
+}`, `{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderWidth: 1,
 borderColor: '#ccc',
 padding: 5,
 height: 80,
 borderRadius: 10,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.description`],
 
@@ -60523,13 +60531,14 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.date`],
 
@@ -60574,15 +60583,16 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.responsible`],
 
@@ -60627,17 +60637,19 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
+          propsArray: [
+        `{
 multiline: 'true',
-}`],
+}`, `{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderWidth: 1,
 borderColor: '#ccc',
 padding: 5,
 height: 80,
 borderRadius: 10,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.description`],
 
@@ -69870,13 +69882,14 @@ fontWeight: '700',
         (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.date`],
 
@@ -69921,15 +69934,16 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [{}],
+          propsArray: [`{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderBottomWidth: 1,
 borderBottomColor: '#ccc',
 paddingVertical: 2,
 paddingHorizontal: 4,
 fontSize: 12,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.responsible`],
 
@@ -69974,17 +69988,19 @@ fontWeight: '700',
 
         }}/>, 
         (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
+          propsArray: [
+        `{
 multiline: 'true',
-}`],
+}`, `{editable: false}`],
 
-          stylesArray: [`{
+          stylesArray: [
+        `{
 borderWidth: 1,
 borderColor: '#ccc',
 padding: 5,
 height: 80,
 borderRadius: 10,
-}`],
+}`, `{ backgroundColor: "#e8edf5" }`],
 
           path: [`sc.A14.forms.editChanges.description`],
 
