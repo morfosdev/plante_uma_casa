@@ -8911,6 +8911,8 @@ width: 120
       path: "sc.A7.forms.iptsChanges.firstInstallment",
       name: "Valor total da entrada",
     },
+    { path: "sc.A7.forms.iptsChanges.startDate", name: "Data de início" },
+    { path: "sc.A7.forms.iptsChanges.endDate", name: "Data de término" },
   ];
 
   const getVal = (path) => {
@@ -9021,15 +9023,16 @@ width: 120
   }
 
   // Cria o lote vinculado ao proprietário
+  const dataSet = tools.getCtData("sc.A7.forms.iptsChanges");
+  const condDataSet = Object.keys(dataSet).length > 0 ? dataSet : {};
+
   const lotsRef = collection(db, "lots");
   const newLot = {
+    ...condDataSet,
+
     owner: name,
     userEmail: email,
-    ownerId: '',
-    lot: getVal("sc.A7.forms.iptsChanges.lot"),
-    area: getVal("sc.A7.forms.iptsChanges.area"),
-    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    ownerId: "",
     condoId: condoId,
     createdAt: serverTimestamp(),
     installments: {},
@@ -17845,6 +17848,8 @@ width: 120
       path: "sc.A7.forms.iptsChanges.firstInstallment",
       name: "Valor total da entrada",
     },
+    { path: "sc.A7.forms.iptsChanges.startDate", name: "Data de início" },
+    { path: "sc.A7.forms.iptsChanges.endDate", name: "Data de término" },
   ];
 
   const getVal = (path) => {
@@ -17955,15 +17960,16 @@ width: 120
   }
 
   // Cria o lote vinculado ao proprietário
+  const dataSet = tools.getCtData("sc.A7.forms.iptsChanges");
+  const condDataSet = Object.keys(dataSet).length > 0 ? dataSet : {};
+
   const lotsRef = collection(db, "lots");
   const newLot = {
+    ...condDataSet,
+
     owner: name,
     userEmail: email,
-    ownerId: '',
-    lot: getVal("sc.A7.forms.iptsChanges.lot"),
-    area: getVal("sc.A7.forms.iptsChanges.area"),
-    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    ownerId: "",
     condoId: condoId,
     createdAt: serverTimestamp(),
     installments: {},
@@ -26793,6 +26799,8 @@ width: 120
       path: "sc.A7.forms.iptsChanges.firstInstallment",
       name: "Valor total da entrada",
     },
+    { path: "sc.A7.forms.iptsChanges.startDate", name: "Data de início" },
+    { path: "sc.A7.forms.iptsChanges.endDate", name: "Data de término" },
   ];
 
   const getVal = (path) => {
@@ -26903,15 +26911,16 @@ width: 120
   }
 
   // Cria o lote vinculado ao proprietário
+  const dataSet = tools.getCtData("sc.A7.forms.iptsChanges");
+  const condDataSet = Object.keys(dataSet).length > 0 ? dataSet : {};
+
   const lotsRef = collection(db, "lots");
   const newLot = {
+    ...condDataSet,
+
     owner: name,
     userEmail: email,
-    ownerId: '',
-    lot: getVal("sc.A7.forms.iptsChanges.lot"),
-    area: getVal("sc.A7.forms.iptsChanges.area"),
-    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    ownerId: "",
     condoId: condoId,
     createdAt: serverTimestamp(),
     installments: {},
@@ -35583,6 +35592,8 @@ width: 120
       path: "sc.A7.forms.iptsChanges.firstInstallment",
       name: "Valor total da entrada",
     },
+    { path: "sc.A7.forms.iptsChanges.startDate", name: "Data de início" },
+    { path: "sc.A7.forms.iptsChanges.endDate", name: "Data de término" },
   ];
 
   const getVal = (path) => {
@@ -35693,15 +35704,16 @@ width: 120
   }
 
   // Cria o lote vinculado ao proprietário
+  const dataSet = tools.getCtData("sc.A7.forms.iptsChanges");
+  const condDataSet = Object.keys(dataSet).length > 0 ? dataSet : {};
+
   const lotsRef = collection(db, "lots");
   const newLot = {
+    ...condDataSet,
+
     owner: name,
     userEmail: email,
-    ownerId: '',
-    lot: getVal("sc.A7.forms.iptsChanges.lot"),
-    area: getVal("sc.A7.forms.iptsChanges.area"),
-    totalValue: getVal("sc.A7.forms.iptsChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.iptsChanges.firstInstallment"),
+    ownerId: "",
     condoId: condoId,
     createdAt: serverTimestamp(),
     installments: {},
