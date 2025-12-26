@@ -14556,6 +14556,11 @@ async (...args) =>
           keyPath: [`sc.A13.currents.currId1`],
           value: [`$arg_ownerId`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A14.forms.iptsChanges.owner`],
+          value: [`$arg_owner`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a13list");
@@ -40765,7 +40770,7 @@ async (...args) =>
           ],
 
           children: [
-            `$var_sc.A7.forms.editChanges.owner`
+            `$var_sc.A14.forms.iptsChanges.owner`
           ],
 
           args,
