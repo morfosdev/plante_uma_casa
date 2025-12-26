@@ -48782,18 +48782,18 @@ fontWeight: '700',
   const arrSteps = typeof objSteps === 'object' ? Object.values(objSteps) : [];
   console.log("custom do where get user by ownerId", { arrSteps });
 
-  tools.setData({ path: "sc.B7.lists.list1", value: arrSteps });
+  tools.setData({ path: "sc.A13.lists.list1", value: arrSteps });
 }, 
  async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.B7.iptsChanges`],
+          keyPath: [`sc.A13.iptsChanges`],
           value: [`$arg_callback`]
         }}), () => {
-  const arr = tools.getCtData("sc.B7.forms.iptsChanges");
+  const arr = tools.getCtData("sc.A13.forms.iptsChanges");
 
   if (Array.isArray(arr) && arr.length > 0) {
     tools.setData({
-      path: "sc.B7.forms.iptsChanges",
+      path: "sc.A13.forms.iptsChanges",
       value: arr[0]
     });
   }
