@@ -8938,6 +8938,18 @@ fontSize: 12,
 
           args,
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -8971,7 +8983,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.A7.forms.iptsChanges.startDate`],
 
           funcsArray: [(txt) => {
   try {
@@ -9002,7 +9014,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
         value: [String(masked)],
       },
     });
@@ -9014,6 +9026,18 @@ fontSize: 12,
 
           args,
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -17958,6 +17982,18 @@ fontSize: 12,
 
           args,
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -17991,7 +18027,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.A7.forms.iptsChanges.startDate`],
 
           funcsArray: [(txt) => {
   try {
@@ -18022,7 +18058,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
         value: [String(masked)],
       },
     });
@@ -18034,6 +18070,18 @@ fontSize: 12,
 
           args,
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -26992,6 +27040,18 @@ fontSize: 12,
 
           args,
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -27025,7 +27085,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.A7.forms.iptsChanges.startDate`],
 
           funcsArray: [(txt) => {
   try {
@@ -27056,7 +27116,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
         value: [String(masked)],
       },
     });
@@ -27068,6 +27128,18 @@ fontSize: 12,
 
           args,
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -35868,6 +35940,18 @@ fontSize: 12,
 
           args,
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
@@ -35901,7 +35985,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.a1.iptChanges.startDate`],
+          path: [`sc.A7.forms.iptsChanges.startDate`],
 
           funcsArray: [(txt) => {
   try {
@@ -35932,7 +36016,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
         value: [String(masked)],
       },
     });
@@ -35944,6 +36028,18 @@ fontSize: 12,
 
           args,
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
