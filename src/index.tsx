@@ -48772,7 +48772,7 @@ color: '#555555',
           ],
 
           children: [
-            `Editar etapa`
+            `Detalhes da Etapa`
           ],
 
           args,
@@ -54433,7 +54433,7 @@ color: '#555555',
           ],
 
           children: [
-            `Editar etapa`
+            `Detalhes da Etapa`
           ],
 
           args,
@@ -60311,7 +60311,7 @@ color: '#555555',
           ],
 
           children: [
-            `Editar etapa`
+            `Detalhes da Etapa`
           ],
 
           args,
@@ -69662,7 +69662,7 @@ color: '#555555',
           ],
 
           children: [
-            `Editar etapa`
+            `Detalhes da Etapa`
           ],
 
           args,
