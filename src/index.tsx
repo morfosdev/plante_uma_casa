@@ -6139,187 +6139,6 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.iptChanges.startDate`],
-
-          funcsArray: [(txt) => {
-  try {
-    if (typeof txt !== "string") txt = String(txt ?? "");
-
-    // Mantém apenas números (sem regex)
-    let clean = "";
-    for (let i = 0; i < txt.length; i++) {
-      const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
-    }
-
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
-
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
-    let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
-  } catch (e) {
-    console.error("Erro na máscara de data:", e);
-    return txt;
-  }
-}],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.iptChanges.endDate`],
-
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
-  try {
-    if (typeof txt !== "string") txt = String(txt ?? "");
-
-    // Mantém apenas números (sem regex)
-    let clean = "";
-    for (let i = 0; i < txt.length; i++) {
-      const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
-    }
-
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
-
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
-    let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.endDate"],
-        value: [String(masked)],
-      },
-    });
-  } catch (e) {
-    console.error("Erro na máscara de data:", e);
-    return txt;
-  }
-}],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
             `Descrição`
           ],
 
@@ -7432,116 +7251,6 @@ fontSize: 12,
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.editChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -8861,7 +8570,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -8931,6 +8641,186 @@ fontSize: 12,
     });
   } catch (e) {
     console.error("Erro na máscara BRL:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.startDate`],
+
+          funcsArray: [(txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.endDate`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.endDate`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
     return txt;
   }
 }],
@@ -10174,7 +10064,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -10194,6 +10085,186 @@ fontSize: 12,
           keyPath: [`sc.A7.forms.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.startDate`],
+
+          funcsArray: [(txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.editChanges.endDate`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.editChanges.endDate`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.editChanges.endDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
 
           args,
         }}/>],
@@ -15002,187 +15073,6 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.iptChanges.startDate`],
-
-          funcsArray: [(txt) => {
-  try {
-    if (typeof txt !== "string") txt = String(txt ?? "");
-
-    // Mantém apenas números (sem regex)
-    let clean = "";
-    for (let i = 0; i < txt.length; i++) {
-      const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
-    }
-
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
-
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
-    let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
-  } catch (e) {
-    console.error("Erro na máscara de data:", e);
-    return txt;
-  }
-}],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.iptChanges.endDate`],
-
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
-  try {
-    if (typeof txt !== "string") txt = String(txt ?? "");
-
-    // Mantém apenas números (sem regex)
-    let clean = "";
-    for (let i = 0; i < txt.length; i++) {
-      const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
-    }
-
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
-
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
-    let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.endDate"],
-        value: [String(masked)],
-      },
-    });
-  } catch (e) {
-    console.error("Erro na máscara de data:", e);
-    return txt;
-  }
-}],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
             `Descrição`
           ],
 
@@ -16295,116 +16185,6 @@ fontSize: 12,
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.editChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -17724,7 +17504,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -17794,6 +17575,186 @@ fontSize: 12,
     });
   } catch (e) {
     console.error("Erro na máscara BRL:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.startDate`],
+
+          funcsArray: [(txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.endDate`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.endDate`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
     return txt;
   }
 }],
@@ -19037,7 +18998,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -19057,6 +19019,186 @@ fontSize: 12,
           keyPath: [`sc.A7.forms.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.startDate`],
+
+          funcsArray: [(txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.editChanges.endDate`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.editChanges.endDate`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.editChanges.endDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
 
           args,
         }}/>],
@@ -23879,187 +24021,6 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.iptChanges.startDate`],
-
-          funcsArray: [(txt) => {
-  try {
-    if (typeof txt !== "string") txt = String(txt ?? "");
-
-    // Mantém apenas números (sem regex)
-    let clean = "";
-    for (let i = 0; i < txt.length; i++) {
-      const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
-    }
-
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
-
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
-    let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
-  } catch (e) {
-    console.error("Erro na máscara de data:", e);
-    return txt;
-  }
-}],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.iptChanges.endDate`],
-
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
-  try {
-    if (typeof txt !== "string") txt = String(txt ?? "");
-
-    // Mantém apenas números (sem regex)
-    let clean = "";
-    for (let i = 0; i < txt.length; i++) {
-      const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
-    }
-
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
-
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
-    let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.endDate"],
-        value: [String(masked)],
-      },
-    });
-  } catch (e) {
-    console.error("Erro na máscara de data:", e);
-    return txt;
-  }
-}],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
             `Descrição`
           ],
 
@@ -25172,116 +25133,6 @@ fontSize: 12,
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.editChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -26601,7 +26452,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -26671,6 +26523,186 @@ fontSize: 12,
     });
   } catch (e) {
     console.error("Erro na máscara BRL:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.startDate`],
+
+          funcsArray: [(txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.endDate`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.endDate`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
     return txt;
   }
 }],
@@ -27914,7 +27946,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -27934,6 +27967,186 @@ fontSize: 12,
           keyPath: [`sc.A7.forms.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.startDate`],
+
+          funcsArray: [(txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.editChanges.endDate`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.editChanges.endDate`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.editChanges.endDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
 
           args,
         }}/>],
@@ -32598,187 +32811,6 @@ fontWeight: '700',
           ],
 
           children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.iptChanges.startDate`],
-
-          funcsArray: [(txt) => {
-  try {
-    if (typeof txt !== "string") txt = String(txt ?? "");
-
-    // Mantém apenas números (sem regex)
-    let clean = "";
-    for (let i = 0; i < txt.length; i++) {
-      const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
-    }
-
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
-
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
-    let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.startDate"],
-        value: [String(masked)],
-      },
-    });
-  } catch (e) {
-    console.error("Erro na máscara de data:", e);
-    return txt;
-  }
-}],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.iptChanges.endDate`],
-
-          funcsArray: [
-        async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
-          value: [`$arg_callback`]
-        }}), (txt) => {
-  try {
-    if (typeof txt !== "string") txt = String(txt ?? "");
-
-    // Mantém apenas números (sem regex)
-    let clean = "";
-    for (let i = 0; i < txt.length; i++) {
-      const ch = txt[i];
-      if (ch >= "0" && ch <= "9") {
-        clean += ch;
-      }
-    }
-
-    // Limita a 8 dígitos (ddmmyyyy)
-    if (clean.length > 8) clean = clean.slice(0, 8);
-
-    console.log({ clean });
-
-    // Monta máscara dd/mm/aaaa
-    let masked = "";
-    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
-    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
-    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
-
-    console.log({ masked });
-
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.a1.iptChanges.endDate"],
-        value: [String(masked)],
-      },
-    });
-  } catch (e) {
-    console.error("Erro na máscara de data:", e);
-    return txt;
-  }
-}],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
             `Descrição`
           ],
 
@@ -33891,116 +33923,6 @@ fontSize: 12,
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a1.editChanges.address`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Início`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.editChanges.startDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.startDate`],
-          value: [`$arg_callback`]
-        }})],
-
-          args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-fontSize: 12,
-color: '#555555',
-fontWeight: '700',
-}`
-          ],
-
-          children: [
-            `Data de Conclusão Prevista`
-          ],
-
-          args,
-
-        }}/>, 
-        (...args:any) => <Elements.IptTxtEdit pass={{
-          propsArray: [`{
-placeholder: 'DD/MM/AAAA',
-}`],
-
-          stylesArray: [`{
-borderBottomWidth: 1,
-borderBottomColor: '#ccc',
-paddingVertical: 2,
-paddingHorizontal: 4,
-fontSize: 12,
-}`],
-
-          path: [`sc.a1.editChanges.endDate`],
-
-          funcsArray: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.editChanges.endDate`],
           value: [`$arg_callback`]
         }})],
 
@@ -35320,7 +35242,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -35390,6 +35313,186 @@ fontSize: 12,
     });
   } catch (e) {
     console.error("Erro na máscara BRL:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.startDate`],
+
+          funcsArray: [(txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.endDate`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.iptsChanges.endDate`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
     return txt;
   }
 }],
@@ -36633,7 +36736,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -36653,6 +36757,186 @@ fontSize: 12,
           keyPath: [`sc.A7.forms.editChanges.firstInstallment`],
           value: [`$arg_callback`]
         }})],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Início`
+          ],
+
+          args,
+
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.iptsChanges.startDate`],
+
+          funcsArray: [(txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
+
+          args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+fontSize: 12,
+color: '#555555',
+fontWeight: '700',
+}`
+          ],
+
+          children: [
+            `Data de Conclusão Prevista`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+          propsArray: [`{
+placeholder: 'DD/MM/AAAA',
+}`],
+
+          stylesArray: [`{
+borderBottomWidth: 1,
+borderBottomColor: '#ccc',
+paddingVertical: 2,
+paddingHorizontal: 4,
+fontSize: 12,
+}`],
+
+          path: [`sc.A7.forms.editChanges.endDate`],
+
+          funcsArray: [
+        async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.forms.editChanges.endDate`],
+          value: [`$arg_callback`]
+        }}), (txt) => {
+  try {
+    if (typeof txt !== "string") txt = String(txt ?? "");
+
+    // Mantém apenas números (sem regex)
+    let clean = "";
+    for (let i = 0; i < txt.length; i++) {
+      const ch = txt[i];
+      if (ch >= "0" && ch <= "9") {
+        clean += ch;
+      }
+    }
+
+    // Limita a 8 dígitos (ddmmyyyy)
+    if (clean.length > 8) clean = clean.slice(0, 8);
+
+    console.log({ clean });
+
+    // Monta máscara dd/mm/aaaa
+    let masked = "";
+    if (clean.length > 0) masked = clean.slice(0, 2);         // dd
+    if (clean.length >= 3) masked += "/" + clean.slice(2, 4); // dd/mm
+    if (clean.length >= 5) masked += "/" + clean.slice(4, 8); // dd/mm/aaaa
+
+    console.log({ masked });
+
+    tools.functions.setVar({
+      args: "",
+      pass: {
+        keyPath: ["sc.A7.forms.editChanges.endDate"],
+        value: [String(masked)],
+      },
+    });
+  } catch (e) {
+    console.error("Erro na máscara de data:", e);
+    return txt;
+  }
+}],
 
           args,
         }}/>],
