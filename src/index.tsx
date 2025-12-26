@@ -48606,7 +48606,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a14.editSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.A14.editSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -54263,7 +54263,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a14.editSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.A14.editSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -60137,7 +60137,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a14.editSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.A14.editSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -69484,7 +69484,7 @@ backgroundColor: '#f5f5f5',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.a14.editSteps", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.A14.editSteps", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
