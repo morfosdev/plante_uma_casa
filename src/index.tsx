@@ -40698,7 +40698,7 @@ async (...args) =>
  arrFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("b6list");
+          return tools.goTo("a7list");
         }
         ]
  , trigger: 'on press'
