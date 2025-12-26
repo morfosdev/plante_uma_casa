@@ -6290,8 +6290,6 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
@@ -7423,8 +7421,6 @@ async (...args) =>
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
-    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
@@ -15227,8 +15223,6 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
@@ -16360,8 +16354,6 @@ async (...args) =>
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
-    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
@@ -24178,8 +24170,6 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
@@ -25311,8 +25301,6 @@ async (...args) =>
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
-    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
@@ -32971,8 +32959,6 @@ tools.setData({path: "sc.a1.iptChanges.arrDocuments", value: urls});
   const requiredFields = [
     { path: "sc.a1.iptChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.iptChanges.address", name: "Endereço" },
-    { path: "sc.a1.iptChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.iptChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.iptChanges.description", name: "Descrição" },
   ];
 
@@ -34104,8 +34090,6 @@ async (...args) =>
   const requiredFields = [
     { path: "sc.a1.editChanges.condo", name: "Nome do Condomínio" },
     { path: "sc.a1.editChanges.address", name: "Endereço" },
-    { path: "sc.a1.editChanges.startDate", name: "Data de Início" },
-    { path: "sc.a1.editChanges.endDate", name: "Data de Conclusão Prevista" },
     { path: "sc.a1.editChanges.description", name: "Descrição" },
   ];
 
