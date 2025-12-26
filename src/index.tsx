@@ -10337,6 +10337,8 @@ width: 120
       path: "sc.A7.forms.editChanges.firstInstallment",
       name: "Valor total da entrada",
     },
+    { path: "sc.A7.forms.editChanges.startDate", name: "Data de início" },
+    { path: "sc.A7.forms.editChanges.endDate", name: "Data de término" },
   ];
 
   const getVal = (path) => {
@@ -10417,13 +10419,11 @@ width: 120
   }
 
   // Monta os dados a salvar
+  const editData = tools.getCtData("sc.A7.forms.editChanges");
+  const condEditData = Object.keys(editData).length > 0 ? editData : {};
+
   const updatedDoc = {
-    owner: getVal("sc.A7.forms.editChanges.owner"),
-    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
-    lot: getVal("sc.A7.forms.editChanges.lot"),
-    area: getVal("sc.A7.forms.editChanges.area"),
-    totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
+    ...condEditData,
     updatedAt: serverTimestamp(),
   };
 
@@ -19271,6 +19271,8 @@ width: 120
       path: "sc.A7.forms.editChanges.firstInstallment",
       name: "Valor total da entrada",
     },
+    { path: "sc.A7.forms.editChanges.startDate", name: "Data de início" },
+    { path: "sc.A7.forms.editChanges.endDate", name: "Data de término" },
   ];
 
   const getVal = (path) => {
@@ -19351,13 +19353,11 @@ width: 120
   }
 
   // Monta os dados a salvar
+  const editData = tools.getCtData("sc.A7.forms.editChanges");
+  const condEditData = Object.keys(editData).length > 0 ? editData : {};
+
   const updatedDoc = {
-    owner: getVal("sc.A7.forms.editChanges.owner"),
-    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
-    lot: getVal("sc.A7.forms.editChanges.lot"),
-    area: getVal("sc.A7.forms.editChanges.area"),
-    totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
+    ...condEditData,
     updatedAt: serverTimestamp(),
   };
 
@@ -28219,6 +28219,8 @@ width: 120
       path: "sc.A7.forms.editChanges.firstInstallment",
       name: "Valor total da entrada",
     },
+    { path: "sc.A7.forms.editChanges.startDate", name: "Data de início" },
+    { path: "sc.A7.forms.editChanges.endDate", name: "Data de término" },
   ];
 
   const getVal = (path) => {
@@ -28299,13 +28301,11 @@ width: 120
   }
 
   // Monta os dados a salvar
+  const editData = tools.getCtData("sc.A7.forms.editChanges");
+  const condEditData = Object.keys(editData).length > 0 ? editData : {};
+
   const updatedDoc = {
-    owner: getVal("sc.A7.forms.editChanges.owner"),
-    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
-    lot: getVal("sc.A7.forms.editChanges.lot"),
-    area: getVal("sc.A7.forms.editChanges.area"),
-    totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
+    ...condEditData,
     updatedAt: serverTimestamp(),
   };
 
@@ -37009,6 +37009,8 @@ width: 120
       path: "sc.A7.forms.editChanges.firstInstallment",
       name: "Valor total da entrada",
     },
+    { path: "sc.A7.forms.editChanges.startDate", name: "Data de início" },
+    { path: "sc.A7.forms.editChanges.endDate", name: "Data de término" },
   ];
 
   const getVal = (path) => {
@@ -37089,13 +37091,11 @@ width: 120
   }
 
   // Monta os dados a salvar
+  const editData = tools.getCtData("sc.A7.forms.editChanges");
+  const condEditData = Object.keys(editData).length > 0 ? editData : {};
+
   const updatedDoc = {
-    owner: getVal("sc.A7.forms.editChanges.owner"),
-    userEmail: getVal("sc.A7.forms.editChanges.userEmail"),
-    lot: getVal("sc.A7.forms.editChanges.lot"),
-    area: getVal("sc.A7.forms.editChanges.area"),
-    totalValue: getVal("sc.A7.forms.editChanges.totalValue"),
-    firstInstallment: getVal("sc.A7.forms.editChanges.firstInstallment"),
+    ...condEditData,
     updatedAt: serverTimestamp(),
   };
 
