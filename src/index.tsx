@@ -41216,7 +41216,7 @@ top: 2,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
   const stepIdRaw = item?.stepId;
 
@@ -41228,8 +41228,7 @@ top: 2,
 
   const stepId = String(stepIdRaw);
   const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
+  const pathEdit = "all.toggles.A14.editSteps";
 
   // Abre painel lateral (comum)
   tools.setData({ path: pathSideRight, value: true });
@@ -41258,51 +41257,29 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
-  // if (!condMatch) {
-  //     // ---- Modo Adicionar
-  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
-
-  //     tools.setData({ path: pathNew, value: true });
-  //     tools.setData({ path: pathEdit, value: false });
-
-  //     // stepId sempre preenchido
-  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
-
-  //     // Evita undefined: use vazio ou herde do item
-
-  //     // (Opcional) limpar possíveis resíduos do form de edição
-  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
-  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-  //     return;
-  // }
-
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
   tools.setData({ path: pathEdit, value: true });
-  tools.setData({ path: pathNew, value: false });
 
   // Define os valores base no formulário de edição
   tools.setData({
-    path: "sc.B9.forms.editChanges",
+    path: "sc.A14.forms.editChanges",
     value: matched, // ✅ Passa todos os dados do documento
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
-  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-
-  // (Opcional) limpar possíveis resíduos do form de novo
-  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
   tools.setData({
-    path: "sc.B9.forms.viewChanges.stepLabel",
+    path: "sc.A14.forms.viewChanges.stepLabel",
     value: selectStepStatic?.stepLabel ?? "",
   });
 
   tools.setData({
-    path: "sc.B9.forms.viewChanges.subStepLabel",
+    path: "sc.A14.forms.viewChanges.subStepLabel",
     value: selectStepStatic?.subStepLabel ?? "",
   });
 }]
@@ -41769,7 +41746,7 @@ top: 2,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
   const stepIdRaw = item?.stepId;
 
@@ -41781,8 +41758,7 @@ top: 2,
 
   const stepId = String(stepIdRaw);
   const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
+  const pathEdit = "all.toggles.A14.editSteps";
 
   // Abre painel lateral (comum)
   tools.setData({ path: pathSideRight, value: true });
@@ -41811,51 +41787,29 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
-  // if (!condMatch) {
-  //     // ---- Modo Adicionar
-  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
-
-  //     tools.setData({ path: pathNew, value: true });
-  //     tools.setData({ path: pathEdit, value: false });
-
-  //     // stepId sempre preenchido
-  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
-
-  //     // Evita undefined: use vazio ou herde do item
-
-  //     // (Opcional) limpar possíveis resíduos do form de edição
-  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
-  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-  //     return;
-  // }
-
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
   tools.setData({ path: pathEdit, value: true });
-  tools.setData({ path: pathNew, value: false });
 
   // Define os valores base no formulário de edição
   tools.setData({
-    path: "sc.B9.forms.editChanges",
+    path: "sc.A14.forms.editChanges",
     value: matched, // ✅ Passa todos os dados do documento
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
-  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-
-  // (Opcional) limpar possíveis resíduos do form de novo
-  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
   tools.setData({
-    path: "sc.B9.forms.viewChanges.stepLabel",
+    path: "sc.A14.forms.viewChanges.stepLabel",
     value: selectStepStatic?.stepLabel ?? "",
   });
 
   tools.setData({
-    path: "sc.B9.forms.viewChanges.subStepLabel",
+    path: "sc.A14.forms.viewChanges.subStepLabel",
     value: selectStepStatic?.subStepLabel ?? "",
   });
 }]
@@ -42322,7 +42276,7 @@ top: 2,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
   const stepIdRaw = item?.stepId;
 
@@ -42334,8 +42288,7 @@ top: 2,
 
   const stepId = String(stepIdRaw);
   const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
+  const pathEdit = "all.toggles.A14.editSteps";
 
   // Abre painel lateral (comum)
   tools.setData({ path: pathSideRight, value: true });
@@ -42364,51 +42317,29 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
-  // if (!condMatch) {
-  //     // ---- Modo Adicionar
-  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
-
-  //     tools.setData({ path: pathNew, value: true });
-  //     tools.setData({ path: pathEdit, value: false });
-
-  //     // stepId sempre preenchido
-  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
-
-  //     // Evita undefined: use vazio ou herde do item
-
-  //     // (Opcional) limpar possíveis resíduos do form de edição
-  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
-  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-  //     return;
-  // }
-
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
   tools.setData({ path: pathEdit, value: true });
-  tools.setData({ path: pathNew, value: false });
 
   // Define os valores base no formulário de edição
   tools.setData({
-    path: "sc.B9.forms.editChanges",
+    path: "sc.A14.forms.editChanges",
     value: matched, // ✅ Passa todos os dados do documento
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
-  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-
-  // (Opcional) limpar possíveis resíduos do form de novo
-  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
   tools.setData({
-    path: "sc.B9.forms.viewChanges.stepLabel",
+    path: "sc.A14.forms.viewChanges.stepLabel",
     value: selectStepStatic?.stepLabel ?? "",
   });
 
   tools.setData({
-    path: "sc.B9.forms.viewChanges.subStepLabel",
+    path: "sc.A14.forms.viewChanges.subStepLabel",
     value: selectStepStatic?.subStepLabel ?? "",
   });
 }]
@@ -42875,7 +42806,7 @@ top: 2,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
   const stepIdRaw = item?.stepId;
 
@@ -42887,8 +42818,7 @@ top: 2,
 
   const stepId = String(stepIdRaw);
   const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
+  const pathEdit = "all.toggles.A14.editSteps";
 
   // Abre painel lateral (comum)
   tools.setData({ path: pathSideRight, value: true });
@@ -42917,51 +42847,29 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
-  // if (!condMatch) {
-  //     // ---- Modo Adicionar
-  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
-
-  //     tools.setData({ path: pathNew, value: true });
-  //     tools.setData({ path: pathEdit, value: false });
-
-  //     // stepId sempre preenchido
-  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
-
-  //     // Evita undefined: use vazio ou herde do item
-
-  //     // (Opcional) limpar possíveis resíduos do form de edição
-  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
-  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-  //     return;
-  // }
-
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
   tools.setData({ path: pathEdit, value: true });
-  tools.setData({ path: pathNew, value: false });
 
   // Define os valores base no formulário de edição
   tools.setData({
-    path: "sc.B9.forms.editChanges",
+    path: "sc.A14.forms.editChanges",
     value: matched, // ✅ Passa todos os dados do documento
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
-  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-
-  // (Opcional) limpar possíveis resíduos do form de novo
-  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
   tools.setData({
-    path: "sc.B9.forms.viewChanges.stepLabel",
+    path: "sc.A14.forms.viewChanges.stepLabel",
     value: selectStepStatic?.stepLabel ?? "",
   });
 
   tools.setData({
-    path: "sc.B9.forms.viewChanges.subStepLabel",
+    path: "sc.A14.forms.viewChanges.subStepLabel",
     value: selectStepStatic?.subStepLabel ?? "",
   });
 }]
@@ -43428,7 +43336,7 @@ top: 2,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
   const stepIdRaw = item?.stepId;
 
@@ -43440,8 +43348,7 @@ top: 2,
 
   const stepId = String(stepIdRaw);
   const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
+  const pathEdit = "all.toggles.A14.editSteps";
 
   // Abre painel lateral (comum)
   tools.setData({ path: pathSideRight, value: true });
@@ -43470,51 +43377,29 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
-  // if (!condMatch) {
-  //     // ---- Modo Adicionar
-  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
-
-  //     tools.setData({ path: pathNew, value: true });
-  //     tools.setData({ path: pathEdit, value: false });
-
-  //     // stepId sempre preenchido
-  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
-
-  //     // Evita undefined: use vazio ou herde do item
-
-  //     // (Opcional) limpar possíveis resíduos do form de edição
-  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
-  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-  //     return;
-  // }
-
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
   tools.setData({ path: pathEdit, value: true });
-  tools.setData({ path: pathNew, value: false });
 
   // Define os valores base no formulário de edição
   tools.setData({
-    path: "sc.B9.forms.editChanges",
+    path: "sc.A14.forms.editChanges",
     value: matched, // ✅ Passa todos os dados do documento
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
-  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-
-  // (Opcional) limpar possíveis resíduos do form de novo
-  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
   tools.setData({
-    path: "sc.B9.forms.viewChanges.stepLabel",
+    path: "sc.A14.forms.viewChanges.stepLabel",
     value: selectStepStatic?.stepLabel ?? "",
   });
 
   tools.setData({
-    path: "sc.B9.forms.viewChanges.subStepLabel",
+    path: "sc.A14.forms.viewChanges.subStepLabel",
     value: selectStepStatic?.subStepLabel ?? "",
   });
 }]
@@ -43981,7 +43866,7 @@ top: 2,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
   const stepIdRaw = item?.stepId;
 
@@ -43993,8 +43878,7 @@ top: 2,
 
   const stepId = String(stepIdRaw);
   const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
+  const pathEdit = "all.toggles.A14.editSteps";
 
   // Abre painel lateral (comum)
   tools.setData({ path: pathSideRight, value: true });
@@ -44023,51 +43907,29 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
-  // if (!condMatch) {
-  //     // ---- Modo Adicionar
-  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
-
-  //     tools.setData({ path: pathNew, value: true });
-  //     tools.setData({ path: pathEdit, value: false });
-
-  //     // stepId sempre preenchido
-  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
-
-  //     // Evita undefined: use vazio ou herde do item
-
-  //     // (Opcional) limpar possíveis resíduos do form de edição
-  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
-  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-  //     return;
-  // }
-
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
   tools.setData({ path: pathEdit, value: true });
-  tools.setData({ path: pathNew, value: false });
 
   // Define os valores base no formulário de edição
   tools.setData({
-    path: "sc.B9.forms.editChanges",
+    path: "sc.A14.forms.editChanges",
     value: matched, // ✅ Passa todos os dados do documento
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
-  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-
-  // (Opcional) limpar possíveis resíduos do form de novo
-  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
   tools.setData({
-    path: "sc.B9.forms.viewChanges.stepLabel",
+    path: "sc.A14.forms.viewChanges.stepLabel",
     value: selectStepStatic?.stepLabel ?? "",
   });
 
   tools.setData({
-    path: "sc.B9.forms.viewChanges.subStepLabel",
+    path: "sc.A14.forms.viewChanges.subStepLabel",
     value: selectStepStatic?.subStepLabel ?? "",
   });
 }]
@@ -44533,7 +44395,7 @@ top: 2,
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
   const item = tools.findFlatItem(args);
-  const stepsList = tools.getCtData("sc.B7.lists.list1");
+  const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
   const stepIdRaw = item?.stepId;
 
@@ -44545,8 +44407,7 @@ top: 2,
 
   const stepId = String(stepIdRaw);
   const pathSideRight = "all.toggles.sideRight";
-  const pathEdit = "all.toggles.b9.editSteps";
-  const pathNew = "all.toggles.b8.addSteps";
+  const pathEdit = "all.toggles.A14.editSteps";
 
   // Abre painel lateral (comum)
   tools.setData({ path: pathSideRight, value: true });
@@ -44575,51 +44436,29 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
-  // if (!condMatch) {
-  //     // ---- Modo Adicionar
-  //     console.log("%cAdd New Step Mode - " + pathNew, css1);
-
-  //     tools.setData({ path: pathNew, value: true });
-  //     tools.setData({ path: pathEdit, value: false });
-
-  //     // stepId sempre preenchido
-  //     tools.setData({ path: "sc.b8.editChanges.stepId", value: stepId });
-
-  //     // Evita undefined: use vazio ou herde do item
-
-  //     // (Opcional) limpar possíveis resíduos do form de edição
-  //     tools.setData({ path: "sc.B9.forms.editChanges.docId", value: "" });
-  //     tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: "" });
-  //     return;
-  // }
-
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
   tools.setData({ path: pathEdit, value: true });
-  tools.setData({ path: pathNew, value: false });
 
   // Define os valores base no formulário de edição
   tools.setData({
-    path: "sc.B9.forms.editChanges",
+    path: "sc.A14.forms.editChanges",
     value: matched, // ✅ Passa todos os dados do documento
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.B9.forms.editChanges.docId", value: currId ?? "" });
-  tools.setData({ path: "sc.B9.forms.editChanges.stepId", value: stepId });
-
-  // (Opcional) limpar possíveis resíduos do form de novo
-  tools.setData({ path: "sc.B8.forms.iptsChanges.stepId", value: "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
   tools.setData({
-    path: "sc.B9.forms.viewChanges.stepLabel",
+    path: "sc.A14.forms.viewChanges.stepLabel",
     value: selectStepStatic?.stepLabel ?? "",
   });
 
   tools.setData({
-    path: "sc.B9.forms.viewChanges.subStepLabel",
+    path: "sc.A14.forms.viewChanges.subStepLabel",
     value: selectStepStatic?.subStepLabel ?? "",
   });
 }]
