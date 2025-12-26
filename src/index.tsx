@@ -10133,7 +10133,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.startDate`],
+          path: [`sc.A7.forms.editChanges.startDate`],
 
           funcsArray: [(txt) => {
   try {
@@ -10164,7 +10164,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        keyPath: ["sc.A7.forms.editChanges.startDate"],
         value: [String(masked)],
       },
     });
@@ -19067,7 +19067,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.startDate`],
+          path: [`sc.A7.forms.editChanges.startDate`],
 
           funcsArray: [(txt) => {
   try {
@@ -19098,7 +19098,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        keyPath: ["sc.A7.forms.editChanges.startDate"],
         value: [String(masked)],
       },
     });
@@ -28015,7 +28015,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.startDate`],
+          path: [`sc.A7.forms.editChanges.startDate`],
 
           funcsArray: [(txt) => {
   try {
@@ -28046,7 +28046,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        keyPath: ["sc.A7.forms.editChanges.startDate"],
         value: [String(masked)],
       },
     });
@@ -36805,7 +36805,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.startDate`],
+          path: [`sc.A7.forms.editChanges.startDate`],
 
           funcsArray: [(txt) => {
   try {
@@ -36836,7 +36836,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A7.forms.iptsChanges.startDate"],
+        keyPath: ["sc.A7.forms.editChanges.startDate"],
         value: [String(masked)],
       },
     });
