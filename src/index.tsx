@@ -10220,7 +10220,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.endDate`],
+          path: [`sc.A7.forms.editChanges.endDate`],
 
           funcsArray: [
         async (...args) =>
@@ -10256,7 +10256,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
+        keyPath: ["sc.A7.forms.editChanges.endDate"],
         value: [String(masked)],
       },
     });
@@ -19154,7 +19154,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.endDate`],
+          path: [`sc.A7.forms.editChanges.endDate`],
 
           funcsArray: [
         async (...args) =>
@@ -19190,7 +19190,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
+        keyPath: ["sc.A7.forms.editChanges.endDate"],
         value: [String(masked)],
       },
     });
@@ -28102,7 +28102,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.endDate`],
+          path: [`sc.A7.forms.editChanges.endDate`],
 
           funcsArray: [
         async (...args) =>
@@ -28138,7 +28138,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
+        keyPath: ["sc.A7.forms.editChanges.endDate"],
         value: [String(masked)],
       },
     });
@@ -36892,7 +36892,7 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.A7.forms.iptsChanges.endDate`],
+          path: [`sc.A7.forms.editChanges.endDate`],
 
           funcsArray: [
         async (...args) =>
@@ -36928,7 +36928,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
+        keyPath: ["sc.A7.forms.editChanges.endDate"],
         value: [String(masked)],
       },
     });
