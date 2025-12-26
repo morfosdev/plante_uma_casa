@@ -67575,7 +67575,7 @@ fontWeight: '700',
         functions.firebase.whereConds({ args, pass:{
           arrStrings: [
         `docId`, 
-        `==`, `$var_sc.B9.currents.currId1`],
+        `==`, `$var_sc.A13.currents.currId1`],
         }})],
  arrFuncs: [
  (args) => {
