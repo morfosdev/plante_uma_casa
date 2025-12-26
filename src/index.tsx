@@ -10225,7 +10225,7 @@ fontSize: 12,
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.endDate`],
+          keyPath: [`sc.A7.forms.editChanges.endDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
   try {
@@ -19159,7 +19159,7 @@ fontSize: 12,
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.endDate`],
+          keyPath: [`sc.A7.forms.editChanges.endDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
   try {
@@ -28107,7 +28107,7 @@ fontSize: 12,
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.endDate`],
+          keyPath: [`sc.A7.forms.editChanges.endDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
   try {
@@ -36897,7 +36897,7 @@ fontSize: 12,
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.forms.iptsChanges.endDate`],
+          keyPath: [`sc.A7.forms.editChanges.endDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
   try {
