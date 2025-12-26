@@ -40765,7 +40765,7 @@ async (...args) =>
           ],
 
           children: [
-            `$var_sc.B7.forms.iptsChanges.userName`
+            `$var_sc.A7.forms.editChanges.owner`
           ],
 
           args,
@@ -40784,7 +40784,7 @@ async (...args) =>
           ],
 
           children: [
-            `Lista dos proprietários`
+            `Lista de Etapas`
           ],
 
           args,
