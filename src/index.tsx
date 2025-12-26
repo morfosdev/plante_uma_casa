@@ -14518,6 +14518,75 @@ async (...args) =>
           args,
 
         }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	maxWidth: 125,
+	minWidth: 110
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.currents.currId1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B7.lists.list1`],
+          value: [[]]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.currents.currId1`],
+          value: [`$arg_ownerId`]
+        }}), 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("b7list");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ color: "#FFF" }`, `{
+	color: "#315e2d",
+	fontSize: 12,
+	fontWeight: 'bold', 
+}`
+          ],
+
+          children: [
+            `Etapas`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
