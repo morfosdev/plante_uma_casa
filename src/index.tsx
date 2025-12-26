@@ -14558,7 +14558,7 @@ async (...args) =>
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("b10list");
+          return tools.goTo("a13list");
         }
         ]
  , trigger: 'on press'
@@ -58931,7 +58931,7 @@ fontWeight: '700',
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"b10list",
+          pathScreen:"a13list",
 
           styles:[
         `{ width: "100%", height: "100%" }`, 
@@ -59084,22 +59084,17 @@ width: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b3.profile`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
         }}), async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b5.viewCondo`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`a3Profile`]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -59210,17 +59205,17 @@ width: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [false]
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b8.addSteps`],
+          keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("b4list");
+          return tools.goTo("a4list");
         }
         ]
  , trigger: 'on press'
@@ -59340,12 +59335,22 @@ width: '100%',
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.forms`],
+          value: [`" "`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userEmail`],
           value: [undefined]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
+          value: [undefined]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A0.forms.msgs.msg1`],
           value: [undefined]
         }}), 
         (...args) => {
