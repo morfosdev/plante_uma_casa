@@ -9070,12 +9070,13 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.a1.iptChanges.endDate`],
+          path: [`sc.A7.forms.iptsChanges.endDate`],
 
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
+          keyPath: [
+        `sc.a1.iptChanges.endDate`, `sc.A7.forms.iptsChanges.endDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
   try {
@@ -9106,7 +9107,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.endDate"],
+        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
         value: [String(masked)],
       },
     });
@@ -18114,12 +18115,13 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.a1.iptChanges.endDate`],
+          path: [`sc.A7.forms.iptsChanges.endDate`],
 
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
+          keyPath: [
+        `sc.a1.iptChanges.endDate`, `sc.A7.forms.iptsChanges.endDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
   try {
@@ -18150,7 +18152,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.endDate"],
+        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
         value: [String(masked)],
       },
     });
@@ -27172,12 +27174,13 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.a1.iptChanges.endDate`],
+          path: [`sc.A7.forms.iptsChanges.endDate`],
 
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
+          keyPath: [
+        `sc.a1.iptChanges.endDate`, `sc.A7.forms.iptsChanges.endDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
   try {
@@ -27208,7 +27211,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.endDate"],
+        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
         value: [String(masked)],
       },
     });
@@ -36072,12 +36075,13 @@ paddingHorizontal: 4,
 fontSize: 12,
 }`],
 
-          path: [`sc.a1.iptChanges.endDate`],
+          path: [`sc.A7.forms.iptsChanges.endDate`],
 
           funcsArray: [
         async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.a1.iptChanges.endDate`],
+          keyPath: [
+        `sc.a1.iptChanges.endDate`, `sc.A7.forms.iptsChanges.endDate`],
           value: [`$arg_callback`]
         }}), (txt) => {
   try {
@@ -36108,7 +36112,7 @@ fontSize: 12,
     tools.functions.setVar({
       args: "",
       pass: {
-        keyPath: ["sc.a1.iptChanges.endDate"],
+        keyPath: ["sc.A7.forms.iptsChanges.endDate"],
         value: [String(masked)],
       },
     });
