@@ -14548,12 +14548,22 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`sc.A13.currents.currId1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.B7.lists.list1`],
           value: [[]]
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B9.currents.currId1`],
+          value: [`$arg_ownerId`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A13.currents.currId1`],
           value: [`$arg_ownerId`]
         }}), 
         (...args) => {
