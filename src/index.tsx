@@ -14528,7 +14528,7 @@ async (...args) =>
   const objSteps = item?.readSteps ?? {};
   const stepsArray = Object.values(objSteps) || [];
   console.log({ stepsArray });
-  
+
   let count = 0;
   console.log({ count });
   stepsArray.forEach((step: any) => {
@@ -14537,9 +14537,28 @@ async (...args) =>
       count += 1;
     }
   });
-  
+
   console.log({ count });
-  return <RN.Text>{count}</RN.Text>;
+  return (
+    <RN.View style={{ width: 24, height: 20 }}>
+      <RN.Text>▢</RN.Text>
+      <RN.Text
+        style={{
+          width: 14,
+          height: 14,
+          backgroundColor: "red",
+          borderRadius: 30,
+          color: "white",
+          fontSize: 10,
+          textAlign: "center",
+          lineHeight: 14,
+        }}
+      >
+        {count}
+      </RN.Text>
+      ;
+    </RN.View>
+  );
 }] 
 }}/>
 , 
