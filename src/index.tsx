@@ -14540,7 +14540,7 @@ async (...args) =>
 
   console.log({ count });
   return (
-    <RN.View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <RN.View style={{ flex: 1, minWidth: 50,justifyContent: "center", alignItems: "center" }}>
       <RN.View style={{ width: 26, height: 20, position: "relative" }}>
         <RN.Image
           source={{
@@ -14568,8 +14568,7 @@ async (...args) =>
       </RN.View>
     </RN.View>
   );
-}
-] 
+}] 
 }}/>
 , 
         
