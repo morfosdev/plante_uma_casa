@@ -47556,6 +47556,10 @@ async (...args) =>
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
+
+  const lotId = tools.getCtData("sc.B9.currents.currId2");
+  console.log("%clotId a atualizar:", css1, { lotId });
+
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
@@ -47581,15 +47585,28 @@ async (...args) =>
     // -----
     // -----
     // if(check1) return;
+    if (userId && userId !== "") {
+      const refDoc = doc(db, "users", userId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+      const dataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
 
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
+      await updateDoc(refDoc, dataToUpdate);
+    }
 
-    await updateDoc(refDoc, dataToUpdate);
+    // ------ set Lot Notifications
+    if (lotId && lotId !== "") {
+      const refDocLot = doc(db, "lots", lotId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+      const lotDataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
+
+      await updateDoc(refDocLot, lotDataToUpdate);
+    }
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -48441,6 +48458,10 @@ async (...args) =>
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
+
+  const lotId = tools.getCtData("sc.B9.currents.currId2");
+  console.log("%clotId a atualizar:", css1, { lotId });
+
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
@@ -48466,15 +48487,28 @@ async (...args) =>
     // -----
     // -----
     // if(check1) return;
+    if (userId && userId !== "") {
+      const refDoc = doc(db, "users", userId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+      const dataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
 
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
+      await updateDoc(refDoc, dataToUpdate);
+    }
 
-    await updateDoc(refDoc, dataToUpdate);
+    // ------ set Lot Notifications
+    if (lotId && lotId !== "") {
+      const refDocLot = doc(db, "lots", lotId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+      const lotDataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
+
+      await updateDoc(refDocLot, lotDataToUpdate);
+    }
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -53217,6 +53251,10 @@ async (...args) =>
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
+
+  const lotId = tools.getCtData("sc.B9.currents.currId2");
+  console.log("%clotId a atualizar:", css1, { lotId });
+
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
@@ -53242,15 +53280,28 @@ async (...args) =>
     // -----
     // -----
     // if(check1) return;
+    if (userId && userId !== "") {
+      const refDoc = doc(db, "users", userId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+      const dataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
 
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
+      await updateDoc(refDoc, dataToUpdate);
+    }
 
-    await updateDoc(refDoc, dataToUpdate);
+    // ------ set Lot Notifications
+    if (lotId && lotId !== "") {
+      const refDocLot = doc(db, "lots", lotId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+      const lotDataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
+
+      await updateDoc(refDocLot, lotDataToUpdate);
+    }
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -54102,6 +54153,10 @@ async (...args) =>
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
+
+  const lotId = tools.getCtData("sc.B9.currents.currId2");
+  console.log("%clotId a atualizar:", css1, { lotId });
+
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
@@ -54127,15 +54182,28 @@ async (...args) =>
     // -----
     // -----
     // if(check1) return;
+    if (userId && userId !== "") {
+      const refDoc = doc(db, "users", userId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+      const dataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
 
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
+      await updateDoc(refDoc, dataToUpdate);
+    }
 
-    await updateDoc(refDoc, dataToUpdate);
+    // ------ set Lot Notifications
+    if (lotId && lotId !== "") {
+      const refDocLot = doc(db, "lots", lotId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+      const lotDataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
+
+      await updateDoc(refDocLot, lotDataToUpdate);
+    }
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -56048,6 +56116,11 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.B9.currents.currId1`],
           value: [`$arg_ownerId`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.currents.currId2`],
+          value: [`$arg_docId`]
         }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
@@ -59095,6 +59168,10 @@ async (...args) =>
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
+
+  const lotId = tools.getCtData("sc.B9.currents.currId2");
+  console.log("%clotId a atualizar:", css1, { lotId });
+
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
@@ -59120,15 +59197,28 @@ async (...args) =>
     // -----
     // -----
     // if(check1) return;
+    if (userId && userId !== "") {
+      const refDoc = doc(db, "users", userId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+      const dataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
 
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
+      await updateDoc(refDoc, dataToUpdate);
+    }
 
-    await updateDoc(refDoc, dataToUpdate);
+    // ------ set Lot Notifications
+    if (lotId && lotId !== "") {
+      const refDocLot = doc(db, "lots", lotId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+      const lotDataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
+
+      await updateDoc(refDocLot, lotDataToUpdate);
+    }
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -59980,6 +60070,10 @@ async (...args) =>
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
+
+  const lotId = tools.getCtData("sc.B9.currents.currId2");
+  console.log("%clotId a atualizar:", css1, { lotId });
+
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
@@ -60005,15 +60099,28 @@ async (...args) =>
     // -----
     // -----
     // if(check1) return;
+    if (userId && userId !== "") {
+      const refDoc = doc(db, "users", userId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+      const dataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
 
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
+      await updateDoc(refDoc, dataToUpdate);
+    }
 
-    await updateDoc(refDoc, dataToUpdate);
+    // ------ set Lot Notifications
+    if (lotId && lotId !== "") {
+      const refDocLot = doc(db, "lots", lotId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+      const lotDataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
+
+      await updateDoc(refDocLot, lotDataToUpdate);
+    }
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -68446,6 +68553,10 @@ async (...args) =>
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
+
+  const lotId = tools.getCtData("sc.B9.currents.currId2");
+  console.log("%clotId a atualizar:", css1, { lotId });
+
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
@@ -68471,15 +68582,28 @@ async (...args) =>
     // -----
     // -----
     // if(check1) return;
+    if (userId && userId !== "") {
+      const refDoc = doc(db, "users", userId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+      const dataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
 
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
+      await updateDoc(refDoc, dataToUpdate);
+    }
 
-    await updateDoc(refDoc, dataToUpdate);
+    // ------ set Lot Notifications
+    if (lotId && lotId !== "") {
+      const refDocLot = doc(db, "lots", lotId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+      const lotDataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
+
+      await updateDoc(refDocLot, lotDataToUpdate);
+    }
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -69331,6 +69455,10 @@ async (...args) =>
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
+
+  const lotId = tools.getCtData("sc.B9.currents.currId2");
+  console.log("%clotId a atualizar:", css1, { lotId });
+
   const data = tools.getCtData("sc.B9.forms.editChanges");
   console.log("%cuserId a atualizar:", css1, { data });
 
@@ -69356,15 +69484,28 @@ async (...args) =>
     // -----
     // -----
     // if(check1) return;
+    if (userId && userId !== "") {
+      const refDoc = doc(db, "users", userId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
-    const refDoc = doc(db, "users", userId);
-    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+      const dataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
 
-    const dataToUpdate = {
-      ["steps." + newId]: { ...data },
-    };
+      await updateDoc(refDoc, dataToUpdate);
+    }
 
-    await updateDoc(refDoc, dataToUpdate);
+    // ------ set Lot Notifications
+    if (lotId && lotId !== "") {
+      const refDocLot = doc(db, "lots", lotId);
+      const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+      const lotDataToUpdate = {
+        ["steps." + newId]: { ...data },
+      };
+
+      await updateDoc(refDocLot, lotDataToUpdate);
+    }
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
