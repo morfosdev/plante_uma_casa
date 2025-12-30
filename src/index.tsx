@@ -14522,12 +14522,18 @@ async (...args) =>
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-//   const data = useData((ct) => ct.sc?.A13?.lists?.list1);
-  let condMatch = false;
   const item = tools.findFlatItem(args);
+  const stepsArray = Object.values(item?.readSteps) || [];
+
+  let count = 0;
+  stepsArray.forEach((step: any) => {
+    if (step === false) {
+      count += 1;
+    }
+  });
 
   console.log("CUSTOM ALERT", { args, item });
-  return <RN.Text>Element Default</RN.Text>;
+  return <RN.Text>{count}</RN.Text>;
 }] 
 }}/>
 , 
