@@ -14521,7 +14521,7 @@ async (...args) =>
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(args) => {
+  arrItems: [() => {
     console.log("CUSTOM ALERT", { args });
     return <RN.Text>Element Default</RN.Text>;
 }] 
