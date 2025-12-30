@@ -134,6 +134,10 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     onChange?.(imgs);
   };
 
+  const condSc = currRoute === "a13list";
+
+  const condShowBtn = !condSc;
+
   return (
     <>
       <RN.View style={styles.container}>
@@ -142,9 +146,11 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
         <RN.Text style={styles.subtitle}>
           Selecione ou tire fotos para mostrar o progresso
         </RN.Text>
-        <RN.Pressable style={styles.btn} onPress={pickWeb}>
-          <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
-        </RN.Pressable>
+        {condShowBtn && (
+          <RN.Pressable style={styles.btn} onPress={pickWeb}>
+            <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
+          </RN.Pressable>
+        )}
       </RN.View>
 
       <input
@@ -328,4 +334,3 @@ const thumb = RN.StyleSheet.create({
   },
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
 });
-
