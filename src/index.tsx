@@ -14520,6 +14520,15 @@ async (...args) =>
         }}/>, 
         
 
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [(args) => {
+    console.log("CUSTOM ALERT", { args });
+    return <RN.Text>Element Default</RN.Text>;
+}] 
+}}/>
+, 
+        
+
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
