@@ -120,7 +120,14 @@ const BtnWeb = ({ pass }: Tprops) => {
       : [...docNames, ...newNames];
 
     if (condSc) {
-      console.log("condSc true", {newUris, newFiles, newNames, nextUris, fl, nextNames});
+      console.log("condSc true", {
+        newUris,
+        newFiles,
+        newNames,
+        nextUris,
+        fl,
+        nextNames,
+      });
       setFiles(newUris);
       setDocUris(newUris);
       // Aqui não precisa guardar no editChanges (feito no upload)
@@ -171,6 +178,10 @@ const BtnWeb = ({ pass }: Tprops) => {
     onChange?.(uris);
   };
 
+  const condSc2 = currRoute === "a13list";
+
+  const condShowBtn = !condSc2;
+
   return (
     <>
       <RN.View style={styles.container}>
@@ -185,9 +196,11 @@ const BtnWeb = ({ pass }: Tprops) => {
           </>
         )}
 
-        <RN.Pressable style={styles.btn} onPress={pickWeb}>
-          <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
-        </RN.Pressable>
+        {condShowBtn && (
+          <RN.Pressable style={styles.btn} onPress={pickWeb}>
+            <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
+          </RN.Pressable>
+        )}
       </RN.View>
 
       <input
@@ -452,4 +465,3 @@ const thumb = RN.StyleSheet.create({
   xTxt: { color: "#fff", fontSize: 16, lineHeight: 16, fontWeight: "700" },
   xTxt2: { fontSize: 14, lineHeight: 16 },
 });
-
