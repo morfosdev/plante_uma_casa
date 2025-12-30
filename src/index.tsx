@@ -47603,7 +47603,7 @@ async (...args) =>
       const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
-        ["steps." + newId]: { ...data },
+        ["steps." + newId]: { ...data, read: false},
       };
 
       await updateDoc(refDocLot, lotDataToUpdate);
@@ -48505,7 +48505,7 @@ async (...args) =>
       const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
-        ["steps." + newId]: { ...data },
+        ["steps." + newId]: { ...data, read: false},
       };
 
       await updateDoc(refDocLot, lotDataToUpdate);
@@ -53298,7 +53298,7 @@ async (...args) =>
       const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
-        ["steps." + newId]: { ...data },
+        ["steps." + newId]: { ...data, read: false},
       };
 
       await updateDoc(refDocLot, lotDataToUpdate);
@@ -54200,7 +54200,7 @@ async (...args) =>
       const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
-        ["steps." + newId]: { ...data },
+        ["steps." + newId]: { ...data, read: false},
       };
 
       await updateDoc(refDocLot, lotDataToUpdate);
@@ -59215,7 +59215,7 @@ async (...args) =>
       const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
-        ["steps." + newId]: { ...data },
+        ["steps." + newId]: { ...data, read: false},
       };
 
       await updateDoc(refDocLot, lotDataToUpdate);
@@ -60117,7 +60117,7 @@ async (...args) =>
       const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
-        ["steps." + newId]: { ...data },
+        ["steps." + newId]: { ...data, read: false},
       };
 
       await updateDoc(refDocLot, lotDataToUpdate);
@@ -68600,7 +68600,7 @@ async (...args) =>
       const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
-        ["steps." + newId]: { ...data },
+        ["steps." + newId]: { ...data, read: false},
       };
 
       await updateDoc(refDocLot, lotDataToUpdate);
@@ -69502,7 +69502,7 @@ async (...args) =>
       const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
-        ["steps." + newId]: { ...data },
+        ["steps." + newId]: { ...data, read: false},
       };
 
       await updateDoc(refDocLot, lotDataToUpdate);
