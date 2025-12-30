@@ -14540,7 +14540,7 @@ async (...args) =>
 
   console.log({ count });
   return (
-    <RN.View style={{ width: 40, height: 20, position: "relative" }}>
+    <RN.View style={{ width: 26, height: 20, position: "relative" }}>
       <RN.Image source={{uri: "https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/assets%2Falert.png?alt=media&token=a5c7eb79-b69c-4e25-b668-cd2d19463cbe"}} style={{ width: 20, height: 20 }} />
       <RN.Text
         style={{
@@ -14554,7 +14554,7 @@ async (...args) =>
           lineHeight: 14,
           position: "absolute",
           top: -5,
-          right: -5,
+          right: 0,
         }}
       >
         {count}
