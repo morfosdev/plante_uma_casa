@@ -14522,8 +14522,11 @@ async (...args) =>
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-    console.log("CUSTOM ALERT", { args });
-    return <RN.Text>Element Default</RN.Text>;
+  const data = useData((ct) => ct.sc?.A13?.lists?.list1);
+  let condMatch = false;
+
+  console.log("CUSTOM ALERT", { args, data });
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 , 
