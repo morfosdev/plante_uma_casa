@@ -41278,7 +41278,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const allLot = useData(ct => ct.sc.A7.currents.allLot);
 
   const readSteps = allLot?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -41839,7 +41839,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const allLot = useData(ct => ct.sc.A7.currents.allLot);
 
   const readSteps = allLot?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -42400,7 +42400,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const allLot = useData(ct => ct.sc.A7.currents.allLot);
 
   const readSteps = allLot?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -42961,7 +42961,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const allLot = useData(ct => ct.sc.A7.currents.allLot);
 
   const readSteps = allLot?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -43522,7 +43522,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const allLot = useData(ct => ct.sc.A7.currents.allLot);
 
   const readSteps = allLot?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -44083,7 +44083,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const allLot = useData(ct => ct.sc.A7.currents.allLot);
 
   const readSteps = allLot?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -44643,7 +44643,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const allLot = useData(ct => ct.sc.A7.currents.allLot);
 
   const readSteps = allLot?.readSteps || {};
   const entries = Object.entries(readSteps);
