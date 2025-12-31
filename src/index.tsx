@@ -41228,8 +41228,9 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  let readStatus;
   const allLot = useData((ct) => ct.sc.a7.list);
+  let readStatus;
+  let condMatch = false;
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -41242,11 +41243,13 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      condMatch = true;
       readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
+  const condShow = condMatch && readStatus === false;
 
   const stlBox = {
     backgroundColor: "gold",
@@ -41265,7 +41268,7 @@ paddingHorizontal: 16,
 
   return (
     <>
-      {readStatus ? (
+      {condShow ? (
         <></>
       ) : (
         <RN.View style={stlBox}>
@@ -41811,8 +41814,9 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  let readStatus;
   const allLot = useData((ct) => ct.sc.a7.list);
+  let readStatus;
+  let condMatch = false;
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -41825,11 +41829,13 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      condMatch = true;
       readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
+  const condShow = condMatch && readStatus === false;
 
   const stlBox = {
     backgroundColor: "gold",
@@ -41848,7 +41854,7 @@ paddingHorizontal: 16,
 
   return (
     <>
-      {readStatus ? (
+      {condShow ? (
         <></>
       ) : (
         <RN.View style={stlBox}>
@@ -42394,8 +42400,9 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  let readStatus;
   const allLot = useData((ct) => ct.sc.a7.list);
+  let readStatus;
+  let condMatch = false;
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -42408,11 +42415,13 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      condMatch = true;
       readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
+  const condShow = condMatch && readStatus === false;
 
   const stlBox = {
     backgroundColor: "gold",
@@ -42431,7 +42440,7 @@ paddingHorizontal: 16,
 
   return (
     <>
-      {readStatus ? (
+      {condShow ? (
         <></>
       ) : (
         <RN.View style={stlBox}>
@@ -42977,8 +42986,9 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  let readStatus;
   const allLot = useData((ct) => ct.sc.a7.list);
+  let readStatus;
+  let condMatch = false;
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -42991,11 +43001,13 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      condMatch = true;
       readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
+  const condShow = condMatch && readStatus === false;
 
   const stlBox = {
     backgroundColor: "gold",
@@ -43014,7 +43026,7 @@ paddingHorizontal: 16,
 
   return (
     <>
-      {readStatus ? (
+      {condShow ? (
         <></>
       ) : (
         <RN.View style={stlBox}>
@@ -43560,8 +43572,9 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  let readStatus;
   const allLot = useData((ct) => ct.sc.a7.list);
+  let readStatus;
+  let condMatch = false;
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -43574,11 +43587,13 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      condMatch = true;
       readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
+  const condShow = condMatch && readStatus === false;
 
   const stlBox = {
     backgroundColor: "gold",
@@ -43597,7 +43612,7 @@ paddingHorizontal: 16,
 
   return (
     <>
-      {readStatus ? (
+      {condShow ? (
         <></>
       ) : (
         <RN.View style={stlBox}>
@@ -44143,8 +44158,9 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  let readStatus;
   const allLot = useData((ct) => ct.sc.a7.list);
+  let readStatus;
+  let condMatch = false;
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -44157,11 +44173,13 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      condMatch = true;
       readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
+  const condShow = condMatch && readStatus === false;
 
   const stlBox = {
     backgroundColor: "gold",
@@ -44180,7 +44198,7 @@ paddingHorizontal: 16,
 
   return (
     <>
-      {readStatus ? (
+      {condShow ? (
         <></>
       ) : (
         <RN.View style={stlBox}>
@@ -44725,8 +44743,9 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-  let readStatus;
   const allLot = useData((ct) => ct.sc.a7.list);
+  let readStatus;
+  let condMatch = false;
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -44739,11 +44758,13 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      condMatch = true;
       readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
+  const condShow = condMatch && readStatus === false;
 
   const stlBox = {
     backgroundColor: "gold",
@@ -44762,7 +44783,7 @@ paddingHorizontal: 16,
 
   return (
     <>
-      {readStatus ? (
+      {condShow ? (
         <></>
       ) : (
         <RN.View style={stlBox}>
