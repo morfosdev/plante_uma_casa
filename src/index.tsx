@@ -41229,6 +41229,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = useData((ct) => ct.sc.a7.list);
+  const data = useData((ct) => ct.sc?.A13?.lists?.list1);
   let readStatus;
   let condMatch = false;
 
@@ -41236,14 +41237,21 @@ paddingHorizontal: 16,
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+      console.log({ d: d?.stepId, item: item.stepId });
+      condMatch = true;
+    }
+  });
+
   entries.forEach((entry) => {
     const [key, value] = entry;
 
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value);
-      condMatch = true;
+      console.log("Found matching stepId:", key, value, item);
+    //   condMatch = true;
       readStatus = value;
     }
   });
@@ -41815,6 +41823,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = useData((ct) => ct.sc.a7.list);
+  const data = useData((ct) => ct.sc?.A13?.lists?.list1);
   let readStatus;
   let condMatch = false;
 
@@ -41822,14 +41831,21 @@ paddingHorizontal: 16,
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+      console.log({ d: d?.stepId, item: item.stepId });
+      condMatch = true;
+    }
+  });
+
   entries.forEach((entry) => {
     const [key, value] = entry;
 
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value);
-      condMatch = true;
+      console.log("Found matching stepId:", key, value, item);
+    //   condMatch = true;
       readStatus = value;
     }
   });
@@ -42401,6 +42417,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = useData((ct) => ct.sc.a7.list);
+  const data = useData((ct) => ct.sc?.A13?.lists?.list1);
   let readStatus;
   let condMatch = false;
 
@@ -42408,14 +42425,21 @@ paddingHorizontal: 16,
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+      console.log({ d: d?.stepId, item: item.stepId });
+      condMatch = true;
+    }
+  });
+
   entries.forEach((entry) => {
     const [key, value] = entry;
 
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value);
-      condMatch = true;
+      console.log("Found matching stepId:", key, value, item);
+    //   condMatch = true;
       readStatus = value;
     }
   });
@@ -42987,6 +43011,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = useData((ct) => ct.sc.a7.list);
+  const data = useData((ct) => ct.sc?.A13?.lists?.list1);
   let readStatus;
   let condMatch = false;
 
@@ -42994,14 +43019,21 @@ paddingHorizontal: 16,
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+      console.log({ d: d?.stepId, item: item.stepId });
+      condMatch = true;
+    }
+  });
+
   entries.forEach((entry) => {
     const [key, value] = entry;
 
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value);
-      condMatch = true;
+      console.log("Found matching stepId:", key, value, item);
+    //   condMatch = true;
       readStatus = value;
     }
   });
@@ -43573,6 +43605,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = useData((ct) => ct.sc.a7.list);
+  const data = useData((ct) => ct.sc?.A13?.lists?.list1);
   let readStatus;
   let condMatch = false;
 
@@ -43580,14 +43613,21 @@ paddingHorizontal: 16,
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+      console.log({ d: d?.stepId, item: item.stepId });
+      condMatch = true;
+    }
+  });
+
   entries.forEach((entry) => {
     const [key, value] = entry;
 
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value);
-      condMatch = true;
+      console.log("Found matching stepId:", key, value, item);
+    //   condMatch = true;
       readStatus = value;
     }
   });
@@ -44159,6 +44199,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = useData((ct) => ct.sc.a7.list);
+  const data = useData((ct) => ct.sc?.A13?.lists?.list1);
   let readStatus;
   let condMatch = false;
 
@@ -44166,14 +44207,21 @@ paddingHorizontal: 16,
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+      console.log({ d: d?.stepId, item: item.stepId });
+      condMatch = true;
+    }
+  });
+
   entries.forEach((entry) => {
     const [key, value] = entry;
 
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value);
-      condMatch = true;
+      console.log("Found matching stepId:", key, value, item);
+    //   condMatch = true;
       readStatus = value;
     }
   });
@@ -44744,6 +44792,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = useData((ct) => ct.sc.a7.list);
+  const data = useData((ct) => ct.sc?.A13?.lists?.list1);
   let readStatus;
   let condMatch = false;
 
@@ -44751,14 +44800,21 @@ paddingHorizontal: 16,
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
+  data?.forEach((d: any) => {
+    if (d?.stepId === item.stepId) {
+      console.log({ d: d?.stepId, item: item.stepId });
+      condMatch = true;
+    }
+  });
+
   entries.forEach((entry) => {
     const [key, value] = entry;
 
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value);
-      condMatch = true;
+      console.log("Found matching stepId:", key, value, item);
+    //   condMatch = true;
       readStatus = value;
     }
   });
