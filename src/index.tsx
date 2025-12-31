@@ -41280,17 +41280,17 @@ paddingHorizontal: 16,
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
-  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
-  console.log({ entries });
-  
-  entries.forEach(entry => {
-    console.log({ entry });
+
+  entries.forEach((entry) => {
     const [key, value] = entry;
-console.log({ key, value });
-console.log({ item });
-    if (key === item.stepId) {
+    console.log({ key, value });
+
+    const normalizeStepId = item.stepId.replace(".", "_");
+    console.log({ normalizeStepId });
+
+    if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
     }
   });
@@ -41838,17 +41838,17 @@ paddingHorizontal: 16,
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
-  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
-  console.log({ entries });
-  
-  entries.forEach(entry => {
-    console.log({ entry });
+
+  entries.forEach((entry) => {
     const [key, value] = entry;
-console.log({ key, value });
-console.log({ item });
-    if (key === item.stepId) {
+    console.log({ key, value });
+
+    const normalizeStepId = item.stepId.replace(".", "_");
+    console.log({ normalizeStepId });
+
+    if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
     }
   });
@@ -42396,17 +42396,17 @@ paddingHorizontal: 16,
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
-  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
-  console.log({ entries });
-  
-  entries.forEach(entry => {
-    console.log({ entry });
+
+  entries.forEach((entry) => {
     const [key, value] = entry;
-console.log({ key, value });
-console.log({ item });
-    if (key === item.stepId) {
+    console.log({ key, value });
+
+    const normalizeStepId = item.stepId.replace(".", "_");
+    console.log({ normalizeStepId });
+
+    if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
     }
   });
@@ -42954,17 +42954,17 @@ paddingHorizontal: 16,
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
-  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
-  console.log({ entries });
-  
-  entries.forEach(entry => {
-    console.log({ entry });
+
+  entries.forEach((entry) => {
     const [key, value] = entry;
-console.log({ key, value });
-console.log({ item });
-    if (key === item.stepId) {
+    console.log({ key, value });
+
+    const normalizeStepId = item.stepId.replace(".", "_");
+    console.log({ normalizeStepId });
+
+    if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
     }
   });
@@ -43512,17 +43512,17 @@ paddingHorizontal: 16,
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
-  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
-  console.log({ entries });
-  
-  entries.forEach(entry => {
-    console.log({ entry });
+
+  entries.forEach((entry) => {
     const [key, value] = entry;
-console.log({ key, value });
-console.log({ item });
-    if (key === item.stepId) {
+    console.log({ key, value });
+
+    const normalizeStepId = item.stepId.replace(".", "_");
+    console.log({ normalizeStepId });
+
+    if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
     }
   });
@@ -44070,17 +44070,17 @@ paddingHorizontal: 16,
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
-  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
-  console.log({ entries });
-  
-  entries.forEach(entry => {
-    console.log({ entry });
+
+  entries.forEach((entry) => {
     const [key, value] = entry;
-console.log({ key, value });
-console.log({ item });
-    if (key === item.stepId) {
+    console.log({ key, value });
+
+    const normalizeStepId = item.stepId.replace(".", "_");
+    console.log({ normalizeStepId });
+
+    if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
     }
   });
@@ -44627,17 +44627,17 @@ paddingHorizontal: 16,
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
-  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
-  console.log({ entries });
-  
-  entries.forEach(entry => {
-    console.log({ entry });
+
+  entries.forEach((entry) => {
     const [key, value] = entry;
-console.log({ key, value });
-console.log({ item });
-    if (key === item.stepId) {
+    console.log({ key, value });
+
+    const normalizeStepId = item.stepId.replace(".", "_");
+    console.log({ normalizeStepId });
+
+    if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
     }
   });
