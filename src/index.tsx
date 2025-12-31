@@ -14623,6 +14623,11 @@ async (...args) =>
           keyPath: [`sc.A14.forms.iptsChanges.owner`],
           value: [`$arg_owner`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.currents.allLot`],
+          value: [`$arg_item`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a13list");
@@ -56251,7 +56256,7 @@ async (...args) =>
         }}), 
 async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`sc.B9.currents.allLot`],
+          keyPath: [`sc.A7.currents.allLot`],
           value: [`$arg_item`]
         }}), 
         (...args) => {
