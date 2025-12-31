@@ -41239,7 +41239,6 @@ paddingHorizontal: 16,
 
   data?.forEach((d: any) => {
     if (d?.stepId === item.stepId) {
-      console.log({ d: d?.stepId, item: item.stepId });
       condMatch = true;
     }
   });
@@ -41251,7 +41250,6 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -41833,7 +41831,6 @@ paddingHorizontal: 16,
 
   data?.forEach((d: any) => {
     if (d?.stepId === item.stepId) {
-      console.log({ d: d?.stepId, item: item.stepId });
       condMatch = true;
     }
   });
@@ -41845,7 +41842,6 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -42427,7 +42423,6 @@ paddingHorizontal: 16,
 
   data?.forEach((d: any) => {
     if (d?.stepId === item.stepId) {
-      console.log({ d: d?.stepId, item: item.stepId });
       condMatch = true;
     }
   });
@@ -42439,7 +42434,6 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -43021,7 +43015,6 @@ paddingHorizontal: 16,
 
   data?.forEach((d: any) => {
     if (d?.stepId === item.stepId) {
-      console.log({ d: d?.stepId, item: item.stepId });
       condMatch = true;
     }
   });
@@ -43033,7 +43026,6 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -43615,7 +43607,6 @@ paddingHorizontal: 16,
 
   data?.forEach((d: any) => {
     if (d?.stepId === item.stepId) {
-      console.log({ d: d?.stepId, item: item.stepId });
       condMatch = true;
     }
   });
@@ -43627,7 +43618,6 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -44209,7 +44199,6 @@ paddingHorizontal: 16,
 
   data?.forEach((d: any) => {
     if (d?.stepId === item.stepId) {
-      console.log({ d: d?.stepId, item: item.stepId });
       condMatch = true;
     }
   });
@@ -44221,7 +44210,6 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -44802,7 +44790,6 @@ paddingHorizontal: 16,
 
   data?.forEach((d: any) => {
     if (d?.stepId === item.stepId) {
-      console.log({ d: d?.stepId, item: item.stepId });
       condMatch = true;
     }
   });
@@ -44814,7 +44801,6 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-      //   condMatch = true;
       readStatus = value;
     }
   });
