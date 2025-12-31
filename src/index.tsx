@@ -41278,9 +41278,9 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.A7.currents.allLot);
+  const allLot = useData(ct => ct.sc.a7.list);
 
-  const readSteps = allLot?.readSteps || {};
+  const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
@@ -41839,9 +41839,9 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.A7.currents.allLot);
+  const allLot = useData(ct => ct.sc.a7.list);
 
-  const readSteps = allLot?.readSteps || {};
+  const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
@@ -42400,9 +42400,9 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.A7.currents.allLot);
+  const allLot = useData(ct => ct.sc.a7.list);
 
-  const readSteps = allLot?.readSteps || {};
+  const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
@@ -42961,9 +42961,9 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.A7.currents.allLot);
+  const allLot = useData(ct => ct.sc.a7.list);
 
-  const readSteps = allLot?.readSteps || {};
+  const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
@@ -43522,9 +43522,9 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.A7.currents.allLot);
+  const allLot = useData(ct => ct.sc.a7.list);
 
-  const readSteps = allLot?.readSteps || {};
+  const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
@@ -44083,9 +44083,9 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.A7.currents.allLot);
+  const allLot = useData(ct => ct.sc.a7.list);
 
-  const readSteps = allLot?.readSteps || {};
+  const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
@@ -44643,9 +44643,9 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.A7.currents.allLot);
+  const allLot = useData(ct => ct.sc.a7.list);
 
-  const readSteps = allLot?.readSteps || {};
+  const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
 
