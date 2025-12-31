@@ -41277,6 +41277,7 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+  let readStatus;
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
@@ -41292,13 +41293,15 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
 
-  return <RN.Text>Element Default</RN.Text>;
-}] 
+  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
+}
+] 
 }}/>
 , 
 
@@ -41835,6 +41838,7 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+  let readStatus;
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
@@ -41850,13 +41854,15 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
 
-  return <RN.Text>Element Default</RN.Text>;
-}] 
+  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
+}
+] 
 }}/>
 , 
 
@@ -42393,6 +42399,7 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+  let readStatus;
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
@@ -42408,13 +42415,15 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
 
-  return <RN.Text>Element Default</RN.Text>;
-}] 
+  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
+}
+] 
 }}/>
 , 
 
@@ -42951,6 +42960,7 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+  let readStatus;
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
@@ -42966,13 +42976,15 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
 
-  return <RN.Text>Element Default</RN.Text>;
-}] 
+  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
+}
+] 
 }}/>
 , 
 
@@ -43509,6 +43521,7 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+  let readStatus;
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
@@ -43524,13 +43537,15 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
 
-  return <RN.Text>Element Default</RN.Text>;
-}] 
+  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
+}
+] 
 }}/>
 , 
 
@@ -44067,6 +44082,7 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+  let readStatus;
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
@@ -44082,13 +44098,15 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
 
-  return <RN.Text>Element Default</RN.Text>;
-}] 
+  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
+}
+] 
 }}/>
 , 
 
@@ -44624,6 +44642,7 @@ paddingHorizontal: 16,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+  let readStatus;
   const allLot = tools.getCtData("sc.A7.currents.allLot");
 
   const readSteps = allLot?.readSteps || {};
@@ -44639,13 +44658,15 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
+      readStatus = value;
     }
   });
 
   console.log("a13 custom alert", { allLot, args });
 
-  return <RN.Text>Element Default</RN.Text>;
-}] 
+  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
+}
+] 
 }}/>
 , 
 
