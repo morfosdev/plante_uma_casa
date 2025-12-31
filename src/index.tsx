@@ -56172,6 +56172,11 @@ async (...args) =>
           keyPath: [`sc.B9.currents.currId2`],
           value: [`$arg_docId`]
         }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B9.currents.allLot`],
+          value: [`$arg_item`]
+        }}), 
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b7list");
