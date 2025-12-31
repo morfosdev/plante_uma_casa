@@ -41278,7 +41278,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.a7.list);
+  const allLot = useData((ct) => ct.sc.a7.list);
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -41286,10 +41286,8 @@ paddingHorizontal: 16,
 
   entries.forEach((entry) => {
     const [key, value] = entry;
-    console.log({ key, value });
 
     const normalizeStepId = item.stepId.replace(".", "_");
-    console.log({ normalizeStepId });
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
@@ -41298,10 +41296,32 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
+  
+  const stlBox = {
+    backgroundColor: "gold",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    width: 50,
+    height: 16,
+    margin: 5,
+  };
+  const stlTxt = {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 9,
+  };
 
-  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
-}
-] 
+  return (
+    <RN.View style={stlBox}>
+      {readStatus ? (
+        <RN.Text>Lido</RN.Text>
+      ) : (
+        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+      )}
+    </RN.View>
+  );
+}] 
 }}/>
 , 
 
@@ -41839,7 +41859,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.a7.list);
+  const allLot = useData((ct) => ct.sc.a7.list);
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -41847,10 +41867,8 @@ paddingHorizontal: 16,
 
   entries.forEach((entry) => {
     const [key, value] = entry;
-    console.log({ key, value });
 
     const normalizeStepId = item.stepId.replace(".", "_");
-    console.log({ normalizeStepId });
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
@@ -41859,10 +41877,32 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
+  
+  const stlBox = {
+    backgroundColor: "gold",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    width: 50,
+    height: 16,
+    margin: 5,
+  };
+  const stlTxt = {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 9,
+  };
 
-  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
-}
-] 
+  return (
+    <RN.View style={stlBox}>
+      {readStatus ? (
+        <RN.Text>Lido</RN.Text>
+      ) : (
+        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+      )}
+    </RN.View>
+  );
+}] 
 }}/>
 , 
 
@@ -42400,7 +42440,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.a7.list);
+  const allLot = useData((ct) => ct.sc.a7.list);
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -42408,10 +42448,8 @@ paddingHorizontal: 16,
 
   entries.forEach((entry) => {
     const [key, value] = entry;
-    console.log({ key, value });
 
     const normalizeStepId = item.stepId.replace(".", "_");
-    console.log({ normalizeStepId });
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
@@ -42420,10 +42458,32 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
+  
+  const stlBox = {
+    backgroundColor: "gold",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    width: 50,
+    height: 16,
+    margin: 5,
+  };
+  const stlTxt = {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 9,
+  };
 
-  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
-}
-] 
+  return (
+    <RN.View style={stlBox}>
+      {readStatus ? (
+        <RN.Text>Lido</RN.Text>
+      ) : (
+        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+      )}
+    </RN.View>
+  );
+}] 
 }}/>
 , 
 
@@ -42961,7 +43021,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.a7.list);
+  const allLot = useData((ct) => ct.sc.a7.list);
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -42969,10 +43029,8 @@ paddingHorizontal: 16,
 
   entries.forEach((entry) => {
     const [key, value] = entry;
-    console.log({ key, value });
 
     const normalizeStepId = item.stepId.replace(".", "_");
-    console.log({ normalizeStepId });
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
@@ -42981,10 +43039,32 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
+  
+  const stlBox = {
+    backgroundColor: "gold",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    width: 50,
+    height: 16,
+    margin: 5,
+  };
+  const stlTxt = {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 9,
+  };
 
-  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
-}
-] 
+  return (
+    <RN.View style={stlBox}>
+      {readStatus ? (
+        <RN.Text>Lido</RN.Text>
+      ) : (
+        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+      )}
+    </RN.View>
+  );
+}] 
 }}/>
 , 
 
@@ -43522,7 +43602,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.a7.list);
+  const allLot = useData((ct) => ct.sc.a7.list);
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -43530,10 +43610,8 @@ paddingHorizontal: 16,
 
   entries.forEach((entry) => {
     const [key, value] = entry;
-    console.log({ key, value });
 
     const normalizeStepId = item.stepId.replace(".", "_");
-    console.log({ normalizeStepId });
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
@@ -43542,10 +43620,32 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
+  
+  const stlBox = {
+    backgroundColor: "gold",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    width: 50,
+    height: 16,
+    margin: 5,
+  };
+  const stlTxt = {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 9,
+  };
 
-  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
-}
-] 
+  return (
+    <RN.View style={stlBox}>
+      {readStatus ? (
+        <RN.Text>Lido</RN.Text>
+      ) : (
+        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+      )}
+    </RN.View>
+  );
+}] 
 }}/>
 , 
 
@@ -44083,7 +44183,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.a7.list);
+  const allLot = useData((ct) => ct.sc.a7.list);
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -44091,10 +44191,8 @@ paddingHorizontal: 16,
 
   entries.forEach((entry) => {
     const [key, value] = entry;
-    console.log({ key, value });
 
     const normalizeStepId = item.stepId.replace(".", "_");
-    console.log({ normalizeStepId });
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
@@ -44103,10 +44201,32 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
+  
+  const stlBox = {
+    backgroundColor: "gold",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    width: 50,
+    height: 16,
+    margin: 5,
+  };
+  const stlTxt = {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 9,
+  };
 
-  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
-}
-] 
+  return (
+    <RN.View style={stlBox}>
+      {readStatus ? (
+        <RN.Text>Lido</RN.Text>
+      ) : (
+        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+      )}
+    </RN.View>
+  );
+}] 
 }}/>
 , 
 
@@ -44643,7 +44763,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   let readStatus;
-  const allLot = useData(ct => ct.sc.a7.list);
+  const allLot = useData((ct) => ct.sc.a7.list);
 
   const readSteps = allLot[0]?.readSteps || {};
   const entries = Object.entries(readSteps);
@@ -44651,10 +44771,8 @@ paddingHorizontal: 16,
 
   entries.forEach((entry) => {
     const [key, value] = entry;
-    console.log({ key, value });
 
     const normalizeStepId = item.stepId.replace(".", "_");
-    console.log({ normalizeStepId });
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value);
@@ -44663,10 +44781,32 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
+  
+  const stlBox = {
+    backgroundColor: "gold",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    width: 50,
+    height: 16,
+    margin: 5,
+  };
+  const stlTxt = {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 9,
+  };
 
-  return readStatus ? <RN.Text>Lido</RN.Text> : <RN.Text>Não Lido</RN.Text>;
-}
-] 
+  return (
+    <RN.View style={stlBox}>
+      {readStatus ? (
+        <RN.Text>Lido</RN.Text>
+      ) : (
+        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+      )}
+    </RN.View>
+  );
+}] 
 }}/>
 , 
 
