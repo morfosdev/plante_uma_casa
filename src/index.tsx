@@ -41276,11 +41276,24 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(a) => {
-const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{allLot, args});
+  arrItems: [() => {
+  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const readSteps = allLot?.readSteps || {};
+  const entries = Object.entries(readSteps);
+  const item = tools.findFlatItem(args);
+  console.log({ entries });
+  
+  entries.forEach(entry => {
+    console.log({ entry });
+    const [key, value] = entry;
+    if (key === item.stepId) {
+      console.log("Found matching stepId:", key, value);
+    }
+  });
 
-	return (<RN.Text>Element Default</RN.Text>)
+  console.log("a13 custom alert", { allLot, args });
+
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 , 
@@ -41817,11 +41830,24 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(a) => {
-const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{allLot, args});
+  arrItems: [() => {
+  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const readSteps = allLot?.readSteps || {};
+  const entries = Object.entries(readSteps);
+  const item = tools.findFlatItem(args);
+  console.log({ entries });
+  
+  entries.forEach(entry => {
+    console.log({ entry });
+    const [key, value] = entry;
+    if (key === item.stepId) {
+      console.log("Found matching stepId:", key, value);
+    }
+  });
 
-	return (<RN.Text>Element Default</RN.Text>)
+  console.log("a13 custom alert", { allLot, args });
+
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 , 
@@ -42358,11 +42384,24 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(a) => {
-const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{allLot, args});
+  arrItems: [() => {
+  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const readSteps = allLot?.readSteps || {};
+  const entries = Object.entries(readSteps);
+  const item = tools.findFlatItem(args);
+  console.log({ entries });
+  
+  entries.forEach(entry => {
+    console.log({ entry });
+    const [key, value] = entry;
+    if (key === item.stepId) {
+      console.log("Found matching stepId:", key, value);
+    }
+  });
 
-	return (<RN.Text>Element Default</RN.Text>)
+  console.log("a13 custom alert", { allLot, args });
+
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 , 
@@ -42899,11 +42938,24 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(a) => {
-const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{allLot, args});
+  arrItems: [() => {
+  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const readSteps = allLot?.readSteps || {};
+  const entries = Object.entries(readSteps);
+  const item = tools.findFlatItem(args);
+  console.log({ entries });
+  
+  entries.forEach(entry => {
+    console.log({ entry });
+    const [key, value] = entry;
+    if (key === item.stepId) {
+      console.log("Found matching stepId:", key, value);
+    }
+  });
 
-	return (<RN.Text>Element Default</RN.Text>)
+  console.log("a13 custom alert", { allLot, args });
+
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 , 
@@ -43440,11 +43492,24 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(a) => {
-const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{allLot, args});
+  arrItems: [() => {
+  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const readSteps = allLot?.readSteps || {};
+  const entries = Object.entries(readSteps);
+  const item = tools.findFlatItem(args);
+  console.log({ entries });
+  
+  entries.forEach(entry => {
+    console.log({ entry });
+    const [key, value] = entry;
+    if (key === item.stepId) {
+      console.log("Found matching stepId:", key, value);
+    }
+  });
 
-	return (<RN.Text>Element Default</RN.Text>)
+  console.log("a13 custom alert", { allLot, args });
+
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 , 
@@ -43981,11 +44046,24 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(a) => {
-const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{allLot, args});
+  arrItems: [() => {
+  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const readSteps = allLot?.readSteps || {};
+  const entries = Object.entries(readSteps);
+  const item = tools.findFlatItem(args);
+  console.log({ entries });
+  
+  entries.forEach(entry => {
+    console.log({ entry });
+    const [key, value] = entry;
+    if (key === item.stepId) {
+      console.log("Found matching stepId:", key, value);
+    }
+  });
 
-	return (<RN.Text>Element Default</RN.Text>)
+  console.log("a13 custom alert", { allLot, args });
+
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 , 
@@ -44521,11 +44599,24 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [(a) => {
-const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{allLot, args});
+  arrItems: [() => {
+  const allLot = tools.getCtData("sc.A7.currents.allLot");
+  const readSteps = allLot?.readSteps || {};
+  const entries = Object.entries(readSteps);
+  const item = tools.findFlatItem(args);
+  console.log({ entries });
+  
+  entries.forEach(entry => {
+    console.log({ entry });
+    const [key, value] = entry;
+    if (key === item.stepId) {
+      console.log("Found matching stepId:", key, value);
+    }
+  });
 
-	return (<RN.Text>Element Default</RN.Text>)
+  console.log("a13 custom alert", { allLot, args });
+
+  return <RN.Text>Element Default</RN.Text>;
 }] 
 }}/>
 , 
