@@ -41268,6 +41268,17 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+const allLot = {};
+console.log("a13 custom alert",{args});
+
+	return (<RN.Text>Element Default</RN.Text>)
+}] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -41798,6 +41809,17 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+const allLot = {};
+console.log("a13 custom alert",{args});
+
+	return (<RN.Text>Element Default</RN.Text>)
+}] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -42328,6 +42350,17 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+const allLot = {};
+console.log("a13 custom alert",{args});
+
+	return (<RN.Text>Element Default</RN.Text>)
+}] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -42858,6 +42891,17 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+const allLot = {};
+console.log("a13 custom alert",{args});
+
+	return (<RN.Text>Element Default</RN.Text>)
+}] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -43388,6 +43432,17 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+const allLot = {};
+console.log("a13 custom alert",{args});
+
+	return (<RN.Text>Element Default</RN.Text>)
+}] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -43918,6 +43973,17 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+const allLot = {};
+console.log("a13 custom alert",{args});
+
+	return (<RN.Text>Element Default</RN.Text>)
+}] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -44447,6 +44513,17 @@ paddingHorizontal: 16,
             args,
           }}/>
         , 
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+const allLot = {};
+console.log("a13 custom alert",{args});
+
+	return (<RN.Text>Element Default</RN.Text>)
+}] 
+}}/>
+, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
