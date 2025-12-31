@@ -41404,7 +41404,7 @@ top: 2,
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const lotDataToUpdate = {
-      ["readSteps." + newId]: false,
+      ["readSteps." + newId]: true,
     };
 
     await updateDoc(refDocLot, lotDataToUpdate);
@@ -42018,7 +42018,7 @@ top: 2,
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const lotDataToUpdate = {
-      ["readSteps." + newId]: false,
+      ["readSteps." + newId]: true,
     };
 
     await updateDoc(refDocLot, lotDataToUpdate);
@@ -42632,7 +42632,7 @@ top: 2,
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const lotDataToUpdate = {
-      ["readSteps." + newId]: false,
+      ["readSteps." + newId]: true,
     };
 
     await updateDoc(refDocLot, lotDataToUpdate);
@@ -43246,7 +43246,7 @@ top: 2,
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const lotDataToUpdate = {
-      ["readSteps." + newId]: false,
+      ["readSteps." + newId]: true,
     };
 
     await updateDoc(refDocLot, lotDataToUpdate);
@@ -43860,7 +43860,7 @@ top: 2,
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const lotDataToUpdate = {
-      ["readSteps." + newId]: false,
+      ["readSteps." + newId]: true,
     };
 
     await updateDoc(refDocLot, lotDataToUpdate);
@@ -44474,7 +44474,7 @@ top: 2,
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const lotDataToUpdate = {
-      ["readSteps." + newId]: false,
+      ["readSteps." + newId]: true,
     };
 
     await updateDoc(refDocLot, lotDataToUpdate);
@@ -45087,7 +45087,7 @@ top: 2,
     const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
     const lotDataToUpdate = {
-      ["readSteps." + newId]: false,
+      ["readSteps." + newId]: true,
     };
 
     await updateDoc(refDocLot, lotDataToUpdate);
