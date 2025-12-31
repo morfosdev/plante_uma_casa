@@ -41249,12 +41249,11 @@ paddingHorizontal: 16,
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value, item);
+    //   console.log("Found matching stepId:", key, value, item);
       readStatus = value;
     }
   });
 
-  console.log("a13 custom alert", { allLot, args });
   const condShow = condMatch && readStatus === false;
 
   const stlBox = {
@@ -41841,12 +41840,11 @@ paddingHorizontal: 16,
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value, item);
+    //   console.log("Found matching stepId:", key, value, item);
       readStatus = value;
     }
   });
 
-  console.log("a13 custom alert", { allLot, args });
   const condShow = condMatch && readStatus === false;
 
   const stlBox = {
@@ -42433,12 +42431,11 @@ paddingHorizontal: 16,
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value, item);
+    //   console.log("Found matching stepId:", key, value, item);
       readStatus = value;
     }
   });
 
-  console.log("a13 custom alert", { allLot, args });
   const condShow = condMatch && readStatus === false;
 
   const stlBox = {
@@ -43025,12 +43022,11 @@ paddingHorizontal: 16,
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value, item);
+    //   console.log("Found matching stepId:", key, value, item);
       readStatus = value;
     }
   });
 
-  console.log("a13 custom alert", { allLot, args });
   const condShow = condMatch && readStatus === false;
 
   const stlBox = {
@@ -43617,12 +43613,11 @@ paddingHorizontal: 16,
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value, item);
+    //   console.log("Found matching stepId:", key, value, item);
       readStatus = value;
     }
   });
 
-  console.log("a13 custom alert", { allLot, args });
   const condShow = condMatch && readStatus === false;
 
   const stlBox = {
@@ -44209,12 +44204,11 @@ paddingHorizontal: 16,
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value, item);
+    //   console.log("Found matching stepId:", key, value, item);
       readStatus = value;
     }
   });
 
-  console.log("a13 custom alert", { allLot, args });
   const condShow = condMatch && readStatus === false;
 
   const stlBox = {
@@ -44800,12 +44794,11 @@ paddingHorizontal: 16,
     const normalizeStepId = item.stepId.replace(".", "_");
 
     if (key === normalizeStepId) {
-      console.log("Found matching stepId:", key, value, item);
+    //   console.log("Found matching stepId:", key, value, item);
       readStatus = value;
     }
   });
 
-  console.log("a13 custom alert", { allLot, args });
   const condShow = condMatch && readStatus === false;
 
   const stlBox = {
