@@ -41279,6 +41279,7 @@ paddingHorizontal: 16,
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
   const readSteps = allLot?.readSteps || {};
+  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
   console.log({ entries });
@@ -41833,6 +41834,7 @@ paddingHorizontal: 16,
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
   const readSteps = allLot?.readSteps || {};
+  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
   console.log({ entries });
@@ -42387,6 +42389,7 @@ paddingHorizontal: 16,
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
   const readSteps = allLot?.readSteps || {};
+  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
   console.log({ entries });
@@ -42941,6 +42944,7 @@ paddingHorizontal: 16,
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
   const readSteps = allLot?.readSteps || {};
+  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
   console.log({ entries });
@@ -43495,6 +43499,7 @@ paddingHorizontal: 16,
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
   const readSteps = allLot?.readSteps || {};
+  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
   console.log({ entries });
@@ -44049,6 +44054,7 @@ paddingHorizontal: 16,
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
   const readSteps = allLot?.readSteps || {};
+  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
   console.log({ entries });
@@ -44602,6 +44608,7 @@ paddingHorizontal: 16,
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
   const readSteps = allLot?.readSteps || {};
+  console.log({ readSteps });
   const entries = Object.entries(readSteps);
   const item = tools.findFlatItem(args);
   console.log({ entries });
