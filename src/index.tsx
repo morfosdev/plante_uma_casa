@@ -41278,7 +41278,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [(a) => {
 const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{a, args});
+console.log("a13 custom alert",{allLot, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -41819,7 +41819,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [(a) => {
 const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{a, args});
+console.log("a13 custom alert",{allLot, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -42360,7 +42360,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [(a) => {
 const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{a, args});
+console.log("a13 custom alert",{allLot, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -42901,7 +42901,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [(a) => {
 const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{a, args});
+console.log("a13 custom alert",{allLot, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -43442,7 +43442,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [(a) => {
 const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{a, args});
+console.log("a13 custom alert",{allLot, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -43983,7 +43983,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [(a) => {
 const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{a, args});
+console.log("a13 custom alert",{allLot, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -44523,7 +44523,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [(a) => {
 const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log("a13 custom alert",{a, args});
+console.log("a13 custom alert",{allLot, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
