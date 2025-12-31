@@ -41251,7 +41251,7 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-    //   condMatch = true;
+      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -41277,11 +41277,11 @@ paddingHorizontal: 16,
   return (
     <>
       {condShow ? (
-        <></>
-      ) : (
         <RN.View style={stlBox}>
           <RN.Text style={stlTxt}>Não Lido</RN.Text>
         </RN.View>
+      ) : (
+        <></>
       )}
     </>
   );
@@ -41845,7 +41845,7 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-    //   condMatch = true;
+      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -41871,11 +41871,11 @@ paddingHorizontal: 16,
   return (
     <>
       {condShow ? (
-        <></>
-      ) : (
         <RN.View style={stlBox}>
           <RN.Text style={stlTxt}>Não Lido</RN.Text>
         </RN.View>
+      ) : (
+        <></>
       )}
     </>
   );
@@ -42439,7 +42439,7 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-    //   condMatch = true;
+      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -42465,11 +42465,11 @@ paddingHorizontal: 16,
   return (
     <>
       {condShow ? (
-        <></>
-      ) : (
         <RN.View style={stlBox}>
           <RN.Text style={stlTxt}>Não Lido</RN.Text>
         </RN.View>
+      ) : (
+        <></>
       )}
     </>
   );
@@ -43033,7 +43033,7 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-    //   condMatch = true;
+      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -43059,11 +43059,11 @@ paddingHorizontal: 16,
   return (
     <>
       {condShow ? (
-        <></>
-      ) : (
         <RN.View style={stlBox}>
           <RN.Text style={stlTxt}>Não Lido</RN.Text>
         </RN.View>
+      ) : (
+        <></>
       )}
     </>
   );
@@ -43627,7 +43627,7 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-    //   condMatch = true;
+      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -43653,11 +43653,11 @@ paddingHorizontal: 16,
   return (
     <>
       {condShow ? (
-        <></>
-      ) : (
         <RN.View style={stlBox}>
           <RN.Text style={stlTxt}>Não Lido</RN.Text>
         </RN.View>
+      ) : (
+        <></>
       )}
     </>
   );
@@ -44221,7 +44221,7 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-    //   condMatch = true;
+      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -44247,11 +44247,11 @@ paddingHorizontal: 16,
   return (
     <>
       {condShow ? (
-        <></>
-      ) : (
         <RN.View style={stlBox}>
           <RN.Text style={stlTxt}>Não Lido</RN.Text>
         </RN.View>
+      ) : (
+        <></>
       )}
     </>
   );
@@ -44814,7 +44814,7 @@ paddingHorizontal: 16,
 
     if (key === normalizeStepId) {
       console.log("Found matching stepId:", key, value, item);
-    //   condMatch = true;
+      //   condMatch = true;
       readStatus = value;
     }
   });
@@ -44840,11 +44840,11 @@ paddingHorizontal: 16,
   return (
     <>
       {condShow ? (
-        <></>
-      ) : (
         <RN.View style={stlBox}>
           <RN.Text style={stlTxt}>Não Lido</RN.Text>
         </RN.View>
+      ) : (
+        <></>
       )}
     </>
   );
