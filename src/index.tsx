@@ -41344,10 +41344,11 @@ top: 2,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(args) => {
+ arrFunctions: [async (args) => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
+  const currLot = tools.getCtData("sc.A7.currents.allLot");
   const item = tools.findFlatItem(args);
   const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
@@ -41390,6 +41391,25 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
+  // --- Update Firebase Lot Step Read Alert
+  const lotId = currLot?.docId;
+  console.log({ currLot, lotId });
+
+  // ------ set Lot Notifications
+  if (lotId && lotId !== "") {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+    const refDocLot = doc(db, "lots", lotId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const lotDataToUpdate = {
+      ["readSteps." + newId]: false,
+    };
+
+    await updateDoc(refDocLot, lotDataToUpdate);
+  }
+
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
@@ -41402,7 +41422,10 @@ top: 2,
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({
+    path: "sc.A14.forms.editChanges.docId",
+    value: currId ?? "",
+  });
   tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
@@ -41935,10 +41958,11 @@ top: 2,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(args) => {
+ arrFunctions: [async (args) => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
+  const currLot = tools.getCtData("sc.A7.currents.allLot");
   const item = tools.findFlatItem(args);
   const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
@@ -41981,6 +42005,25 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
+  // --- Update Firebase Lot Step Read Alert
+  const lotId = currLot?.docId;
+  console.log({ currLot, lotId });
+
+  // ------ set Lot Notifications
+  if (lotId && lotId !== "") {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+    const refDocLot = doc(db, "lots", lotId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const lotDataToUpdate = {
+      ["readSteps." + newId]: false,
+    };
+
+    await updateDoc(refDocLot, lotDataToUpdate);
+  }
+
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
@@ -41993,7 +42036,10 @@ top: 2,
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({
+    path: "sc.A14.forms.editChanges.docId",
+    value: currId ?? "",
+  });
   tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
@@ -42526,10 +42572,11 @@ top: 2,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(args) => {
+ arrFunctions: [async (args) => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
+  const currLot = tools.getCtData("sc.A7.currents.allLot");
   const item = tools.findFlatItem(args);
   const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
@@ -42572,6 +42619,25 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
+  // --- Update Firebase Lot Step Read Alert
+  const lotId = currLot?.docId;
+  console.log({ currLot, lotId });
+
+  // ------ set Lot Notifications
+  if (lotId && lotId !== "") {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+    const refDocLot = doc(db, "lots", lotId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const lotDataToUpdate = {
+      ["readSteps." + newId]: false,
+    };
+
+    await updateDoc(refDocLot, lotDataToUpdate);
+  }
+
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
@@ -42584,7 +42650,10 @@ top: 2,
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({
+    path: "sc.A14.forms.editChanges.docId",
+    value: currId ?? "",
+  });
   tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
@@ -43117,10 +43186,11 @@ top: 2,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(args) => {
+ arrFunctions: [async (args) => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
+  const currLot = tools.getCtData("sc.A7.currents.allLot");
   const item = tools.findFlatItem(args);
   const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
@@ -43163,6 +43233,25 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
+  // --- Update Firebase Lot Step Read Alert
+  const lotId = currLot?.docId;
+  console.log({ currLot, lotId });
+
+  // ------ set Lot Notifications
+  if (lotId && lotId !== "") {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+    const refDocLot = doc(db, "lots", lotId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const lotDataToUpdate = {
+      ["readSteps." + newId]: false,
+    };
+
+    await updateDoc(refDocLot, lotDataToUpdate);
+  }
+
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
@@ -43175,7 +43264,10 @@ top: 2,
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({
+    path: "sc.A14.forms.editChanges.docId",
+    value: currId ?? "",
+  });
   tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
@@ -43708,10 +43800,11 @@ top: 2,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(args) => {
+ arrFunctions: [async (args) => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
+  const currLot = tools.getCtData("sc.A7.currents.allLot");
   const item = tools.findFlatItem(args);
   const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
@@ -43754,6 +43847,25 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
+  // --- Update Firebase Lot Step Read Alert
+  const lotId = currLot?.docId;
+  console.log({ currLot, lotId });
+
+  // ------ set Lot Notifications
+  if (lotId && lotId !== "") {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+    const refDocLot = doc(db, "lots", lotId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const lotDataToUpdate = {
+      ["readSteps." + newId]: false,
+    };
+
+    await updateDoc(refDocLot, lotDataToUpdate);
+  }
+
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
@@ -43766,7 +43878,10 @@ top: 2,
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({
+    path: "sc.A14.forms.editChanges.docId",
+    value: currId ?? "",
+  });
   tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
@@ -44299,10 +44414,11 @@ top: 2,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(args) => {
+ arrFunctions: [async (args) => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
+  const currLot = tools.getCtData("sc.A7.currents.allLot");
   const item = tools.findFlatItem(args);
   const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
@@ -44345,6 +44461,25 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
+  // --- Update Firebase Lot Step Read Alert
+  const lotId = currLot?.docId;
+  console.log({ currLot, lotId });
+
+  // ------ set Lot Notifications
+  if (lotId && lotId !== "") {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+    const refDocLot = doc(db, "lots", lotId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const lotDataToUpdate = {
+      ["readSteps." + newId]: false,
+    };
+
+    await updateDoc(refDocLot, lotDataToUpdate);
+  }
+
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
@@ -44357,7 +44492,10 @@ top: 2,
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({
+    path: "sc.A14.forms.editChanges.docId",
+    value: currId ?? "",
+  });
   tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
@@ -44889,10 +45027,11 @@ top: 2,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [(args) => {
+ arrFunctions: [async (args) => {
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
+  const currLot = tools.getCtData("sc.A7.currents.allLot");
   const item = tools.findFlatItem(args);
   const stepsList = tools.getCtData("sc.A13.lists.list1");
   const staticList = tools.getCtData("sc.B7.statics.steps");
@@ -44935,6 +45074,25 @@ top: 2,
   }
   const selectStepStatic = findStepById(staticList, stepId);
 
+  // --- Update Firebase Lot Step Read Alert
+  const lotId = currLot?.docId;
+  console.log({ currLot, lotId });
+
+  // ------ set Lot Notifications
+  if (lotId && lotId !== "") {
+    const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+    const fbInit = tools.getCtData("all.temp.fireInit");
+    const db = getFirestore(fbInit);
+    const refDocLot = doc(db, "lots", lotId);
+    const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
+    const lotDataToUpdate = {
+      ["readSteps." + newId]: false,
+    };
+
+    await updateDoc(refDocLot, lotDataToUpdate);
+  }
+
   // ---- Modo Editar
   console.log("%cEdit Step Mode - " + pathEdit, css1);
 
@@ -44947,7 +45105,10 @@ top: 2,
   });
 
   // Campos específicos importantes
-  tools.setData({ path: "sc.A14.forms.editChanges.docId", value: currId ?? "" });
+  tools.setData({
+    path: "sc.A14.forms.editChanges.docId",
+    value: currId ?? "",
+  });
   tools.setData({ path: "sc.A14.forms.editChanges.stepId", value: stepId });
 
   // Set CtData
