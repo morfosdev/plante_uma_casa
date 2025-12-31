@@ -41278,6 +41278,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
+console.log({ allLot });
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -41833,6 +41834,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
+console.log({ allLot });
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -42388,6 +42390,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
+console.log({ allLot });
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -42943,6 +42946,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
+console.log({ allLot });
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -43498,6 +43502,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
+console.log({ allLot });
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -44053,6 +44058,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
+console.log({ allLot });
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -44607,6 +44613,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
+console.log({ allLot });
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
