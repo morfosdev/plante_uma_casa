@@ -41271,9 +41271,9 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
+  arrItems: [(a) => {
 const allLot = {};
-console.log("a13 custom alert",{args});
+console.log("a13 custom alert",{a, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -41812,9 +41812,9 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
+  arrItems: [(a) => {
 const allLot = {};
-console.log("a13 custom alert",{args});
+console.log("a13 custom alert",{a, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -42353,9 +42353,9 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
+  arrItems: [(a) => {
 const allLot = {};
-console.log("a13 custom alert",{args});
+console.log("a13 custom alert",{a, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -42894,9 +42894,9 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
+  arrItems: [(a) => {
 const allLot = {};
-console.log("a13 custom alert",{args});
+console.log("a13 custom alert",{a, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -43435,9 +43435,9 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
+  arrItems: [(a) => {
 const allLot = {};
-console.log("a13 custom alert",{args});
+console.log("a13 custom alert",{a, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -43976,9 +43976,9 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
+  arrItems: [(a) => {
 const allLot = {};
-console.log("a13 custom alert",{args});
+console.log("a13 custom alert",{a, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
@@ -44516,9 +44516,9 @@ paddingHorizontal: 16,
         
 
  (...args:any) => <Elements.Custom pass={{
-  arrItems: [() => {
+  arrItems: [(a) => {
 const allLot = {};
-console.log("a13 custom alert",{args});
+console.log("a13 custom alert",{a, args});
 
 	return (<RN.Text>Element Default</RN.Text>)
 }] 
