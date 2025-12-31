@@ -41278,7 +41278,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log({ allLot });
+
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -41288,6 +41288,8 @@ console.log({ allLot });
   entries.forEach(entry => {
     console.log({ entry });
     const [key, value] = entry;
+console.log({ key, value });
+console.log({ item });
     if (key === item.stepId) {
       console.log("Found matching stepId:", key, value);
     }
@@ -41834,7 +41836,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log({ allLot });
+
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -41844,6 +41846,8 @@ console.log({ allLot });
   entries.forEach(entry => {
     console.log({ entry });
     const [key, value] = entry;
+console.log({ key, value });
+console.log({ item });
     if (key === item.stepId) {
       console.log("Found matching stepId:", key, value);
     }
@@ -42390,7 +42394,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log({ allLot });
+
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -42400,6 +42404,8 @@ console.log({ allLot });
   entries.forEach(entry => {
     console.log({ entry });
     const [key, value] = entry;
+console.log({ key, value });
+console.log({ item });
     if (key === item.stepId) {
       console.log("Found matching stepId:", key, value);
     }
@@ -42946,7 +42952,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log({ allLot });
+
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -42956,6 +42962,8 @@ console.log({ allLot });
   entries.forEach(entry => {
     console.log({ entry });
     const [key, value] = entry;
+console.log({ key, value });
+console.log({ item });
     if (key === item.stepId) {
       console.log("Found matching stepId:", key, value);
     }
@@ -43502,7 +43510,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log({ allLot });
+
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -43512,6 +43520,8 @@ console.log({ allLot });
   entries.forEach(entry => {
     console.log({ entry });
     const [key, value] = entry;
+console.log({ key, value });
+console.log({ item });
     if (key === item.stepId) {
       console.log("Found matching stepId:", key, value);
     }
@@ -44058,7 +44068,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log({ allLot });
+
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -44068,6 +44078,8 @@ console.log({ allLot });
   entries.forEach(entry => {
     console.log({ entry });
     const [key, value] = entry;
+console.log({ key, value });
+console.log({ item });
     if (key === item.stepId) {
       console.log("Found matching stepId:", key, value);
     }
@@ -44613,7 +44625,7 @@ paddingHorizontal: 16,
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
   const allLot = tools.getCtData("sc.A7.currents.allLot");
-console.log({ allLot });
+
   const readSteps = allLot?.readSteps || {};
   console.log({ readSteps });
   const entries = Object.entries(readSteps);
@@ -44623,6 +44635,8 @@ console.log({ allLot });
   entries.forEach(entry => {
     console.log({ entry });
     const [key, value] = entry;
+console.log({ key, value });
+console.log({ item });
     if (key === item.stepId) {
       console.log("Found matching stepId:", key, value);
     }
