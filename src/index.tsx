@@ -41247,7 +41247,7 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
-  
+
   const stlBox = {
     backgroundColor: "gold",
     justifyContent: "center",
@@ -41264,13 +41264,15 @@ paddingHorizontal: 16,
   };
 
   return (
-    <RN.View style={stlBox}>
+    <>
       {readStatus ? (
         <></>
       ) : (
-        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        <RN.View style={stlBox}>
+          <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        </RN.View>
       )}
-    </RN.View>
+    </>
   );
 }] 
 }}/>
@@ -41828,7 +41830,7 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
-  
+
   const stlBox = {
     backgroundColor: "gold",
     justifyContent: "center",
@@ -41845,13 +41847,15 @@ paddingHorizontal: 16,
   };
 
   return (
-    <RN.View style={stlBox}>
+    <>
       {readStatus ? (
         <></>
       ) : (
-        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        <RN.View style={stlBox}>
+          <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        </RN.View>
       )}
-    </RN.View>
+    </>
   );
 }] 
 }}/>
@@ -42409,7 +42413,7 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
-  
+
   const stlBox = {
     backgroundColor: "gold",
     justifyContent: "center",
@@ -42426,13 +42430,15 @@ paddingHorizontal: 16,
   };
 
   return (
-    <RN.View style={stlBox}>
+    <>
       {readStatus ? (
         <></>
       ) : (
-        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        <RN.View style={stlBox}>
+          <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        </RN.View>
       )}
-    </RN.View>
+    </>
   );
 }] 
 }}/>
@@ -42990,7 +42996,7 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
-  
+
   const stlBox = {
     backgroundColor: "gold",
     justifyContent: "center",
@@ -43007,13 +43013,15 @@ paddingHorizontal: 16,
   };
 
   return (
-    <RN.View style={stlBox}>
+    <>
       {readStatus ? (
         <></>
       ) : (
-        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        <RN.View style={stlBox}>
+          <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        </RN.View>
       )}
-    </RN.View>
+    </>
   );
 }] 
 }}/>
@@ -43571,7 +43579,7 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
-  
+
   const stlBox = {
     backgroundColor: "gold",
     justifyContent: "center",
@@ -43588,13 +43596,15 @@ paddingHorizontal: 16,
   };
 
   return (
-    <RN.View style={stlBox}>
+    <>
       {readStatus ? (
         <></>
       ) : (
-        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        <RN.View style={stlBox}>
+          <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        </RN.View>
       )}
-    </RN.View>
+    </>
   );
 }] 
 }}/>
@@ -44152,7 +44162,7 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
-  
+
   const stlBox = {
     backgroundColor: "gold",
     justifyContent: "center",
@@ -44169,13 +44179,15 @@ paddingHorizontal: 16,
   };
 
   return (
-    <RN.View style={stlBox}>
+    <>
       {readStatus ? (
         <></>
       ) : (
-        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        <RN.View style={stlBox}>
+          <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        </RN.View>
       )}
-    </RN.View>
+    </>
   );
 }] 
 }}/>
@@ -44732,7 +44744,7 @@ paddingHorizontal: 16,
   });
 
   console.log("a13 custom alert", { allLot, args });
-  
+
   const stlBox = {
     backgroundColor: "gold",
     justifyContent: "center",
@@ -44749,13 +44761,15 @@ paddingHorizontal: 16,
   };
 
   return (
-    <RN.View style={stlBox}>
+    <>
       {readStatus ? (
         <></>
       ) : (
-        <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        <RN.View style={stlBox}>
+          <RN.Text style={stlTxt}>Não Lido</RN.Text>
+        </RN.View>
       )}
-    </RN.View>
+    </>
   );
 }] 
 }}/>
