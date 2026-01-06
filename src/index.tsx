@@ -12211,7 +12211,7 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
-  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#999" } : {};
 
   if (RN.Platform.OS === "web") {
     return (
@@ -13079,7 +13079,7 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
-  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#999" } : {};
 
   if (RN.Platform.OS === "web") {
     return (
@@ -21443,7 +21443,7 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
-  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#999" } : {};
 
   if (RN.Platform.OS === "web") {
     return (
@@ -22311,7 +22311,7 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
-  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#999" } : {};
 
   if (RN.Platform.OS === "web") {
     return (
@@ -30548,7 +30548,7 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
-  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#999" } : {};
 
   if (RN.Platform.OS === "web") {
     return (
@@ -31416,7 +31416,7 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
-  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#999" } : {};
 
   if (RN.Platform.OS === "web") {
     return (
@@ -39495,7 +39495,7 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
-  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#999" } : {};
 
   if (RN.Platform.OS === "web") {
     return (
@@ -40363,7 +40363,7 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
-  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#999" } : {};
 
   if (RN.Platform.OS === "web") {
     return (
