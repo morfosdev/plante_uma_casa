@@ -12980,15 +12980,25 @@ fontSize: 12,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-//   sc.A11.forms.editChanges
-//   sc.A12.forms.iptsChanges
-// "a12Add"
-// "a11Edit"
+  //   sc.A11.forms.editChanges
+  //   sc.A12.forms.iptsChanges
+  // "a12Add"
+  // "a11Edit"
 
   const [sttOption, setOption] = React.useState("Inativo");
-  const currForm = useData(ct => ct.all.toggles.forms);
+  const currForm = useData((ct) => ct.all.toggles.forms);
+  const editData = useData((ct) => ct.sc.A11.forms.editChanges);
   const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
+
+  React.useEffect(() => {
+    if (isEditMode) {
+      const existingStatus = editData?.partnerStatus || "Inativo";
+      setOption(existingStatus);
+    } else {
+      setOption("Inativo");
+    }
+  }, [isEditMode, editData]);
 
   if (RN.Platform.OS === "web") {
     return (
@@ -13014,7 +13024,7 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({path: condPath, value: e.target.value});
+            tools.setData({ path: condPath, value: e.target.value });
           }}
         >
           <option>Ativo</option>
@@ -22119,15 +22129,25 @@ fontSize: 12,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-//   sc.A11.forms.editChanges
-//   sc.A12.forms.iptsChanges
-// "a12Add"
-// "a11Edit"
+  //   sc.A11.forms.editChanges
+  //   sc.A12.forms.iptsChanges
+  // "a12Add"
+  // "a11Edit"
 
   const [sttOption, setOption] = React.useState("Inativo");
-  const currForm = useData(ct => ct.all.toggles.forms);
+  const currForm = useData((ct) => ct.all.toggles.forms);
+  const editData = useData((ct) => ct.sc.A11.forms.editChanges);
   const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
+
+  React.useEffect(() => {
+    if (isEditMode) {
+      const existingStatus = editData?.partnerStatus || "Inativo";
+      setOption(existingStatus);
+    } else {
+      setOption("Inativo");
+    }
+  }, [isEditMode, editData]);
 
   if (RN.Platform.OS === "web") {
     return (
@@ -22153,7 +22173,7 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({path: condPath, value: e.target.value});
+            tools.setData({ path: condPath, value: e.target.value });
           }}
         >
           <option>Ativo</option>
@@ -31131,15 +31151,25 @@ fontSize: 12,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-//   sc.A11.forms.editChanges
-//   sc.A12.forms.iptsChanges
-// "a12Add"
-// "a11Edit"
+  //   sc.A11.forms.editChanges
+  //   sc.A12.forms.iptsChanges
+  // "a12Add"
+  // "a11Edit"
 
   const [sttOption, setOption] = React.useState("Inativo");
-  const currForm = useData(ct => ct.all.toggles.forms);
+  const currForm = useData((ct) => ct.all.toggles.forms);
+  const editData = useData((ct) => ct.sc.A11.forms.editChanges);
   const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
+
+  React.useEffect(() => {
+    if (isEditMode) {
+      const existingStatus = editData?.partnerStatus || "Inativo";
+      setOption(existingStatus);
+    } else {
+      setOption("Inativo");
+    }
+  }, [isEditMode, editData]);
 
   if (RN.Platform.OS === "web") {
     return (
@@ -31165,7 +31195,7 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({path: condPath, value: e.target.value});
+            tools.setData({ path: condPath, value: e.target.value });
           }}
         >
           <option>Ativo</option>
@@ -39985,15 +40015,25 @@ fontSize: 12,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
-//   sc.A11.forms.editChanges
-//   sc.A12.forms.iptsChanges
-// "a12Add"
-// "a11Edit"
+  //   sc.A11.forms.editChanges
+  //   sc.A12.forms.iptsChanges
+  // "a12Add"
+  // "a11Edit"
 
   const [sttOption, setOption] = React.useState("Inativo");
-  const currForm = useData(ct => ct.all.toggles.forms);
+  const currForm = useData((ct) => ct.all.toggles.forms);
+  const editData = useData((ct) => ct.sc.A11.forms.editChanges);
   const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
+
+  React.useEffect(() => {
+    if (isEditMode) {
+      const existingStatus = editData?.partnerStatus || "Inativo";
+      setOption(existingStatus);
+    } else {
+      setOption("Inativo");
+    }
+  }, [isEditMode, editData]);
 
   if (RN.Platform.OS === "web") {
     return (
@@ -40019,7 +40059,7 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({path: condPath, value: e.target.value});
+            tools.setData({ path: condPath, value: e.target.value });
           }}
         >
           <option>Ativo</option>
