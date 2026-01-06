@@ -12152,7 +12152,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -12174,7 +12175,81 @@ fontSize: 12,
         }})],
 
           args,
-        }}/>],
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  //   sc.A11.forms.editChanges
+  //   sc.A12.forms.iptsChanges
+  // "a12Add"
+  // "a11Edit"
+
+  const [sttOption, setOption] = React.useState("Inativo");
+  const currForm = useData((ct) => ct.all.toggles.forms);
+  const editData = useData((ct) => ct?.sc?.A11?.forms?.editChanges);
+  const isEditMode = currForm === "a11Edit";
+  console.log({ sttOption });
+
+  React.useEffect(() => {
+    if (isEditMode) {
+      const existingStatus = editData?.partnerStatus || "Inativo";
+      setOption(existingStatus);
+    } else {
+      setOption("Inativo");
+    }
+  }, [isEditMode, editData]);
+
+  if (RN.Platform.OS === "web") {
+    return (
+      <RN.View
+        style={{
+          borderBottomWidth: 1,
+          borderBottomColor: "rgb(204, 204, 204)",
+          paddingHorizontal: 4,
+          paddingVertical: 2,
+        }}
+      >
+        <RN.Text
+          style={{ fontSize: 12, color: "rgb(85, 85, 85)", fontWeight: 700 }}
+        >
+          Status do Parceiro:
+        </RN.Text>
+        <select
+          style={{ border: "none" }}
+          value={sttOption}
+          onChange={(e) => {
+            setOption(e.target.value);
+            const condPath = isEditMode
+              ? "sc.A11.forms.editChanges.partnerStatus"
+              : "sc.A12.forms.iptsChanges.partnerStatus";
+
+            tools.setData({ path: condPath, value: e.target.value });
+          }}
+        >
+          <option>Ativo</option>
+          <option>Inativo</option>
+        </select>
+      </RN.View>
+    );
+  }
+
+  // Fallback for other platforms
+  return <></>;
+}] 
+}}/>
+],
 
             args,
           }}/>
@@ -21301,7 +21376,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -21323,7 +21399,81 @@ fontSize: 12,
         }})],
 
           args,
-        }}/>],
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  //   sc.A11.forms.editChanges
+  //   sc.A12.forms.iptsChanges
+  // "a12Add"
+  // "a11Edit"
+
+  const [sttOption, setOption] = React.useState("Inativo");
+  const currForm = useData((ct) => ct.all.toggles.forms);
+  const editData = useData((ct) => ct?.sc?.A11?.forms?.editChanges);
+  const isEditMode = currForm === "a11Edit";
+  console.log({ sttOption });
+
+  React.useEffect(() => {
+    if (isEditMode) {
+      const existingStatus = editData?.partnerStatus || "Inativo";
+      setOption(existingStatus);
+    } else {
+      setOption("Inativo");
+    }
+  }, [isEditMode, editData]);
+
+  if (RN.Platform.OS === "web") {
+    return (
+      <RN.View
+        style={{
+          borderBottomWidth: 1,
+          borderBottomColor: "rgb(204, 204, 204)",
+          paddingHorizontal: 4,
+          paddingVertical: 2,
+        }}
+      >
+        <RN.Text
+          style={{ fontSize: 12, color: "rgb(85, 85, 85)", fontWeight: 700 }}
+        >
+          Status do Parceiro:
+        </RN.Text>
+        <select
+          style={{ border: "none" }}
+          value={sttOption}
+          onChange={(e) => {
+            setOption(e.target.value);
+            const condPath = isEditMode
+              ? "sc.A11.forms.editChanges.partnerStatus"
+              : "sc.A12.forms.iptsChanges.partnerStatus";
+
+            tools.setData({ path: condPath, value: e.target.value });
+          }}
+        >
+          <option>Ativo</option>
+          <option>Inativo</option>
+        </select>
+      </RN.View>
+    );
+  }
+
+  // Fallback for other platforms
+  return <></>;
+}] 
+}}/>
+],
 
             args,
           }}/>
@@ -30323,7 +30473,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -30345,7 +30496,81 @@ fontSize: 12,
         }})],
 
           args,
-        }}/>],
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  //   sc.A11.forms.editChanges
+  //   sc.A12.forms.iptsChanges
+  // "a12Add"
+  // "a11Edit"
+
+  const [sttOption, setOption] = React.useState("Inativo");
+  const currForm = useData((ct) => ct.all.toggles.forms);
+  const editData = useData((ct) => ct?.sc?.A11?.forms?.editChanges);
+  const isEditMode = currForm === "a11Edit";
+  console.log({ sttOption });
+
+  React.useEffect(() => {
+    if (isEditMode) {
+      const existingStatus = editData?.partnerStatus || "Inativo";
+      setOption(existingStatus);
+    } else {
+      setOption("Inativo");
+    }
+  }, [isEditMode, editData]);
+
+  if (RN.Platform.OS === "web") {
+    return (
+      <RN.View
+        style={{
+          borderBottomWidth: 1,
+          borderBottomColor: "rgb(204, 204, 204)",
+          paddingHorizontal: 4,
+          paddingVertical: 2,
+        }}
+      >
+        <RN.Text
+          style={{ fontSize: 12, color: "rgb(85, 85, 85)", fontWeight: 700 }}
+        >
+          Status do Parceiro:
+        </RN.Text>
+        <select
+          style={{ border: "none" }}
+          value={sttOption}
+          onChange={(e) => {
+            setOption(e.target.value);
+            const condPath = isEditMode
+              ? "sc.A11.forms.editChanges.partnerStatus"
+              : "sc.A12.forms.iptsChanges.partnerStatus";
+
+            tools.setData({ path: condPath, value: e.target.value });
+          }}
+        >
+          <option>Ativo</option>
+          <option>Inativo</option>
+        </select>
+      </RN.View>
+    );
+  }
+
+  // Fallback for other platforms
+  return <></>;
+}] 
+}}/>
+],
 
             args,
           }}/>
@@ -39187,7 +39412,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -39209,7 +39435,81 @@ fontSize: 12,
         }})],
 
           args,
-        }}/>],
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: 15, height: 15, alignItems: "center", justifyContent: "center", backgroundColor: "transparent" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  //   sc.A11.forms.editChanges
+  //   sc.A12.forms.iptsChanges
+  // "a12Add"
+  // "a11Edit"
+
+  const [sttOption, setOption] = React.useState("Inativo");
+  const currForm = useData((ct) => ct.all.toggles.forms);
+  const editData = useData((ct) => ct?.sc?.A11?.forms?.editChanges);
+  const isEditMode = currForm === "a11Edit";
+  console.log({ sttOption });
+
+  React.useEffect(() => {
+    if (isEditMode) {
+      const existingStatus = editData?.partnerStatus || "Inativo";
+      setOption(existingStatus);
+    } else {
+      setOption("Inativo");
+    }
+  }, [isEditMode, editData]);
+
+  if (RN.Platform.OS === "web") {
+    return (
+      <RN.View
+        style={{
+          borderBottomWidth: 1,
+          borderBottomColor: "rgb(204, 204, 204)",
+          paddingHorizontal: 4,
+          paddingVertical: 2,
+        }}
+      >
+        <RN.Text
+          style={{ fontSize: 12, color: "rgb(85, 85, 85)", fontWeight: 700 }}
+        >
+          Status do Parceiro:
+        </RN.Text>
+        <select
+          style={{ border: "none" }}
+          value={sttOption}
+          onChange={(e) => {
+            setOption(e.target.value);
+            const condPath = isEditMode
+              ? "sc.A11.forms.editChanges.partnerStatus"
+              : "sc.A12.forms.iptsChanges.partnerStatus";
+
+            tools.setData({ path: condPath, value: e.target.value });
+          }}
+        >
+          <option>Ativo</option>
+          <option>Inativo</option>
+        </select>
+      </RN.View>
+    );
+  }
+
+  // Fallback for other platforms
+  return <></>;
+}] 
+}}/>
+],
 
             args,
           }}/>
