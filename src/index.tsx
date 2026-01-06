@@ -12970,10 +12970,13 @@ fontSize: 12,
   arrItems: [() => {
   if (RN.Platform.OS === "web") {
     return (
-      <select>
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
+      <>
+        <RN.Text>Status do Parceiro:</RN.Text>
+        <select style={{ border: "none" }} onChange={(e) => console.log({ e })}>
+          <option>Ativo</option>
+          <option>Inativo</option>
+        </select>
+      </>
     );
   }
 
@@ -22062,10 +22065,13 @@ fontSize: 12,
   arrItems: [() => {
   if (RN.Platform.OS === "web") {
     return (
-      <select>
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
+      <>
+        <RN.Text>Status do Parceiro:</RN.Text>
+        <select style={{ border: "none" }} onChange={(e) => console.log({ e })}>
+          <option>Ativo</option>
+          <option>Inativo</option>
+        </select>
+      </>
     );
   }
 
@@ -31027,10 +31033,13 @@ fontSize: 12,
   arrItems: [() => {
   if (RN.Platform.OS === "web") {
     return (
-      <select>
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
+      <>
+        <RN.Text>Status do Parceiro:</RN.Text>
+        <select style={{ border: "none" }} onChange={(e) => console.log({ e })}>
+          <option>Ativo</option>
+          <option>Inativo</option>
+        </select>
+      </>
     );
   }
 
@@ -39834,10 +39843,13 @@ fontSize: 12,
   arrItems: [() => {
   if (RN.Platform.OS === "web") {
     return (
-      <select>
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
+      <>
+        <RN.Text>Status do Parceiro:</RN.Text>
+        <select style={{ border: "none" }} onChange={(e) => console.log({ e })}>
+          <option>Ativo</option>
+          <option>Inativo</option>
+        </select>
+      </>
     );
   }
 
