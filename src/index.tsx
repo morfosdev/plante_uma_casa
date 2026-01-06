@@ -12941,7 +12941,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -12963,7 +12964,24 @@ fontSize: 12,
         }})],
 
           args,
-        }}/>],
+        }}/>, 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  if (RN.Platform.OS === "web") {
+    return (
+      <select>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    );
+  }
+
+  // Fallback for other platforms
+  return <></>;
+}] 
+}}/>
+],
 
             args,
           }}/>
@@ -22015,7 +22033,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -22037,7 +22056,24 @@ fontSize: 12,
         }})],
 
           args,
-        }}/>],
+        }}/>, 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  if (RN.Platform.OS === "web") {
+    return (
+      <select>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    );
+  }
+
+  // Fallback for other platforms
+  return <></>;
+}] 
+}}/>
+],
 
             args,
           }}/>
@@ -30962,7 +30998,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -30984,7 +31021,24 @@ fontSize: 12,
         }})],
 
           args,
-        }}/>],
+        }}/>, 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  if (RN.Platform.OS === "web") {
+    return (
+      <select>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    );
+  }
+
+  // Fallback for other platforms
+  return <></>;
+}] 
+}}/>
+],
 
             args,
           }}/>
@@ -39751,7 +39805,8 @@ fontWeight: '700',
 
           args,
 
-        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
+        }}/>, 
+        (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
 placeholder: "Escreva...",
 }`],
@@ -39773,7 +39828,24 @@ fontSize: 12,
         }})],
 
           args,
-        }}/>],
+        }}/>, 
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  if (RN.Platform.OS === "web") {
+    return (
+      <select>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    );
+  }
+
+  // Fallback for other platforms
+  return <></>;
+}] 
+}}/>
+],
 
             args,
           }}/>
