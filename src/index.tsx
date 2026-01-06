@@ -12211,6 +12211,8 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+
   if (RN.Platform.OS === "web") {
     return (
       <RN.View
@@ -12227,7 +12229,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-          style={{ border: "none" }}
+          style={{ border: "none", ...condStyleOption }}
           value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
@@ -12235,7 +12237,9 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({ path: condPath, value: e.target.value });
+            const setData = { path: condPath, value: e.target.value };
+            tools.setData(setData);
+            console.log({ setData });
           }}
         >
           <option>Ativo</option>
@@ -13075,6 +13079,8 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+
   if (RN.Platform.OS === "web") {
     return (
       <RN.View
@@ -13091,7 +13097,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-          style={{ border: "none" }}
+          style={{ border: "none", ...condStyleOption }}
           value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
@@ -13099,7 +13105,9 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({ path: condPath, value: e.target.value });
+            const setData = { path: condPath, value: e.target.value };
+            tools.setData(setData);
+            console.log({ setData });
           }}
         >
           <option>Ativo</option>
@@ -21435,6 +21443,8 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+
   if (RN.Platform.OS === "web") {
     return (
       <RN.View
@@ -21451,7 +21461,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-          style={{ border: "none" }}
+          style={{ border: "none", ...condStyleOption }}
           value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
@@ -21459,7 +21469,9 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({ path: condPath, value: e.target.value });
+            const setData = { path: condPath, value: e.target.value };
+            tools.setData(setData);
+            console.log({ setData });
           }}
         >
           <option>Ativo</option>
@@ -22299,6 +22311,8 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+
   if (RN.Platform.OS === "web") {
     return (
       <RN.View
@@ -22315,7 +22329,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-          style={{ border: "none" }}
+          style={{ border: "none", ...condStyleOption }}
           value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
@@ -22323,7 +22337,9 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({ path: condPath, value: e.target.value });
+            const setData = { path: condPath, value: e.target.value };
+            tools.setData(setData);
+            console.log({ setData });
           }}
         >
           <option>Ativo</option>
@@ -30532,6 +30548,8 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+
   if (RN.Platform.OS === "web") {
     return (
       <RN.View
@@ -30548,7 +30566,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-          style={{ border: "none" }}
+          style={{ border: "none", ...condStyleOption }}
           value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
@@ -30556,7 +30574,9 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({ path: condPath, value: e.target.value });
+            const setData = { path: condPath, value: e.target.value };
+            tools.setData(setData);
+            console.log({ setData });
           }}
         >
           <option>Ativo</option>
@@ -31396,6 +31416,8 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+
   if (RN.Platform.OS === "web") {
     return (
       <RN.View
@@ -31412,7 +31434,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-          style={{ border: "none" }}
+          style={{ border: "none", ...condStyleOption }}
           value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
@@ -31420,7 +31442,9 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({ path: condPath, value: e.target.value });
+            const setData = { path: condPath, value: e.target.value };
+            tools.setData(setData);
+            console.log({ setData });
           }}
         >
           <option>Ativo</option>
@@ -39471,6 +39495,8 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+
   if (RN.Platform.OS === "web") {
     return (
       <RN.View
@@ -39487,7 +39513,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-          style={{ border: "none" }}
+          style={{ border: "none", ...condStyleOption }}
           value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
@@ -39495,7 +39521,9 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({ path: condPath, value: e.target.value });
+            const setData = { path: condPath, value: e.target.value };
+            tools.setData(setData);
+            console.log({ setData });
           }}
         >
           <option>Ativo</option>
@@ -40335,6 +40363,8 @@ fontSize: 12,
     }
   }, [isEditMode, editData]);
 
+  const condStyleOption = sttOption === "Inativo" ? { backGroundColor: "#E8E8E8", color: "#888" } : {};
+
   if (RN.Platform.OS === "web") {
     return (
       <RN.View
@@ -40351,7 +40381,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-          style={{ border: "none" }}
+          style={{ border: "none", ...condStyleOption }}
           value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
@@ -40359,7 +40389,9 @@ fontSize: 12,
               ? "sc.A11.forms.editChanges.partnerStatus"
               : "sc.A12.forms.iptsChanges.partnerStatus";
 
-            tools.setData({ path: condPath, value: e.target.value });
+            const setData = { path: condPath, value: e.target.value };
+            tools.setData(setData);
+            console.log({ setData });
           }}
         >
           <option>Ativo</option>
