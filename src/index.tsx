@@ -12242,8 +12242,8 @@ fontSize: 12,
             console.log({ setData });
           }}
         >
-          <option>Ativo</option>
-          <option>Inativo</option>
+          <option style={{color: "black"}}>Ativo</option>
+          <option style={{color: "black"}}>Inativo</option>
         </select>
       </RN.View>
     );
@@ -13110,8 +13110,8 @@ fontSize: 12,
             console.log({ setData });
           }}
         >
-          <option>Ativo</option>
-          <option>Inativo</option>
+          <option style={{color: "black"}}>Ativo</option>
+          <option style={{color: "black"}}>Inativo</option>
         </select>
       </RN.View>
     );
@@ -21474,8 +21474,8 @@ fontSize: 12,
             console.log({ setData });
           }}
         >
-          <option>Ativo</option>
-          <option>Inativo</option>
+          <option style={{color: "black"}}>Ativo</option>
+          <option style={{color: "black"}}>Inativo</option>
         </select>
       </RN.View>
     );
@@ -22342,8 +22342,8 @@ fontSize: 12,
             console.log({ setData });
           }}
         >
-          <option>Ativo</option>
-          <option>Inativo</option>
+          <option style={{color: "black"}}>Ativo</option>
+          <option style={{color: "black"}}>Inativo</option>
         </select>
       </RN.View>
     );
@@ -30579,8 +30579,8 @@ fontSize: 12,
             console.log({ setData });
           }}
         >
-          <option>Ativo</option>
-          <option>Inativo</option>
+          <option style={{color: "black"}}>Ativo</option>
+          <option style={{color: "black"}}>Inativo</option>
         </select>
       </RN.View>
     );
@@ -31447,8 +31447,8 @@ fontSize: 12,
             console.log({ setData });
           }}
         >
-          <option>Ativo</option>
-          <option>Inativo</option>
+          <option style={{color: "black"}}>Ativo</option>
+          <option style={{color: "black"}}>Inativo</option>
         </select>
       </RN.View>
     );
@@ -39526,8 +39526,8 @@ fontSize: 12,
             console.log({ setData });
           }}
         >
-          <option>Ativo</option>
-          <option>Inativo</option>
+          <option style={{color: "black"}}>Ativo</option>
+          <option style={{color: "black"}}>Inativo</option>
         </select>
       </RN.View>
     );
@@ -40394,8 +40394,8 @@ fontSize: 12,
             console.log({ setData });
           }}
         >
-          <option>Ativo</option>
-          <option>Inativo</option>
+          <option style={{color: "black"}}>Ativo</option>
+          <option style={{color: "black"}}>Inativo</option>
         </select>
       </RN.View>
     );
