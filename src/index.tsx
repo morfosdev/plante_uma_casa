@@ -12999,6 +12999,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
+					value={sttOption}
           style={{ border: "none" }}
           onChange={(e) => {
             setOption(e.target.value);
@@ -22125,6 +22126,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
+					value={sttOption}
           style={{ border: "none" }}
           onChange={(e) => {
             setOption(e.target.value);
@@ -31124,6 +31126,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
+					value={sttOption}
           style={{ border: "none" }}
           onChange={(e) => {
             setOption(e.target.value);
@@ -39965,6 +39968,7 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
+					value={sttOption}
           style={{ border: "none" }}
           onChange={(e) => {
             setOption(e.target.value);
