@@ -12400,13 +12400,13 @@ width: 120
   //     return;
   //   }
 
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.A11.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
-    },
-  });
+//   tools.functions.setVar({
+//     args: "",
+//     pass: {
+//       keyPath: ["sc.A11.validationMessage"],
+//       value: ["✅ Todos os campos foram preenchidos corretamente."],
+//     },
+//   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
@@ -21631,13 +21631,13 @@ width: 120
   //     return;
   //   }
 
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.A11.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
-    },
-  });
+//   tools.functions.setVar({
+//     args: "",
+//     pass: {
+//       keyPath: ["sc.A11.validationMessage"],
+//       value: ["✅ Todos os campos foram preenchidos corretamente."],
+//     },
+//   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
@@ -30735,13 +30735,13 @@ width: 120
   //     return;
   //   }
 
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.A11.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
-    },
-  });
+//   tools.functions.setVar({
+//     args: "",
+//     pass: {
+//       keyPath: ["sc.A11.validationMessage"],
+//       value: ["✅ Todos os campos foram preenchidos corretamente."],
+//     },
+//   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
@@ -39681,13 +39681,13 @@ width: 120
   //     return;
   //   }
 
-  tools.functions.setVar({
-    args: "",
-    pass: {
-      keyPath: ["sc.A11.validationMessage"],
-      value: ["✅ Todos os campos foram preenchidos corretamente."],
-    },
-  });
+//   tools.functions.setVar({
+//     args: "",
+//     pass: {
+//       keyPath: ["sc.A11.validationMessage"],
+//       value: ["✅ Todos os campos foram preenchidos corretamente."],
+//     },
+//   });
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
