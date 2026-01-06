@@ -12370,34 +12370,35 @@ width: 120
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const requiredFields = [
-    { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
-    { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
-    { path: "sc.A11.forms.editChanges.partnerActivity", name: "Área de Atuação" },
-  ];
+  //   const requiredFields = [
+  //     { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
+  //     { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
+  //     { path: "sc.A11.forms.editChanges.partnerActivity", name: "Área de Atuação" },
+  //     { path: "sc.A11.forms.editChanges.partnerStatus", name: "Status do Parceiro" },
+  //   ];
 
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
-  };
+  //   const getVal = (path) => {
+  //     const val = tools.getCtData(path);
+  //     if (Array.isArray(val)) return val[0] ?? "";
+  //     return val ?? "";
+  //   };
 
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
+  //   const emptyFields = requiredFields.filter((f) => {
+  //     const v = getVal(f.path);
+  //     return v === "" || v === null || v === undefined;
+  //   });
 
-  if (emptyFields.length > 0) {
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A11.validationMessage"],
-        value: ["Preencha os campos obrigatórios."],
-      },
-    });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return;
-  }
+  //   if (emptyFields.length > 0) {
+  //     tools.functions.setVar({
+  //       args: "",
+  //       pass: {
+  //         keyPath: ["sc.A11.validationMessage"],
+  //         value: ["Preencha os campos obrigatórios."],
+  //       },
+  //     });
+  //     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+  //     return;
+  //   }
 
   tools.functions.setVar({
     args: "",
@@ -12409,8 +12410,7 @@ width: 120
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-
-// Inicializar Firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -12419,8 +12419,9 @@ width: 120
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-// Importa Firestore
-  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.A11.forms.editChanges.docId");
@@ -12437,19 +12438,18 @@ width: 120
     return;
   }
 
-// Monta os dados a salvar
+  const allFields = tools.getCtData("sc.A11.forms.editChanges") ?? {};
+
+  // Monta os dados a salvar
   const updatedDoc = {
-    userName: getVal("sc.A11.forms.editChanges.userName"),
-    userEmail: getVal("sc.A11.forms.editChanges.userEmail"),
-    partnerActivity: getVal("sc.A11.forms.editChanges.partnerActivity"),
-	updatedAt: serverTimestamp(),
+    ...allFields,
+    updatedAt: serverTimestamp(),
   };
 
   try {
-// Salva o doc
+    // Salva o doc
     await updateDoc(doc(db, "users", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
-
 
     tools.functions.setVar({
       args: "",
@@ -12469,7 +12469,7 @@ width: 120
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -12495,16 +12495,15 @@ tools.functions.setVar({
     });
   }
 
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A11.validationMessage"],
-        value: [""],
-      },
-    });
-}
-]
+  //clean validation message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.A11.validationMessage"],
+      value: [""],
+    },
+  });
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -21602,34 +21601,35 @@ width: 120
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const requiredFields = [
-    { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
-    { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
-    { path: "sc.A11.forms.editChanges.partnerActivity", name: "Área de Atuação" },
-  ];
+  //   const requiredFields = [
+  //     { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
+  //     { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
+  //     { path: "sc.A11.forms.editChanges.partnerActivity", name: "Área de Atuação" },
+  //     { path: "sc.A11.forms.editChanges.partnerStatus", name: "Status do Parceiro" },
+  //   ];
 
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
-  };
+  //   const getVal = (path) => {
+  //     const val = tools.getCtData(path);
+  //     if (Array.isArray(val)) return val[0] ?? "";
+  //     return val ?? "";
+  //   };
 
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
+  //   const emptyFields = requiredFields.filter((f) => {
+  //     const v = getVal(f.path);
+  //     return v === "" || v === null || v === undefined;
+  //   });
 
-  if (emptyFields.length > 0) {
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A11.validationMessage"],
-        value: ["Preencha os campos obrigatórios."],
-      },
-    });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return;
-  }
+  //   if (emptyFields.length > 0) {
+  //     tools.functions.setVar({
+  //       args: "",
+  //       pass: {
+  //         keyPath: ["sc.A11.validationMessage"],
+  //         value: ["Preencha os campos obrigatórios."],
+  //       },
+  //     });
+  //     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+  //     return;
+  //   }
 
   tools.functions.setVar({
     args: "",
@@ -21641,8 +21641,7 @@ width: 120
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-
-// Inicializar Firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -21651,8 +21650,9 @@ width: 120
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-// Importa Firestore
-  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.A11.forms.editChanges.docId");
@@ -21669,19 +21669,18 @@ width: 120
     return;
   }
 
-// Monta os dados a salvar
+  const allFields = tools.getCtData("sc.A11.forms.editChanges") ?? {};
+
+  // Monta os dados a salvar
   const updatedDoc = {
-    userName: getVal("sc.A11.forms.editChanges.userName"),
-    userEmail: getVal("sc.A11.forms.editChanges.userEmail"),
-    partnerActivity: getVal("sc.A11.forms.editChanges.partnerActivity"),
-	updatedAt: serverTimestamp(),
+    ...allFields,
+    updatedAt: serverTimestamp(),
   };
 
   try {
-// Salva o doc
+    // Salva o doc
     await updateDoc(doc(db, "users", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
-
 
     tools.functions.setVar({
       args: "",
@@ -21701,7 +21700,7 @@ width: 120
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -21727,16 +21726,15 @@ tools.functions.setVar({
     });
   }
 
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A11.validationMessage"],
-        value: [""],
-      },
-    });
-}
-]
+  //clean validation message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.A11.validationMessage"],
+      value: [""],
+    },
+  });
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -30707,34 +30705,35 @@ width: 120
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const requiredFields = [
-    { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
-    { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
-    { path: "sc.A11.forms.editChanges.partnerActivity", name: "Área de Atuação" },
-  ];
+  //   const requiredFields = [
+  //     { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
+  //     { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
+  //     { path: "sc.A11.forms.editChanges.partnerActivity", name: "Área de Atuação" },
+  //     { path: "sc.A11.forms.editChanges.partnerStatus", name: "Status do Parceiro" },
+  //   ];
 
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
-  };
+  //   const getVal = (path) => {
+  //     const val = tools.getCtData(path);
+  //     if (Array.isArray(val)) return val[0] ?? "";
+  //     return val ?? "";
+  //   };
 
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
+  //   const emptyFields = requiredFields.filter((f) => {
+  //     const v = getVal(f.path);
+  //     return v === "" || v === null || v === undefined;
+  //   });
 
-  if (emptyFields.length > 0) {
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A11.validationMessage"],
-        value: ["Preencha os campos obrigatórios."],
-      },
-    });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return;
-  }
+  //   if (emptyFields.length > 0) {
+  //     tools.functions.setVar({
+  //       args: "",
+  //       pass: {
+  //         keyPath: ["sc.A11.validationMessage"],
+  //         value: ["Preencha os campos obrigatórios."],
+  //       },
+  //     });
+  //     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+  //     return;
+  //   }
 
   tools.functions.setVar({
     args: "",
@@ -30746,8 +30745,7 @@ width: 120
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-
-// Inicializar Firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -30756,8 +30754,9 @@ width: 120
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-// Importa Firestore
-  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.A11.forms.editChanges.docId");
@@ -30774,19 +30773,18 @@ width: 120
     return;
   }
 
-// Monta os dados a salvar
+  const allFields = tools.getCtData("sc.A11.forms.editChanges") ?? {};
+
+  // Monta os dados a salvar
   const updatedDoc = {
-    userName: getVal("sc.A11.forms.editChanges.userName"),
-    userEmail: getVal("sc.A11.forms.editChanges.userEmail"),
-    partnerActivity: getVal("sc.A11.forms.editChanges.partnerActivity"),
-	updatedAt: serverTimestamp(),
+    ...allFields,
+    updatedAt: serverTimestamp(),
   };
 
   try {
-// Salva o doc
+    // Salva o doc
     await updateDoc(doc(db, "users", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
-
 
     tools.functions.setVar({
       args: "",
@@ -30806,7 +30804,7 @@ width: 120
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -30832,16 +30830,15 @@ tools.functions.setVar({
     });
   }
 
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A11.validationMessage"],
-        value: [""],
-      },
-    });
-}
-]
+  //clean validation message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.A11.validationMessage"],
+      value: [""],
+    },
+  });
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -39654,34 +39651,35 @@ width: 120
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async () => {
-  const requiredFields = [
-    { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
-    { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
-    { path: "sc.A11.forms.editChanges.partnerActivity", name: "Área de Atuação" },
-  ];
+  //   const requiredFields = [
+  //     { path: "sc.A11.forms.editChanges.userName", name: "Nome" },
+  //     { path: "sc.A11.forms.editChanges.userEmail", name: "E-mail" },
+  //     { path: "sc.A11.forms.editChanges.partnerActivity", name: "Área de Atuação" },
+  //     { path: "sc.A11.forms.editChanges.partnerStatus", name: "Status do Parceiro" },
+  //   ];
 
-  const getVal = (path) => {
-    const val = tools.getCtData(path);
-    if (Array.isArray(val)) return val[0] ?? "";
-    return val ?? "";
-  };
+  //   const getVal = (path) => {
+  //     const val = tools.getCtData(path);
+  //     if (Array.isArray(val)) return val[0] ?? "";
+  //     return val ?? "";
+  //   };
 
-  const emptyFields = requiredFields.filter((f) => {
-    const v = getVal(f.path);
-    return v === "" || v === null || v === undefined;
-  });
+  //   const emptyFields = requiredFields.filter((f) => {
+  //     const v = getVal(f.path);
+  //     return v === "" || v === null || v === undefined;
+  //   });
 
-  if (emptyFields.length > 0) {
-    tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A11.validationMessage"],
-        value: ["Preencha os campos obrigatórios."],
-      },
-    });
-    console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
-    return;
-  }
+  //   if (emptyFields.length > 0) {
+  //     tools.functions.setVar({
+  //       args: "",
+  //       pass: {
+  //         keyPath: ["sc.A11.validationMessage"],
+  //         value: ["Preencha os campos obrigatórios."],
+  //       },
+  //     });
+  //     console.warn("⚠️ Campos vazios detectados:", emptyFields.map(f => f.name).join(", "));
+  //     return;
+  //   }
 
   tools.functions.setVar({
     args: "",
@@ -39693,8 +39691,7 @@ width: 120
 
   console.log("💾 Validação OK — atualizando documento no Firebase...");
 
-
-// Inicializar Firebase
+  // Inicializar Firebase
   let fbInit = tools.getCtData("all.temp.fireInit");
   if (!fbInit) {
     const { initializeApp, getApps } = await import("firebase/app");
@@ -39703,8 +39700,9 @@ width: 120
     tools.setData({ path: "all.temp.fireInit", value: fbInit });
   }
 
-// Importa Firestore
-  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } = await import("firebase/firestore");
+  // Importa Firestore
+  const { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp } =
+    await import("firebase/firestore");
   const db = getFirestore(fbInit);
 
   const docId = tools.getCtData("sc.A11.forms.editChanges.docId");
@@ -39721,19 +39719,18 @@ width: 120
     return;
   }
 
-// Monta os dados a salvar
+  const allFields = tools.getCtData("sc.A11.forms.editChanges") ?? {};
+
+  // Monta os dados a salvar
   const updatedDoc = {
-    userName: getVal("sc.A11.forms.editChanges.userName"),
-    userEmail: getVal("sc.A11.forms.editChanges.userEmail"),
-    partnerActivity: getVal("sc.A11.forms.editChanges.partnerActivity"),
-	updatedAt: serverTimestamp(),
+    ...allFields,
+    updatedAt: serverTimestamp(),
   };
 
   try {
-// Salva o doc
+    // Salva o doc
     await updateDoc(doc(db, "users", docId), updatedDoc);
     console.log("✅ Documento atualizado com sucesso:", docId);
-
 
     tools.functions.setVar({
       args: "",
@@ -39753,7 +39750,7 @@ width: 120
     });
 
     //close Form
-tools.functions.setVar({
+    tools.functions.setVar({
       args: "",
       pass: {
         keyPath: ["all.toggles.forms"],
@@ -39779,16 +39776,15 @@ tools.functions.setVar({
     });
   }
 
-//clean validation message
-tools.functions.setVar({
-      args: "",
-      pass: {
-        keyPath: ["sc.A11.validationMessage"],
-        value: [""],
-      },
-    });
-}
-]
+  //clean validation message
+  tools.functions.setVar({
+    args: "",
+    pass: {
+      keyPath: ["sc.A11.validationMessage"],
+      value: [""],
+    },
+  });
+}]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
