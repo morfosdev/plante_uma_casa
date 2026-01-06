@@ -12980,7 +12980,14 @@ fontSize: 12,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+//   sc.A11.forms.editChanges
+//   sc.A12.forms.iptsChanges
+// "a12Add"
+// "a11Edit"
+
   const [sttOption, setOption] = React.useState("Inativo");
+  const currForm = useData(ct => ct.all.toggles.forms);
+  const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
 
   if (RN.Platform.OS === "web") {
@@ -12999,10 +13006,15 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-					value={sttOption}
           style={{ border: "none" }}
+          value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
+            const condPath = isEditMode
+              ? "sc.A11.forms.editChanges.partnerStatus"
+              : "sc.A12.forms.iptsChanges.partnerStatus";
+
+            tools.setData({path: condPath, value: e.target.value});
           }}
         >
           <option>Ativo</option>
@@ -22107,7 +22119,14 @@ fontSize: 12,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+//   sc.A11.forms.editChanges
+//   sc.A12.forms.iptsChanges
+// "a12Add"
+// "a11Edit"
+
   const [sttOption, setOption] = React.useState("Inativo");
+  const currForm = useData(ct => ct.all.toggles.forms);
+  const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
 
   if (RN.Platform.OS === "web") {
@@ -22126,10 +22145,15 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-					value={sttOption}
           style={{ border: "none" }}
+          value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
+            const condPath = isEditMode
+              ? "sc.A11.forms.editChanges.partnerStatus"
+              : "sc.A12.forms.iptsChanges.partnerStatus";
+
+            tools.setData({path: condPath, value: e.target.value});
           }}
         >
           <option>Ativo</option>
@@ -31107,7 +31131,14 @@ fontSize: 12,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+//   sc.A11.forms.editChanges
+//   sc.A12.forms.iptsChanges
+// "a12Add"
+// "a11Edit"
+
   const [sttOption, setOption] = React.useState("Inativo");
+  const currForm = useData(ct => ct.all.toggles.forms);
+  const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
 
   if (RN.Platform.OS === "web") {
@@ -31126,10 +31157,15 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-					value={sttOption}
           style={{ border: "none" }}
+          value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
+            const condPath = isEditMode
+              ? "sc.A11.forms.editChanges.partnerStatus"
+              : "sc.A12.forms.iptsChanges.partnerStatus";
+
+            tools.setData({path: condPath, value: e.target.value});
           }}
         >
           <option>Ativo</option>
@@ -39949,7 +39985,14 @@ fontSize: 12,
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+//   sc.A11.forms.editChanges
+//   sc.A12.forms.iptsChanges
+// "a12Add"
+// "a11Edit"
+
   const [sttOption, setOption] = React.useState("Inativo");
+  const currForm = useData(ct => ct.all.toggles.forms);
+  const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
 
   if (RN.Platform.OS === "web") {
@@ -39968,10 +40011,15 @@ fontSize: 12,
           Status do Parceiro:
         </RN.Text>
         <select
-					value={sttOption}
           style={{ border: "none" }}
+          value={sttOption}
           onChange={(e) => {
             setOption(e.target.value);
+            const condPath = isEditMode
+              ? "sc.A11.forms.editChanges.partnerStatus"
+              : "sc.A12.forms.iptsChanges.partnerStatus";
+
+            tools.setData({path: condPath, value: e.target.value});
           }}
         >
           <option>Ativo</option>
