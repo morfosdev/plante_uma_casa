@@ -56327,9 +56327,12 @@ borderRadius: 10,
  functions.funcGroup({ args, pass:{
  arrFunctions: [
 () => {
+  const status = tools.getCtData("all.authUser.partnerStatus");
+  console.log({ status });
 
-
-	return null;
+  if (status === "Inativo") {
+    throw new Error("Usuário inativo");
+  }
 }, async (...args) =>
  functions.firebase.where({ args, pass:{
 
