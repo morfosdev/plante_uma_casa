@@ -13245,7 +13245,8 @@ width: 120
     const name = (tools.getCtData(pathName) ?? "").trim();
     const email = (tools.getCtData(pathEmail) ?? "").trim();
     const partnerActivity = (tools.getCtData(pathPartner) ?? "").trim();
-    console.log({ name, email });
+    const status = (tools.getCtData("sc.A12.forms.iptsChanges.partnerStatus") || "Inativo").trim();
+    console.log({ name, email, status, partnerActivity });
 
     const validateEmail = (v: string) => v.includes("@") && v.includes(".");
     console.log({ validateEmail: validateEmail(email) });
@@ -13323,6 +13324,7 @@ width: 120
         userEmail: email,
         userImage: cred.user.photoURL || "",
         partnerActivity,
+        partnerStatus: status,
         typeAccount: "partner",
         condoId: condoId,
       };
@@ -22476,7 +22478,8 @@ width: 120
     const name = (tools.getCtData(pathName) ?? "").trim();
     const email = (tools.getCtData(pathEmail) ?? "").trim();
     const partnerActivity = (tools.getCtData(pathPartner) ?? "").trim();
-    console.log({ name, email });
+    const status = (tools.getCtData("sc.A12.forms.iptsChanges.partnerStatus") || "Inativo").trim();
+    console.log({ name, email, status, partnerActivity });
 
     const validateEmail = (v: string) => v.includes("@") && v.includes(".");
     console.log({ validateEmail: validateEmail(email) });
@@ -22554,6 +22557,7 @@ width: 120
         userEmail: email,
         userImage: cred.user.photoURL || "",
         partnerActivity,
+        partnerStatus: status,
         typeAccount: "partner",
         condoId: condoId,
       };
@@ -31580,7 +31584,8 @@ width: 120
     const name = (tools.getCtData(pathName) ?? "").trim();
     const email = (tools.getCtData(pathEmail) ?? "").trim();
     const partnerActivity = (tools.getCtData(pathPartner) ?? "").trim();
-    console.log({ name, email });
+    const status = (tools.getCtData("sc.A12.forms.iptsChanges.partnerStatus") || "Inativo").trim();
+    console.log({ name, email, status, partnerActivity });
 
     const validateEmail = (v: string) => v.includes("@") && v.includes(".");
     console.log({ validateEmail: validateEmail(email) });
@@ -31658,6 +31663,7 @@ width: 120
         userEmail: email,
         userImage: cred.user.photoURL || "",
         partnerActivity,
+        partnerStatus: status,
         typeAccount: "partner",
         condoId: condoId,
       };
@@ -40526,7 +40532,8 @@ width: 120
     const name = (tools.getCtData(pathName) ?? "").trim();
     const email = (tools.getCtData(pathEmail) ?? "").trim();
     const partnerActivity = (tools.getCtData(pathPartner) ?? "").trim();
-    console.log({ name, email });
+    const status = (tools.getCtData("sc.A12.forms.iptsChanges.partnerStatus") || "Inativo").trim();
+    console.log({ name, email, status, partnerActivity });
 
     const validateEmail = (v: string) => v.includes("@") && v.includes(".");
     console.log({ validateEmail: validateEmail(email) });
@@ -40604,6 +40611,7 @@ width: 120
         userEmail: email,
         userImage: cred.user.photoURL || "",
         partnerActivity,
+        partnerStatus: status,
         typeAccount: "partner",
         condoId: condoId,
       };
