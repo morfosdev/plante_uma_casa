@@ -56325,7 +56325,12 @@ borderRadius: 10,
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+() => {
+
+
+	return null;
+}, async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`condos`],
