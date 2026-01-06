@@ -12987,7 +12987,7 @@ fontSize: 12,
 
   const [sttOption, setOption] = React.useState("Inativo");
   const currForm = useData((ct) => ct.all.toggles.forms);
-  const editData = useData((ct) => ct.sc.A11.forms.editChanges);
+  const editData = useData((ct) => ct?.sc?.A11?.forms?.editChanges);
   const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
 
@@ -22136,7 +22136,7 @@ fontSize: 12,
 
   const [sttOption, setOption] = React.useState("Inativo");
   const currForm = useData((ct) => ct.all.toggles.forms);
-  const editData = useData((ct) => ct.sc.A11.forms.editChanges);
+  const editData = useData((ct) => ct?.sc?.A11?.forms?.editChanges);
   const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
 
@@ -31158,7 +31158,7 @@ fontSize: 12,
 
   const [sttOption, setOption] = React.useState("Inativo");
   const currForm = useData((ct) => ct.all.toggles.forms);
-  const editData = useData((ct) => ct.sc.A11.forms.editChanges);
+  const editData = useData((ct) => ct?.sc?.A11?.forms?.editChanges);
   const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
 
@@ -40022,7 +40022,7 @@ fontSize: 12,
 
   const [sttOption, setOption] = React.useState("Inativo");
   const currForm = useData((ct) => ct.all.toggles.forms);
-  const editData = useData((ct) => ct.sc.A11.forms.editChanges);
+  const editData = useData((ct) => ct?.sc?.A11?.forms?.editChanges);
   const isEditMode = currForm === "a11Edit";
   console.log({ sttOption });
 
