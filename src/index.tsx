@@ -14482,7 +14482,7 @@ right: 0,
           ],
 
           arrStyles: [
-            `{ maxWidth: 300, backgroundColor: "red", flexDirection: "row" }`
+            `{ minWidth: 300, maxWidth: 300, backgroundColor: "red", flexDirection: "row" }`
           ],
 
           children: [
@@ -14678,7 +14678,7 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ maxWidth: 300, backgroundColor: "red", flexDirection: "row" }`],
+            styles:[`{ minWidth: 300, maxWidth: 300, backgroundColor: "red", flexDirection: "row" }`],
 
             functions:[()=>{}],            childrenItems:[
         
