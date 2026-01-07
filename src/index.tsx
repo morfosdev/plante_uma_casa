@@ -14338,36 +14338,13 @@ right: 0,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{ width: "100%", justifyContent: "center", minHeight: 22 }`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.loader", "==", false ]]
  , trigger: 'on listen'
-}})],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.Loader pass={{
+}})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
             size: "small",
             color: `#315e2d`,
             args,
