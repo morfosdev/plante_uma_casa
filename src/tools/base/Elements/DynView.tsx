@@ -50,6 +50,8 @@ export const DynView = (props: Tprops) => {
   >([]);
 
   let varValue = useData((ct) => pathSel(ct, sttCondParts.path));
+  let testValue = useData((ct) => ct.all.toggles.loader);
+  console.log({testValue});
 
   // ---------- set Props
   const { elementsProperties, styles, functions } = props.pass;
