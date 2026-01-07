@@ -14344,7 +14344,23 @@ right: 0,
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => [ "all.toggles.loader", "==", true ]]
  , trigger: 'on listen'
-}})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Loader pass={{
             size: "small",
             color: `#315e2d`,
             args,
