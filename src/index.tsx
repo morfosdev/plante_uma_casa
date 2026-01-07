@@ -14614,7 +14614,7 @@ async (...args) =>
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
