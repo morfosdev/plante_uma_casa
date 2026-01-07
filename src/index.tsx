@@ -14895,7 +14895,221 @@ async (...args) =>
 
             styles:[`{ minWidth: 260, backgroundColor: "red" }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[
+        
+
+ (...args:any) => <Elements.Custom pass={{
+  arrItems: [() => {
+  const item = tools.findFlatItem(args);
+  console.log("CUSTOM ALERT", { args, item });
+
+  const objSteps = item?.readSteps ?? {};
+  const stepsArray = Object.values(objSteps) || [];
+  console.log({ stepsArray });
+
+  let count = 0;
+  console.log({ count });
+  stepsArray.forEach((step: any) => {
+    if (step === false) {
+      console.log({ step });
+      count += 1;
+    }
+  });
+
+  console.log({ count });
+  return (
+    <RN.View
+      style={{
+        flex: 1,
+        minWidth: 100,
+        justifyContent: "center",
+        alignItems: "start",
+      }}
+    >
+      {count > 0 && (
+        <RN.View style={{ width: 26, height: 20, position: "relative" }}>
+          <RN.Image
+            source={{
+              uri: "https://firebasestorage.googleapis.com/v0/b/projeto-plante-uma-casa.firebasestorage.app/o/assets%2Falert.png?alt=media&token=a5c7eb79-b69c-4e25-b668-cd2d19463cbe",
+            }}
+            style={{ width: 20, height: 20 }}
+          />
+          <RN.Text
+            style={{
+              width: 14,
+              height: 14,
+              backgroundColor: "red",
+              borderRadius: 30,
+              color: "white",
+              fontSize: 10,
+              textAlign: "center",
+              lineHeight: 14,
+              position: "absolute",
+              top: -5,
+              right: 0,
+            }}
+          >
+            {count}
+          </RN.Text>
+        </RN.View>
+      )}
+    </RN.View>
+  );
+}] 
+}}/>
+, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	maxWidth: 125,
+	minWidth: 110
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A13.currents.currId1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.B7.lists.list1`],
+          value: [[]]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A13.currents.currId1`],
+          value: [`$arg_ownerId`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A14.forms.iptsChanges.owner`],
+          value: [`$arg_owner`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A7.currents.allLot`],
+          value: [`$arg_item`]
+        }}), 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a13list");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ color: "#FFF" }`, `{
+	color: "#315e2d",
+	fontSize: 12,
+	fontWeight: 'bold', 
+}`
+          ],
+
+          children: [
+            `Etapas`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	maxWidth: 125,
+	minWidth: 110
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.currents.currId1`],
+          value: [``]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.currents.currId1`],
+          value: [`$arg_docId`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A10.currents.currId2`],
+          value: [`$arg_numberOfInstallments`]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`sc.A9.lists.list1`],
+          value: [[]]
+        }}), 
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("a9finManagement");
+        }
+        ]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            
+        `{ color: "#FFF" }`, `{
+	color: "#315e2d",
+	fontSize: 12,
+	fontWeight: 'bold', 
+}`
+          ],
+
+          children: [
+            `Gestão Financeira`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
