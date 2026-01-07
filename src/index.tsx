@@ -56330,7 +56330,7 @@ borderRadius: 10,
   const status = tools.getCtData("all.authUser.partnerStatus");
   console.log({ status });
 
-  if (status === "Inativo") {
+  if (status !== "Ativo") {
     throw new Error("Usuário inativo");
   }
 }, async (...args) =>
