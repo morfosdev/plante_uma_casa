@@ -140,7 +140,7 @@ export const DynView = (props: Tprops) => {
 
     console.log({ sttCondParts });
     const operatorFunc = operators[sttCondParts.operator];
-    console.log({ operatorFunc, varValue, compareVal: sttCondParts.compareVal });
+    console.log({path: sttCondParts.path, operatorFunc, varValue, compareVal: sttCondParts.compareVal });
     const condShow = operatorFunc?.(varValue, sttCondParts.compareVal);
 
     return (
@@ -148,4 +148,3 @@ export const DynView = (props: Tprops) => {
     );
   }
 };
-
