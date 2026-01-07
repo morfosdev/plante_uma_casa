@@ -14346,7 +14346,7 @@ right: 0,
  , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
             size: "small",
-            color: `$var_all.colors.primary`,
+            color: `all.colors.primary`,
             args,
         }}/>],
 
