@@ -14349,7 +14349,7 @@ right: 0,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.loader", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.loader", "==", false ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
