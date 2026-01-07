@@ -22751,7 +22751,8 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.loader`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`lots`],
@@ -22761,22 +22762,16 @@ async (...args) =>
         `condoId`, 
         `==`, `$var_sc.A7.forms.currData.condoData.docId`],
         }})],
- arrFuncs: [
- async (...args) =>
+ arrFuncs: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
-        }}), 
- async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`sc.A7.loader`],
-          value: [false]
-        }}), async (...args) =>
+        }})],
+ }}), async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.loader`],
           value: [false]
-        }})],
- }})]
+        }})]
  , trigger: 'on init'
 }})],
 
