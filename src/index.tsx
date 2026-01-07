@@ -14342,7 +14342,7 @@ right: 0,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "$var_all.toggles.loader", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.loader", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
             size: "small",
