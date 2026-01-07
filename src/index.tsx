@@ -83443,7 +83443,7 @@ tools.setData({
 'toggles': { 
 'box1': true, 
 'checkbox1': false, 
-'forms': " ", 'loader': true } 
+'forms': " ", 'loader': false } 
 , 
 'texts': { 
 'sizes': { 
