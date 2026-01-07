@@ -14347,8 +14347,8 @@ right: 0,
  arrFunctions: [() => [ "sc.A7.loader", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
-            size: "large",
-            color: `#fc2c03`,
+            size: "small",
+            color: `$var_all.colors.primary`,
             args,
         }}/>],
 
