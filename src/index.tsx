@@ -14702,10 +14702,14 @@ async (...args) =>
   return (
     <RN.View
       style={{
-        flex: 1,
-        minWidth: 50,
+        flexGrow: 1,
+        flexShrink: 1,
+        flexBasis: 80,
+
+        // flex: 1,
+        // minWidth: 50,
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "start",
       }}
     >
       {count > 0 && (
