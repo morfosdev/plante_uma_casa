@@ -14360,7 +14360,7 @@ right: 0,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A7.loader", "==", false ]]
+ arrFunctions: [() => [ "all.toggles.loader", "==", false ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
