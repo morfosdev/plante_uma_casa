@@ -22746,7 +22746,12 @@ fontWeight: '700',
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
+ arrFunctions: [
+async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.loader`],
+          value: [true]
+        }}), async (...args) =>
  functions.firebase.where({ args, pass:{
 
   arrRefStrings: [`lots`],
@@ -22761,9 +22766,14 @@ fontWeight: '700',
         functions.setVar({ args, pass:{
           keyPath: [`sc.a7.list`],
           value: [`$arg_callback`]
-        }}), async (...args) =>
+        }}), 
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.A7.loader`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.loader`],
           value: [false]
         }})],
  }})]
