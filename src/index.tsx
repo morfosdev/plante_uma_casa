@@ -14706,7 +14706,7 @@ async (...args) =>
     <RN.View
       style={{
         flex: 1,
-        minWidth: 100,
+        minWidth: 80,
         justifyContent: "center",
         alignItems: "start",
       }}
