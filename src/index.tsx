@@ -14333,14 +14333,7 @@ right: 0,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`{ width: "100%", padding: 20}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
