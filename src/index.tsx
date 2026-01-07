@@ -5614,6 +5614,11 @@ width: 15,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.loader`],
+          value: [true]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.A7.forms.currData.condoData`],
           value: [`$arg_item`]
         }}), 
@@ -22747,11 +22752,6 @@ fontWeight: '700',
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.loader`],
-          value: [true]
-        }}), 
 async (...args) =>
  functions.firebase.where({ args, pass:{
 
