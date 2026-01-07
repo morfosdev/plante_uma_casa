@@ -1,17 +1,17 @@
 
 // ---------- import Packs
-import JSON5 from "json5";
-import React, { useEffect, useState } from "react";
-import { Pressable, View } from "react-native";
+import JSON5 from 'json5';
+import React, { useEffect, useState } from 'react';
+import { Pressable, ScrollView, View } from 'react-native';
 
 // ---------- import Local Tools
-import { useData } from "../../..";
-import { getStlValues, getVarValue, mapElements, pathSel } from "../project";
+import { getStlValues, mapElements, getVarValue, pathSel } from '../project';
+import { useData } from '../../..';
 
 export const css =
-  "color: lightblue; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px";
+  'color: lightblue; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
 
-type Tconds = "==" | "!=" | ">" | "<" | "<=" | ">=";
+type Tconds = '==' | '!=' | '>' | '<' | '<=' | '>=';
 type Tprops = {
   pass: {
     elementsProperties: any;
@@ -23,10 +23,10 @@ type Tprops = {
 };
 
 export const processFunctions = async (arr: any[]) => {
-  const defaultVal = { trigger: "", arrFunctions: [] };
+  const defaultVal = { trigger: '', arrFunctions: [] };
 
   for (const fn of arr) {
-    if (typeof fn === "function") {
+    if (typeof fn === 'function') {
       const result = await fn();
       return result || defaultVal;
     }
@@ -39,19 +39,17 @@ export const processFunctions = async (arr: any[]) => {
 export const DynView = (props: Tprops) => {
   if (!props) return <></>;
 
-  const [sttTypeFunc, setTypeFunc] = useState("");
+  const [sttTypeFunc, setTypeFunc] = useState('');
   const [sttCondParts, setCondParts] = useState({
-    path: "",
-    operator: "==",
+    path: '',
+    operator: '==',
     compareVal: null,
   });
   const [sttPressFuncs, setPressFuncs] = useState<
     Array<(args: any) => Promise<void>>
   >([]);
 
-  let varValue = useData((ct) => pathSel(ct, sttCondParts.path));
-  let testValue = useData((ct) => ct.all.toggles.loader);
-  console.log({testValue});
+  let varValue = useData(ct => pathSel(ct, sttCondParts.path));
 
   // ---------- set Props
   const { elementsProperties, styles, functions } = props.pass;
@@ -63,18 +61,18 @@ export const DynView = (props: Tprops) => {
     setPressFuncs(arrFunctions);
 
     // ------- set Init Functions (Capsules)
-    if (trigger === "on init") {
+    if (trigger === 'on init') {
       for (const currFunc of arrFunctions) await currFunc(args);
     }
-    if (trigger === "on listen") {
+    if (trigger === 'on listen') {
       for (const currFunc of arrFunctions) {
         const res: [string, Tconds, any] = await currFunc(args);
         const path = res[0];
         const operator = res[1];
         const compareVal = res[2];
 
-        if (typeof path === "string") {
-          console.log("on listen - cond", path, operator, compareVal);
+        if (typeof path === 'string') {
+          console.log('VarPath', path);
           setCondParts({ path, operator, compareVal });
         }
       }
@@ -93,7 +91,7 @@ export const DynView = (props: Tprops) => {
   for (let strObj of elementsProperties) {
     if (!strObj) continue;
     if (!props) continue;
-    if (typeof strObj !== "string") continue;
+    if (typeof strObj !== 'string') continue;
 
     const parsedObject = JSON5.parse(strObj);
 
@@ -116,7 +114,7 @@ export const DynView = (props: Tprops) => {
   if (!sttTypeFunc)
     return <View {...allProps}>{mapElements(childrenItems, args)}</View>;
 
-  if (sttTypeFunc === "on press") {
+  if (sttTypeFunc === 'on press') {
     allProps.children = mapElements(childrenItems, args);
     allProps.onPress = async () => {
       for (const currFunc of sttPressFuncs) await currFunc(args);
@@ -125,22 +123,20 @@ export const DynView = (props: Tprops) => {
     return <Pressable {...allProps} />;
   }
 
-  if (sttTypeFunc === "on init")
+  if (sttTypeFunc === 'on init')
     return <View {...allProps}>{mapElements(childrenItems, args)}</View>;
 
-  if (sttTypeFunc === "on listen") {
+  if (sttTypeFunc === 'on listen') {
     const operators = {
-      "==": (a, b) => a == b,
-      "!=": (a, b) => a != b,
-      ">": (a, b) => a > b,
-      ">=": (a, b) => a >= b,
-      "<": (a, b) => a < b,
-      "<=": (a, b) => a <= b,
+      '==': (a, b) => a == b,
+      '!=': (a, b) => a != b,
+      '>': (a, b) => a > b,
+      '>=': (a, b) => a >= b,
+      '<': (a, b) => a < b,
+      '<=': (a, b) => a <= b,
     };
 
-    console.log({ sttCondParts });
     const operatorFunc = operators[sttCondParts.operator];
-    console.log({path: sttCondParts.path, operatorFunc, varValue, compareVal: sttCondParts.compareVal });
     const condShow = operatorFunc?.(varValue, sttCondParts.compareVal);
 
     return (
