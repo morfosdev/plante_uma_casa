@@ -14344,7 +14344,7 @@ right: 0,
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "sc.A7.loader", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.loader", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
             size: "small",
@@ -83444,7 +83444,8 @@ tools.setData({
 , 
 'toggles': { 
 'box1': true, 
-'checkbox1': false, 'forms': " " } 
+'checkbox1': false, 
+'forms': " ", 'loader': false } 
 , 
 'texts': { 
 'sizes': { 
