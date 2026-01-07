@@ -14482,11 +14482,7 @@ right: 0,
           ],
 
           arrStyles: [
-            `{
-	color: '#555555',
-	fontSize: 13,
-	width: 260
-}`
+            `{ minWidth: 260, backgroundColor: "red" }`
           ],
 
           children: [
@@ -14819,6 +14815,7 @@ async (...args) =>
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -14888,6 +14885,17 @@ async (...args) =>
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ minWidth: 260, backgroundColor: "red" }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
