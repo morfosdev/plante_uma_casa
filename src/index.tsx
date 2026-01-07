@@ -14482,13 +14482,14 @@ right: 0,
           ],
 
           arrStyles: [
-            `{
+            
+        `{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
 	color: '#555555',
 	fontSize: 13,
-}`
+}`, `{width: 260}`
           ],
 
           children: [
