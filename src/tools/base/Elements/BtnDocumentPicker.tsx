@@ -430,7 +430,7 @@ const styles = RN.StyleSheet.create({
     backgroundColor: "#fff",
   },
   title: { fontSize: 18, fontWeight: "700", textAlign: "center" },
-  subtitle: { fontSize: 14, textAlign: "center", color: "#4B5563" },
+  subtitle: { fontSize: 14, textAlign: "center", color: "#4B5563", width: 185 },
   btn: {
     backgroundColor: "#E8EDF5",
     justifyContent: "center",
