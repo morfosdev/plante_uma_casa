@@ -57157,6 +57157,26 @@ right: 0,
             styles: [],
             arrProps: [],
             arrItems: [
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "100%", justifyContent: "center", minHeight: 22, padding: 20 }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.loader", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
+            size: "small",
+            color: `#315e2d`,
+            args,
+        }}/>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -57166,7 +57186,11 @@ right: 0,
 	paddingVertical: 20,
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.loader", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -62338,10 +62362,15 @@ borderRadius: 10,
         `condoId`, 
         `==`, `$var_sc.B6.currents.currId1`],
         }})],
- arrFuncs: [async (...args) =>
+ arrFuncs: [
+ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`sc.b6.list`],
           value: [`$arg_callback`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.loader`],
+          value: [false]
         }})],
  }})]
  , trigger: 'on init'
