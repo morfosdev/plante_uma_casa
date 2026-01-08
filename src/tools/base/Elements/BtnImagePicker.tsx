@@ -84,6 +84,9 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [files]);
 
+  const condSc = currRoute === "a13list";
+  const condShowBtn = !condSc;
+
   const pickWeb = () => inputRef.current?.click();
 
   const handleWebFile = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -134,22 +137,23 @@ const BtnImgPicWeb = ({ pass }: Tprops) => {
     onChange?.(imgs);
   };
 
-  const condSc = currRoute === "a13list";
-
-  const condShowBtn = !condSc;
-
   return (
     <>
       <RN.View style={styles.container}>
         <ThumbGrid images={images} onRemove={removeAt} />
-        <RN.Text style={styles.title}>Adicionar Imagens</RN.Text>
-        <RN.Text style={styles.subtitle}>
-          Selecione ou tire fotos para mostrar o progresso
-        </RN.Text>
-        {condShowBtn && (
-          <RN.Pressable style={styles.btn} onPress={pickWeb}>
-            <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
-          </RN.Pressable>
+
+        {condShowBtn ? (
+          <>
+            <RN.Text style={styles.title}>Adicionar Imagens</RN.Text>
+            <RN.Text style={styles.subtitle}>
+              Selecione ou tire fotos para mostrar o progresso
+            </RN.Text>
+            <RN.Pressable style={styles.btn} onPress={pickWeb}>
+              <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
+            </RN.Pressable>
+          </>
+        ) : (
+          <RN.Text style={styles.subtitle}>Sem Imagens</RN.Text>
         )}
       </RN.View>
 
