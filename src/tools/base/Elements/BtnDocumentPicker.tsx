@@ -97,6 +97,9 @@ const BtnWeb = ({ pass }: Tprops) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [files]);
 
+  const condSc2 = currRoute === "a13list";
+  const condShowBtn = !condSc2;
+
   const pickWeb = () => inputRef.current?.click();
 
   const handleWebFile = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -178,28 +181,27 @@ const BtnWeb = ({ pass }: Tprops) => {
     onChange?.(uris);
   };
 
-  const condSc2 = currRoute === "a13list";
-
-  const condShowBtn = !condSc2;
-
   return (
     <>
       <RN.View style={styles.container}>
         <ThumbGrid documents={docUris} names={docNames} onRemove={removeAt} />
 
-        {docUris.length === 0 && (
+        {condShowBtn ? (
           <>
-            <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
-            <RN.Text style={styles.subtitle}>
-              Selecione arquivos PDF, Word ou TXT
-            </RN.Text>
+            {docUris.length === 0 && (
+              <>
+                <RN.Text style={styles.title}>Adicionar Documentos</RN.Text>
+                <RN.Text style={styles.subtitle}>
+                  Selecione arquivos PDF, Word ou TXT
+                </RN.Text>
+              </>
+            )}
+            <RN.Pressable style={styles.btn} onPress={pickWeb}>
+              <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
+            </RN.Pressable>
           </>
-        )}
-
-        {condShowBtn && (
-          <RN.Pressable style={styles.btn} onPress={pickWeb}>
-            <RN.Text style={styles.btnTxt}>Adicionar</RN.Text>
-          </RN.Pressable>
+        ) : (
+          <RN.Text style={styles.subtitle}>Sem Documentos</RN.Text>
         )}
       </RN.View>
 
