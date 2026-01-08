@@ -63073,6 +63073,26 @@ right: 0,
             styles: [],
             arrProps: [],
             arrItems: [
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ width: "100%", justifyContent: "center", minHeight: 22, padding: 20 }`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.loader", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Loader pass={{
+            size: "small",
+            color: `#315e2d`,
+            args,
+        }}/>],
+
+            args,
+          }}/>
+        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -63082,7 +63102,11 @@ right: 0,
 	paddingVertical: 20,
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Accordion pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.loader", "==", false ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[(...args:any) => <Elements.Accordion pass={{
  configs: [`{ 
 	data: "$var_sc.B7.statics.steps",
 	defaultOpenIdx: 0,
@@ -71770,7 +71794,8 @@ borderRadius: 10,
         functions.setVar({ args, pass:{
           keyPath: [`sc.B7.iptsChanges`],
           value: [`$arg_callback`]
-        }}), () => {
+        }}), 
+ () => {
   const arr = tools.getCtData("sc.B7.forms.iptsChanges");
 
   if (Array.isArray(arr) && arr.length > 0) {
@@ -71779,7 +71804,11 @@ borderRadius: 10,
       value: arr[0]
     });
   }
-}],
+}, async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.loader`],
+          value: [false]
+        }})],
  }})]
  , trigger: 'on init'
 }})],
