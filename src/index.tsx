@@ -51547,6 +51547,11 @@ height: 15,
  arrFunctions: [
 async (...args) =>
         functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.loader`],
+          value: [true]
+        }}), 
+async (...args) =>
+        functions.setVar({ args, pass:{
           keyPath: [`sc.B6.forms.iptsChanges.condoData`],
           value: [`$arg_item`]
         }}), 
