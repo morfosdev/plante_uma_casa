@@ -96,7 +96,7 @@ export const Project = ({ configData }: Tprops) => {
   return (
     <RN.View style={baseStl}>
       <SafeAreaView
-        style={{ width: "100%", height: "100%", overflow: "hidden" }}
+        style={{ width: "100%", height: "100%", overflow: "hidden", backgroundColor: "#122812" }}
       >
         {mapElements(screens)}
 
