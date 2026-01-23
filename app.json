@@ -1,10 +1,6 @@
 {
   "generated_by_flaxboll": "---",
-  "plugins": [
-    "expo-font",
-    "expo-router",
-    "expo-web-browser"
-  ],
+  "plugins": ["expo-font", "expo-router", "expo-web-browser"],
   "expo": {
     "name": "plante_uma_casa",
     "slug": "plante_uma_casa",
@@ -16,8 +12,8 @@
       "name": "Plante uma casa",
       "shortName": "Plante Casa",
       "description": "Plante uma casa",
-      "backgroundColor": "#ffffff",
-      "themeColor": "#ffffff",
+      "backgroundColor": "#295a29",
+      "themeColor": "#295a29",
       "display": "standalone",
       "orientation": "portrait",
       "startUrl": "/",
