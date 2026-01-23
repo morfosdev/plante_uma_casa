@@ -12,6 +12,24 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "plantecasa",
+    "web": {
+      "name": "Plante uma casa",
+      "shortName": "Plante Casa",
+      "description": "Plante uma casa",
+      "backgroundColor": "#ffffff",
+      "themeColor": "#ffffff",
+      "display": "standalone",
+      "orientation": "portrait",
+      "startUrl": "/",
+      "scope": "/",
+      "bundler": "webpack",
+      "build": {
+        "output": "dist"
+      },
+      "favicon": "./assets/images/favicon.png",
+      "icon": "./assets/images/icon.png",
+      "appleTouchIcon": "./assets/images/icon.png"
+    },
     "android": {
       "package": "com.plante_casa",
       "runtimeVersion": "1.0.0"
