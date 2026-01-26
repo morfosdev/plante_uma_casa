@@ -71930,7 +71930,7 @@ padding: 18,
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 16,
 fontWeight: '400',
 color: '#555555',
 paddingHorizontal: 15,
@@ -72006,16 +72006,16 @@ color: '#555555',
 	txtLabel: "Google",
 	btnStyle: {
 		backgroundColor: "#315E2D", 
-		borderRadius: 9, 
+		borderRadius: 10, 
 		alignItems: "center", 
 		justifyContent: "center",
-		paddingHorizontal: 27,
-		paddingVertical: 7
+		paddingHorizontal: 30,
+		paddingVertical: 10
 	},
 	txtStyle: {
 		color: "white",
 		fontWeight: "bold",
-		fontSize: 14
+		fontSize: 16
 	}
 }`], arrFuncs: [(user, args) => {
   console.log("Flax Custom Auth", { user, args });
