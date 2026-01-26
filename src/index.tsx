@@ -522,7 +522,8 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -622,7 +623,8 @@ paddingHorizontal: 16,
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -721,7 +723,8 @@ paddingHorizontal: 16,
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -2073,7 +2076,8 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -2192,7 +2196,8 @@ paddingHorizontal: 16,
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -2292,7 +2297,8 @@ paddingHorizontal: 16,
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -2391,7 +2397,8 @@ paddingHorizontal: 16,
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -41868,7 +41875,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -42482,7 +42490,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -43096,7 +43105,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -43710,7 +43720,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -44324,7 +44335,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -44938,7 +44950,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -45551,7 +45564,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -63368,7 +63382,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -63921,7 +63936,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -64474,7 +64490,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -65027,7 +65044,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -65580,7 +65598,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -66133,7 +66152,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -66685,7 +66705,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -76317,7 +76338,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -76831,7 +76853,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -77345,7 +77368,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -77859,7 +77883,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -78373,7 +78398,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -78887,7 +78913,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
@@ -79400,7 +79427,8 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`{ 
-paddingHorizontal: 16, 
+	paddingHorizontal: 16, 
+	paddingBottom: 16
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
