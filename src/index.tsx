@@ -504,7 +504,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -604,7 +604,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -703,7 +703,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2055,7 +2055,7 @@ justifyContent: 'center',
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2174,7 +2174,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2274,7 +2274,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2373,7 +2373,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -41646,7 +41646,7 @@ right: 0,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -41702,7 +41702,7 @@ right: 0,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -42260,7 +42260,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -42316,7 +42316,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -42874,7 +42874,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -42930,7 +42930,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -43488,7 +43488,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -43544,7 +43544,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -44102,7 +44102,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -44158,7 +44158,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -44716,7 +44716,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -44772,7 +44772,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -45329,7 +45329,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -45385,7 +45385,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -63146,7 +63146,7 @@ right: 0,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -63202,7 +63202,7 @@ right: 0,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -63699,7 +63699,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -63755,7 +63755,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -64252,7 +64252,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -64308,7 +64308,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -64805,7 +64805,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -64861,7 +64861,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -65358,7 +65358,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -65414,7 +65414,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -65911,7 +65911,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -65967,7 +65967,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -66463,7 +66463,7 @@ top: 2,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -66519,7 +66519,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -73361,7 +73361,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -73489,7 +73489,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -73632,7 +73632,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -73775,7 +73775,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -73895,7 +73895,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75137,7 +75137,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75265,7 +75265,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75408,7 +75408,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75551,7 +75551,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75671,7 +75671,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75875,24 +75875,6 @@ alignItems: 'center',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 20,
-	height: 20,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
 	width: "100%",
 	backgroundColor: "#FFF",
 	paddingVertical: 8,
@@ -75954,7 +75936,7 @@ alignItems: 'center',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 14,
+fontSize: 16,
 fontWeight: '700',
 }`
           ],
@@ -75973,7 +75955,7 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#61758A',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '400',
 }`
           ],
@@ -75989,6 +75971,24 @@ fontWeight: '400',
             args,
           }}/>
         ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 20,
+	height: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+ }`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -76018,7 +76018,7 @@ fontWeight: '400',
 
           arrStyles: [
             `{
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: 'bold',
 	color: '#121417',
 	paddingHorizontal: 15,
@@ -76095,7 +76095,7 @@ paddingHorizontal: 10,
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -76151,7 +76151,7 @@ paddingHorizontal: 10,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -76530,7 +76530,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 13,
+	fontSize: 15,
 	fontWeight: '400',
 }`
           ],
@@ -76609,7 +76609,7 @@ async (...args) =>
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -76665,7 +76665,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -77044,7 +77044,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 13,
+	fontSize: 15,
 	fontWeight: '400',
 }`
           ],
@@ -77123,7 +77123,7 @@ async (...args) =>
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -77179,7 +77179,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -77558,7 +77558,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 13,
+	fontSize: 15,
 	fontWeight: '400',
 }`
           ],
@@ -77637,7 +77637,7 @@ async (...args) =>
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -77693,7 +77693,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -78072,7 +78072,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 13,
+	fontSize: 15,
 	fontWeight: '400',
 }`
           ],
@@ -78151,7 +78151,7 @@ async (...args) =>
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -78207,7 +78207,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -78586,7 +78586,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 13,
+	fontSize: 15,
 	fontWeight: '400',
 }`
           ],
@@ -78665,7 +78665,7 @@ async (...args) =>
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -78721,7 +78721,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -79100,7 +79100,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 13,
+	fontSize: 15,
 	fontWeight: '400',
 }`
           ],
@@ -79178,7 +79178,7 @@ async (...args) =>
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: 'space-between',
-	paddingVertical: 3,
+	paddingVertical: 4,
 	paddingHorizontal: 4,
 }`],
 
@@ -79234,7 +79234,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 14,
+	fontSize: 16,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -79613,7 +79613,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 13,
+	fontSize: 15,
 	fontWeight: '400',
 }`
           ],
@@ -80960,7 +80960,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -81088,7 +81088,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -81231,7 +81231,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -81374,7 +81374,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
@@ -81494,7 +81494,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 15,
+fontSize: 16,
 fontWeight: '400',
 color: '#555',
 }`
