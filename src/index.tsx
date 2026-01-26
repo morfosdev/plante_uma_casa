@@ -504,7 +504,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -604,7 +604,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -703,7 +703,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2055,7 +2055,7 @@ justifyContent: 'center',
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2174,7 +2174,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2274,7 +2274,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -2373,7 +2373,7 @@ paddingHorizontal: 16,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -41702,7 +41702,7 @@ right: 0,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -42316,7 +42316,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -42930,7 +42930,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -43544,7 +43544,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -44158,7 +44158,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -44772,7 +44772,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -45385,7 +45385,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -63202,7 +63202,7 @@ right: 0,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -63755,7 +63755,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -64308,7 +64308,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -64861,7 +64861,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -65414,7 +65414,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -65967,7 +65967,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -66519,7 +66519,7 @@ top: 2,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -71909,7 +71909,7 @@ padding: 18,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 fontWeight: '400',
 color: '#555555',
 paddingHorizontal: 15,
@@ -71994,7 +71994,7 @@ color: '#555555',
 	txtStyle: {
 		color: "white",
 		fontWeight: "bold",
-		fontSize: 12
+		fontSize: 14
 	}
 }`], arrFuncs: [(user, args) => {
   console.log("Flax Custom Auth", { user, args });
@@ -75952,7 +75952,7 @@ alignItems: 'center',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
 }`
           ],
@@ -75971,7 +75971,7 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#61758A',
-fontSize: 11,
+fontSize: 12,
 fontWeight: '400',
 }`
           ],
@@ -76016,10 +76016,10 @@ fontWeight: '400',
 
           arrStyles: [
             `{
-fontSize: 12,
-fontWeight: 'bold',
-color: '#121417',
-paddingHorizontal: 15,
+	fontSize: 14,
+	fontWeight: 'bold',
+	color: '#121417',
+	paddingHorizontal: 15,
 }`
           ],
 
@@ -76149,7 +76149,7 @@ paddingHorizontal: 10,
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -76528,7 +76528,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 11,
+	fontSize: 13,
 	fontWeight: '400',
 }`
           ],
@@ -76663,7 +76663,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -77177,7 +77177,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -77691,7 +77691,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -78205,7 +78205,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -78719,7 +78719,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
@@ -79232,7 +79232,7 @@ async (...args) =>
           arrStyles: [
             `{ 
 	paddingVertical: 10,
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '700',
 	color: '#121417',
 }`
