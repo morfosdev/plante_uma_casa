@@ -73233,7 +73233,7 @@ color: '#555555',
 		flexDirection: "row",
 		width: "100%",
 		height: "100%",
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(0,0,0,0.6)",
 		position: "absolute",
 		top: 0,
 		left: 0,
@@ -73251,7 +73251,7 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{
-	width: "60%",
+	width: "70%",
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -73359,7 +73359,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -73487,7 +73487,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -73630,7 +73630,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -73773,7 +73773,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -73893,7 +73893,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75009,7 +75009,7 @@ color: '#555555',
 		flexDirection: "row",
 		width: "100%",
 		height: "100%",
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(0,0,0,0.6)",
 		position: "absolute",
 		top: 0,
 		left: 0,
@@ -75027,7 +75027,7 @@ color: '#555555',
             elementsProperties:['{}'],
 
             styles:[`{
-	width: "60%",
+	width: "70%",
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -75135,7 +75135,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75263,7 +75263,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75406,7 +75406,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75549,7 +75549,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -75669,7 +75669,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -80832,7 +80832,7 @@ fontWeight: '700',
 		flexDirection: "row",
 		width: "100%",
 		height: "100%",
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(0,0,0,0.6)",
 		position: "absolute",
 		top: 0,
 		left: 0,
@@ -80850,7 +80850,7 @@ fontWeight: '700',
             elementsProperties:['{}'],
 
             styles:[`{
-	width: "60%",
+	width: "70%",
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -80958,7 +80958,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -81086,7 +81086,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -81229,7 +81229,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -81372,7 +81372,7 @@ async (...args) =>
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
@@ -81492,7 +81492,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 15,
 fontWeight: '400',
 color: '#555',
 }`
