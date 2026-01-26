@@ -72811,7 +72811,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 14,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -72918,7 +72918,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 14,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -72965,7 +72965,7 @@ color: '#555555',
             `{
 		color: 'red',
 		marginBottom: 10,
-	fontSize: 11,
+	fontSize: 13,
 }`
           ],
 
@@ -74591,7 +74591,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 14,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -74698,7 +74698,7 @@ marginRight: 5
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 14,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -74745,7 +74745,7 @@ color: '#555555',
             `{
 		color: 'red',
 		marginBottom: 10,
-	fontSize: 11,
+	fontSize: 13,
 }`
           ],
 
