@@ -72165,7 +72165,7 @@ color: '#CCCCCC',
           ],
 
           children: [
-            `Ver. app 0.1.0`
+            `Ver. app 0.1.1`
           ],
 
           args,
