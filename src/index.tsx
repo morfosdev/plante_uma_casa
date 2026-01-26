@@ -71949,7 +71949,7 @@ textAlign: 'center',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 fontWeight: '400',
 color: '#555555',
 }`
