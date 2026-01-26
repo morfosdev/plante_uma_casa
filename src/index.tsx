@@ -77042,7 +77042,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 11,
+	fontSize: 13,
 	fontWeight: '400',
 }`
           ],
@@ -77556,7 +77556,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 11,
+	fontSize: 13,
 	fontWeight: '400',
 }`
           ],
@@ -78070,7 +78070,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 11,
+	fontSize: 13,
 	fontWeight: '400',
 }`
           ],
@@ -78584,7 +78584,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 11,
+	fontSize: 13,
 	fontWeight: '400',
 }`
           ],
@@ -79098,7 +79098,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 11,
+	fontSize: 13,
 	fontWeight: '400',
 }`
           ],
@@ -79611,7 +79611,7 @@ async (...args) =>
           arrStyles: [
             `{
 	color: '#555555',
-	fontSize: 11,
+	fontSize: 13,
 	fontWeight: '400',
 }`
           ],
