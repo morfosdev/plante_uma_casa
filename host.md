@@ -16,6 +16,8 @@ npx eas-cli update --branch preview
 
 <!-- "Buildar" PWA -->
 
-npx expo export:web
+<!-- npx expo export:web -->
+
+npx expo export --platform web
 
 # projeto-plante-uma-casa
