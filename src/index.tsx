@@ -76089,7 +76089,7 @@ paddingHorizontal: 10,
 			width: "100%",
 			borderRadius: 10,
 			marginBottom: 14,
-			minHeight: 48,
+			minHeight: 46,
 	}
 }`], arrElements: [
  
