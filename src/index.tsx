@@ -72420,7 +72420,8 @@ color: '#555555',
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Ex: 00.000.000-00',
+	placeholder: 'Ex: 00.000.000-00',
+	keyboardType: "numeric"
 }`],
 
           stylesArray: [`{ 
@@ -72536,7 +72537,8 @@ color: '#555555',
 
         }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [`{
-placeholder: 'Ex: (00) 00000-0000',
+	placeholder: 'Ex: (00) 00000-0000',
+	keyboardType: "numeric"
 }`],
 
           stylesArray: [`{ 
