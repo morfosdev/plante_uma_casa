@@ -72277,7 +72277,7 @@ height: 5,
           arrStyles: [
             `{
 color: '#555555',
-fontSize: 11,
+fontSize: 13,
 fontWeight: '500',
 }`
           ],
@@ -72329,7 +72329,7 @@ fontWeight: '500',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -72345,11 +72345,11 @@ color: '#555555',
           propsArray: [{}],
 
           stylesArray: [`{ 
-	paddingHorizontal: 4,
-	paddingVertical: 1,
+	paddingHorizontal: 6,
+	paddingVertical: 3,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
-	fontSize: 11,
+	fontSize: 13,
 }`],
 
           path: [`sc.C2.forms.iptsChanges.userName`],
@@ -72406,7 +72406,7 @@ color: '#555555',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -72424,11 +72424,11 @@ placeholder: 'Ex: 00.000.000-00',
 }`],
 
           stylesArray: [`{ 
-	paddingHorizontal: 4,
-	paddingVertical: 1,
+	paddingHorizontal: 6,
+	paddingVertical: 3,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
-	fontSize: 11,
+	fontSize: 13,
 }`],
 
           path: [`sc.C2.forms.iptsChanges.userRg`],
@@ -72522,7 +72522,7 @@ placeholder: 'Ex: 00.000.000-00',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -72540,11 +72540,11 @@ placeholder: 'Ex: (00) 00000-0000',
 }`],
 
           stylesArray: [`{ 
-	paddingHorizontal: 4,
-	paddingVertical: 1,
+	paddingHorizontal: 6,
+	paddingVertical: 3,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
-	fontSize: 11,
+	fontSize: 13,
 }`],
 
           path: [`sc.C2.forms.iptsChanges.userPhone`],
@@ -72655,7 +72655,7 @@ placeholder: 'Ex: (00) 00000-0000',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -72673,11 +72673,11 @@ placeholder: 'Pesquisar endereço',
 }`],
 
           stylesArray: [`{ 
-	paddingHorizontal: 4,
-	paddingVertical: 1,
+	paddingHorizontal: 6,
+	paddingVertical: 3,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
-	fontSize: 11,
+	fontSize: 13,
 }`],
 
           path: [`sc.C2.forms.iptsChanges.userAddress`],
@@ -73162,7 +73162,7 @@ color: '#555555',
           arrStyles: [
             `{ 
 	color: "#FFF",
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '500',
 }`
           ],
@@ -74200,7 +74200,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -74216,11 +74216,11 @@ color: '#555555',
           propsArray: [{}],
 
           stylesArray: [`{ 
-	paddingHorizontal: 4,
-	paddingVertical: 1,
+	paddingHorizontal: 6,
+	paddingVertical: 3,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
-	fontSize: 11,
+	fontSize: 13,
 }`],
 
           path: [`sc.C2.forms.editChanges.userName`],
@@ -74277,7 +74277,7 @@ color: '#555555',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -74295,11 +74295,11 @@ placeholder: 'Ex: 00.000.000-00',
 }`],
 
           stylesArray: [`{ 
-	paddingHorizontal: 4,
-	paddingVertical: 1,
+	paddingHorizontal: 6,
+	paddingVertical: 3,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
-	fontSize: 11,
+	fontSize: 13,
 }`],
 
           path: [`sc.C2.forms.editChanges.userRg`],
@@ -74356,7 +74356,7 @@ placeholder: 'Ex: 00.000.000-00',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -74374,11 +74374,11 @@ placeholder: 'Ex: (00) 00000-0000',
 }`],
 
           stylesArray: [`{ 
-	paddingHorizontal: 4,
-	paddingVertical: 1,
+	paddingHorizontal: 6,
+	paddingVertical: 3,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
-	fontSize: 11,
+	fontSize: 13,
 }`],
 
           path: [`sc.C2.forms.editChanges.userPhone`],
@@ -74435,7 +74435,7 @@ placeholder: 'Ex: (00) 00000-0000',
 
           arrStyles: [
             `{
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 color: '#555555',
 }`
@@ -74453,11 +74453,11 @@ placeholder: 'Pesquisar endereço',
 }`],
 
           stylesArray: [`{ 
-	paddingHorizontal: 4,
-	paddingVertical: 1,
+	paddingHorizontal: 6,
+	paddingVertical: 3,
 	borderBottomColor: "#CCCCCC",
 	borderBottomWidth: 1,
-	fontSize: 11,
+	fontSize: 13,
 }`],
 
           path: [`sc.C2.forms.editChanges.userAddress`],
@@ -74938,7 +74938,7 @@ color: '#555555',
           arrStyles: [
             `{ 
 	color: "#FFF",
-	fontSize: 12,
+	fontSize: 14,
 	fontWeight: '500',
 }`
           ],
