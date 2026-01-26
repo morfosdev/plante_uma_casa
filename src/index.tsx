@@ -6032,7 +6032,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -6087,7 +6087,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -6142,7 +6142,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -7173,7 +7173,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -7228,7 +7228,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -7283,7 +7283,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -8236,7 +8236,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -8291,7 +8291,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -8346,7 +8346,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -8401,7 +8401,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -8456,7 +8456,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -8564,7 +8564,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -8672,7 +8672,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -8760,7 +8760,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -9781,7 +9781,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -9836,7 +9836,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -9896,7 +9896,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -9951,7 +9951,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -10006,7 +10006,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -10061,7 +10061,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -10116,7 +10116,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -10204,7 +10204,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -10890,7 +10890,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -10945,7 +10945,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -11053,7 +11053,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -12040,7 +12040,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -12095,7 +12095,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -12150,7 +12150,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -12907,7 +12907,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -12962,7 +12962,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -13017,7 +13017,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -15299,7 +15299,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -15354,7 +15354,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -15409,7 +15409,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -16440,7 +16440,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -16495,7 +16495,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -16550,7 +16550,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -17503,7 +17503,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -17558,7 +17558,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -17613,7 +17613,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -17668,7 +17668,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -17723,7 +17723,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -17831,7 +17831,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -17939,7 +17939,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -18027,7 +18027,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -19048,7 +19048,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -19103,7 +19103,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -19163,7 +19163,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -19218,7 +19218,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -19273,7 +19273,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -19328,7 +19328,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -19383,7 +19383,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -19471,7 +19471,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -20157,7 +20157,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -20212,7 +20212,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -20320,7 +20320,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -21307,7 +21307,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -21362,7 +21362,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -21417,7 +21417,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -22174,7 +22174,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -22229,7 +22229,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -22284,7 +22284,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -24405,7 +24405,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -24460,7 +24460,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -24515,7 +24515,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -25546,7 +25546,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -25601,7 +25601,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -25656,7 +25656,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -26609,7 +26609,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -26664,7 +26664,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -26719,7 +26719,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -26774,7 +26774,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -26829,7 +26829,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -26937,7 +26937,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -27045,7 +27045,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -27133,7 +27133,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -28154,7 +28154,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -28209,7 +28209,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -28269,7 +28269,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -28324,7 +28324,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -28379,7 +28379,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -28434,7 +28434,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -28489,7 +28489,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -28577,7 +28577,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -29263,7 +29263,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -29318,7 +29318,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -29426,7 +29426,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -30413,7 +30413,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -30468,7 +30468,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -30523,7 +30523,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -31280,7 +31280,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -31335,7 +31335,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -31390,7 +31390,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -33377,7 +33377,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -33432,7 +33432,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -33487,7 +33487,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -34518,7 +34518,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -34573,7 +34573,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -34628,7 +34628,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -35581,7 +35581,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -35636,7 +35636,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -35691,7 +35691,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -35746,7 +35746,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -35801,7 +35801,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -35909,7 +35909,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -36017,7 +36017,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -36105,7 +36105,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -37126,7 +37126,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -37181,7 +37181,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -37241,7 +37241,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -37296,7 +37296,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -37351,7 +37351,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -37406,7 +37406,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -37461,7 +37461,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -37549,7 +37549,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -38235,7 +38235,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -38290,7 +38290,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -38398,7 +38398,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -39385,7 +39385,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -39440,7 +39440,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -39495,7 +39495,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -40252,7 +40252,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -40307,7 +40307,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -40362,7 +40362,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -47164,7 +47164,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -47215,7 +47215,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -47266,7 +47266,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -47317,7 +47317,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -47368,7 +47368,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -48516,7 +48516,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -48537,9 +48537,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -48569,7 +48569,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -48590,9 +48590,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -48622,7 +48622,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -48675,7 +48675,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -48728,7 +48728,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -49367,7 +49367,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -49388,9 +49388,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -49420,7 +49420,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -49441,9 +49441,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -49473,7 +49473,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -49526,7 +49526,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -49579,7 +49579,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -50268,7 +50268,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -50289,9 +50289,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -50321,7 +50321,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -50342,9 +50342,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -50374,7 +50374,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -50428,7 +50428,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -50482,7 +50482,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -52864,7 +52864,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -52915,7 +52915,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -52966,7 +52966,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -53017,7 +53017,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -53068,7 +53068,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -54216,7 +54216,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -54237,9 +54237,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -54269,7 +54269,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -54290,9 +54290,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -54322,7 +54322,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -54375,7 +54375,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -54428,7 +54428,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -55067,7 +55067,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -55088,9 +55088,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -55120,7 +55120,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -55141,9 +55141,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -55173,7 +55173,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -55226,7 +55226,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -55279,7 +55279,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -55968,7 +55968,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -55989,9 +55989,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -56021,7 +56021,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -56042,9 +56042,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -56074,7 +56074,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -56128,7 +56128,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -56182,7 +56182,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -58823,7 +58823,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -58874,7 +58874,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -58925,7 +58925,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -58976,7 +58976,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -59027,7 +59027,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -60175,7 +60175,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -60196,9 +60196,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -60228,7 +60228,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -60249,9 +60249,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -60281,7 +60281,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -60334,7 +60334,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -60387,7 +60387,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -61026,7 +61026,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -61047,9 +61047,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -61079,7 +61079,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -61100,9 +61100,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -61132,7 +61132,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -61185,7 +61185,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -61238,7 +61238,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -61927,7 +61927,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -61948,9 +61948,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -61980,7 +61980,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -62001,9 +62001,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -62033,7 +62033,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -62087,7 +62087,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -62141,7 +62141,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -68237,7 +68237,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -68288,7 +68288,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -68339,7 +68339,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -68390,7 +68390,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -68441,7 +68441,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -69589,7 +69589,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -69610,9 +69610,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -69642,7 +69642,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -69663,9 +69663,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -69695,7 +69695,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -69748,7 +69748,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -69801,7 +69801,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -70440,7 +70440,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -70461,9 +70461,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -70493,7 +70493,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -70514,9 +70514,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -70546,7 +70546,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -70599,7 +70599,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -70652,7 +70652,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -71341,7 +71341,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -71362,9 +71362,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -71394,7 +71394,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -71415,9 +71415,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -71447,7 +71447,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -71501,7 +71501,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -71555,7 +71555,7 @@ fontSize: 12,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -79889,7 +79889,8 @@ paddingHorizontal: 10,
 
           arrStyles: [
             `{
-color: 'white',
+	color: 'white',
+	fontSize: 14
 }`
           ],
 
@@ -79981,7 +79982,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -80002,9 +80003,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -80034,7 +80035,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -80055,9 +80056,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -80087,7 +80088,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -80139,7 +80140,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -80191,7 +80192,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -80497,7 +80498,7 @@ fontWeight: '700',
       padding: 8,
     },
     txt: {
-      fontSize: 12,
+      fontSize: 14,
       color: "#666",
     },
   });
@@ -82627,7 +82628,7 @@ width: '100%',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -82679,7 +82680,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
@@ -82700,9 +82701,9 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#121417',
-fontSize: 12,
+fontSize: 14,
 fontWeight: '700',
-padding: 4,
+padding: 6,
 }`
           ],
 
@@ -82732,7 +82733,7 @@ padding: 4,
 
           arrStyles: [
             `{
-fontSize: 12,
+fontSize: 14,
 color: '#555555',
 fontWeight: '700',
 }`
