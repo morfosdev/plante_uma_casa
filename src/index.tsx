@@ -81752,7 +81752,7 @@ padding: 12,
           arrStyles: [
             `{
 color: '#555555',
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 }`
           ],
@@ -81771,7 +81771,7 @@ fontWeight: '700',
 
           arrStyles: [
             `{
-fontSize: 14,
+fontSize: 16,
 fontWeight: '500',
 }`
           ],
@@ -81809,7 +81809,7 @@ fontWeight: '500',
           arrStyles: [
             `{
 color: '#555555',
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 }`
           ],
@@ -81968,9 +81968,9 @@ alignItems: 'center',
 backgroundColor: '#CFECCD',
 alignItems: 'center',
 justifyContent: 'center',
-width: 30,
-height: 30,
-borderRadius: 15,
+width: 34,
+height: 34,
+borderRadius: 30,
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
@@ -82046,7 +82046,7 @@ justifyContent: 'space-between',
           arrStyles: [
             `{
 color: '#555555',
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 }`
           ],
@@ -82067,7 +82067,7 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#555555',
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 }`
           ],
@@ -82086,7 +82086,7 @@ fontWeight: '700',
           arrStyles: [
             `{
 color: '#CCCCCC',
-fontSize: 11,
+fontSize: 13,
 fontWeight: '700',
 }`
           ],
@@ -82248,7 +82248,7 @@ backgroundColor: '#315E2D',
 alignItems: 'center',
 justifyContent: 'center',
 alignSelf: 'center',
-paddingVertical: 5,
+paddingVertical: 10,
 paddingHorizontal: 40,
 borderRadius: 8,
 width: '100%',
@@ -82299,7 +82299,7 @@ console.log({ value });
           arrStyles: [
             `{
 color: 'white',
-fontSize: 11,
+fontSize: 14,
 fontWeight: '400',
 }`
           ],
