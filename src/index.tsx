@@ -76068,7 +76068,7 @@ paddingHorizontal: 10,
 			width: "100%",
 			borderRadius: 10,
 			marginBottom: 14,
-			minHeight: 35,
+			minHeight: 50,
 	}
 }`], arrElements: [
  
