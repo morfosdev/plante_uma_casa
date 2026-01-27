@@ -75875,8 +75875,7 @@ alignItems: 'center',
 
             args,
           }}/>
-        , 
-        (...args:any) => <Elements.ScrollBar pass={{
+        , (...args:any) => <Elements.ScrollBar pass={{
             styles: [],
             arrProps: [],
             arrItems: [
@@ -79724,40 +79723,7 @@ async (...args) =>
           }}/>
         ],
             args,
-        }}/>, 
-
- (...args:any) => <Elements.Custom pass={{
-  arrItems: [import { initializeApp } from "firebase/app";
-import { getMessaging, getToken } from "firebase/messaging";
-
-const firebaseConfig = { 
-  apiKey: "AIzaSyA_D6qWCRodaRgthOGWyLjsbqloqj-IDpA",
-  authDomain: "projeto-plante-uma-casa.firebaseapp.com",
-  projectId: "projeto-plante-uma-casa",
-  storageBucket: "projeto-plante-uma-casa.firebasestorage.app",
-  messagingSenderId: "1099098264007",
-  appId: "1:1099098264007:web:5c809faec264a9400389e2",
-  measurementId: "G-GZPSPJQ1WL"
- };
-const app = initializeApp(firebaseConfig);
-const messaging = getMessaging(app);
-
-export async function enablePush() {
-  const perm = await Notification.requestPermission();
-  if (perm !== "granted") return { ok: false, reason: "denied" };
-
-  const reg = await navigator.serviceWorker.register("/firebase-messaging-sw.js");
-
-  const token = await getToken(messaging, {
-    vapidKey: "SUA_VAPID_KEY",
-    serviceWorkerRegistration: reg,
-  });
-
-  // TODO: enviar token pro seu backend / firestore
-  return { ok: true, token };
-}] 
-}}/>
-],
+        }}/>],
 
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
