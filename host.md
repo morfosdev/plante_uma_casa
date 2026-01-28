@@ -1,11 +1,8 @@
-# painel-plante-uma-casa
+# projeto-plante-uma-casa [dev tests]
 
-# app-plante-uma-casa
+# painel-plante-uma-casa [ adm ]
 
-<!-- comands (Host) -->
-
-npx expo export --platform web
-npx firebase-tools deploy --only hosting
+# app-plante-uma-casa [ app ]
 
 a0login
 c1login
@@ -14,10 +11,17 @@ c1login
 
 npx eas-cli update --branch preview
 
-<!-- "Buildar" PWA -->
+<!-- CHECKLIST BUILD WEB -->
+<!-- 1 - alterar index.tsx initial route '-----' e texto Ver. app 0.1.1 -->
+<!-- 2 - alterar fireInit remover 'secondary' -->
+<!-- 3 - conferir firebaseconfig qual site esta mandando -->
+<!-- 4 - buildar pra web -->
+<!-- 5 - deploy firebase host -->
 
-<!-- npx expo export:web -->
+<!-- "Buildar" PWA -->
 
 npx expo export --platform web
 
-# projeto-plante-uma-casa
+<!-- Deploy Firebase Host -->
+
+npx firebase-tools deploy --only hosting
