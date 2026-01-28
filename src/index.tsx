@@ -83626,9 +83626,9 @@ tools.setData({
 , 'contents': {   } 
  } 
 , 'authUser': {
-userName: "João Pedro",
-userEmail: "joaopedro@email.com",
-userImage: "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+userName: "",
+userEmail: "",
+userImage: "",
 } } 
 , 'sc': { 
 'A0': { 
@@ -83799,11 +83799,7 @@ userImage: "https://cdn-icons-png.flaticon.com/512/219/219983.png",
           // console.log(initObj);
 
           const arrInitFuncs = [
-            async (...args) =>
-  functions.firebase.fireInit({ args, pass:{
-   fbConfig: `all.firebaseConfig`,
-
-        }})
+            ()=>{}
           ];
 
           export const useRoutes = create(() => ({ currRoute }));
