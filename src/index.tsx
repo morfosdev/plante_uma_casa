@@ -73846,12 +73846,12 @@ width: '100%',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c1login");
-        }
-        ]
+ arrFunctions: [async () => {
+  const { getAuth, signOut } = await import("firebase/auth");
+
+  const auth = getAuth();
+  await signOut(auth);
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -75622,12 +75622,12 @@ width: '100%',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c1login");
-        }
-        ]
+ arrFunctions: [async () => {
+  const { getAuth, signOut } = await import("firebase/auth");
+
+  const auth = getAuth();
+  await signOut(auth);
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -81452,12 +81452,12 @@ width: '100%',
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("c1login");
-        }
-        ]
+ arrFunctions: [async () => {
+  const { getAuth, signOut } = await import("firebase/auth");
+
+  const auth = getAuth();
+  await signOut(auth);
+}]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
