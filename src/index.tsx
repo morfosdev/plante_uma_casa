@@ -72017,15 +72017,17 @@ color: '#555555',
 		fontWeight: "bold",
 		fontSize: 16
 	}
-}`], arrFuncs: [(user, args) => {
+}`], arrFuncs: [async (user, args) => {
+  const { onAuthStateChanged } = await import("firebase/auth");
+
   console.log("Flax Custom Auth", { user, args });
 
-if(user?.status === "error"){ 
-	tools.setData({path: "sc.C1.forms.error", value: true});	
-tools.setData({path: "sc.C1.forms.message", value: user.message});
+  if (user?.status === "error") {
+    tools.setData({ path: "sc.C1.forms.error", value: true });
+    tools.setData({ path: "sc.C1.forms.message", value: user.message });
 
-	return;
-}
+    return;
+  }
 
   const path = "all.authUser";
   const value = { ...user };
@@ -72046,15 +72048,26 @@ tools.setData({path: "sc.C1.forms.message", value: user.message});
 
   console.log({ fullRegister });
 
-	tools.setData({path: "sc.C1.forms.error", value: false});	
-tools.setData({path: "sc.C1.forms.message",value: ""});
+  tools.setData({ path: "sc.C1.forms.error", value: false });
+  tools.setData({ path: "sc.C1.forms.message", value: "" });
 
-  if (fullRegister) {
-    tools.goTo("c5steps");
-  }
-  if (!fullRegister) {
-    tools.goTo("c2register");
-  }
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // sessão ativa
+      if (fullRegister) {
+        tools.goTo("c5steps");
+      }
+      if (!fullRegister) {
+        tools.goTo("c2register");
+      }
+    } else {
+      // não logado
+      console.log("não logado");
+      if (!fullRegister) {
+        tools.goTo("c1login");
+      }
+    }
+  });
 }], args 
  }}/>, 
         
