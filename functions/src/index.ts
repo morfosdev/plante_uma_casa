@@ -6,7 +6,7 @@ if (!admin.apps.length) {
 }
 
 // Re-exporta os módulos de cada “feature”
-export * from "./sendEmail"; // <- sua pasta com a função de e-mail
+export * from "./setWebPush";
 // export * from "./outraFeature";
 // export * from "./webhooks";
 // ...
