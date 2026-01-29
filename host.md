@@ -15,8 +15,9 @@ npx eas-cli update --branch preview
 <!-- 1 - alterar index.tsx initial route '-----' e texto Ver. app 0.1.1 -->
 <!-- 2 - alterar fireInit remover 'secondary' -->
 <!-- 3 - conferir firebaseconfig qual site esta mandando -->
-<!-- 4 - buildar pra web -->
-<!-- 5 - deploy firebase host -->
+<!-- 4 - add RequestPermission -->
+<!-- 5 - buildar pra web -->
+<!-- 6 - deploy firebase host -->
 
 <!-- "Buildar" PWA -->
 

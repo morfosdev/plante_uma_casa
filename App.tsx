@@ -7,10 +7,11 @@ import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 import { Router, useData } from "./src";
 import { tools } from "./src/tools";
+import { getCtData } from "./src/tools/base/project";
 
 export default function App() {
-  const fireInitArr = useData((ct) => ct.all.temp.fireInit);
-  const fullRegister = useData((ct) => ct.all.authUser?.fullRegister);
+  const fireInit = useData((ct) => ct.all?.temp?.fireInit);
+  const fullRegister = useData((ct) => ct.all?.authUser?.fullRegister);
 
   const loadedUidRef = React.useRef<string | null>(null);
   const didInitRef = React.useRef(false);
@@ -26,38 +27,44 @@ export default function App() {
     });
   }, []);
 
-  // B) auth flow (só quando tiver app pronto)
+  // B) auth flow
   React.useEffect(() => {
-    const fbApp = fireInitArr?.[0];
-    if (!fbApp) return;
+    console.log({ fireInit });
 
-    const auth = getAuth();
-    const db = getFirestore(fbApp);
+    if (!fireInit) return;
+
+    // ✅ garanta que auth e firestore estão no MESMO app
+    const auth = getAuth(fireInit);
+    const db = getFirestore(fireInit);
 
     const unsubAuth = onAuthStateChanged(auth, async (user) => {
       if (!user) {
         loadedUidRef.current = null;
+
+        // adm - a0login
+        // app - c1login
         tools.goTo("c1login");
         return;
       }
 
-      let resolvedFullRegister = fullRegister;
+      // ✅ sempre resolve a partir do estado mais atual possível
+      let resolvedFullRegister = (fullRegister as boolean | undefined) ?? false;
 
+      // só busca no Firestore se trocou usuário (ou nunca carregou)
       if (loadedUidRef.current !== user.uid) {
         loadedUidRef.current = user.uid;
 
         try {
           const snap = await getDoc(doc(db, "users", user.uid));
-          const userDB = snap.exists() ? snap.data() : null;
+          const userDB = snap.exists() ? (snap.data() as any) : null;
 
           tools.setData({
             path: "all.authUser",
-            value: { uid: user.uid, ...userDB },
+            value: { uid: user.uid, ...(userDB || {}) },
           });
 
-          // pega do dado recém buscado quando existir
-          if (userDB && typeof (userDB as any).fullRegister === "boolean") {
-            resolvedFullRegister = (userDB as any).fullRegister;
+          if (typeof userDB?.fullRegister === "boolean") {
+            resolvedFullRegister = userDB.fullRegister;
           }
         } catch (e: any) {
           tools.setData({
@@ -69,6 +76,11 @@ export default function App() {
             },
           });
         }
+      } else {
+        // ✅ se não buscou do Firestore, ainda pega do estado atual
+        resolvedFullRegister =
+          (getCtData("all.authUser.fullRegister") as boolean | undefined) ??
+          resolvedFullRegister;
       }
 
       tools.goTo(resolvedFullRegister ? "c5steps" : "c2register");
@@ -92,7 +104,7 @@ export default function App() {
         );
       }
     };
-  }, [fireInitArr?.[0]]); // <- não coloca fullRegister aqui
+  }, [fireInit]);
 
   return (
     <View style={styles.container}>
