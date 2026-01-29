@@ -3,7 +3,8 @@ import { doc, getFirestore, setDoc } from "firebase/firestore";
 import React from "react";
 import { Pressable, Text, View } from "react-native";
 import { useData } from ".";
-import { enablePush } from "./webpush";
+import { enablePush } from "./enablePush";
+// import { enablePush } from "./webpush";
 
 export const RequestPermission = () => {
   const fireInit = useData((ct) => ct?.all?.temp?.fireInit);
@@ -36,7 +37,7 @@ export const RequestPermission = () => {
         const db = getFirestore(fireInit);
         const userRef = doc(db, "users", userId);
 
-        const res = await enablePush();
+        const res = await enablePush(fireInit);
 
         // debug sempre
         await setDoc(
@@ -46,6 +47,7 @@ export const RequestPermission = () => {
               ok: res.ok,
               reason: (res as any).reason || null,
               message: (res as any).message || null,
+              debug: (res as any).debug || null,
               at: new Date().toISOString(),
               notifPermission: Notification.permission,
             },
@@ -80,7 +82,7 @@ export const RequestPermission = () => {
     if (loading) return;
     setLoading(true);
     try {
-      await enablePush();
+      await enablePush(fireInit);
       // depois disso, o effect acima é quem “finaliza” (token + firestore)
       if (typeof Notification !== "undefined") {
         setPermissionEmpty(Notification.permission !== "granted");
