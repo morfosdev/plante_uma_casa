@@ -83801,7 +83801,7 @@ userImage: "",
           const arrInitFuncs = [
             async (...args) =>
   functions.firebase.fireInit({ args, pass:{
-   fbConfig: `all.temp.fireInit`,
+   fbConfig: `all.firebaseConfig`,
 
         }})
           ];
