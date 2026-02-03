@@ -48921,6 +48921,8 @@ async (...args) =>
   const db = getFirestore(fbInit);
 
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
@@ -48955,7 +48957,6 @@ async (...args) =>
     // if(check1) return;
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const dataToUpdate = {
         ["steps." + newId]: { ...data },
@@ -48967,7 +48968,6 @@ async (...args) =>
     // ------ set Lot Notifications
     if (lotId && lotId !== "") {
       const refDocLot = doc(db, "lots", lotId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
         ["readSteps." + newId]: false,
@@ -48989,12 +48989,14 @@ async (...args) =>
 
     const functions = getFunctions(fbInit);
     const sendPush = httpsCallable(functions, "sendPush");
-    await sendPush({
+    const resPush = await sendPush({
       token: pushToken,
       title: "Uma etapa do seu imóvel foi atualizada.",
       body: stepLabel + " - " + subStepLabel,
       data: { screen: "c5steps", stepId: stepId },
     });
+
+    console.log({ resPush });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -49845,6 +49847,8 @@ async (...args) =>
   const db = getFirestore(fbInit);
 
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
@@ -49879,7 +49883,6 @@ async (...args) =>
     // if(check1) return;
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const dataToUpdate = {
         ["steps." + newId]: { ...data },
@@ -49891,7 +49894,6 @@ async (...args) =>
     // ------ set Lot Notifications
     if (lotId && lotId !== "") {
       const refDocLot = doc(db, "lots", lotId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
         ["readSteps." + newId]: false,
@@ -49913,12 +49915,14 @@ async (...args) =>
 
     const functions = getFunctions(fbInit);
     const sendPush = httpsCallable(functions, "sendPush");
-    await sendPush({
+    const resPush = await sendPush({
       token: pushToken,
       title: "Uma etapa do seu imóvel foi atualizada.",
       body: stepLabel + " - " + subStepLabel,
       data: { screen: "c5steps", stepId: stepId },
     });
+
+    console.log({ resPush });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -54665,6 +54669,8 @@ async (...args) =>
   const db = getFirestore(fbInit);
 
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
@@ -54699,7 +54705,6 @@ async (...args) =>
     // if(check1) return;
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const dataToUpdate = {
         ["steps." + newId]: { ...data },
@@ -54711,7 +54716,6 @@ async (...args) =>
     // ------ set Lot Notifications
     if (lotId && lotId !== "") {
       const refDocLot = doc(db, "lots", lotId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
         ["readSteps." + newId]: false,
@@ -54733,12 +54737,14 @@ async (...args) =>
 
     const functions = getFunctions(fbInit);
     const sendPush = httpsCallable(functions, "sendPush");
-    await sendPush({
+    const resPush = await sendPush({
       token: pushToken,
       title: "Uma etapa do seu imóvel foi atualizada.",
       body: stepLabel + " - " + subStepLabel,
       data: { screen: "c5steps", stepId: stepId },
     });
+
+    console.log({ resPush });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -55589,6 +55595,8 @@ async (...args) =>
   const db = getFirestore(fbInit);
 
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
@@ -55623,7 +55631,6 @@ async (...args) =>
     // if(check1) return;
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const dataToUpdate = {
         ["steps." + newId]: { ...data },
@@ -55635,7 +55642,6 @@ async (...args) =>
     // ------ set Lot Notifications
     if (lotId && lotId !== "") {
       const refDocLot = doc(db, "lots", lotId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
         ["readSteps." + newId]: false,
@@ -55657,12 +55663,14 @@ async (...args) =>
 
     const functions = getFunctions(fbInit);
     const sendPush = httpsCallable(functions, "sendPush");
-    await sendPush({
+    const resPush = await sendPush({
       token: pushToken,
       title: "Uma etapa do seu imóvel foi atualizada.",
       body: stepLabel + " - " + subStepLabel,
       data: { screen: "c5steps", stepId: stepId },
     });
+
+    console.log({ resPush });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -60668,6 +60676,8 @@ async (...args) =>
   const db = getFirestore(fbInit);
 
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
@@ -60702,7 +60712,6 @@ async (...args) =>
     // if(check1) return;
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const dataToUpdate = {
         ["steps." + newId]: { ...data },
@@ -60714,7 +60723,6 @@ async (...args) =>
     // ------ set Lot Notifications
     if (lotId && lotId !== "") {
       const refDocLot = doc(db, "lots", lotId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
         ["readSteps." + newId]: false,
@@ -60736,12 +60744,14 @@ async (...args) =>
 
     const functions = getFunctions(fbInit);
     const sendPush = httpsCallable(functions, "sendPush");
-    await sendPush({
+    const resPush = await sendPush({
       token: pushToken,
       title: "Uma etapa do seu imóvel foi atualizada.",
       body: stepLabel + " - " + subStepLabel,
       data: { screen: "c5steps", stepId: stepId },
     });
+
+    console.log({ resPush });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -61592,6 +61602,8 @@ async (...args) =>
   const db = getFirestore(fbInit);
 
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
@@ -61626,7 +61638,6 @@ async (...args) =>
     // if(check1) return;
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const dataToUpdate = {
         ["steps." + newId]: { ...data },
@@ -61638,7 +61649,6 @@ async (...args) =>
     // ------ set Lot Notifications
     if (lotId && lotId !== "") {
       const refDocLot = doc(db, "lots", lotId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
         ["readSteps." + newId]: false,
@@ -61660,12 +61670,14 @@ async (...args) =>
 
     const functions = getFunctions(fbInit);
     const sendPush = httpsCallable(functions, "sendPush");
-    await sendPush({
+    const resPush = await sendPush({
       token: pushToken,
       title: "Uma etapa do seu imóvel foi atualizada.",
       body: stepLabel + " - " + subStepLabel,
       data: { screen: "c5steps", stepId: stepId },
     });
+
+    console.log({ resPush });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -70133,6 +70145,8 @@ async (...args) =>
   const db = getFirestore(fbInit);
 
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
@@ -70167,7 +70181,6 @@ async (...args) =>
     // if(check1) return;
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const dataToUpdate = {
         ["steps." + newId]: { ...data },
@@ -70179,7 +70192,6 @@ async (...args) =>
     // ------ set Lot Notifications
     if (lotId && lotId !== "") {
       const refDocLot = doc(db, "lots", lotId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
         ["readSteps." + newId]: false,
@@ -70201,12 +70213,14 @@ async (...args) =>
 
     const functions = getFunctions(fbInit);
     const sendPush = httpsCallable(functions, "sendPush");
-    await sendPush({
+    const resPush = await sendPush({
       token: pushToken,
       title: "Uma etapa do seu imóvel foi atualizada.",
       body: stepLabel + " - " + subStepLabel,
       data: { screen: "c5steps", stepId: stepId },
     });
+
+    console.log({ resPush });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -71057,6 +71071,8 @@ async (...args) =>
   const db = getFirestore(fbInit);
 
   const stepId = tools.getCtData("sc.B9.forms.editChanges.stepId");
+  const newId = stepId.replace(".", "_"); // substitui pontos por underline
+
   console.log("%cstepId a atualizar:", css1, { stepId });
   const userId = tools.getCtData("sc.B9.currents.currId1");
   console.log("%cuserId a atualizar:", css1, { userId });
@@ -71091,7 +71107,6 @@ async (...args) =>
     // if(check1) return;
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const dataToUpdate = {
         ["steps." + newId]: { ...data },
@@ -71103,7 +71118,6 @@ async (...args) =>
     // ------ set Lot Notifications
     if (lotId && lotId !== "") {
       const refDocLot = doc(db, "lots", lotId);
-      const newId = stepId.replace(".", "_"); // substitui pontos por underline
 
       const lotDataToUpdate = {
         ["readSteps." + newId]: false,
@@ -71125,12 +71139,14 @@ async (...args) =>
 
     const functions = getFunctions(fbInit);
     const sendPush = httpsCallable(functions, "sendPush");
-    await sendPush({
+    const resPush = await sendPush({
       token: pushToken,
       title: "Uma etapa do seu imóvel foi atualizada.",
       body: stepLabel + " - " + subStepLabel,
       data: { screen: "c5steps", stepId: stepId },
     });
+
+    console.log({ resPush });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
