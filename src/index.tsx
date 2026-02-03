@@ -48954,13 +48954,13 @@ async (...args) =>
     // ------ set Check Fields
     // -----
     // -----
-    // if(check1) return;
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-
-      const dataToUpdate = {
-        ["steps." + newId]: { ...data },
-      };
 
       await updateDoc(refDoc, dataToUpdate);
     }
@@ -49880,13 +49880,13 @@ async (...args) =>
     // ------ set Check Fields
     // -----
     // -----
-    // if(check1) return;
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-
-      const dataToUpdate = {
-        ["steps." + newId]: { ...data },
-      };
 
       await updateDoc(refDoc, dataToUpdate);
     }
@@ -54702,13 +54702,13 @@ async (...args) =>
     // ------ set Check Fields
     // -----
     // -----
-    // if(check1) return;
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-
-      const dataToUpdate = {
-        ["steps." + newId]: { ...data },
-      };
 
       await updateDoc(refDoc, dataToUpdate);
     }
@@ -55628,13 +55628,13 @@ async (...args) =>
     // ------ set Check Fields
     // -----
     // -----
-    // if(check1) return;
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-
-      const dataToUpdate = {
-        ["steps." + newId]: { ...data },
-      };
 
       await updateDoc(refDoc, dataToUpdate);
     }
@@ -60709,13 +60709,13 @@ async (...args) =>
     // ------ set Check Fields
     // -----
     // -----
-    // if(check1) return;
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-
-      const dataToUpdate = {
-        ["steps." + newId]: { ...data },
-      };
 
       await updateDoc(refDoc, dataToUpdate);
     }
@@ -61635,13 +61635,13 @@ async (...args) =>
     // ------ set Check Fields
     // -----
     // -----
-    // if(check1) return;
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-
-      const dataToUpdate = {
-        ["steps." + newId]: { ...data },
-      };
 
       await updateDoc(refDoc, dataToUpdate);
     }
@@ -70178,13 +70178,13 @@ async (...args) =>
     // ------ set Check Fields
     // -----
     // -----
-    // if(check1) return;
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-
-      const dataToUpdate = {
-        ["steps." + newId]: { ...data },
-      };
 
       await updateDoc(refDoc, dataToUpdate);
     }
@@ -71104,13 +71104,13 @@ async (...args) =>
     // ------ set Check Fields
     // -----
     // -----
-    // if(check1) return;
+
+    const dataToUpdate = {
+      ["steps." + newId]: { ...data },
+    };
+
     if (userId && userId !== "") {
       const refDoc = doc(db, "users", userId);
-
-      const dataToUpdate = {
-        ["steps." + newId]: { ...data },
-      };
 
       await updateDoc(refDoc, dataToUpdate);
     }
