@@ -27,5 +27,5 @@ export const sendPush = functions.https.onCall(async (payload: any) => {
     data: messageData,
   });
 
-  return { ok: true };
+  return { ok: true, sentAt: Date.now(), messageData };
 });

@@ -101,7 +101,7 @@ export const RequestPermission = () => {
         height: "100%",
         alignItems: "center",
         justifyContent: "center",
-        padding: 16,
+        padding: 20,
         backgroundColor: "#eceee9",
       }}
     >
@@ -137,3 +137,4 @@ export const RequestPermission = () => {
 // ----
 // adicionar no index.tsx
 // () => <RequestPermission />,
+// Adicionar em a4list e c5steps

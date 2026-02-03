@@ -12,10 +12,10 @@ c1login
 npx eas-cli update --branch preview
 
 <!-- CHECKLIST BUILD WEB -->
-<!-- 1 - alterar index.tsx initial route '-----' e texto Ver. app 0.1.1 -->
+<!-- 1 - alterar index.tsx initial route '-----' e texto Ver. app 0.1.2 -->
 <!-- 2 - alterar fireInit remover 'secondary' -->
 <!-- 3 - conferir firebaseconfig qual site esta mandando -->
-<!-- 4 - add RequestPermission -->
+<!-- 4 - add RequestPermission no c5steps -->
 <!-- 5 - buildar pra web -->
 <!-- 6 - deploy firebase host -->
 
