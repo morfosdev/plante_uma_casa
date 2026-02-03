@@ -48913,7 +48913,9 @@ async (...args) =>
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, getDoc } =
+    await import("firebase/firestore");
+  const { getFunctions, httpsCallable } = await import("firebase/functions");
 
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
@@ -48973,6 +48975,26 @@ async (...args) =>
 
       await updateDoc(refDocLot, lotDataToUpdate);
     }
+
+    // ---- set WebPush Notification
+    const stepLabel = tools.getCtData("sc.B9.forms.viewChanges.stepLabel");
+    const subStepLabel = tools.getCtData(
+      "sc.B9.forms.viewChanges.subStepLabel",
+    );
+
+    const docUser = await getDoc(doc(db, "users", userId));
+    const userData = docUser.data();
+    console.log("%cUserData:", css1, { userData });
+    const pushToken = userData?.pushToken || "";
+
+    const functions = getFunctions(fbInit);
+    const sendPush = httpsCallable(functions, "sendPush");
+    await sendPush({
+      token: pushToken,
+      title: "Uma etapa do seu imóvel foi atualizada.",
+      body: stepLabel + " - " + subStepLabel,
+      data: { screen: "c5steps", stepId: stepId },
+    });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -49815,7 +49837,9 @@ async (...args) =>
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, getDoc } =
+    await import("firebase/firestore");
+  const { getFunctions, httpsCallable } = await import("firebase/functions");
 
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
@@ -49875,6 +49899,26 @@ async (...args) =>
 
       await updateDoc(refDocLot, lotDataToUpdate);
     }
+
+    // ---- set WebPush Notification
+    const stepLabel = tools.getCtData("sc.B9.forms.viewChanges.stepLabel");
+    const subStepLabel = tools.getCtData(
+      "sc.B9.forms.viewChanges.subStepLabel",
+    );
+
+    const docUser = await getDoc(doc(db, "users", userId));
+    const userData = docUser.data();
+    console.log("%cUserData:", css1, { userData });
+    const pushToken = userData?.pushToken || "";
+
+    const functions = getFunctions(fbInit);
+    const sendPush = httpsCallable(functions, "sendPush");
+    await sendPush({
+      token: pushToken,
+      title: "Uma etapa do seu imóvel foi atualizada.",
+      body: stepLabel + " - " + subStepLabel,
+      data: { screen: "c5steps", stepId: stepId },
+    });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -54613,7 +54657,9 @@ async (...args) =>
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, getDoc } =
+    await import("firebase/firestore");
+  const { getFunctions, httpsCallable } = await import("firebase/functions");
 
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
@@ -54673,6 +54719,26 @@ async (...args) =>
 
       await updateDoc(refDocLot, lotDataToUpdate);
     }
+
+    // ---- set WebPush Notification
+    const stepLabel = tools.getCtData("sc.B9.forms.viewChanges.stepLabel");
+    const subStepLabel = tools.getCtData(
+      "sc.B9.forms.viewChanges.subStepLabel",
+    );
+
+    const docUser = await getDoc(doc(db, "users", userId));
+    const userData = docUser.data();
+    console.log("%cUserData:", css1, { userData });
+    const pushToken = userData?.pushToken || "";
+
+    const functions = getFunctions(fbInit);
+    const sendPush = httpsCallable(functions, "sendPush");
+    await sendPush({
+      token: pushToken,
+      title: "Uma etapa do seu imóvel foi atualizada.",
+      body: stepLabel + " - " + subStepLabel,
+      data: { screen: "c5steps", stepId: stepId },
+    });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -55515,7 +55581,9 @@ async (...args) =>
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, getDoc } =
+    await import("firebase/firestore");
+  const { getFunctions, httpsCallable } = await import("firebase/functions");
 
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
@@ -55575,6 +55643,26 @@ async (...args) =>
 
       await updateDoc(refDocLot, lotDataToUpdate);
     }
+
+    // ---- set WebPush Notification
+    const stepLabel = tools.getCtData("sc.B9.forms.viewChanges.stepLabel");
+    const subStepLabel = tools.getCtData(
+      "sc.B9.forms.viewChanges.subStepLabel",
+    );
+
+    const docUser = await getDoc(doc(db, "users", userId));
+    const userData = docUser.data();
+    console.log("%cUserData:", css1, { userData });
+    const pushToken = userData?.pushToken || "";
+
+    const functions = getFunctions(fbInit);
+    const sendPush = httpsCallable(functions, "sendPush");
+    await sendPush({
+      token: pushToken,
+      title: "Uma etapa do seu imóvel foi atualizada.",
+      body: stepLabel + " - " + subStepLabel,
+      data: { screen: "c5steps", stepId: stepId },
+    });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -60572,7 +60660,9 @@ async (...args) =>
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, getDoc } =
+    await import("firebase/firestore");
+  const { getFunctions, httpsCallable } = await import("firebase/functions");
 
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
@@ -60632,6 +60722,26 @@ async (...args) =>
 
       await updateDoc(refDocLot, lotDataToUpdate);
     }
+
+    // ---- set WebPush Notification
+    const stepLabel = tools.getCtData("sc.B9.forms.viewChanges.stepLabel");
+    const subStepLabel = tools.getCtData(
+      "sc.B9.forms.viewChanges.subStepLabel",
+    );
+
+    const docUser = await getDoc(doc(db, "users", userId));
+    const userData = docUser.data();
+    console.log("%cUserData:", css1, { userData });
+    const pushToken = userData?.pushToken || "";
+
+    const functions = getFunctions(fbInit);
+    const sendPush = httpsCallable(functions, "sendPush");
+    await sendPush({
+      token: pushToken,
+      title: "Uma etapa do seu imóvel foi atualizada.",
+      body: stepLabel + " - " + subStepLabel,
+      data: { screen: "c5steps", stepId: stepId },
+    });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -61474,7 +61584,9 @@ async (...args) =>
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, getDoc } =
+    await import("firebase/firestore");
+  const { getFunctions, httpsCallable } = await import("firebase/functions");
 
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
@@ -61534,6 +61646,26 @@ async (...args) =>
 
       await updateDoc(refDocLot, lotDataToUpdate);
     }
+
+    // ---- set WebPush Notification
+    const stepLabel = tools.getCtData("sc.B9.forms.viewChanges.stepLabel");
+    const subStepLabel = tools.getCtData(
+      "sc.B9.forms.viewChanges.subStepLabel",
+    );
+
+    const docUser = await getDoc(doc(db, "users", userId));
+    const userData = docUser.data();
+    console.log("%cUserData:", css1, { userData });
+    const pushToken = userData?.pushToken || "";
+
+    const functions = getFunctions(fbInit);
+    const sendPush = httpsCallable(functions, "sendPush");
+    await sendPush({
+      token: pushToken,
+      title: "Uma etapa do seu imóvel foi atualizada.",
+      body: stepLabel + " - " + subStepLabel,
+      data: { screen: "c5steps", stepId: stepId },
+    });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -69993,7 +70125,9 @@ async (...args) =>
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, getDoc } =
+    await import("firebase/firestore");
+  const { getFunctions, httpsCallable } = await import("firebase/functions");
 
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
@@ -70053,6 +70187,26 @@ async (...args) =>
 
       await updateDoc(refDocLot, lotDataToUpdate);
     }
+
+    // ---- set WebPush Notification
+    const stepLabel = tools.getCtData("sc.B9.forms.viewChanges.stepLabel");
+    const subStepLabel = tools.getCtData(
+      "sc.B9.forms.viewChanges.subStepLabel",
+    );
+
+    const docUser = await getDoc(doc(db, "users", userId));
+    const userData = docUser.data();
+    console.log("%cUserData:", css1, { userData });
+    const pushToken = userData?.pushToken || "";
+
+    const functions = getFunctions(fbInit);
+    const sendPush = httpsCallable(functions, "sendPush");
+    await sendPush({
+      token: pushToken,
+      title: "Uma etapa do seu imóvel foi atualizada.",
+      body: stepLabel + " - " + subStepLabel,
+      data: { screen: "c5steps", stepId: stepId },
+    });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
@@ -70895,7 +71049,9 @@ async (...args) =>
   const css1 =
     "color: limegreen; background-color: darkcyan; font-size: 11px; padding: 2px 6px; border-radius: 3px";
 
-  const { getFirestore, doc, updateDoc } = await import("firebase/firestore");
+  const { getFirestore, doc, updateDoc, getDoc } =
+    await import("firebase/firestore");
+  const { getFunctions, httpsCallable } = await import("firebase/functions");
 
   const fbInit = tools.getCtData("all.temp.fireInit");
   const db = getFirestore(fbInit);
@@ -70955,6 +71111,26 @@ async (...args) =>
 
       await updateDoc(refDocLot, lotDataToUpdate);
     }
+
+    // ---- set WebPush Notification
+    const stepLabel = tools.getCtData("sc.B9.forms.viewChanges.stepLabel");
+    const subStepLabel = tools.getCtData(
+      "sc.B9.forms.viewChanges.subStepLabel",
+    );
+
+    const docUser = await getDoc(doc(db, "users", userId));
+    const userData = docUser.data();
+    console.log("%cUserData:", css1, { userData });
+    const pushToken = userData?.pushToken || "";
+
+    const functions = getFunctions(fbInit);
+    const sendPush = httpsCallable(functions, "sendPush");
+    await sendPush({
+      token: pushToken,
+      title: "Uma etapa do seu imóvel foi atualizada.",
+      body: stepLabel + " - " + subStepLabel,
+      data: { screen: "c5steps", stepId: stepId },
+    });
 
     // ------ set ctData
     const pathSideRight = "all.toggles.sideRight";
