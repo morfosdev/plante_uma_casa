@@ -1,10 +1,9 @@
-// SettingsNotifications.tsx
+// window.Notification.tsx
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import React from "react";
-import { Pressable, Text, View } from "react-native";
+import { Alert, Pressable, Text, View } from "react-native";
 import { useData } from ".";
 import { enablePush } from "./enablePush";
-// import { enablePush } from "./webpush";
 
 export const RequestPermission = () => {
   const fireInit = useData((ct) => ct?.all?.temp?.fireInit);
@@ -15,19 +14,58 @@ export const RequestPermission = () => {
 
   // 1) Mantém a UI sincronizada com a permissão
   React.useEffect(() => {
-    if (typeof Notification === "undefined") return;
-    setPermissionEmpty(Notification.permission !== "granted");
+    if (typeof window === "undefined") {
+      Alert.alert("Push", "Sem window (não é web).");
+      return;
+    }
+    if (!("Notification" in window)) {
+      Alert.alert("Push", "Notification API indisponível nesse navegador.");
+      return;
+    }
+    if (typeof window.Notification === "undefined") {
+      Alert.alert("Push", "window.Notification está undefined.");
+      return;
+    }
+    Alert.alert("Push", `Permission atual: ${window.Notification.permission}`);
+    setPermissionEmpty(window.Notification.permission !== "granted");
   }, []);
 
   // 2) Quando estiver granted, tenta pegar token e salvar (mesmo após reload)
   React.useEffect(() => {
     const run = async () => {
-      if (!fireInit || !userId) return;
-      if (typeof Notification === "undefined") return;
-      if (Notification.permission !== "granted") return;
+      if (!fireInit) {
+        Alert.alert("Push", "fireInit vazio (firebase não iniciou).");
+        return;
+      }
+      if (!userId) {
+        Alert.alert("Push", "userId vazio (sem usuário logado/docId).");
+        return;
+      }
+      if (typeof window === "undefined") {
+        Alert.alert("Push", "Sem window (não é web).");
+        return;
+      }
+      if (
+        !("Notification" in window) ||
+        typeof window.Notification === "undefined"
+      ) {
+        Alert.alert(
+          "Push",
+          "Notification API indisponível (window.Notification undefined).",
+        );
+        return;
+      }
+      if (window.Notification.permission !== "granted") {
+        Alert.alert(
+          "Push",
+          `Permissão NÃO é granted: ${window.Notification.permission}`,
+        );
+        return;
+      }
 
       const savedKey = `__push_token_saved__:${userId}`;
       if (sessionStorage.getItem(savedKey)) {
+        Alert.alert("Push", "Token já marcado como salvo nessa sessão.");
         setPermissionEmpty(false);
         return;
       }
@@ -37,9 +75,9 @@ export const RequestPermission = () => {
         const db = getFirestore(fireInit);
         const userRef = doc(db, "users", userId);
 
+        Alert.alert("Push", "Chamando enablePush (com permission granted)...");
         const res = await enablePush(fireInit);
 
-        // debug sempre
         await setDoc(
           userRef,
           {
@@ -49,14 +87,14 @@ export const RequestPermission = () => {
               message: (res as any).message || null,
               debug: (res as any).debug || null,
               at: new Date().toISOString(),
-              notifPermission: Notification.permission,
+              notifPermission: window.Notification.permission,
             },
           },
           { merge: true },
         );
 
-        // salva token quando vier
         if (res.ok && (res as any).token) {
+          Alert.alert("Push", "Token recebido e será salvo no Firestore.");
           await setDoc(
             userRef,
             { pushToken: (res as any).token },
@@ -65,9 +103,13 @@ export const RequestPermission = () => {
           sessionStorage.setItem(savedKey, "1");
           setPermissionEmpty(false);
         } else {
-          // se ele pediu reload, não faz nada (a página vai recarregar)
-          // se vier outro erro, mantém o botão visível
-          setPermissionEmpty(Notification.permission !== "granted");
+          Alert.alert(
+            "Push",
+            `enablePush não retornou token. ok=${String(res.ok)} reason=${String(
+              (res as any).reason ?? "",
+            )}`,
+          );
+          setPermissionEmpty(window.Notification.permission !== "granted");
         }
       } finally {
         setLoading(false);
@@ -79,14 +121,40 @@ export const RequestPermission = () => {
 
   // 3) Clique só inicia o processo
   const onEnable = async () => {
-    if (loading) return;
+    if (loading) {
+      Alert.alert("Push", "Já está carregando...");
+      return;
+    }
+
     setLoading(true);
     try {
-      await enablePush(fireInit);
-      // depois disso, o effect acima é quem “finaliza” (token + firestore)
-      if (typeof Notification !== "undefined") {
-        setPermissionEmpty(Notification.permission !== "granted");
+      if (!fireInit) {
+        Alert.alert("Push", "fireInit vazio (firebase não iniciou).");
+        return;
       }
+      if (typeof window === "undefined") {
+        Alert.alert("Push", "Sem window (não é web).");
+        return;
+      }
+      if (
+        !("Notification" in window) ||
+        typeof window.Notification === "undefined"
+      ) {
+        Alert.alert("Push", "Notification API indisponível nesse navegador.");
+        return;
+      }
+
+      Alert.alert(
+        "Push",
+        `Antes do enablePush: ${window.Notification.permission}`,
+      );
+      await enablePush(fireInit);
+      Alert.alert(
+        "Push",
+        `Depois do enablePush: ${window.Notification.permission}`,
+      );
+
+      setPermissionEmpty(window.Notification.permission !== "granted");
     } finally {
       setLoading(false);
     }
@@ -133,8 +201,3 @@ export const RequestPermission = () => {
     </View>
   );
 };
-
-// ----
-// adicionar no index.tsx
-// () => <RequestPermission />,
-// Adicionar em a4list e c5steps
