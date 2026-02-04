@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "projeto-plante-uma-casa"
-  }
+  },
+  "targets": {
+    "projeto-plante-uma-casa": {
+      "hosting": {
+        "site": [
+          "projeto-plante-uma-casa"
+        ],
+        "painel": [
+          "painel-plante-uma-casa"
+        ],
+        "app": [
+          "app-plante-uma-casa"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

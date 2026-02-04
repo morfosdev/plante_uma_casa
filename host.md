@@ -24,5 +24,8 @@ npx eas-cli update --branch preview
 npx expo export --platform web
 
 <!-- Deploy Firebase Host -->
+<!-- npx firebase-tools deploy --only hosting -->
 
-npx firebase-tools deploy --only hosting
+firebase deploy --only "hosting:painel"
+firebase deploy --only "hosting:site"
+firebase deploy --only "hosting:app"
