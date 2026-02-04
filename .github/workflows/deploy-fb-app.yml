@@ -1,4 +1,4 @@
-name: Deploy Painel Firebase Hosting
+name: Deploy APP
 
 on:
   workflow_dispatch:
