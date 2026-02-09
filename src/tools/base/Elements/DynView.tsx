@@ -94,7 +94,7 @@ export const DynView = (props: Tprops) => {
         );
         return mobilePart ? mobilePart[1] : style;
       } else {
-        const desktopPart = style.match(/@mediaDesktop/s*([sS]*?)$/);
+        const desktopPart = style.match(/@mediaDesktops*([sS]*?)$/);
         return desktopPart ? desktopPart[1] : style;
       }
     });
