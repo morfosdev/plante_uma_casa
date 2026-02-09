@@ -83886,7 +83886,9 @@ tools.setData({
 'checkbox1': false, 
 'forms': " ", 
 'loader': false, 
-'desktop': true, 'mobile': false } 
+'mobile': { 'sideLeft': false } 
+, 'desktop': { 'sideLeft': true } 
+ } 
 , 
 'texts': { 
 'sizes': { 
