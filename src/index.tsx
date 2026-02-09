@@ -4840,7 +4840,7 @@ backgroundColor: "#f5f5f5",
 }
 @mediaDesktop
 {
-	width: 200,
+	width: 230,
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -13725,7 +13725,7 @@ backgroundColor: "#f5f5f5",
 }
 @mediaDesktop
 {
-	width: 200,
+	width: 230,
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -22984,7 +22984,7 @@ backgroundColor: "#f5f5f5",
 }
 @mediaDesktop
 {
-	width: 200,
+	width: 230,
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -32133,7 +32133,7 @@ backgroundColor: "#f5f5f5",
 }
 @mediaDesktop
 {
-	width: 200,
+	width: 230,
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -41098,7 +41098,7 @@ backgroundColor: "#f5f5f5",
 }
 @mediaDesktop
 {
-	width: 200,
+	width: 230,
 	height: "100%",
 	backgroundColor: "white"
 }`],
