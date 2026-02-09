@@ -130,6 +130,15 @@ export const DynView = (props: Tprops) => {
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(processedStyles);
 
+  if (condRespPath != "")
+    console.log("log", {
+      stl,
+      condRespPath,
+      varValue,
+      styles,
+      processedStyles,
+    });
+
   // ------- set User Element Properties (If Exists)
   const userElProps = React.useMemo(() => {
     const props: any = {};
