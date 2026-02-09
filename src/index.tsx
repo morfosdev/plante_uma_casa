@@ -4847,7 +4847,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.sideLeft", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.@media.sideLeft", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -13732,7 +13732,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.sideLeft", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.@media.sideLeft", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -22991,7 +22991,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.sideLeft", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.@media.sideLeft", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -32140,7 +32140,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.sideLeft", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.@media.sideLeft", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
@@ -41105,7 +41105,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [() => [ "all.toggles.sideLeft", "==", true ]]
+ arrFunctions: [() => [ "all.toggles.@media.sideLeft", "==", true ]]
  , trigger: 'on listen'
 }})],            childrenItems:[
         
