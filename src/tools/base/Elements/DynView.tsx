@@ -39,7 +39,7 @@ const trimLeftSpaces = (value: string) => {
   let i = 0;
   while (i < value.length) {
     const ch = value[i];
-    if (ch !== " " && ch !== "\n" && ch !== "" && ch !== "	") break;
+    if (ch !== " " && ch !== "\n" && ch !== "" && ch !== "	") break;
     i++;
   }
   return value.slice(i);
