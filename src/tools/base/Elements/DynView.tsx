@@ -36,13 +36,13 @@ export const processFunctions = async (arr: any[]) => {
 };
 
 const OPERATORS = {
-  "==": (a, b) => a == b,
-  "!=": (a, b) => a != b,
-  ">": (a, b) => a > b,
-  ">=": (a, b) => a >= b,
-  "<": (a, b) => a < b,
-  "<=": (a, b) => a <= b,
-} as const;
+  "==": (a: any, b: any) => a == b,
+  "!=": (a: any, b: any) => a != b,
+  ">": (a: any, b: any) => a > b,
+  ">=": (a: any, b: any) => a >= b,
+  "<": (a: any, b: any) => a < b,
+  "<=": (a: any, b: any) => a <= b,
+} as const satisfies Record<Tconds, (a: any, b: any) => boolean>;
 
 // DynView / BOX
 export const DynView = (props: Tprops) => {
@@ -146,7 +146,7 @@ export const DynView = (props: Tprops) => {
 
         for (const keyProp in parsedObject) {
           const valueProp = parsedObject[keyProp];
-          const [hasVar, varValue] = getVarValue(valueProp);
+          const [hasVar, varValue] = getVarValue(valueProp, "Component");
 
           if (hasVar) props[keyProp] = varValue;
           if (!hasVar) props[keyProp] = valueProp;
@@ -181,7 +181,7 @@ export const DynView = (props: Tprops) => {
     return <View {...allProps}>{mapElements(childrenItems, args)}</View>;
 
   if (sttTypeFunc === "on listen") {
-    const operatorFunc = OPERATORS[sttCondParts.operator];
+    const operatorFunc = OPERATORS[sttCondParts.operator as Tconds];
     const condShow = operatorFunc?.(varValue, sttCondParts.compareVal);
 
     return (
