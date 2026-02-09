@@ -35,6 +35,41 @@ export const processFunctions = async (arr: any[]) => {
   return defaultVal;
 };
 
+const trimLeftSpaces = (value: string) => {
+  let i = 0;
+  while (i < value.length) {
+    const ch = value[i];
+    if (ch !== " " && ch !== "\n" && ch !== "" && ch !== "	") break;
+    i++;
+  }
+  return value.slice(i);
+};
+
+const extractMediaStyle = (style: string, mode: "mobile" | "desktop") => {
+  const mobileTag = "@mediaMobile";
+  const desktopTag = "@mediaDesktop";
+
+  if (mode === "mobile") {
+    const mobileStart = style.indexOf(mobileTag);
+    if (mobileStart < 0) return style;
+
+    const contentStart = mobileStart + mobileTag.length;
+    const desktopStart = style.indexOf(desktopTag, contentStart);
+    const rawContent =
+      desktopStart < 0
+        ? style.slice(contentStart)
+        : style.slice(contentStart, desktopStart);
+
+    return trimLeftSpaces(rawContent);
+  }
+
+  const desktopStart = style.indexOf(desktopTag);
+  if (desktopStart < 0) return style;
+
+  const contentStart = desktopStart + desktopTag.length;
+  return trimLeftSpaces(style.slice(contentStart));
+};
+
 const OPERATORS = {
   "==": (a: any, b: any) => a == b,
   "!=": (a: any, b: any) => a != b,
@@ -87,16 +122,7 @@ export const DynView = (props: Tprops) => {
 
     return styles.map((style) => {
       if (typeof style !== "string") return style;
-
-      if (isMobile) {
-        const mobilePart = style.match(
-          /@mediaMobiles*([sS]*?)(?=@mediaDesktop|$)/,
-        );
-        return mobilePart ? mobilePart[1] : style;
-      } else {
-        const desktopPart = style.match(/@mediaDesktops*([sS]*?)$/);
-        return desktopPart ? desktopPart[1] : style;
-      }
+      return extractMediaStyle(style, isMobile ? "mobile" : "desktop");
     });
   }, [styles, isMobile]);
 
