@@ -83884,7 +83884,9 @@ tools.setData({
 'toggles': { 
 'box1': true, 
 'checkbox1': false, 
-'forms': " ", 'loader': false } 
+'forms': " ", 
+'loader': false, 
+'desktop': true, 'mobile': false } 
 , 
 'texts': { 
 'sizes': { 
