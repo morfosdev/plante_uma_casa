@@ -35,10 +35,19 @@ export const processFunctions = async (arr: any[]) => {
   return defaultVal;
 };
 
+const OPERATORS = {
+  "==": (a, b) => a == b,
+  "!=": (a, b) => a != b,
+  ">": (a, b) => a > b,
+  ">=": (a, b) => a >= b,
+  "<": (a, b) => a < b,
+  "<=": (a, b) => a <= b,
+} as const;
+
 // DynView / BOX
 export const DynView = (props: Tprops) => {
   if (!props) return <></>;
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const isMobile = width < 767;
 
   const [sttTypeFunc, setTypeFunc] = useState("");
@@ -52,8 +61,18 @@ export const DynView = (props: Tprops) => {
   >([]);
 
   const condRespVar = isMobile ? "mobile" : "desktop";
-  const condMobilePath = sttCondParts.path.replace("@media", condRespVar);
-  let varValue = useData((ct) => pathSel(ct, condMobilePath));
+
+  const condRespPath = React.useMemo(() => {
+    if (!sttCondParts.path) return "";
+    const isSpecialChar = sttCondParts.path.includes("@");
+    return isSpecialChar
+      ? sttCondParts.path.replace("@media", condRespVar)
+      : sttCondParts.path;
+  }, [sttCondParts.path, condRespVar]);
+
+  let varValue = useData((ct) =>
+    condRespPath ? pathSel(ct, condRespPath) : null,
+  );
 
   // ---------- set Props
   const { elementsProperties, functions } = props.pass;
@@ -61,28 +80,27 @@ export const DynView = (props: Tprops) => {
   let { styles } = props.pass;
 
   // ---- Media Breakpoints
-  console.log({ styles });
-  if (Array.isArray(styles)) {
-    styles = styles.map((style) => {
+  const processedStyles = React.useMemo(() => {
+    if (!Array.isArray(styles)) {
+      return typeof styles === "string" ? [] : [];
+    }
+
+    return styles.map((style) => {
       if (typeof style !== "string") return style;
 
       if (isMobile) {
-        // Pega o que vem após @mediaMobile
         const mobilePart = style.match(
           /@mediaMobiles*([sS]*?)(?=@mediaDesktop|$)/,
         );
         return mobilePart ? mobilePart[1] : style;
       } else {
-        // Pega o que vem após @mediaDesktop
         const desktopPart = style.match(/@mediaDesktops*([sS]*?)$/);
         return desktopPart ? desktopPart[1] : style;
       }
     });
-  } else if (typeof styles !== "string") {
-    styles = [];
-  }
+  }, [styles, isMobile]);
 
-  const callFn = async () => {
+  const callFn = React.useCallback(async () => {
     const { trigger, arrFunctions } = await processFunctions(functions);
     setTypeFunc(trigger);
     setPressFuncs(arrFunctions);
@@ -99,44 +117,47 @@ export const DynView = (props: Tprops) => {
         const compareVal = res[2];
 
         if (typeof path === "string") {
-          console.log("VarPath", path);
           setCondParts({ path, operator, compareVal });
         }
       }
     }
-  };
+  }, [functions, args]);
 
   useEffect(() => {
     callFn();
   }, []);
 
   // ---------- set Variables Styles (If Exists)
-  console.log({ styles });
-  const stl = getStlValues(styles);
+  const stl = getStlValues(processedStyles);
 
   // ------- set User Element Properties (If Exists)
-  const userElProps: any = {};
-  for (let strObj of elementsProperties) {
-    if (!strObj) continue;
-    if (!props) continue;
-    if (typeof strObj !== "string") continue;
+  const userElProps = React.useMemo(() => {
+    const props: any = {};
 
-    // Pula se não for um JSON válido (começa com { ou [)
-    const trimmed = strObj.trim();
-    if (!trimmed.startsWith("{") && !trimmed.startsWith("[")) continue;
+    for (let strObj of elementsProperties) {
+      if (!strObj) continue;
+      if (typeof strObj !== "string") continue;
 
-    console.log({ strObj });
-    const parsedObject = JSON5.parse(strObj);
+      const trimmed = strObj.trim();
+      if (!trimmed.startsWith("{") && !trimmed.startsWith("[")) continue;
 
-    for (const keyProp in parsedObject) {
-      const valueProp = parsedObject[keyProp];
+      try {
+        const parsedObject = JSON5.parse(strObj);
 
-      const [hasVar, varValue] = getVarValue(valueProp);
+        for (const keyProp in parsedObject) {
+          const valueProp = parsedObject[keyProp];
+          const [hasVar, varValue] = getVarValue(valueProp);
 
-      if (hasVar) userElProps[keyProp] = varValue;
-      if (!hasVar) userElProps[keyProp] = valueProp;
+          if (hasVar) props[keyProp] = varValue;
+          if (!hasVar) props[keyProp] = valueProp;
+        }
+      } catch (error) {
+        // Silenciosamente ignora JSON inválido
+      }
     }
-  }
+
+    return props;
+  }, [elementsProperties]);
 
   const allProps = {
     style: stl,
@@ -160,19 +181,7 @@ export const DynView = (props: Tprops) => {
     return <View {...allProps}>{mapElements(childrenItems, args)}</View>;
 
   if (sttTypeFunc === "on listen") {
-    const operators = {
-      "==": (a, b) => a == b,
-      "!=": (a, b) => a != b,
-      ">": (a, b) => a > b,
-      ">=": (a, b) => a >= b,
-      "<": (a, b) => a < b,
-      "<=": (a, b) => a <= b,
-    };
-
-    if (sttCondParts.path) console.log({ sttCondParts });
-
-    const operatorFunc = operators[sttCondParts.operator];
-    console.log({ operatorFunc });
+    const operatorFunc = OPERATORS[sttCondParts.operator];
     const condShow = operatorFunc?.(varValue, sttCondParts.compareVal);
 
     return (
