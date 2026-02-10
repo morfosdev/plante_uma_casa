@@ -5066,10 +5066,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`a3Profile`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -5188,11 +5193,16 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -5328,11 +5338,16 @@ async (...args) =>
           keyPath: [`sc.A0.forms.msgs.msg1`],
           value: [undefined]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -14153,10 +14168,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`a3Profile`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -14275,11 +14295,16 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -14415,11 +14440,16 @@ async (...args) =>
           keyPath: [`sc.A0.forms.msgs.msg1`],
           value: [undefined]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -14570,11 +14600,16 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -23614,10 +23649,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`a3Profile`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -23736,11 +23776,16 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -23876,11 +23921,16 @@ async (...args) =>
           keyPath: [`sc.A0.forms.msgs.msg1`],
           value: [undefined]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -32965,10 +33015,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`a3Profile`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -33087,11 +33142,16 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -33227,11 +33287,16 @@ async (...args) =>
           keyPath: [`sc.A0.forms.msgs.msg1`],
           value: [undefined]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -33382,11 +33447,16 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
@@ -42132,10 +42202,15 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.sideRight`],
           value: [true]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.forms`],
           value: [`a3Profile`]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
@@ -42254,11 +42329,16 @@ async (...args) =>
           keyPath: [`all.toggles.sideRight`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -42394,11 +42474,16 @@ async (...args) =>
           keyPath: [`sc.A0.forms.msgs.msg1`],
           value: [undefined]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -52228,9 +52313,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b5.viewCondo`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -52350,11 +52440,16 @@ async (...args) =>
           keyPath: [`all.toggles.b8.addSteps`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -52480,11 +52575,16 @@ async (...args) =>
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
           value: [undefined]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -58207,9 +58307,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b5.viewCondo`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -58329,11 +58434,16 @@ async (...args) =>
           keyPath: [`all.toggles.b8.addSteps`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -58459,11 +58569,16 @@ async (...args) =>
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
           value: [undefined]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -64372,9 +64487,14 @@ async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b9.editSteps`],
           value: [false]
-        }}), async (...args) =>
+        }}), 
+async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.b5.viewCondo`],
+          value: [false]
+        }}), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -64494,11 +64614,16 @@ async (...args) =>
           keyPath: [`all.toggles.b8.addSteps`],
           value: [false]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("b4list");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
@@ -64624,11 +64749,16 @@ async (...args) =>
           keyPath: [`sc.A0.forms.iptsChanges.userPassword`],
           value: [undefined]
         }}), 
+
         (...args) => {
           // ---------- get Function from A_Project Scope
           return tools.goTo("a0login");
         }
-        ]
+        , async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toggles.mobile.sideLeft`],
+          value: [false]
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[
         (...args:any) => <Elements.SvgView1 pass={{
