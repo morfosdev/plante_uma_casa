@@ -1240,7 +1240,7 @@ const path1 = "all.toggles.box1";
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -1257,7 +1257,7 @@ const path1 = "all.toggles.box1";
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -4860,7 +4860,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -4877,7 +4877,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -13822,7 +13822,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -13839,7 +13839,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -23158,7 +23158,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -23175,7 +23175,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -32384,7 +32384,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -32401,7 +32401,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -41426,7 +41426,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -41443,7 +41443,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -51408,7 +51408,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -51425,7 +51425,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -57263,7 +57263,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -57280,7 +57280,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -63304,7 +63304,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props)})()}
+      stroke={(() => {console.log("SVG props", props) return props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -63321,7 +63321,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`"#fff"`],
+      preenchimento: [`#fff`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
