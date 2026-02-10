@@ -5493,7 +5493,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile
+{
+	fontSize: 18,
+	fontWeight: '700',
+	color: '#FFFFFF',
+	display: "none"
+}
+@mediaDesktop
+{
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
@@ -5512,7 +5520,14 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaDesktop
+{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}
+@mediaDesktop
+{
 	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
@@ -14677,7 +14692,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile
+{
+	fontSize: 18,
+	fontWeight: '700',
+	color: '#FFFFFF',
+	display: "none"
+}
+@mediaDesktop
+{
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
@@ -14696,7 +14719,14 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaDesktop
+{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}
+@mediaDesktop
+{
 	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
@@ -24142,7 +24172,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile
+{
+	fontSize: 18,
+	fontWeight: '700',
+	color: '#FFFFFF',
+	display: "none"
+}
+@mediaDesktop
+{
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
@@ -24161,7 +24199,14 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaDesktop
+{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}
+@mediaDesktop
+{
 	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
@@ -33524,7 +33569,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile
+{
+	fontSize: 18,
+	fontWeight: '700',
+	color: '#FFFFFF',
+	display: "none"
+}
+@mediaDesktop
+{
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
@@ -33543,7 +33596,14 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaDesktop
+{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}
+@mediaDesktop
+{
 	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
@@ -42696,7 +42756,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile
+{
+	fontSize: 18,
+	fontWeight: '700',
+	color: '#FFFFFF',
+	display: "none"
+}
+@mediaDesktop
+{
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
@@ -42715,7 +42783,14 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaDesktop
+{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}
+@mediaDesktop
+{
 	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
@@ -52750,7 +52825,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile
+{
+	fontSize: 18,
+	fontWeight: '700',
+	color: '#FFFFFF',
+	display: "none"
+}
+@mediaDesktop
+{
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
@@ -52769,7 +52852,14 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaDesktop
+{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}
+@mediaDesktop
+{
 	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
@@ -58802,7 +58892,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile
+{
+	fontSize: 18,
+	fontWeight: '700',
+	color: '#FFFFFF',
+	display: "none"
+}
+@mediaDesktop
+{
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
@@ -58821,7 +58919,14 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaDesktop
+{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}
+@mediaDesktop
+{
 	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
@@ -64982,7 +65087,15 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile
+{
+	fontSize: 18,
+	fontWeight: '700',
+	color: '#FFFFFF',
+	display: "none"
+}
+@mediaDesktop
+{
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
@@ -65001,7 +65114,14 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaDesktop
+{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#FFFFFF',
+}
+@mediaDesktop
+{
 	fontSize: 13,
 	fontWeight: '400',
 	color: '#FFFFFF',
