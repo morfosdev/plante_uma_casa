@@ -5951,6 +5951,7 @@ fontWeight: '500',
 	borderRadius: '6px',
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
+	marginBottom: 20
 }
 @mediaDesktop{
 	width: 150,
