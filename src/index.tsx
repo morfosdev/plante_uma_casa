@@ -1222,6 +1222,8 @@ const path1 = "all.toggles.box1";
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
+console.log({tools});
+
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
@@ -4806,6 +4808,8 @@ backgroundColor: "#f5f5f5",
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+console.log({tools});
 
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
@@ -13733,6 +13737,8 @@ backgroundColor: "#f5f5f5",
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+console.log({tools});
 
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
@@ -23035,6 +23041,8 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
+console.log({tools});
+
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
@@ -32226,6 +32234,8 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
+console.log({tools});
+
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
@@ -41232,6 +41242,8 @@ backgroundColor: "#f5f5f5",
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+console.log({tools});
 
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
@@ -51180,6 +51192,8 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
+console.log({tools});
+
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
@@ -56999,6 +57013,8 @@ backgroundColor: "#f5f5f5",
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+console.log({tools});
 
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
@@ -63005,6 +63021,8 @@ backgroundColor: "#f5f5f5",
  functions.funcGroup({ args, pass:{
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+console.log({tools});
 
 	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
