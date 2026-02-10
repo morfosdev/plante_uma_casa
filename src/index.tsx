@@ -1240,7 +1240,7 @@ const path1 = "all.toggles.box1";
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -4860,7 +4860,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -13822,7 +13822,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -23158,7 +23158,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -32384,7 +32384,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -41426,7 +41426,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -51408,7 +51408,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -57263,7 +57263,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -63304,7 +63304,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={props.fill}
+      stroke={(() => {console.log("SVG props", props)})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
