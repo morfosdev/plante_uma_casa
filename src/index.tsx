@@ -1217,7 +1217,22 @@ const path1 = "all.toggles.box1";
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -4779,7 +4794,22 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -13683,7 +13713,22 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -22961,7 +23006,22 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -32129,7 +32189,22 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -41113,7 +41188,22 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -51037,7 +51127,22 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -56834,7 +56939,22 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
@@ -62817,7 +62937,22 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Menu`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
