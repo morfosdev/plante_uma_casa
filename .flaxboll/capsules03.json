@@ -1,4 +1,188 @@
 {
+  "ecad1044-0549-4a2d-894a-600a2978d14c": {
+    "capsDB": {
+      "capsID": "ecad1044-0549-4a2d-894a-600a2978d14c",
+      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
+      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
+      "capsCreatedAt": 1760367319424
+    },
+    "capsType": "useCode",
+    "capsUseCodeInfo": {
+      "capsCodeID": "ccc_stringValue",
+      "capsCodeVersionID": "1",
+      "capsUpdatedAt": [1760367319424],
+      "capsUseLabel": { "pt-br": "string value", "en": "string value" },
+      "capsUseDescription": {
+        "pt-br": "",
+        "en": "{\n\tbackgroundColor: 'transparent',\n}"
+      },
+      "capsUseInputs": {
+        "ccc_stringValue-0": {
+          "capsIptCodeID": "ccc_stringValue-0",
+          "capsIptTxtValue": "{\n\tbackgroundColor: 'transparent',\n}"
+        }
+      },
+      "capsUseConections": "1",
+      "parents": {
+        "conn_1": {
+          "connID": "conn_1",
+          "capsParentIptID": "ccc_dynView-1",
+          "parentData": {
+            "parentConnID": "conn_1",
+            "capsParentID": "ed4310d6-481d-4b4f-8234-3bdb231b4de1"
+          }
+        }
+      }
+    }
+  },
+  "9ee327a4-3aaf-45eb-a72d-b6553fa6c1cc": {
+    "capsDB": {
+      "capsID": "9ee327a4-3aaf-45eb-a72d-b6553fa6c1cc",
+      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
+      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
+      "capsCreatedAt": 1760367319424
+    },
+    "capsType": "useCode",
+    "capsUseCodeInfo": {
+      "capsCodeID": "ccc_text",
+      "capsCodeVersionID": "1",
+      "capsUpdatedAt": [1760367319424],
+      "capsUseLabel": { "pt-br": "Text", "en": "Text" },
+      "capsUseDescription": {
+        "pt-br": "",
+        "en": "$var_sc.A9.iptsChanges.owner"
+      },
+      "capsUseInputs": {
+        "ccc_text-0": { "capsIptCodeID": "ccc_text-0", "capsIptCapsValue": [] },
+        "ccc_text-1": {
+          "capsIptCodeID": "ccc_text-1",
+          "capsIptCapsValue": ["0beb16b7-7851-4983-b44e-234213a5848b"]
+        },
+        "ccc_text-2": {
+          "capsIptCodeID": "ccc_text-2",
+          "capsIptCapsValue": ["de12008c-2e76-4023-8c64-512be00cee66"]
+        }
+      },
+      "capsUseConections": "1",
+      "parents": {
+        "conn_1": {
+          "connID": "conn_1",
+          "capsParentIptID": "ccc_dynView-3",
+          "parentData": {
+            "parentConnID": "conn_1",
+            "capsParentID": "ed4310d6-481d-4b4f-8234-3bdb231b4de1"
+          }
+        }
+      }
+    }
+  },
+  "de12008c-2e76-4023-8c64-512be00cee66": {
+    "capsDB": {
+      "capsID": "de12008c-2e76-4023-8c64-512be00cee66",
+      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
+      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
+      "capsCreatedAt": 1760367319424
+    },
+    "capsType": "useCode",
+    "capsUseCodeInfo": {
+      "capsCodeID": "ccc_stringValue",
+      "capsCodeVersionID": "1",
+      "capsUpdatedAt": [1760367319424],
+      "capsUseLabel": {
+        "pt-br": "string value",
+        "en": "$var_sc.A9.iptsChanges.owner"
+      },
+      "capsUseDescription": { "pt-br": "", "en": "string value" },
+      "capsUseInputs": {
+        "ccc_stringValue-0": {
+          "capsIptCodeID": "ccc_stringValue-0",
+          "capsIptTxtValue": "$var_sc.A9.iptsChanges.owner"
+        }
+      },
+      "capsUseConections": "1",
+      "parents": {
+        "conn_1": {
+          "connID": "conn_1",
+          "capsParentIptID": "ccc_text-2",
+          "parentData": {
+            "parentConnID": "conn_1",
+            "capsParentID": "9ee327a4-3aaf-45eb-a72d-b6553fa6c1cc"
+          }
+        }
+      }
+    }
+  },
+  "f07aa0c9-9de6-456d-b7cb-8a58e4cbfcaf": {
+    "capsDB": {
+      "capsID": "f07aa0c9-9de6-456d-b7cb-8a58e4cbfcaf",
+      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
+      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
+      "capsCreatedAt": 1760367319424
+    },
+    "capsType": "useCode",
+    "capsUseCodeInfo": {
+      "capsCodeID": "ccc_text",
+      "capsCodeVersionID": "1",
+      "capsUpdatedAt": [1760367319424],
+      "capsUseLabel": { "pt-br": "Text", "en": "Text" },
+      "capsUseDescription": { "pt-br": "", "en": "Gestão Financeira" },
+      "capsUseInputs": {
+        "ccc_text-0": { "capsIptCodeID": "ccc_text-0", "capsIptCapsValue": [] },
+        "ccc_text-1": {
+          "capsIptCodeID": "ccc_text-1",
+          "capsIptCapsValue": ["2fd1b7b6-ba7c-4504-aab6-53d37a72b7f0"]
+        },
+        "ccc_text-2": {
+          "capsIptCodeID": "ccc_text-2",
+          "capsIptCapsValue": ["25d54eee-a173-4ae6-8acd-c6c84f3ce8c2"]
+        }
+      },
+      "capsUseConections": "1",
+      "parents": {
+        "conn_1": {
+          "connID": "conn_1",
+          "capsParentIptID": "ccc_dynView-3",
+          "parentData": {
+            "parentConnID": "conn_1",
+            "capsParentID": "ed4310d6-481d-4b4f-8234-3bdb231b4de1"
+          }
+        }
+      }
+    }
+  },
+  "25d54eee-a173-4ae6-8acd-c6c84f3ce8c2": {
+    "capsDB": {
+      "capsID": "25d54eee-a173-4ae6-8acd-c6c84f3ce8c2",
+      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
+      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
+      "capsCreatedAt": 1760367319424
+    },
+    "capsType": "useCode",
+    "capsUseCodeInfo": {
+      "capsCodeID": "ccc_stringValue",
+      "capsCodeVersionID": "1",
+      "capsUpdatedAt": [1760367319424],
+      "capsUseLabel": { "pt-br": "string value", "en": "string value" },
+      "capsUseDescription": { "pt-br": "", "en": "Gestão Financeira" },
+      "capsUseInputs": {
+        "ccc_stringValue-0": {
+          "capsIptCodeID": "ccc_stringValue-0",
+          "capsIptTxtValue": "Gestão Financeira"
+        }
+      },
+      "capsUseConections": "1",
+      "parents": {
+        "conn_1": {
+          "connID": "conn_1",
+          "capsParentIptID": "ccc_text-2",
+          "parentData": {
+            "parentConnID": "conn_1",
+            "capsParentID": "f07aa0c9-9de6-456d-b7cb-8a58e4cbfcaf"
+          }
+        }
+      }
+    }
+  },
   "08b7e492-89bd-490b-966b-a6c85cf538d1": {
     "capsDB": {
       "capsID": "08b7e492-89bd-490b-966b-a6c85cf538d1",
@@ -41257,228 +41441,6 @@
           "parentData": {
             "parentConnID": "conn_1",
             "capsParentID": "7b05174b-7899-44bc-92ea-bf41824c5312"
-          }
-        }
-      }
-    }
-  },
-  "695e3c74-8e71-4626-857b-e7283bb6f560": {
-    "capsDB": {
-      "capsID": "695e3c74-8e71-4626-857b-e7283bb6f560",
-      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
-      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
-      "capsCreatedAt": 1761927638404
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_flatList",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1761927638404],
-      "capsUseLabel": { "pt-br": "List", "en": "List Subs" },
-      "capsUseDescription": { "pt-br": "", "en": "" },
-      "capsUseInputs": {
-        "ccc_flatList-0": {
-          "capsIptCodeID": "ccc_flatList-0",
-          "capsIptCapsValue": []
-        },
-        "ccc_flatList-1": {
-          "capsIptCodeID": "ccc_flatList-1",
-          "capsIptCapsValue": ["853a79ec-3f2f-4bc2-a235-077abd0c4ecd"]
-        },
-        "ccc_flatList-2": {
-          "capsIptCodeID": "ccc_flatList-2",
-          "capsIptCapsValue": ["267e2b54-bbf1-4e50-aed4-d679c5e23028"]
-        },
-        "ccc_flatList-3": {
-          "capsIptCodeID": "ccc_flatList-3",
-          "capsIptCapsValue": []
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_dynView-3",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "6ddca328-4942-4caa-8417-910667692d4d"
-          }
-        }
-      }
-    }
-  },
-  "853a79ec-3f2f-4bc2-a235-077abd0c4ecd": {
-    "capsDB": {
-      "capsID": "853a79ec-3f2f-4bc2-a235-077abd0c4ecd",
-      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
-      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
-      "capsCreatedAt": 1761927638404
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_stringValue",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1761927638404],
-      "capsUseLabel": { "pt-br": "string value", "en": "string value" },
-      "capsUseDescription": { "pt-br": "", "en": "sc.B7.statics.steps.5.subs" },
-      "capsUseInputs": {
-        "ccc_stringValue-0": {
-          "capsIptCodeID": "ccc_stringValue-0",
-          "capsIptTxtValue": "sc.B7.statics.steps.5.subs"
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_flatList-1",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "695e3c74-8e71-4626-857b-e7283bb6f560"
-          }
-        }
-      }
-    }
-  },
-  "042b64c5-6a4a-460f-894e-bc3ed13559ff": {
-    "capsDB": {
-      "capsID": "042b64c5-6a4a-460f-894e-bc3ed13559ff",
-      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
-      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
-      "capsCreatedAt": 1761929237180
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_dynView",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1761929237180],
-      "capsUseLabel": { "en": "Step 7" },
-      "capsUseDescription": { "pt-br": "", "en": "Box" },
-      "capsUseInputs": {
-        "ccc_dynView-0": {
-          "capsIptCodeID": "ccc_dynView-0",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-1": {
-          "capsIptCodeID": "ccc_dynView-1",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-2": {
-          "capsIptCodeID": "ccc_dynView-2",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-3": {
-          "capsIptCodeID": "ccc_dynView-3",
-          "capsIptCapsValue": [
-            "6467cd89-8f61-49d2-9edc-3c473413f299",
-            "988157b3-5166-45fc-8c1f-20e3de8628dc"
-          ]
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_accordion-1",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "b62ddb74-8e80-459c-81e9-2e58fb3c1775"
-          }
-        }
-      }
-    }
-  },
-  "6467cd89-8f61-49d2-9edc-3c473413f299": {
-    "capsDB": {
-      "capsID": "6467cd89-8f61-49d2-9edc-3c473413f299",
-      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
-      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
-      "capsCreatedAt": 1761929237180
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_dynView",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1761929237180],
-      "capsUseLabel": { "pt-br": "Box", "en": "Title Container" },
-      "capsUseDescription": { "pt-br": "", "en": "Box" },
-      "capsUseInputs": {
-        "ccc_dynView-0": {
-          "capsIptCodeID": "ccc_dynView-0",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-1": {
-          "capsIptCodeID": "ccc_dynView-1",
-          "capsIptCapsValue": ["bae31195-51bb-4294-93b1-8bada9eb9e8f"]
-        },
-        "ccc_dynView-2": {
-          "capsIptCodeID": "ccc_dynView-2",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-3": {
-          "capsIptCodeID": "ccc_dynView-3",
-          "capsIptCapsValue": [
-            "b8d27af1-acf7-4067-9444-b427dbe7f3bf",
-            "87900a71-e9aa-448b-8fc2-cb1e2c9956f1"
-          ]
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_dynView-3",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "042b64c5-6a4a-460f-894e-bc3ed13559ff"
-          }
-        }
-      }
-    }
-  },
-  "b8d27af1-acf7-4067-9444-b427dbe7f3bf": {
-    "capsDB": {
-      "capsID": "b8d27af1-acf7-4067-9444-b427dbe7f3bf",
-      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
-      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
-      "capsCreatedAt": 1761929237180
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_dynView",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1761929237180],
-      "capsUseLabel": { "pt-br": "Box", "en": "boxIconTitle" },
-      "capsUseDescription": { "pt-br": "", "en": "" },
-      "capsUseInputs": {
-        "ccc_dynView-0": {
-          "capsIptCodeID": "ccc_dynView-0",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-1": {
-          "capsIptCodeID": "ccc_dynView-1",
-          "capsIptCapsValue": ["892750f5-39d9-4b06-a82f-d2c46b838b42"]
-        },
-        "ccc_dynView-2": {
-          "capsIptCodeID": "ccc_dynView-2",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-3": {
-          "capsIptCodeID": "ccc_dynView-3",
-          "capsIptCapsValue": [
-            "2a27c65e-90e7-473d-9f7d-41b9e001f3fb",
-            "7f826e25-f9d3-471a-8330-8f80e756a442"
-          ]
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_dynView-3",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "6467cd89-8f61-49d2-9edc-3c473413f299"
           }
         }
       }

@@ -573,7 +573,7 @@
       "capsUseInputs": {
         "sss_freeValue-0": {
           "capsIptCodeID": "sss_freeValue-0",
-          "capsIptTxtValue": "// ---------- import Packs\nimport JSON5 from 'json5';\nimport React, { useEffect, useState } from 'react';\nimport { Pressable, ScrollView, View } from 'react-native';\n\n// ---------- import Local Tools\nimport { getStlValues, mapElements, getVarValue, pathSel } from '../project';\nimport { useData } from '../../..';\n\nexport const css =\n  'color: lightblue; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';\n\ntype Tconds = '==' | '!=' | '>' | '<' | '<=' | '>=';\ntype Tprops = {\n  pass: {\n    elementsProperties: any;\n    styles: any;\n    functions: any[];\n    childrenItems: any;\n    args: any;\n  };\n};\n\nexport const processFunctions = async (arr: any[]) => {\n  const defaultVal = { trigger: '', arrFunctions: [] };\n\n  for (const fn of arr) {\n    if (typeof fn === 'function') {\n      const result = await fn();\n      return result || defaultVal;\n    }\n  }\n\n  return defaultVal;\n};\n\n// DynView / BOX\nexport const DynView = (props: Tprops) => {\n  if (!props) return <></>;\n\n  const [sttTypeFunc, setTypeFunc] = useState('');\n  const [sttCondParts, setCondParts] = useState({\n    path: '',\n    operator: '==',\n    compareVal: null,\n  });\n  const [sttPressFuncs, setPressFuncs] = useState<\n    Array<(args: any) => Promise<void>>\n  >([]);\n\n  let varValue = useData(ct => pathSel(ct, sttCondParts.path));\n\n  // ---------- set Props\n  const { elementsProperties, styles, functions } = props.pass;\n  const { childrenItems, args } = props.pass;\n\n  const callFn = async () => {\n    const { trigger, arrFunctions } = await processFunctions(functions);\n    setTypeFunc(trigger);\n    setPressFuncs(arrFunctions);\n\n    // ------- set Init Functions (Capsules)\n    if (trigger === 'on init') {\n      for (const currFunc of arrFunctions) await currFunc(args);\n    }\n    if (trigger === 'on listen') {\n      for (const currFunc of arrFunctions) {\n        const res: [string, Tconds, any] = await currFunc(args);\n        const path = res[0];\n        const operator = res[1];\n        const compareVal = res[2];\n\n        if (typeof path === 'string') {\n          console.log('VarPath', path);\n          setCondParts({ path, operator, compareVal });\n        }\n      }\n    }\n  };\n\n  useEffect(() => {\n    callFn();\n  }, []);\n\n  // ---------- set Variables Styles (If Exists)\n  const stl = getStlValues(styles);\n\n  // ------- set User Element Properties (If Exists)\n  const userElProps: any = {};\n  for (let strObj of elementsProperties) {\n    if (!strObj) continue;\n    if (!props) continue;\n    if (typeof strObj !== 'string') continue;\n\n    const parsedObject = JSON5.parse(strObj);\n\n    for (const keyProp in parsedObject) {\n      const valueProp = parsedObject[keyProp];\n\n      const [hasVar, varValue] = getVarValue(valueProp);\n\n      if (hasVar) userElProps[keyProp] = varValue;\n      if (!hasVar) userElProps[keyProp] = valueProp;\n    }\n  }\n\n  const allProps = {\n    style: stl,\n    ...userElProps,\n  };\n\n  // ---------- set Render\n  if (!sttTypeFunc)\n    return <View {...allProps}>{mapElements(childrenItems, args)}</View>;\n\n  if (sttTypeFunc === 'on press') {\n    allProps.children = mapElements(childrenItems, args);\n    allProps.onPress = async () => {\n      for (const currFunc of sttPressFuncs) await currFunc(args);\n    };\n\n    return <Pressable {...allProps} />;\n  }\n\n  if (sttTypeFunc === 'on init')\n    return <View {...allProps}>{mapElements(childrenItems, args)}</View>;\n\n  if (sttTypeFunc === 'on listen') {\n    const operators = {\n      '==': (a, b) => a == b,\n      '!=': (a, b) => a != b,\n      '>': (a, b) => a > b,\n      '>=': (a, b) => a >= b,\n      '<': (a, b) => a < b,\n      '<=': (a, b) => a <= b,\n    };\n\n    const operatorFunc = operators[sttCondParts.operator];\n    const condShow = operatorFunc?.(varValue, sttCondParts.compareVal);\n\n    return (\n      condShow && <View {...allProps}>{mapElements(childrenItems, args)}</View>\n    );\n  }\n};"
+          "capsIptTxtValue": "// ---------- import Packs\nimport JSON5 from \"json5\";\nimport React, { useEffect, useState } from \"react\";\nimport { Pressable, useWindowDimensions, View } from \"react-native\";\n\n// ---------- import Local Tools\nimport { useData } from \"../../..\";\nimport { getStlValues, getVarValue, mapElements, pathSel } from \"../project\";\n\nexport const css =\n  \"color: lightblue; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px\";\n\ntype Tconds = \"==\" | \"!=\" | \">\" | \"<\" | \"<=\" | \">=\";\ntype Tprops = {\n  pass: {\n    elementsProperties: any;\n    styles: string[];\n    functions: any[];\n    childrenItems: any;\n    args: any;\n  };\n};\n\nexport const processFunctions = async (arr: any[]) => {\n  const defaultVal = { trigger: \"\", arrFunctions: [] };\n\n  for (const fn of arr) {\n    if (typeof fn === \"function\") {\n      const result = await fn();\n      return result || defaultVal;\n    }\n  }\n\n  return defaultVal;\n};\n\nconst OPERATORS = {\n  \"==\": (a: any, b: any) => a == b,\n  \"!=\": (a: any, b: any) => a != b,\n  \">\": (a: any, b: any) => a > b,\n  \">=\": (a: any, b: any) => a >= b,\n  \"<\": (a: any, b: any) => a < b,\n  \"<=\": (a: any, b: any) => a <= b,\n} as const satisfies Record<Tconds, (a: any, b: any) => boolean>;\n\n// DynView / BOX\nexport const DynView = (props: Tprops) => {\n  if (!props) return <></>;\n  const { width } = useWindowDimensions();\n  const isMobile = width < 767;\n\n  const [sttTypeFunc, setTypeFunc] = useState(\"\");\n  const [sttCondParts, setCondParts] = useState({\n    path: \"\",\n    operator: \"==\",\n    compareVal: null,\n  });\n  const [sttPressFuncs, setPressFuncs] = useState<\n    Array<(args: any) => Promise<void>>\n  >([]);\n\n  const condRespVar = isMobile ? \"mobile\" : \"desktop\";\n\n  const condRespPath = React.useMemo(() => {\n    if (!sttCondParts.path) return \"\";\n    const isSpecialChar = sttCondParts.path.includes(\"@\");\n    return isSpecialChar\n      ? sttCondParts.path.replace(\"@media\", condRespVar)\n      : sttCondParts.path;\n  }, [sttCondParts.path, condRespVar]);\n\n  let varValue = useData((ct) =>\n    condRespPath ? pathSel(ct, condRespPath) : null,\n  );\n\n  // ---------- set Props\n  const { elementsProperties, functions } = props.pass;\n  const { childrenItems, args } = props.pass;\n  let { styles } = props.pass;\n\n  // ---- Media Breakpoints\n  const processedStyles = React.useMemo(() => {\n    if (!Array.isArray(styles)) {\n      return typeof styles === \"string\" ? [] : [];\n    }\n\n    return styles.map((style) => {\n      if (typeof style !== \"string\") return style;\n\n      if (isMobile) {\n        const mobilePart = style.match(\n          /@mediaMobile\\s*([\\s\\S]*?)(?=@mediaDesktop|$)/,\n        );\n        return mobilePart ? mobilePart[1] : style;\n      } else {\n        const desktopPart = style.match(/@mediaDesktop\\s*([\\s\\S]*?)$/);\n        return desktopPart ? desktopPart[1] : style;\n      }\n    });\n  }, [styles, isMobile]);\n\n  const callFn = React.useCallback(async () => {\n    const { trigger, arrFunctions } = await processFunctions(functions);\n    setTypeFunc(trigger);\n    setPressFuncs(arrFunctions);\n\n    // ------- set Init Functions (Capsules)\n    if (trigger === \"on init\") {\n      for (const currFunc of arrFunctions) await currFunc(args);\n    }\n    if (trigger === \"on listen\") {\n      for (const currFunc of arrFunctions) {\n        const res: [string, Tconds, any] = await currFunc(args);\n        const path = res[0];\n        const operator = res[1];\n        const compareVal = res[2];\n\n        if (typeof path === \"string\") {\n          setCondParts({ path, operator, compareVal });\n        }\n      }\n    }\n  }, [functions, args]);\n\n  useEffect(() => {\n    callFn();\n  }, []);\n\n  // ---------- set Variables Styles (If Exists)\n  const stl = getStlValues(processedStyles);\n\n  if (condRespPath != \"\")\n    console.log(\"log\", {\n      stl,\n      condRespPath,\n      varValue,\n      styles,\n      processedStyles,\n    });\n\n  // ------- set User Element Properties (If Exists)\n  const userElProps = React.useMemo(() => {\n    const props: any = {};\n\n    for (let strObj of elementsProperties) {\n      if (!strObj) continue;\n      if (typeof strObj !== \"string\") continue;\n\n      const trimmed = strObj.trim();\n      if (!trimmed.startsWith(\"{\") && !trimmed.startsWith(\"[\")) continue;\n\n      try {\n        const parsedObject = JSON5.parse(strObj);\n\n        for (const keyProp in parsedObject) {\n          const valueProp = parsedObject[keyProp];\n          const [hasVar, varValue] = getVarValue(valueProp, \"Component\");\n\n          if (hasVar) props[keyProp] = varValue;\n          if (!hasVar) props[keyProp] = valueProp;\n        }\n      } catch (error) {\n        // Silenciosamente ignora JSON inválido\n      }\n    }\n\n    return props;\n  }, [elementsProperties]);\n\n  const allProps = {\n    style: stl,\n    ...userElProps,\n  };\n\n  // ---------- set Render\n  if (!sttTypeFunc)\n    return <View {...allProps}>{mapElements(childrenItems, args)}</View>;\n\n  if (sttTypeFunc === \"on press\") {\n    allProps.children = mapElements(childrenItems, args);\n    allProps.onPress = async () => {\n      for (const currFunc of sttPressFuncs) await currFunc(args);\n    };\n\n    return <Pressable {...allProps} />;\n  }\n\n  if (sttTypeFunc === \"on init\")\n    return <View {...allProps}>{mapElements(childrenItems, args)}</View>;\n\n  if (sttTypeFunc === \"on listen\") {\n    const operatorFunc = OPERATORS[sttCondParts.operator as Tconds];\n    const condShow = operatorFunc?.(varValue, sttCondParts.compareVal);\n\n    return (\n      condShow && <View {...allProps}>{mapElements(childrenItems, args)}</View>\n    );\n  }\n};"
         }
       },
       "capsUseConections": "1"
@@ -4429,7 +4429,7 @@
       "capsUseInputs": {
         "sss_freeValue-0": {
           "capsIptCodeID": "sss_freeValue-0",
-          "capsIptTxtValue": "// ---------- import Packs\nimport JSON5 from 'json5';\nimport { Style, getStylesForProperty } from 'css-to-react-native';\n\n// ---------- import Local Tools\nimport { getVarValue } from './getVarValue';\n\n// ----------- set Style Variable Selection\nexport const getStlValues = (arrGetValues: string[]) => {\n  const arrStyles = arrGetValues.map(value => {\n    if (typeof value !== 'string') {\n      value = JSON.stringify(value);\n    }\n\n    const trimmedString = value.trim();\n\n    const parsedObject = JSON5.parse(trimmedString);\n\n    return parsedObject;\n  });\n\n  const allStls = arrStyles.flatMap(style => {\n    if (style.shadowOffset) return style;\n\n    const possibleValues = Object.keys(style);\n\n    const setPx = (stlVal: any) => {\n      const checkNum = typeof stlVal === 'number';\n      const condVal = checkNum ? String(stlVal) + 'px' : stlVal;\n\n      return condVal;\n    };\n\n    const result = possibleValues.flatMap(key => {\n      const stlVal = style[key];\n\n      const [condVar, varValue] = getVarValue(stlVal, 'noComponent');\n\n      if (!condVar) {\n        const valToPx = String(setPx(stlVal));\n        const process2 = getStylesForProperty(key, valToPx);\n\n        return process2;\n      }\n\n      const varToPx = String(setPx(varValue));\n      const process3 = getStylesForProperty(key, varToPx, true);\n\n      return process3;\n    });\n\n    return result as Style[];\n  });\n\n  return allStls;\n};"
+          "capsIptTxtValue": "// ---------- import Packs\nimport { Style, getStylesForProperty } from \"css-to-react-native\";\nimport JSON5 from \"json5\";\n\n// ---------- import Local Tools\nimport { getVarValue } from \"./getVarValue\";\n\n// ----------- set Style Variable Selection\nexport const getStlValues = (arrGetValues: string[]) => {\n  if (!Array.isArray(arrGetValues)) {\n    return {};\n  }\n\n  const arrStyles = arrGetValues\n    .filter((value) => {\n      if (!value) return false;\n      const trimmed = String(value).trim();\n      // Valida se é JSON (começa com { ou [)\n      return trimmed.startsWith(\"{\") || trimmed.startsWith(\"[\");\n    })\n    .map((value) => {\n      if (typeof value !== \"string\") {\n        value = JSON.stringify(value);\n      }\n\n      const trimmedString = value.trim();\n\n      try {\n        const parsedObject = JSON5.parse(trimmedString);\n        return parsedObject;\n      } catch (error) {\n        console.warn(\"Failed to parse style:\", trimmedString, error);\n        return {};\n      }\n    });\n\n  const allStls = arrStyles.flatMap((style) => {\n    if (style.shadowOffset) return style;\n\n    const possibleValues = Object.keys(style);\n\n    const setPx = (stlVal: any) => {\n      const checkNum = typeof stlVal === \"number\";\n      const condVal = checkNum ? String(stlVal) + \"px\" : stlVal;\n\n      return condVal;\n    };\n\n    const result = possibleValues.flatMap((key) => {\n      const stlVal = style[key];\n\n      const [condVar, varValue] = getVarValue(stlVal, \"noComponent\");\n\n      if (!condVar) {\n        const valToPx = String(setPx(stlVal));\n        const process2 = getStylesForProperty(key, valToPx);\n\n        return process2;\n      }\n\n      const varToPx = String(setPx(varValue));\n      const process3 = getStylesForProperty(key, varToPx, true);\n\n      return process3;\n    });\n\n    return result as Style[];\n  });\n\n  return allStls;\n};\n"
         }
       },
       "capsUseConections": "1"
@@ -25837,112 +25837,6 @@
           "parentData": {
             "parentConnID": "conn_1",
             "capsParentID": "1e0e1089-e642-4166-8c9c-4b696f1b6e48"
-          }
-        }
-      }
-    }
-  },
-  "5545717b-6a1a-46aa-8ef5-2333a86a1ffb": {
-    "capsDB": {
-      "capsID": "5545717b-6a1a-46aa-8ef5-2333a86a1ffb",
-      "capsPrjID": "v0XFMalzudFUWmh8We7w",
-      "capsUserID": "6tSxwdCxmvKXpnoIsJ75",
-      "capsCreatedAt": 1763384774105
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "sss_freeValue",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1763384774105],
-      "capsUseLabel": { "pt-br": "free value", "en": "free value" },
-      "capsUseDescription": { "pt-br": "", "en": "" },
-      "capsUseInputs": {
-        "sss_freeValue-0": {
-          "capsIptCodeID": "sss_freeValue-0",
-          "capsIptTxtValue": "undefined"
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_setVar-1",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "1e0e1089-e642-4166-8c9c-4b696f1b6e48"
-          }
-        }
-      }
-    }
-  },
-  "70c813f7-6fa4-4489-ba89-5445e409e329": {
-    "capsDB": {
-      "capsID": "70c813f7-6fa4-4489-ba89-5445e409e329",
-      "capsPrjID": "v0XFMalzudFUWmh8We7w",
-      "capsUserID": "6tSxwdCxmvKXpnoIsJ75",
-      "capsCreatedAt": 1763384775919
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_setVar",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1763384775919],
-      "capsUseLabel": { "en": "clean message validation" },
-      "capsUseDescription": {
-        "pt-br": "",
-        "en": "setVar\nsc.A0B.forms.msgs.msg2"
-      },
-      "capsUseInputs": {
-        "ccc_setVar-0": {
-          "capsIptCodeID": "ccc_setVar-0",
-          "capsIptCapsValue": ["b19b2c2b-1ecc-4c87-8645-5a52b4b590f9"]
-        },
-        "ccc_setVar-1": {
-          "capsIptCodeID": "ccc_setVar-1",
-          "capsIptCapsValue": ["0d55f03c-8bf9-49ac-becb-77210a8d4b15"]
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_funcGroup-0",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "7db13930-356e-4a9f-b284-1d0bf9653a95"
-          }
-        }
-      }
-    }
-  },
-  "b19b2c2b-1ecc-4c87-8645-5a52b4b590f9": {
-    "capsDB": {
-      "capsID": "b19b2c2b-1ecc-4c87-8645-5a52b4b590f9",
-      "capsPrjID": "v0XFMalzudFUWmh8We7w",
-      "capsUserID": "6tSxwdCxmvKXpnoIsJ75",
-      "capsCreatedAt": 1763384775920
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_stringValue",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1763384775920],
-      "capsUseLabel": { "pt-br": "string value", "en": "string value" },
-      "capsUseDescription": { "pt-br": "", "en": "sc.A0B.forms.msgs.msg2" },
-      "capsUseInputs": {
-        "ccc_stringValue-0": {
-          "capsIptCodeID": "ccc_stringValue-0",
-          "capsIptTxtValue": "sc.A0B.forms.msgs.msg2"
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_setVar-0",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "70c813f7-6fa4-4489-ba89-5445e409e329"
           }
         }
       }
