@@ -1224,6 +1224,8 @@ const path1 = "all.toggles.box1";
 
 console.log({tools});
 
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
@@ -4810,6 +4812,8 @@ backgroundColor: "#f5f5f5",
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
 console.log({tools});
+
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
@@ -13739,6 +13743,8 @@ backgroundColor: "#f5f5f5",
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
 console.log({tools});
+
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
@@ -23043,6 +23049,8 @@ backgroundColor: "#f5f5f5",
 
 console.log({tools});
 
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
@@ -32236,6 +32244,8 @@ backgroundColor: "#f5f5f5",
 
 console.log({tools});
 
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
@@ -41244,6 +41254,8 @@ backgroundColor: "#f5f5f5",
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
 console.log({tools});
+
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
@@ -51194,6 +51206,8 @@ backgroundColor: "#f5f5f5",
 
 console.log({tools});
 
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
@@ -57015,6 +57029,8 @@ backgroundColor: "#f5f5f5",
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
 console.log({tools});
+
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
@@ -63023,6 +63039,8 @@ backgroundColor: "#f5f5f5",
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
 console.log({tools});
+
+tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
 	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
