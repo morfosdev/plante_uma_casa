@@ -14622,6 +14622,7 @@ async (...args) =>
 
             styles:[`{
 	flexDirection: 'row',
+	alignItems: "center"
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -14707,7 +14708,17 @@ async (...args) =>
 }`],
 
             functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	display: "none"
+}
+@mediaDesktop{}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -14726,7 +14737,11 @@ async (...args) =>
 
           args,
 
-        }}/>, (...args:any) => <Elements.Text pass={{
+        }}/>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -14759,7 +14774,18 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	height: 25,
+	backgroundColor: 'transparent',
+	paddingHorizontal: 14,
+	paddingVertical: 8,
+	borderWidth: 2,
+	borderRadius: 20,
+	borderColor: 'white',
+	justifyContent: 'center',
+	alignItems: 'center',
+}
+@mediaDesktop{
 	height: 30,
 	backgroundColor: 'transparent',
 	paddingHorizontal: 30,
