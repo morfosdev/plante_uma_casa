@@ -1233,19 +1233,21 @@ const path1 = "all.toggles.box1";
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
@@ -4852,19 +4854,21 @@ backgroundColor: "#f5f5f5",
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
@@ -13813,19 +13817,21 @@ backgroundColor: "#f5f5f5",
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
@@ -23148,19 +23154,21 @@ backgroundColor: "#f5f5f5",
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
@@ -32373,19 +32381,21 @@ backgroundColor: "#f5f5f5",
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
@@ -41414,19 +41424,21 @@ backgroundColor: "#f5f5f5",
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
@@ -51395,19 +51407,21 @@ backgroundColor: "#f5f5f5",
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
@@ -57249,19 +57263,21 @@ backgroundColor: "#f5f5f5",
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
@@ -63289,19 +63305,21 @@ backgroundColor: "#f5f5f5",
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={14}
-              viewBox="0 0 20 14"
-              {...props}
-              >
-              <Path
-              fillRule="evenodd"
-              d="M7.707.293a1 1 0 0 1 0 1.414L3.414 6H19a1 1 0 1 1 0 2H3.414l4.293 4.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-              clipRule="evenodd"
-              {...props}
-              />
-              </Svg>)
+    xmlns="http://www.w3.org/2000/svg"
+    width={40}
+    height={40}
+    fill="red"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <Path
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M5 20h30M5 10h30M5 30h30"
+    />
+  </Svg>)
       },
 
       svgOriginal: `
