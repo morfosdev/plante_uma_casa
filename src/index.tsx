@@ -1277,7 +1277,12 @@ const path1 = "all.toggles.box1";
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -4913,7 +4918,12 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -13995,7 +14005,12 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -23451,7 +23466,12 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -32797,7 +32817,12 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -41959,7 +41984,12 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -52045,7 +52075,12 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -58004,7 +58039,12 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -64149,7 +64189,12 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ flex: 1 }`],
+            styles:[`@mediaMobile
+{}
+@mediaDesktop
+{
+	flex: 1
+}`],
 
             functions:[()=>{}],            childrenItems:[
 
