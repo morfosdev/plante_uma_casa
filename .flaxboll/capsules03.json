@@ -1,37 +1,4 @@
 {
-  "25d54eee-a173-4ae6-8acd-c6c84f3ce8c2": {
-    "capsDB": {
-      "capsID": "25d54eee-a173-4ae6-8acd-c6c84f3ce8c2",
-      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
-      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
-      "capsCreatedAt": 1760367319424
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_stringValue",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1760367319424],
-      "capsUseLabel": { "pt-br": "string value", "en": "string value" },
-      "capsUseDescription": { "pt-br": "", "en": "Gestão Financeira" },
-      "capsUseInputs": {
-        "ccc_stringValue-0": {
-          "capsIptCodeID": "ccc_stringValue-0",
-          "capsIptTxtValue": "Gestão Financeira"
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_text-2",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "f07aa0c9-9de6-456d-b7cb-8a58e4cbfcaf"
-          }
-        }
-      }
-    }
-  },
   "08b7e492-89bd-490b-966b-a6c85cf538d1": {
     "capsDB": {
       "capsID": "08b7e492-89bd-490b-966b-a6c85cf538d1",
@@ -41464,6 +41431,54 @@
           "parentData": {
             "parentConnID": "conn_1",
             "capsParentID": "042b64c5-6a4a-460f-894e-bc3ed13559ff"
+          }
+        }
+      }
+    }
+  },
+  "b8d27af1-acf7-4067-9444-b427dbe7f3bf": {
+    "capsDB": {
+      "capsID": "b8d27af1-acf7-4067-9444-b427dbe7f3bf",
+      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
+      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
+      "capsCreatedAt": 1761929237180
+    },
+    "capsType": "useCode",
+    "capsUseCodeInfo": {
+      "capsCodeID": "ccc_dynView",
+      "capsCodeVersionID": "1",
+      "capsUpdatedAt": [1761929237180],
+      "capsUseLabel": { "pt-br": "Box", "en": "boxIconTitle" },
+      "capsUseDescription": { "pt-br": "", "en": "" },
+      "capsUseInputs": {
+        "ccc_dynView-0": {
+          "capsIptCodeID": "ccc_dynView-0",
+          "capsIptCapsValue": []
+        },
+        "ccc_dynView-1": {
+          "capsIptCodeID": "ccc_dynView-1",
+          "capsIptCapsValue": ["892750f5-39d9-4b06-a82f-d2c46b838b42"]
+        },
+        "ccc_dynView-2": {
+          "capsIptCodeID": "ccc_dynView-2",
+          "capsIptCapsValue": []
+        },
+        "ccc_dynView-3": {
+          "capsIptCodeID": "ccc_dynView-3",
+          "capsIptCapsValue": [
+            "2a27c65e-90e7-473d-9f7d-41b9e001f3fb",
+            "7f826e25-f9d3-471a-8330-8f80e756a442"
+          ]
+        }
+      },
+      "capsUseConections": "1",
+      "parents": {
+        "conn_1": {
+          "connID": "conn_1",
+          "capsParentIptID": "ccc_dynView-3",
+          "parentData": {
+            "parentConnID": "conn_1",
+            "capsParentID": "6467cd89-8f61-49d2-9edc-3c473413f299"
           }
         }
       }

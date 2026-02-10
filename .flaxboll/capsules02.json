@@ -3454,7 +3454,7 @@
       "capsUseInputs": {
         "ccc_stringValue-0": {
           "capsIptCodeID": "ccc_stringValue-0",
-          "capsIptTxtValue": "@mediaMobile\n{\n\twidth: \"100%\",\n\theight: \"100%\",\n\tbackgroundColor: \"white\",\n\tposition: \"absolute\",\n\tleft: 0,\n\ttop: 0,\n\tzIndex: 1000\n}\n@mediaDesktop\n{\n\twidth: 200,\n\theight: \"100%\",\n\tbackgroundColor: \"white\"\n}"
+          "capsIptTxtValue": "{\n\twidth: 200,\n\theight: \"100%\",\n\tbackgroundColor: \"white\"\n}"
         }
       },
       "capsUseConections": "1"
@@ -39464,6 +39464,39 @@
           "parentData": {
             "parentConnID": "conn_1",
             "capsParentID": "ed4310d6-481d-4b4f-8234-3bdb231b4de1"
+          }
+        }
+      }
+    }
+  },
+  "25d54eee-a173-4ae6-8acd-c6c84f3ce8c2": {
+    "capsDB": {
+      "capsID": "25d54eee-a173-4ae6-8acd-c6c84f3ce8c2",
+      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
+      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
+      "capsCreatedAt": 1760367319424
+    },
+    "capsType": "useCode",
+    "capsUseCodeInfo": {
+      "capsCodeID": "ccc_stringValue",
+      "capsCodeVersionID": "1",
+      "capsUpdatedAt": [1760367319424],
+      "capsUseLabel": { "pt-br": "string value", "en": "string value" },
+      "capsUseDescription": { "pt-br": "", "en": "Gestão Financeira" },
+      "capsUseInputs": {
+        "ccc_stringValue-0": {
+          "capsIptCodeID": "ccc_stringValue-0",
+          "capsIptTxtValue": "Gestão Financeira"
+        }
+      },
+      "capsUseConections": "1",
+      "parents": {
+        "conn_1": {
+          "connID": "conn_1",
+          "capsParentIptID": "ccc_text-2",
+          "parentData": {
+            "parentConnID": "conn_1",
+            "capsParentID": "f07aa0c9-9de6-456d-b7cb-8a58e4cbfcaf"
           }
         }
       }
