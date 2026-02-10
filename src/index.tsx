@@ -53237,6 +53237,47 @@ fontWeight: '500',
             args,
           }}/>
         , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: "100%",
+	height: 250,
+	overflow: "hidden",
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+	marginBottom: 20
+}
+@mediaDesktop{
+	width: 150,
+	height: 100,
+	overflow: "hidden",
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: "100%",
+	height: "100%"
+}],
+
+      URIvariablePath:[`$arg_image`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
 
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
