@@ -5457,8 +5457,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 70,
-	paddingRight: 145,
+	paddingLeft: 30,
+	paddingRight: 30,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -52719,8 +52719,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 70,
-	paddingRight: 145,
+	paddingLeft: 30,
+	paddingRight: 30,
 	shadowColor: '#000',
 }
 @mediaDesktop{
