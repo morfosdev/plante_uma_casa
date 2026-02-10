@@ -1222,11 +1222,10 @@ const path1 = "all.toggles.box1";
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -4811,11 +4810,10 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -13742,11 +13740,10 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -23047,11 +23044,10 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -32242,11 +32238,10 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -41253,11 +41248,10 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -51204,11 +51198,10 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -57028,11 +57021,10 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -63038,11 +63030,10 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-console.log({tools});
+	console.log({tools});
 
-tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
+	tools.setData({path: "all.toggles.mobile.sideLeft", value: !menuValue});
 
-	tools.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
