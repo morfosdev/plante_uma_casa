@@ -5677,6 +5677,7 @@ right: 0,
 		shadowRadius: 4,
 	borderRadius: 10,
 	alignItems: 'center',
+	marginBottom: 20
 }`],
 
             functions:[async (...args) =>
@@ -5945,6 +5946,7 @@ fontWeight: '500',
             styles:[`@mediaMobile{
 	width: "100%",
 	height: 250,
+	overflow: "hidden",
 	borderRadius: '6px',
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
@@ -5952,6 +5954,7 @@ fontWeight: '500',
 @mediaDesktop{
 	width: 150,
 	height: 100,
+	overflow: "hidden",
 	borderRadius: '6px',
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
@@ -53034,6 +53037,7 @@ right: 0,
 		shadowRadius: 4,
 	borderRadius: 10,
 	alignItems: 'center',
+	marginBottom: 20
 }`],
 
             functions:[
