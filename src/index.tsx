@@ -5450,7 +5450,18 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	width: '100%',
+	height: 40,
+	backgroundColor: '#a6a6a6',
+	flexDirection: 'row',
+	justifyContent: 'space-between',
+	alignItems: 'center',
+	paddingLeft: 70,
+	paddingRight: 145,
+	shadowColor: '#000',
+}
+@mediaDesktop{
 	width: '100%',
 	height: 100,
 	backgroundColor: '#a6a6a6',
@@ -52687,7 +52698,18 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	width: '100%',
+	height: 40,
+	backgroundColor: '#a6a6a6',
+	flexDirection: 'row',
+	justifyContent: 'space-between',
+	alignItems: 'center',
+	paddingLeft: 70,
+	paddingRight: 145,
+	shadowColor: '#000',
+}
+@mediaDesktop{
 	width: '100%',
 	height: 100,
 	backgroundColor: '#a6a6a6',
