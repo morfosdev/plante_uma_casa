@@ -1191,12 +1191,20 @@ const path1 = "all.toggles.box1";
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -1340,12 +1348,20 @@ const path1 = "all.toggles.box1";
 	alignItems: "center",
 }
 
-`, `{ 
+`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -1412,12 +1428,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -1937,12 +1961,20 @@ justifyContent: 'center',
 	backgroundColor: "transparent"
 }`, 
         `{ width: "100%", flexDirection: "row", alignItems: "center" }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, 
+}`, 
         `{ width: "100%", flexDirection: "row", alignItems: "flex-end" }`, 
         `{ backgroundColor: "$var_all.colors.primary" }`, 
         `{ flex: 1 }`, 
@@ -4795,12 +4827,20 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -5906,12 +5946,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -6003,12 +6051,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -6743,12 +6799,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -6855,12 +6919,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -7879,12 +7951,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -7971,12 +8051,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -8151,12 +8239,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -8248,12 +8344,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -9392,12 +9496,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -9504,12 +9616,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -10805,12 +10925,20 @@ height: '100%',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -10902,12 +11030,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -11651,12 +11787,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -11763,12 +11907,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -12822,12 +12974,20 @@ height: '100%',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -12919,12 +13079,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -13741,12 +13909,20 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -15249,12 +15425,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -15346,12 +15530,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -16086,12 +16278,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -16198,12 +16398,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -17222,12 +17430,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -17314,12 +17530,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -17494,12 +17718,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -17591,12 +17823,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -18735,12 +18975,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -18847,12 +19095,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -20148,12 +20404,20 @@ height: '100%',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -20245,12 +20509,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -20994,12 +21266,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -21106,12 +21386,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -22165,12 +22453,20 @@ height: '100%',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -22262,12 +22558,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -23061,12 +23365,20 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -24431,12 +24743,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -24528,12 +24848,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -25268,12 +25596,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -25380,12 +25716,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -26404,12 +26748,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -26496,12 +26848,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -26676,12 +27036,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -26773,12 +27141,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -27917,12 +28293,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -28029,12 +28413,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -29330,12 +29722,20 @@ height: '100%',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -29427,12 +29827,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -30176,12 +30584,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -30288,12 +30704,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -31347,12 +31771,20 @@ height: '100%',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -31444,12 +31876,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -32271,12 +32711,20 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -33479,12 +33927,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -33576,12 +34032,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -34316,12 +34780,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -34428,12 +34900,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -35452,12 +35932,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -35544,12 +36032,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -35724,12 +36220,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -35821,12 +36325,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -36965,12 +37477,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -37077,12 +37597,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -38378,12 +38906,20 @@ height: '100%',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -38475,12 +39011,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -39224,12 +39768,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -39336,12 +39888,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -40395,12 +40955,20 @@ height: '100%',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -40492,12 +41060,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -41297,12 +41873,20 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -46440,12 +47024,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -46527,12 +47119,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -46704,12 +47304,20 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -46776,12 +47384,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -47376,12 +47992,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -47473,12 +48097,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -48057,12 +48689,20 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -48129,12 +48769,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -48730,12 +49378,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -48817,12 +49473,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -49605,12 +50269,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -49692,12 +50364,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -50530,12 +51210,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -50617,12 +51305,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -51263,12 +51959,20 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -52249,12 +52953,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -52336,12 +53048,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -52513,12 +53233,20 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -52585,12 +53313,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -53185,12 +53921,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -53282,12 +54026,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -53866,12 +54618,20 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -53938,12 +54698,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -54539,12 +55307,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -54626,12 +55402,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -55414,12 +56198,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -55501,12 +56293,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -56339,12 +57139,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -56426,12 +57234,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -57102,12 +57918,20 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -58317,12 +59141,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -58404,12 +59236,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -58581,12 +59421,20 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -58653,12 +59501,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -59253,12 +60109,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -59350,12 +60214,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -59934,12 +60806,20 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -60006,12 +60886,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -60607,12 +61495,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -60694,12 +61590,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -61482,12 +62386,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -61569,12 +62481,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -62407,12 +63327,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -62494,12 +63422,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -63127,12 +64063,20 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{
+}`, `{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -67847,12 +68791,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -67934,12 +68886,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -68111,12 +69071,20 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -68183,12 +69151,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -68783,12 +69759,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -68880,12 +69864,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -69464,12 +70456,20 @@ fontWeight: '700',
         `{ 
 	backgroundColor: "white",
 	alignItems: "center",
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -69536,12 +70536,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -70137,12 +71145,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -70224,12 +71240,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -71012,12 +72036,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -71099,12 +72131,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -71937,12 +72977,20 @@ backgroundColor: '#f5f5f5',
 	shadowOffset: { width: 0, height: 4 },
 	shadowOpacity: 0.1,
 	shadowRadius: 4,
-}`, `{ 
+}`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -72024,12 +73072,20 @@ async (...args) =>
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[
 
@@ -83864,12 +84920,20 @@ fontWeight: '700',
 	alignItems: "center",
 }
 
-`, `{ 
+`, `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`],
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -83936,12 +85000,20 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[
         `{ flex: 1 }`, 
-        `{ 
+        `@mediaMobile
+{ 
+	width: "100%",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "space-between"
+}
+@mediaDesktop
+{ 
 	width: "100%",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
- }`, `{ padding: 10 }`],
+}`, `{ padding: 10 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
