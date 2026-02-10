@@ -1228,8 +1228,7 @@ const path1 = "all.toggles.box1";
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -1240,7 +1239,7 @@ const path1 = "all.toggles.box1";
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -1260,22 +1259,7 @@ const path1 = "all.toggles.box1";
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -4848,8 +4832,7 @@ backgroundColor: "#f5f5f5",
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -4860,7 +4843,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -4880,22 +4863,7 @@ backgroundColor: "#f5f5f5",
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -13810,8 +13778,7 @@ backgroundColor: "#f5f5f5",
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -13822,7 +13789,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -13842,22 +13809,7 @@ backgroundColor: "#f5f5f5",
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -23146,8 +23098,7 @@ backgroundColor: "#f5f5f5",
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -23158,7 +23109,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -23178,22 +23129,7 @@ backgroundColor: "#f5f5f5",
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -32372,8 +32308,7 @@ backgroundColor: "#f5f5f5",
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -32384,7 +32319,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -32404,22 +32339,7 @@ backgroundColor: "#f5f5f5",
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -41414,8 +41334,7 @@ backgroundColor: "#f5f5f5",
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -41426,7 +41345,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -41446,22 +41365,7 @@ backgroundColor: "#f5f5f5",
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -51396,8 +51300,7 @@ backgroundColor: "#f5f5f5",
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -51408,7 +51311,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -51428,22 +51331,7 @@ backgroundColor: "#f5f5f5",
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -57251,8 +57139,7 @@ backgroundColor: "#f5f5f5",
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -57263,7 +57150,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -57283,22 +57170,7 @@ backgroundColor: "#f5f5f5",
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -63292,8 +63164,7 @@ backgroundColor: "#f5f5f5",
 
 }]
  , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
@@ -63304,7 +63175,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-      stroke={(() => {console.log("SVG props", props); return props.fill})()}
+      stroke={(() => props.fill})()}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -63324,22 +63195,7 @@ backgroundColor: "#f5f5f5",
       preenchimento: [`#fff`],
 
       args,
-    }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `Menu`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
