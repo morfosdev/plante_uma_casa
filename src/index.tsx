@@ -1236,7 +1236,6 @@ const path1 = "all.toggles.box1";
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -1254,11 +1253,11 @@ const path1 = "all.toggles.box1";
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -4857,7 +4856,6 @@ backgroundColor: "#f5f5f5",
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -4875,11 +4873,11 @@ backgroundColor: "#f5f5f5",
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -13820,7 +13818,6 @@ backgroundColor: "#f5f5f5",
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -13838,11 +13835,11 @@ backgroundColor: "#f5f5f5",
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -23157,7 +23154,6 @@ backgroundColor: "#f5f5f5",
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -23175,11 +23171,11 @@ backgroundColor: "#f5f5f5",
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -32384,7 +32380,6 @@ backgroundColor: "#f5f5f5",
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -32402,11 +32397,11 @@ backgroundColor: "#f5f5f5",
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -41427,7 +41422,6 @@ backgroundColor: "#f5f5f5",
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -41445,11 +41439,11 @@ backgroundColor: "#f5f5f5",
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -51410,7 +51404,6 @@ backgroundColor: "#f5f5f5",
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -51428,11 +51421,11 @@ backgroundColor: "#f5f5f5",
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -57266,7 +57259,6 @@ backgroundColor: "#f5f5f5",
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -57284,11 +57276,11 @@ backgroundColor: "#f5f5f5",
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -63308,7 +63300,6 @@ backgroundColor: "#f5f5f5",
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
     viewBox="0 0 40 40"
     {...props}
   >
@@ -63326,11 +63317,11 @@ backgroundColor: "#f5f5f5",
         <svg></svg>
       `,
 
-      altura: "30px",
+      altura: "20px",
 
-      largura: "30px",
+      largura: "20px",
 
-      preenchimento: ['black'],
+      preenchimento: [`white`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
