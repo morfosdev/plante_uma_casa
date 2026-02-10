@@ -1217,7 +1217,15 @@ const path1 = "all.toggles.box1";
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -4794,7 +4802,15 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -13713,7 +13729,15 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -23006,7 +23030,15 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -32189,7 +32221,15 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -41188,7 +41228,15 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -51127,7 +51175,15 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -56939,7 +56995,15 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -62937,7 +63001,15 @@ backgroundColor: "#f5f5f5",
 	display: "none"
 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => {
+	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
+
+	tools.setVar({path: "all.toggles.desktop.mobile", value: !menuValue});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
