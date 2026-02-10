@@ -5652,13 +5652,13 @@ right: 0,
 	paddingLeft: 30,
 	paddingTop: 30,
 	paddingBottom: 30,
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 		shadowColor: '#000',
 		shadowOffset: { width: 0, height: 4 },
 		shadowOpacity: 0.1,
 		shadowRadius: 4,
 	borderRadius: 10,
-	alignItems: 'center',3
+	alignItems: 'center',
 }
 @mediaDesktop{
 	width: '100%',
@@ -52985,13 +52985,13 @@ right: 0,
 	paddingLeft: 30,
 	paddingTop: 30,
 	paddingBottom: 30,
-	backgroundColor: 'transparent',
+	backgroundColor: 'white',
 		shadowColor: '#000',
 		shadowOffset: { width: 0, height: 4 },
 		shadowOpacity: 0.1,
 		shadowRadius: 4,
 	borderRadius: 10,
-	alignItems: 'center',3
+	alignItems: 'center',
 }
 @mediaDesktop{
 	width: '100%',
