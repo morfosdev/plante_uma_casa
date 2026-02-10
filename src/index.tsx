@@ -1240,6 +1240,7 @@ const path1 = "all.toggles.box1";
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -4860,6 +4861,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -13822,6 +13824,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -23158,6 +23161,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -32384,6 +32388,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -41426,6 +41431,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -51408,6 +51414,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -57263,6 +57270,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -63304,6 +63312,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
+			{...props}
       stroke="#374151"
       strokeLinecap="round"
       strokeLinejoin="round"
