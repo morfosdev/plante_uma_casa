@@ -52174,7 +52174,11 @@ backgroundColor: "#f5f5f5",
 	backgroundColor: "white"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.@media.sideLeft", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -58149,7 +58153,11 @@ backgroundColor: "#f5f5f5",
 	backgroundColor: "white"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.@media.sideLeft", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -64310,7 +64318,11 @@ backgroundColor: "#f5f5f5",
 	backgroundColor: "white"
 }`],
 
-            functions:[()=>{}],            childrenItems:[
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() => [ "all.toggles.@media.sideLeft", "==", true ]]
+ , trigger: 'on listen'
+}})],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
