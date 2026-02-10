@@ -1240,8 +1240,7 @@ const path1 = "all.toggles.box1";
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -4861,8 +4860,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -13824,8 +13822,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -23161,8 +23158,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -32388,8 +32384,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -41431,8 +41426,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -51414,8 +51408,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -57270,8 +57263,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
@@ -63312,8 +63304,7 @@ backgroundColor: "#f5f5f5",
     {...props}
   >
     <Path
-			{...props}
-      stroke="#374151"
+      stroke={props.fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
