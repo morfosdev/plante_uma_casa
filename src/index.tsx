@@ -1222,7 +1222,7 @@ const path1 = "all.toggles.box1";
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -4807,7 +4807,7 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -13734,7 +13734,7 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -23035,7 +23035,7 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -32226,7 +32226,7 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -41233,7 +41233,7 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -51180,7 +51180,7 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -57000,7 +57000,7 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -63006,7 +63006,7 @@ backgroundColor: "#f5f5f5",
  arrFunctions: [() => {
 	const menuValue = tools.getCtData("all.toggles.mobile.sideLeft");
 
-	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.desktop.mobile", value: !menuValue}});
+	tools.base.functions.setVar({args: {}, pass: {keyPath: "all.toggles.mobile.sideLeft", value: !menuValue}});
 }]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
