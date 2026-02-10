@@ -1257,7 +1257,7 @@ const path1 = "all.toggles.box1";
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -4877,7 +4877,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -13839,7 +13839,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -23175,7 +23175,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -32401,7 +32401,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -41443,7 +41443,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -51425,7 +51425,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -57280,7 +57280,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
@@ -63321,7 +63321,7 @@ backgroundColor: "#f5f5f5",
 
       largura: "20px",
 
-      preenchimento: [`white`],
+      preenchimento: [`"#fff"`],
 
       args,
     }}/>, (...args:any) => <Elements.Text pass={{
