@@ -5498,7 +5498,7 @@ async (...args) =>
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
-	display: "none"
+	display: "none",
 }
 @mediaDesktop
 {
@@ -14697,7 +14697,7 @@ async (...args) =>
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
-	display: "none"
+	display: "none",
 }
 @mediaDesktop
 {
@@ -24177,7 +24177,7 @@ async (...args) =>
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
-	display: "none"
+	display: "none",
 }
 @mediaDesktop
 {
@@ -33574,7 +33574,7 @@ async (...args) =>
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
-	display: "none"
+	display: "none",
 }
 @mediaDesktop
 {
@@ -42761,7 +42761,7 @@ async (...args) =>
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
-	display: "none"
+	display: "none",
 }
 @mediaDesktop
 {
@@ -52830,7 +52830,7 @@ async (...args) =>
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
-	display: "none"
+	display: "none",
 }
 @mediaDesktop
 {
@@ -58897,7 +58897,7 @@ async (...args) =>
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
-	display: "none"
+	display: "none",
 }
 @mediaDesktop
 {
@@ -65092,7 +65092,7 @@ async (...args) =>
 	fontSize: 18,
 	fontWeight: '700',
 	color: '#FFFFFF',
-	display: "none"
+	display: "none",
 }
 @mediaDesktop
 {
