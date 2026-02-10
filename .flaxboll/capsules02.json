@@ -1,37 +1,4 @@
 {
-  "947b2b06-07ec-42c8-a677-2782c93a62ff": {
-    "capsDB": {
-      "capsID": "947b2b06-07ec-42c8-a677-2782c93a62ff",
-      "capsPrjID": "v0XFMalzudFUWmh8We7w",
-      "capsUserID": "6tSxwdCxmvKXpnoIsJ75",
-      "capsCreatedAt": 1763384774105
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_stringValue",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1763384774105],
-      "capsUseLabel": { "pt-br": "string value", "en": "string value" },
-      "capsUseDescription": { "pt-br": "", "en": "sc.A0B.forms.msgs.msg1" },
-      "capsUseInputs": {
-        "ccc_stringValue-0": {
-          "capsIptCodeID": "ccc_stringValue-0",
-          "capsIptTxtValue": "sc.A0B.forms.msgs.msg1"
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_setVar-0",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "1e0e1089-e642-4166-8c9c-4b696f1b6e48"
-          }
-        }
-      }
-    }
-  },
   "5545717b-6a1a-46aa-8ef5-2333a86a1ffb": {
     "capsDB": {
       "capsID": "5545717b-6a1a-46aa-8ef5-2333a86a1ffb",
@@ -39477,6 +39444,54 @@
           "parentData": {
             "parentConnID": "conn_1",
             "capsParentID": "9eda9079-c97e-4e29-9fb2-58f612e9ff7d"
+          }
+        }
+      }
+    }
+  },
+  "ed4310d6-481d-4b4f-8234-3bdb231b4de1": {
+    "capsDB": {
+      "capsID": "ed4310d6-481d-4b4f-8234-3bdb231b4de1",
+      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
+      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
+      "capsCreatedAt": 1760367319424
+    },
+    "capsType": "useCode",
+    "capsUseCodeInfo": {
+      "capsCodeID": "ccc_dynView",
+      "capsCodeVersionID": "1",
+      "capsUpdatedAt": [1760367319424],
+      "capsUseLabel": { "en": "boxTitle" },
+      "capsUseDescription": { "pt-br": "", "en": "" },
+      "capsUseInputs": {
+        "ccc_dynView-0": {
+          "capsIptCodeID": "ccc_dynView-0",
+          "capsIptCapsValue": []
+        },
+        "ccc_dynView-1": {
+          "capsIptCodeID": "ccc_dynView-1",
+          "capsIptCapsValue": ["ecad1044-0549-4a2d-894a-600a2978d14c"]
+        },
+        "ccc_dynView-2": {
+          "capsIptCodeID": "ccc_dynView-2",
+          "capsIptCapsValue": []
+        },
+        "ccc_dynView-3": {
+          "capsIptCodeID": "ccc_dynView-3",
+          "capsIptCapsValue": [
+            "9ee327a4-3aaf-45eb-a72d-b6553fa6c1cc",
+            "f07aa0c9-9de6-456d-b7cb-8a58e4cbfcaf"
+          ]
+        }
+      },
+      "capsUseConections": "1",
+      "parents": {
+        "conn_1": {
+          "connID": "conn_1",
+          "capsParentIptID": "ccc_dynView-3",
+          "parentData": {
+            "parentConnID": "conn_1",
+            "capsParentID": "4086c844-ec06-43f9-a87c-64b8c7078d93"
           }
         }
       }

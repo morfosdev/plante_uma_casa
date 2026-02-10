@@ -1,49 +1,4 @@
 {
-  "6ddca328-4942-4caa-8417-910667692d4d": {
-    "capsDB": {
-      "capsID": "6ddca328-4942-4caa-8417-910667692d4d",
-      "capsPrjID": "Ssf3PIVuSttc13QsQfKG",
-      "capsUserID": "kLOpIJwqZhrUi5I1qKd1",
-      "capsCreatedAt": 1761927638404
-    },
-    "capsType": "useCode",
-    "capsUseCodeInfo": {
-      "capsCodeID": "ccc_dynView",
-      "capsCodeVersionID": "1",
-      "capsUpdatedAt": [1761927638404],
-      "capsUseLabel": { "pt-br": "Box", "en": "When Open - Content" },
-      "capsUseDescription": { "pt-br": "", "en": "Box" },
-      "capsUseInputs": {
-        "ccc_dynView-0": {
-          "capsIptCodeID": "ccc_dynView-0",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-1": {
-          "capsIptCodeID": "ccc_dynView-1",
-          "capsIptCapsValue": ["7c47a1a7-cbbe-4145-9883-f3496c278e4a"]
-        },
-        "ccc_dynView-2": {
-          "capsIptCodeID": "ccc_dynView-2",
-          "capsIptCapsValue": []
-        },
-        "ccc_dynView-3": {
-          "capsIptCodeID": "ccc_dynView-3",
-          "capsIptCapsValue": ["695e3c74-8e71-4626-857b-e7283bb6f560"]
-        }
-      },
-      "capsUseConections": "1",
-      "parents": {
-        "conn_1": {
-          "connID": "conn_1",
-          "capsParentIptID": "ccc_dynView-3",
-          "parentData": {
-            "parentConnID": "conn_1",
-            "capsParentID": "7b05174b-7899-44bc-92ea-bf41824c5312"
-          }
-        }
-      }
-    }
-  },
   "695e3c74-8e71-4626-857b-e7283bb6f560": {
     "capsDB": {
       "capsID": "695e3c74-8e71-4626-857b-e7283bb6f560",
