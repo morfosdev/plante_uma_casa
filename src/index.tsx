@@ -5660,6 +5660,7 @@ right: 0,
 		shadowRadius: 4,
 	borderRadius: 10,
 	alignItems: 'center',
+	marginBottom: 20
 }
 @mediaDesktop{
 	width: '100%',
@@ -5938,21 +5939,42 @@ fontWeight: '500',
           }}/>
         , 
 
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
 
-      styles:[{
+            styles:[`@mediaMobile{
+	width: "100%",
+	height: 250,
+	borderRadius: '6px',
+	borderWidth: '1px',
+	borderColor: '#e6e7e8',
+}
+@mediaDesktop{
 	width: 150,
 	height: 100,
 	borderRadius: '6px',
 	borderWidth: '1px',
 	borderColor: '#e6e7e8',
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[{
+	width: "100%",
+	height: "100%"
 }],
 
       URIvariablePath:[`$arg_image`],
 
       args,
     }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -52995,6 +53017,7 @@ right: 0,
 		shadowRadius: 4,
 	borderRadius: 10,
 	alignItems: 'center',
+	marginBottom: 20
 }
 @mediaDesktop{
 	width: '100%',
