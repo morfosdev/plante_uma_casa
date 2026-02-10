@@ -52157,8 +52157,19 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-	width: 200,
+            styles:[`@mediaMobile
+{
+	width: "100%",
+	height: "100%",
+	backgroundColor: "white",
+	position: "absolute",
+	left: 0,
+	top: 0,
+	zIndex: 1000
+}
+@mediaDesktop
+{
+	width: 230,
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -58121,8 +58132,19 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-	width: 200,
+            styles:[`@mediaMobile
+{
+	width: "100%",
+	height: "100%",
+	backgroundColor: "white",
+	position: "absolute",
+	left: 0,
+	top: 0,
+	zIndex: 1000
+}
+@mediaDesktop
+{
+	width: 230,
 	height: "100%",
 	backgroundColor: "white"
 }`],
@@ -64271,8 +64293,19 @@ backgroundColor: "#f5f5f5",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-	width: 200,
+            styles:[`@mediaMobile
+{
+	width: "100%",
+	height: "100%",
+	backgroundColor: "white",
+	position: "absolute",
+	left: 0,
+	top: 0,
+	zIndex: 1000
+}
+@mediaDesktop
+{
+	width: 230,
 	height: "100%",
 	backgroundColor: "white"
 }`],
