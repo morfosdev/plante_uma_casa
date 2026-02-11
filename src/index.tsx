@@ -3001,7 +3001,7 @@ color: '#fff',
         `{ 
 	padding: 0
 }`, `@mediaMobile{ 
-	width: "100%",
+	width: "90%",
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	alignItems: "center",
@@ -3067,8 +3067,7 @@ color: '#fff',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: 400,
-	height: 303,
+	width: "100%",
 	backgroundColor: "#FFF",
 	alignItems: "center",
 	paddingHorizontal: 25,
@@ -3594,7 +3593,7 @@ color: '#fff',
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	width: "100%",
+	width: "90%",
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	alignItems: "center",
@@ -4391,7 +4390,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	width: "100%",
+	width: "90%",
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	alignItems: "center",
