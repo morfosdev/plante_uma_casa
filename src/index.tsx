@@ -15364,6 +15364,8 @@ async (...args) =>
 
  (...args:any) => <Elements.Custom pass={{
   arrItems: [() => {
+const {width} = RN.useWindowDimensions();
+const isMobile = width < 767;
   const item = tools.findFlatItem(args);
   console.log("CUSTOM ALERT", { args, item });
 
@@ -15380,15 +15382,17 @@ async (...args) =>
     }
   });
 
+const stlCondBox = isMobile ? {} : {
+	flex: 1,
+	minWidth: 80,
+	justifyContent: "center",
+	alignItems: "start",
+};
+
   console.log({ count });
   return (
     <RN.View
-      style={{
-        flex: 1,
-        minWidth: 80,
-        justifyContent: "center",
-        alignItems: "start",
-      }}
+      style={stlCondBox}
     >
       {count > 0 && (
         <RN.View style={{ width: 26, height: 20, position: "relative" }}>
