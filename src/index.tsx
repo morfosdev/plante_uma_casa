@@ -15012,11 +15012,14 @@ right: 0,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-	paddingHorizontal: 60,
+            styles:[`@mediaMobile{
+	paddingHorizontal: 20,
 	paddingVertical: 20,
 }
-`],
+@mediaDesktop{
+	paddingHorizontal: 60,
+	paddingVertical: 20,
+}`],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -15037,7 +15040,7 @@ right: 0,
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -15060,7 +15063,7 @@ right: 0,
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -15083,7 +15086,7 @@ right: 0,
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
