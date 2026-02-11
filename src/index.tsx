@@ -3625,7 +3625,8 @@ color: '#fff',
 	padding: 40
 }
 @mediaDesktop{
-	padding: 40
+	padding: 40,
+	height: 380
 }`],
 
             functions:[()=>{}],            childrenItems:[
