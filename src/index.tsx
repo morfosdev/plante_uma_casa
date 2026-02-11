@@ -15382,9 +15382,11 @@ const isMobile = width < 767;
     }
   });
 
-const stlCondBox = isMobile ? {} : {
+const stlCondBox = isMobile ? {
+	width: 240,
+	alignItems: "center"
+} : {
 	flex: 1,
-	minWidth: 80,
 	justifyContent: "center",
 	alignItems: "start",
 };
