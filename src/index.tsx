@@ -33873,7 +33873,7 @@ right: 0,
             functions:[()=>{}],            childrenItems:[
         (...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -33896,7 +33896,7 @@ right: 0,
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -33919,7 +33919,7 @@ right: 0,
         }}/>, 
         (...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
