@@ -1124,7 +1124,7 @@ const path1 = "all.toggles.box1";
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -1943,7 +1943,7 @@ justifyContent: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`, 
+}`, 
         `{ 
 	width: 30,
 	height: 30,
@@ -2678,7 +2678,7 @@ justifyContent: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -2696,7 +2696,7 @@ justifyContent: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -2750,7 +2750,7 @@ justifyContent: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -2804,7 +2804,7 @@ justifyContent: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -2894,7 +2894,7 @@ color: '#fff',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -3302,7 +3302,7 @@ color: '#fff',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -4061,7 +4061,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -4128,7 +4128,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -4179,7 +4179,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -4311,7 +4311,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -4366,7 +4366,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -4614,7 +4614,7 @@ color: '#555555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -4793,7 +4793,7 @@ height: 30,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -4850,7 +4850,7 @@ height: 30,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -5176,7 +5176,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -5312,7 +5312,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -5451,7 +5451,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -6376,7 +6376,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -7533,7 +7533,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -14389,7 +14389,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -14525,7 +14525,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -14664,7 +14664,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -15144,7 +15144,8 @@ right: 0,
 @mediaDesktop{ 
 	minWidth: 300,
 	maxWidth: 300,
-	flexDirection: "row"
+	flexDirection: "row",
+	gap: 10
 }`
           ],
 
@@ -15377,7 +15378,8 @@ async (...args) =>
 @mediaDesktop{ 
 	minWidth: 300,
 	maxWidth: 300,
-	flexDirection: "row"
+	flexDirection: "row",
+	gap: 10
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -15538,25 +15540,6 @@ async (...args) =>
             args,
           }}/>
         , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -15636,23 +15619,6 @@ async (...args) =>
           args,
 
         }}/>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
- }`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
@@ -15997,7 +15963,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -17154,7 +17120,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -23987,7 +23953,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -24123,7 +24089,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -24262,7 +24228,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -25368,7 +25334,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -26525,7 +26491,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -33386,7 +33352,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -33522,7 +33488,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -33661,7 +33627,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -34659,7 +34625,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -35816,7 +35782,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -42655,7 +42621,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -42791,7 +42757,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -42930,7 +42896,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -48059,7 +48025,7 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -48138,7 +48104,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -48181,7 +48147,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -49444,7 +49410,7 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -49523,7 +49489,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -49566,7 +49532,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -50131,7 +50097,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -51023,7 +50989,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -51427,7 +51393,7 @@ borderRadius: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -51964,7 +51930,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -52372,7 +52338,7 @@ borderRadius: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -52777,7 +52743,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -52913,7 +52879,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -53042,7 +53008,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -54104,7 +54070,7 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -54183,7 +54149,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -54226,7 +54192,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -55489,7 +55455,7 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -55568,7 +55534,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -55611,7 +55577,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -56176,7 +56142,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -57068,7 +57034,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -57472,7 +57438,7 @@ borderRadius: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -58009,7 +57975,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -58417,7 +58383,7 @@ borderRadius: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -58852,7 +58818,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -58988,7 +58954,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -59117,7 +59083,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -60385,7 +60351,7 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -60464,7 +60430,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -60507,7 +60473,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -61770,7 +61736,7 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -61849,7 +61815,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -61892,7 +61858,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -62457,7 +62423,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -63349,7 +63315,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -63753,7 +63719,7 @@ borderRadius: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -64290,7 +64256,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -64698,7 +64664,7 @@ borderRadius: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -65090,7 +65056,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -65226,7 +65192,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -65355,7 +65321,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -70096,7 +70062,7 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -70175,7 +70141,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -70218,7 +70184,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -71481,7 +71447,7 @@ xmlns="http://www.w3.org/2000/svg"
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -71560,7 +71526,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -71603,7 +71569,7 @@ flexDirection: 'row',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -72168,7 +72134,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -73060,7 +73026,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -73464,7 +73430,7 @@ borderRadius: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -74001,7 +73967,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -74409,7 +74375,7 @@ borderRadius: 10,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -74657,7 +74623,7 @@ color: '#555555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -74731,7 +74697,7 @@ tools.setData({path: "sc.C1.forms.message",value: ""});
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -75636,7 +75602,7 @@ color: '#555555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -75958,7 +75924,7 @@ color: '#555555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -76032,7 +75998,7 @@ width: '100%',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -76160,7 +76126,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -76201,7 +76167,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -76303,7 +76269,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -76344,7 +76310,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -76446,7 +76412,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -76487,7 +76453,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -76566,7 +76532,7 @@ width: '100%',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -77416,7 +77382,7 @@ color: '#555555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -77734,7 +77700,7 @@ color: '#555555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -77808,7 +77774,7 @@ width: '100%',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -77936,7 +77902,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -77977,7 +77943,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -78079,7 +78045,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -78120,7 +78086,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -78222,7 +78188,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -78263,7 +78229,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -78342,7 +78308,7 @@ width: '100%',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -78596,7 +78562,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -78688,7 +78654,7 @@ fontWeight: '400',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -78727,7 +78693,7 @@ fontWeight: '400',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -79245,7 +79211,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -79760,7 +79726,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -80275,7 +80241,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -80790,7 +80756,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -81305,7 +81271,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -81820,7 +81786,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -82334,7 +82300,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -82374,7 +82340,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -82651,7 +82617,7 @@ padding: 15,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -83564,7 +83530,7 @@ fontWeight: '700',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -83638,7 +83604,7 @@ width: '100%',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -83766,7 +83732,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -83807,7 +83773,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -83909,7 +83875,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -83950,7 +83916,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -84052,7 +84018,7 @@ async (...args) =>
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -84093,7 +84059,7 @@ color: '#555',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -84172,7 +84138,7 @@ width: '100%',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -84396,7 +84362,7 @@ padding: 12,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -84488,7 +84454,7 @@ fontWeight: '500',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -84716,7 +84682,7 @@ borderRadius: 30,
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -84812,7 +84778,7 @@ fontWeight: '700',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -84926,7 +84892,7 @@ fontWeight: '700',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -85023,7 +84989,7 @@ fontWeight: '400',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -85297,7 +85263,7 @@ alignItems: 'center',
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -85955,7 +85921,7 @@ whereConds ??`
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -85987,7 +85953,7 @@ whereConds ??`
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -86054,7 +86020,7 @@ whereConds ??`
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
@@ -86223,7 +86189,7 @@ tools.setData({
 	alignItems: "center",
 	justifyContent: "center",
 	backgroundColor: "transparent"
- }`],
+}`],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
 
