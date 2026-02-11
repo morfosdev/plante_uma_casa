@@ -15262,7 +15262,12 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -15284,7 +15289,12 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -15306,7 +15316,12 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -15328,7 +15343,12 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -24787,7 +24807,12 @@ left: 4,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -24809,7 +24834,12 @@ left: 4,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -24831,7 +24861,12 @@ left: 4,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -34059,7 +34094,12 @@ right: 0,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -34164,7 +34204,12 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -34186,7 +34231,12 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -34208,7 +34258,12 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -34229,7 +34284,12 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -59420,7 +59480,12 @@ right: 0,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -59507,7 +59572,12 @@ height: 15,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -59529,7 +59599,12 @@ height: 15,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -59551,7 +59626,12 @@ height: 15,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
@@ -59573,7 +59653,12 @@ height: 15,
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	width: 240,
+	color: '#555555',
+	fontSize: 13,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
