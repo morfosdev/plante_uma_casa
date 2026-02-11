@@ -15137,7 +15137,9 @@ right: 0,
           arrStyles: [
             `@mediaMobile{ 
 	width: "100%",
-	flexFlow: "wrap"
+	flexFlow: "wrap",
+	justifyContent: "center",
+	gap: 10
 }
 @mediaDesktop{ 
 	minWidth: 300,
@@ -15347,7 +15349,9 @@ async (...args) =>
 
             styles:[`@mediaMobile{ 
 	width: "100%",
-	flexFlow: "wrap"
+	flexFlow: "wrap",
+	justifyContent: "center",
+	gap: 10
 }
 @mediaDesktop{ 
 	minWidth: 300,
