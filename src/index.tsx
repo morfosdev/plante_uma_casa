@@ -3002,16 +3002,16 @@ color: '#fff',
 	padding: 0
 }`, `@mediaMobile{ 
 	width: "100%",
-	height: 450,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	alignItems: "center",
 	justifyContent: "center",
-	padding: 25,
 	shadowColor: '#000',
   shadowOffset: { width: 0, height: 4 },
   shadowOpacity: 0.2,
   shadowRadius: 20,
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
 }
 @mediaDesktop{ 
 	width: 400,
@@ -3020,11 +3020,12 @@ color: '#fff',
 	borderRadius: 20,
 	alignItems: "center",
 	justifyContent: "center",
-	padding: 25,
 	shadowColor: '#000',
   shadowOffset: { width: 0, height: 4 },
   shadowOpacity: 0.2,
   shadowRadius: 20,
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -3034,13 +3035,11 @@ color: '#fff',
             elementsProperties:['{}'],
 
             styles:[`{ 
-	width: "400px",
+	width: "100%",
 	height: "147px",
 	backgroundColor: "$var_all.colors.primary",		
 	alignItems: 'center',
-	justifyContent: 'center',
-	borderTopLeftRadius: 20,
-  borderTopRightRadius: 20,
+	justifyContent: 'center'
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -3594,16 +3593,16 @@ color: '#fff',
 
             styles:[`@mediaMobile{ 
 	width: "100%",
-	height: 450,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	alignItems: "center",
 	justifyContent: "center",
-	padding: 25,
 	shadowColor: '#000',
   shadowOffset: { width: 0, height: 4 },
   shadowOpacity: 0.2,
   shadowRadius: 20,
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
 }
 @mediaDesktop{ 
 	width: 400,
@@ -3612,11 +3611,12 @@ color: '#fff',
 	borderRadius: 20,
 	alignItems: "center",
 	justifyContent: "center",
-	padding: 25,
 	shadowColor: '#000',
   shadowOffset: { width: 0, height: 4 },
   shadowOpacity: 0.2,
   shadowRadius: 20,
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -4388,16 +4388,16 @@ async (...args) =>
 
             styles:[`@mediaMobile{ 
 	width: "100%",
-	height: 450,
 	backgroundColor: "#FFF",
 	borderRadius: 20,
 	alignItems: "center",
 	justifyContent: "center",
-	padding: 25,
 	shadowColor: '#000',
   shadowOffset: { width: 0, height: 4 },
   shadowOpacity: 0.2,
   shadowRadius: 20,
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
 }
 @mediaDesktop{ 
 	width: 400,
@@ -4406,11 +4406,12 @@ async (...args) =>
 	borderRadius: 20,
 	alignItems: "center",
 	justifyContent: "center",
-	padding: 25,
 	shadowColor: '#000',
   shadowOffset: { width: 0, height: 4 },
   shadowOpacity: 0.2,
   shadowRadius: 20,
+	borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
 }`],
 
             functions:[()=>{}],            childrenItems:[
