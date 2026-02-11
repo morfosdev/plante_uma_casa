@@ -15122,7 +15122,13 @@ height: 15,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	flex: 1,
+	flexDirection: 'row',
+	flexFlow: 'wrap',
+	alignItems: 'center',
+}
+@mediaDesktop{
 	flex: 1,
 	flexDirection: 'row',
 	alignItems: 'center',
@@ -24657,7 +24663,13 @@ left: 4,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	flex: 1,
+	flexDirection: 'row',
+	flexFlow: 'wrap',
+	alignItems: 'center',
+}
+@mediaDesktop{
 	flex: 1,
 	flexDirection: 'row',
 	alignItems: 'center',
@@ -34000,7 +34012,13 @@ height: 15,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	flex: 1,
+	flexDirection: 'row',
+	flexFlow: 'wrap',
+	alignItems: 'center',
+}
+@mediaDesktop{
 	flex: 1,
 	flexDirection: 'row',
 	alignItems: 'center',
@@ -59354,7 +59372,13 @@ height: 15,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	flex: 1,
+	flexDirection: 'row',
+	flexFlow: 'wrap',
+	alignItems: 'center',
+}
+@mediaDesktop{
 	flex: 1,
 	flexDirection: 'row',
 	alignItems: 'center',
