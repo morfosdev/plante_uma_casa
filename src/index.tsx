@@ -3592,7 +3592,8 @@ color: '#fff',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`@mediaMobile{ 
+            styles:[
+        `@mediaMobile{ 
 	width: "90%",
 	backgroundColor: "#FFF",
 	borderRadius: 20,
@@ -3620,6 +3621,11 @@ color: '#fff',
 	borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
 	overflow: "hidden"
+}`, `@mediaMobile{
+	padding: 40
+}
+@mediaDesktop{
+	padding: 40
 }`],
 
             functions:[()=>{}],            childrenItems:[
