@@ -3012,6 +3012,7 @@ color: '#fff',
   shadowRadius: 20,
 	borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
+	overflow: "hidden"
 }
 @mediaDesktop{ 
 	width: 400,
@@ -3026,6 +3027,7 @@ color: '#fff',
   shadowRadius: 20,
 	borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
+	overflow: "hidden"
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -3603,6 +3605,7 @@ color: '#fff',
   shadowRadius: 20,
 	borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
+	overflow: "hidden"
 }
 @mediaDesktop{ 
 	width: 400,
@@ -3617,6 +3620,7 @@ color: '#fff',
   shadowRadius: 20,
 	borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
+	overflow: "hidden"
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -4398,6 +4402,7 @@ async (...args) =>
   shadowRadius: 20,
 	borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
+	overflow: "hidden"
 }
 @mediaDesktop{ 
 	width: 400,
@@ -4412,6 +4417,7 @@ async (...args) =>
   shadowRadius: 20,
 	borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
+	overflow: "hidden"
 }`],
 
             functions:[()=>{}],            childrenItems:[
