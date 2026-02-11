@@ -5772,7 +5772,7 @@ async (...args) =>
 
             styles:[`{
 	flex: 1,
-	minWidth: 220
+	minWidth: 180
 }`],
 
             functions:[()=>{}],            childrenItems:[
