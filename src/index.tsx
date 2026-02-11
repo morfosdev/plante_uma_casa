@@ -5836,8 +5836,10 @@ height: 15,
 
             styles:[`{
 	flexDirection: 'row',
-	width: 300,
+	flexFlow: "wrap",
+	width: "100%",
 	zIndex: 1,
+	gap: 10
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -5846,7 +5848,15 @@ height: 15,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	width: "100%",
+	alignItems: "center",
+	backgroundColor: '#E8EDF5',
+	paddingHorizontal: 16,
+	paddingVertical: 8,
+	borderRadius: 8,
+}
+@mediaDesktop{
 	backgroundColor: '#E8EDF5',
 	paddingHorizontal: 16,
 	paddingVertical: 8,
@@ -5933,7 +5943,15 @@ width: 15,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	width: "100%",
+	alignItems: "center",
+	backgroundColor: '#E8EDF5',
+	paddingHorizontal: 16,
+	paddingVertical: 8,
+	borderRadius: 8,
+}
+@mediaDesktop{
 	backgroundColor: '#E8EDF5',
 	paddingHorizontal: 16,
 	paddingVertical: 8,
