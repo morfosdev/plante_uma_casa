@@ -15263,7 +15263,7 @@ async (...args) =>
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -15290,7 +15290,7 @@ async (...args) =>
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -15317,7 +15317,7 @@ async (...args) =>
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -15344,7 +15344,7 @@ async (...args) =>
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -15404,7 +15404,7 @@ const isMobile = width < 767;
   });
 
 const stlCondBox = isMobile ? {
-	width: 240,
+	width: 500,
 	alignItems: "center"
 } : {
 	flex: 1,
@@ -24808,7 +24808,7 @@ left: 4,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -24835,7 +24835,7 @@ left: 4,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -24862,7 +24862,7 @@ left: 4,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -34095,7 +34095,7 @@ right: 0,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -34205,7 +34205,7 @@ async (...args) =>
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -34232,7 +34232,7 @@ async (...args) =>
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -34259,7 +34259,7 @@ async (...args) =>
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -34285,7 +34285,7 @@ async (...args) =>
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -59481,7 +59481,7 @@ right: 0,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -59573,7 +59573,7 @@ height: 15,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -59600,7 +59600,7 @@ height: 15,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -59627,7 +59627,7 @@ height: 15,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
@@ -59654,7 +59654,7 @@ height: 15,
 
           arrStyles: [
             `@mediaMobile{
-	width: 240,
+	width: 340,
 	color: '#555555',
 	fontSize: 13,
 }
