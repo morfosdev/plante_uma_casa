@@ -15135,7 +15135,15 @@ right: 0,
           ],
 
           arrStyles: [
-            `{ minWidth: 300, maxWidth: 300, flexDirection: "row" }`
+            `@mediaMobile{ 
+	width: "100%",
+	flexFlow: "wrap"
+}
+@mediaDesktop{ 
+	minWidth: 300,
+	maxWidth: 300,
+	flexDirection: "row"
+}`
           ],
 
           children: [
@@ -15337,7 +15345,15 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ minWidth: 300, maxWidth: 300, flexDirection: "row" }`],
+            styles:[`@mediaMobile{ 
+	width: "100%",
+	flexFlow: "wrap"
+}
+@mediaDesktop{ 
+	minWidth: 300,
+	maxWidth: 300,
+	flexDirection: "row"
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
