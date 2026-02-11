@@ -5552,7 +5552,7 @@ async (...args) =>
             styles:[`@mediaMobile{
 	height: 25,
 	backgroundColor: 'transparent',
-	paddingHorizontal: 14,
+	paddingHorizontal: 10,
 	paddingVertical: 8,
 	borderWidth: 2,
 	borderRadius: 20,
@@ -14652,8 +14652,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 20,
-	paddingRight: 20,
+	paddingLeft: 10,
+	paddingRight: 10,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -14748,9 +14748,9 @@ async (...args) =>
 
       `,
 
-      altura: "24px",
+      altura: "20px",
 
-      largura: "24px",
+      largura: "20px",
 
       preenchimento: [`transparent`],
 
@@ -14838,7 +14838,7 @@ async (...args) =>
             styles:[`@mediaMobile{
 	height: 25,
 	backgroundColor: 'transparent',
-	paddingHorizontal: 14,
+	paddingHorizontal: 10,
 	paddingVertical: 8,
 	borderWidth: 2,
 	borderRadius: 20,
@@ -24179,8 +24179,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 20,
-	paddingRight: 20,
+	paddingLeft: 10,
+	paddingRight: 10,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -33563,8 +33563,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 20,
-	paddingRight: 20,
+	paddingLeft: 10,
+	paddingRight: 10,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -33659,9 +33659,9 @@ async (...args) =>
 
       `,
 
-      altura: "24px",
+      altura: "20px",
 
-      largura: "24px",
+      largura: "20px",
 
       preenchimento: [`transparent`],
 
@@ -33749,7 +33749,7 @@ async (...args) =>
             styles:[`@mediaMobile{
 	height: 25,
 	backgroundColor: 'transparent',
-	paddingHorizontal: 14,
+	paddingHorizontal: 10,
 	paddingVertical: 8,
 	borderWidth: 2,
 	borderRadius: 20,
@@ -42806,8 +42806,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 20,
-	paddingRight: 20,
+	paddingLeft: 10,
+	paddingRight: 10,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -58993,8 +58993,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 20,
-	paddingRight: 20,
+	paddingLeft: 10,
+	paddingRight: 10,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -65205,8 +65205,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 20,
-	paddingRight: 20,
+	paddingLeft: 10,
+	paddingRight: 10,
 	shadowColor: '#000',
 }
 @mediaDesktop{
