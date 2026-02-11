@@ -15214,6 +15214,7 @@ height: 15,
 	flexDirection: 'row',
 	flexFlow: 'wrap',
 	alignItems: 'center',
+	gap: 10
 }
 @mediaDesktop{
 	flex: 1,
@@ -24771,6 +24772,7 @@ left: 4,
 	flexDirection: 'row',
 	flexFlow: 'wrap',
 	alignItems: 'center',
+	gap: 10
 }
 @mediaDesktop{
 	flex: 1,
@@ -34129,6 +34131,7 @@ height: 15,
 	flexDirection: 'row',
 	flexFlow: 'wrap',
 	alignItems: 'center',
+	gap: 10
 }
 @mediaDesktop{
 	flex: 1,
@@ -59489,6 +59492,7 @@ height: 15,
 	flexDirection: 'row',
 	flexFlow: 'wrap',
 	alignItems: 'center',
+	gap: 10
 }
 @mediaDesktop{
 	flex: 1,
