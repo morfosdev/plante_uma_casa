@@ -14652,8 +14652,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 30,
-	paddingRight: 30,
+	paddingLeft: 20,
+	paddingRight: 20,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -14688,7 +14688,11 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	padding: 0,
+	paddingRight: 5,
+}
+@mediaDesktop{
 	padding: 7,
 }`],
 
@@ -24175,8 +24179,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 30,
-	paddingRight: 30,
+	paddingLeft: 20,
+	paddingRight: 20,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -33559,8 +33563,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 30,
-	paddingRight: 30,
+	paddingLeft: 20,
+	paddingRight: 20,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -33595,7 +33599,11 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	padding: 0,
+	paddingRight: 5,
+}
+@mediaDesktop{
 	padding: 7,
 }`],
 
@@ -33707,7 +33715,7 @@ async (...args) =>
           }}/>
         , (...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -42798,8 +42806,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 30,
-	paddingRight: 30,
+	paddingLeft: 20,
+	paddingRight: 20,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -58985,8 +58993,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 30,
-	paddingRight: 30,
+	paddingLeft: 20,
+	paddingRight: 20,
 	shadowColor: '#000',
 }
 @mediaDesktop{
@@ -65197,8 +65205,8 @@ async (...args) =>
 	flexDirection: 'row',
 	justifyContent: 'space-between',
 	alignItems: 'center',
-	paddingLeft: 30,
-	paddingRight: 30,
+	paddingLeft: 20,
+	paddingRight: 20,
 	shadowColor: '#000',
 }
 @mediaDesktop{
