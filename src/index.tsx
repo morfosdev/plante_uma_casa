@@ -3000,7 +3000,20 @@ color: '#fff',
             styles:[
         `{ 
 	padding: 0
-}`, `{ 
+}`, `@mediaMobile{ 
+	width: "100%",
+	height: 450,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	padding: 25,
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
+}
+@mediaDesktop{ 
 	width: 400,
 	height: 450,
 	backgroundColor: "#FFF",
@@ -3579,7 +3592,20 @@ color: '#fff',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	width: "100%",
+	height: 450,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	padding: 25,
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
+}
+@mediaDesktop{ 
 	width: 400,
 	height: 450,
 	backgroundColor: "#FFF",
@@ -4360,7 +4386,20 @@ async (...args) =>
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	width: "100%",
+	height: 450,
+	backgroundColor: "#FFF",
+	borderRadius: 20,
+	alignItems: "center",
+	justifyContent: "center",
+	padding: 25,
+	shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.2,
+  shadowRadius: 20,
+}
+@mediaDesktop{ 
 	width: 400,
 	height: 450,
 	backgroundColor: "#FFF",
