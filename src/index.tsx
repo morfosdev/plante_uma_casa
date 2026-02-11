@@ -15417,7 +15417,7 @@ const stlCondBox = isMobile ? {
     <RN.View
       style={stlCondBox}
     >
-      {count > 0 && (
+      {count > 0 ? (
         <RN.View style={{ width: 26, height: 20, position: "relative" }}>
           <RN.Image
             source={{
@@ -15443,7 +15443,7 @@ const stlCondBox = isMobile ? {
             {count}
           </RN.Text>
         </RN.View>
-      )}
+      ) : (<RN.View style={{ width: 26, height: 20, position: "relative" }} />)}
     </RN.View>
   );
 }] 
