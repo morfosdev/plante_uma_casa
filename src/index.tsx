@@ -43710,7 +43710,7 @@ right: 0,
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.0.subs`,
@@ -44199,7 +44199,7 @@ top: 2,
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.1.subs`,
@@ -44688,7 +44688,7 @@ top: 2,
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.2.subs`,
@@ -45177,7 +45177,7 @@ top: 2,
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.3.subs`,
@@ -45666,7 +45666,7 @@ top: 2,
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.4.subs`,
@@ -46155,7 +46155,7 @@ top: 2,
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.5.subs`,
