@@ -1204,7 +1204,12 @@ const path1 = "all.toggles.box1";
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -4951,7 +4956,12 @@ backgroundColor: "#f5f5f5",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -14190,7 +14200,12 @@ backgroundColor: "#f5f5f5",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -23781,7 +23796,12 @@ backgroundColor: "#f5f5f5",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -33207,7 +33227,12 @@ backgroundColor: "#f5f5f5",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -42503,7 +42528,12 @@ backgroundColor: "#f5f5f5",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -52647,7 +52677,12 @@ backgroundColor: "#f5f5f5",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -58749,7 +58784,12 @@ backgroundColor: "#f5f5f5",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
@@ -65014,7 +65054,12 @@ backgroundColor: "#f5f5f5",
 	flexDirection: "row",
 	alignItems: "center",
 	justifyContent: "flex-start"
-}`, `{
+}`, `@mediaMobile{
+	backgroundColor: "$var_all.colors.primary",
+	paddingHorizontal: 20,
+	height: 70,
+}
+@mediaDesktop{
 	backgroundColor: "$var_all.colors.primary",
 	paddingHorizontal: 35,
 	height: 70,
