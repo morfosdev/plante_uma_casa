@@ -52543,27 +52543,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b3.profile`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b5.viewCondo`],
-          value: [false]
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.mobile.sideLeft`],
           value: [false]
@@ -52612,10 +52592,10 @@ async (...args) =>
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (  <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width={40}
+    height={40}
     fill="red"
-    viewBox="0 0 24 24"
+    viewBox="0 0 40 40"
     {...props}
   >
     <Path
@@ -52623,7 +52603,7 @@ async (...args) =>
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={3.33}
-      d="m21.665 1.665-20 20"
+      d="M30 10 10 30M10 10l20 20"
     />
   </Svg>)
       },
@@ -58788,27 +58768,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b3.profile`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b5.viewCondo`],
-          value: [false]
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.mobile.sideLeft`],
           value: [false]
@@ -58857,10 +58817,10 @@ async (...args) =>
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (  <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width={40}
+    height={40}
     fill="red"
-    viewBox="0 0 24 24"
+    viewBox="0 0 40 40"
     {...props}
   >
     <Path
@@ -58868,7 +58828,7 @@ async (...args) =>
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={3.33}
-      d="m21.665 1.665-20 20"
+      d="M30 10 10 30M10 10l20 20"
     />
   </Svg>)
       },
@@ -65208,27 +65168,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
- arrFunctions: [
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.sideRight`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b3.profile`],
-          value: [true]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b9.editSteps`],
-          value: [false]
-        }}), 
-async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.b5.viewCondo`],
-          value: [false]
-        }}), async (...args) =>
+ arrFunctions: [async (...args) =>
         functions.setVar({ args, pass:{
           keyPath: [`all.toggles.mobile.sideLeft`],
           value: [false]
@@ -65277,10 +65217,10 @@ async (...args) =>
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (  <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width={40}
+    height={40}
     fill="red"
-    viewBox="0 0 24 24"
+    viewBox="0 0 40 40"
     {...props}
   >
     <Path
@@ -65288,7 +65228,7 @@ async (...args) =>
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={3.33}
-      d="m21.665 1.665-20 20"
+      d="M30 10 10 30M10 10l20 20"
     />
   </Svg>)
       },
