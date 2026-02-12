@@ -25267,7 +25267,13 @@ left: 4,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+  flexGrow: 1,
+  flexShrink: 1,
+  flexBasis: 80,
+	left: 0,
+}
+@mediaDesktop{
   flexGrow: 1,
   flexShrink: 1,
   flexBasis: 80,
