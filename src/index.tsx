@@ -44083,14 +44083,26 @@ top: 2,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
+            styles:[`@mediaMobile{
+    backgroundColor: "rgb(204, 204, 204)",
+    borderRadius: 10,
+    marginBottom: 14,
+    width: "100%",
+    minHeight: 38,
+    overflow: "hidden",
+    padding: 0,
+    height: 30,
+}
+@mediaDesktop{
+    backgroundColor: "rgb(204, 204, 204)",
+    borderRadius: 10,
+    marginBottom: 14,
+    width: "100%",
+    minHeight: 50,
+    overflow: "hidden",
+    padding: 0,
+    height: 30,
+}`],
 
             functions:[()=>{}],            childrenItems:[
         
