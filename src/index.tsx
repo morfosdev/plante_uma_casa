@@ -59573,9 +59573,17 @@ height: 15,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
-	width: "fit-content", 
-	minWidth: 120, 
+            styles:[`@mediaMobile{
+	width: "100%",
+	height: 30, 
+	backgroundColor: "#fff",
+	borderRadius: 20, 
+	alignItems: "center",
+	justifyContent: "center",
+	borderWidth: 2,
+	borderColor: "#315e2d",
+}
+@mediaDesktop{ 
 	height: 30, 
 	backgroundColor: "#fff",
 	borderRadius: 20, 
