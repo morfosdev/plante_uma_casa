@@ -528,7 +528,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -639,7 +639,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -749,7 +749,7 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -2242,7 +2242,7 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -2372,7 +2372,7 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -2483,7 +2483,7 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -2593,7 +2593,7 @@ justifyContent: 'center',
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -43700,7 +43700,7 @@ right: 0,
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -43889,8 +43889,13 @@ right: 0,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-top: 2,
+            styles:[`@mediaMobile{
+	top: 2,
+	width: 50,
+	alignItems: "center",
+}
+@mediaDesktop{
+	top: 2,
 }`],
 
             functions:[async (...args) =>
@@ -44189,7 +44194,7 @@ top: 2,
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -44378,8 +44383,13 @@ top: 2,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-top: 2,
+            styles:[`@mediaMobile{
+	top: 2,
+	width: 50,
+	alignItems: "center",
+}
+@mediaDesktop{
+	top: 2,
 }`],
 
             functions:[async (...args) =>
@@ -44678,7 +44688,7 @@ top: 2,
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -44867,8 +44877,13 @@ top: 2,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-top: 2,
+            styles:[`@mediaMobile{
+	top: 2,
+	width: 50,
+	alignItems: "center",
+}
+@mediaDesktop{
+	top: 2,
 }`],
 
             functions:[async (...args) =>
@@ -45167,7 +45182,7 @@ top: 2,
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -45356,8 +45371,13 @@ top: 2,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-top: 2,
+            styles:[`@mediaMobile{
+	top: 2,
+	width: 50,
+	alignItems: "center",
+}
+@mediaDesktop{
+	top: 2,
 }`],
 
             functions:[async (...args) =>
@@ -45656,7 +45676,7 @@ top: 2,
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -45845,8 +45865,13 @@ top: 2,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-top: 2,
+            styles:[`@mediaMobile{
+	top: 2,
+	width: 50,
+	alignItems: "center",
+}
+@mediaDesktop{
+	top: 2,
 }`],
 
             functions:[async (...args) =>
@@ -46145,7 +46170,7 @@ top: 2,
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -46334,8 +46359,13 @@ top: 2,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-top: 2,
+            styles:[`@mediaMobile{
+	top: 2,
+	width: 50,
+	alignItems: "center",
+}
+@mediaDesktop{
+	top: 2,
 }`],
 
             functions:[async (...args) =>
@@ -46633,7 +46663,7 @@ top: 2,
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -46822,8 +46852,13 @@ top: 2,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-top: 2,
+            styles:[`@mediaMobile{
+	top: 2,
+	width: 50,
+	alignItems: "center",
+}
+@mediaDesktop{
+	top: 2,
 }`],
 
             functions:[async (...args) =>
@@ -65519,7 +65554,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -66083,7 +66118,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -66647,7 +66682,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -67211,7 +67246,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -67775,7 +67810,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -68339,7 +68374,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -68902,7 +68937,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -78705,7 +78740,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -79230,7 +79265,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -79755,7 +79790,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -80280,7 +80315,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -80805,7 +80840,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -81330,7 +81365,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
@@ -81854,7 +81889,7 @@ alignItems: "center",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{ 
-	paddingHorizontal: 5, 
+	paddingHorizontal: 10, 
 	paddingBottom: 12
 }
 @mediaDesktop{ 
