@@ -43358,7 +43358,11 @@ right: 0,
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	paddingHorizontal: 20,
+	paddingVertical: 20,
+}
+@mediaDesktop{
 	paddingHorizontal: 45,
 	paddingVertical: 20,
 }`],
