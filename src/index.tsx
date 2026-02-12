@@ -65820,7 +65820,7 @@ alignItems: "center",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.0.subs`,
@@ -66384,7 +66384,7 @@ alignItems: "center",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.1.subs`,
@@ -66948,7 +66948,7 @@ alignItems: "center",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.2.subs`,
@@ -67512,7 +67512,7 @@ alignItems: "center",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.3.subs`,
@@ -68076,7 +68076,7 @@ alignItems: "center",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.4.subs`,
@@ -68640,7 +68640,7 @@ alignItems: "center",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.5.subs`,
@@ -69203,7 +69203,7 @@ alignItems: "center",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.6.subs`,
