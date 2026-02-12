@@ -46643,7 +46643,7 @@ top: 2,
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            `{ scrollEnabled: false }`
           ],
 
           pData: `sc.B7.statics.steps.6.subs`,
