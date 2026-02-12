@@ -5361,7 +5361,7 @@ backgroundColor: "#f5f5f5",
 	backgroundColor: "white",
 	position: "absolute",
 	left: 0,
-	top: 0,
+	top: -70,
 	zIndex: 1000
 }
 @mediaDesktop
@@ -14768,7 +14768,7 @@ backgroundColor: "#f5f5f5",
 	backgroundColor: "white",
 	position: "absolute",
 	left: 0,
-	top: 0,
+	top: -70,
 	zIndex: 1000
 }
 @mediaDesktop
@@ -24527,7 +24527,7 @@ backgroundColor: "#f5f5f5",
 	backgroundColor: "white",
 	position: "absolute",
 	left: 0,
-	top: 0,
+	top: -70,
 	zIndex: 1000
 }
 @mediaDesktop
@@ -34157,7 +34157,7 @@ backgroundColor: "#f5f5f5",
 	backgroundColor: "white",
 	position: "absolute",
 	left: 0,
-	top: 0,
+	top: -70,
 	zIndex: 1000
 }
 @mediaDesktop
@@ -43621,7 +43621,7 @@ backgroundColor: "#f5f5f5",
 	backgroundColor: "white",
 	position: "absolute",
 	left: 0,
-	top: 0,
+	top: -70,
 	zIndex: 1000
 }
 @mediaDesktop
