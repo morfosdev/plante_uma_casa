@@ -1334,7 +1334,7 @@ const path1 = "all.toggles.box1";
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
@@ -5086,7 +5086,7 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
@@ -14330,7 +14330,7 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
@@ -23926,7 +23926,7 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
@@ -33357,7 +33357,7 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
@@ -42658,7 +42658,7 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
@@ -52807,7 +52807,7 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
@@ -58914,7 +58914,7 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
@@ -65184,7 +65184,7 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
-	alignItems: flex-start,
+	alignItems: "flex-start",
 	maxWidth: 30,
 	overflow: "hidden"
 }
