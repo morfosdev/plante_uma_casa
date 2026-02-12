@@ -5398,6 +5398,9 @@ backgroundColor: "#f5f5f5",
 {
 	display: "none"
 }`, `{ 
+	borderBottomColor: "#eee",
+	borderBottomWidth: 1,
+	borderRadius: 0,
 	justifyContent: "end",
 	marginTop: 20
 }`],
@@ -14805,6 +14808,9 @@ backgroundColor: "#f5f5f5",
 {
 	display: "none"
 }`, `{ 
+	borderBottomColor: "#eee",
+	borderBottomWidth: 1,
+	borderRadius: 0,
 	justifyContent: "end",
 	marginTop: 20
 }`],
@@ -24564,6 +24570,9 @@ backgroundColor: "#f5f5f5",
 {
 	display: "none"
 }`, `{ 
+	borderBottomColor: "#eee",
+	borderBottomWidth: 1,
+	borderRadius: 0,
 	justifyContent: "end",
 	marginTop: 20
 }`],
@@ -34194,6 +34203,9 @@ backgroundColor: "#f5f5f5",
 {
 	display: "none"
 }`, `{ 
+	borderBottomColor: "#eee",
+	borderBottomWidth: 1,
+	borderRadius: 0,
 	justifyContent: "end",
 	marginTop: 20
 }`],
@@ -43658,6 +43670,9 @@ backgroundColor: "#f5f5f5",
 {
 	display: "none"
 }`, `{ 
+	borderBottomColor: "#eee",
+	borderBottomWidth: 1,
+	borderRadius: 0,
 	justifyContent: "end",
 	marginTop: 20
 }`],
@@ -53097,6 +53112,9 @@ backgroundColor: "#f5f5f5",
 {
 	display: "none"
 }`, `{ 
+	borderBottomColor: "#eee",
+	borderBottomWidth: 1,
+	borderRadius: 0,
 	justifyContent: "end",
 	marginTop: 20
 }`],
@@ -59322,6 +59340,9 @@ backgroundColor: "#f5f5f5",
 {
 	display: "none"
 }`, `{ 
+	borderBottomColor: "#eee",
+	borderBottomWidth: 1,
+	borderRadius: 0,
 	justifyContent: "end",
 	marginTop: 20
 }`],
@@ -65722,6 +65743,9 @@ backgroundColor: "#f5f5f5",
 {
 	display: "none"
 }`, `{ 
+	borderBottomColor: "#eee",
+	borderBottomWidth: 1,
+	borderRadius: 0,
 	justifyContent: "end",
 	marginTop: 20
 }`],
