@@ -1346,7 +1346,7 @@ const path1 = "all.toggles.box1";
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -1356,7 +1356,7 @@ const path1 = "all.toggles.box1";
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
@@ -5098,7 +5098,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -5108,7 +5108,7 @@ backgroundColor: "#f5f5f5",
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
@@ -14342,7 +14342,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -14352,7 +14352,7 @@ backgroundColor: "#f5f5f5",
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
@@ -23938,7 +23938,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -23948,7 +23948,7 @@ backgroundColor: "#f5f5f5",
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
@@ -33369,7 +33369,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -33379,7 +33379,7 @@ backgroundColor: "#f5f5f5",
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
@@ -42670,7 +42670,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -42680,7 +42680,7 @@ backgroundColor: "#f5f5f5",
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
@@ -52819,7 +52819,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -52829,7 +52829,7 @@ backgroundColor: "#f5f5f5",
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
@@ -58926,7 +58926,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -58936,7 +58936,7 @@ backgroundColor: "#f5f5f5",
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
@@ -65196,7 +65196,7 @@ backgroundColor: "#f5f5f5",
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
-            '{}'
+            `{ numberOfLines: 1, ellipsizeMode: "tail" }`
           ],
 
           arrStyles: [
@@ -65206,7 +65206,7 @@ backgroundColor: "#f5f5f5",
 	fontSize: 12
 }`, `{ 
 	color: 'white',
- }`
+}`
           ],
 
           children: [
