@@ -502,7 +502,13 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -521,7 +527,11 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -603,7 +613,13 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -622,7 +638,11 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -703,7 +723,13 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -722,7 +748,11 @@ const digits = String(txt).replace(/[^0-9]/g, '').slice(0, 11);
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -2186,7 +2216,13 @@ justifyContent: 'center',
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -2205,7 +2241,11 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -2306,7 +2346,13 @@ justifyContent: 'center',
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -2325,7 +2371,11 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -2407,7 +2457,13 @@ justifyContent: 'center',
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -2426,7 +2482,11 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -2507,7 +2567,13 @@ justifyContent: 'center',
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -2526,7 +2592,11 @@ justifyContent: 'center',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -43456,7 +43526,13 @@ right: 0,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -43623,7 +43699,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -43782,7 +43862,12 @@ alignItems: "center",
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}
+@mediaDesktop{
 	color: '#555555',
 	fontSize: 13,
 	fontWeight: '400',
@@ -44071,7 +44156,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -44238,7 +44329,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -44397,7 +44492,12 @@ alignItems: "center",
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}
+@mediaDesktop{
 	color: '#555555',
 	fontSize: 13,
 	fontWeight: '400',
@@ -44686,7 +44786,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -44853,7 +44959,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -45012,7 +45122,12 @@ alignItems: "center",
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}
+@mediaDesktop{
 	color: '#555555',
 	fontSize: 13,
 	fontWeight: '400',
@@ -45301,7 +45416,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -45468,7 +45589,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -45627,7 +45752,12 @@ alignItems: "center",
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}
+@mediaDesktop{
 	color: '#555555',
 	fontSize: 13,
 	fontWeight: '400',
@@ -45916,7 +46046,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -46083,7 +46219,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -46242,7 +46382,12 @@ alignItems: "center",
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}
+@mediaDesktop{
 	color: '#555555',
 	fontSize: 13,
 	fontWeight: '400',
@@ -46531,7 +46676,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -46698,7 +46849,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -46857,7 +47012,12 @@ alignItems: "center",
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}
+@mediaDesktop{
 	color: '#555555',
 	fontSize: 13,
 	fontWeight: '400',
@@ -47145,7 +47305,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -47312,7 +47478,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -47471,7 +47641,12 @@ alignItems: "center",
           ],
 
           arrStyles: [
-            `{
+            `@mediaMobile{
+	color: '#555555',
+	fontSize: 11,
+	fontWeight: '400',
+}
+@mediaDesktop{
 	color: '#555555',
 	fontSize: 13,
 	fontWeight: '400',
@@ -66016,7 +66191,13 @@ right: 0,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -66183,7 +66364,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -66570,7 +66755,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -66737,7 +66928,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -67124,7 +67319,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -67291,7 +67492,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -67678,7 +67883,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -67845,7 +68056,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -68232,7 +68447,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -68399,7 +68620,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -68786,7 +69011,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -68953,7 +69184,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -69339,7 +69574,13 @@ top: 2,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -69506,7 +69747,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -79132,7 +79377,13 @@ paddingHorizontal: 10,
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -79299,7 +79550,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -79647,7 +79902,13 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -79814,7 +80075,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -80162,7 +80427,13 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -80329,7 +80600,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -80677,7 +80952,13 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -80844,7 +81125,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -81192,7 +81477,13 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -81359,7 +81650,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -81707,7 +82002,13 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -81874,7 +82175,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
@@ -82221,7 +82526,13 @@ async (...args) =>
           ],
 
           arrStyles: [
-            `{ 
+            `@mediaMobile{ 
+	paddingVertical: 6,
+	fontSize: 14,
+	fontWeight: '700',
+	color: '#121417',
+}
+@mediaDesktop{ 
 	paddingVertical: 10,
 	fontSize: 16,
 	fontWeight: '700',
@@ -82388,7 +82699,11 @@ alignItems: "center",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ 
+            styles:[`@mediaMobile{ 
+	paddingHorizontal: 5, 
+	paddingBottom: 12
+}
+@mediaDesktop{ 
 	paddingHorizontal: 16, 
 	paddingBottom: 16
 }`],
