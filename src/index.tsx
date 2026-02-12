@@ -1278,10 +1278,28 @@ const path1 = "all.toggles.box1";
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -1290,8 +1308,8 @@ const path1 = "all.toggles.box1";
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -1301,12 +1319,21 @@ const path1 = "all.toggles.box1";
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
@@ -4998,10 +5025,28 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -5010,8 +5055,8 @@ backgroundColor: "#f5f5f5",
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -5021,12 +5066,21 @@ backgroundColor: "#f5f5f5",
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
@@ -5735,10 +5789,10 @@ right: 0,
 	width: '100%',
 	justifyContent: 'flex-start',
 	flexDirection: 'row',
-	paddingRight: 30,
-	paddingLeft: 30,
-	paddingTop: 30,
-	paddingBottom: 30,
+	paddingRight: 18,
+	paddingLeft: 18,
+	paddingTop: 18,
+	paddingBottom: 18,
 	flexFlow: "wrap-reverse",
 	backgroundColor: 'white',
 		shadowColor: '#000',
@@ -14210,10 +14264,28 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -14222,8 +14294,8 @@ backgroundColor: "#f5f5f5",
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -14233,12 +14305,21 @@ backgroundColor: "#f5f5f5",
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
@@ -23774,10 +23855,28 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -23786,8 +23885,8 @@ backgroundColor: "#f5f5f5",
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -23797,12 +23896,21 @@ backgroundColor: "#f5f5f5",
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
@@ -33173,10 +33281,28 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -33185,8 +33311,8 @@ backgroundColor: "#f5f5f5",
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -33196,12 +33322,21 @@ backgroundColor: "#f5f5f5",
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
@@ -42442,10 +42577,28 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -42454,8 +42607,8 @@ backgroundColor: "#f5f5f5",
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -42465,12 +42618,21 @@ backgroundColor: "#f5f5f5",
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
@@ -52559,10 +52721,28 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -52571,8 +52751,8 @@ backgroundColor: "#f5f5f5",
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -52582,12 +52762,21 @@ backgroundColor: "#f5f5f5",
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
@@ -53239,10 +53428,10 @@ right: 0,
 	width: '100%',
 	justifyContent: 'flex-start',
 	flexDirection: 'row',
-	paddingRight: 30,
-	paddingLeft: 30,
-	paddingTop: 30,
-	paddingBottom: 30,
+	paddingRight: 18,
+	paddingLeft: 18,
+	paddingTop: 18,
+	paddingBottom: 18,
 	flexFlow: "wrap-reverse",
 	backgroundColor: 'white',
 		shadowColor: '#000',
@@ -58634,10 +58823,28 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -58646,8 +58853,8 @@ backgroundColor: "#f5f5f5",
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -58657,12 +58864,21 @@ backgroundColor: "#f5f5f5",
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
@@ -64872,10 +65088,28 @@ backgroundColor: "#f5f5f5",
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile
-{}
+{
+	flex: 1,
+  alignItems: "center",
+}
 @mediaDesktop
 {
-	flex: 1
+	flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`@mediaMobile{
+	width: 75,
+	height: 45,
+}
+@mediaDesktop{
+	width: 98,
+	height: 59,
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -64884,8 +65118,8 @@ backgroundColor: "#f5f5f5",
       elementsProperties:[{}],
 
       styles:[{
-	width: 98,
-	height: 59,
+	width: "100%",
+	height: "100%",
 }],
 
       URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/planteUmaCasa%2Fplante%20uma%20casa%20logo.png?alt=media&token=2badfafe-64e9-4e4b-a62c-c1a30fb91f58`],
@@ -64895,12 +65129,21 @@ backgroundColor: "#f5f5f5",
 
             args,
           }}/>
+        ],
+
+            args,
+          }}/>
         , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
+            styles:[`@mediaMobile{
+	alignItems: flex-start,
+	maxWidth: 30,
+	overflow: "hidden"
+}
+@mediaDesktop{
 	flexDirection: "row",
 	justifyContent: "start",
 	alignItems: "center"
