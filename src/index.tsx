@@ -3084,7 +3084,7 @@ color: '#fff',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`@mediaDesktop{ 
+            styles:[`@mediaMobile{ 
 	width: "100%",
 	backgroundColor: "#FFF",
 	alignItems: "center",
