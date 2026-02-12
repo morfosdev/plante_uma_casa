@@ -1,7 +1,7 @@
 
 import JSON5 from "json5";
 import React from "react";
-import { Pressable, Text } from "react-native";
+import { Pressable, Text, useWindowDimensions } from "react-native";
 
 export const Accordion = (props) => {
   const { configs, arrElements } = props.pass ?? {};
@@ -91,6 +91,8 @@ export const Accordion = (props) => {
 
 const ItemAcc = (props) => {
   const { open, onToggle, userStyles } = props;
+  const { width } = useWindowDimensions();
+  const isMobile = width < 767;
 
   return (
     <Pressable
@@ -99,7 +101,7 @@ const ItemAcc = (props) => {
         borderRadius: 10,
         marginBottom: 14,
         width: 260,
-        minHeight: 50,
+        minHeight: isMobile ? 40 : 50,
 
         ...userStyles,
 
