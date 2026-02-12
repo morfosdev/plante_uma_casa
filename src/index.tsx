@@ -52528,13 +52528,17 @@ backgroundColor: "#f5f5f5",
 	paddingVertical: '8',
 	borderRadius: '8px',
 	width: '100%',
-}`, `@mediaMobile
+}`, 
+        `@mediaMobile
 {
 	display: "flex"
 }
 @mediaDesktop
 {
 	display: "none"
+}`, `{ 
+	justifyContent: "space-between",
+	marginTop: 20
 }`],
 
             functions:[async (...args) =>
@@ -52566,7 +52570,44 @@ async (...args) =>
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Fechar`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (  <Svg
@@ -52600,44 +52641,7 @@ async (...args) =>
       preenchimento: ['black'],
 
       args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: 13,
-	fontWeight: '400',
-	color: '#555555',
-}`
-          ],
-
-          children: [
-            `Fechar`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -58768,13 +58772,17 @@ backgroundColor: "#f5f5f5",
 	paddingVertical: '8',
 	borderRadius: '8px',
 	width: '100%',
-}`, `@mediaMobile
+}`, 
+        `@mediaMobile
 {
 	display: "flex"
 }
 @mediaDesktop
 {
 	display: "none"
+}`, `{ 
+	justifyContent: "space-between",
+	marginTop: 20
 }`],
 
             functions:[async (...args) =>
@@ -58806,7 +58814,44 @@ async (...args) =>
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Fechar`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (  <Svg
@@ -58840,44 +58885,7 @@ async (...args) =>
       preenchimento: ['black'],
 
       args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: 13,
-	fontWeight: '400',
-	color: '#555555',
-}`
-          ],
-
-          children: [
-            `Fechar`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
@@ -65183,13 +65191,17 @@ backgroundColor: "#f5f5f5",
 	paddingVertical: '8',
 	borderRadius: '8px',
 	width: '100%',
-}`, `@mediaMobile
+}`, 
+        `@mediaMobile
 {
 	display: "flex"
 }
 @mediaDesktop
 {
 	display: "none"
+}`, `{ 
+	justifyContent: "space-between",
+	marginTop: 20
 }`],
 
             functions:[async (...args) =>
@@ -65221,7 +65233,44 @@ async (...args) =>
         }})]
  , trigger: 'on press'
 }})],            childrenItems:[
-        (...args:any) => <Elements.SvgView1 pass={{
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+	fontSize: 13,
+	fontWeight: '400',
+	color: '#555555',
+}`
+          ],
+
+          children: [
+            `Fechar`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{ 
+	width: 10,
+	height: 10,
+	alignItems: "center",
+	justifyContent: "center",
+	backgroundColor: "transparent"
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.SvgView1 pass={{
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (  <Svg
@@ -65255,44 +65304,7 @@ async (...args) =>
       preenchimento: ['black'],
 
       args,
-    }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ 
-	width: 10,
-	height: 10,
-	alignItems: "center",
-	justifyContent: "center",
-	backgroundColor: "transparent"
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-	fontSize: 13,
-	fontWeight: '400',
-	color: '#555555',
-}`
-          ],
-
-          children: [
-            `Fechar`
-          ],
-
-          args,
-
-        }}/>],
+    }}/>],
 
             args,
           }}/>
