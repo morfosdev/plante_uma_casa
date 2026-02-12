@@ -5771,8 +5771,7 @@ async (...args) =>
             elementsProperties:['{}'],
 
             styles:[`{
-	flex: 1,
-	minWidth: 180
+	flex: 1
 }`],
 
             functions:[()=>{}],            childrenItems:[
