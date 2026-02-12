@@ -24677,6 +24677,7 @@ async (...args) =>
 
             styles:[`{
 	flexDirection: 'row',
+	alignItems: "center"
 }`],
 
             functions:[()=>{}],            childrenItems:[
