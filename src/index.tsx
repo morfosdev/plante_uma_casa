@@ -25883,9 +25883,10 @@ height: 25,
         
           ],
 
-      styles:[`{
+      styles:[
+        `{
 width: '100%',
-}`],    args,
+}`, `{ marginTop: 20}`],    args,
         }}/>],
 
             args,
