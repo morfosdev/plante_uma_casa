@@ -35041,6 +35041,7 @@ right: 0,
             elementsProperties:['{}'],
 
             styles:[`@mediaMobile{
+	display: "none",
 	flexDirection: 'row',
 	paddingVertical: 10,
 	paddingHorizontal: 0,
