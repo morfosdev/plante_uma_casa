@@ -40,7 +40,7 @@ export default function App() {
         console.log("onAuthStateChanged - no user");
         // adm - a0login
         // app - c1login
-        tools.goTo("c1login");
+        tools.goTo("a0login");
         return;
       }
 

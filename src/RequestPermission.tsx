@@ -201,3 +201,8 @@ export const RequestPermission = () => {
     </View>
   );
 };
+
+// ----
+// adicionar no index.tsx
+// () => <RequestPermission />,
+// Adicionar em a4list e c5steps
