@@ -51387,10 +51387,16 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
+            styles:[`@mediaMobile{
+	backgroundColor: '#f5f5f5',
+	padding: 12,
+	paddingLeft: 24,
+	alignItems: 'center',
+}
+@mediaDesktop{
+	backgroundColor: '#f5f5f5',
+	padding: 12,
+	alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -57585,10 +57591,16 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
+            styles:[`@mediaMobile{
+	backgroundColor: '#f5f5f5',
+	padding: 12,
+	paddingLeft: 24,
+	alignItems: 'center',
+}
+@mediaDesktop{
+	backgroundColor: '#f5f5f5',
+	padding: 12,
+	alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -64037,10 +64049,16 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
+            styles:[`@mediaMobile{
+	backgroundColor: '#f5f5f5',
+	padding: 12,
+	paddingLeft: 24,
+	alignItems: 'center',
+}
+@mediaDesktop{
+	backgroundColor: '#f5f5f5',
+	padding: 12,
+	alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -72988,10 +73006,16 @@ color: '#555555',
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{
-backgroundColor: '#f5f5f5',
-padding: 12,
-alignItems: 'center',
+            styles:[`@mediaMobile{
+	backgroundColor: '#f5f5f5',
+	padding: 12,
+	paddingLeft: 24,
+	alignItems: 'center',
+}
+@mediaDesktop{
+	backgroundColor: '#f5f5f5',
+	padding: 12,
+	alignItems: 'center',
 }`],
 
             functions:[()=>{}],            childrenItems:[
