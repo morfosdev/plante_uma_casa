@@ -1320,7 +1320,7 @@ const path1 = "all.toggles.box1";
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -5253,7 +5253,7 @@ backgroundColor: "#f5f5f5",
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -14663,7 +14663,7 @@ backgroundColor: "#f5f5f5",
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -24431,7 +24431,7 @@ backgroundColor: "#f5f5f5",
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -34071,7 +34071,7 @@ backgroundColor: "#f5f5f5",
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -43539,7 +43539,7 @@ backgroundColor: "#f5f5f5",
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -52987,7 +52987,7 @@ backgroundColor: "#f5f5f5",
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -59221,7 +59221,7 @@ backgroundColor: "#f5f5f5",
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
@@ -65636,7 +65636,7 @@ backgroundColor: "#f5f5f5",
 @mediaDesktop
 {
 	flex: 1,
-  alignItems: "center",
+  alignItems: "flex-start",
 }`],
 
             functions:[()=>{}],            childrenItems:[
